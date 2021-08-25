@@ -1,0 +1,8 @@
+---
+layout: post
+title:  seminar 1
+date:   2021-08-25 16:40:16
+description: 그냥 채워보는 글
+---
+
+<h2>세미나나 이벤트용</h2>
