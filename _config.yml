@@ -21,8 +21,7 @@ collections:
   posts:
     output: true
     permalink: /posts/:path/
-  seminar:
+  seminars:
     output: true
-    permalink: /seminars/:path/
 
 
