@@ -18,7 +18,7 @@ $vertical-spacing-unit:         40px;
 $nav-height:                    56px;
 
 /* portfolio tinkering */
-$img_spacing: 5px; 
+$img_spacing: 5px;
 $img_height: 275px;
 $caption_font_size: 12px;
 $caption_color: #aaa;
@@ -34,7 +34,7 @@ $purple: #B509AC;
 
 $grey-color-dark: #333;   /* footer */
 $grey-color-light: #ddd;  /* navigation bar border */
-$text-color:     #666;
+$text-color: #363636;
 
 /* GDSC Color */
 $gdsc-red: #EA4335;
@@ -132,7 +132,7 @@ a {
     text-decoration: none;
     /*
     &:visited {
-        color: darken($brand-color, 15%); 
+        color: darken($brand-color, 15%);
     }
     */
     &:hover {
@@ -198,7 +198,7 @@ pre {
 
 /**
  * Wrapper
- */ 
+ */
 
 .wrapper {
     max-width: -webkit-calc(800px - (#{$horizontal-spacing-unit} * 2));
