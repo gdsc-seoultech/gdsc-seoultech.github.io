@@ -4,8 +4,8 @@ email: twinklesu914@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   A simple, whitespace, helvetica based portfolio theme.
 baseurl:  # the subpath of your site, e.g. /blog/
-url: twinklesu.github.io # the base hostname & protocol for your site
-github_username:  twinklesu
+url: gdsc-seoultech.github.io # the base hostname & protocol for your site
+github_username:  gdsc-seoultech
 
 # Build settings
 markdown: kramdown
@@ -23,5 +23,6 @@ collections:
     permalink: /posts/:path/
   seminars:
     output: true
+    permalink: /seminars/:path/
 
 
