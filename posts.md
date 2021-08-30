@@ -1,12 +1,13 @@
 ---
-layout: page
+layout: post_page
 permalink: /posts/
 title: POST
-description: 인영이가 만드는 post 페이지.. 이거 상단은 page.html
+description: GDSC멤버들의 기록이 차곡차곡
 ---
 
-<p>카테고리 누르면 카테고리 페이지로 이동, 글 누르면 각 글로 이동..! 
-생긴건 약간 velog처럼 썸네일, 제목, 미리보기, 작성자? 면 좋겠다</p>
+<br>
+
+<h1> 전체글 </h1>
 
 <br>
 
@@ -19,4 +20,5 @@ description: 인영이가 만드는 post 페이지.. 이거 상단은 page.html
       </li>
 {% endfor %}
 </ul>
+
 
