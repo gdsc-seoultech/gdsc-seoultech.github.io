@@ -14,9 +14,26 @@ layout: default
   </article>
   <br>
 
-  <div>
-    <p>작성자 정보</p>
+  <hr/><br>
+
+  <div class="author">
+    {% assign author = site.data.members[page.author] %}
+    <table>
+        <tr>
+          <td rowspan="3" style="padding-right: 10px"><img class="author-pic" src="https://github.com/{{author.github}}.png" alt="{{author.author_name}}"></td>
+          <td><b><h2 rel="author">{{ author.name }}</h2></b></td>
+          <td><a rel="author" href="https://github.com/{{author.github}}" target="_blank"><i class="fa fa-github"></i></a></td>
+        </tr>
+      <tr>
+        <td><p rel="author">{{ author.description }}</p></td>
+      </tr>
+
+
+
+    </table>
+
   </div>
+
 
   <br>
   <hr/>
