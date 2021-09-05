@@ -6,10 +6,10 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl:  # the subpath of your site, e.g. /blog/
 url: gdsc-seoultech.github.io # the base hostname & protocol for your site
 github_username:  gdsc-seoultech
+timezone: Asia/Seoul
 
 # Build settings
 markdown: kramdown
-
 highlighter: rouge
 
 # Pagination

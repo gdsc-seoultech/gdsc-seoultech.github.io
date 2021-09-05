@@ -29,6 +29,7 @@ layout: default
         <li>
             <h3><a class="post-title" href="{{ seminar.url | prepend: site.baseurl }}">{{ seminar.title }}</a></h3>
             <p class="post-meta">{{ seminar.date | date: '%B %-d, %Y — %H:%M' }}</p>
+            <p class="post-meta">{{ seminar.author }}</p>
           </li>
     {% endfor %}
     </ul>
