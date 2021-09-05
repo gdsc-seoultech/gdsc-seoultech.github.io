@@ -8,18 +8,24 @@ layout: default
     <h5 class="post-description">{{ page.description }}</h5>
   </header>
 
-  <div class="col">
-    {% for category in site.categories %}
-    <li><a href="/category/{{category | first}}">{{category | first }}({{category | last | size }}) </a></li>
-    {% endfor %}
+  <div class="category-list">
+    <ul>
+      {% for category in site.categories %}
+      <li><a href="/category/{{ category | first }}">{{ category | first }}({{ category | last | size }}) </a></li>
+      {% endfor %}
+    </ul>
+    
   </div>
 
-  
-  <article class="post-content">
-    
+  <ul class="post-list">
     {% for post in site.categories[page.category] %}
-  </article>
-
-</div>
+      <li>
+          <h3><a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+          <p>{{ post.author }}</p>
+          <p>{{ post.category }}</p>
+          <p class="post-meta">{{ post.date | date: '%B %-d, %Y — %H:%M' }}</p>
+        </li>
+    {% endfor %}
+  </ul>
 
   

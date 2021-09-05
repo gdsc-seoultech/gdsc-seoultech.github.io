@@ -7,5 +7,17 @@ twinklesu:
   description: 한줄 소개 소소개
   blog_platform: velog
   blog: https://velog.io/@twinklesu914/about
-
-
+KangInyeong:
+  name: 강인영
+  author_name: 인영
+  role: core
+  email: kiyoog02@gmail.com
+  github: KangInyeong
+  description: 소오오오개애애애
+juijeong8324:
+  name: 전의정
+  author_name: 의정
+  role: core
+  email: juijeong8324@gmail.com
+  github: juijeong8324
+  description: 뚜비뚜밥 샤랄라

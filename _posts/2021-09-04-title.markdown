@@ -1,0 +1,18 @@
+---
+layout: post
+title: 깃 허브 화가난다
+date: 2021-09-04 23:59:59
+author: KangInyeong
+description: describe my feeling cased by git
+categories: ['web']
+---
+나 참.. git 네가 뭔데 나를 힘들게 하는데...?
+레퍼지토리 네가 그렇게 대단해...?
+<br/>
+용서하지 않겠어.
+<br/>
+pull & request 너란 녀석...
+<br/>
+<blockquote>
+깃이 아니라 코딩이 하고 싶었던 하루
+</blockquote>

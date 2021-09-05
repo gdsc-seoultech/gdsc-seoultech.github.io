@@ -1,10 +1,9 @@
 ---
 layout: post
-title:  a post with formatting and links
-date:   2015-03-15 16:40:16
-description: march & april, looking forward to summer
-author: twinklesu
-categories: ['android','web']
+title: 개강 화가난다
+date:   2021-09-04 16:40:16
+author: juijeong8324
+description: 화가나서 채워보는 글
 ---
 Jean shorts raw denim Vice normcore, art party High Life PBR skateboard stumptown vinyl kitsch. Four loko meh 8-bit, tousled banh mi tilde forage Schlitz dreamcatcher twee 3 wolf moon. Chambray asymmetrical paleo salvia, sartorial umami four loko master cleanse drinking vinegar brunch. <a href="https://www.pinterest.com" target="blank">Pinterest</a> DIY authentic Schlitz, hoodie Intelligentsia butcher trust fund brunch shabby chic Kickstarter forage flexitarian. Direct trade <a href="https://en.wikipedia.org/wiki/Cold-pressed_juice" target="blank">cold-pressed</a> meggings stumptown plaid, pop-up taxidermy. Hoodie XOXO fingerstache scenester Echo Park. Plaid ugh Wes Anderson, freegan pug selvage fanny pack leggings pickled food truck DIY irony Banksy.
 
@@ -16,11 +15,12 @@ Jean shorts raw denim Vice normcore, art party High Life PBR skateboard stumptow
 	<li>messenger bag</li>
 </ul>
 
-Hoodie Thundercats retro, tote bag 8-bit Godard craft beer gastropub. Truffaut Tumblr taxidermy, raw denim Kickstarter sartorial dreamcatcher. Quinoa chambray slow-carb salvia readymade, bicycle rights 90's yr typewriter selfies letterpress cardigan vegan. 
+개강이 얼마남지 않았다 화가난다.
 
 <hr>
 <br/>
-Pug heirloom High Life vinyl swag, single-origin coffee four dollar toast taxidermy reprehenderit fap distillery master cleanse locavore. Est anim sapiente leggings Brooklyn ea. Thundercats locavore excepteur veniam eiusmod. Raw denim Truffaut Schlitz, migas sapiente Portland VHS twee Bushwick Marfa typewriter retro id keytar. 
+보니까 창사 수업에 뭔 과제가 이렇게 많은지.. 다른 과목도 다 실강이다.
+자유는 끝났다. 2학기는 죽음이다.
 
 <blockquote>
 	We do not grow absolutely, chronologically. We grow sometimes in one dimension, and not in another, unevenly. We grow partially. We are relative. We are mature in one realm, childish in another. 
