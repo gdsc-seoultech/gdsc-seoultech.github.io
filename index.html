@@ -8,8 +8,9 @@ layout: default
 <br>
 <div class="main-page">
     <h2><b>주요 페이지 바로 가기</b></h2>
-    <a href=""><h2>👉🏻GDSC Seoultech CoC👈🏻</h2></a>
-    <a href=""><h2>👉🏻GDSC Seoultech Rule👈🏻</h2></a>
+    <a href="https://gdsc.community.dev/seoul-national-university-of-science-and-technology/" target="_blank"><h2>👉🏻  GDSC Chapter Page  👈🏻</h2></a>
+    <a href="rule/coc.html"><h2>👉🏻GDSC Seoultech CoC👈🏻</h2></a>
+    <a href="rule/rule.html"><h2>👉🏻GDSC Seoultech Rule👈🏻</h2></a>
 </div>
 
 <span class="contacticon center">
@@ -29,6 +30,7 @@ layout: default
         <li>
             <h3><a class="post-title" href="{{ seminar.url | prepend: site.baseurl }}">{{ seminar.title }}</a></h3>
             <p class="post-meta">{{ seminar.date | date: '%B %-d, %Y — %H:%M' }}</p>
+            <p class="post-meta">{{ seminar.author }}</p>
           </li>
     {% endfor %}
     </ul>

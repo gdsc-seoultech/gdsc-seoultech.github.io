@@ -74,8 +74,8 @@ display: line;
  * Site footer  **********************************************************
  */
 .site-footer {
-border-top: 1px solid $grey-color-dark;
-font-size: 10px;
+border-top:5px solid $grey-color-dark;
+font-size: 15px;
 background-color: $grey-color-dark;
 padding: 2px;
 color: #aaa;
@@ -83,6 +83,9 @@ position:fixed;
 left:0px;
 bottom:0px;
 width:100%;
+    a {
+        color: darkgrey;
+    }
 }
 
 .site-footer p {
