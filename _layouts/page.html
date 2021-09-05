@@ -8,8 +8,23 @@ layout: default
     <h5 class="post-description">{{ page.description }}</h5>
   </header>
 
+  <div class="category-list">
+    <ul>
+      {% for category in site.categories %}
+        <li><a href="/category/{{ category | first }}">{{ category | first }}({{ category | last | size }}) </a></li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <!-- post된 글들 전부 목록 -->
   <article class="post-content">
+    
+    <br>
+    <h1> 전체글 </h1>
+    <br>
+    
     {{ content }}
+
   </article>
 
 </div>
