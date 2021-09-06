@@ -29,5 +29,3 @@ collections:
   seminars:
     output: true
     permalink: /seminars/:path/
-
-

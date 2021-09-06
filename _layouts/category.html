@@ -9,23 +9,33 @@ layout: default
   </header>
 
   <div class="category-list">
-    <ul>
+    <ul style="list-style-type: none; float: left; margin-right: 20px;">
       {% for category in site.categories %}
-      <li><a href="/category/{{ category | first }}">{{ category | first }}({{ category | last | size }}) </a></li>
+      <li style="list-style-type: none; float: left; margin-right: 20px;"><a href="/category/{{ category | first }}">{{ category | first }}({{ category | last | size }}) </a></li>
       {% endfor %}
     </ul>
     
   </div>
 
+  <!-- 해당 부분도 수정 필요. 해당 카테고리 이름 출력. -->
+  <h1">{{ site.categories | first | first }}</h1>>
+
   <ul class="post-list">
-    {% for post in site.categories[page.category] %}
-      <li>
-          <h3><a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
-          <p>{{ post.author }}</p>
-          <p>{{ post.category }}</p>
-          <p class="post-meta">{{ post.date | date: '%B %-d, %Y — %H:%M' }}</p>
-        </li>
+    {% for post in site.posts %}
+    <!-- 해당 조건문 수정 필요함. 해당 카테고리 글만 목록으로 불러와야함. 현재는 전체 목록이 들어감. site.categories 가 해당 카테고리로 출력되니 참고.-->
+      {% if site.categories == site.categories %}
+        <li>
+            <h3><a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+            <p>{{ post.author }}</p>
+            <p>{{ post.category }}</p>
+            <p class="post-meta">{{ post.date | date: '%B %-d, %Y — %H:%M' }}</p>
+          </li>
+        {% endif %}
     {% endfor %}
   </ul>
+
+
+
+
 
   
