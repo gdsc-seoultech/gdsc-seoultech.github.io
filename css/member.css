@@ -3,36 +3,45 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  /*box-sizing: border-box; /*콘텐트 뿐만 아니라 테두리영역까지 크기를 잡아주는 속성*/
 }
 body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: #000;
-  color: #eee;
+  background-color: #fff;
+  color: #000;
+  position: relative; 
 }
 .container {
-  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  height: 60vh;
+  background-color: aqua;
+  position:absolute; /* 화면 전체 너비에 맞추기 위해 */
+  left:0;
+  right:0;
+  
   display: flex;
   justify-content: center;
   align-items: center;
+
+  background-color:#fff;
 }
 .container p {
-  font-size: 3rem;
+  font-size: 5rem;
   padding: 0.5rem;
   font-weight: bold;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.2rem;
   text-align: center;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 .container p span.typed-text {
-  font-weight: normal;
-  color: #dd7732;
+  font-weight: bold;
 }
 .container p span.cursor {
   display: inline-block;
   background-color: #ccc;
-  margin-left: 0.1rem;
+  margin-left: 0.2rem;
   width: 3px;
+  height: 4rem;
+  vertical-align: middle;
   animation: blink 1s infinite;
 }
 .container p span.cursor.typing {
@@ -44,4 +53,40 @@ body {
   50% { background-color: transparent; }
   99% { background-color: transparent; }
   100%  { background-color: #ccc; }
+}
+
+.introduction{
+  position:absolute;
+  left:0;
+  right:0;
+  display:flex;
+
+}
+
+#lead{
+ /* background-color: blue; */
+  height: 50vh;
+  top:100vh;
+ 
+}
+
+#core{
+  /*background-color: brown; */
+  height: 70vh;
+  top: 150vh;
+
+}
+
+#member{
+  /*background-color: coral;*/
+  height: 100vh;
+  top: 210vh;
+
+}
+
+.who{ /*폰트 관련*/
+ font-family: 'Montserrat', sans-serif;
+ font-size: 10vh;
+ font-weight: bold;
+ margin-left: 5vh;
 }
