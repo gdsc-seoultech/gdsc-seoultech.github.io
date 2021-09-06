@@ -1,0 +1,37 @@
+
+  .folder {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFD485;
+    width: 300px;
+    height: 250px;
+    border-radius: 10px;
+  }
+  .folder:before {
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    content: "";
+    background-color: #FFD485;
+    position: absolute;
+    top: -30px;
+    left: 0px;
+  }
+  .folder:after {
+    display: block;
+    width: 300px;
+    height: 250px;
+    border-radius: 10px;
+    content: "";
+    transform: skew(0deg);
+    background-color: #ffe1a8;
+    transition: all 0.2s;
+  }
+  .folder:hover:after {
+    transform: skew(-20deg);
+    margin-left: 25px;
+  }
