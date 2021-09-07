@@ -20,7 +20,7 @@ layout: default
     {% assign author = site.data.members[page.author] %}
     <table>
         <tr>
-          <td rowspan="3" style="padding-right: 10px"><img class="author-pic" src="https://github.com/{{author.github}}.png" alt="{{author.author_name}}"></td>
+          <td rowspan="3" style="padding-right: 10px"><img class="author-pic" src="https://github.com/{{ author.github }}.png" alt="{{ author.author_name }}"></td>
           <td><b><h2 rel="author">{{ author.name }}</h2></b></td>
         </tr>
       <tr>
@@ -29,9 +29,9 @@ layout: default
       </tr>
       <tr>
         <td>
-          <a rel="author" href="https://github.com/{{author.github}}" target="_blank"><i class="fa fa-github fa-2x"></i></a>&nbsp&nbsp
+          <a rel="author" href="https://github.com/{{ author.github }}" target="_blank"><i class="fa fa-github fa-2x"></i></a>&nbsp&nbsp
           {{% if author.blog %}}
-            <a rel="author" href="{{author.blog}}" target="_blank"><img src="/img/blog_icon/{{author.blog_platform}}.jpg" width="26px"></a>
+            <a rel="author" href="{{ author.blog }}" target="_blank"><img src="/img/blog_icon/{{ author.blog_platform }}.jpg" width="26px"></a>
           {{% endif %}}
         </td>
 

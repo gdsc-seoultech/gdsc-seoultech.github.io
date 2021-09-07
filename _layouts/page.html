@@ -9,7 +9,7 @@ layout: default
   </header>
 
   <div class="category-list">
-    <ul style="list-style-type: none; float: left; margin-right: 20px;">
+    <ul style="list-style-type: none; float: left; margin-right: 20px; font-size: 23px;">
       {% for category in site.categories %}
         <li style="list-style-type: none; float: left; margin-right: 20px;"><a href="/category/{{ category | first }}">{{ category | first }}({{ category | last | size }}) </a></li>
       {% endfor %}
@@ -19,10 +19,10 @@ layout: default
   <!-- post된 글들 전부 목록 -->
   <article class="post-content">
     
-    <br>
-    <h1 style="padding: 35px; font-size: 30px;"> 전체글 </h1>
-    <br>
-    
+  <p>
+  </br>
+  </br>
+  </p>
     {{ content }}
 
   </article>
