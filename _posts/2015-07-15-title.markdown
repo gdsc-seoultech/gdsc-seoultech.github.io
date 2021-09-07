@@ -2,6 +2,7 @@
 layout: post
 title: a post with code
 date: 2015-07-15 15:09:00
+author: twinklesu
 description: an example of a blog post with some code
 categories: ['android','data']
 ---
