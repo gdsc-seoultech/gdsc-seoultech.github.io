@@ -1,10 +1,10 @@
 ---
 layout: post
-title: 깃 허브 화가난다
+title: 깃 허브 화가난다(and)
 date: 2021-09-04 23:59:59
 author: KangInyeong
 description: describe my feeling cased by git
-categories: ['web']
+categories: ['android']
 ---
 나 참.. git 네가 뭔데 나를 힘들게 하는데...?
 레퍼지토리 네가 그렇게 대단해...?

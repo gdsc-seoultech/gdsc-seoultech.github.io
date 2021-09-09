@@ -1,10 +1,10 @@
 ---
 layout: post
-title: a post with code
+title: web에 보여질 글
 date: 2015-07-15 15:09:00
-author: twinklesu
+author: seongryool
 description: an example of a blog post with some code
-categories: ['android','data']
+categories: ['web']
 ---
 This theme implements a built-in Jekyll feature, the use of Pygments, for sytanx highlighting. It supports more than 100 languages. This example is in C++. All you have to do is wrap your code in a liquid tag: 
 {% raw  %}
