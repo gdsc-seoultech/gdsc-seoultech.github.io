@@ -8,23 +8,29 @@ layout: default
     <h5 class="post-description">{{ page.description }}</h5>
   </header>
 
+
   <div class="category-list">
+<<<<<<< HEAD
     <ul>
       <li><a href="/posts">all</a></li>
+=======
+    <ul style="list-style-type: none; float: left; margin-right: 20px; font-size: 20px; margin-left: 0px;">
+>>>>>>> 0ef2b9bc4c4304b4d40153ae072dc2fb6a953bcf
       {% for category in site.categories %}
       <li><a href="/category/{{ category | first }}">{{ category | first }}({{ category | last | size }}) </a></li>
       {% endfor %}
     </ul>
-    
+      
   </div>
+
+<p>
+  <br>
+  <hr style="width: 270px; size: 5px;">
+</p>
+
 
   <!-- 해당 부분도 수정 필요. 해당 카테고리 이름 출력. -->
   <!-- <h1">{{ site.categories | first | first }}</h1>> -->
-
-  <p>
-  </br>
-  </br>
-  </p>
 
   <ul class="post-list">
 
