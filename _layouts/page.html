@@ -8,13 +8,8 @@ layout: default
     <h5 class="post-description">{{ page.description }}</h5>
   </header>
 
-<<<<<<< HEAD
   <div class="category-list" >
     <ul>
-=======
-  <div class="category-list">
-    <ul style="list-style-type: none; float: left; margin-right: 20px; font-size: 20px; margin-left: 0px;">
->>>>>>> 0ef2b9bc4c4304b4d40153ae072dc2fb6a953bcf
       {% for category in site.categories %}
         <li><a href="/category/{{ category | first }}">{{ category | first }}({{ category | last | size }}) </a></li>
       {% endfor %}

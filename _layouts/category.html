@@ -10,12 +10,8 @@ layout: default
 
 
   <div class="category-list">
-<<<<<<< HEAD
     <ul>
       <li><a href="/posts">all</a></li>
-=======
-    <ul style="list-style-type: none; float: left; margin-right: 20px; font-size: 20px; margin-left: 0px;">
->>>>>>> 0ef2b9bc4c4304b4d40153ae072dc2fb6a953bcf
       {% for category in site.categories %}
       <li><a href="/category/{{ category | first }}">{{ category | first }}({{ category | last | size }}) </a></li>
       {% endfor %}
