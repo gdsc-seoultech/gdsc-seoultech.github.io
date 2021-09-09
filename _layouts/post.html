@@ -30,16 +30,11 @@ layout: default
       <tr>
         <td>
           <a rel="author" href="https://github.com/{{ author.github }}" target="_blank"><i class="fa fa-github fa-2x"></i></a>&nbsp&nbsp
-          {{% if author.blog %}}
+          {% if author.blog %}
             <a rel="author" href="{{ author.blog }}" target="_blank"><img src="/img/blog_icon/{{ author.blog_platform }}.jpg" width="26px"></a>
-          {{% endif %}}
+          {% endif %}
         </td>
-
-
       </tr>
-
-
-
     </table>
 
   </div>
