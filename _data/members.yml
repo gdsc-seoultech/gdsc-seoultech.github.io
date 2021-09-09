@@ -37,3 +37,10 @@ comye1:
   description: 안녕하숑
   blog_platform: naver
   blog: https://blog.naver.com/comye1
+Songminseon:
+  name: 송민선
+  author_name: 민선
+  role: core
+  email: smsun0329@gmail.com
+  github: Songminseon
+  description: hello everyone
