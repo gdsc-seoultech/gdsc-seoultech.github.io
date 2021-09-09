@@ -300,3 +300,16 @@ font-size: $caption_font_size;
 .author{
     font-size: 15px;
 }
+.category-list{
+    ul {
+        list-style-type: none;
+        float: left;
+        margin-right: 20px;
+        margin-left: 0px;
+    }
+    li {
+        list-style-type: none;
+        float: left;
+        margin-right: 20px;
+    }
+}
