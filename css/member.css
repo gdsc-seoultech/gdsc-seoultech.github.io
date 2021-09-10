@@ -1,3 +1,4 @@
+/*이 코드에는 멤버 페이지 전반적인 속성과 위치에 관한 코드가 들어있습니다*/
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 * {
@@ -57,14 +58,14 @@ body {
 
 .introduction{
   position:absolute;
-  left:0;
+  left:10%;
   right:0;
   display:flex;
 
 }
 
 #lead{
- /* background-color: blue; */
+  /*background-color: blue; */
   height: 50vh;
   top:100vh;
  
@@ -72,15 +73,16 @@ body {
 
 #core{
   /*background-color: brown; */
-  height: 70vh;
-  top: 150vh;
+  height: 90vh;
+  top: 160vh;
+
 
 }
 
 #member{
   /*background-color: coral;*/
-  height: 100vh;
-  top: 210vh;
+  height: 200vh;
+  top: 260vh;
 
 }
 
@@ -89,4 +91,31 @@ body {
  font-size: 6vh;
  font-weight: bold;
  margin-left: 5vh;
+}
+
+.we_are{ /*전체 폴더에 대한 위치 및 설정 */
+  position:absolute;
+  left:18%;
+  right:0;
+  padding-top: 10vh;
+
+}
+
+.who_are{ /*폴더 한 줄에 대한 위치 조정*/
+  margin-top: 15vh;
+
+}
+
+
+.name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4vh;
+  font-weight: 500;
+  position:absolute;
+  margin-top: -10vh;
+  margin-left: -6vh;
+}
+
+.name span{
+    padding-right: 36vh;
 }
