@@ -2,7 +2,7 @@
 layout: page
 permalink: /posts/
 title: POST
-description: GDSC멤버들의 기록이 차곡차곡
+description: 전체 글 목록
 ---
 
 <ul class="post-list">

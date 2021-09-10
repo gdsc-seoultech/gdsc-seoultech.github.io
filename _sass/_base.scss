@@ -142,10 +142,11 @@ a {
 }
 
 article a {
-    color: $theme-color;
+    color: black;
     font-weight: 100;
 
     &:hover {
+        color: $theme-color;
         text-decoration: none;
     }
 }
