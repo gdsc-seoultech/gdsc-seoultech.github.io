@@ -9,6 +9,7 @@ title: MEMBER
   <link rel="stylesheet" href="/css/member.css">
   <link rel="stylesheet" href="/css/folder.css">
   <link rel="stylesheet" href="/css/click_members.css">
+  
 </head>
 
 <body>
@@ -57,37 +58,8 @@ title: MEMBER
                   <div class="folder" id="min">
                   </div>
                   <span class="member-name">송민선</span>
-            </div>  
-            <div class="member-card">
-                  <div class="folder" id="min">
-                  </div>
-                  <span class="member-name">위성률</span>
-            </div>  
-            <div class="member-card">
-                  <div class="folder" id="min">
-                  </div>
-                  <span class="member-name">김예원</span>
-            </div>  
-            <div class="member-card">
-                  <div class="folder" id="min">
-                  </div>
-                  <span class="member-name">강인영</span>
-            </div>  
-            <div class="member-card">
-                  <div class="folder" id="min">
-                  </div>
-                  <span class="member-name">전의정</span>
             </div>
-      </div>  
-                  <!-- <div class="who_are">
-                  <div class="folder" id= min> 
-                  </div>
-                  <div class="folder" id="seong"> 
-                  </div>
-                  <div class="folder" id="ye"> 
-                  </div>
-            </div> -->
-             <!-- <div class="black_bg" id="min">
+            <div class="black_bg" id="min">
                   <div class="modal_close" id="min"><a href="#;">close</a></div>
             </div>
                   <div class="modal_wrap" id="min">
@@ -100,8 +72,13 @@ title: MEMBER
                                     <span class="member-icon"><a class="link-dark" href="https://github.com/Songminseon"><i class="fa fa-github fa-2x"></i></a></span>
                               </div>
                         </div>
+                  </div>  
+            <div class="member-card">
+                  <div class="folder" id="seong">
                   </div>
-             <div class="black_bg" id="seong">
+                  <span class="member-name">위성률</span>
+            </div>  
+            <div class="black_bg" id="seong">
                   <div class="modal_close" id="seong"><a href="#;">close</a></div>
             </div>
                   <div class="modal_wrap" id="seong">
@@ -116,7 +93,12 @@ title: MEMBER
                               </div>
                         </div>
                   </div>                  
-             <div class="black_bg" id="ye">
+            <div class="member-card">
+                  <div class="folder" id="ye">
+                  </div>
+                  <span class="member-name">김예원</span>
+            </div>  
+            <div class="black_bg" id="ye">
                   <div class="modal_close" id="ye"><a href="#;">close</a></div>
             </div>
                   <div class="modal_wrap" id="ye">
@@ -131,8 +113,13 @@ title: MEMBER
                                     <span class="member-icon"><a class="link-dark" href="https://blog.naver.com/comye1"><img src="/img/blog_icon/naver.jpg" width="26px"></a></span>
                               </div>
                         </div>
-                  </div>                                        -->
-            <!-- <div class="black_bg" id="in">
+                  </div>
+            <div class="member-card">
+                  <div class="folder" id="in">
+                  </div>
+                  <span class="member-name">강인영</span>
+            </div>  
+            <div class="black_bg" id="in">
                   <div class="modal_close" id="in"><a href="#;">close</a></div>
             </div>
                   <div class="modal_wrap" id="in">
@@ -146,7 +133,12 @@ title: MEMBER
                                     <span class="member-icon"><a class="link-dark" href="https://github.com/KangInyeong"><i class="fa fa-github fa-2x"></i></a></span>
                               </div>
                         </div>
-                  </div>      
+                  </div>
+            <div class="member-card">
+                  <div class="folder" id="ui">
+                  </div>
+                  <span class="member-name">전의정</span>
+            </div>
             <div class="black_bg" id="ui">
                   <div class="modal_close" id="ui"><a href="#;">close</a></div>
             </div>
@@ -155,13 +147,15 @@ title: MEMBER
                           {% assign author = site.data.members[twinklesu] %}
                               <img class="member_image" src="https://github.com/juijeong8324.png" alt="{{author.author_name}}">
                               <div class ="member_description">
-                                    <p class="text" id="title"> GDSC 뭐라혀? </p>
+                                    <p class="text" id="title"> ★YOLO★ 즐기면서 멋있게 후회없이 살자 </p>
                                     <p class="text" id="name"> 전의정 </p>
-                                    <P class="text" id="d"> 안녕하세요! 저는 컴퓨터공학과 20학번 전의정입니다. 저는 아직 뚜렷한 진로를 정하지 않았고 다양한 분야의 프로그래밍 언어를 많이 접해보고 프로젝트화 하는 것을 목표로 하고 있습니다. 저는 현재 안드로이드, 스프링, VR(유니티 활용), 데이터 분석 및 인공지능, 아두이노 등에 관심을 갖고 있습니다! 아직 뚜렷하게 잘하는 분야는 없습니다만 배운 내용을 바탕으로 재밌는 프로젝트를 진행하는 것은 자신있습니다!! 안드로이드, 웹 프론트/백 , 데이터 분석 및 인공지능 뿐만 아니라 다양한 분야를 배우고 이를 활용하여 창의적이고 재밌고, 사회에 도움을 주는 프로젝트를 진행하고 싶은 분들은 자신있게 도전해보아요! </p>
+                                    <P class="text" id="d"> 안녕하세요! 저는 컴퓨터공학과 20학번 전의정입니다. 저는 아직 뚜렷한 진로를 정하지 않았지만 다양한 분야에서 활약하는 만능 프로그래머가 되는 것을 목표로 잡고 있습니다! 저는 현재 안드로이드, 스프링, VR(유니티 활용), 데이터 분석 및 인공지능, 아두이노 등에 관심을 갖고 있습니다! 배운 내용을 바탕으로 재밌는 프로젝트를 앞으로 만들어보겠습니다!(많.관.부!) 앞으로 창의적이고 재밌고, 사회에 도움을 주는 영앤리치스마트앤쿨앤나이스 걸이 되도록 노력하겠습니다! </p>
                                     <span class="member-icon"><a class="link-dark" href="https://github.com/juijeong8324"><i class="fa fa-github fa-2x"></i></a></span>
+                                    <span class="member-icon"><a class="link-dark" href="https://blog.naver.com/gurum8021"><img src="/img/blog_icon/naver.jpg" width="26px"></a></span>
                               </div>
                         </div>
-                  </div>       -->
+                  </div>
+      </div>  
   </div>
   <!-- Core part end -->
 
@@ -247,5 +241,13 @@ title: MEMBER
             </div>  
       </div>
   <!-- member part end -->
+      <div class="introduction not-lead-part"> <!-- 밑에 공간을 만들어주기 위해서-->
+            <div class="member-card-container">
+                  <div class="member-card"></div>
+            </div>
+      </div>
 
+  <!-- js는 마지막즈음에 두도록 하자! -->
+  <script src="/js/member.js"></script>  <!-- 이 js는 꼭 마지막에 두는 것을 추천! html 코드를 보고 움직이기 때문! -->
+  <script  src="/js/click_members.js"></script> 
 </body>
