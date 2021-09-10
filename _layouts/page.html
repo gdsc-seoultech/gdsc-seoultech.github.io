@@ -22,10 +22,16 @@ layout: default
   </p>
 
   <!-- post된 글들 전부 목록 -->
-  <article class="post-content">
-  
-    {{ content }}
+    <ul class="post-list">
 
-  </article>
+    {% assign post_list = site.posts | reverse %}
+    {% for post in post_list %}
+        <li>
+            <h3><a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+            <p class="post-meta">{{ post.date | date: '%B %-d, %Y — %H:%M' }}</p>
+            <p class="post-meta">{{ post.author }}</p>
+          </li>
+    {% endfor %}
+    </ul>
 
 </div>
