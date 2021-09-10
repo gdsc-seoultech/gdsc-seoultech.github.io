@@ -120,7 +120,7 @@ font-size: 20px;
 .post-list {
 margin: 0px 0;
 list-style: none;
-    > li {
+    li {
 margin-bottom: $vertical-spacing-unit;
     }
 }
@@ -139,15 +139,15 @@ text-align: center;
 margin-bottom: $vertical-spacing-unit;
 }
 .post-title {
-font-size: 40px;
+font-size: 28px;
 letter-spacing: -1px;
 line-height: 45px;
 @include media-query($on-laptop) {
-font-size: 36px;
+font-size: 20px;
     }
 }
 .post-description {
-    font-size:26px;
+    font-size:20px;
     line-height: 30px;
     @include media-query($on-laptop) {
 font-size: 24px;
