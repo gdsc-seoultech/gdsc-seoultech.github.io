@@ -156,6 +156,15 @@ font-size: 24px;
     }
 }
 .post-content {
+img {
+    max-width: -webkit-calc(800px - (#{$horizontal-spacing-unit} * 2));
+}
+a {
+    color: $gdsc-green;
+    &:hover {
+        color: $theme-color;
+            }
+}
 h2 {
 font-size: 42px;
 @include media-query($on-laptop) {
