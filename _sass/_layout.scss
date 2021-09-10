@@ -12,7 +12,9 @@ top:0px;
 height:56px;
 width:100%;
 z-index: 50;
+overflow: hidden;
 }
+
 
 .site-title {
 font-size: 20px;
@@ -300,6 +302,13 @@ font-size: $caption_font_size;
 .author{
     font-size: 15px;
 }
+
+@media screen and (max-width: 510px) {
+    h1 b{
+        font-size: 24px; 
+    }
+}
+
 .category-list{
     ul {
         list-style-type: none;
