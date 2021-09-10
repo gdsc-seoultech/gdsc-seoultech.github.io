@@ -2,7 +2,6 @@
 layout: mem_page
 permalink: /members/
 title: MEMBER
-
 ---
 
 <head>
@@ -17,53 +16,78 @@ title: MEMBER
     <p>WE ARE <span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
   </div>
 
-  <script  src="/js/member.js"></script> 
-  <script  src="/js/click_members.js"></script> 
-
-  <div class="introduction" id="lead" name="lead">
+ <!-- lead part start -->
+  <div class="introduction">
       <p class="who">LEAD</p>
-      <div class="we_are">
-            <div class="who_are">
-                  <div class="folder" id="su" > 
+      <div class="member-card-container">
+            <div class="member-card">
+                  <div class="folder" id="su">
                   </div>
-                  <div class="name">
-                        <span> 박수빈 </span> 
-                  </div> 
+                  <span class="member-name">박수빈</span>
             </div>  
             <div class="black_bg" id="su">
                   <div class="modal_close" id="su"><a href="#;">close</a></div>
             </div>
-                  <div class="modal_wrap" id="su">
-                        <div class="the_member">
-                          {% assign author = site.data.members[twinklesu] %}
-                              <img class="member_image" src="https://github.com/twinklesu.png" alt="{{author.author_name}}">
-                              <div class ="member_description">
-                                    <p class="text" id="title"> GDSC 대표 카리스마.. LEAD </p>
-                                    <p class="text" id="name"> 박수빈 </p>
-                                    <P class="text" id="d"> 안녕하세요. 서울과학기술대학교 산업공학과 ITM전공 18학번 박수빈입니다. <br>
-                                    현재 3학년까지 마친 후, 휴학 중입니다. 가까운 미래에는 백엔드 개발자가 되고 싶고, 먼 훗날 CTO가 되고 싶습니다. '개발자가 내 길이다'라고 생각하게 된 계기에는 즐거운 협업이 있었습니다. 함께하면 힘든 일도 즐거워 지니까, 여러분과 함께 공부하고 싶어 GDSC Seoultech의 Lead가 됐습니다. <br>
-                                    저와 함께 1년 간 멋진 커뮤니티에서 성장하고 싶으신분들을 기다리겠습니다😊😊</p>
-                                    <span class="member-icon"><a class="link-dark" href="https://github.com/twinklesu"><i class="fa fa-github fa-2x"></i></a></span>
-                                    <span class="member-icon"><a class="link-dark" href="https://velog.io/@twinklesu914/about"><img src="/img/blog_icon/velog.jpg" width="26px"></a></span>
-                              </div>
+            <!-- modal start -->
+            <div class="modal_wrap" id="su">
+                  <div class="the_member">
+                        {% assign author = site.data.members[twinklesu] %}
+                        <img class="member_image" src="https://github.com/twinklesu.png" alt="{{author.author_name}}">
+                        <div class ="member_description">
+                              <p class="text" id="title"> GDSC 대표 카리스마.. LEAD </p>
+                              <p class="text" id="name"> 박수빈 </p>
+                              <P class="text" id="d"> 안녕하세요. 서울과학기술대학교 산업공학과 ITM전공 18학번 박수빈입니다. <br>
+                              현재 3학년까지 마친 후, 휴학 중입니다. 가까운 미래에는 백엔드 개발자가 되고 싶고, 먼 훗날 CTO가 되고 싶습니다. '개발자가 내 길이다'라고 생각하게 된 계기에는 즐거운 협업이 있었습니다. 함께하면 힘든 일도 즐거워 지니까, 여러분과 함께 공부하고 싶어 GDSC Seoultech의 Lead가 됐습니다. <br>
+                              저와 함께 1년 간 멋진 커뮤니티에서 성장하고 싶으신분들을 기다리겠습니다😊😊</p>
+                              <span class="member-icon"><a class="link-dark" href="https://github.com/twinklesu"><i class="fa fa-github fa-2x"></i></a></span>
+                              <span class="member-icon"><a class="link-dark" href="https://velog.io/@twinklesu914/about"><img src="/img/blog_icon/velog.jpg" width="26px"></a></span>
                         </div>
-                  </div>                     
-      </div>
-            
+                  </div>
+            </div>     
+            <!-- modal end -->                
+      </div>    
   </div>
+ <!-- lead part end -->
 
-  <div class="introduction" id="core" name="core">
-        <p class="who">CORE</p>
-        <div class="we_are">
-            <div class="who_are">
+<!-- core part start -->
+<div class="introduction not-lead-part">
+      <p class="who">CORE</p>
+      <div class="member-card-container">
+            <div class="member-card">
+                  <div class="folder" id="min">
+                  </div>
+                  <span class="member-name">송민선</span>
+            </div>  
+            <div class="member-card">
+                  <div class="folder" id="min">
+                  </div>
+                  <span class="member-name">위성률</span>
+            </div>  
+            <div class="member-card">
+                  <div class="folder" id="min">
+                  </div>
+                  <span class="member-name">김예원</span>
+            </div>  
+            <div class="member-card">
+                  <div class="folder" id="min">
+                  </div>
+                  <span class="member-name">강인영</span>
+            </div>  
+            <div class="member-card">
+                  <div class="folder" id="min">
+                  </div>
+                  <span class="member-name">전의정</span>
+            </div>
+      </div>  
+                  <!-- <div class="who_are">
                   <div class="folder" id= min> 
                   </div>
                   <div class="folder" id="seong"> 
                   </div>
                   <div class="folder" id="ye"> 
                   </div>
-            </div>
-             <div class="black_bg" id="min">
+            </div> -->
+             <!-- <div class="black_bg" id="min">
                   <div class="modal_close" id="min"><a href="#;">close</a></div>
             </div>
                   <div class="modal_wrap" id="min">
@@ -107,19 +131,8 @@ title: MEMBER
                                     <span class="member-icon"><a class="link-dark" href="https://blog.naver.com/comye1"><img src="/img/blog_icon/naver.jpg" width="26px"></a></span>
                               </div>
                         </div>
-                  </div>                                       
-            <div class = "name">
-                   <span>송민선</span>
-                   <span>위성률</span>
-                   <span>김예원</span>
-            </div>
-            <div class="who_are">
-                  <div class="folder" id="in"> 
-                  </div>
-                  <div class="folder" id="ui"> 
-                  </div>
-            </div>
-            <div class="black_bg" id="in">
+                  </div>                                        -->
+            <!-- <div class="black_bg" id="in">
                   <div class="modal_close" id="in"><a href="#;">close</a></div>
             </div>
                   <div class="modal_wrap" id="in">
@@ -148,83 +161,91 @@ title: MEMBER
                                     <span class="member-icon"><a class="link-dark" href="https://github.com/juijeong8324"><i class="fa fa-github fa-2x"></i></a></span>
                               </div>
                         </div>
-                  </div>      
-            <div class = "name">
-                   <span>강인영</span>
-                   <span>전의정</span>
-            </div>
-        </div>
+                  </div>       -->
   </div>
+  <!-- Core part end -->
 
-  <div class="introduction" id="member" name="member">
+<!-- member part start -->
+  <div class="introduction not-lead-part">
         <p class="who">MEMBER</p>
-        <div class="we_are">
-            <div class="who_are">
-                  <div class="folder" id="kim_min"> 
+            <div class="member-card-container">
+                  <div class="member-card">
+                        <div class="folder">
+                        </div>
+                        <span class="member-name">김민찬</span>
                   </div>
-                  <div class="folder" id="yeong"> 
+                  <div class="member-card">
+                        <div class="folder">
+                        </div>
+                        <span class="member-name">김영현</span>
                   </div>
-                  <div class="folder" id="hyeong"> 
+                  <div class="member-card">
+                        <div class="folder">
+                        </div>
+                        <span class="member-name">김형찬</span>
                   </div>
-            </div>
-            <div class = "name">
-                   <span>김민찬</span>
-                   <span>김영현</span>
-                   <span>김형찬</span>
-            </div>
-            <div class="who_are">
-                  <div class="folder" id="geon"> 
+                  <div class="member-card">
+                        <div class="folder">
+                        </div>
+                        <span class="member-name">나건주</span>
                   </div>
-                  <div class="folder" id="ji"> 
+                  <div class="member-card">
+                        <div class="folder">
+                        </div>
+                        <span class="member-name">박지수</span>
                   </div>
-                  <div class="folder" id="yu"> 
+                  <div class="member-card">
+                        <div class="folder">
+                        </div>
+                        <span class="member-name">신유빈</span>
                   </div>
-            </div>
-            <div class = "name">
-                   <span>나건주</span>
-                   <span>박지수</span>
-                   <span>신유빈</span>
-            </div>
-            <div class="who_are">
-                  <div class="folder" id="yong"> 
+                  <div class="member-card">
+                        <div class="folder">
+                        </div>
+                        <span class="member-name">양용수</span>
                   </div>
-                  <div class="folder" id="seung"> 
+                  <div class="member-card">
+                        <div class="folder">
+                        </div>
+                        <span class="member-name">오승언</span>
                   </div>
-                  <div class="folder" id="jeong"> 
+                  <div class="member-card">
+                        <div class="folder">
+                        </div>
+                        <span class="member-name">오정인</span>
                   </div>
-            </div>
-            <div class = "name">
-                   <span>양용수</span>
-                   <span>오승언</span>
-                   <span>오정인</span>
-            </div>
-            <div class="who_are">
-                  <div class="folder" id="hui"> 
+                  <div class="member-card">
+                        <div class="folder">
+                        </div>
+                        <span class="member-name">윤희서</span>
                   </div>
-                  <div class="folder" id="lee_seul"> 
+                  <div class="member-card">
+                        <div class="folder">
+                        </div>
+                        <span class="member-name">이슬비</span>
                   </div>
-                  <div class="folder" id="ha"> 
+                  <div class="member-card">
+                        <div class="folder">
+                        </div>
+                        <span class="member-name">이하은</span>
                   </div>
-            </div>
-            <div class = "name">
-                   <span>윤희서</span>
-                   <span>이슬비</span>
-                   <span>이하은</span>
-            </div>
-            <div class="who_are">
-                  <div class="folder" id="jo_in"> 
+                  <div class="member-card">
+                        <div class="folder">
+                        </div>
+                        <span class="member-name">조인혁</span>
                   </div>
-                  <div class="folder" id="han_seul"> 
+                  <div class="member-card">
+                        <div class="folder">
+                        </div>
+                        <span class="member-name">한슬기</span>
                   </div>
-                  <div class="folder" id="yun"> 
+                  <div class="member-card">
+                        <div class="folder">
+                        </div>
+                        <span class="member-name">한윤재</span>
                   </div>
-            </div>
-            <div class = "name">
-                   <span>조인혁</span>
-                   <span>한슬기</span>
-                   <span>한윤재</span>
-            </div>
-        </div>
-  </div>
+            </div>  
+      </div>
+  <!-- member part end -->
 
 </body>

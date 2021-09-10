@@ -1,5 +1,5 @@
 /*이 코드에는 멤버 페이지 전반적인 속성과 위치에 관한 코드가 들어있습니다*/
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
 
 * {
   margin: 0;
@@ -9,21 +9,13 @@
 body {
   background-color: #fff;
   color: #000;
-  position: relative; 
 }
 .container {
-  font-family: 'Montserrat', sans-serif;
-  height: 60vh;
-  background-color: aqua;
-  position:absolute; /* 화면 전체 너비에 맞추기 위해 */
-  left:0;
-  right:0;
-  
+  font-family: "Montserrat", sans-serif;
+  height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
-
-  background-color:#fff;
 }
 .container p {
   font-size: 5rem;
@@ -49,73 +41,64 @@ body {
   animation: none;
 }
 @keyframes blink {
-  0%  { background-color: #ccc; }
-  49% { background-color: #ccc; }
-  50% { background-color: transparent; }
-  99% { background-color: transparent; }
-  100%  { background-color: #ccc; }
+  0% {
+    background-color: #ccc;
+  }
+  49% {
+    background-color: #ccc;
+  }
+  50% {
+    background-color: transparent;
+  }
+  99% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: #ccc;
+  }
 }
 
-.introduction{
-  position:absolute;
-  left:10%;
-  right:0;
-  display:flex;
-
+.introduction {
+  width: 100%;
+  height: auto;
 }
 
-#lead{
-  /*background-color: blue; */
-  height: 50vh;
-  top:100vh;
- 
+.not-lead-part {
+  margin-top: 50px;
 }
 
-#core{
-  /*background-color: brown; */
-  height: 90vh;
-  top: 160vh;
-
-
+.who {
+  /*폰트 관련*/
+  display: inline-block;
+  height: 36px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 1;
 }
 
-#member{
-  /*background-color: coral;*/
-  height: 200vh;
-  top: 260vh;
-
+.member-card-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.who{ /*폰트 관련*/
- font-family: 'Montserrat', sans-serif;
- font-size: 6vh;
- font-weight: bold;
- margin-left: 5vh;
+.member-card {
+  width: 200px;
+  height: 275px;
+  margin-right: 33px;
 }
 
-.we_are{ /*전체 폴더에 대한 위치 및 설정 */
-  position:absolute;
-  left:18%;
-  right:0;
-  padding-top: 10vh;
-
-}
-
-.who_are{ /*폴더 한 줄에 대한 위치 조정*/
-  margin-top: 15vh;
-
-}
-
-
-.name {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 4vh;
+.member-name {
+  display: inline-block;
+  width: 200px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
   font-weight: 500;
-  position:absolute;
-  margin-top: -10vh;
-  margin-left: -6vh;
+  text-align: center;
+  margin-top: 25px;
 }
 
-.name span{
-    padding-right: 36vh;
+.name span {
+  padding-right: 36vh;
 }
