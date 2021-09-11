@@ -38,7 +38,8 @@ title: MEMBER
                               <p class="text" id="title"> {{ member | map: "description" }} </p>
                               <p class="text" id="name"> {{ member | map: "name" }}  </p>
                               <P class="text" id="d"> {{ member | map: "introduce" }}</p>
-                              <span class="member-icon" ><a class="link-dark" href="https://github.com/{{ member | map: 'github' }}" target="_blank"><i class="fa fa-github fa-2x"></i></a></span> 
+                              <span class="member-icon" ><a class="link-dark" href="https://github.com/{{ member | map: 'github' }}" target="_blank"><i class="fa fa-github fa-2x"></i></a></span>
+                              <a rel="author" href="{{ member | map: 'blog' }}" target="_blank"><img src="/img/blog_icon/{{ member | map: 'blog_platform' }}.jpg" width="26px"></a>
                         </div>
                   </div>
             </div>     
@@ -109,7 +110,8 @@ title: MEMBER
                               <p class="text" id="name"> {{ member | map: "name" }}  </p>
                               <P class="text" id="d"> {{ member | map: "introduce" }}</p>
                               <span class="member-icon" ><a class="link-dark" href="https://github.com/{{ member | map: 'github' }}" target="_blank"><i class="fa fa-github fa-2x"></i></a></span>
-                              </div>
+                              <a rel="author" href="{{ member | map: 'blog' }}" target="_blank"><img src="/img/blog_icon/{{ member | map: 'blog_platform' }}.jpg" width="26px"></a>   
+                            </div>
                         </div>
                   </div>
             <div class="member-card">
