@@ -30,8 +30,10 @@ seongryool:
   role: core
   email: seongryool@gmail.com
   github: s-ryuri
-  description: Hola~
+  description: 누구보다 눈물이 많은 강철 상남자
   introduce: 안녕하세요! 제가 만든 기술이 모두에게 도움이 되기를 꿈꾸는 산업공학과/컴퓨터공학과 16학번 위성률입니다. 현재는 머신러닝/딥러닝 분야에 관심을 가지면서 공부를 하고 있고 알고리즘, 백엔드 분야에도 관심이 있어 공부를 할 예정입니다. 다양한 사람을 만나고 다양한 프로젝트를 하고 싶어 동아리에 들어왔습니다. 저희와 함께 열심히 동아리 활동을 하실 수 있는 열정과 의지 넘치는 분 대단히 환영합니다!
+  blog_platform: naver
+  blog: https://blog.naver.com/fbfbf1
 comye1:
   name: 김예원
   author_name: 예원
