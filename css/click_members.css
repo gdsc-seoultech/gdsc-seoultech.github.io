@@ -3,11 +3,11 @@
         display: none;
         justify-content: center;
         align-items: center;
-        width: 58%;
-        height: 50vh;
+        width: 860px;
+        height: 460px;
         position: absolute;
-        top: 5vh;
-        left: 1%;
+        top: 20px;
+        left: 170px;
         background:rgba(255, 255, 255, 0.8); /*일단 표시만*/
         z-index: 2; /*그 다음 앞에 */
     }
@@ -16,10 +16,10 @@
         position: absolute;
         justify-content: center;
         top:0;
-        left: 0%;
+        left: 150px;
         content: "";
-        width: 60%;
-        height: 60vh;
+        width: 900px;
+        height: 500px;
         background:rgba(51, 51, 51, 0.705);
         border-radius: 3px;
         z-index: 1; /*얘가 백그라운드 */
@@ -42,18 +42,18 @@
     .the_member{
         display: flex;
         justify-content: flex-start;
-        margin-top: 10vh;
-        margin-left: 3vh;
+        margin-top: 90px;
+        margin-left: 30px;
     }
 
     .member_image{
         border-radius: 50%;
-        width: 30vh;
-        height: 30vh;
+        width: 300px;
+        height: 280px;
     }
     .member_description{
-        margin-left: 5vh;
-        margin-right: 5vh;
+        margin-left: 60px;
+        margin-right: 40px;
 
     }
     .text{
@@ -64,17 +64,17 @@
 
     #title{
         color:crimson;
-        font-size: larger;
+        font-size: 20px;
         font-weight: bold;
     }
 
     #name{
         color:black;
-        font-size: larger;
+        font-size: 25px;
         font-weight: bold;
     }
 
     #d{
         color:darkslategray;
-        font-size: 12px;
+        font-size: 15px;
     }
