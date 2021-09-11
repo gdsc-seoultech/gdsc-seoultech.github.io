@@ -141,7 +141,7 @@ text-align: center;
 margin-bottom: $vertical-spacing-unit;
 }
 .post-title {
-font-size: 28px;
+font-size: 30px;
 letter-spacing: -1px;
 line-height: 45px;
 @include media-query($on-laptop) {
@@ -194,129 +194,8 @@ display: block;
 font-size: 42px;
 }
 
-/** Poem formatting ********************************************/
-.poem-title {
-font-size: 24px;
-letter-spacing: -1px;
-line-height: 1;
-@include media-query($on-laptop) {
-font-size: 16px;
-    }
-}
 
 
-/**
- * Portfolio grid **********************************************************
-*/
-// Nicolas Gallagher's micro clearfix hack
-// http://nicolasgallagher.com/micro-clearfix-hack/
-.clearfix:before,
-.clearfix:after {
-content: " ";
-display: table;
-}
-.clearfix:after {
-clear: both;
-}
-.project {
-width: 33.33%;
-height: 250px;
-float: left;
-vertical-align: middle;
-box-sizing: border-box;
-padding: 10px;
-}
-.thumbnail{
-width: 100%;
-height: 230px;
-overflow: hidden;
-}
-.thumbnail img{
-width: 500px;
-height: auto;
-position: relative;
-left: -25%;
-top: -5%;
-}
-.thumbnail a{
-float: left;
-position: relative;
-width: 100%;
-height: 230px;
-}
-.thumbnail a span {
-display: none;
-position: absolute;
-top: 0;
-left: 0;
-bottom: 0;
-right: 0;
-background: rgba(0,0,0,0.4);
-color: $grey-color-light;
-padding: 40px;
-text-align: center;
-}
-.thumbnail a:hover span {
-display: block;
-}
-/**
- * Portfolio pages **********************************************************
-*/
-.blankbox{
-background: $theme-color;
-}
-.img_row{
-height: $img_height;
-width: 100%;
-overflow: hidden;
-box-sizing:border-box;
-padding: $img_spacing;
-}
-.col{
-width: 100%;
-height: 100%;
-float: left;
-object-fit: cover;
-box-sizing:border-box;
-padding: $img_spacing;
-}
-.right{
-float: right;
-}
-.one {
-width:33.33%;
-}
-.two {
-width: 66.66%;
-}
-.three{
-width: 100%;
-}
-.caption{
-height: 100%;
-color: $caption_color;
-text-align: center;
-vertical-align: middle;
-font-size: $caption_font_size;
-}
-.main-page{
-    line-height: 2;
-    text-align: center;
-    color: black;
-}
-.author-pic{
-    width: 100px;
-    border-radius: 6px;
-}
-.author{
-    font-size: 15px;
-}
-
-@media screen and (max-width: 510px) {
-    h1 b{
-        font-size: 24px; 
-    }
-}
 
 .category-list{
     ul {
