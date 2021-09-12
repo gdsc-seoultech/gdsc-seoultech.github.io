@@ -1,1 +1,1 @@
-slack pr 메세지 테스트용
+slack pr alert test
