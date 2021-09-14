@@ -1,49 +1,49 @@
 twinklesu:
-  name: 박수빈
-  author_name: 수빈
-  role: lead
-  email: twinklesu914@gmail.com
-  github: twinklesu
-  description: 봄처럼 살자
-  introduce: 안녕하세요. 서울과학기술대학교 산업공학과 ITM전공 18학번 박수빈입니다. <br> 현재 3학년까지 마친 후, 휴학 중입니다. '개발자이 재밌다'라고 생각하게 된 계기에는 즐거운 협업이 있었습니다. 함께하면 힘든 일도 즐거워 지니까, 여러분과 함께 공부하고 싶어 GDSC Seoultech의 Lead가 됐습니다. <br> 우리 함께 1년 간 커뮤니티에서 멋지게 성장해요!!😊😊
-  blog_platform: velog
-  blog: https://velog.io/@twinklesu914/about
+    name: 박수빈
+    author_name: 수빈
+    role: lead
+    email: twinklesu914@gmail.com
+    github: twinklesu
+    description: 봄처럼 살자
+    introduce: 안녕하세요. 서울과학기술대학교 산업공학과 ITM전공 18학번 박수빈입니다. <br> 현재 3학년까지 마친 후, 휴학 중입니다. '개발이 재밌다'라고 생각하게 된 계기에는 즐거운 협업이 있었습니다. 함께하면 힘든 일도 즐거워 지니까, 여러분과 함께 공부하고 싶어 GDSC Seoultech의 Lead가 됐습니다. <br> 우리 함께 1년 간 커뮤니티에서 멋지게 성장해요!!😊😊
+    blog_platform: velog
+    blog: https://velog.io/@twinklesu914/about
 KangInyeong:
-  name: 강인영
-  author_name: 인영
-  role: core
-  email: kiyoog02@gmail.com
-  github: KangInyeong
-  description: 호빵 속 팥앙금 같은 존재가 될테야.
-  introduce: 안녕하세요! 서울과학기술대학교 산업공학과 ITM전공 19학번 강인영입니다. 3학년 재학 중이며 안드로이드, 웹, AI 등 모든 것이 궁금하고 잘 하고 싶은 마음이 넘치는 병아리 개발자🐣입니다. 호기심이 많아서 세상에 신기한 것도, 궁금한 것도 많답니다. GDSC를 통해서 다양한 경험을 해보고 싶고, 저의 개발 역량을 믓-찌게 키워 나가고 싶습니다. 우리 모두 1년간 열심히 해보아요-! 예에!
+    name: 강인영
+    author_name: 인영
+    role: core
+    email: kiyoog02@gmail.com
+    github: KangInyeong
+    description: 호빵 속 팥앙금 같은 존재가 될테야.
+    introduce: 안녕하세요! 서울과학기술대학교 산업공학과 ITM전공 19학번 강인영입니다. 3학년 재학 중이며 안드로이드, 웹, AI 등 모든 것이 궁금하고 잘 하고 싶은 마음이 넘치는 병아리 개발자🐣입니다. 호기심이 많아서 세상에 신기한 것도, 궁금한 것도 많답니다. GDSC를 통해서 다양한 경험을 해보고 싶고, 저의 개발 역량을 믓-찌게 키워 나가고 싶습니다. 우리 모두 1년간 열심히 해보아요-! 예에!
 juijeong8324:
-  name: 전의정
-  author_name: 의정
-  role: core
-  email: juijeong8324@gmail.com
-  github: juijeong8324
-  description: ★YOLO★ 즐기면서 멋있게 후회없이 살자
-  introduce: 안녕하세요! 저는 컴퓨터공학과 20학번 전의정입니다. 저는 아직 뚜렷한 진로를 정하지 않았지만 다양한 분야에서 활약하는 만능 프로그래머가 되는 것을 목표로 잡고 있습니다! 저는 현재 안드로이드, 스프링, VR(유니티 활용), 데이터 분석 및 인공지능, 아두이노 등에 관심을 갖고 있습니다! 배운 내용을 바탕으로 재밌는 프로젝트를 앞으로 만들어보겠습니다!(많.관.부!) 앞으로 창의적이고 재밌고, 사회에 도움을 주는 영앤리치스마트앤쿨앤나이스 걸이 되도록 노력하겠습니다!
+    name: 전의정
+    author_name: 의정
+    role: core
+    email: juijeong8324@gmail.com
+    github: juijeong8324
+    description: ★YOLO★ 즐기면서 멋있게 후회없이 살자
+    introduce: 안녕하세요! 저는 컴퓨터공학과 20학번 전의정입니다. 저는 아직 뚜렷한 진로를 정하지 않았지만 다양한 분야에서 활약하는 만능 프로그래머가 되는 것을 목표로 잡고 있습니다! 저는 현재 안드로이드, 스프링, VR(유니티 활용), 데이터 분석 및 인공지능, 아두이노 등에 관심을 갖고 있습니다! 배운 내용을 바탕으로 재밌는 프로젝트를 앞으로 만들어보겠습니다!(많.관.부!) 앞으로 창의적이고 재밌고, 사회에 도움을 주는 영앤리치스마트앤쿨앤나이스 걸이 되도록 노력하겠습니다!
 seongryool:
-  name: 위성률
-  author_name: 성률
-  role: core
-  email: seongryool@gmail.com
-  github: s-ryuri
-  description: 누구보다 눈물이 많은 강철 상남자
-  introduce: 안녕하세요! 제가 만든 기술이 모두에게 도움이 되기를 꿈꾸는 산업공학과/컴퓨터공학과 16학번 위성률입니다. 현재는 머신러닝/딥러닝 분야에 관심을 가지면서 공부를 하고 있고 알고리즘, 백엔드 분야에도 관심이 있어 공부를 할 예정입니다. 다양한 사람을 만나고 다양한 프로젝트를 하고 싶어 동아리에 들어왔습니다. 저희와 함께 열심히 동아리 활동을 하실 수 있는 열정과 의지 넘치는 분 대단히 환영합니다!
-  blog_platform: naver
-  blog: https://blog.naver.com/fbfbf1
+    name: 위성률
+    author_name: 성률
+    role: core
+    email: seongryool@gmail.com
+    github: s-ryuri
+    description: 누구보다 눈물이 많은 강철 상남자
+    introduce: 안녕하세요! 제가 만든 기술이 모두에게 도움이 되기를 꿈꾸는 산업공학과/컴퓨터공학과 16학번 위성률입니다. 현재는 머신러닝/딥러닝 분야에 관심을 가지면서 공부를 하고 있고 알고리즘, 백엔드 분야에도 관심이 있어 공부를 할 예정입니다. 다양한 사람을 만나고 다양한 프로젝트를 하고 싶어 동아리에 들어왔습니다. 저희와 함께 열심히 동아리 활동을 하실 수 있는 열정과 의지 넘치는 분 대단히 환영합니다!
+    blog_platform: naver
+    blog: https://blog.naver.com/fbfbf1
 comye1:
-  name: 김예원
-  author_name: 예원
-  role: core
-  email: devyewon@gmail.com
-  github: comye1
-  description: 안드로이드 이 집 재밌네
-  introduce: 안녕하세요. 안드로이드 개발자를 목표로 공부하고 있는 컴퓨터공학과 18학번 김예원입니다. 세상에 재미있는 게 많아서 웬만큼 재밌지 않은 것은 미련없이 떠나보내는데 안드로이드는 재밌습니다. 컴퓨터공학과 다니며 학업~~학점~~에 집중을 해왔었는데 마지막 남은 1년을 GDSC와 함께할 수 있어 영광이고 행복합니다. 언제나 최선을 택하는 사람이고 싶습니다. 감사합니다!
-  blog_platform: naver
-  blog: https://blog.naver.com/comye1
+    name: 김예원
+    author_name: 예원
+    role: core
+    email: devyewon@gmail.com
+    github: comye1
+    description: 안드로이드 이 집 재밌네
+    introduce: 안녕하세요. 안드로이드 개발자를 목표로 공부하고 있는 컴퓨터공학과 18학번 김예원입니다. 세상에 재미있는 게 많아서 웬만큼 재밌지 않은 것은 미련없이 떠나보내는데 안드로이드는 재밌습니다. 컴퓨터공학과 다니며 학업~~학점~~에 집중을 해왔었는데 마지막 남은 1년을 GDSC와 함께할 수 있어 영광이고 행복합니다. 언제나 최선을 택하는 사람이고 싶습니다. 감사합니다!
+    blog_platform: naver
+    blog: https://blog.naver.com/comye1
 Songminseon:
   name: 송민선
   author_name: 민선
@@ -60,3 +60,102 @@ goldtan:
   github: goldtan
   description: 하면 하지
   introduce: 안녕하세요 서울과학기술대학교 경영학과 17학번 김민찬입니다 ! 현재는 컴퓨터공학을 복수전공하며 데이터 사이언스 분야에 관심을 갖고 공부하고 있습니다. 같은 꿈을 꾸는, 같은 공부를 하는 사람들을 만나고 싶어 GDSC에 참여하게 되었습니다. 벌써부터 다들 열심히 하는 모습에 저 또한 의욕이 샘솟는데 1년 동안 이 샘이 마르지 않도록 열심히 한 번 땅을 파보겠습니다 !
+ ssggi:
+  name: 한슬기
+  author_name: 슬기
+  role: member
+  email: gsnah00@gmail.com
+  github: ssggi
+  description: 딥러닝 뿌셔뿌셔
+  introduce: 안녕하세요 전자IT미디어공학과 20학번 한슬기입니다. 
+  name: 양용수
+  author_name: 용수
+  role: member
+  email: yongdduddi2@gmail.com
+  github: itsmeyongsu
+  description: 춤을 추며 절망이랑 싸울거야
+  introduce:  안녕하세요. 서울과학기술대학교 영어영문학 전공, 산업시스템 복수전공을 하고 있는 16학번 양용수입니다. 늦게 코딩을 시작했지만 천천히 집중하고 있습니다. gdsc에 들어와서 너무 신나고 기분 좋습니다. 저는 현재 안드로이드 파트에서 열심히 공부중입니다. 열심히 하다보면 나중엔 정말 뭐라도 만들 수 있겠죠? 솔직히 좀 어렵고 힘들지만 좌절하지 않고 해보려합니다. 춤을 추며 절망이랑 싸울게요. 지금 안 힘들면 나중엔 더 힘들 것 같아요, 그쵸?:활짝_웃다:. 다들 1년 동안 재미이있게! 힘차게! 달려가보아욧!
+  blog: https://blog.naver.com/ys961104
+  blog_platform: naver
+pathpioneer:
+  name: 오승언
+  author_name: 승언
+  role: member
+  email: atn1su@gmail.com
+  github: pathpioneer
+  description: 천천히 깊게!
+  introduce: 안녕하세요. 서울과학기술대학교 식품공학과 전공 컴퓨터공학과 복수전공 19학번 오승언입니다. 현재 공부하고 있고 가장 흥미를 느끼는 분야는 안드로이드 앱 개발입니다. 차분하고 꼼꼼한 편이 아니라서 공부할때는 항상 더 천천히 읽으려고 하고 더 꼼꼼히 하려고 노력중입니다. 학기 중에는 학점따기에만 집중하다 보니 꾸준히 공부하기가 어렵고 혼자 공부하는데 한계를 느껴서 GDSC에 지원했습니다. 부족하지만 열심히 하겠습니다. 잘부탁드립니다!
+leeeha:
+  name: 이하은
+  author_name: 하은
+  role: member
+  email: ixlhe46@gmail.com
+  github: leeeha
+  description: Life is connecting the dots.
+  introduce: 안녕하세요! 저는 서울과기대 컴퓨터공학과 20학번 이하은입니다! 개발자는 단순히 코딩하는 사람이 아니라, 우리에게 주어진 문제를 해결하는 사람이라고 생각합니다. 일상생활의 문제점을 개선하고 더 나아가 사회에 도움을 줄 수 있는 서비스를 직접 개발하고 싶습니다 :) <br> 뛰어난 개발자로 성장하기 위한 여정을 GDSC 멤버분들과 함께할 수 있어서 너무 행복합니다. 아직 경험해보지 못한 분야도 많고 실력도 부족하지만, 어떤 상황이 닥쳐도 포기하지 않고 목표를 향해 나아가는 사람이 되겠습니다! 혼자서 공부하다 지치고 힘드셨던 분들! 이제는 GDSC와 1년간 함께하면서 서로에게 힘이 되어줍시다! 다함께 성장하는 멋진 커뮤니티를 만들어봐요😄
+HCboy01:
+  name: 김형찬
+  author_name: 형찬
+  role: member
+  email: prchani@naver.com
+  github: HCboy01
+  desctiption: 으앙
+  introduce: 👋 안녕하세요! 저는 서울과학기술대학교 인공지능응용학과에 21학번으로 재학중인 김형찬입니다! 🌱 아직 새싹 개발자로, 프론트엔드와 백엔드 모두 폭넓게 배워보고 싶어요! 미래에는 인공지능을 능숙히 다루는 개발자가 되고 싶습니다!
+LeeSeulni:
+  name: 이슬비
+  author_name: 슬비
+  role: member
+  email: yongsandew@gmail.com
+  github: LeeSeulbi71
+  description: ☆ 안경 쓰고 커피 마시며 키보드 두들기는 멋진 커리어우먼 ☆
+  introduce: 안녕하세요. 데이터 분석과 시각화를 공부하는 서울과학기술대학교 산업공학과 산업정보시스템전공 20학번 이슬비입니다. 데이터를 더욱더 전문적으로 배우고 싶어 산업정보시스템전공으로 전과를 하게 되었습니다. 누구나 핵심을 알아볼 수 있고 의미있는 데이터들을 전달해줄 수 있는 데이터 사이언티스트로 성장하고 싶습니다. GDSC의 멤버로 활동할 수 있게 되어 정말 감사하고 많은 걸 배우고 갈 수 있었으면 좋겠습니다! 감사합니다!
+keonju2:
+  name: 나건주
+  author_name: 건주
+  role: member
+  email: keonju2@Naver.com
+  github: keonju2
+  description: 이성적인 판단과 후회없는 선택을 하자
+  introduce: 안녕하세요 저는 산업정보시스템과 빅데이터경영공학을 전공으로 하고있는 19학번 나건주입니다. 현재 데이터 분석과 시각화, 머신러닝에 관심을 가지고 공부하고 있습니다. 어떤 데이터를 전문적으로 다루고 싶다는 생각은 하지않고 머신러닝 기법들에도 관심이 있습니다.  GDSC를 통해 다양한 분야들을 접하고 제 자신을 성장시키기 위하여 프로젝트, 스터디 모두 놓치지않고 열심히 하고싶습니다. 모두가 성장하는 길에 걸림돌이 되지않도록 최선을 다하겠습니다.
+  blog_platform: github
+  blog: https://keonju2.github.io
+ehrwk:
+  name: 윤희서
+  author_name: 희서
+  role: member
+  email: yundbs2001@naver.com
+  github: ehrwk
+  description: 행복하게 살자
+  introduce: 안녕하세요. 서울과학기술대학교 컴퓨터공학과 19학번 윤희서입니다. 벡엔드 개발자가 되기 위해 공부하고 있습니다! 요즘에는 코딩테스트를 위해 알고리즘 공부를 열심히 하고 있습니다. 1년동안 잘 부탁드립니다!
+JisooPark27:
+  name: 박지수
+  author_name: 지수
+  role: member
+  email: jspark9812@gmail.com
+  github: JisooPark27
+  description: 졸지 말고 자자
+  introduce: 안녕하세요. 서울과학기술대학교 컴퓨터공학과 17학번 박지수입니다. 현재 3학년을 재학 중이고, 백엔드, 컴퓨터 그래픽스에 관심을 갖고 공부 중입니다. 조금 늦게 백엔드 관심을 갖고 개발을 시작해서 부족함을 느끼고 함께 공부하고 싶어 동아리에 들어왔습니다. 열심히 하겠습니다. 감사합니다~
+JunginO:
+  name: 오정인
+  author_name: 정인
+  role: member
+  email: frogmilkshake@gmail.com
+  github: JunginO
+  description: Keep Going!
+  introduce: 안녕하세요, 저는 서울과학기술대학교 컴퓨터공학과 19학번 오정인입니다. 웹 개발자라는 꿈을 가지고 있습니다. GDSC와 함께 개발자에 한걸음 더 다가가고싶습니다~
+YeongHyeon-Kim:
+  name: 김영현
+  author_name: 영현
+  role: member
+  email: insut69@gmail.com
+  github: YeongHyeon-Kim
+  description: 늦었다고 생각할때가 정말 늦었다.
+  introduce: 안녕하세요! 서울과학기술대학교 산업공학과 ITM 학부 16학번 김영현입니다. 3학년을 마친 후 배우고 싶은게 너무 많아 휴학 중입니다. 코딩이 재미있어서 프로그래밍에 입문하게 되었고 지금은 Web에 대해서 공부중입니다. 매일매일 성장하는 모습 보여드리겠습니다!
+InHyeok-J:
+  name: 조인혁
+  author_name: 인혁
+  role: member
+  email: ss112d86@gmail.com
+  github: InHyeok-J
+  description: 기록을 좋아하는 개발자입니다.
+  introduce: 안녕하세요! 컴퓨터공학과 17학번 조인혁입니다. 내 머리속에 있는 아이디어를 현실로 만들고 싶다는 생각에 개발을 시작했고 현재는 개발의 재미에 푹 빠졌습니다.현재는 express && nest로 백엔드 개발을 하고 있고, 스프링도 쪼끔씩 공부하고 있습니다. 같이 GDSC Seoultech에서 같이 공부하고 싶어서 들어오게 됐습니다. 잘부탁드립니다.
