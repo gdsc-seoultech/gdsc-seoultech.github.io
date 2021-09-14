@@ -45,13 +45,21 @@ comye1:
     blog_platform: naver
     blog: https://blog.naver.com/comye1
 Songminseon:
-    name: 송민선
-    author_name: 민선
-    role: core
-    email: smsun0329@gmail.com
-    github: Songminseon
-    description: 코딩 잘하고 싶어요...
-    introduce: 안녕하세요. 서울과학기술대학교 산업공학과 ITM학부 16학번 송민선입니다. 작년 3학년을 마친 후, 현재 휴학 중이며 다양한 활동을 하면서 부딪히고 있습니다. 혼자서 모든 것을 할 수 있는 개발자, 1인 창업이라는 목표를 꿈꾸면서 개발 공부를 시작하였습니다. 현재 다양한 프로젝트를 참여하면서 풀스택 개발자로 성장하고 있습니다. 이번 GDSC를 통해 개발자로서 성장하고 싶은분, 개발 공부 같이하고 싶은 분, 사이드 프로젝트를 하고 싶으신 분 모두 기다리고 있습니다.
+  name: 송민선
+  author_name: 민선
+  role: core
+  email: smsun0329@gmail.com
+  github: Songminseon
+  description: 코딩 잘하고 싶어요...
+  introduce: 안녕하세요. 서울과학기술대학교 산업공학과 ITM학부 16학번 송민선입니다. 작년 3학년을 마친 후, 현재 휴학 중이며 다양한 활동을 하면서 부딪히고 있습니다. 혼자서 모든 것을 할 수 있는 개발자, 1인 창업이라는 목표를 꿈꾸면서 개발 공부를 시작하였습니다. 현재 다양한 프로젝트를 참여하면서 풀스택 개발자로 성장하고 있습니다. 이번 GDSC를 통해 개발자로서 성장하고 싶은분, 개발 공부 같이하고 싶은 분, 사이드 프로젝트를 하고 싶으신 분 모두 기다리고 있습니다.
+YeongHyeon-Kim:
+  name: 김영현
+  author_name: 영현
+  role: member
+  email: insut69@gmail.com
+  github: YeongHyeon-Kim
+  description: 늦었다고 생각할때가 정말 늦었다.
+  introduce: 안녕하세요! 서울과학기술대학교 산업공학과 ITM 학부 16학번 김영현입니다. 3학년을 마친 후 배우고 싶은게 너무 많아 휴학 중입니다. 코딩이 재미있어서 프로그래밍에 입문하게 되었고 지금은 Web에 대해서 공부중입니다. 매일매일 성장하는 모습 보여드리겠습니다!
 InHyeok-J:
     name: 조인혁
     author_name: 인혁
