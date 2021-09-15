@@ -20,6 +20,7 @@ window.onload = function () {
     "leeeha",
     "jih",
     "ssggi",
+    "yoonjae"
   ];
 
   idList.map((item, index) => {

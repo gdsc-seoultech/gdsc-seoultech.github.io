@@ -487,9 +487,26 @@ title: MEMBER
                 </div>
             </div>
             <div class="member-card">
-                <div class="folder">
+                {% assign member = site.data.members | map: "Hanyoonjae" %}
+                <div class="folder" id="yoonjae">
                 </div>
-                <span class="member-name">한윤재</span>
+                <span class="member-name">{{ member | map: "name" }}</span>
+            </div>
+            <div class="black_bg" id="yoonjae">
+                <div class="modal_close" id="yoonjae"><a href="#;">close</a></div>
+            </div>
+            <div class="modal_wrap" id="yoonjae">
+                <div class="the_member">
+                    <img class="member_image" src="https://github.com/{{ member | map: 'github' }}.png">
+                    <div class="member_description">
+                        <p class="text" id="title"> {{ member | map: "description" }} </p>
+                        <p class="text" id="name"> {{ member | map: "name" }} </p>
+                        <P class="text" id="d"> {{ member | map: "introduce" }}</p>
+                        <span class="member-icon"><a class="link-dark"
+                                href="https://github.com/{{ member | map: 'github' }}" target="_blank"><i
+                                    class="fa fa-github fa-2x"></i></a></span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
