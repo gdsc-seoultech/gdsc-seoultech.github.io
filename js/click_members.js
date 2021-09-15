@@ -24,6 +24,10 @@ window.onload = function () {
 
   idList.map((item, index) => {
     function onClick() {
+      idList.map((item, index) => {
+        document.querySelectorAll(".modal_wrap")[index].style.display = "none";
+        document.querySelectorAll(".black_bg")[index].style.display = "none";
+      });
       document.querySelectorAll(".modal_wrap")[index].style.display = "block";
       document.querySelectorAll(".black_bg")[index].style.display = "block";
     }
@@ -38,4 +42,17 @@ window.onload = function () {
       .querySelectorAll(".modal_close")
       [index].addEventListener("click", offClick);
   });
+
+  function offAll() {
+    idList.map((item, index) => {
+      document.querySelectorAll(".modal_wrap")[index].style.display = "none";
+      document.querySelectorAll(".black_bg")[index].style.display = "none";
+    });
+  }
+
+  window.onkeydown = function (event) {
+    if (event.keyCode === 27) {
+      offAll();
+    }
+  };
 };
