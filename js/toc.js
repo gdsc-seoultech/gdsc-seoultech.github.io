@@ -4,21 +4,23 @@ window.onload = function () {
   newDiv.classList.add("toc-area");
   const compareDiv = document.getElementById("page-content");
   document.body.insertBefore(newDiv, compareDiv);
+  const postContainer = document.getElementsByClassName("post-content")[0];
 
-  const tocNum = document.getElementsByTagName("h3").length;
+  const tocNum = postContainer.querySelectorAll("h1,h2").length;
   const paddingValue = 55;
   const tocPointList = [];
 
   for (let i = 0; i < tocNum; i++) {
-    const tocList = document.getElementsByTagName("h3");
+    const tocList = postContainer.querySelectorAll("h1,h2");
 
     let newButtonTag = document.createElement("button");
+
+    newButtonTag.id = tocList[i].tagName;
     newButtonTag.innerHTML = tocList[i].innerHTML;
 
     document.getElementsByClassName("toc-area")[0].appendChild(newButtonTag);
 
-    const postContainer = document.getElementsByClassName("post-content")[0];
-    const tagList = postContainer.getElementsByTagName("h3");
+    const tagList = postContainer.querySelectorAll("h1,h2");
 
     const tocPoint = tagList[i].offsetTop - paddingValue;
     tocPointList.push(tocPoint);
@@ -28,9 +30,14 @@ window.onload = function () {
     .getElementsByClassName("toc-area")[0]
     .getElementsByTagName("button");
 
+  //tocTable에 패딩 추가
+    addPaddingFunc(tocTable);
   for (let i = 0; i < tocNum; i++) {
     function scrollPoint() {
-      window.scrollTo(0, tocPointList[i]);
+      window.scrollTo({
+        top: tocPointList[i],
+        behavior: "smooth",
+      });
     }
     tocTable[i].addEventListener("click", scrollPoint);
   }
@@ -54,4 +61,25 @@ window.onload = function () {
     }
   };
   window.addEventListener("scroll", scrollFunc);
+};
+
+const addPaddingFunc = (HTMLCollection) => {
+  const secondLayer = "second-layer";
+  for (let i = 0; i < HTMLCollection.length; i++) {
+    if (!HTMLCollection[i + 1]) {
+      continue;
+    }
+
+    if (HTMLCollection[i].id === "H1" && HTMLCollection[i + 1].id === "H2") {
+      HTMLCollection[i + 1].classList.add(secondLayer);
+    }
+
+    if (
+      HTMLCollection[i].id === "H2" &&
+      HTMLCollection[i + 1].id === "H2" &&
+      HTMLCollection[i].classList.contains(secondLayer)
+    ) {
+      HTMLCollection[i + 1].classList.add(secondLayer);
+    }
+  }
 };
