@@ -148,7 +148,8 @@
   button {
     all: unset;
     cursor: pointer;
-    width: 100%;
+    display: block;
+    width: auto;
     height: 20px;
     margin: 14px 0px 0px 0px;
   }
@@ -156,6 +157,10 @@
   .active-toc {
     font-weight: 700;
     font-size: 18px;
+  }
+
+  .second-layer {
+    padding-left: 15px;
   }
 }
 
@@ -190,14 +195,24 @@
       color: $theme-color;
     }
   }
-  h2 {
+  h1 {
     font-size: 42px;
+    line-height: 1.4;
+    font-weight: 700;
     @include media-query($on-laptop) {
       font-size: 28px;
     }
   }
-  h3 {
+  h2 {
     font-size: 30px;
+    line-height: 1.4;
+    font-weight: 700;
+    @include media-query($on-laptop) {
+      font-size: 25px;
+    }
+  }
+  h3 {
+    font-size: 25px;
     line-height: 1.4;
     font-weight: 700;
     @include media-query($on-laptop) {
