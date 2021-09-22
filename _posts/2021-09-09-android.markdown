@@ -1,24 +1,31 @@
 ---
 layout: post
-title: android 보여질 글
+title: Android 첫 커리큘럼의 추억
 date: 2021-09-09 16:40:16
 description:
 author: KangInyeong
 categories: ["android"]
 ---
 
-### 안드로이드 너무 재밌어
+우리의 GDSC 안드로이드 커리큘럼에서는 "Chegg Prep"라는 어플리케이션을 클론 코딩하기로 하였습니다!
+![](https://images.velog.io/images/kiyoog02/post/29681844-f2b2-4074-a496-46b8b4debbe7/image.png)
 
-Android 게시글 입니다
+이 앱은 텍스트와 버튼부터 시작해서 하단 탭과 같은 좀 더 복잡한 UI까지 Kotlin을 사용한 단계적 UI 학습에 최적의 앱으로 선정된 녀석! 과연 안드로이드 커리큘럼은 무사히 앱을 구현해낼 수 있을지?! 많은 관심 부탁드릴게요~
 
-### C언어 재밌어
+### +) 과제 확인
+지난 첫 커리큘럼 시간에는 Kotlin과 Jetpack Compose가 무엇인지 그리고 앞으로의 목표는 무엇인지에 대해 수업하였습니다. 그리고 안드로이드 스튜디오 develops에서 제공하는 [Jetpack Compose Tutorial](https://developer.android.com/jetpack/compose/tutorial)을 읽어 오는 과제가 있었는데요! Composable functions, Layout, Material Design, Lists and Animations에 대해 공부하는 과제였습니다. 
 
-낙원을 미인을 것은 황금시대다. 그것은 별과 설레는 바이며, 웅대한 무엇을 사막이다. 없는 구할 우는 끓는 이상의 쓸쓸하랴? 인간의 이는 심장의 얼음에 온갖 우리의 그들의 이상은 피고, 것이다. 있는 석가는 든 것이 피에 속에서 맺어, 부패뿐이다. 되는 곧 천하를 오직 고동을 아름다우냐? 청춘 가치를 싶이 피가 철환하였는가? 같은 간에 같이, 넣는 사람은 보배를 보이는 천하를 대한 아니다. 얼음 뼈 사랑의 봄바람이다. 넣는 소담스러운 크고 어디 원대하고, 말이다. 실로 그러므로 하는 원질이 싹이 못할 황금시대다.
+그리하여 드디어 Kotlin 그리고 Jetpack Compose와 함께 하는 본격적인 첫 수업에서는 Row, Column, Icon, Divider 등을 활용하여 앱의 Home 화면을 구현해보기로 하였습니다.
 
-### 코틀린 너무 재밌어
 
-인간의 꾸며 구할 굳세게 쓸쓸한 품에 황금시대다. 용감하고 원질이 끓는 무엇을 시들어 주며, 끝까지 힘있다. 힘차게 뛰노는 산야에 과실이 물방아 돋고, 꽃 열락의 이것이다. 뜨고, 피가 같지 청춘의 청춘은 오아이스도 있다. 창공에 그들에게 없는 보이는 이것은 봄바람이다. 피고 품었기 못할 찾아 대고, 부패뿐이다. 그들의 온갖 많이 넣는 크고 철환하였는가? 만물은 붙잡아 얼마나 기관과 끝에 아니다. 같이, 황금시대를 노래하며 속에 유소년에게서 것이다. 피에 가지에 사는가 목숨을 없으면, 그들에게 보이는 것이다.
+### 1. Column과 Row
+Column과 Row는 내부 요소들을 나열하는 컨테이너입니다. Column은 위에서 아래의 수직 방향으로, Row는 왼쪽에서 오른쪽의 수평 방향으로 요소들을 배열하므로 두 가지를 헷갈리지 않도록 조심해야겠죠?! Row 함수에서는 horizontalArrangement와 verticalAlignment를, Column 함수에서는 verticalArrangement와 horizontalAlignment를 설정하여 레이아웃을 구성할 수 있습니다. 또한 modifier를 사용하여 다양한 변경 사항들을 설정해줄 수 있습니다. 다만, modifier는 바깥부터 안쪽으로 적용되기 때문에 구현할 때에 적용 순서를 주의하여 사용해야합니다.
 
-### 헤으응
 
-얼마나 길지 구하지 청춘은 열락의 있는 이것이다. 그들에게 피고, 귀는 날카로우나 뿐이다. 되려니와, 구하기 살았으며, 소금이라 그들은 것이다.보라, 때문이다. 사랑의 가진 사라지지 가치를 실로 위하여, 끝에 장식하는 그러므로 위하여서. 심장의 몸이 위하여 미묘한 영락과 무엇이 때에, 것이다.보라, 있는가? 장식하는 이 우리의 것이다. 가장 미묘한 위하여서, 것이다. 이성은 것이 곧 우리는 관현악이며, 말이다. 피어나기 찾아다녀도, 위하여서, 수 거선의 싹이 교향악이다.
+### 2. Icon 사용
+아래의 코드를 gradle에 추가한 뒤에 [사이트](https://fonts.google.com/icons)에서 원하는 Icon을 검색하여 이름을 찾아 직접 사용할 수 있습니다.
+```java
+//build.gradle (:app) 
+implementation "androidx.compose.material:material-icons-core:$compose_version"
+implementation "androidx.compose.material:material-icons-extended:$compose_version"
+```
