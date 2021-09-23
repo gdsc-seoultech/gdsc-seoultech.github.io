@@ -138,8 +138,8 @@
 
 .toc-area {
   position: fixed;
-  right: calc(50% - 605px);
-  width: 200px;
+  left: calc(50% + 450px);
+  width: auto;
   height: 50%;
   transform: translate(0, 50%);
 
@@ -150,7 +150,6 @@
     cursor: pointer;
     display: block;
     width: auto;
-    height: 20px;
     margin: 14px 0px 0px 0px;
   }
 
@@ -356,6 +355,12 @@
 @media screen and (max-width: 510px) {
   h1 b {
     font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 1224px) {
+  .toc-area {
+    display: none;
   }
 }
 
