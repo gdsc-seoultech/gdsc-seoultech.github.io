@@ -377,3 +377,48 @@
     margin-right: 20px;
   }
 }
+.post-content div[class*="language-"] {
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  border-radius: 0.25rem;
+}
+.post-content div[class*="language-"]::before {
+  background: black;
+  border-radius: 0 0 0.25rem 0.25rem;
+  color: white;
+  font-size: 15px;
+  letter-spacing: 0.025rem;
+  padding: 0.1rem 0.5rem;
+  position: absolute;
+  right: 1rem;
+  text-align: right;
+  font-weight: 500;
+  right: 5px;
+  top: 0px;
+}
+.post-content div[class~="language-kotlin"]::before {
+  content: "kotlin";
+  background: rgb(133, 183, 101);
+  color: black;
+}
+.post-content div[class~="language-json"]::before {
+  content: "json";
+  background: rgb(133, 183, 101);
+  color: black;
+}
+.post-content div[class~="language-java"]::before {
+  content: "java";
+  background: #bbceff;
+
+  color: black;
+}
+.post-content div[class~="language-javascript"]::before {
+  content: "javascript";
+  background: #f7df1e;
+  color: black;
+}
+.post-content div[class~="language-js"]::before {
+  content: "javascript";
+  background: #f7df1e;
+  color: black;
+}
