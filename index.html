@@ -25,16 +25,16 @@ layout: default
 
 <div class="main-page">
     <h1><b>GDSC Seoultech 세미나&이벤트</b></h1>
-    <ul class="post-list">
+  <ul class="post-list">
 
-    {% assign seminar_list = site.seminars | reverse %}
-    {% for seminar in seminar_list %}
-        <li>
-            <h3><a class="post-title" href="{{ seminar.url | prepend: site.baseurl }}">{{ seminar.title }}</a></h3>
-            <p class="post-meta">{{ seminar.date | date: '%B %-d, %Y — %H:%M' }}</p>
-            <p class="post-meta">{{ seminar.author }}</p>
-          </li>
+    {% assign category = "seminar" %}
+    {% for post in site.categories[category] %}
+      <li>
+        <h3><a class="post-title" href="{{ post.url | prepend: site.baseurl }}" style="font-size: 30px;">{{ post.title }}</a></h3>
+        <p style="padding-top: 10px; margin-bottom: 5px;">• {{ post.author }} • {{ post.categories }}</p>
+        <p class="post-meta">{{ post.date | date: '%B %-d, %Y — %H:%M' }}</p>
+      </li>
     {% endfor %}
-    </ul>
+  </ul>
 </div>
 

@@ -3,6 +3,7 @@ layout: post
 title:  GDSC Seoultech 첫 세션 돌아보기
 date:   2021-09-09 16:25:16
 author: twinklesu
+categories: ["seminar"]
 ---
 
 9월 7일, GDSC Seoultech의 첫 정기 세션이 있었습니다. <br>

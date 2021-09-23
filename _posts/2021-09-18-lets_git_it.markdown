@@ -3,6 +3,7 @@ layout: post
 title:  두 번째 세션 - Let's GIT it~! 돌아보기
 date:   2021-09-17 17:36:17
 author: KangInyeong
+categories: ["seminar"]
 ---
 
 9월 14일, GDSC Seoultech의 두 번째 정기 세션이 있었습니다. <br>
