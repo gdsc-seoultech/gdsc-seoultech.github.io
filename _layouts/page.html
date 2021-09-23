@@ -24,7 +24,7 @@ layout: default
   <!-- post된 글들 전부 목록 -->
     <ul class="post-list">
 
-    {% assign post_list = site.posts | reverse %}
+    {% assign post_list = site.posts %}
     {% for post in post_list %}
         <li>
             <h3><a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
