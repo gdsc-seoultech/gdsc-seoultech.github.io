@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 1️⃣1쿼터 미라클 모닝 1차 보고서
-date: 2021-09-26 20:00:00
+date: 2021-09-26 20:00:00 +0900
 author: twinklesu
 description:
 categories: ["study"]
