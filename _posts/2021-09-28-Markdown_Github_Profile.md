@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 세 번째 세션 - git똥차게 git profile 꾸미기 돌아보기
-date: 2021-09-28 12:21:17
+date: 2021-09-27 12:21:17
 author: Seongryool Wee
 categories: ["ml"]
 ---
