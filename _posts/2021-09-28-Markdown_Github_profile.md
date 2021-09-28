@@ -82,7 +82,7 @@ BlockQuote를 여러 개 사용하고 싶으시면 왼쪽의 사진처럼 한 개 넣고 그 밑에 2개 넣
 ![image](https://user-images.githubusercontent.com/66999675/134666515-da4a638b-17e1-4e3f-88f0-e2b6b77e5551.png)
 
 순서 없는 목록입니다. 별표, 플러스, 마이너스를 이용해서 사용 가능합니다.  
-셋 중에 어느 걸 사용해도 다 똑같이 나옵니다.
+셋 중에 어느 걸 사용해도 똑같이 나옵니다.
 
 ![image](https://user-images.githubusercontent.com/66999675/134666658-4ef0b013-a823-4320-9d91-c35dbff8da26.png)
 
