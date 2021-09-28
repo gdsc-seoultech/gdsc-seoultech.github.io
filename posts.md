@@ -173,7 +173,7 @@ print("테스트 세트 정확도: {":.2f"}".format(clf.score(X_test, y_test)))
 <br>
 <br>
 
-----
+-----
 <br>
 
 # 리지 회귀
