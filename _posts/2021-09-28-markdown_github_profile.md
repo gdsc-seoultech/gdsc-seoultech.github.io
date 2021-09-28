@@ -18,20 +18,20 @@ categories: ["seminar"]
 
 # Markdown 익히기
 
-## - Markdown 이란?
+### - Markdown 이란?
 
 1. 먼저 Markdown은 텍스트 기반이고,쉽게 쓰고 읽을 수 있으며 HTML로 변환이 가능합니다.
 2. Markdown은 특수기호와 문자를 이용한 매우 간단한 구조의 문법을 사용합니다.
 3. 마크다운이 최근 각광받기 시작한 이유는 Github 때문입니다.
 4. Github 저장소 Repository에 관한 정보를 기록하는 README에 Markdown을 통해서 설치 방법, 소스코드 설명, 이슈 등을 간단하게 기록하고 가독성을 높일 수 있다는 강점이 부각되어서 각광 받고 있습니다.
 
-## - Markdown 장점
+### - Markdown 장점
 
 1. 먼저 Markdown은 별도의 도구 없이 작성 가능하고 굉장히 간결한 문법을 가지고 있습니다.
 2. Text로 저장되기에 용량이 적어서 보관이 용이하고 Text 파일이기에 버전관리시스템을 이용해서 변경이력 관리가 가능합니다.
 3. 지원하는 프로그램과 플랫폼이 매우 다양합니다.
 
-## - Markdown 단점
+### - Markdown 단점
 
 마크다운에도 단점이 존재합니다.
 
@@ -39,9 +39,10 @@ categories: ["seminar"]
 2. 아쉽게도 모든 HTML 마크업을 대신하지 못 하기 때문에 모든걸 Markdown을 통해서 생성할 수 없습니다.
 
 ---
+
 <br>
 
-## - 강의자료 보는 법
+### - 강의자료 보는 법
 
 ![image](https://user-images.githubusercontent.com/66999675/134665134-57657fc1-e308-441b-bba3-9eec137cb486.png)
 ![image](https://user-images.githubusercontent.com/66999675/134665187-ff70ad10-bb56-4365-b171-08bf7fe8e5da.png)
@@ -49,7 +50,7 @@ categories: ["seminar"]
 앞으로 사진이 왼쪽 오른쪽 두 개가 나올 겁니다. 왼쪽은 Edit file로 readme에서 코드를 작성하는 곳입니다.  
 오른쪽은 Edit file에서 작성한 코드를 미리볼 수 있는 Preview입니다.
 
-## - 헤더 Headres
+### - 헤더 Headres
 
 ![image](https://user-images.githubusercontent.com/66999675/134665541-96c838a3-0faa-424c-95f5-871e3d4ce7b2.png)
 ![image](https://user-images.githubusercontent.com/66999675/134665571-39b750cc-5f24-4ad6-afb4-f29be90c0329.png)
@@ -60,14 +61,14 @@ categories: ["seminar"]
 오른쪽 사진에서 보시다 싶이 '#' 1개와 # 2개는 기본적으로 밑줄까지 제공해줍니다.  
 '#' 7개 이상부터는 헤더로 출력되지 않고 '#'으로 나오게 됩니다.
 
-## - BlockQute
+### - BlockQute
 
 ![image](https://user-images.githubusercontent.com/66999675/134666018-e193ad29-4cc4-44e9-bc19-d26be209aa1f.png)
 
 BlockQuote 입니다. BlockQuote는 '>'를 이용해서 표현할 수 있습니다.  
 BlockQuote를 여러 개 사용하고 싶으시면 왼쪽의 사진처럼 한 개 넣고 그 밑에 2개 넣고 갯수를 늘려가는 방식으로 하면 됩니다.
 
-## - 순서 있는 목록
+### - 순서 있는 목록
 
 ![image](https://user-images.githubusercontent.com/66999675/134666248-d1c9d310-7e49-4b1b-bae4-43921c1e1310.png)
 
@@ -78,7 +79,7 @@ BlockQuote를 여러 개 사용하고 싶으시면 왼쪽의 사진처럼 한 �
 위의 사진처럼 순서있는 목록은 항상 맨 앞 숫자 기준으로해서 오름차순으로 정렬을 하게 됩니다.  
 왼쪽의 사진을 보면 1 4 2 3 이렇게 적었는데 맨 앞 숫자 1을 기준으로 해서 1 2 3 4로 정렬이 됩니다.
 
-## - 순서 없는 목록
+### - 순서 없는 목록
 
 ![image](https://user-images.githubusercontent.com/66999675/134666515-da4a638b-17e1-4e3f-88f0-e2b6b77e5551.png)
 
@@ -90,7 +91,7 @@ BlockQuote를 여러 개 사용하고 싶으시면 왼쪽의 사진처럼 한 �
 또한 꼭 하나의 종류만 사용 가능한 것이 아니라 별표, 플러스, 마이너스를 혼합해서 사용이 가능합니다.  
 저 같은 경우는 보통 - 를 많이 사용합니다.
 
-## - 코드 작성
+### - 코드 작성
 
 ![image](https://user-images.githubusercontent.com/66999675/134666804-1273eac1-dd19-4921-b182-7eef986efaab.png)
 
@@ -110,7 +111,7 @@ space bar 4번이나 tab 4번을 눌러서 코드블럭을 사용할 때에는 �
 일단 기본적으로 \`\`\`을 해도 코드블럭이 만들어지고 여기에 작성하려는 언어를 입력하면 언어에 맞게 문법 강조 기능이 되어집니다.  
 코드를 다 작성했으면 마지막줄에 똑같은 개수로 닫아주면 됩니다.
 
-## - Inline Code
+### - Inline Code
 
 ![image](https://user-images.githubusercontent.com/66999675/135014714-5dd65bd1-60d4-4cde-914a-6184644bbdea.png)
 이번엔 코드 블럭이랑 매우 유사한 인라인 코드를 알아보도록 하겠습니다.  
@@ -118,14 +119,14 @@ space bar 4번이나 tab 4번을 눌러서 코드블럭을 사용할 때에는 �
 인라인 코드는 위의 사진에서 보시다 싶이 한 줄만 감쌀 수 있습니다.
 왼쪽 코드에서 줄 바꿈을 적용해도 한 줄로만 적용이 됩니다.
 
-## - 수평선
+### - 수평선
 
 ![image](https://user-images.githubusercontent.com/66999675/134667928-c1cbcd2d-4fba-459e-974f-3b1bb6931a3f.png)
 
 수평선 입니다. \*, - 을 사용하면 됩니다. 어느 것을 사용해도 똑같이 나오게 됩니다.  
 참고로 꼭 3개 이상을 하셔야 정상적으로 수평선이 나오게 됩니다.
 
-## - 표
+### - 표
 
 ![image](https://user-images.githubusercontent.com/66999675/134668133-17ebd3a9-1641-46f5-9a13-837ead2239ee.png)
 
@@ -139,14 +140,14 @@ space bar 4번이나 tab 4번을 눌러서 코드블럭을 사용할 때에는 �
 정렬을 하고 싶다면 :--- 을 사용하면 왼쪽 정렬, ---:을 사용하면 오른쪽 정렬 :---:을 사용하면 중앙정렬이 됩니다.  
 위에서 오른쪽 사진을 보면 맨 위의 행만 정렬이 된 것처럼 보이지만 실제로는 각각의 행에 왼쪽, 오른쪽, 중앙정렬이 됩니다. (~~칸이 작아서 다 중앙정렬로만 보입니다.~~)
 
-## - 링크
+### - 링크
 
 ![image](https://user-images.githubusercontent.com/66999675/134761307-e865d5eb-0eb5-40b7-a8ae-5880b1b5a0ce.png)
 
 글자에 링크를 달아야되는 경우도 있습니다. 이때는 대괄호와 소괄호를 이용해서 하면 됩니다.  
 예를 들어서 GDSC글자에 GDSC 블로그 갈 수 있게 해주는 링크를 연결해주고 싶다고 하면 왼쪽 사진 처럼 대괄호 안에 GDSC를 넣고 소괄호에 주소를 넣어주시면 됩니다. 여기서 꼭 대괄호와 소괄호는 붙여서 써야 정상적으로 작동이 됩니다.
 
-## - 강조
+### - 강조
 
 ![image](https://user-images.githubusercontent.com/66999675/134761413-e6144a2c-40b3-4d00-b004-691a4b227ba5.png)
 
@@ -155,7 +156,7 @@ space bar 4번이나 tab 4번을 눌러서 코드블럭을 사용할 때에는 �
 취소선은 '~~'을 사용하면 됩니다.  
 참고로 꼭 앞 뒤 둘다에 사용해주셔야 되고 기호 앞뒤로 띄어쓰기를 하면 안됩니다.
 
-## - 줄바꿈
+### - 줄바꿈
 
 ![image](https://user-images.githubusercontent.com/66999675/134761504-1b83b12d-ee37-4ad5-9c41-9fee126402b0.png)
 
@@ -170,7 +171,7 @@ edit file에서 작성을 할 때는 줄바꿈이 적용 된 것처럼 보이나
 이렇게 위에서 설명한대로 스페이스바를 두 번 누르게 되면 줄 바꿈이 됩니다.  
  스페이스바 2번을 눌렀다는 걸 잘 보여주기 위해서 드래그를 했습니다.
 
-## - 이미지
+### - 이미지
 
 ![image](https://user-images.githubusercontent.com/66999675/134761583-f9cf1c76-99b8-40da-bb1b-06ce312c0632.png)
 
@@ -193,7 +194,7 @@ new issues를 누르면 위의 사진처럼 뜨게 됩니다. 그럼 write 부�
 
 ![image](https://user-images.githubusercontent.com/90545035/134761815-7d61e629-e851-4eb0-877a-0954b84ed2a0.png)
 
-## - repository 생성
+### - repository 생성
 
 이제 본격적으로 github profile을 꾸며보도록 하겠습니다. 꾸미기 위해서 가장 먼저 해야될 일은 repository를 생성을 해야됩니다.  
 repository 생성을 누르게 되면 왼쪽과 같은 화면이 나오게 됩니다.
@@ -208,7 +209,7 @@ create repository를 누르면 기본적인 화면이 뜨게 됩니다. 여기�
 ![image](https://user-images.githubusercontent.com/90545035/134762032-eb6cc969-edb7-4de5-84bf-debed537e16e.png)  
 이게 편집의 기본화면 입니다. edit file은 코드 작성 preview는 작성한 코드를 미리 볼 수 잇는 곳입니다.
 
-## - 상단꾸미기
+### - 상단꾸미기
 
 자 이제 본격적으로 해보겠습니다. 먼저 상단 꾸미기 입니다.  
  상단꾸미기에 대한 자료는 [링크](https://github.com/kyechan99/capsule-render)에서 가져왔습니다. 더 자세한 내용을 알고 싶다면 [링크](https://github.com/kyechan99/capsule-render)를 참고 하시면 됩니다.  
@@ -225,7 +226,7 @@ create repository를 누르면 기본적인 화면이 뜨게 됩니다. 여기�
 
 참고로 뒤에 상단 꾸미기 내용이 더 있는데 이 링크를 기준으로 해서 이걸 바꾸는 형식으로 설명을 할껍니다.
 
-## - 상단꾸미기 type
+### - 상단꾸미기 type
 
 먼저 background type를 바꿔보겠습니다. 배경은 총 10가지의 type이 있습니다.  
 기본은 wave이고 10번째 transparent까지 있습니다.
@@ -251,7 +252,7 @@ create repository를 누르면 기본적인 화면이 뜨게 됩니다. 여기�
 
 ![image](https://user-images.githubusercontent.com/66999675/134762476-df9abf57-cdaa-4921-9fd2-04026bbaf1dc.png)
 
-## - 상단꾸미기 Backgroundcolor
+### - 상단꾸미기 Backgroundcolor
 
 ![image](https://user-images.githubusercontent.com/66999675/134762502-912387bd-c4aa-49a5-8d9b-ef2d8500ee62.png)
 
@@ -267,7 +268,7 @@ hexcode를 제외한 나머지 5가지는 다 random으로 색깔이 배정이 �
 
 위는 gradient입니다. 전 갠적으로 gradient가 이뻐서 이걸로 사용합니다.
 
-## - 상단 꾸미기 Text
+### - 상단 꾸미기 Text
 
 이번에 Text입니다. 상단에 보여질 글자를 의미합니다. 바로 아래의 위성률 짱짱맨처럼요.  
 text에는 몇 가지 규칙이 있는데 스페셜 캐릭터('#','&','/')를 사용할 수 없고 space도 안됩니다.  
@@ -275,7 +276,7 @@ space를 해주고 싶으면 %20을 하면 space 한 번 한 것과 똑같은 �
 
 ![header](https://capsule-render.vercel.app/api?type=rect&color=gradient&height=300&section=header&text=위성률%20짱짱맨&fontSize=90)
 
-## - 상단 꾸미기 Text animation
+### - 상단 꾸미기 Text animation
 
 text에도 애니메이션을 넣을 수 있습니다. 애니메이션에는 5가지 애니메이션을 넣을 수 있습니다.  
 애니메이션은 따로 링크에 추가를 해주셔야됩니다. &animation = 원하는 애니메이션을 넣어주면 됩니다.  
@@ -357,7 +358,7 @@ stats는 아래의 링크를 복사한 다음 username = **tjdfbf1**에서 tjdfb
 [![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=tjdfbf1)](https://github.com/anuraghazra/github-readme-stats)
 ```
 
-## - Stats theme
+### - Stats theme
 
 stats는 테마를 바꿀 수 있습니다. 위에 있는 링크에서 &theme = 을 추가해주고 마음에 드는 테마 이름을 쓰면 됩니다.  
 모든 테마를 보고 싶으면 [링크](https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md)를 들어가서 확인하면 됩니다.
@@ -423,7 +424,7 @@ radical의 코드는 아래와 같습니다. 나머지 테마들도 theme 부분
 
 # 백준 카드
 
-마지막으로 백준 카드 입니다. 자신의 백준 푼 문제 수, 레이팅 점수, class, 티어를 보여주는 뱃지 입니다.  
+백준 카드 입니다. 자신의 백준 푼 문제 수, 레이팅 점수, class, 티어를 보여주는 뱃지 입니다.  
 백준 카드에 대한 자세한 내용은 [링크](https://github.com/mazassumnida/mazassumnida)에 들어가서 보시면 됩니다.
 
 일단 사용법은 아래의 링크를 복사해서 {fbfbf1} 부분에 자신의 **백준** 아이디를 넣어주시면 됩니다.  
