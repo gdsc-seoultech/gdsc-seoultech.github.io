@@ -28,8 +28,8 @@ layout: default
     {% for post in post_list %}
         <li>
             <h3><a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
-            <p class="post-meta">{{ post.date | date: '%B %-d, %Y — %H:%M' }}</p>
-            <p class="post-meta">{{ post.author }}</p>
+            <p class="post-author">작성자: {{ post.author }}</p>
+            <p class="post-meta">{{ post.date | date: '%Y년 %m월 %-d일 %H:%M' }}</p>
           </li>
     {% endfor %}
     </ul>
