@@ -7,7 +7,7 @@ categories: ["seminar"]
 ---
 
 9월 28일, GDSC Seoultech의 세 번째 정기 세션이 진행되었습니다.  
-세 번째 세미나의 주제는 **git똥차게 git profile 꾸미기** 였습니다.
+세 번째 세미나의 주제는 **git똥차게 git profile 꾸미기** 였습니다.!!!
 
 # Agenda
 
