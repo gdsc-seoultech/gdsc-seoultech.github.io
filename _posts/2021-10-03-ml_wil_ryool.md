@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 4주차 ML WIL
+title: 4주차 ML 지도학습 WIL
 date: 2021-10-02 20:00:00 +0900
 author: seongryool
 description:
