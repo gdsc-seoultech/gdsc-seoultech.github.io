@@ -6,7 +6,7 @@ author: drizzle0171
 categories: ["ml"]
 ---
 
-# 1. 결정트리(2.3.5)
+# 결정트리(2.3.5)
 : 결정에 다다르기 위해 예/아니오 질문을 이어 나가면서 학습 (스무고개)
 -> 계층적으로 영역을 분할해가는 알고리즘
 
@@ -81,13 +81,13 @@ display(graphviz.Source(dot_graph))
 <br>
 <br>
 
-# 2. 결정트리의 앙상블 (2.3.6)
+# 결정트리의 앙상블 (2.3.6)
 : 머신러닝 모델을 연결하며 더 강력한 모델을 만드는 기법
 
 - 랜덤 포레스트
 - 그레이디언트 부스팅
 
-### 1. 랜덤 포레스트
+### 랜덤 포레스트
 : 조금씩 다른 여러 결정 트리의 묶음
 -> 서로 다른 방향으로 과대적합된 트리를 많이 만들어 그 결과를 평균냄 **무작위성**
 ```python
@@ -124,7 +124,7 @@ from sklearn.ensemble import RandomForestClassfier
 <br>
 <br>
 
-## 2. 그레이디언트 부스팅 회귀
+## 그레이디언트 부스팅 회귀
 : 머신러닝 모델을 연결하며 더 강력한 모델을 만드는 기법 -> 분류와 회귀 모두에 사용 가능
 **★ 이전 트리의 오차를 보완하는 방식으로 순차적으로 트리를 만듦 ★**
 ```python
@@ -170,10 +170,10 @@ from sklearn.ensemble import GradientBoostingClassifier
 
 
 
-# 1. 배깅, 엑스트라 트리, 에이다부스트 (2.3.7)
+# 배깅, 엑스트라 트리, 에이다부스트 (2.3.7)
 : scikit-learn이 제공하는 다른 앙상블 알고리즘
 
-### 1. 배깅 Bagging
+### 배깅 Bagging
 : 중복을 허용한 랜덤 샘플링으로 만든 훈련 세트(부트스트랩 샘플)를 사용하여 분류기를 각기 다르게 학습시킴
 - 분류기가 predic_proba() 메서드를 지원 o: 확률값을 평균하여 예측 수행
 - 지원 X: 가장 빈도가 높은 클래스 레이블이 예측 결과가 됨
@@ -207,7 +207,7 @@ bagging.fit(Xc_train, yc_train)
 <br>
 <br>
 
-## 2. 엑스트라 트리 Extra-tree
+## 엑스트라 트리 Extra-tree
 : 랜덤 포레스트와 비슷하지만 후보 특성을 무작위로 분할한 다음 최적의 분할을 찾음
 
 ```python
@@ -224,7 +224,7 @@ from sklearn.ensemble import ExtraTreesClassifier
 <br>
 <br>
 
-## 3. 에이다 부스트 AdaBoost
+## 에이다 부스트 AdaBoost
 : 그레이디언트 부스팅처럼 약한 학습기 사용
 
 ```python
@@ -241,9 +241,9 @@ from sklearn.ensemble import AdaBoostClassifier
 <br>
 <br>
 
-# 2. 커널 서포트 벡터 머신 (2.3.8)
+# 커널 서포트 벡터 머신 (2.3.8)
 
-### 1. 커널 서포트 벡터 머신 SVM
+### 커널 서포트 벡터 머신 SVM
 : 입력 데이터에서 단순한 초평명으로 정의되지 않는 더 복잡한 모델을 만들 수 있도록 확장한 것
 
 ### 선형 모델과 비선형 특성
