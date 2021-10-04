@@ -22,7 +22,7 @@ from sklearn.tree import DecisionTreeClassifier
 <br>
 
 
-## 특징
+### 특징
 
   1. 결정 트리 학습 = 정답에 가장 빨리 도달하는 예/아니오 질문 목록(테스트)을 학습   
   2. X[1] 행 방향 X[0] 열 방향
@@ -35,7 +35,7 @@ from sklearn.tree import DecisionTreeClassifier
      
   <br>
   
-## 분석
+### 분석
 1. 트리 모듈의 export_graphviz 함수를 이용해 시각화 가능 (.dot - 그래프 저장용 텍스트 파일 포맷)
 ```python
 from sklearn.tree import export_graphviz
@@ -54,7 +54,7 @@ display(graphviz.Source(dot_graph))
 
 <br>
 
-## 특성 중요도
+### 특성 중요도
 : 트리를 만드는 결정에 각 특성이 얼마나 중요한지를 평가하하는 것
 
 - 0과 1 사이의 숫자 (1은 완벽하게 타깃 클래스를 예측했다는 뜻) 
@@ -71,7 +71,7 @@ display(graphviz.Source(dot_graph))
     
 <br>
 
-## 장단점
+### 장단점
 1. 장점
 	- 만들어진 모델을 쉽게 시각화 할 수 있어 비전문가도 이해하기 쉬움
     - 데이터의 스케일에 구애받지 않음
@@ -87,7 +87,7 @@ display(graphviz.Source(dot_graph))
 - 랜덤 포레스트
 - 그레이디언트 부스팅
 
-## 1. 랜덤 포레스트
+### 1. 랜덤 포레스트
 : 조금씩 다른 여러 결정 트리의 묶음
 -> 서로 다른 방향으로 과대적합된 트리를 많이 만들어 그 결과를 평균냄 **무작위성**
 ```python
@@ -95,7 +95,7 @@ from sklearn.ensemble import RandomForestClassfier
 ```
 
 
-## 구축
+### 구축
 1. **데이터셋**
 트리를 만들기 위해 먼저 데이터의 부트스트랩 샘플 생성 (n_samples개의 데이터 포인트 중 무작위로 데이터를 n_sammples 획수만큼 반복 추출 - 한 샘플이 여러 번 추출될 수 있음)
 2. **특성**
@@ -107,7 +107,7 @@ from sklearn.ensemble import RandomForestClassfier
 
 <br>
 
-## 장단점
+### 장단점
 1. 장점
 	- 현재 가장 널리 사용되는 머신러닝 알고리즘
     - 랜덤 포레스트의 트리가 많을수록 random_state 값의 변화에 따른 변동이 적음
@@ -131,7 +131,7 @@ from sklearn.ensemble import RandomForestClassfier
 from sklearn.ensemble import GradientBoostingClassifier
 ```
 
-## 특징
+### 특징
 1. 무작위성이 없음 (오차를 보완하는 방식이니까 ~~)
 2. 강력한 사전 가지치기
 3. 하나에서 다섯 정도의 깊지 않은 트리를 사용 = 메모리 사용이 적고 예측도 빠름
@@ -145,7 +145,7 @@ from sklearn.ensemble import GradientBoostingClassifier
 
 <br>
 
-## 장단점
+### 장단점
 1. 장점
 	- 지도 학습에서 가장 강력하고 널리 사용하는 모델 중 하나
     - 특성의 스케일을 조정하지 않아도 됨
@@ -165,7 +165,7 @@ from sklearn.ensemble import GradientBoostingClassifier
 
 <br>
 
-# 끝
+### 끝
 분명 개념은 쉬운데 뭔가 너무 어렵다... ~~... ~~... ~~..... 역시 공부는 끝이 없는 것인가
 
 
@@ -173,7 +173,7 @@ from sklearn.ensemble import GradientBoostingClassifier
 # 1. 배깅, 엑스트라 트리, 에이다부스트 (2.3.7)
 : scikit-learn이 제공하는 다른 앙상블 알고리즘
 
-## 1. 배깅 Bagging
+### 1. 배깅 Bagging
 : 중복을 허용한 랜덤 샘플링으로 만든 훈련 세트(부트스트랩 샘플)를 사용하여 분류기를 각기 다르게 학습시킴
 - 분류기가 predic_proba() 메서드를 지원 o: 확률값을 평균하여 예측 수행
 - 지원 X: 가장 빈도가 높은 클래스 레이블이 예측 결과가 됨
@@ -243,7 +243,7 @@ from sklearn.ensemble import AdaBoostClassifier
 
 # 2. 커널 서포트 벡터 머신 (2.3.8)
 
-## 1. 커널 서포트 벡터 머신 SVM
+### 1. 커널 서포트 벡터 머신 SVM
 : 입력 데이터에서 단순한 초평명으로 정의되지 않는 더 복잡한 모델을 만들 수 있도록 확장한 것
 
 ### 선형 모델과 비선형 특성
@@ -298,7 +298,7 @@ svm = SVC(kernel = 'rbf', C=10, gamma=0.1).fit(X, y)
 <br>
 <br>
 
-# 끝
+### 끝
 오 이제 뭔가 이해되기 시작하는듯 !! 하다가 SVM 하면서 의욕을 잃었다 ㅎ... 배깅이랑 에이다 부스트, 엑스트라 트리가 랜덤 포레스트, 그레이디언트 부스트랑 꽤나 큰 연관이 있는 것 같으니까 지도학습 끝나면 한 번 싹 정리해야겠다 ~~.. 오늘의 TIL도 ... 무사히... 끝...
 
 <br>
@@ -309,7 +309,7 @@ svm = SVC(kernel = 'rbf', C=10, gamma=0.1).fit(X, y)
 : 알고리즘 中 하나 -> 딥러닝
 - 다층 퍼셉트론 Multilayer perceptrons, **MLP**: 딥러닝 알고리즘의 출발점
 
-## 1. 신경망 모델
+### 1. 신경망 모델
 :여러 단계를 거쳐 결정을 만들어냄
 ![](https://images.velog.io/images/drizzle0171/post/cd02e92f-38d7-4ff7-96bb-01b4e6e3f049/image.png)
 
@@ -326,7 +326,7 @@ _렐루_ or _하이퍼볼릭 탄젠트_ (비선형 함수)를 적용
 ★ 우리가 정해야할 중요 매개변수: 은닉층의 유닛 개수
 -> 많은 은닉층으로 구성된 대규모의 신경망 = 딥러닝!
 
-## 2. 신경망 튜닝
+### 2. 신경망 튜닝
 ```python
 from sklearn.neural_network import MLPClassifier
 ```
@@ -414,5 +414,5 @@ print("테스트 세트 정확도: {:.3f}".format(mlp.score(X_test_scaled, y_tes
  <br>
  <br>
  
- # 끝
+ ### 끝
  지도 학습이 끝났다 ~!~!~!~! 신경망에서는 들어본 단어 (다중 퍼셉트론 등등...)이 많아서 공부하는데 재미있었는데, 그 뒤에 새로운 관문이 기다리고 있었다 ^^... 분류 예측의 불확실성 추정...... 멀지 않은 미래에 정복하러 오겠다 !!!
