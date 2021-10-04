@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 4주차 ML 지도학습 WIL
-data: 2021-10-03
+date: 2021-10-03
 author: drizzle0171
 categories: ["ml"]
 ---
@@ -18,8 +18,7 @@ categories: ["ml"]
 ```python
 from sklearn.tree import DecisionTreeClassifier
 ```
-
-
+<br>
 <br>
 
 
