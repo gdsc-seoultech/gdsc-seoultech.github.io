@@ -365,7 +365,7 @@ print("테스트 세트 정확도: {:.3f}".format(mlp.score(X_test_scaled, y_tes
 ```
 - 일반화 성능을 더 올리기 위해 모델의 복잡도 by alpha
 6. **분류 MLPClassifier 회귀 MLPRegressor**
-7. 딥러닝을 위한 라이브러리 多........
+7. 딥러닝을 위한 라이브러리 多.......
 
 ### 장단점
 1. 장점
