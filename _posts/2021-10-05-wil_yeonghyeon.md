@@ -1,6 +1,6 @@
 ---
 layout: post
-title: WIL 1주차(김영현)
+title: WIL 2주차(김영현)
 date: 2021-10-04 11:43:00
 author: YeongHyeon-Kim
 description:
