@@ -6,7 +6,7 @@ author: YeongHyeon-Kim
 description:
 categories: ["web"]
 ---
-# WIL 1주차 리액트!
+# WIL 2주차 리액트!
 
 ## 진행상황
 * React를 이용하여 에브리타임 클론코딩
