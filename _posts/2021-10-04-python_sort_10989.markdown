@@ -59,7 +59,7 @@ for i in range(10001):
 계수 정렬 알고리즘을 새롭게 알게 되었습니다!사용해서 풀 때를 잘 구분하면 좋을 것 같습니다.
 
 <br>
-참고자료
-<br>
-https://h-sseung.tistory.com/m/50?category=961404<br>
-https://yoonsang-it.tistory.com/49
+참고자료  
+
+[https://h-sseung.tistory.com/m/50?category=961404](https://h-sseung.tistory.com/m/50?category=961404)  
+[https://h-sseung.tistory.com/m/50?category=961404](https://yoonsang-it.tistory.com/49)
