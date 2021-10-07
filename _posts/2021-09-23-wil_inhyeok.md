@@ -2,7 +2,7 @@
 layout: post
 title: WIL 1주차
 date: 2021-09-22 21:00:00
-author: Inhyeok-J
+author: InHyeok-J
 description:
 categories: ["web"]
 ---
