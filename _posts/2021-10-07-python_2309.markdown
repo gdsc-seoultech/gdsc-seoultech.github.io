@@ -12,11 +12,11 @@ categories: ["study"]
 
 # 2309번. 일곱 난쟁이
 
-https://www.acmicpc.net/problem/2309 <br>
+[https://www.acmicpc.net/problem/2309 ](https://www.acmicpc.net/problem/2309)<br>
 
 ![image](https://user-images.githubusercontent.com/68090939/136366170-cc42222e-77d9-4625-b85e-fa2311a4d085.png)
 
-<img src="https://user-images.githubusercontent.com/68090939/136373061-1c6f9e23-3db2-4448-8178-74c3cd349dfd.png" width="70%"/>
+<img src="https://user-images.githubusercontent.com/68090939/136373061-1c6f9e23-3db2-4448-8178-74c3cd349dfd.png" width="60%"/>
 
 가짜 난쟁이 2명을 어떻게 찾을 수 있을까요? 중요한 단서는 진짜 난쟁이 7명의 키의 합이 100이라는 것입니다. 따라서 9명의 키를 모두 더한 값에서 100을 뺀 다음에, 그 차이를 만들어낸 가짜 난쟁이 2명을 찾으면 됩니다! 이것을 코드로 구현하려면 어떻게 해야 할까요? <br>
 
@@ -56,9 +56,6 @@ bool found = false;
 ```
 
 C++의 기본 배열은 원소 자체를 제거할 수 있는 방법이 없어서, 값을 0으로 만들고 출력에서는 이를 제외하는 방식으로 풀었습니다. 하지만, vector 컨테이너의 erase 함수를 사용하면 원소를 제거할 수 있습니다. 다만 주의할 점은 erase로 원소를 삭제하면 자동으로 한칸씩 원소들이 앞으로 당겨지기 때문에 i번째, j-1번째 원소를 삭제해줘야 합니다. 아래 C++ 코드들을 보시죠! <br>
-
-std::vector::erase 함수 레퍼런스
-http://www.cplusplus.com/reference/vector/vector/erase/
 
 <hr>
 
@@ -112,6 +109,9 @@ int main()
 <br>
 
 ## 2. vector 컨테이너 사용
+
+std::vector::erase 함수 레퍼런스 <br>
+[http://www.cplusplus.com/reference/vector/vector/erase/](http://www.cplusplus.com/reference/vector/vector/erase/)
 
 ```cpp
 #include <iostream>
@@ -183,8 +183,32 @@ for i in range(9):
         break
 ```
 
-파이썬의 remove 함수는 인덱스가 아니라 '값을 기준으로' 원소를 삭제합니다. 그런데 문제 조건에서 아홉 난쟁이의 키는 모두 다르다고 했기 때문에, 중복에 대한 고민 없이 '값을 기준으로' 원소를 삭제할 수 있습니다. 확실히 파이썬 코드가 C++보다 직관적이고 짧은 거 같은데, 아래 이미지에서 볼 수 있듯이 사용한 메모리와 실행 시간 측면에서는 C++이 우세하네요! 두 가지 언어로 모두 풀어보니 배워가는 게 많은 거 같습니다. 아직 파이썬 문법에는 익숙하지 않아서 거의 구글링에 의존하는데, 이 스터디를 통해 파이썬도 잘 다룰 수 있게 되었으면 좋겠네요! <br>
+파이썬의 remove 함수는 인덱스가 아니라 '값을 기준으로' 원소를 삭제합니다. 그런데 문제 조건에서 아홉 난쟁이의 키는 모두 다르다고 했기 때문에, 중복에 대한 고민 없이 '값을 기준으로' 원소를 삭제할 수 있습니다.<br>
+
+<hr>
+
+# sort 함수의 시간복잡도
+
+C++ STL algorithm의 std::sort 함수는 Introsort의 변형된 버전이라고 합니다. 여기서 Introsort는 기본적으로 퀵정렬과 힙정렬의 하이브리드이며, 마지막에 삽입 정렬까지 수행한다고 하네요. 그래서 이 std::sort 함수는 퀵정렬의 단점을 보완하여 최악의 경우에도 O(NlogN)의 시간복잡도를 보장할 수 있습니다.<br>
+
+파이썬의 내장 함수 sort는 Timsort로 구현되어 있다고 합니다. Introsort가 이론적인 최악의 경우를 대비해 변형시킨 알고리즘이라면, Timsort는 현실에서 있을 법한 다양한 데이터들에 대해 최적화를 시킨 알고리즘입니다. 기본적으로는 병합 정렬과 삽입 정렬의 하이브리드이며, 최악의 경우 O(NlogN)을 보장할 뿐만 아니라 최선의 경우 O(N)에 수행도 가능합니다. 이러한 Timsort는 Python 2.3부터 기본 정렬 알고리즘으로 사용되고 있으며, 이후 Java등 많은 라이브러리에서 표준 정렬로 채택되었다고 합니다.<br>
+
+[https://novlog.tistory.com/21](https://novlog.tistory.com/21)
+[http://www.secmem.org/blog/2019/04/10/special-sorts/](http://www.secmem.org/blog/2019/04/10/special-sorts/)
+[https://realpython.com/sorting-algorithms-python/#the-timsort-algorithm-in-python](https://realpython.com/sorting-algorithms-python/#the-timsort-algorithm-in-python)
+
+![image](https://user-images.githubusercontent.com/68090939/136488241-c8109b40-6267-485d-9dd5-c2fd4a2492ef.png)
+출처: [https://gmlwjd9405.github.io/2018/05/10/algorithm-quick-sort.html](https://gmlwjd9405.github.io/2018/05/10/algorithm-quick-sort.html)
+
+내장 함수 sort의 실체를 얕게나마 알고나니 우리가 일반적으로 배우는 위와 같은 정렬 알고리즘들은 새발의 피에 불과했다는 걸 깨달았습니다. 퀵정렬과 같이 익히 알려진 알고리즘도 피벗을 어떻게 선택하느냐에 따라서 수십가지 변형이 있고 각각의 특징이 다르며, 배열과 연결 리스트 중 어떤 자료구조를 선택하냐에 따라서도 알고리즘의 동작이 달라질 수 있습니다.<br>
+정렬 알고리즘의 종류는 셀 수 없이 많고 목적도 가지각색이며, 심지어는 실용성은 전혀 없이 그저 재미로만 만들어진 알고리즘, 일부러 느리게 만든 알고리즘 등도 존재한다고 합니다. 하지만, 일반적으로 정렬은 **효율적으로 자료를 검색하기 위해** 하는 것이라고 생각합니다. 대표적으로 선형탐색보다 효율적인 이진탐색은 데이터가 정렬되어 있을 때만 사용할 수 있는 알고리즘입니다. 이번 포스트를 통해 여러분도 정렬 알고리즘에 대해 새롭게 얻어 가는 지식이 있었으면 좋겠네요!<br>
+
+<hr>
+
+# 마무리
+
+2309번 풀이를 보니 확실히 파이썬 코드가 C++보다 직관적이고 짧은 거 같은데, 아래 스크린샷에서 볼 수 있듯이 사용한 메모리와 실행 시간 측면에서는 C++이 우세하네요! 두 가지 언어로 모두 풀어보니 배워가는 게 많은 거 같습니다. 아직 파이썬 문법에는 익숙하지 않아서 거의 구글링에 의존하는데, 이 스터디를 통해 파이썬도 잘 다룰 수 있게 되었으면 좋겠네요! <br>
 
 ![image](https://user-images.githubusercontent.com/68090939/136382676-03a07877-bd49-4d7f-8fe9-9eb6d7e33277.png)
 
-그럼 이만 포스트를 마치겠습니다. 다음 주에 만나요&#128075; <br>
+그럼 이만 포스트를 마치겠습니다. 다음 주는 '스택' 관련 문제를 풀 예정입니다!<br>
