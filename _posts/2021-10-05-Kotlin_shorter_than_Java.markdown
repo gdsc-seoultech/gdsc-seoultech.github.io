@@ -63,8 +63,8 @@ JetBrains는 2010년에 코틀린을 개발하기 시작합니다.
 클래스를 작성할 때 필드의 세터 게터 이런 것들을 전부 개발자가 작성을 해야 합니다. <br>
 개발자가 작성한 코드는 아무리 형식적일지라도 한 줄 한 줄이 유지보수해야 할 대상이 되기 때문에 개발자들이 고통을 겪었던 것입니다.
 
-![image](https://user-images.githubusercontent.com/50735594/136509474-aed802f4-16e2-49c9-8921-fcf4e03f339c.png)
-~~이 짤 제가 만들었어요~~
+![image](https://user-images.githubusercontent.com/50735594/136509474-aed802f4-16e2-49c9-8921-fcf4e03f339c.png) <br>
+↑ ~~이 짤 제가 만들었어요~~
 <img src="https://www.memecreator.org/static/images/memes/4829722.jpg" width="250dp"/>
 
 그러면 다른 언어로 새로 개발을 할 것이냐? 생각만 해도 머리가 아픕니다.
@@ -96,7 +96,7 @@ JetBrains는 2010년에 코틀린을 개발하기 시작합니다.
 하필, 우연히도
 비슷한 시기에 구글에게도 고민거리가 생겼습니다.
 
-## 구글 vs 오라클
+### 구글 vs 오라클
 
 자바를 개발한 썬 마이크로시스템즈를 오라클이 인수를 하고 바로 구글을 고소합니다.<br>
 안드로이드 운영체제에 자바 API를 사용한 것은 저작권의 침해라는 것이었습니다.
@@ -113,7 +113,7 @@ JetBrains는 2010년에 코틀린을 개발하기 시작합니다.
 자바가 범용적인 만큼 안드로이드에 특화되기는 더욱 어려웠습니다. <br>
 때문에 개발자들도 더욱 재밌게 사용할 수 있는 언어를 원했습니다.
 
-## 코틀린 공식 릴리즈 (2016)
+### 코틀린 공식 릴리즈 (2016)
 <img src="https://user-images.githubusercontent.com/50735594/136513780-d70eba71-41b7-4674-a13c-218b9e79ea9a.png" width="500dp"/>
 
 얼마 뒤인 2016년에 코틀린이 공식으로 출시됩니다. <br>
@@ -122,8 +122,9 @@ JVM과 안드로이드를 위한 프로그래밍 언어. <br>
 **자바와의 호환성, 안전성, 명확성, 그리고 툴링**에 집중했다고 하니 <br>
 구글과 안드로이드 개발자들이 찾던 그런 언어였던 것입니다.
 
-## 안드로이드 코틀린 공식 서포트 (2017) 그리고 Kotlin-first (2019)
+### 안드로이드 코틀린 공식 서포트 (2017) 그리고 Kotlin-first (2019)
 <img src="https://user-images.githubusercontent.com/50735594/136516552-a4da959d-b20a-426e-aa28-b47c7f63942a.png" width="300dp"/>
+
 코틀린은 안드로이드 개발자들의 성원을 받으며 2017년에 안드로이드 공식 서포트를 받게 됩니다. <br>
 
 
@@ -141,11 +142,11 @@ JVM과 안드로이드를 위한 프로그래밍 언어. <br>
 제목부터 코틀린이 자바보다 짧다고 했으니 이제 그 이야기를 하겠습니다. <br>
 안드로이드가 공식 서포트를 선언하면서 소개했던 내용들을 빌려 와봤습니다. <br>
 
-## 코틀린 기본사항
+### 코틀린 기본사항
 - 프로그래밍 패러다임 - 객체지향, 함수형, 비동기, 스크립트
 - 정적 타입 언어 + 타입 추론
 
-## 자바와 코틀린에서 클래스 작성 비교
+### 자바와 코틀린에서 클래스 작성 비교
 ![04 앗!코틀린, 자바보다 짧다(예원) pptx](https://user-images.githubusercontent.com/50735594/136518029-54e49c71-5efe-40bd-975f-52f85e8fad24.jpg)
 
 자바에서 Customer 클래스를 구현해보았습니다. <br>
@@ -174,7 +175,7 @@ data class Customer(
 이러한 방식으로 getter 및 setter를 필요한 대로 바꿀 수 있으며 OOP에서 핵심인 은닉 또한 가능합니다.<br>
 코틀린, 정말 깔끔하지 않나요?!
 
-## 코틀린의 null-safety
+### 코틀린의 null-safety
 
 자바를 쓰면서 NullPointerException 다들 만나보셨을 텐데요. <br>
 자바는 null을 허용하기 때문에 런타임에 예외가 발생하게 됩니다. <br>
@@ -197,7 +198,7 @@ if (mightBeNull.length > 0) { // Compiler catches this error for you
 ```
 nullable로 선언하고 length 속성에 접근했을 때 컴파일러가 바로 에러를 감지합니다!
 
-## 명시적 인자와 기본 파라미터
+### 명시적 인자와 기본 파라미터
 ```kotlin
 fun orderPizza(size: Size,
                pepperoni: Boolean = false,
@@ -216,7 +217,7 @@ orderPizza(Size.LARGE, ham = true, mushrooms = true
 ```
 인자에 기본값을 지정하고 원하는 파라미터만 이름을 통해 전달하여 더욱 간결하며 표현적인 코드를 작성할 수 있습니다.
 
-## 폭넓게 사용할 수 있는 when문
+### 폭넓게 사용할 수 있는 when문
 ```kotlin
 when {
     password.equals("password") -> println("Insecure password!")
@@ -233,7 +234,7 @@ when {
 if와 else if로 작성했을 때 가독성이 굉장히 떨어질 수 있는 부분이 <br>
 작성하기도 이해하기도 훨씬 쉽게 바뀐 것을 보실 수 있습니다.
 
-## 확장 함수
+### 확장 함수
 ```kotlin
 // The "String." prefix indicates that this method should
 // extend the existing String class
