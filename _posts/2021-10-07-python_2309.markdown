@@ -1,16 +1,16 @@
 ---
 layout: post
-title: ¾Ë°í¸®Áò ½ºÅÍµð 3ÁÖÂ÷ - Á¤·Ä 2309¹ø
+title: ì•Œê³ ë¦¬ì¦˜ ìŠ¤í„°ë”” 3ì£¼ì°¨ - ì •ë ¬ 2309ë²ˆ
 date: 2021-10-07 19:12:00 +0900
 author: leeeha
-description: Á¤·Ä ¾Ë°í¸®Áò 2309¹ø ¹®Á¦Ç®ÀÌ
+description: ì •ë ¬ ì•Œê³ ë¦¬ì¦˜ 2309ë²ˆ ë¬¸ì œí’€ì´
 categories: ["study"]
 ---
 
-¾È³çÇÏ¼¼¿ä. GDSC ¾Èµå·ÎÀÌµå ÆÄÆ® ¸â¹ö ÀÌÇÏÀºÀÔ´Ï´Ù! <br>
-Á¦°¡ ÀÌ¹ø 3ÁÖÂ÷¿¡ ¸ÃÀº ¹®Á¦´Â 2309¹ø ÀÔ´Ï´Ù. ÀÌ¸§ºÎÅÍ È£±â½ÉÀÌ µå´Â ¹®Á¦ÀÎµ¥, ¾î¶² ¹®Á¦ÀÎÁö °°ÀÌ º¸½ÃÁÒ!<br>
+ì•ˆë…•í•˜ì„¸ìš”. GDSC ì•ˆë“œë¡œì´ë“œ íŒŒíŠ¸ ë©¤ë²„ ì´í•˜ì€ìž…ë‹ˆë‹¤! <br>
+ì œê°€ ì´ë²ˆ 3ì£¼ì°¨ì— ë§¡ì€ ë¬¸ì œëŠ” 2309ë²ˆ ìž…ë‹ˆë‹¤. ì´ë¦„ë¶€í„° í˜¸ê¸°ì‹¬ì´ ë“œëŠ” ë¬¸ì œì¸ë°, ì–´ë–¤ ë¬¸ì œì¸ì§€ ê°™ì´ ë³´ì‹œì£ !<br>
 
-# 2309¹ø. ÀÏ°ö ³­ÀïÀÌ
+# 2309ë²ˆ. ì¼ê³± ë‚œìŸì´
 
 [https://www.acmicpc.net/problem/2309 ](https://www.acmicpc.net/problem/2309)<br>
 
@@ -18,11 +18,11 @@ categories: ["study"]
 
 <img src="https://user-images.githubusercontent.com/68090939/136373061-1c6f9e23-3db2-4448-8178-74c3cd349dfd.png" width="60%"/>
 
-°¡Â¥ ³­ÀïÀÌ 2¸íÀ» ¾î¶»°Ô Ã£À» ¼ö ÀÖÀ»±î¿ä? Áß¿äÇÑ ´Ü¼­´Â ÁøÂ¥ ³­ÀïÀÌ 7¸íÀÇ Å°ÀÇ ÇÕÀÌ 100ÀÌ¶ó´Â °ÍÀÔ´Ï´Ù. µû¶ó¼­ 9¸íÀÇ Å°¸¦ ¸ðµÎ ´õÇÑ °ª¿¡¼­ 100À» »« ´ÙÀ½¿¡, ±× Â÷ÀÌ¸¦ ¸¸µé¾î³½ °¡Â¥ ³­ÀïÀÌ 2¸íÀ» Ã£À¸¸é µË´Ï´Ù! ÀÌ°ÍÀ» ÄÚµå·Î ±¸ÇöÇÏ·Á¸é ¾î¶»°Ô ÇØ¾ß ÇÒ±î¿ä? <br>
+ê°€ì§œ ë‚œìŸì´ 2ëª…ì„ ì–´ë–»ê²Œ ì°¾ì„ ìˆ˜ ìžˆì„ê¹Œìš”? ì¤‘ìš”í•œ ë‹¨ì„œëŠ” ì§„ì§œ ë‚œìŸì´ 7ëª…ì˜ í‚¤ì˜ í•©ì´ 100ì´ë¼ëŠ” ê²ƒìž…ë‹ˆë‹¤. ë”°ë¼ì„œ 9ëª…ì˜ í‚¤ë¥¼ ëª¨ë‘ ë”í•œ ê°’ì—ì„œ 100ì„ ëº€ ë‹¤ìŒì—, ê·¸ ì°¨ì´ë¥¼ ë§Œë“¤ì–´ë‚¸ ê°€ì§œ ë‚œìŸì´ 2ëª…ì„ ì°¾ìœ¼ë©´ ë©ë‹ˆë‹¤! ì´ê²ƒì„ ì½”ë“œë¡œ êµ¬í˜„í•˜ë ¤ë©´ ì–´ë–»ê²Œ í•´ì•¼ í• ê¹Œìš”? <br>
 
 <hr>
 
-¹®Á¦¿¡ ÁÖ¾îÁø ÀÔ·Â ¿¹½Ã´Â ´ÙÀ½°ú °°½À´Ï´Ù. <br>
+ë¬¸ì œì— ì£¼ì–´ì§„ ìž…ë ¥ ì˜ˆì‹œëŠ” ë‹¤ìŒê³¼ ê°™ìŠµë‹ˆë‹¤. <br>
 
 <pre>
 	20 
@@ -36,16 +36,16 @@ categories: ["study"]
 	13
 </pre>
 
-À§ÀÇ ¼ýÀÚµéÀ» ´Ù ´õÇÏ¸é 140ÀÌ ³ª¿À´Âµ¥¿ä, ¿©±â¼­ 100À» »°À» ¶§ 40ÀÌ¶ó´Â Â÷ÀÌ¸¦ ¸¸µé¾î³½ ³­ÀïÀÌ µÎ ¸íÀ» Ã£À¸¸é µË´Ï´Ù.<br>
-ÄÚµå·Î ±¸ÇöÇÏ·Á¸é ¾Æ·¡ ÄÚµåÃ³·³ ÀÌÁß ¹Ýº¹¹®À» ÀÌ¿ëÇÏ¸é µË´Ï´Ù. ÀÌ¶§ ¿ÜºÎ ·çÇÁ´Â ÇÕÀÌ gap°ú °°¾ÆÁö´Â µÎ ¿ø¼Ò¸¦ Ã£À» ¶§±îÁö ¹Ýº¹µÇ¸ç, ³»ºÎ ·çÇÁ´Â ¿ÜºÎ ·çÇÁÀÇ ÇöÀç ÀÎµ¦½º ¹Ù·Î ´ÙÀ½ºÎÅÍ ¹è¿­ ³¡±îÁö Å½»öÀ» ÁøÇàÇÕ´Ï´Ù.<br>
+ìœ„ì˜ ìˆ«ìžë“¤ì„ ë‹¤ ë”í•˜ë©´ 140ì´ ë‚˜ì˜¤ëŠ”ë°ìš”, ì—¬ê¸°ì„œ 100ì„ ëºì„ ë•Œ 40ì´ë¼ëŠ” ì°¨ì´ë¥¼ ë§Œë“¤ì–´ë‚¸ ë‚œìŸì´ ë‘ ëª…ì„ ì°¾ìœ¼ë©´ ë©ë‹ˆë‹¤.<br>
+ì½”ë“œë¡œ êµ¬í˜„í•˜ë ¤ë©´ ì•„ëž˜ ì½”ë“œì²˜ëŸ¼ ì´ì¤‘ ë°˜ë³µë¬¸ì„ ì´ìš©í•˜ë©´ ë©ë‹ˆë‹¤. ì´ë•Œ ì™¸ë¶€ ë£¨í”„ëŠ” í•©ì´ gapê³¼ ê°™ì•„ì§€ëŠ” ë‘ ì›ì†Œë¥¼ ì°¾ì„ ë•Œê¹Œì§€ ë°˜ë³µë˜ë©°, ë‚´ë¶€ ë£¨í”„ëŠ” ì™¸ë¶€ ë£¨í”„ì˜ í˜„ìž¬ ì¸ë±ìŠ¤ ë°”ë¡œ ë‹¤ìŒë¶€í„° ë°°ì—´ ëê¹Œì§€ íƒìƒ‰ì„ ì§„í–‰í•©ë‹ˆë‹¤.<br>
 
 ```cpp
 bool found = false;
 	int i = 0;
-	while (!found) { // not found¶ó¸é ¹Ýº¹
+	while (!found) { // not foundë¼ë©´ ë°˜ë³µ
 		for (int j = i + 1; j < 9; j++) {
 			if (arr[i] + arr[j] == gap) {
-				// °¡Â¥ ³­ÀïÀÌÀÇ Å°´Â 0À¸·Î ¸¸µé±â
+				// ê°€ì§œ ë‚œìŸì´ì˜ í‚¤ëŠ” 0ìœ¼ë¡œ ë§Œë“¤ê¸°
 				arr[i] = 0, arr[j] = 0;
 				found = true;
 				break;
@@ -55,13 +55,13 @@ bool found = false;
 	}
 ```
 
-C++ÀÇ ±âº» ¹è¿­Àº ¿ø¼Ò ÀÚÃ¼¸¦ Á¦°ÅÇÒ ¼ö ÀÖ´Â ¹æ¹ýÀÌ ¾ø¾î¼­, °ªÀ» 0À¸·Î ¸¸µé°í Ãâ·Â¿¡¼­´Â ÀÌ¸¦ Á¦¿ÜÇÏ´Â ¹æ½ÄÀ¸·Î Ç®¾ú½À´Ï´Ù. ÇÏÁö¸¸, vector ÄÁÅ×ÀÌ³ÊÀÇ erase ÇÔ¼ö¸¦ »ç¿ëÇÏ¸é ¿ø¼Ò¸¦ Á¦°ÅÇÒ ¼ö ÀÖ½À´Ï´Ù. ´Ù¸¸ ÁÖÀÇÇÒ Á¡Àº erase·Î ¿ø¼Ò¸¦ »èÁ¦ÇÏ¸é ÀÚµ¿À¸·Î ÇÑÄ­¾¿ ¿ø¼ÒµéÀÌ ¾ÕÀ¸·Î ´ç°ÜÁö±â ¶§¹®¿¡ i¹øÂ°, j-1¹øÂ° ¿ø¼Ò¸¦ »èÁ¦ÇØÁà¾ß ÇÕ´Ï´Ù. ¾Æ·¡ C++ ÄÚµåµéÀ» º¸½ÃÁÒ! <br>
+C++ì˜ ê¸°ë³¸ ë°°ì—´ì€ ì›ì†Œ ìžì²´ë¥¼ ì œê±°í•  ìˆ˜ ìžˆëŠ” ë°©ë²•ì´ ì—†ì–´ì„œ, ê°’ì„ 0ìœ¼ë¡œ ë§Œë“¤ê³  ì¶œë ¥ì—ì„œëŠ” ì´ë¥¼ ì œì™¸í•˜ëŠ” ë°©ì‹ìœ¼ë¡œ í’€ì—ˆìŠµë‹ˆë‹¤. í•˜ì§€ë§Œ, vector ì»¨í…Œì´ë„ˆì˜ erase í•¨ìˆ˜ë¥¼ ì‚¬ìš©í•˜ë©´ ì›ì†Œë¥¼ ì œê±°í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤. ë‹¤ë§Œ ì£¼ì˜í•  ì ì€ eraseë¡œ ì›ì†Œë¥¼ ì‚­ì œí•˜ë©´ ìžë™ìœ¼ë¡œ í•œì¹¸ì”© ì›ì†Œë“¤ì´ ì•žìœ¼ë¡œ ë‹¹ê²¨ì§€ê¸° ë•Œë¬¸ì— ië²ˆì§¸, j-1ë²ˆì§¸ ì›ì†Œë¥¼ ì‚­ì œí•´ì¤˜ì•¼ í•©ë‹ˆë‹¤. ì•„ëž˜ C++ ì½”ë“œë“¤ì„ ë³´ì‹œì£ ! <br>
 
 <hr>
 
-# C++ Ç®ÀÌ
+# C++ í’€ì´
 
-## 1. ±âº» ¹è¿­
+## 1. ê¸°ë³¸ ë°°ì—´
 
 ```cpp
 #include <iostream>
@@ -70,10 +70,10 @@ using namespace std;
 
 int main()
 {
-	int arr[9]{}; // 0À¸·Î ÃÊ±âÈ­
+	int arr[9]{}; // 0ìœ¼ë¡œ ì´ˆê¸°í™”
 	int sum = 0;
 
-	// ³­ÀïÀÌ 9¸íÀÇ Å°¸¦ ÀÔ·Â ¹Þ´Â´Ù.
+	// ë‚œìŸì´ 9ëª…ì˜ í‚¤ë¥¼ ìž…ë ¥ ë°›ëŠ”ë‹¤.
 	for (int i = 0; i < 9; i++) {
 		scanf("%d", &arr[i]);
 		sum += arr[i];
@@ -83,10 +83,10 @@ int main()
 
 	bool found = false;
 	int i = 0;
-	while (!found) { // not found¶ó¸é ¹Ýº¹
+	while (!found) { // not foundë¼ë©´ ë°˜ë³µ
 		for (int j = i + 1; j < 9; j++) {
 			if (arr[i] + arr[j] == gap) {
-				// °¡Â¥ ³­ÀïÀÌÀÇ Å°´Â 0À¸·Î ¸¸µé±â
+				// ê°€ì§œ ë‚œìŸì´ì˜ í‚¤ëŠ” 0ìœ¼ë¡œ ë§Œë“¤ê¸°
 				arr[i] = 0, arr[j] = 0;
 				found = true;
 				break;
@@ -95,10 +95,10 @@ int main()
 		i++;
 	}
 
-	// ¿À¸§Â÷¼ø Á¤·Ä
+	// ì˜¤ë¦„ì°¨ìˆœ ì •ë ¬
 	std::sort(arr, arr + 9);
 
-	// 0À» Á¦¿ÜÇÏ°í 7¸íÀÇ ³­ÀïÀÌ Å° Ãâ·Â
+	// 0ì„ ì œì™¸í•˜ê³  7ëª…ì˜ ë‚œìŸì´ í‚¤ ì¶œë ¥
 	for (int i = 2; i < 9; i++)
 		printf("%d\n", arr[i]);
 
@@ -108,7 +108,7 @@ int main()
 
 <br>
 
-## 2. vector ÄÁÅ×ÀÌ³Ê »ç¿ë
+## 2. vector ì»¨í…Œì´ë„ˆ ì‚¬ìš©
 
 std::vector::erase ÇÔ¼ö ·¹ÆÛ·±½º <br>
 [http://www.cplusplus.com/reference/vector/vector/erase/](http://www.cplusplus.com/reference/vector/vector/erase/)
@@ -121,7 +121,7 @@ using namespace std;
 
 int main()
 {
-	vector<int> v; // º¤ÅÍ´Â Å©±â ÁöÁ¤À» ¾È ÇØÁàµµ µÈ´Ù!
+	vector<int> v; // ë²¡í„°ëŠ” í¬ê¸° ì§€ì •ì„ ì•ˆ í•´ì¤˜ë„ ëœë‹¤!
 
 	int val, sum = 0;
 	for (int i = 0; i < 9; i++){
@@ -133,11 +133,11 @@ int main()
 
 	bool found = false;
 	int i = 0;
-	while (!found) { // not found¶ó¸é ¹Ýº¹
+	while (!found) { // not foundë¼ë©´ ë°˜ë³µ
 		for (int j = i + 1; j < 9; j++) {
 			if (v[i] + v[j] == gap) {
-				v.erase(v.begin() + i); // »èÁ¦ ÈÄ ÇÑÄ­¾¿ ¾ÕÀ¸·Î ´ç°ÜÁö¹Ç·Î
-				v.erase(v.begin() + (j - 1)); // j-1¹øÂ° ¿ø¼Ò »èÁ¦
+				v.erase(v.begin() + i); // ì‚­ì œ í›„ í•œì¹¸ì”© ì•žìœ¼ë¡œ ë‹¹ê²¨ì§€ë¯€ë¡œ
+				v.erase(v.begin() + (j - 1)); // j-1ë²ˆì§¸ ì›ì†Œ ì‚­ì œ
 				found = true;
 				break;
 			}
@@ -145,23 +145,23 @@ int main()
 		i++;
 	}
 
-	// ¿À¸§Â÷¼ø Á¤·Ä
+	// ì˜¤ë¦„ì°¨ìˆœ ì •ë ¬
 	sort(v.begin(), v.end());
 
-	for (auto& ele : v) // ¹üÀ§ ±â¹Ý for¹®
+	for (auto& ele : v) // ë²”ìœ„ ê¸°ë°˜ forë¬¸
 		cout << ele << " ";
 
 	return 0;
 }
 ```
 
-ÀÌ ¹®Á¦¸¦ ÆÄÀÌ½ãÀ¸·Î Ç®·Á¸é ¾î¶»°Ô ÄÚµå¸¦ Â¥¾ß µÉ±î¿ä? <br>
+ì´ ë¬¸ì œë¥¼ íŒŒì´ì¬ìœ¼ë¡œ í’€ë ¤ë©´ ì–´ë–»ê²Œ ì½”ë“œë¥¼ ì§œì•¼ ë ê¹Œìš”? <br>
 
 <hr>
 
-# Python Ç®ÀÌ
+# Python í’€ì´
 
-[Âü°íÇÑ ºí·Î±× ¸µÅ©](https://kyoung-jnn.tistory.com/entry/%EB%B0%B1%EC%A4%802309%EB%B2%88%ED%8C%8C%EC%9D%B4%EC%8D%ACPython-%EC%9D%BC%EA%B3%B1-%EB%82%9C%EC%9F%81%EC%9D%B4-Brute-force)
+[ì°¸ê³ í•œ ë¸”ë¡œê·¸ ë§í¬](https://kyoung-jnn.tistory.com/entry/%EB%B0%B1%EC%A4%802309%EB%B2%88%ED%8C%8C%EC%9D%B4%EC%8D%ACPython-%EC%9D%BC%EA%B3%B1-%EB%82%9C%EC%9F%81%EC%9D%B4-Brute-force)
 
 ```python
 list = [int(input()) for i in range(9)]
@@ -173,7 +173,7 @@ for i in range(9):
             a, b = list[i], list[j] 
             list.remove(a)
             list.remove(b)
-            list.sort() # ¿À¸§Â÷¼ø Á¤·Ä
+            list.sort() # ì˜¤ë¦„ì°¨ìˆœ ì •ë ¬
 
             for i in range(len(list)):
                print(list[i])
