@@ -16,6 +16,8 @@ KangInyeong:
   github: KangInyeong
   description: 호빵 속 팥앙금 같은 존재가 될테야.
   introduce: 안녕하세요! 서울과학기술대학교 산업공학과 ITM전공 19학번 강인영입니다. 3학년 재학 중이며 안드로이드, 웹, AI 등 모든 것이 궁금하고 잘 하고 싶은 마음이 넘치는 병아리 개발자🐣입니다. 호기심이 많아서 세상에 신기한 것도, 궁금한 것도 많답니다. GDSC를 통해서 다양한 경험을 해보고 싶고, 저의 개발 역량을 믓-찌게 키워 나가고 싶습니다. 우리 모두 1년간 열심히 해보아요-! 예에!
+  blog_platform: velog
+  blog: https://velog.io/@kiyoog02
 juijeong8324:
   name: 전의정
   author_name: 의정
@@ -84,7 +86,7 @@ ssggi:
   github: ssggi
   description: 딥러닝 뿌셔뿌셔
   introduce: 안녕하세요 전자IT미디어공학과 IT미디어공학프로그램 20학번 한슬기입니다. 딥러닝을 이용한 어플 개발을 목표로 지금은 딥러닝 분야부터 공부하고 있습니다. 다들 열심히 하시는 모습에 쭈글쭈글해지기도 하고 에너지를 얻기도 하는데요. 저도 끝까지 열심히 포기하지 않고!! 같이 갈래요 다 뿌셔뿌셔~~ 
-yongsu:
+Yangyongsu:
   name: 양용수
   author_name: 용수
   role: member
