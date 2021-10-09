@@ -32,11 +32,11 @@ layout: default
 
     {% assign category = page.title %}
     {% for post in site.categories[category] %}
-      <li>
-        <h3><a class="post-title" href="{{ post.url | prepend: site.baseurl }}" style="font-size: 30px;">{{ post.title }}</a></h3>
-        <p style="padding-top: 10px; margin-bottom: 5px;">• {{ post.author }} • {{ post.categories }}</p>
-        <p class="post-meta">{{ post.date | date: '%B %-d, %Y — %H:%M' }}</p>
-      </li>
+    <li>
+      <h3><a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+      <p class="post-author">작성자: {{ post.author }}</p>
+      <p class="post-meta">{{ post.date | date: '%Y년 %m월 %-d일 %H:%M' }}</p>
+    </li>
     {% endfor %}
   </ul>
 </div>
