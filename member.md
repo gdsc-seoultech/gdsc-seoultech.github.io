@@ -309,7 +309,7 @@ title: MEMBER
                 </div>
             </div>
             <div class="member-card">
-                {% assign member = site.data.members | map: "yongsu" %}
+                {% assign member = site.data.members | map: "Yangyongsu" %}
                 <div class="folder" id="yongsu">
                 </div>
                 <span class="member-name">{{ member | map: "name" }}</span>
