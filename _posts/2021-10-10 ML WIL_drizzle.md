@@ -1,3 +1,11 @@
+---
+layout: post
+title: 5주차 ML 지도학습 WIL
+date: 2021-10-09
+author: drizzle0171
+categories: ["ml"]
+---
+
 거의 일주일만에 찾아온 TIL.....
 시험기간은 너무 바쁘다.
 그럼 이번 주 내용인 비지도 학습 시작!
