@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ML 5주차 비지도 학습(Scaler, PCA)
+title: 5주차 ML 비지도 학습(Scaler, PCA)
 date: 2021-10-11
 author: seongryool
 description:
