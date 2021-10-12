@@ -1,7 +1,7 @@
 ---
 layout: post
 title: WIL 3주차 - 파도파도 새로운 웹..
-date: 2021-10-12 01:00:00
+date: 2021-10-11 01:00:00
 author: InHyeok-J
 description:
 categories: ["web"]
