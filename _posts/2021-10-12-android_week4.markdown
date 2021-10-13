@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Android 4주차 세션 복습!
+title: Android 4주차 세션 복습
 date: 2021-10-12 23:41
 description: 
 author: leeeha
@@ -14,6 +14,7 @@ categories: ["android"]
 ![image](https://user-images.githubusercontent.com/68090939/136978265-709bf3c1-26f0-42ad-abee-702315e21581.png)
 
 저희는 1주차에 Jetpack Compose의 기초 UI를 실습하고, 2주차에 state의 개념 이해를 바탕으로 CheggPrep 앱의 여러 기능을 구현해봤습니다. 그리고 저번 3주차에는 다음 4가지 화면을 만들었습니다.<br>
+
 1. 카테고리별로 플래시카드 목록을 보여주는 HomeScreen
 2. 플래시카드 검색을 위한 SearchScreen
 3. 새로운 플래시카드 생성을 위한 CreateScreen
@@ -29,8 +30,6 @@ categories: ["android"]
 <br>
 
 # 1. ProgressBar
-
-<br>
 
 ![image](https://user-images.githubusercontent.com/68090939/136987136-a675d38c-fffc-4832-ac9f-d1cf8cf34b79.png)
 <br>
@@ -120,52 +119,38 @@ fun MyProgressBar(
 ```
 <br>
 
-<details>
-<summary>코드 부연 설명</summary>
-<div markdown="1">
-<br>
-
-**1. LaunchedEffect**
-
-<pre>
-    LaunchedEffect(key1 = true){
-        setCount(1f)
-    }
-</pre>
-
-<pre>
-    androidx.compose.runtime EffectsKt.class @Composable
-    public fun LaunchedEffect(
-    key1: Any?,
-    block: suspend CoroutineScope.() → Unit
-    ): Unit
-</pre>
-
-[https://developer.android.com/jetpack/compose/side-effects?hl=ko#launchedeffect](https://developer.android.com/jetpack/compose/side-effects?hl=ko#launchedeffect)<br>
-
->composable 내에서 안전하게 정지 함수를 호출하려면, LaunchedEffect composable을 사용하세요. LaunchedEffect가 compositoin을 시작하면 매개변수로 전달된 block으로 코루틴이 실행됩니다. LaunchedEffect가 compositoin을 종료하면 코루틴이 취소됩니다. LaunchedEffect가 다른 키로 재구성되면 기존 코루틴이 취소되고 새 코루틴에서 새 정지 함수가 실행됩니다.
+**코드 부연 설명** (LaunchedEffect, LinearOutSlowInEasing)
 
 <br>
 
-코루틴은 비동기적으로 실행되는 코드를 간소화 시켜주는 설계 패턴입니다. 하나의 진입점과 하나의 탈출점이 있는 서브루틴과 다르게, 코루틴은 다양한 진입점과 다양한 탈출점이 있는 루틴이라 생각하면 됩니다. 즉, 메인 루틴에서 어떤 함수를 호출해서 그 함수가 동작하다가, 중간에 멈추고 다시 메인 루틴의 동작을 진행하다가, 다시 멈춘 함수로 돌아와서 마저 작업을 진행하는 방식입니다. 일단 저는 이 정도까지만 이해하고 넘어가려 합니다. 나중에 다시 나오면 더 자세히 공부해봅시다!<br><br>
+```kotlin
+ LaunchedEffect(key1 = true){
+    setCount(1f)
+}
+```
 
-**2. LinearOutSlowInEasing**
-<pre>
-    val curPercentage by animateFloatAsState(
-        targetValue = count / totalCount,
-        animationSpec = tween(
-            durationMillis = animDuration,
-            delayMillis = animDelay,
-            easing = LinearOutSlowInEasing
-        )
+여기서 LaunchedEffect는 처음에 progress bar의 상태를 0에서 1로 증가시킬 때 setCount(1f)가 제대로 동작할 수 있게 해줍니다. launched effect 말그대로 애니메이션이 시작될 때 적용되는 효과인데, 안전하게 상태를 변경할 수 있게 해주는 composable이라고 이해하면 됩니다.<br>
+
+[https://developer.android.com/jetpack/compose/side-effects#launchedeffect](https://developer.android.com/jetpack/compose/side-effects#launchedeffect)<br>
+
+이 공식 문서에 나오는 코루틴, suspend 함수의 개념은 다음에 시간날 때 다시 공부해봐야겠습니다,,
+
+<br>
+
+```kotlin
+val curPercentage by animateFloatAsState(
+    targetValue = count / totalCount,
+    animationSpec = tween(
+        durationMillis = animDuration,
+        delayMillis = animDelay,
+        easing = LinearOutSlowInEasing // 아래 부연 설명 참고
     )
-</pre>
+)
+```
 
-[참고 링크](https://medium.com/@Kjoon/%EC%9D%B8%ED%84%B0%EB%9E%99%EC%85%98-%EB%94%94%EC%9E%90%EC%9D%B8-%EC%9D%B4%EC%95%BC%EA%B8%B0-2-easing-functions-cf0f6cb213a2)
+[참고 링크](https://medium.com/@Kjoon/%EC%9D%B8%ED%84%B0%EB%9E%99%EC%85%98-%EB%94%94%EC%9E%90%EC%9D%B8-%EC%9D%B4%EC%95%BC%EA%B8%B0-2-easing-functions-cf0f6cb213a2)<br>
 
-easing curve가 무엇인지 몰라서 잠깐 검색해봤습니다. 애니메이션에서 시작과 끝의 움직임을 보간해주는 역할인 거 같습니다.<br><br>
-</div>
-</details>
+easing curve가 무엇인지 몰라서 잠깐 검색해봤습니다. 애니메이션에서 시작과 끝의 움직임을 보간해주는 것이라고 이해하면 될 거 같습니다.<br>
 
 <br>
 <hr>
