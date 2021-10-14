@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 알고리즘 스터디 3주차 - 정렬 2309번
+title: 알고리즘 스터디 정렬 - 2309번
 date: 2021-10-07 19:12:00 +0900
 author: leeeha
 description: 정렬 알고리즘 2309번 문제풀이
@@ -9,27 +9,26 @@ categories: ["study"]
 
 안녕하세요. GDSC 안드로이드 파트 멤버 이하은입니다! 제가 이번 3주차에 맡은 문제는 2309번 입니다. 이름부터 호기심이 드는 문제인데, 어떤 문제인지 같이 보시죠!<br><br>
 
-# 2309번. 일곱 난쟁이
+# 백준 정렬 2309번. 일곱 난쟁이
 
 [https://www.acmicpc.net/problem/2309 ](https://www.acmicpc.net/problem/2309)<br>
 
-![image](https://user-images.githubusercontent.com/68090939/136366170-cc42222e-77d9-4625-b85e-fa2311a4d085.png)
-
-
+![image](https://user-images.githubusercontent.com/68090939/136366170-cc42222e-77d9-4625-b85e-fa2311a4d085.png)<br>
 
 가짜 난쟁이 2명을 어떻게 찾을 수 있을까요? 중요한 단서는 진짜 난쟁이 7명의 키의 합이 100이라는 것입니다. 따라서 9명의 키를 모두 더한 값에서 100을 뺀 다음에, 그 차이를 만들어낸 가짜 난쟁이 2명을 찾으면 됩니다! 이것을 코드로 구현하려면 어떻게 해야 할까요?<br><br>
 
 문제에 주어진 입력 예시는 다음과 같습니다.<br>
->20  
->7  
->23  
->19  
->10  
->15 &nbsp;&nbsp; i=5  
->25 &nbsp;&nbsp; j=6  
->8  
->13
-<br>
+
+> 20  
+> 7  
+> 23  
+> 19  
+> 10  
+> 15 &nbsp;&nbsp; i=5  
+> 25 &nbsp;&nbsp; j=6  
+> 8  
+> 13
+> <br>
 
 위의 숫자들을 다 더하면 140이 나오는데요, 여기서 100을 뺐을 때 40이라는 차이를 만들어낸 가짜 난쟁이 두 명을 찾아서 이들을 제외하고 나머지 7명의 키를 오름차순으로 출력해주면 됩니다.<br>
 그 두 명을 찾기 위해 아래 코드처럼 이중 반복문을 사용할 수 있습니다. 이때 외부 루프는 합이 gap과 같아지는 두 원소를 찾을 때까지 반복되며, 내부 루프는 외부 루프의 현재 인덱스 바로 다음부터 배열 끝까지 탐색을 진행합니다.<br>
@@ -52,8 +51,6 @@ bool found = false;
 
 C++의 기본 배열은 원소 자체를 제거할 수 있는 방법이 없어서, 값을 0으로 만들고 출력에서는 이를 제외하는 방식으로 풀었습니다. 하지만, vector 컨테이너의 erase 함수를 사용하면 원소를 제거할 수 있습니다. 다만 주의할 점은 erase로 원소를 삭제하면 자동으로 한칸씩 원소들이 앞으로 당겨지기 때문에 i번째, j-1번째 원소를 삭제해줘야 합니다. 아래 C++ 코드들을 보시죠! <br><br>
 
-<hr>
-
 # C++ 풀이
 
 ## 1. 기본 배열
@@ -62,20 +59,16 @@ C++의 기본 배열은 원소 자체를 제거할 수 있는 방법이 없어�
 #include <iostream>
 #include <algorithm> // std::sort
 using namespace std;
-
 int main()
 {
 	int arr[9]{}; // 0으로 초기화
 	int sum = 0;
-
 	// 난쟁이 9명의 키를 입력 받는다.
 	for (int i = 0; i < 9; i++) {
 		scanf("%d", &arr[i]);
 		sum += arr[i];
 	}
-
 	int gap = sum - 100;
-
 	bool found = false;
 	int i = 0;
 	while (!found) { // not found라면 반복
@@ -89,19 +82,14 @@ int main()
 		}
 		i++;
 	}
-
 	// 오름차순 정렬
 	std::sort(arr, arr + 9);
-
 	// 0을 제외하고 7명의 난쟁이 키 출력
 	for (int i = 2; i < 9; i++)
 		printf("%d\n", arr[i]);
-
 	return 0;
 }
 ```
-
-<br>
 
 ## 2. vector 컨테이너 사용
 
@@ -113,11 +101,9 @@ std::vector::erase 함수 레퍼런스 <br>
 #include <algorithm> // std::sort
 #include <vector>
 using namespace std;
-
 int main()
 {
 	vector<int> v; // 벡터는 크기 지정을 안 해줘도 된다!
-
 	int val, sum = 0;
 	for (int i = 0; i < 9; i++){
 		cin >> val;
@@ -125,7 +111,6 @@ int main()
 		sum += val;
 	}
 	int gap = sum - 100;
-
 	bool found = false;
 	int i = 0;
 	while (!found) { // not found라면 반복
@@ -139,20 +124,15 @@ int main()
 		}
 		i++;
 	}
-
 	// 오름차순 정렬
 	sort(v.begin(), v.end());
-
 	for (auto& ele : v) // 범위 기반 for문
 		cout << ele << " ";
-
 	return 0;
 }
 ```
 
 이 문제를 파이썬으로 풀려면 어떻게 코드를 짜야 될까요? <br><br>
-
-<hr>
 
 # Python 풀이
 
@@ -161,22 +141,20 @@ int main()
 ```python
 list = [int(input()) for i in range(9)]
 total = sum(list)
-
 for i in range(9):
     for j in range(i + 1,9):
         if 100 == total - (list[i] + list[j]):
-            a, b = list[i], list[j] 
+            a, b = list[i], list[j]
             list.remove(a)
             list.remove(b)
             list.sort() # 오름차순 정렬
-
             for i in range(len(list)):
                print(list[i])
             break
-
     if len(list) < 9:
         break
 ```
+
 파이썬의 remove 함수는 인덱스가 아니라 ‘값을 기준으로’ 원소를 삭제합니다. 그런데 문제 조건에서 아홉 난쟁이의 키는 모두 다르다고 했기 때문에, 중복에 대한 고민 없이 ‘값을 기준으로’ 원소를 삭제할 수 있습니다.<br><br>
 
 <hr>

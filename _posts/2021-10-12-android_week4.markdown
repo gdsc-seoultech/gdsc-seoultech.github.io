@@ -1,31 +1,32 @@
 ---
 layout: post
-title: Android 4ÁÖÂ÷ ¼¼¼Ç º¹½À
-date: 2021-10-12 23:41
+title: Android 4ì£¼ì°¨ ì„¸ì…˜ ë³µìŠµ
+date: 2021-10-12
 description: 
 author: leeeha
 categories: ["android"]
 ---
 
-¾È³çÇÏ¼¼¿ä. Àú´Â GDSC ¾Èµå·ÎÀÌµå ÆÄÆ® ¸â¹ö ÀÌÇÏÀºÀÔ´Ï´Ù. ÀÌ¹ø 4ÁÖÂ÷ ¼¼¼Ç¿¡¼­ ÁøÇàÇÑ ³»¿ëÀ» º¹½ÀÇØº¸°Ú½À´Ï´Ù. ³»¿ëµµ ½±Áö ¾Ê°í Á¤¸®ÇÏ´Ùº¸´Ï ¸¹ÀÌ ±æ¾îÁø °Å °°Àºµ¥ ³¡±îÁö Àß µû¶ó¿ÍÁÖ¼¼¿ä! ±×¸®°í Àß¸ø ¼³¸íÇÑ ºÎºĞÀÌ ÀÖ´Ù¸é ´ñ±Û·Î ²À ¾Ë·ÁÁÖ½Ã±â ¹Ù¶ø´Ï´Ù!
+ì•ˆë…•í•˜ì„¸ìš”. ì €ëŠ” GDSC ì•ˆë“œë¡œì´ë“œ íŒŒíŠ¸ ë©¤ë²„ ì´í•˜ì€ì…ë‹ˆë‹¤. ì´ë²ˆ 4ì£¼ì°¨ ì„¸ì…˜ì—ì„œ ì§„í–‰í•œ ë‚´ìš©ì„ ë³µìŠµí•´ë³´ê² ìŠµë‹ˆë‹¤. ë‚´ìš©ë„ ì‰½ì§€ ì•Šê³  ì •ë¦¬í•˜ë‹¤ë³´ë‹ˆ ë§ì´ ê¸¸ì–´ì§„ ê±° ê°™ì€ë° ëê¹Œì§€ ì˜ ë”°ë¼ì™€ì£¼ì„¸ìš”! ê·¸ë¦¬ê³  ì˜ëª» ì„¤ëª…í•œ ë¶€ë¶„ì´ ìˆë‹¤ë©´ ëŒ“ê¸€ë¡œ ê¼­ ì•Œë ¤ì£¼ì‹œê¸° ë°”ëë‹ˆë‹¤!
 
 <br>
 
 ![image](https://user-images.githubusercontent.com/68090939/136978265-709bf3c1-26f0-42ad-abee-702315e21581.png)
 
-ÀúÈñ´Â 1ÁÖÂ÷¿¡ Jetpack ComposeÀÇ ±âÃÊ UI¸¦ ½Ç½ÀÇÏ°í, 2ÁÖÂ÷¿¡ stateÀÇ °³³ä ÀÌÇØ¸¦ ¹ÙÅÁÀ¸·Î CheggPrep ¾ÛÀÇ ¿©·¯ ±â´ÉÀ» ±¸ÇöÇØºÃ½À´Ï´Ù. ±×¸®°í Àú¹ø 3ÁÖÂ÷¿¡´Â ´ÙÀ½ 4°¡Áö È­¸éÀ» ¸¸µé¾ú½À´Ï´Ù.<br>
+ì €í¬ëŠ” 1ì£¼ì°¨ì— Jetpack Composeì˜ ê¸°ì´ˆ UIë¥¼ ì‹¤ìŠµí•˜ê³ , 2ì£¼ì°¨ì— stateì˜ ê°œë… ì´í•´ë¥¼ ë°”íƒ•ìœ¼ë¡œ CheggPrep ì•±ì˜ ì—¬ëŸ¬ ê¸°ëŠ¥ì„ êµ¬í˜„í•´ë´¤ìŠµë‹ˆë‹¤. ê·¸ë¦¬ê³  ì €ë²ˆ 3ì£¼ì°¨ì—ëŠ” ë‹¤ìŒ 4ê°€ì§€ í™”ë©´ì„ ë§Œë“¤ì—ˆìŠµë‹ˆë‹¤.<br>
 
-1. Ä«Å×°í¸®º°·Î ÇÃ·¡½ÃÄ«µå ¸ñ·ÏÀ» º¸¿©ÁÖ´Â HomeScreen
-2. ÇÃ·¡½ÃÄ«µå °Ë»öÀ» À§ÇÑ SearchScreen
-3. »õ·Î¿î ÇÃ·¡½ÃÄ«µå »ı¼ºÀ» À§ÇÑ CreateScreen
-4. Ãß°¡ Á¤º¸¸¦ º¸¿©ÁÖ´Â MoreScreen
+
+1. ì¹´í…Œê³ ë¦¬ë³„ë¡œ í”Œë˜ì‹œì¹´ë“œ ëª©ë¡ì„ ë³´ì—¬ì£¼ëŠ” HomeScreen
+2. í”Œë˜ì‹œì¹´ë“œ ê²€ìƒ‰ì„ ìœ„í•œ SearchScreen
+3. ìƒˆë¡œìš´ í”Œë˜ì‹œì¹´ë“œ ìƒì„±ì„ ìœ„í•œ CreateScreen
+4. ì¶”ê°€ ì •ë³´ë¥¼ ë³´ì—¬ì£¼ëŠ” MoreScreen
 
 <br>
 
-ÀÌ¹ø 4ÁÖÂ÷¿¡ ÁøÇàÇÑ ³»¿ëÀº Å©°Ô 3°¡ÁöÀÔ´Ï´Ù.
-1. ProgressBar¸¦ ÀÌ¿ëÇØ ÇöÀç Ä«µå°¡ ¸î¹øÂ° Ä«µåÀÎÁö º¸¿©ÁÖ±â
-2. ¿©·¯ È­¸éµé °£ÀÇ ÀüÈ¯À» °¡´ÉÇÏ°Ô ÇØÁÖ´Â NavigationÀÇ °³³ä ÀÌÇØ ¹× Àû¿ë
-3. ÇÃ·¡½ÃÄ«µåÀÇ ³»¿ëÀ» º¸¿©ÁÖ´Â DeckScreen Ãß°¡ÇÏ±â
+ì´ë²ˆ 4ì£¼ì°¨ì— ì§„í–‰í•œ ë‚´ìš©ì€ í¬ê²Œ 3ê°€ì§€ì…ë‹ˆë‹¤.
+1. ProgressBarë¥¼ ì´ìš©í•´ í˜„ì¬ ì¹´ë“œê°€ ëª‡ë²ˆì§¸ ì¹´ë“œì¸ì§€ ë³´ì—¬ì£¼ê¸°
+2. ì—¬ëŸ¬ í™”ë©´ë“¤ ê°„ì˜ ì „í™˜ì„ ê°€ëŠ¥í•˜ê²Œ í•´ì£¼ëŠ” Navigationì˜ ê°œë… ì´í•´ ë° ì ìš©
+3. í”Œë˜ì‹œì¹´ë“œì˜ ë‚´ìš©ì„ ë³´ì—¬ì£¼ëŠ” DeckScreen ì¶”ê°€í•˜ê¸°
 
 <hr>
 
@@ -34,18 +35,18 @@ categories: ["android"]
 ![image](https://user-images.githubusercontent.com/68090939/136987136-a675d38c-fffc-4832-ac9f-d1cf8cf34b79.png)
 <br>
 
-À§ »çÁø°ú °°ÀÌ ¸·´ë ¸ğ¾çÀÇ ÇÁ·Î±×·¡½º¹Ù¸¦ ±¸ÇöÇÏ·Á¸é, LinearProgressIndicatorÀÇ progress ÀÎÀÚ¿¡ ¹öÆ° Å¬¸¯¿¡ µû¸¥ tween ¾Ö´Ï¸ŞÀÌ¼ÇÀ» Àû¿ëÇØÁÖ¸é µË´Ï´Ù. ÀüÃ¼ ÄÚµå´Â ´ÙÀ½°ú °°½À´Ï´Ù.
+ìœ„ ì‚¬ì§„ê³¼ ê°™ì´ ë§‰ëŒ€ ëª¨ì–‘ì˜ í”„ë¡œê·¸ë˜ìŠ¤ë°”ë¥¼ êµ¬í˜„í•˜ë ¤ë©´, LinearProgressIndicatorì˜ progress ì¸ìì— ë²„íŠ¼ í´ë¦­ì— ë”°ë¥¸ tween ì• ë‹ˆë©”ì´ì…˜ì„ ì ìš©í•´ì£¼ë©´ ë©ë‹ˆë‹¤. ì „ì²´ ì½”ë“œëŠ” ë‹¤ìŒê³¼ ê°™ìŠµë‹ˆë‹¤.
 
 ```kotlin
 @Composable
 fun MainScreen() {
-    val (count, setCount) = remember { // ÇöÀç Ä«µå ¼ö
+    val (count, setCount) = remember { // í˜„ì¬ ì¹´ë“œ ìˆ˜
         mutableStateOf(0f)
     }
 
-    val totalCount = 7 // ÃÑ Ä«µå ¼ö
+    val totalCount = 7 // ì´ ì¹´ë“œ ìˆ˜
 
-    LaunchedEffect(key1 = true){ // ¾Æ·¡ ºÎ¿¬ ¼³¸í Âü°í
+    LaunchedEffect(key1 = true){ // ì•„ë˜ ë¶€ì—° ì„¤ëª… ì°¸ê³ 
         setCount(1f)
     }
 
@@ -53,7 +54,7 @@ fun MainScreen() {
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier.padding(16.dp)
     ){
-        // TopBar¿¡ µé¾î°¥ ÅØ½ºÆ®
+        // TopBarì— ë“¤ì–´ê°ˆ í…ìŠ¤íŠ¸
         Text(
             text = "${count.toInt()} / $totalCount",
             fontWeight = FontWeight.Bold
@@ -66,7 +67,7 @@ fun MainScreen() {
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        // ¹öÆ°À» ´©¸£¸é ProgressBar »óÅÂ°¡ ¹Ù²î¸é¼­ Ä«µå°¡ ³Ñ¾î°£´Ù.
+        // ë²„íŠ¼ì„ ëˆ„ë¥´ë©´ ProgressBar ìƒíƒœê°€ ë°”ë€Œë©´ì„œ ì¹´ë“œê°€ ë„˜ì–´ê°„ë‹¤.
         Row(
             Modifier
                 .padding(horizontal = 16.dp)
@@ -76,13 +77,13 @@ fun MainScreen() {
             Button(
                 onClick = { if (count > 1) setCount(count - 1) }
             ){
-                Text("ÀÌÀü Ä«µå")
+                Text("ì´ì „ ì¹´ë“œ")
             }
 
             Button(
                 onClick = { if (count < totalCount) setCount(count + 1) }
             ){
-                Text("´ÙÀ½ Ä«µå")
+                Text("ë‹¤ìŒ ì¹´ë“œ")
             }
         }
     }
@@ -102,7 +103,7 @@ fun MyProgressBar(
         animationSpec = tween(
             durationMillis = animDuration,
             delayMillis = animDelay,
-            easing = LinearOutSlowInEasing // ¾Æ·¡ ºÎ¿¬ ¼³¸í Âü°í
+            easing = LinearOutSlowInEasing // ì•„ë˜ ë¶€ì—° ì„¤ëª… ì°¸ê³ 
         )
     )
 
@@ -119,7 +120,7 @@ fun MyProgressBar(
 ```
 <br>
 
-**ÄÚµå ºÎ¿¬ ¼³¸í** (LaunchedEffect, LinearOutSlowInEasing)
+**ì½”ë“œ ë¶€ì—° ì„¤ëª…** (LaunchedEffect, LinearOutSlowInEasing)
 
 <br>
 
@@ -129,11 +130,11 @@ fun MyProgressBar(
 }
 ```
 
-¿©±â¼­ LaunchedEffect´Â Ã³À½¿¡ progress barÀÇ »óÅÂ¸¦ 0¿¡¼­ 1·Î Áõ°¡½ÃÅ³ ¶§ setCount(1f)°¡ Á¦´ë·Î µ¿ÀÛÇÒ ¼ö ÀÖ°Ô ÇØÁİ´Ï´Ù. launched effect ¸»±×´ë·Î ¾Ö´Ï¸ŞÀÌ¼ÇÀÌ ½ÃÀÛµÉ ¶§ Àû¿ëµÇ´Â È¿°úÀÎµ¥, ¾ÈÀüÇÏ°Ô »óÅÂ¸¦ º¯°æÇÒ ¼ö ÀÖ°Ô ÇØÁÖ´Â composableÀÌ¶ó°í ÀÌÇØÇÏ¸é µË´Ï´Ù.<br>
+ì—¬ê¸°ì„œ LaunchedEffectëŠ” ì²˜ìŒì— progress barì˜ ìƒíƒœë¥¼ 0ì—ì„œ 1ë¡œ ì¦ê°€ì‹œí‚¬ ë•Œ setCount(1f)ê°€ ì œëŒ€ë¡œ ë™ì‘í•  ìˆ˜ ìˆê²Œ í•´ì¤ë‹ˆë‹¤. launched effect ë§ê·¸ëŒ€ë¡œ ì• ë‹ˆë©”ì´ì…˜ì´ ì‹œì‘ë  ë•Œ ì ìš©ë˜ëŠ” íš¨ê³¼ì¸ë°, ì•ˆì „í•˜ê²Œ ìƒíƒœë¥¼ ë³€ê²½í•  ìˆ˜ ìˆê²Œ í•´ì£¼ëŠ” composableì´ë¼ê³  ì´í•´í•˜ë©´ ë©ë‹ˆë‹¤.<br>
 
 [https://developer.android.com/jetpack/compose/side-effects#launchedeffect](https://developer.android.com/jetpack/compose/side-effects#launchedeffect)<br>
 
-ÀÌ °ø½Ä ¹®¼­¿¡ ³ª¿À´Â ÄÚ·çÆ¾, suspend ÇÔ¼öÀÇ °³³äÀº ´ÙÀ½¿¡ ½Ã°£³¯ ¶§ ´Ù½Ã °øºÎÇØºÁ¾ß°Ú½À´Ï´Ù,,
+ì´ ê³µì‹ ë¬¸ì„œì— ë‚˜ì˜¤ëŠ” ì½”ë£¨í‹´, suspend í•¨ìˆ˜ì˜ ê°œë…ì€ ë‹¤ìŒì— ì‹œê°„ë‚  ë•Œ ë‹¤ì‹œ ê³µë¶€í•´ë´ì•¼ê² ìŠµë‹ˆë‹¤,,
 
 <br>
 
@@ -143,31 +144,31 @@ val curPercentage by animateFloatAsState(
     animationSpec = tween(
         durationMillis = animDuration,
         delayMillis = animDelay,
-        easing = LinearOutSlowInEasing // ¾Æ·¡ ºÎ¿¬ ¼³¸í Âü°í
+        easing = LinearOutSlowInEasing
     )
 )
 ```
 
-[Âü°í ¸µÅ©](https://medium.com/@Kjoon/%EC%9D%B8%ED%84%B0%EB%9E%99%EC%85%98-%EB%94%94%EC%9E%90%EC%9D%B8-%EC%9D%B4%EC%95%BC%EA%B8%B0-2-easing-functions-cf0f6cb213a2)<br>
+[ì°¸ê³  ë§í¬](https://medium.com/@Kjoon/%EC%9D%B8%ED%84%B0%EB%9E%99%EC%85%98-%EB%94%94%EC%9E%90%EC%9D%B8-%EC%9D%B4%EC%95%BC%EA%B8%B0-2-easing-functions-cf0f6cb213a2)
 
-easing curve°¡ ¹«¾ùÀÎÁö ¸ô¶ó¼­ Àá±ñ °Ë»öÇØºÃ½À´Ï´Ù. ¾Ö´Ï¸ŞÀÌ¼Ç¿¡¼­ ½ÃÀÛ°ú ³¡ÀÇ ¿òÁ÷ÀÓÀ» º¸°£ÇØÁÖ´Â °ÍÀÌ¶ó°í ÀÌÇØÇÏ¸é µÉ °Å °°½À´Ï´Ù.<br>
+easing curveê°€ ë¬´ì—‡ì¸ì§€ ëª°ë¼ì„œ ì ê¹ ê²€ìƒ‰í•´ë´¤ìŠµë‹ˆë‹¤. ì• ë‹ˆë©”ì´ì…˜ì—ì„œ ì‹œì‘ê³¼ ëì˜ ì›€ì§ì„ì„ ë³´ê°„í•´ì£¼ëŠ” ê²ƒì´ë¼ê³  ì´í•´í•˜ë©´ ë  ê±° ê°™ìŠµë‹ˆë‹¤.<br>
 
 <hr>
 <br>
 
 # 2. Navigation
 
-## NavigationÀÇ °³³ä°ú ±¸¼º¿ä¼Ò
+## Navigationì˜ ê°œë…ê³¼ êµ¬ì„±ìš”ì†Œ
 
 [https://developer.android.com/guide/navigation](https://developer.android.com/guide/navigation)
 
-NavigationÀº »ç¿ëÀÚ°¡ ¾Û ³»ÀÇ ´Ù¾çÇÑ ÄÜÅÙÃ÷¸¦ Å½»öÇÏ°í, µé¾î°¡°í, µÚ·Î ÀÌµ¿ÇÒ ¶§ »ç¿ëµÇ´Â °³³äÀÔ´Ï´Ù. Áï, ¿©·¯ È­¸é °£ÀÇ ÀüÈ¯À» °¡´ÉÇÏ°Ô ÇØÁÖ´Â °ÍÀÌ¶ó°í »ı°¢ÇÏ¸é µË´Ï´Ù.<br>
+Navigationì€ ì‚¬ìš©ìê°€ ì•± ë‚´ì˜ ë‹¤ì–‘í•œ ì½˜í…ì¸ ë¥¼ íƒìƒ‰í•˜ê³ , ë“¤ì–´ê°€ê³ , ë’¤ë¡œ ì´ë™í•  ë•Œ ì‚¬ìš©ë˜ëŠ” ê°œë…ì…ë‹ˆë‹¤. ì¦‰, ì—¬ëŸ¬ í™”ë©´ ê°„ì˜ ì „í™˜ì„ ê°€ëŠ¥í•˜ê²Œ í•´ì£¼ëŠ” ê²ƒì´ë¼ê³  ìƒê°í•˜ë©´ ë©ë‹ˆë‹¤. Navigationì—ëŠ” í¬ê²Œ 3ê°€ì§€ êµ¬ì„± ìš”ì†Œê°€ ìˆìŠµë‹ˆë‹¤.
 
-Navigation¿¡´Â Å©°Ô 3°¡Áö ±¸¼º ¿ä¼Ò°¡ ÀÖ½À´Ï´Ù. <br>
+<br>
 
 **1. Navigation graph**
 
-navigation°ú °ü·ÃµÈ ¸ğµç Á¤º¸°¡ Æ÷ÇÔµÇ¾î ÀÖ´Â XML ¸®¼Ò½ºÀÔ´Ï´Ù. µû¶ó¼­ ¿©±â¿¡´Â **navigationÀÇ ¸ñÀûÁö(destination), Áï ¾Û ³»¿¡¼­ ÀÌµ¿ °¡´ÉÇÑ ¸ğµç È­¸éµé**ÀÌ Æ÷ÇÔµË´Ï´Ù. ´ÙÀ½ ±×·¡ÇÁ´Â °á±¹ a, b, c, d È­¸é °£ÀÇ ÀüÈ¯À» ³ªÅ¸³½ °ÍÀÔ´Ï´Ù.<br>
+navigationê³¼ ê´€ë ¨ëœ ëª¨ë“  ì •ë³´ê°€ í¬í•¨ë˜ì–´ ìˆëŠ” XML ë¦¬ì†ŒìŠ¤ì…ë‹ˆë‹¤. ë”°ë¼ì„œ ì—¬ê¸°ì—ëŠ” **navigationì˜ ëª©ì ì§€(destination), ì¦‰ ì•± ë‚´ì—ì„œ ì´ë™ ê°€ëŠ¥í•œ ëª¨ë“  í™”ë©´ë“¤**ì´ í¬í•¨ë©ë‹ˆë‹¤. ë‹¤ìŒ ê·¸ë˜í”„ëŠ” ê²°êµ­ a, b, c, d í™”ë©´ ê°„ì˜ ì „í™˜ì„ ë‚˜íƒ€ë‚¸ ê²ƒì…ë‹ˆë‹¤.<br>
 
 ![image](https://user-images.githubusercontent.com/68090939/137103343-4d24adc8-7f4e-4595-8aa1-42a245ffe825.png)
 
@@ -175,9 +176,9 @@ navigation°ú °ü·ÃµÈ ¸ğµç Á¤º¸°¡ Æ÷ÇÔµÇ¾î ÀÖ´Â XML ¸®¼Ò½ºÀÔ´Ï´Ù. µû¶ó¼­ ¿©±â¿¡´Â 
 
 **2. NavHost**
 
-**³×ºñ°ÔÀÌ¼Ç ±×·¡ÇÁÀÇ ¸ñÀûÁö¸¦ ´ã´Â ÄÁÅ×ÀÌ³ÊÀÔ´Ï´Ù. Áï, ¾Û ³»¿¡¼­ ÀÌµ¿ÇÒ ¸ğµç È­¸éµéÀÌ ÀÌ ÄÁÅ×ÀÌ³Ê¿¡ ½ºÅÃ ±¸Á¶·Î ½×ÀÌ°Ô µË´Ï´Ù.** ³×ºñ°ÔÀÌ¼Ç ±¸¼º¿ä¼Ò¿¡´Â NavHostÀÇ ±âº» ±¸ÇöÀ¸·Î¼­, NavHostFragment°¡ Æ÷ÇÔµÇ¾î ÀÖ½À´Ï´Ù. µû¶ó¼­ NavHost´Â **fragmentµéÀÌ µé¾î°¡°Ô µÉ ÀÚ¸®**¶ó°í º¼ ¼ö ÀÖ½À´Ï´Ù. (fragment´Â ºÎºĞ, ÆÄÆíÀÌ¶ó´Â ¶æÀÌÁÒ? ¸»±×´ë·Î ÇÁ·¡±×¸ÕÆ®´Â ¾×Æ¼ºñÆ¼¸¦ º»¶°¼­ ¸¸µç "ºÎºĞ È­¸é"À¸·Î¼­, UI¸¦ ¿©·¯ °³ÀÇ ¸ğµâ ´ÜÀ§·Î ÀÛ¼ºÇÒ ¼ö ÀÖ°Ô ÇØÁİ´Ï´Ù.) <br>
+**ë„¤ë¹„ê²Œì´ì…˜ ê·¸ë˜í”„ì˜ ëª©ì ì§€ë¥¼ ë‹´ëŠ” ì»¨í…Œì´ë„ˆì…ë‹ˆë‹¤. ì¦‰, ì•± ë‚´ì—ì„œ ì´ë™í•  ëª¨ë“  í™”ë©´ë“¤ì´ ì´ ì»¨í…Œì´ë„ˆì— ìŠ¤íƒ êµ¬ì¡°ë¡œ ìŒ“ì´ê²Œ ë©ë‹ˆë‹¤.** ë„¤ë¹„ê²Œì´ì…˜ êµ¬ì„±ìš”ì†Œì—ëŠ” NavHostì˜ ê¸°ë³¸ êµ¬í˜„ìœ¼ë¡œì„œ, NavHostFragmentê°€ í¬í•¨ë˜ì–´ ìˆìŠµë‹ˆë‹¤. ë”°ë¼ì„œ NavHostëŠ” **fragmentë“¤ì´ ë“¤ì–´ê°€ê²Œ ë  ìë¦¬**ë¼ê³  ë³¼ ìˆ˜ ìˆìŠµë‹ˆë‹¤. (fragmentëŠ” ë¶€ë¶„, íŒŒí¸ì´ë¼ëŠ” ëœ»ì´ì£ ? ë§ê·¸ëŒ€ë¡œ í”„ë˜ê·¸ë¨¼íŠ¸ëŠ” ì•¡í‹°ë¹„í‹°ë¥¼ ë³¸ë– ì„œ ë§Œë“  "ë¶€ë¶„ í™”ë©´"ìœ¼ë¡œì„œ, UIë¥¼ ì—¬ëŸ¬ ê°œì˜ ëª¨ë“ˆ ë‹¨ìœ„ë¡œ ì‘ì„±í•  ìˆ˜ ìˆê²Œ í•´ì¤ë‹ˆë‹¤.) <br>
 
-¡æ  Á¤Á¤: Áö±İ ÀúÈñ´Â composable·Î È­¸éÀ» ¸¸µé°í ÀÖÀ¸¸ç, ±×·¡ÇÁ¿¡ composable´ÜÀ§·Î destinationµéÀ» Á¤ÀÇÇÏ°í ÀÖ±â ¶§¹®¿¡ NavHost´Â composableÀÌ µé¾î°¡´Â ÀÚ¸®¶ó°í Ç¥ÇöÇÏ´Â °Ô ´õ Á¤È®ÇÕ´Ï´Ù!<br>
+â†’ ì •ì •: ì§€ê¸ˆ ì €í¬ëŠ” composableë¡œ í™”ë©´ì„ ë§Œë“¤ê³  ìˆìœ¼ë©°, ê·¸ë˜í”„ì— composableë‹¨ìœ„ë¡œ destinationë“¤ì„ ì •ì˜í•˜ê³  ìˆê¸° ë•Œë¬¸ì— NavHostëŠ” composableì´ ë“¤ì–´ê°€ëŠ” ìë¦¬ë¼ê³  í‘œí˜„í•˜ëŠ” ê²Œ ë” ì •í™•í•©ë‹ˆë‹¤! <br>
 
 <img src="https://user-images.githubusercontent.com/68090939/137103507-a83cafc4-bb12-4564-9eca-7663844dd019.png" width="450px"/><br>
 
@@ -185,54 +186,53 @@ navigation°ú °ü·ÃµÈ ¸ğµç Á¤º¸°¡ Æ÷ÇÔµÇ¾î ÀÖ´Â XML ¸®¼Ò½ºÀÔ´Ï´Ù. µû¶ó¼­ ¿©±â¿¡´Â 
 
 **3. NavController**
 
-**NavHost³»¿¡¼­ ³×ºñ°ÔÀÌ¼ÇÀ» °ü¸®ÇÏ´Â °´Ã¼ÀÔ´Ï´Ù. NavController´Â »ç¿ëÀÚ°¡ ¾Û ÀüÃ¼¸¦ ÀÌµ¿ÇÒ ¶§, NavHost ÀÚ¸®¿¡ ÇÁ·¡±×¸ÕÆ®µéÀ» µé¿©º¸³»°Å³ª ³»º¸³»¸é¼­, ¿©·¯ È­¸é °£ÀÇ ÀüÈ¯ÀÌ ÀÌ·ç¾îÁú ¼ö ÀÖ°Ô ÇØÁİ´Ï´Ù.** 
-¾ÛÀ» Å½»öÇÒ ¶§ ³×ºñ°ÔÀÌ¼Ç ±×·¡ÇÁÀÇ Æ¯Á¤ °æ·Î¸¦ µû¶ó Å½»öÇÏ°Å³ª, Æ¯Á¤ ´ë»óÀ¸·Î Á÷Á¢ Å½»öÇÏ°í ½Í´Ù°í NavController¿¡°Ô ¾Ë¸®¸é, NavController´Â ÇØ´ç destinationÀ» NavHost¿¡ ÁöÁ¤ÇÏ°Ô µË´Ï´Ù.<br>
+**NavHostë‚´ì—ì„œ ë„¤ë¹„ê²Œì´ì…˜ì„ ê´€ë¦¬í•˜ëŠ” ê°ì²´ì…ë‹ˆë‹¤. NavControllerëŠ” ì‚¬ìš©ìê°€ ì•± ì „ì²´ë¥¼ ì´ë™í•  ë•Œ, NavHost ìë¦¬ì— í”„ë˜ê·¸ë¨¼íŠ¸ë“¤ì„ ë“¤ì—¬ë³´ë‚´ê±°ë‚˜ ë‚´ë³´ë‚´ë©´ì„œ, ì—¬ëŸ¬ í™”ë©´ ê°„ì˜ ì „í™˜ì´ ì´ë£¨ì–´ì§ˆ ìˆ˜ ìˆê²Œ í•´ì¤ë‹ˆë‹¤.** 
+ì•±ì„ íƒìƒ‰í•  ë•Œ ë„¤ë¹„ê²Œì´ì…˜ ê·¸ë˜í”„ì˜ íŠ¹ì • ê²½ë¡œë¥¼ ë”°ë¼ íƒìƒ‰í•˜ê±°ë‚˜, íŠ¹ì • ëŒ€ìƒìœ¼ë¡œ ì§ì ‘ íƒìƒ‰í•˜ê³  ì‹¶ë‹¤ê³  NavControllerì—ê²Œ ì•Œë¦¬ë©´, NavControllerëŠ” í•´ë‹¹ destinationì„ NavHostì— ì§€ì •í•˜ê²Œ ë©ë‹ˆë‹¤. <br>
 
-- destination - navigationÀÇ ¸ñÀûÁö, ÀÌµ¿ÇÒ ¸ğµç È­¸é
-- route¸¦ ÅëÇØ navigate (´Ù¸¥ ¸ñÀûÁö È­¸éÀ¸·Î ÀÌµ¿)
-- BackStackEntry - navigationÀ» À§ÇØ »ç¿ëÇÏ´Â ½ºÅÃ
+- destination - navigationì˜ ëª©ì ì§€, ì´ë™í•  ëª¨ë“  í™”ë©´
+- routeë¥¼ í†µí•´ navigate (ë‹¤ë¥¸ ëª©ì ì§€ í™”ë©´ìœ¼ë¡œ ì´ë™)
+- BackStackEntry - navigationì„ ìœ„í•´ ì‚¬ìš©í•˜ëŠ” ìŠ¤íƒ
 
 <hr>
 <br>
 
-## NavigationÀÇ Àû¿ë
+## Navigationì˜ ì ìš©
 
-¿¹¿ø´ÔÀÌ ºí·Î±×¿¡ »ó¼¼È÷ ¼³¸íÀ» Àß ÇØµÎ¼Ì±â ¶§¹®¿¡, ³ª¸ÓÁö Æ÷½ºÆ®¸¦ ÀĞ±â Àü¿¡ ÀÌ µÎ °³ÀÇ ¸µÅ©¿¡¼­ ²À ±âº» ¿¹Á¦¸¦ ¸ÕÀú °øºÎÇÏ°í ¿À½Ã±æ ±ÇÀåÇÕ´Ï´Ù!<br>
-
+ì˜ˆì›ë‹˜ì´ ë¸”ë¡œê·¸ì— ìƒì„¸íˆ ì„¤ëª…ì„ ì˜ í•´ë‘ì…¨ê¸° ë•Œë¬¸ì—, ë‚˜ë¨¸ì§€ í¬ìŠ¤íŠ¸ë¥¼ ì½ê¸° ì „ì— ì´ ë‘ ê°œì˜ ë§í¬ì—ì„œ ê¼­ ê¸°ë³¸ ì˜ˆì œë¥¼ ë¨¼ì € ê³µë¶€í•˜ê³  ì˜¤ì‹œê¸¸ ê¶Œì¥í•©ë‹ˆë‹¤! <br>
 [https://blog.naver.com/comye1/222457844226](https://blog.naver.com/comye1/222457844226)<br>
 [https://blog.naver.com/comye1/222482497797](https://blog.naver.com/comye1/222482497797)
 
 <br>
 
-¸ÕÀú, app ¼öÁØÀÇ build.gradle¿¡ ´ÙÀ½ ÄÚµå¸¦ Ãß°¡ÇØÁİ´Ï´Ù.<br>
+ë¨¼ì €, app ìˆ˜ì¤€ì˜ build.gradleì— ë‹¤ìŒ ì½”ë“œë¥¼ ì¶”ê°€í•´ì¤ë‹ˆë‹¤.<br>
 
 `implementation "androidx.navigation:navigation-compose:2.4.0-alpha05"`
 
 <br>
 
-**1. navController¸¦ »ı¼ºÇØ ±â¾ïÇÑ´Ù.**
+**1. navControllerë¥¼ ìƒì„±í•´ ê¸°ì–µí•œë‹¤.**
 
 ![image](https://user-images.githubusercontent.com/68090939/137104388-fa4038e5-e38a-418a-b541-7f5017458aa0.png)
 <br>
 
-NavController´Â statefulÀÌ¾î¼­, ¾Û È­¸éÀ» ±¸¼ºÇÏ´Â composableÀÇ back stack°ú °¢ È­¸éÀÇ »óÅÂ¸¦ ÃßÀûÇÕ´Ï´Ù. ´ÙÀ½°ú °°ÀÌ **rememberNavController() ÇÔ¼ö¸¦ ÅëÇØ NavController¸¦ »ı¼ºÇÏ°í ±× »óÅÂ¸¦ ±â¾ïÇÒ ¼ö ÀÖ½À´Ï´Ù.**
+NavControllerëŠ” statefulì´ì–´ì„œ, ì•± í™”ë©´ì„ êµ¬ì„±í•˜ëŠ” composableì˜ back stackê³¼ ê° í™”ë©´ì˜ ìƒíƒœë¥¼ ì¶”ì í•©ë‹ˆë‹¤. ë‹¤ìŒê³¼ ê°™ì´ **rememberNavController() í•¨ìˆ˜ë¥¼ í†µí•´ NavControllerë¥¼ ìƒì„±í•˜ê³  ê·¸ ìƒíƒœë¥¼ ê¸°ì–µí•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.**
 <br>
 
 `val navController = rememberNavController()`
 
 <br>
 
-**NavController´Â ¸ğµç composableÀÌ Á¢±ÙÇÒ ¼ö ÀÖ´Â À§Ä¡¿¡ »ı¼ºÇÏ´Â °ÍÀÌ Áß¿äÇÕ´Ï´Ù!** ÀÌ´Â composableÀÇ state¸¦ callerÂÊÀ¸·Î ³Ñ±â´Â state hoisting ¿øÄ¢À» µû¸£´Â °ÍÀÔ´Ï´Ù. È­¸é ¿ÜºÎ¿¡¼­ composableÀ» ¾÷µ¥ÀÌÆ®ÇÒ ¶§, `currentBackStackEntryAsState()` ÇÔ¼ö·Î ³Ñ°Ü¹ŞÀº NavControllerÀÇ state¸¦ »ç¿ëÇÏ·Á¸é, NavController¸¦ ¸ğµç composableÀÌ Á¢±Ù °¡´ÉÇÑ À§Ä¡¿¡ »ı¼ºÇØÁà¾ß ÇÕ´Ï´Ù.
+**NavControllerëŠ” ëª¨ë“  composableì´ ì ‘ê·¼í•  ìˆ˜ ìˆëŠ” ìœ„ì¹˜ì— ìƒì„±í•˜ëŠ” ê²ƒì´ ì¤‘ìš”í•©ë‹ˆë‹¤!** ì´ëŠ” composableì˜ stateë¥¼ callerìª½ìœ¼ë¡œ ë„˜ê¸°ëŠ” state hoisting ì›ì¹™ì„ ë”°ë¥´ëŠ” ê²ƒì…ë‹ˆë‹¤. í™”ë©´ ì™¸ë¶€ì—ì„œ composableì„ ì—…ë°ì´íŠ¸í•  ë•Œ, `currentBackStackEntryAsState()` í•¨ìˆ˜ë¡œ ë„˜ê²¨ë°›ì€ NavControllerì˜ stateë¥¼ ì‚¬ìš©í•˜ë ¤ë©´, NavControllerë¥¼ ëª¨ë“  composableì´ ì ‘ê·¼ ê°€ëŠ¥í•œ ìœ„ì¹˜ì— ìƒì„±í•´ì¤˜ì•¼ í•©ë‹ˆë‹¤.
 
 <br>
 
-**2. NavHost¸¦ Á¤ÀÇÇÑ´Ù.**
+**2. NavHostë¥¼ ì •ì˜í•œë‹¤.**
 
 ![image](https://user-images.githubusercontent.com/68090939/137104684-896394c5-dfc0-42ae-826e-2e24f85bb9ef.png)<br>
 
-°¢ NavController´Â ÇÏ³ªÀÇ NavHost composable°ú ¿¬°áµÇ¾î¾ß ÇÕ´Ï´Ù. **composable °£¿¡ ³×ºñ°ÔÀÌ¼ÇÀ» ÇÒ ¶§, NavHostÀÇ ³»¿ëÀº ÀÚµ¿À¸·Î Àç±¸¼ºµË´Ï´Ù.**<br>
+ê° NavControllerëŠ” í•˜ë‚˜ì˜ NavHost composableê³¼ ì—°ê²°ë˜ì–´ì•¼ í•©ë‹ˆë‹¤. **composable ê°„ì— ë„¤ë¹„ê²Œì´ì…˜ì„ í•  ë•Œ, NavHostì˜ ë‚´ìš©ì€ ìë™ìœ¼ë¡œ ì¬êµ¬ì„±ë©ë‹ˆë‹¤.**<br>
 
-È­¸éÀ» ±¸¼ºÇÏ´Â ¿©·¯ composableµéÀº **route¸¦ ÅëÇØ** composable°£ÀÇ ÀÌµ¿ °æ·Î¸¦ Á¤ÀÇÇÏ°í, ´Ù¸¥ composable·ÎºÎÅÍ ÀÎÀÚµµ Àü´Ş ¹ŞÀ» ¼ö ÀÖ½À´Ï´Ù. ´Ù½Ã ¸»ÇØ, **³×ºñ°ÔÀÌ¼Ç ±×·¡ÇÁÀÇ °¢ destinationÀº route¿Í ¿¬°áµÇ¾î ÀÖ´Â °ÍÀÔ´Ï´Ù.**
+í™”ë©´ì„ êµ¬ì„±í•˜ëŠ” ì—¬ëŸ¬ composableë“¤ì€ **routeë¥¼ í†µí•´** composableê°„ì˜ ì´ë™ ê²½ë¡œë¥¼ ì •ì˜í•˜ê³ , ë‹¤ë¥¸ composableë¡œë¶€í„° ì¸ìë„ ì „ë‹¬ ë°›ì„ ìˆ˜ ìˆìŠµë‹ˆë‹¤. ë‹¤ì‹œ ë§í•´, **ë„¤ë¹„ê²Œì´ì…˜ ê·¸ë˜í”„ì˜ ê° destinationì€ routeì™€ ì—°ê²°ë˜ì–´ ìˆëŠ” ê²ƒì…ë‹ˆë‹¤.**
 
 ```kotlin
 @Composable
@@ -241,41 +241,41 @@ public fun NavHost(
     startDestination: String,
     modifier: Modifier,
     route: String?,
-    builder: NavGraphBuilder.() ¡æ Unit
+    builder: NavGraphBuilder.() â†’ Unit
 ): Unit
 ```
 <br>
 
-**NavHost´Â ¹Ì¸® »ı¼ºÇÑ navController¿Í startDestinationÀ» ÁöÁ¤ÇÔÀ¸·Î½á »ı¼ºÇÒ ¼ö ÀÖ½À´Ï´Ù.** builder ºí·ÏÀ» ÅëÇØ ³×ºñ°ÔÀÌ¼Ç ±×·¡ÇÁ¸¦ ¸¸µå´Âµ¥, ÀÌ´Â ÇÔ¼ö Çü½ÄÀÌ±â ¶§¹®¿¡ Áß°ıÈ£¸¦ ¹ÛÀ¸·Î »©³»¼­ ³»¿ëÀ» ÀÛ¼ºÇÒ ¼ö ÀÖ½À´Ï´Ù.
+**NavHostëŠ” ë¯¸ë¦¬ ìƒì„±í•œ navControllerì™€ startDestinationì„ ì§€ì •í•¨ìœ¼ë¡œì¨ ìƒì„±í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.** builder ë¸”ë¡ì„ í†µí•´ ë„¤ë¹„ê²Œì´ì…˜ ê·¸ë˜í”„ë¥¼ ë§Œë“œëŠ”ë°, ì´ëŠ” í•¨ìˆ˜ í˜•ì‹ì´ê¸° ë•Œë¬¸ì— ì¤‘ê´„í˜¸ë¥¼ ë°–ìœ¼ë¡œ ë¹¼ë‚´ì„œ ë‚´ìš©ì„ ì‘ì„±í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.
 
 <br>
 
-**3. navigate() ÇÔ¼öÀÇ ÀÎÀÚ¿¡ ÀÌµ¿ÇÒ È­¸éÀÇ route¸¦ Àû´Â´Ù.**
+**3. navigate() í•¨ìˆ˜ì˜ ì¸ìì— ì´ë™í•  í™”ë©´ì˜ routeë¥¼ ì ëŠ”ë‹¤.**
 
 ![image](https://user-images.githubusercontent.com/68090939/137104941-5d2615cd-a216-44b2-ac5d-71e76a95f998.png)<br>
 
 
-³×ºñ°ÔÀÌ¼Ç ±×·¡ÇÁÀÇ composable°£¿¡ ¼­·Î ³×ºñ°ÔÀÌ¼ÇÀ» ÇÏ±â À§ÇØ¼­, navigate()¶ó´Â ÇÔ¼ö¸¦ »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù. **navigate ÇÔ¼öÀÇ ¸Å°³º¯¼öÀÎ route¸¦ ÅëÇØ Æ¯Á¤ composable¿¡ ÀÎÀÚ¸¦ Àü´ŞÇÒ ¼ö ÀÖ½À´Ï´Ù.**
+ë„¤ë¹„ê²Œì´ì…˜ ê·¸ë˜í”„ì˜ composableê°„ì— ì„œë¡œ ë„¤ë¹„ê²Œì´ì…˜ì„ í•˜ê¸° ìœ„í•´ì„œ, navigate()ë¼ëŠ” í•¨ìˆ˜ë¥¼ ì‚¬ìš©í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤. **navigate í•¨ìˆ˜ì˜ ë§¤ê°œë³€ìˆ˜ì¸ routeë¥¼ í†µí•´ íŠ¹ì • composableì— ì¸ìë¥¼ ì „ë‹¬í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.**
 
 <br>
 
-**4. back stack Ãß°¡ ¼³¸í**
+**4. back stack ì¶”ê°€ ì„¤ëª…**
 
 ![image](https://user-images.githubusercontent.com/68090939/137105101-fd925a7c-8332-4098-9fbf-1b4bf966d46d.png)<br>
 
 
-±âº»ÀûÀ¸·Î navigate() ÇÔ¼ö´Â **»õ·Î¿î destinationÀ» back stack¿¡ Ãß°¡**ÇÕ´Ï´Ù. ±×¸®°í Ãß°¡ÀûÀÎ ³×ºñ°ÔÀÌ¼Ç ¿É¼ÇÀ» navigate()ÀÇ È£Ãâ¿¡ µ¡ºÙÀÓÀ¸·Î½á navigateÀÇ µ¿ÀÛÀ» ¼öÁ¤ÇÒ ¼ö ÀÖ½À´Ï´Ù.<br>
-¿¹¸¦ µé¾î, **popUpTo() ÇÔ¼ö**´Â »õ·Î¿î destinationÀ¸·Î ³×ºñ°ÔÀÌ¼Ç ÇÏ±â Àü¿¡ back stackÀ¸·ÎºÎÅÍ ±âÁ¸ destinationÀÇ ¸ğµç ³»¿ëÀ» ²¨³À´Ï´Ù. (stack¿¡¼­ »ğÀÔÀº push, »èÁ¦´Â pop)<br>
-**lauchSingleTop = true**´Â µ¿ÀÏÇÑ destination¿¡ ´ëÇÑ º¹»çº»ÀÌ ½ºÅÃÀÇ top¿¡ ½×ÀÌ´Â °ÍÀ» ¹æÁöÇÕ´Ï´Ù. µû¶ó¼­, ±âÁ¸¿¡ ½ºÅÃ top¿¡ Á¸ÀçÇÏÁö ¾Ê¾Ò´ø destination¸¸ ³×ºñ°ÔÀÌ¼Ç ÇÒ ¼ö ÀÖ°Ô ÇÕ´Ï´Ù.<br>
+ê¸°ë³¸ì ìœ¼ë¡œ navigate() í•¨ìˆ˜ëŠ” **ìƒˆë¡œìš´ destinationì„ back stackì— ì¶”ê°€**í•©ë‹ˆë‹¤. ê·¸ë¦¬ê³  ì¶”ê°€ì ì¸ ë„¤ë¹„ê²Œì´ì…˜ ì˜µì…˜ì„ navigate()ì˜ í˜¸ì¶œì— ë§ë¶™ì„ìœ¼ë¡œì¨ navigateì˜ ë™ì‘ì„ ìˆ˜ì •í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.<br>
+ì˜ˆë¥¼ ë“¤ì–´, **popUpTo() í•¨ìˆ˜**ëŠ” ìƒˆë¡œìš´ destinationìœ¼ë¡œ ë„¤ë¹„ê²Œì´ì…˜ í•˜ê¸° ì „ì— back stackìœ¼ë¡œë¶€í„° ê¸°ì¡´ destinationì˜ ëª¨ë“  ë‚´ìš©ì„ êº¼ëƒ…ë‹ˆë‹¤. (stackì—ì„œ ì‚½ì…ì€ push, ì‚­ì œëŠ” pop)<br>
+**lauchSingleTop = true**ëŠ” ë™ì¼í•œ destinationì— ëŒ€í•œ ë³µì‚¬ë³¸ì´ ìŠ¤íƒì˜ topì— ìŒ“ì´ëŠ” ê²ƒì„ ë°©ì§€í•©ë‹ˆë‹¤. ë”°ë¼ì„œ, ê¸°ì¡´ì— ìŠ¤íƒ topì— ì¡´ì¬í•˜ì§€ ì•Šì•˜ë˜ destinationë§Œ ë„¤ë¹„ê²Œì´ì…˜ í•  ìˆ˜ ìˆê²Œ í•©ë‹ˆë‹¤.<br>
 
 <hr>
 <br>
 
-## CheggPrep ¾Û¿¡ Navigation È°¿ëÇÏ±â!
+## CheggPrep ì•±ì— Navigation í™œìš©í•˜ê¸°!
 
 <br>
 
-### 1. BottomNavigationBar·Î È­¸é ÀüÈ¯ÇÏ±â
+### 1. BottomNavigationBarë¡œ í™”ë©´ ì „í™˜í•˜ê¸°
 
 <br>
 
@@ -294,11 +294,11 @@ public fun NavHost(
 </div><div style="clear:both"></div>
 
 
-À§Ã³·³ BottomNavigationBar¿¡¼­ Å¬¸¯ÇÑ ¾ÆÀÌÄÜ¿¡ µû¶ó ´Ù¸¥ È­¸éÀÌ ³ª¿Ã ¼ö ÀÖ°Ô ¸¸µé¾îº¾½Ã´Ù!<br><br>
+ìœ„ì²˜ëŸ¼ BottomNavigationBarì—ì„œ í´ë¦­í•œ ì•„ì´ì½˜ì— ë”°ë¼ ë‹¤ë¥¸ í™”ë©´ì´ ë‚˜ì˜¬ ìˆ˜ ìˆê²Œ ë§Œë“¤ì–´ë´…ì‹œë‹¤!<br><br>
 
 <img src="https://user-images.githubusercontent.com/68090939/137106417-a214eca9-dd36-4637-a145-d29622146c63.png" width="350px">
 
-ÀÏ´Ü, À§ »çÁø°ú °°ÀÌ navigation ÆĞÅ°Áö¿Í navigation.kt ÆÄÀÏÀ» »ı¼ºÇØ¼­ ´ÙÀ½°ú °°ÀÌ ÄÚµå¸¦ ÀÛ¼ºÇØÁİ´Ï´Ù.
+ì¼ë‹¨, ìœ„ ì‚¬ì§„ê³¼ ê°™ì´ navigation íŒ¨í‚¤ì§€ì™€ navigation.kt íŒŒì¼ì„ ìƒì„±í•´ì„œ ë‹¤ìŒê³¼ ê°™ì´ ì½”ë“œë¥¼ ì‘ì„±í•´ì¤ë‹ˆë‹¤. <br>
 
 ```kotlin
 package com.gdsc.cheggprepreview.navigation
@@ -354,12 +354,12 @@ fun BottomNavigationBar(navController: NavController) {
 ```
 <br>
 
-- sealed classÀÎ ScreenÀ» »ı¼ºÇÏ°í, object·Î Home, Search, Create, More¶ó´Â 4°¡Áö È­¸éÀ» Á¤ÀÇÇÕ´Ï´Ù. (Deck È­¸éÀº µÚ¿¡¼­ ¼³¸íÇÕ´Ï´Ù.)
-- BottomNavigation() composableÀº ¸ÓÆ¼¸®¾ó µğÀÚÀÎÀÇ APIÀÌ¹Ç·Î Alt + Enter ´ÜÃàÅ°·Î import¸¦ Àß ÇØÁİ´Ï´Ù. ÀüÈ¯ÇÒ È­¸éµéÀº items ¸®½ºÆ®ÀÇ BottomNavItem·Î »ı¼ºÇÕ´Ï´Ù.
+- sealed classì¸ Screenì„ ìƒì„±í•˜ê³ , objectë¡œ Home, Search, Create, Moreë¼ëŠ” 4ê°€ì§€ í™”ë©´ì„ ì •ì˜í•©ë‹ˆë‹¤. (Deck í™”ë©´ì€ ë’¤ì—ì„œ ì„¤ëª…í•©ë‹ˆë‹¤.)
+- BottomNavigation() composableì€ ë¨¸í‹°ë¦¬ì–¼ ë””ìì¸ì˜ APIì´ë¯€ë¡œ Alt + Enter ë‹¨ì¶•í‚¤ë¡œ importë¥¼ ì˜ í•´ì¤ë‹ˆë‹¤. ì „í™˜í•  í™”ë©´ë“¤ì€ items ë¦¬ìŠ¤íŠ¸ì˜ BottomNavItemë¡œ ìƒì„±í•©ë‹ˆë‹¤.
 
 <br>
 
-- ÀÌÁ¦ MainActivity¿¡¼­ BottomNavigationBarÀÇ ¹èÄ¡ ¿©ºÎ¸¦ Á¤ÇÏ°í, NavHostÀÇ block ºÎºĞ¿¡´Â ÀüÈ¯ÇÒ composableµéÀ» Á¤ÀÇÇÕ´Ï´Ù.
+- ì´ì œ MainActivityì—ì„œ BottomNavigationBarì˜ ë°°ì¹˜ ì—¬ë¶€ë¥¼ ì •í•˜ê³ , NavHostì˜ block ë¶€ë¶„ì—ëŠ” ì „í™˜í•  composableë“¤ì„ ì •ì˜í•©ë‹ˆë‹¤.
 
 ```kotlin
 	val navController = rememberNavController()
@@ -401,21 +401,19 @@ fun BottomNavigationBar(navController: NavController) {
 <hr>
 <br>
 
-### 2. DeckScreen ±¸Çö
+### 2. DeckScreen êµ¬í˜„
 
 <br>
 
 <img src="https://user-images.githubusercontent.com/68090939/137108405-1985e6ee-ab72-4870-babf-f6eb60782b2a.png" width="400px">
 
-
-DeckScreenÀº °¢ DeckItemÀ» Å¬¸¯ÇßÀ» ¶§ ³ªÅ¸³ª´Â È­¸éÀÔ´Ï´Ù. 
+DeckScreenì€ ê° DeckItemì„ í´ë¦­í–ˆì„ ë•Œ ë‚˜íƒ€ë‚˜ëŠ” í™”ë©´ì…ë‹ˆë‹¤.
 
 <br>
 
 <img src="https://user-images.githubusercontent.com/68090939/137108636-e4e29d57-6c76-46ca-ae89-d8505a2bc750.png" width="350px">
 
-
-¸ÕÀú, screens ÆĞÅ°Áö¿¡ DeckScreen.kt ÀÌ¶ó´Â ÆÄÀÏÀ» »ı¼ºÇÏ°í ´ÙÀ½°ú °°ÀÌ ÄÚµå¸¦ ÀÛ¼ºÇØÁİ´Ï´Ù.<br>
+ë¨¼ì €, screens íŒ¨í‚¤ì§€ì— DeckScreen.kt ì´ë¼ëŠ” íŒŒì¼ì„ ìƒì„±í•˜ê³  ë‹¤ìŒê³¼ ê°™ì´ ì½”ë“œë¥¼ ì‘ì„±í•´ì¤ë‹ˆë‹¤. <br>
 
 ```kotlin
 package com.gdsc.cheggprepreview.screens
@@ -438,10 +436,10 @@ fun DeckScreen(navController: NavController, title: String, cardsNum: Int) {
                 }
             },
             actions = {
-                IconButton(onClick = { /* °øÀ¯ÇÏ±â ¹öÆ° Å¬¸¯ÇßÀ» ¶§ */ }) {
+                IconButton(onClick = { /* ê³µìœ í•˜ê¸° ë²„íŠ¼ í´ë¦­í–ˆì„ ë•Œ */ }) {
                     Icon(imageVector = Icons.Default.Share, contentDescription = "share")
                 }
-                IconButton(onClick = { /* ´õº¸±â ¹öÆ° Å¬¸¯ÇßÀ» ¶§ */}) {
+                IconButton(onClick = { /* ë”ë³´ê¸° ë²„íŠ¼ í´ë¦­í–ˆì„ ë•Œ */}) {
                     Icon(imageVector = Icons.Default.MoreVert, contentDescription = "more")
                 }
             }
@@ -458,7 +456,7 @@ fun DeckScreen(navController: NavController, title: String, cardsNum: Int) {
             ) {
                 Row(modifier = Modifier
                     .clip(shape = CircleShape)
-                    .clickable { /* Ä«µå ¿¬½ÀÇÏ±â ÅØ½ºÆ® Å¬¸¯ÇßÀ» ¶§ */ }
+                    .clickable { /* ì¹´ë“œ ì—°ìŠµí•˜ê¸° í…ìŠ¤íŠ¸ í´ë¦­í–ˆì„ ë•Œ */ }
                     .background(color = DeepOrange)
                     .padding(horizontal = 24.dp, vertical = 8.dp)
                 ) {
@@ -489,8 +487,7 @@ fun DeckScreen(navController: NavController, title: String, cardsNum: Int) {
 
 <br>
 
-
-    1. DeckScreen¿¡¼­´Â BottomNavigationBar¸¦ º¸¿©ÁÖÁö ¾ÊÀ» °ÍÀÌ±â ¶§¹®¿¡ MainActivitiy¿¡¼­ showBottomBar()¸¦ false·Î ¼³Á¤ÇØÁİ´Ï´Ù.
+ 1. DeckScreenì—ì„œëŠ” BottomNavigationBarë¥¼ ë³´ì—¬ì£¼ì§€ ì•Šì„ ê²ƒì´ê¸° ë•Œë¬¸ì— MainActivitiyì—ì„œ showBottomBar()ë¥¼ falseë¡œ ì„¤ì •í•´ì¤ë‹ˆë‹¤.
 
 ```kotlin
 composable(Screen.Deck.route + "/{deckTitle}/{cardsNum}") { backStackEntry ->
@@ -509,8 +506,7 @@ composable(Screen.Deck.route + "/{deckTitle}/{cardsNum}") { backStackEntry ->
 
 <br>
 
-    2. Scaffold¸¦ È°¿ëÇØ topBar¸¦ ±¸ÇöÇØº¾½Ã´Ù. TopAppBar composable¿¡ Å©°Ô navigationIcon, title, actions ÀÌ ¼¼°¡Áö¸¦ ¼³Á¤ÇØÁİ´Ï´Ù. µÚ·Î°¡±â È­»ìÇ¥¸¦ ´©¸£¸é navController.popBackStack() ÀÌ ¸Ş¼Òµå¸¦ ÅëÇØ ÀÌÀü È­¸éÀ¸·Î µ¹¾Æ°¡°Ô ÇÏ°í, °øÀ¯ÇÏ±â¿Í ´õº¸±â ¾ÆÀÌÄÜ ¹öÆ°µµ Ãß°¡ÇØÁİ´Ï´Ù. (µÚ·Î°¡±â navigationIconÀº CreateScreenÀÇ Close ¾ÆÀÌÄÜ¿¡µµ ¶È°°ÀÌ Àû¿ëÇØÁİ´Ï´Ù.) <br> titleÀº ÇöÀç deck¿¡ ÇØ´çÇÏ´Â Å¸ÀÌÆ²À» º¸¿©Áà¾ß ÇÏ±â ¶§¹®¿¡ back stack¿¡¼­ ÀÎÀÚ¸¦ ²¨³»¿Í¼­ º¸¿©Áİ´Ï´Ù.
-
+ 2. Scaffoldë¥¼ í™œìš©í•´ topBarë¥¼ êµ¬í˜„í•´ë´…ì‹œë‹¤. TopAppBar composableì— í¬ê²Œ navigationIcon, title, actions ì´ ì„¸ê°€ì§€ë¥¼ ì„¤ì •í•´ì¤ë‹ˆë‹¤. ë’¤ë¡œê°€ê¸° í™”ì‚´í‘œë¥¼ ëˆ„ë¥´ë©´ navController.popBackStack() ì´ ë©”ì†Œë“œë¥¼ í†µí•´ ì´ì „ í™”ë©´ìœ¼ë¡œ ëŒì•„ê°€ê²Œ í•˜ê³ , ê³µìœ í•˜ê¸°ì™€ ë”ë³´ê¸° ì•„ì´ì½˜ ë²„íŠ¼ë„ ì¶”ê°€í•´ì¤ë‹ˆë‹¤. (ë’¤ë¡œê°€ê¸° navigationIconì€ CreateScreenì˜ Close ì•„ì´ì½˜ì—ë„ ë˜‘ê°™ì´ ì ìš©í•´ì¤ë‹ˆë‹¤.) <br> titleì€ í˜„ì¬ deckì— í•´ë‹¹í•˜ëŠ” íƒ€ì´í‹€ì„ ë³´ì—¬ì¤˜ì•¼ í•˜ê¸° ë•Œë¬¸ì— back stackì—ì„œ ì¸ìë¥¼ êº¼ë‚´ì™€ì„œ ë³´ì—¬ì¤ë‹ˆë‹¤.
 
 ```kotlin
 Scaffold(topBar = {
@@ -527,10 +523,10 @@ Scaffold(topBar = {
                 }
             },
             actions = {
-                IconButton(onClick = { /* °øÀ¯ÇÏ±â ¹öÆ° Å¬¸¯ÇßÀ» ¶§ */ }) {
+                IconButton(onClick = { /* ê³µìœ í•˜ê¸° ë²„íŠ¼ í´ë¦­í–ˆì„ ë•Œ */ }) {
                     Icon(imageVector = Icons.Default.Share, contentDescription = "share")
                 }
-                IconButton(onClick = { /* ´õº¸±â ¹öÆ° Å¬¸¯ÇßÀ» ¶§ */}) {
+                IconButton(onClick = { /* ë”ë³´ê¸° ë²„íŠ¼ í´ë¦­í–ˆì„ ë•Œ */}) {
                     Icon(imageVector = Icons.Default.MoreVert, contentDescription = "more")
                 }
             }
@@ -540,7 +536,7 @@ Scaffold(topBar = {
 
 <br>
 
-    3. ÀÌÁ¦ bottomBar ºÎºĞÀ» »ìÆìº¾½Ã´Ù! ÀÏ´Ü, "Practice all cards" ¶ó´Â ÅØ½ºÆ®¸¦ Á¦ÀÏ ¾Æ·¡¿¡ º¸¿©ÁÖ°í, À§ÀÇ Column¿¡´Â repeatÀ» »ç¿ëÇØ¼­ ÀÎÀÚ·Î Àü´Ş ¹ŞÀº cardsNum °³¼ö¸¸Å­ CardItemÀ» º¸¿©Áİ´Ï´Ù!
+ 3. ì´ì œ bottomBar ë¶€ë¶„ì„ ì‚´í´ë´…ì‹œë‹¤! ì¼ë‹¨, "Practice all cards" ë¼ëŠ” í…ìŠ¤íŠ¸ë¥¼ ì œì¼ ì•„ë˜ì— ë³´ì—¬ì£¼ê³ , ìœ„ì˜ Columnì—ëŠ” repeatì„ ì‚¬ìš©í•´ì„œ ì¸ìë¡œ ì „ë‹¬ ë°›ì€ cardsNum ê°œìˆ˜ë§Œí¼ CardItemì„ ë³´ì—¬ì¤ë‹ˆë‹¤!
 
 ```kotlin
 ... }, bottomBar = {
@@ -555,7 +551,7 @@ Scaffold(topBar = {
             ) {
                 Row(modifier = Modifier
                     .clip(shape = CircleShape)
-                    .clickable { /* Ä«µå ¿¬½ÀÇÏ±â ÅØ½ºÆ® Å¬¸¯ÇßÀ» ¶§ */ }
+                    .clickable { /* ì¹´ë“œ ì—°ìŠµí•˜ê¸° í…ìŠ¤íŠ¸ í´ë¦­í–ˆì„ ë•Œ */ }
                     .background(color = DeepOrange)
                     .padding(horizontal = 24.dp, vertical = 8.dp)
                 ) {
@@ -586,12 +582,12 @@ Scaffold(topBar = {
 
 <br>
 
-    4. CardItemÀº Àú¹ø¿¡ ÀÛ¼ºÇß´ø text ºÎºĞÀ» card.front, card.backÀ¸·Î ¼öÁ¤ÇØÁà¾ß ÇÕ´Ï´Ù!
+ 4. CardItemì€ ì €ë²ˆì— ì‘ì„±í–ˆë˜ text ë¶€ë¶„ì„ **card.front, card.backìœ¼ë¡œ ìˆ˜ì •**í•´ì¤˜ì•¼ í•©ë‹ˆë‹¤!
 
 ```kotlin
 package com.gdsc.cheggprepreview.models
 
-// ¾Õ¸é°ú µŞ¸éÀÇ ÅØ½ºÆ®°¡ Ä«µå¸¦ ±¸¼ºÇÑ´Ù.
+// ì•ë©´ê³¼ ë’·ë©´ì˜ í…ìŠ¤íŠ¸ê°€ ì¹´ë“œë¥¼ êµ¬ì„±í•œë‹¤.
 data class Card(val front: String, val back: String)
 ```
 
@@ -608,7 +604,7 @@ fun CardItem(card: Card) {
             modifier = Modifier.padding(16.dp),
             fontWeight = FontWeight.ExtraBold
         )
-        // ±¸ºĞ¼± ¸¸µé±â
+        // êµ¬ë¶„ì„  ë§Œë“¤ê¸°
         Divider(
             modifier = Modifier
                 .fillMaxWidth()
@@ -636,25 +632,25 @@ fun CardItem(card: Card) {
 </div><div style="clear:both"></div>
 <br>
 
-title°ú cardsNum ÀÌ µÎ°¡Áö´Â À§ÀÇ »çÁøÃ³·³ deck Á¾·ù¿¡ µû¶ó ´Ş¶óÁ®¾ß ÇÏ±â ¶§¹®¿¡, ·ÎÁ÷ÀÌ Á» º¹ÀâÇÕ´Ï´Ù.
+titleê³¼ cardsNum ì´ ë‘ê°€ì§€ëŠ” ìœ„ì˜ ì‚¬ì§„ì²˜ëŸ¼ deck ì¢…ë¥˜ì— ë”°ë¼ ë‹¬ë¼ì ¸ì•¼ í•˜ê¸° ë•Œë¬¸ì—, ë¡œì§ì´ ì¢€ ë³µì¡í•©ë‹ˆë‹¤.
 
 <br>
 
-    1. HomeScreen¿¡¼­ DeckItemÀ» Å¬¸¯ÇÒ ¶§, Screen.Deck.route¿¡ deckTitle, cardsNum ÀÎÀÚ¸¦ Ãß°¡ÇÑ´Ù.
+ 1. HomeScreenì—ì„œ DeckItemì„ í´ë¦­í•  ë•Œ, Screen.Deck.routeì— deckTitle, cardsNum ì¸ìë¥¼ ì¶”ê°€í•œë‹¤.
 
 ```kotlin
 @Composable
 public fun DeckItem(
     deck: Deck,
     modifier: Modifier,
-    onClick: () ¡æ Unit
+    onClick: () â†’ Unit
 ): Unit
 ```
 
 ```kotlin
 LazyColumn(modifier = Modifier.padding(16.dp)) {
     when(selectedFilterIndex){
-        0-> // SampleDataSetÀÇ ¸ğµç ¸®½ºÆ® º¸¿©ÁÖ±â
+        0-> // SampleDataSetì˜ ëª¨ë“  ë¦¬ìŠ¤íŠ¸ ë³´ì—¬ì£¼ê¸°
             SampleDataSet.deckSample.forEach{
                 item{
                     DeckItem(deck = it, modifier = Modifier.padding(bottom = 8.dp))
@@ -665,13 +661,13 @@ LazyColumn(modifier = Modifier.padding(16.dp)) {
                     }
                 }
             }
-				... (»ı·«)
+				... (ìƒëµ)
 }
 ```
 
 <br>
 
-    2. MainActivity¿¡¼­ Á¤ÀÇÇÑ ´ÙÀ½ composableÀº backStackEntry¿¡ ÀÖ´Â deckTitle, cardsNumÀÇ °ªÀ» ¾ò¾î¼­, DeckScreen composable¿¡ Àü´ŞÇÑ´Ù.
+ 2. MainActivityì—ì„œ ì •ì˜í•œ ë‹¤ìŒ composableì€ backStackEntryì— ìˆëŠ” deckTitle, cardsNumì˜ ê°’ì„ ì–»ì–´ì„œ, DeckScreen composableì— ì „ë‹¬í•œë‹¤.
 
 ```kotlin
 composable(Screen.Deck.route + "/{deckTitle}/{cardsNum}") { backStackEntry ->
@@ -690,7 +686,7 @@ composable(Screen.Deck.route + "/{deckTitle}/{cardsNum}") { backStackEntry ->
 
 <br>
 
-    3. DeckScreenÀº ÀÎÀÚ·Î ¹ŞÀº deckTitle, cardsNumÀ» »ç¿ëÇÑ´Ù.
+ 3. DeckScreenì€ ì¸ìë¡œ ë°›ì€ deckTitle, cardsNumì„ ì‚¬ìš©í•œë‹¤.
 
 ```kotlin
 @Composable
@@ -699,25 +695,23 @@ fun DeckScreen(navController: NavController, title: String, cardsNum: Int)
 
 <br>
 
-¼¼¼Ç ½Ã°£¿¡ ÄÚµå¸¦ µû¶óÄ¡±â¸¸ ÇÒ ¶§´Â ÀÌ·¸°Ô º¹ÀâÇÑ ·ÎÁ÷ÀÎ ÁÙ ¸ô¶ú´Âµ¥, Ctrl + B·Î °è¼ÓÇØ¼­ ±Ù¿øÁö¸¦ Ã£¾Æ°¡º¸´Ï ÀÌ·¸°Ô³ª ¿©·¯ ÆÄÀÏµéÀÌ ¾ôÇôÀÖ´Â »ó´çÈ÷ º¹ÀâÇÑ ·ÎÁ÷ÀÌ¾ú½À´Ï´Ù. <br>
+ì„¸ì…˜ ì‹œê°„ì— ì½”ë“œë¥¼ ë”°ë¼ì¹˜ê¸°ë§Œ í•  ë•ŒëŠ” ì´ë ‡ê²Œ ë³µì¡í•œ ë¡œì§ì¸ ì¤„ ëª°ëëŠ”ë°, Ctrl + Bë¡œ ê³„ì†í•´ì„œ ê·¼ì›ì§€ë¥¼ ì°¾ì•„ê°€ë³´ë‹ˆ ì´ë ‡ê²Œë‚˜ ì—¬ëŸ¬ íŒŒì¼ë“¤ì´ ì–½í˜€ìˆëŠ” ìƒë‹¹íˆ ë³µì¡í•œ ë¡œì§ì´ì—ˆìŠµë‹ˆë‹¤. <br>
 
-¿©±â¼­ ±â¾ïÇÒ °ÍÀº, 
-
-- **destination - navigationÀÇ ¸ñÀûÁö, ÀÌµ¿ÇÒ ¸ğµç È­¸é**
-- **route¸¦ ÅëÇØ navigate (´Ù¸¥ ¸ñÀûÁö È­¸éÀ¸·Î ÀÌµ¿)**
-- **BackStackEntry - navigationÀ» À§ÇØ »ç¿ëÇÏ´Â ½ºÅÃ**
-
-¹Ù·Î ÀÌ ³»¿ëÀÔ´Ï´Ù. Ã³À½¿¡´Â ÀÌ°Ô ¹«½¼ ¼Ò¸®ÀÎÁö Àß ¿Í´êÁö ¾Ê¾Ò´Âµ¥, CheggPrep¿¡¼­ Á÷Á¢ »ç¿ëÀ» ÇØº¸´Ï ÀÌÁ¦ Á¶±İ °¨ÀÌ ÀâÈ÷´Â ´À³¦ÀÔ´Ï´Ù!
-
-¸¶Áö¸·À¸·Î ´Ù½Ã Á¤¸®ÇÏÀÚ¸é,
-- destination¿¡ argument¸¦ Àü´ŞÇÏ´Â ¹æ¹ıÀº route¿¡ ÇØ´ç ÀÎÀÚ¸¦ Ãß°¡ÇÏ´Â °ÍÀÔ´Ï´Ù.
-- ÀÌ ÀÎÀÚ´Â backstackEntryÀÇ arguments¿¡ Bundle ÇüÅÂ·Î ÀúÀåµÇ±â ¶§¹®¿¡, ÀÌ¸¦ ´Ù½Ã ²¨³»·Á¸é getString µîÀÇ ÇÔ¼ö¸¦ ÅëÇØ Å°¿¡ ÇØ´çÇÏ´Â °ªÀ» ¾òÀ¸¸é µË´Ï´Ù.
-
+ì—¬ê¸°ì„œ ê¸°ì–µí•  ê²ƒì€, 
+- **destination - navigationì˜ ëª©ì ì§€, ì´ë™í•  ëª¨ë“  í™”ë©´**
+- **routeë¥¼ í†µí•´ navigate (ë‹¤ë¥¸ ëª©ì ì§€ í™”ë©´ìœ¼ë¡œ ì´ë™)**
+- **BackStackEntry - navigationì„ ìœ„í•´ ì‚¬ìš©í•˜ëŠ” ìŠ¤íƒ**
+ë°”ë¡œ ì´ ë‚´ìš©ì…ë‹ˆë‹¤. ì²˜ìŒì—ëŠ” ì´ê²Œ ë¬´ìŠ¨ ì†Œë¦¬ì¸ì§€ ì˜ ì™€ë‹¿ì§€ ì•Šì•˜ëŠ”ë°, CheggPrepì—ì„œ ì§ì ‘ ì‚¬ìš©ì„ í•´ë³´ë‹ˆ ì´ì œ ì¡°ê¸ˆ ê°ì´ ì¡íˆëŠ” ëŠë‚Œì…ë‹ˆë‹¤!
 <br>
 
-cf) °³ÀÎÀûÀ¸·Î Çò°¥·È´ø ºÎºĞ
+ë§ˆì§€ë§‰ìœ¼ë¡œ ë‹¤ì‹œ ì •ë¦¬í•˜ìë©´,
+1. destinationì— argumentë¥¼ ì „ë‹¬í•˜ëŠ” ë°©ë²•ì€ routeì— í•´ë‹¹ ì¸ìë¥¼ ì¶”ê°€í•˜ëŠ” ê²ƒì…ë‹ˆë‹¤.
+2. ì´ ì¸ìëŠ” backstackEntryì˜ argumentsì— Bundle í˜•íƒœë¡œ ì €ì¥ë˜ê¸° ë•Œë¬¸ì—, ì´ë¥¼ ë‹¤ì‹œ êº¼ë‚´ë ¤ë©´ getString ë“±ì˜ í•¨ìˆ˜ë¥¼ í†µí•´ í‚¤ì— í•´ë‹¹í•˜ëŠ” ê°’ì„ ì–»ìœ¼ë©´ ë©ë‹ˆë‹¤.
+<br>
 
-- Screen.Deck.routeÀÇ DeckÀº sealed class Screen¿¡¼­ Á¤ÀÇÇÑ È­¸é Áß ÇÏ³ªÀÌ°í,
+cf) ê°œì¸ì ìœ¼ë¡œ í—·ê°ˆë ¸ë˜ ë¶€ë¶„<br>
+
+ 1. Screen.Deck.routeì˜ Deckì€ **sealed class Screenì—ì„œ ì •ì˜í•œ í™”ë©´ ì¤‘ í•˜ë‚˜**ì´ê³ ,
 
 ```kotlin
 sealed class Screen(val route: String){
@@ -730,7 +724,7 @@ sealed class Screen(val route: String){
 ```
 <br>
 
-- DeckItemÀÇ DeckÀº models ÆĞÅ°Áö¿¡ ÀÖ´Â µ¥ÀÌÅÍ Å¬·¡½ºÀÌ´Ù.
+ 2. DeckItemì˜ Deckì€ **models íŒ¨í‚¤ì§€ì— ìˆëŠ” ë°ì´í„° í´ë˜ìŠ¤**ì´ë‹¤.
 
 ```kotlin
 package com.gdsc.cheggprepreview.models
@@ -740,22 +734,21 @@ data class Deck(
     val deckTitle: String,
     val shared: Boolean,
     val bookmarked: Boolean,
-    val cardList: List<Card> // deck¿¡ Æ÷ÇÔµÈ CardÀÇ ¸®½ºÆ®
+    val cardList: List<Card> // deckì— í¬í•¨ëœ Cardì˜ ë¦¬ìŠ¤íŠ¸
 )
 
-// deckType ±¸ºĞ
+// deckType êµ¬ë¶„
 const val DECK_CREATED = 0
 const val DECK_ADDED = 1
 ```
 
-<br>
 <hr>
 <br>
 
-# ¸¶¹«¸®
+# ë§ˆë¬´ë¦¬
 
-¿Í¿ì µåµğ¾î ³¡³µ³×¿ä! &#128079;&#128079;&#128079; ¼¼¼Ç ½Ã°£¿¡´Â ³×ºñ°ÔÀÌ¼ÇÀÌ¶ó´Â °³³äµµ ³¸¼³¾ú°í, ÄÚµåµµ ¾Æ¹« »ı°¢¾øÀÌ µû¶óÄ¡±â¸¸ Çß´ø °Å °°Àºµ¥, ÀÌ·¸°Ô º¹½ÀÀ» ÇÏ°í ³ª´Ï Á¦°¡ ÀÛ¼ºÇÑ ÄÚµå°¡ ¾î¶² ¿ø¸®·Î µ¿ÀÛÇÏ´ÂÁö ÀÌÁ¦ Á» ÀÌÇØ°¡ µË´Ï´Ù!<br>
-È¤½Ã Á¦°¡ ¼³¸íÇÑ ³»¿ë Áß¿¡ Àß¸øµÈ ºÎºĞÀÌ ÀÖ´Ù¸é ²À ´ñ±Û ³²°ÜÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù! ½ÃÇè±â°£ ³¡³ª°í ´Ù½Ã °øºÎÇØº¼°Ô¿ä! Áß°£°í»ç°¡ 2ÁÖµµ ¾È ³²¾Ò´Ù´Â °Ô Ãæ°İÀûÀÌÁö¸¸, ±×·¡µµ 4ÁÖÂ÷ ¼¼¼Ç ³»¿ë ÀØ¾î¹ö¸®±â Àü¿¡ º¹½ÀÇØµÖ¼­ ´ÙÇàÀÔ´Ï´Ù! ´Ùµé ½ÃÇè±â°£ ÆÄÀÌÆÃÇÏ½Ã°í 2ÁÖ µÚ¿¡ ¸¸³ª¿ä~ &#128075;&#128075;
+ì™€ìš° ë“œë””ì–´ ëë‚¬ë„¤ìš”! &#128079;&#128079;&#128079; ì„¸ì…˜ ì‹œê°„ì—ëŠ” ë„¤ë¹„ê²Œì´ì…˜ì´ë¼ëŠ” ê°œë…ë„ ë‚¯ì„¤ì—ˆê³ , ì½”ë“œë„ ì•„ë¬´ ìƒê°ì—†ì´ ë”°ë¼ì¹˜ê¸°ë§Œ í–ˆë˜ ê±° ê°™ì€ë°, ì´ë ‡ê²Œ ë³µìŠµì„ í•˜ê³  ë‚˜ë‹ˆ ì œê°€ ì‘ì„±í•œ ì½”ë“œê°€ ì–´ë–¤ ì›ë¦¬ë¡œ ë™ì‘í•˜ëŠ”ì§€ ì´ì œ ì¢€ ì´í•´ê°€ ë©ë‹ˆë‹¤!<br>
+í˜¹ì‹œ ì œê°€ ì„¤ëª…í•œ ë‚´ìš© ì¤‘ì— ì˜ëª»ëœ ë¶€ë¶„ì´ ìˆë‹¤ë©´ ê¼­ ëŒ“ê¸€ ë‚¨ê²¨ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤! ì¤‘ê°„ê³ ì‚¬ê°€ 2ì£¼ë„ ì•ˆ ë‚¨ì•˜ë‹¤ëŠ” ê²Œ ì¶©ê²©ì ì´ì§€ë§Œ, ê·¸ë˜ë„ 4ì£¼ì°¨ ì„¸ì…˜ ë‚´ìš© ìŠì–´ë²„ë¦¬ê¸° ì „ì— ë³µìŠµí•´ë‘¬ì„œ ë‹¤í–‰ì…ë‹ˆë‹¤! ë‹¤ë“¤ ì‹œí—˜ê¸°ê°„ íŒŒì´íŒ…í•˜ì‹œê³  2ì£¼ ë’¤ì— ë§Œë‚˜ìš”~ &#128075;&#128075;
 
 
 

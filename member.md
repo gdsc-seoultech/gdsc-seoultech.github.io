@@ -142,6 +142,8 @@ title: MEMBER
                         <span class="member-icon"><a class="link-dark"
                                 href="https://github.com/{{ member | map: 'github' }}" target="_blank"><i
                                     class="fa fa-github fa-2x"></i></a></span>
+                        <a rel="author" href="{{ member | map: 'blog' }}" target="_blank"><img
+                                src="/img/blog_icon/{{ member | map: 'blog_platform' }}.jpg" width="26px"></a>
                     </div>
                 </div>
             </div>
@@ -309,7 +311,7 @@ title: MEMBER
                 </div>
             </div>
             <div class="member-card">
-                {% assign member = site.data.members | map: "yongsu" %}
+                {% assign member = site.data.members | map: "Yangyongsu" %}
                 <div class="folder" id="yongsu">
                 </div>
                 <span class="member-name">{{ member | map: "name" }}</span>
