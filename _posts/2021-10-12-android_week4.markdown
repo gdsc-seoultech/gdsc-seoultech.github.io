@@ -15,19 +15,20 @@ categories: ["android"]
 
 저희는 1주차에 Jetpack Compose의 기초 UI를 실습하고, 2주차에 state의 개념 이해를 바탕으로 CheggPrep 앱의 여러 기능을 구현해봤습니다. 그리고 저번 3주차에는 다음 4가지 화면을 만들었습니다.<br>
 
+
 1. 카테고리별로 플래시카드 목록을 보여주는 HomeScreen
 2. 플래시카드 검색을 위한 SearchScreen
 3. 새로운 플래시카드 생성을 위한 CreateScreen
-4. 추가 정보를 보여주는 MoreScreen<br>
+4. 추가 정보를 보여주는 MoreScreen
+
+<br>
 
 이번 4주차에 진행한 내용은 크게 3가지입니다.
 1. ProgressBar를 이용해 현재 카드가 몇번째 카드인지 보여주기
 2. 여러 화면들 간의 전환을 가능하게 해주는 Navigation의 개념 이해 및 적용
 3. 플래시카드의 내용을 보여주는 DeckScreen 추가하기
 
-<br>
 <hr>
-<br>
 
 # 1. ProgressBar
 
@@ -143,16 +144,15 @@ val curPercentage by animateFloatAsState(
     animationSpec = tween(
         durationMillis = animDuration,
         delayMillis = animDelay,
-        easing = LinearOutSlowInEasing // 아래 부연 설명 참고
+        easing = LinearOutSlowInEasing
     )
 )
 ```
 
-[참고 링크](https://medium.com/@Kjoon/%EC%9D%B8%ED%84%B0%EB%9E%99%EC%85%98-%EB%94%94%EC%9E%90%EC%9D%B8-%EC%9D%B4%EC%95%BC%EA%B8%B0-2-easing-functions-cf0f6cb213a2)<br>
+[참고 링크](https://medium.com/@Kjoon/%EC%9D%B8%ED%84%B0%EB%9E%99%EC%85%98-%EB%94%94%EC%9E%90%EC%9D%B8-%EC%9D%B4%EC%95%BC%EA%B8%B0-2-easing-functions-cf0f6cb213a2)
 
 easing curve가 무엇인지 몰라서 잠깐 검색해봤습니다. 애니메이션에서 시작과 끝의 움직임을 보간해주는 것이라고 이해하면 될 거 같습니다.<br>
 
-<br>
 <hr>
 <br>
 
@@ -162,11 +162,8 @@ easing curve가 무엇인지 몰라서 잠깐 검색해봤습니다. 애니메�
 
 [https://developer.android.com/guide/navigation](https://developer.android.com/guide/navigation)
 
-Navigation은 사용자가 앱 내의 다양한 콘텐츠를 탐색하고, 들어가고, 뒤로 이동할 때 사용되는 개념입니다. 즉, 여러 화면 간의 전환을 가능하게 해주는 것이라고 생각하면 됩니다.
+Navigation은 사용자가 앱 내의 다양한 콘텐츠를 탐색하고, 들어가고, 뒤로 이동할 때 사용되는 개념입니다. 즉, 여러 화면 간의 전환을 가능하게 해주는 것이라고 생각하면 됩니다. Navigation에는 크게 3가지 구성 요소가 있습니다.
 
-<br>
-
-Navigation에는 크게 3가지 구성 요소가 있습니다.
 <br>
 
 **1. Navigation graph**
@@ -181,32 +178,27 @@ navigation과 관련된 모든 정보가 포함되어 있는 XML 리소스입니
 
 **네비게이션 그래프의 목적지를 담는 컨테이너입니다. 즉, 앱 내에서 이동할 모든 화면들이 이 컨테이너에 스택 구조로 쌓이게 됩니다.** 네비게이션 구성요소에는 NavHost의 기본 구현으로서, NavHostFragment가 포함되어 있습니다. 따라서 NavHost는 **fragment들이 들어가게 될 자리**라고 볼 수 있습니다. (fragment는 부분, 파편이라는 뜻이죠? 말그대로 프래그먼트는 액티비티를 본떠서 만든 "부분 화면"으로서, UI를 여러 개의 모듈 단위로 작성할 수 있게 해줍니다.) <br>
 
-<img src="https://user-images.githubusercontent.com/68090939/137103507-a83cafc4-bb12-4564-9eca-7663844dd019.png" width="450px"/>
+→ 정정: 지금 저희는 composable로 화면을 만들고 있으며, 그래프에 composable단위로 destination들을 정의하고 있기 때문에 NavHost는 composable이 들어가는 자리라고 표현하는 게 더 정확합니다! <br>
 
-<br>
+<img src="https://user-images.githubusercontent.com/68090939/137103507-a83cafc4-bb12-4564-9eca-7663844dd019.png" width="450px"/><br>
+
 <br>
 
 **3. NavController**
 
 **NavHost내에서 네비게이션을 관리하는 객체입니다. NavController는 사용자가 앱 전체를 이동할 때, NavHost 자리에 프래그먼트들을 들여보내거나 내보내면서, 여러 화면 간의 전환이 이루어질 수 있게 해줍니다.** 
-앱을 탐색할 때 네비게이션 그래프의 특정 경로를 따라 탐색하거나, 특정 대상으로 직접 탐색하고 싶다고 NavController에게 알리면, NavController는 해당 destination을 NavHost에 지정하게 됩니다.
-
-<br>
+앱을 탐색할 때 네비게이션 그래프의 특정 경로를 따라 탐색하거나, 특정 대상으로 직접 탐색하고 싶다고 NavController에게 알리면, NavController는 해당 destination을 NavHost에 지정하게 됩니다. <br>
 
 - destination - navigation의 목적지, 이동할 모든 화면
 - route를 통해 navigate (다른 목적지 화면으로 이동)
 - BackStackEntry - navigation을 위해 사용하는 스택
 
-<br>
 <hr>
 <br>
 
 ## Navigation의 적용
 
-<br>
-
-예원님이 블로그에 상세히 설명을 잘 해두셨기 때문에, 나머지 포스트를 읽기 전에 이 두 개의 링크에서 꼭 기본 예제를 먼저 공부하고 오시길 권장합니다!<br>
-
+예원님이 블로그에 상세히 설명을 잘 해두셨기 때문에, 나머지 포스트를 읽기 전에 이 두 개의 링크에서 꼭 기본 예제를 먼저 공부하고 오시길 권장합니다! <br>
 [https://blog.naver.com/comye1/222457844226](https://blog.naver.com/comye1/222457844226)<br>
 [https://blog.naver.com/comye1/222482497797](https://blog.naver.com/comye1/222482497797)
 
@@ -276,7 +268,6 @@ public fun NavHost(
 예를 들어, **popUpTo() 함수**는 새로운 destination으로 네비게이션 하기 전에 back stack으로부터 기존 destination의 모든 내용을 꺼냅니다. (stack에서 삽입은 push, 삭제는 pop)<br>
 **lauchSingleTop = true**는 동일한 destination에 대한 복사본이 스택의 top에 쌓이는 것을 방지합니다. 따라서, 기존에 스택 top에 존재하지 않았던 destination만 네비게이션 할 수 있게 합니다.<br>
 
-<br>
 <hr>
 <br>
 
@@ -307,11 +298,7 @@ public fun NavHost(
 
 <img src="https://user-images.githubusercontent.com/68090939/137106417-a214eca9-dd36-4637-a145-d29622146c63.png" width="350px">
 
-<br>
-
-일단, 위 사진과 같이 navigation 패키지와 navigation.kt 파일을 생성해서 다음과 같이 코드를 작성해줍니다.
-
-<br>
+일단, 위 사진과 같이 navigation 패키지와 navigation.kt 파일을 생성해서 다음과 같이 코드를 작성해줍니다. <br>
 
 ```kotlin
 package com.gdsc.cheggprepreview.navigation
@@ -411,8 +398,6 @@ fun BottomNavigationBar(navController: NavController) {
 			}
 	}
 ```
-
-<br>
 <hr>
 <br>
 
@@ -422,18 +407,13 @@ fun BottomNavigationBar(navController: NavController) {
 
 <img src="https://user-images.githubusercontent.com/68090939/137108405-1985e6ee-ab72-4870-babf-f6eb60782b2a.png" width="400px">
 
-
 DeckScreen은 각 DeckItem을 클릭했을 때 나타나는 화면입니다.
 
 <br>
 
-
 <img src="https://user-images.githubusercontent.com/68090939/137108636-e4e29d57-6c76-46ca-ae89-d8505a2bc750.png" width="350px">
 
-
-먼저, screens 패키지에 DeckScreen.kt 이라는 파일을 생성하고 다음과 같이 코드를 작성해줍니다.
-
-<br>
+먼저, screens 패키지에 DeckScreen.kt 이라는 파일을 생성하고 다음과 같이 코드를 작성해줍니다. <br>
 
 ```kotlin
 package com.gdsc.cheggprepreview.screens
@@ -507,8 +487,7 @@ fun DeckScreen(navController: NavController, title: String, cardsNum: Int) {
 
 <br>
 
-
-1. DeckScreen에서는 BottomNavigationBar를 보여주지 않을 것이기 때문에 MainActivitiy에서 showBottomBar()를 false로 설정해줍니다.
+ 1. DeckScreen에서는 BottomNavigationBar를 보여주지 않을 것이기 때문에 MainActivitiy에서 showBottomBar()를 false로 설정해줍니다.
 
 ```kotlin
 composable(Screen.Deck.route + "/{deckTitle}/{cardsNum}") { backStackEntry ->
@@ -527,8 +506,7 @@ composable(Screen.Deck.route + "/{deckTitle}/{cardsNum}") { backStackEntry ->
 
 <br>
 
-2. Scaffold를 활용해 topBar를 구현해봅시다. TopAppBar composable에 크게 navigationIcon, title, actions 이 세가지를 설정해줍니다. 뒤로가기 화살표를 누르면 navController.popBackStack() 이 메소드를 통해 이전 화면으로 돌아가게 하고, 공유하기와 더보기 아이콘 버튼도 추가해줍니다. (뒤로가기 navigationIcon은 CreateScreen의 Close 아이콘에도 똑같이 적용해줍니다.) <br> title은 현재 deck에 해당하는 타이틀을 보여줘야 하기 때문에 back stack에서 인자를 꺼내와서 보여줍니다.
-
+ 2. Scaffold를 활용해 topBar를 구현해봅시다. TopAppBar composable에 크게 navigationIcon, title, actions 이 세가지를 설정해줍니다. 뒤로가기 화살표를 누르면 navController.popBackStack() 이 메소드를 통해 이전 화면으로 돌아가게 하고, 공유하기와 더보기 아이콘 버튼도 추가해줍니다. (뒤로가기 navigationIcon은 CreateScreen의 Close 아이콘에도 똑같이 적용해줍니다.) <br> title은 현재 deck에 해당하는 타이틀을 보여줘야 하기 때문에 back stack에서 인자를 꺼내와서 보여줍니다.
 
 ```kotlin
 Scaffold(topBar = {
@@ -558,7 +536,7 @@ Scaffold(topBar = {
 
 <br>
 
-3. 이제 bottomBar 부분을 살펴봅시다! 일단, "Practice all cards" 라는 텍스트를 제일 아래에 보여주고, 위의 Column에는 repeat을 사용해서 인자로 전달 받은 cardsNum 개수만큼 CardItem을 보여줍니다!
+ 3. 이제 bottomBar 부분을 살펴봅시다! 일단, "Practice all cards" 라는 텍스트를 제일 아래에 보여주고, 위의 Column에는 repeat을 사용해서 인자로 전달 받은 cardsNum 개수만큼 CardItem을 보여줍니다!
 
 ```kotlin
 ... }, bottomBar = {
@@ -604,7 +582,7 @@ Scaffold(topBar = {
 
 <br>
 
-4. CardItem은 저번에 작성했던 text 부분을 **card.front, card.back으로 수정**해줘야 합니다!
+ 4. CardItem은 저번에 작성했던 text 부분을 **card.front, card.back으로 수정**해줘야 합니다!
 
 ```kotlin
 package com.gdsc.cheggprepreview.models
@@ -658,7 +636,7 @@ title과 cardsNum 이 두가지는 위의 사진처럼 deck 종류에 따라 달
 
 <br>
 
-1. HomeScreen에서 DeckItem을 클릭할 때, Screen.Deck.route에 deckTitle, cardsNum 인자를 추가한다.
+ 1. HomeScreen에서 DeckItem을 클릭할 때, Screen.Deck.route에 deckTitle, cardsNum 인자를 추가한다.
 
 ```kotlin
 @Composable
@@ -689,7 +667,7 @@ LazyColumn(modifier = Modifier.padding(16.dp)) {
 
 <br>
 
-2. MainActivity에서 정의한 다음 composable은 backStackEntry에 있는 deckTitle, cardsNum의 값을 얻어서, DeckScreen composable에 전달한다.
+ 2. MainActivity에서 정의한 다음 composable은 backStackEntry에 있는 deckTitle, cardsNum의 값을 얻어서, DeckScreen composable에 전달한다.
 
 ```kotlin
 composable(Screen.Deck.route + "/{deckTitle}/{cardsNum}") { backStackEntry ->
@@ -708,7 +686,7 @@ composable(Screen.Deck.route + "/{deckTitle}/{cardsNum}") { backStackEntry ->
 
 <br>
 
-3. DeckScreen은 인자로 받은 deckTitle, cardsNum을 사용한다.
+ 3. DeckScreen은 인자로 받은 deckTitle, cardsNum을 사용한다.
 
 ```kotlin
 @Composable
@@ -717,30 +695,23 @@ fun DeckScreen(navController: NavController, title: String, cardsNum: Int)
 
 <br>
 
-세션 시간에 코드를 따라치기만 할 때는 이렇게 복잡한 로직인 줄 몰랐는데, Ctrl + B로 계속해서 근원지를 찾아가보니 이렇게나 여러 파일들이 얽혀있는 상당히 복잡한 로직이었습니다.
-
-<br>
+세션 시간에 코드를 따라치기만 할 때는 이렇게 복잡한 로직인 줄 몰랐는데, Ctrl + B로 계속해서 근원지를 찾아가보니 이렇게나 여러 파일들이 얽혀있는 상당히 복잡한 로직이었습니다. <br>
 
 여기서 기억할 것은, 
-
 - **destination - navigation의 목적지, 이동할 모든 화면**
 - **route를 통해 navigate (다른 목적지 화면으로 이동)**
 - **BackStackEntry - navigation을 위해 사용하는 스택**
-
 바로 이 내용입니다. 처음에는 이게 무슨 소리인지 잘 와닿지 않았는데, CheggPrep에서 직접 사용을 해보니 이제 조금 감이 잡히는 느낌입니다!
-
 <br>
 
 마지막으로 다시 정리하자면,
-
 1. destination에 argument를 전달하는 방법은 route에 해당 인자를 추가하는 것입니다.
 2. 이 인자는 backstackEntry의 arguments에 Bundle 형태로 저장되기 때문에, 이를 다시 꺼내려면 getString 등의 함수를 통해 키에 해당하는 값을 얻으면 됩니다.
-
 <br>
 
 cf) 개인적으로 헷갈렸던 부분<br>
 
-1. Screen.Deck.route의 Deck은 **sealed class Screen에서 정의한 화면 중 하나**이고,
+ 1. Screen.Deck.route의 Deck은 **sealed class Screen에서 정의한 화면 중 하나**이고,
 
 ```kotlin
 sealed class Screen(val route: String){
@@ -753,7 +724,7 @@ sealed class Screen(val route: String){
 ```
 <br>
 
-2. DeckItem의 Deck은 **models 패키지에 있는 데이터 클래스**이다.
+ 2. DeckItem의 Deck은 **models 패키지에 있는 데이터 클래스**이다.
 
 ```kotlin
 package com.gdsc.cheggprepreview.models
@@ -771,14 +742,13 @@ const val DECK_CREATED = 0
 const val DECK_ADDED = 1
 ```
 
-<br>
 <hr>
 <br>
 
 # 마무리
 
 와우 드디어 끝났네요! &#128079;&#128079;&#128079; 세션 시간에는 네비게이션이라는 개념도 낯설었고, 코드도 아무 생각없이 따라치기만 했던 거 같은데, 이렇게 복습을 하고 나니 제가 작성한 코드가 어떤 원리로 동작하는지 이제 좀 이해가 됩니다!<br>
-혹시 제가 설명한 내용 중에 잘못된 부분이 있다면 꼭 댓글 남겨주시길 바랍니다! 시험기간 끝나고 다시 공부해볼게요! 중간고사가 2주도 안 남았다는 게 충격적이지만, 그래도 4주차 세션 내용 잊어버리기 전에 복습해둬서 다행입니다! 다들 시험기간 파이팅하시고 2주 뒤에 만나요~ &#128075;&#128075;
+혹시 제가 설명한 내용 중에 잘못된 부분이 있다면 꼭 댓글 남겨주시길 바랍니다! 중간고사가 2주도 안 남았다는 게 충격적이지만, 그래도 4주차 세션 내용 잊어버리기 전에 복습해둬서 다행입니다! 다들 시험기간 파이팅하시고 2주 뒤에 만나요~ &#128075;&#128075;
 
 
 
