@@ -1,38 +1,38 @@
 ---
 layout: post
-title: ¾Ë°í¸®Áò ½ºÅÍµð ½ºÅÃ 1406¹ø
+title: ì•Œê³ ë¦¬ì¦˜ ìŠ¤í„°ë”” ìŠ¤íƒ 1406ë²ˆ
 date: 2021-10-14 20:00 +0900
 author: leeeha
-description: ¹éÁØ 1406¹ø ¹®Á¦Ç®ÀÌ
+description: ë°±ì¤€ 1406ë²ˆ ë¬¸ì œí’€ì´
 categories: ["study"]
 ---
 
-¾È³çÇÏ¼¼¿ä. Àú´Â GDSC ¾Èµå·ÎÀÌµå ÆÄÆ® ¸â¹ö ÀÌÇÏÀºÀÔ´Ï´Ù! Á¦°¡ ÀÌ¹ø 4ÁÖÂ÷¿¡ ¸ÃÀº ¹®Á¦´Â 1406¹øÀÎµ¥, ¾î¶² ¹®Á¦ÀÎÁö °°ÀÌ º¸½ÃÁÒ!
+ì•ˆë…•í•˜ì„¸ìš”. ì €ëŠ” GDSC ì•ˆë“œë¡œì´ë“œ íŒŒíŠ¸ ë©¤ë²„ ì´í•˜ì€ìž…ë‹ˆë‹¤! ì œê°€ ì´ë²ˆ 4ì£¼ì°¨ì— ë§¡ì€ ë¬¸ì œëŠ” 1406ë²ˆì¸ë°, ì–´ë–¤ ë¬¸ì œì¸ì§€ ê°™ì´ ë³´ì‹œì£ !
 
 <br>
 
 [https://www.acmicpc.net/problem/1406](https://www.acmicpc.net/problem/1406)
 
-¹®Á¦¿¡¼­ Á¤ÀÇÇÑ ¿¡µðÅÍ ¸í·É¾î 4°¡Áö´Â ´ÙÀ½°ú °°½À´Ï´Ù. <br>
+ë¬¸ì œì—ì„œ ì •ì˜í•œ ì—ë””í„° ëª…ë ¹ì–´ 4ê°€ì§€ëŠ” ë‹¤ìŒê³¼ ê°™ìŠµë‹ˆë‹¤. <br>
 
-LÀº Ä¿¼­¸¦ ¿ÞÂÊÀ¸·Î ÇÑÄ­ ÀÌµ¿ <br>
-D´Â Ä¿¼­¸¦ ¿À¸¥ÂÊÀ¸·Î ÇÑÄ­ ÀÌµ¿ <br>
-B´Â Ä¿¼­ÀÇ ¿ÞÂÊ ¹®ÀÚ »èÁ¦ <br>
-P´Â Ä¿¼­ÀÇ ¿ÞÂÊ¿¡ ¹®ÀÚ Ãß°¡ <br>
+Lì€ ì»¤ì„œë¥¼ ì™¼ìª½ìœ¼ë¡œ í•œì¹¸ ì´ë™ <br>
+DëŠ” ì»¤ì„œë¥¼ ì˜¤ë¥¸ìª½ìœ¼ë¡œ í•œì¹¸ ì´ë™ <br>
+BëŠ” ì»¤ì„œì˜ ì™¼ìª½ ë¬¸ìž ì‚­ì œ <br>
+PëŠ” ì»¤ì„œì˜ ì™¼ìª½ì— ë¬¸ìž ì¶”ê°€ <br>
 
-ÀÔ·ÂÀ¸·Î ¹®ÀÚ¿­°ú ¿¡µðÅÍ ¸í·É¾î¸¦ ¹Þ°í, ±× ¸í·É¾î¸¦ ¼öÇàÇÑ °á°ú¸¦ Ãâ·ÂÇÏ¸é µË´Ï´Ù.
+ìž…ë ¥ìœ¼ë¡œ ë¬¸ìžì—´ê³¼ ì—ë””í„° ëª…ë ¹ì–´ë¥¼ ë°›ê³ , ê·¸ ëª…ë ¹ì–´ë¥¼ ìˆ˜í–‰í•œ ê²°ê³¼ë¥¼ ì¶œë ¥í•˜ë©´ ë©ë‹ˆë‹¤.
 
 <hr>
 <br>
 
-# std::list ÄÁÅ×ÀÌ³Ê »ç¿ëÇÏ±â
+# std::list ì»¨í…Œì´ë„ˆ ì‚¬ìš©í•˜ê¸°
 
-¸ÕÀú C++ STL¿¡¼­ Á¦°øÇÏ´Â list ÄÁÅ×ÀÌ³ÊÀÇ ±âº» »ç¿ë¹ýÀº ¾Æ·¡ ¸µÅ©¸¦ Âü°íÇØÁÖ¼¼¿ä. <br>
+ë¨¼ì € C++ STLì—ì„œ ì œê³µí•˜ëŠ” list ì»¨í…Œì´ë„ˆì˜ ê¸°ë³¸ ì‚¬ìš©ë²•ì€ ì•„ëž˜ ë§í¬ë¥¼ ì°¸ê³ í•´ì£¼ì„¸ìš”. <br>
 [https://blockdmask.tistory.com/76](https://blockdmask.tistory.com/76)
 
 <br>
 
-end()¿Í insert()´Â ÁÖÀÇÇÒ Á¡ÀÌ ÀÖ´Âµ¥, end´Â <u>¸¶Áö¸· ¿ø¼Ò ¹Ù·Î ´ÙÀ½ À§Ä¡</u>¸¦ °¡¸®Å°¸ç, insert´Â <u>ÁöÁ¤ÇÑ À§Ä¡ ¹Ù·Î ¾ÕºÎºÐ¿¡ ¿ø¼Ò¸¦ »ðÀÔÇÑ´Ù</u>´Â °ÍÀÔ´Ï´Ù.
+end()ì™€ insert()ëŠ” ì£¼ì˜í•  ì ì´ ìžˆëŠ”ë°, endëŠ” <u>ë§ˆì§€ë§‰ ì›ì†Œ ë°”ë¡œ ë‹¤ìŒ ìœ„ì¹˜</u>ë¥¼ ê°€ë¦¬í‚¤ë©°, insertëŠ” <u>ì§€ì •í•œ ìœ„ì¹˜ ë°”ë¡œ ì•žë¶€ë¶„ì— ì›ì†Œë¥¼ ì‚½ìž…í•œë‹¤</u>ëŠ” ê²ƒìž…ë‹ˆë‹¤.
 
 [https://www.cplusplus.com/reference/list/list/insert/](https://www.cplusplus.com/reference/list/list/insert/)
 
@@ -40,83 +40,79 @@ The container is extended by inserting new elements **before the element at the 
 
 <br>
 
-¹®Á¦¿¡ ÁÖ¾îÁø Ã¹¹øÂ° ¿¹Á¦ ÀÔ·ÂÀ¸·Î ¿¬½ÀÇØº¾½Ã´Ù! <br>
+ë¬¸ì œì— ì£¼ì–´ì§„ ì²«ë²ˆì§¸ ì˜ˆì œ ìž…ë ¥ìœ¼ë¡œ ì—°ìŠµí•´ë´…ì‹œë‹¤! <br>
 
 ![](https://images.velog.io/images/jxlhe46/post/88a994c9-e220-404b-a8d5-0c2c18292071/image.png)
 
 <br>
 
-    1. ¹®ÀÚ a,b,c,d¸¦ list¿¡ push
+    1. ë¬¸ìž a,b,c,dë¥¼ listì— push
+
 ![](https://images.velog.io/images/jxlhe46/post/a5f5e52a-8752-40ee-814f-b6843f9a148e/image.png)
 
-    2. P x (Ä¿¼­ ¿ÞÂÊ¿¡ x¸¦ insert)
+    2. P x (ì»¤ì„œ ì™¼ìª½ì— xë¥¼ insert)
+
 ![](https://images.velog.io/images/jxlhe46/post/bb6fa0e3-04b5-4565-9c6f-de5f94019013/image.png)
 
-    3. L (Ä¿¼­¸¦ ¿ÞÂÊÀ¸·Î ÇÑÄ­ ÀÌµ¿)
+    3. L (ì»¤ì„œë¥¼ ì™¼ìª½ìœ¼ë¡œ í•œì¹¸ ì´ë™)
+
 ![](https://images.velog.io/images/jxlhe46/post/61c2e695-af61-4f68-968a-3544d6d8bb61/image.png)
 
-    4. P y (Ä¿¼­ ¿ÞÂÊ¿¡ y¸¦ insert)
+    4. P y (ì»¤ì„œ ì™¼ìª½ì— yë¥¼ insert)
+
 ![](https://images.velog.io/images/jxlhe46/post/17950c61-e688-43f0-8095-0d76bceb6ba1/image.png)
 
 <br>
 
-## C++ ÄÚµå
+## C++ ì½”ë“œ
 
 ```cpp
 #include <iostream>
 #include <string>
 #include <list>
 using namespace std;
-
 int main() {
     string s;
     cin >> s;
-
-    // ¹®ÀÚ ÇÏ³ª¾¿ ¿¬°á¸®½ºÆ®¿¡ Ãß°¡
+    // ë¬¸ìž í•˜ë‚˜ì”© ì—°ê²°ë¦¬ìŠ¤íŠ¸ì— ì¶”ê°€
     list<char> l(s.begin(), s.end());
-
     //list<char>::iterator now = l.end();
     auto cur = l.end();
-    // end()´Â ¸¶Áö¸· ¿ø¼Ò ¹Ù·Î ´ÙÀ½ À§Ä¡¸¦ °¡¸®Å´.
-
+    // end()ëŠ” ë§ˆì§€ë§‰ ì›ì†Œ ë°”ë¡œ ë‹¤ìŒ ìœ„ì¹˜ë¥¼ ê°€ë¦¬í‚´.
     int n;
     cin >> n;
-
     while (n--) {
         char cmd;
         cin >> cmd;
-
-        if (cmd == 'L') { 
+        if (cmd == 'L') {
             if (cur != l.begin()) {
-                cur--; // ¿ÞÂÊ ÀÌµ¿
+                cur--; // ì™¼ìª½ ì´ë™
             }
         }
-        else if (cmd == 'D') { 
+        else if (cmd == 'D') {
             if (cur != l.end()) {
-                cur++; // ¿À¸¥ÂÊ ÀÌµ¿
+                cur++; // ì˜¤ë¥¸ìª½ ì´ë™
             }
         }
         else if (cmd == 'B') {
             if (cur != l.begin()) {
                 cur = l.erase(--cur);
-                // Ä¿¼­ÀÇ ¿ÞÂÊ ¿ø¼Ò »èÁ¦
+                // ì»¤ì„œì˜ ì™¼ìª½ ì›ì†Œ ì‚­ì œ
             }
         }
         else if (cmd == 'P') {
             char c;
             cin >> c;
-            l.insert(cur, c); 
-            // Ä¿¼­ÀÇ ¹Ù·Î ¾ÕºÎºÐ¿¡ »ðÀÔ
+            l.insert(cur, c);
+            // ì»¤ì„œì˜ ë°”ë¡œ ì•žë¶€ë¶„ì— ì‚½ìž…
         }
     }
-
     /*for (auto it = l.begin(); it != l.end(); it++) {
         cout << *it;
     }*/
-    for (auto& e : l) { // ¹üÀ§ ±â¹Ý for¹®
+    for (auto& e : l) { // ë²”ìœ„ ê¸°ë°˜ forë¬¸
         cout << e;
     }
-
     return 0;
 }
 ```
@@ -124,79 +120,79 @@ int main() {
 <hr>
 <br>
 
-# stackÀ» ÀÌ¿ëÇÑ Ç®ÀÌ
+# stackì„ ì´ìš©í•œ í’€ì´
 
 [https://intaehwang.tistory.com/32](https://intaehwang.tistory.com/32)
 
-- Ä¿¼­¸¦ ±âÁØÀ¸·Î ¿ÞÂÊ stack, ¿À¸¥ÂÊ stackÀ» ¼±¾ðÇÑ´Ù.
-- LÀÏ °æ¿ì, ¿ÞÂÊ stack topÀ» ¿À¸¥ÂÊ stackÀ¸·Î push
-- DÀÏ °æ¿ì, ¿À¸¥ÂÊ stack topÀ» ¿ÞÂÊ stackÀ¸·Î push
-- BÀÏ °æ¿ì, ¿ÞÂÊ stack topÀ» pop
-- PÀÏ °æ¿ì ¿ÞÂÊ stack¿¡ push
-- Ãâ·ÂÇÒ ¶©, ¿ÞÂÊ stack ÀüÃ¼¸¦ ¿À¸¥ÂÊÀ¸·Î push
-- ¿À¸¥ÂÊ stack ÀüÃ¼¸¦ popÇÏ¸é¼­ Ãâ·Â
+- ì»¤ì„œë¥¼ ê¸°ì¤€ìœ¼ë¡œ ì™¼ìª½ stack, ì˜¤ë¥¸ìª½ stackì„ ì„ ì–¸í•œë‹¤.
+- Lì¼ ê²½ìš°, ì™¼ìª½ stack topì„ ì˜¤ë¥¸ìª½ stackìœ¼ë¡œ push
+- Dì¼ ê²½ìš°, ì˜¤ë¥¸ìª½ stack topì„ ì™¼ìª½ stackìœ¼ë¡œ push
+- Bì¼ ê²½ìš°, ì™¼ìª½ stack topì„ pop
+- Pì¼ ê²½ìš° ì™¼ìª½ stackì— push
+- ì¶œë ¥í•  ë•, ì™¼ìª½ stack ì „ì²´ë¥¼ ì˜¤ë¥¸ìª½ìœ¼ë¡œ push
+- ì˜¤ë¥¸ìª½ stack ì „ì²´ë¥¼ popí•˜ë©´ì„œ ì¶œë ¥
 
-Ä¿¼­¸¦ ±âÁØÀ¸·Î ¿ÞÂÊ, ¿À¸¥ÂÊ ½ºÅÃÀ» µû·Î ¸¸µç´Ù´Â ¾ÆÀÌµð¾îÀÔ´Ï´Ù! Ä¿¼­´Â ¾ðÁ¦³ª µÎ ½ºÅÃÀÇ »çÀÌ¸¦ °¡¸®Å°°í ÀÖÀ¸¸ç, Ä¿¼­ÀÇ ÀÌµ¿Àº ¿ÞÂÊ, ¿À¸¥ÂÊ ½ºÅÃ ¿ø¼Òµé °£ÀÇ »ðÀÔ, »èÁ¦ ¿¬»êÀ¸·Î Ç¥ÇöÇÒ ¼ö ÀÖ½À´Ï´Ù.
+ì»¤ì„œë¥¼ ê¸°ì¤€ìœ¼ë¡œ ì™¼ìª½, ì˜¤ë¥¸ìª½ ìŠ¤íƒì„ ë”°ë¡œ ë§Œë“ ë‹¤ëŠ” ì•„ì´ë””ì–´ìž…ë‹ˆë‹¤! ì»¤ì„œëŠ” ì–¸ì œë‚˜ ë‘ ìŠ¤íƒì˜ ì‚¬ì´ë¥¼ ê°€ë¦¬í‚¤ê³  ìžˆìœ¼ë©°, ì»¤ì„œì˜ ì´ë™ì€ ì™¼ìª½, ì˜¤ë¥¸ìª½ ìŠ¤íƒ ì›ì†Œë“¤ ê°„ì˜ ì‚½ìž…, ì‚­ì œ ì—°ì‚°ìœ¼ë¡œ í‘œí˜„í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
 
 <br>
 
-¾Æ±î¿Í ¸¶Âù°¡Áö·Î, ¹®Á¦¿¡ ÁÖ¾îÁø Ã¹¹øÂ° ¿¹Á¦ ÀÔ·ÂÀ¸·Î ¿¬½ÀÇØº¾½Ã´Ù! <br>
+ì•„ê¹Œì™€ ë§ˆì°¬ê°€ì§€ë¡œ, ë¬¸ì œì— ì£¼ì–´ì§„ ì²«ë²ˆì§¸ ì˜ˆì œ ìž…ë ¥ìœ¼ë¡œ ì—°ìŠµí•´ë´…ì‹œë‹¤! <br>
 
-    1. ¹®ÀÚ¿­ abcd ÀÔ·Â (¹®ÀÚ ÇÏ³ª¾¿ ¿ÞÂÊ ½ºÅÃ¿¡ push)
+    1. ë¬¸ìžì—´ abcd ìž…ë ¥ (ë¬¸ìž í•˜ë‚˜ì”© ì™¼ìª½ ìŠ¤íƒì— push)
+
 ![](https://images.velog.io/images/jxlhe46/post/a31be367-b523-4f00-bf24-873f02055dd5/image.png)
 
-    2. P x (¿ÞÂÊ ½ºÅÃ¿¡ x¸¦ push)
+    2. P x (ì™¼ìª½ ìŠ¤íƒì— xë¥¼ push)
+
 ![](https://images.velog.io/images/jxlhe46/post/d79821df-e6b1-420a-bd99-0958e17eb492/image.png)
 
-    3. L (Ä¿¼­¸¦ ¿ÞÂÊÀ¸·Î ÀÌµ¿, ¿ÞÂÊ ½ºÅÃÀÇ topÀ» ¿À¸¥ÂÊ ½ºÅÃ¿¡ push)
+    3. L (ì»¤ì„œë¥¼ ì™¼ìª½ìœ¼ë¡œ ì´ë™, ì™¼ìª½ ìŠ¤íƒì˜ topì„ ì˜¤ë¥¸ìª½ ìŠ¤íƒì— push)
+
 ![](https://images.velog.io/images/jxlhe46/post/7c32ad5f-d547-45f9-8175-d64d7e1b86c7/image.png)
 
-    4. P y (¿ÞÂÊ ½ºÅÃ¿¡ y¸¦ push)
+    4. P y (ì™¼ìª½ ìŠ¤íƒì— yë¥¼ push)
+
 ![](https://images.velog.io/images/jxlhe46/post/a0eba270-4d4d-4dce-bb0c-d4858665aac3/image.png)
 
-    ÃÖÁ¾ °á°ú (¿ÞÂÊ ½ºÅÃÀÇ ¸ðµç ¿ø¼Ò¸¦ ¿À¸¥ÂÊ ½ºÅÃÀ¸·Î push ÇÑ µÚ¿¡, ¿À¸¥ÂÊ ½ºÅÃÀÇ ¸ðµç ¿ø¼Ò¸¦ pop ÇØÁÖ¸é LIFO¿¡ µû¶ó ´ÙÀ½°ú °°ÀÌ Ãâ·ÂµË´Ï´Ù.)
+    ìµœì¢… ê²°ê³¼ (ì™¼ìª½ ìŠ¤íƒì˜ ëª¨ë“  ì›ì†Œë¥¼ ì˜¤ë¥¸ìª½ ìŠ¤íƒìœ¼ë¡œ push í•œ ë’¤ì—, ì˜¤ë¥¸ìª½ ìŠ¤íƒì˜ ëª¨ë“  ì›ì†Œë¥¼ pop í•´ì£¼ë©´ LIFOì— ë”°ë¼ ë‹¤ìŒê³¼ ê°™ì´ ì¶œë ¥ë©ë‹ˆë‹¤.)
+
 ![](https://images.velog.io/images/jxlhe46/post/22ae210b-c005-4cbb-8c52-d9267f6818a5/image.png)
 
 <br>
 
-## C++ ÄÚµå
+## C++ ì½”ë“œ
 
 ```cpp
 #include <iostream>
 #include <stack>
 #include <string>
 using namespace std;
-
 int main() {
     string s;
     cin >> s;
-
     stack<char> l;
     stack<char> r;
-
-    // ¿ÞÂÊ ½ºÅÃ¿¡ ÀÔ·ÂµÈ ¸ðµç ¹®ÀÚ¸¦ push
+    // ì™¼ìª½ ìŠ¤íƒì— ìž…ë ¥ëœ ëª¨ë“  ë¬¸ìžë¥¼ push
     for (int i = 0; i < s.size(); i++) {
         l.push(s[i]);
     }
-
     int num;
     cin >> num;
-    while (num--) { // num == 0ÀÌ¸é Á¾·á
+    while (num--) { // num == 0ì´ë©´ ì¢…ë£Œ
         char cmd;
         cin >> cmd;
-
-        // P: ¿ÞÂÊ ½ºÅÃÀÇ top¿¡ Ãß°¡
+        // P: ì™¼ìª½ ìŠ¤íƒì˜ topì— ì¶”ê°€
         if (cmd == 'P') {
             char c;
             cin >> c;
             l.push(c);
         }
-        // B: ¿ÞÂÊ ½ºÅÃÀÌ ºñ¾îÀÖÁö ¾Ê´Ù¸é, ¿ÞÂÊÀÇ top »èÁ¦
+        // B: ì™¼ìª½ ìŠ¤íƒì´ ë¹„ì–´ìžˆì§€ ì•Šë‹¤ë©´, ì™¼ìª½ì˜ top ì‚­ì œ
         else if (cmd == 'B') {
             if (l.empty()) continue;
             else l.pop();
         }
-        // L: ¿ÞÂÊ ½ºÅÃÀÌ ºñ¾îÀÖÁö ¾Ê´Ù¸é, ¿ÞÂÊÀÇ topÀ» ¿À¸¥ÂÊ¿¡ push
+        // L: ì™¼ìª½ ìŠ¤íƒì´ ë¹„ì–´ìžˆì§€ ì•Šë‹¤ë©´, ì™¼ìª½ì˜ topì„ ì˜¤ë¥¸ìª½ì— push
         else if (cmd == 'L') {
             if (l.empty()) continue;
             else {
@@ -204,7 +200,7 @@ int main() {
                 l.pop();
             }
         }
-        // D: ¿À¸¥ÂÊ ½ºÅÃ¿¡ ºñ¾îÀÖÁö ¾Ê´Ù¸é, ¿À¸¥ÂÊÀÇ topÀ» ¿ÞÂÊ¿¡ push
+        // D: ì˜¤ë¥¸ìª½ ìŠ¤íƒì— ë¹„ì–´ìžˆì§€ ì•Šë‹¤ë©´, ì˜¤ë¥¸ìª½ì˜ topì„ ì™¼ìª½ì— push
         else if (cmd == 'D') {
             if (r.empty()) continue;
             else {
@@ -213,38 +209,33 @@ int main() {
             }
         }
     }
-
-    // ¿ÞÂÊ ½ºÅÃ ÀüÃ¼¸¦ ¿À¸¥ÂÊ ½ºÅÃ¿¡ push
+    // ì™¼ìª½ ìŠ¤íƒ ì „ì²´ë¥¼ ì˜¤ë¥¸ìª½ ìŠ¤íƒì— push
     while (!l.empty()) {
         r.push(l.top());
         l.pop(); // LIFO
     }
-
-    // ¿À¸¥ÂÊ ½ºÅÃ ÀüÃ¼ Ãâ·Â (LIFO)
+    // ì˜¤ë¥¸ìª½ ìŠ¤íƒ ì „ì²´ ì¶œë ¥ (LIFO)
     while (!r.empty()) {
         cout << r.top();
         r.pop(); // LIFO
     }
-
     return 0;
 }
 ```
 
 <br>
 
-¸¶Áö¸·À¸·Î ÀÌ ¹®Á¦¸¦ ÆÄÀÌ½ãÀ¸·Î Ç®¸é ¾î¶»°Ô µÇ´ÂÁö È®ÀÎÇØº¸°Ú½À´Ï´Ù. ÆÄÀÌ½ã¿¡¼­´Â stackÀ» ¸®½ºÆ®·Î ±¸ÇöÇÒ ¼ö ÀÖ½À´Ï´Ù. ¿ø¼Ò¸¦ Ãß°¡ÇÒ ¶§´Â append ÇÔ¼ö¸¦, »èÁ¦ÇÒ ¶§´Â pop ÇÔ¼ö¸¦ »ç¿ëÇØÁÖ¸é µË´Ï´Ù.
+ë§ˆì§€ë§‰ìœ¼ë¡œ ì´ ë¬¸ì œë¥¼ íŒŒì´ì¬ìœ¼ë¡œ í’€ë©´ ì–´ë–»ê²Œ ë˜ëŠ”ì§€ í™•ì¸í•´ë³´ê² ìŠµë‹ˆë‹¤. íŒŒì´ì¬ì—ì„œëŠ” stackì„ ë¦¬ìŠ¤íŠ¸ë¡œ êµ¬í˜„í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤. ì›ì†Œë¥¼ ì¶”ê°€í•  ë•ŒëŠ” append í•¨ìˆ˜ë¥¼, ì‚­ì œí•  ë•ŒëŠ” pop í•¨ìˆ˜ë¥¼ ì‚¬ìš©í•´ì£¼ë©´ ë©ë‹ˆë‹¤.
 
 <br>
 
-# Python Ç®ÀÌ
+# Python í’€ì´
 
 ```python
 from sys import stdin
-
 left = list(stdin.readline().strip())
 right = []
 n = int(input())
-
 for _ in range(n):
     temp = stdin.readline()
     if temp[0] == 'L':
@@ -261,30 +252,27 @@ for _ in range(n):
         left.pop()
     elif temp[0] == 'P':
         left.append(temp[2])
-
-# ¿À¸¥ÂÊ ¸®½ºÆ® ¿ø¼ÒµéÀÇ ¼ø¼­¸¦ µÚÁý¾î¼­ ¿ÞÂÊ ¸®½ºÆ®¿¡ ºÙÀÌ°í ÀüÃ¼ Ãâ·Â
+# ì˜¤ë¥¸ìª½ ë¦¬ìŠ¤íŠ¸ ì›ì†Œë“¤ì˜ ìˆœì„œë¥¼ ë’¤ì§‘ì–´ì„œ ì™¼ìª½ ë¦¬ìŠ¤íŠ¸ì— ë¶™ì´ê³  ì „ì²´ ì¶œë ¥
 #right.reverse()
 #left.extend(right)
 left.extend(right[::-1])
-
 print("".join(left))
 ```
 
 <hr>
 <br>
 
-# ¸¶¹«¸®
+# ë§ˆë¬´ë¦¬
 
-Ä¿¼­ÀÇ ÀÌµ¿À» ½ºÅÃ µÎ °³·Î Ç¥ÇöÇÒ ¼ö ÀÖ´Ù´Â ¾ÆÀÌµð¾î°¡ ½Å¹ÚÇß´ø °Å °°½À´Ï´Ù. ¹®Á¦ À¯ÇüÀÌ ½ºÅÃÀÌ¶ó´Â °É ¸ô¶ú´Ù¸é, ±×³É list ÄÁÅ×ÀÌ³Ê·Î Ç®°í ³¡³ÂÀ» °Å °°±âµµ ÇÕ´Ï´Ù.
+ì»¤ì„œì˜ ì´ë™ì„ ìŠ¤íƒ ë‘ ê°œë¡œ í‘œí˜„í•  ìˆ˜ ìžˆë‹¤ëŠ” ì•„ì´ë””ì–´ê°€ ì‹ ë°•í–ˆë˜ ê±° ê°™ìŠµë‹ˆë‹¤. ë¬¸ì œ ìœ í˜•ì´ ìŠ¤íƒì´ë¼ëŠ” ê±¸ ëª°ëžë‹¤ë©´, ê·¸ëƒ¥ list ì»¨í…Œì´ë„ˆë¡œ í’€ê³  ëëƒˆì„ ê±° ê°™ê¸°ë„ í•©ë‹ˆë‹¤.
 <br>
 
 ![image](https://user-images.githubusercontent.com/68090939/137308898-1fc7a8b5-cf8d-458c-beba-94349cdfc28a.png)
 
- Àú¹ø 1ÇÐ±â ÀÚ·á±¸Á¶ ¼ö¾÷ ½Ã°£¿¡´Â stackÀ» Á÷Á¢ ±¸ÇöÇß´ø °Å °°Àºµ¥, C++ÀÇ STL¿¡¼­ Á¦°øÇÏ´Â stack ÄÁÅ×ÀÌ³Ê¸¦ »ç¿ëÇÏ¸é ÆíÇÏ°Ô ¹®Á¦¸¦ Ç® ¼ö ÀÖ½À´Ï´Ù. ±×·¡µµ ½ºÅÃÀÌ ¾î¶² ÀÚ·á±¸Á¶ÀÎÁö´Â Àß ¾Ë°í ÀÖ¾î¾ß°ÚÁÒ! ¾Æ·¡ ¸µÅ©¿¡¼­ ´Ï²Ã¶ó½º°¡ ¼³¸íÇØÁÖ´Â ½ºÅÃ°ú Å¥ ¿µ»óÀ» º¸¸é, ½±°Ô ÀÌÇØÇÒ ¼ö ÀÖÀ» °Ì´Ï´Ù! <br>
+ì €ë²ˆ 1í•™ê¸° ìžë£Œêµ¬ì¡° ìˆ˜ì—… ì‹œê°„ì—ëŠ” stackì„ ì§ì ‘ êµ¬í˜„í–ˆë˜ ê±° ê°™ì€ë°, C++ì˜ STLì—ì„œ ì œê³µí•˜ëŠ” stack ì»¨í…Œì´ë„ˆë¥¼ ì‚¬ìš©í•˜ë©´ íŽ¸í•˜ê²Œ ë¬¸ì œë¥¼ í’€ ìˆ˜ ìžˆìŠµë‹ˆë‹¤. ê·¸ëž˜ë„ ìŠ¤íƒì´ ì–´ë–¤ ìžë£Œêµ¬ì¡°ì¸ì§€ëŠ” ìž˜ ì•Œê³  ìžˆì–´ì•¼ê² ì£ ! ì•„ëž˜ ë§í¬ì—ì„œ ë‹ˆê¼´ë¼ìŠ¤ê°€ ì„¤ëª…í•´ì£¼ëŠ” ìŠ¤íƒê³¼ í ì˜ìƒì„ ë³´ë©´, ì‰½ê²Œ ì´í•´í•  ìˆ˜ ìžˆì„ ê²ë‹ˆë‹¤! <br>
 
 [https://youtu.be/Nk_dGScimz8](https://youtu.be/Nk_dGScimz8)
 
 <br>
 
-½ÃÇè±â°£ÀÌ¶ó ´Ù¼Ò ±ÞÇÏ°Ô ±ÛÀ» ÀÛ¼ºÇÑ °Å °°Àºµ¥, ±×·¡µµ ¿©·¯ºÐµéÀÌ Àß ÀÌÇØÇÏ¼ÌÀ» °Å¶ó ¹Ï½À´Ï´Ù! 2ÁÖ µÚ¿¡ ¶Ç ¸¸³ª¿ä~&#128075;
-
+ì‹œí—˜ê¸°ê°„ì´ë¼ ë‹¤ì†Œ ê¸‰í•˜ê²Œ ê¸€ì„ ìž‘ì„±í•œ ê±° ê°™ì€ë°, ê·¸ëž˜ë„ ì—¬ëŸ¬ë¶„ë“¤ì´ ìž˜ ì´í•´í•˜ì…¨ì„ ê±°ë¼ ë¯¿ìŠµë‹ˆë‹¤! 2ì£¼ ë’¤ì— ë˜ ë§Œë‚˜ìš”~&#128075;
