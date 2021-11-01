@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ML 지도학습 WIL
+title: 6주차 ML 비지도학습 WIL
 date: 2021-10-31
 author: drizzle0171
 categories: ["ml"]
