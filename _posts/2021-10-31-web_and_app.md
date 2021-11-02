@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 여섯 번째 세션 - 웹? 앱? 난 둘다~
-date: 2021-10-31 15:25:00 +09:00
+date: 2021-11-02 15:25:00 +09:00
 author: Songminseon
 description:
 categories: ["seminar"]
