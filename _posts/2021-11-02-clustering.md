@@ -19,7 +19,7 @@ categories: ["ml"]
 - 무작위로 클러스터에 포인트를 할당한 경우는 맨 왼쪽의 사진처럼 ARI의 값이 0에 가까워지고 완벽하게 군집을 만들어 낼 때는 맨 오른쪽 사진과 같이 1의 값을 가집니다.
 - scikit-learn에서는 adjusted_rand_score()를 이용해서 ARI를 계산합니다.
 
-### rand index
+### rand index 란?
 
 ![image](https://user-images.githubusercontent.com/66999675/140068350-4bad06fd-3963-43a9-86d6-8a0fcc23804e.png)
 
