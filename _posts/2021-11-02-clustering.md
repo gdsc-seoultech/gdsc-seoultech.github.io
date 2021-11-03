@@ -2,7 +2,7 @@
 layout: post
 title: 6주차 ML 군집 알고리즘
 date: 2021-11-02
-author: seongryool, juijeong8324
+author: seongryool
 categories: ["ml"]
 ---
 
@@ -412,4 +412,10 @@ scikit-learn의 silhouette_socre()는 전체 실루엣 계수의 평균값으로
 
 # 마무리
 
-모두 중간고사 끝나고 커리큘럼 하느라 고생하셨습니다. 열심히 놀고 다시 GDSC 활동에 집중 하도록 합시다!!!!
+모두 중간고사 끝나고 커리큘럼 하느라 고생하셨습니다. 열심히 놀고 다시 GDSC 활동에 집중 하도록 합시다!!!!                 
+
+
+<br>
+<br>
+아닛 author에 저(=의정)가 추가가 안 되더라구요?!?! 그래서 여기에다 붙였어요ㅋㅋㅋㅋㅋㅋ                
+![image](https://user-images.githubusercontent.com/63052097/140164751-56afb93f-28c7-49d3-a0c9-d745f9724e70.png)
