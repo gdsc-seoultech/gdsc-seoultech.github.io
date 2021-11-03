@@ -6,7 +6,6 @@ author: seongryool, juijeong8324
 categories: ["ml"]
 ---
 
-
 ### 🤔 지난주 과제 
 * 중간고사 잘보기^^
 <br>
