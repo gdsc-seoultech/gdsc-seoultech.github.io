@@ -15,7 +15,7 @@ categories: ["android"]
 
 ## 1) SearchScreen
 
-__![SearchScreen](SearchScreen.png)__
+![SearchScreen](https://user-images.githubusercontent.com/71068767/140611561-146edde7-3034-4c96-9278-c0955d80ebae.png)
 
 À§ ±×¸²°ú °°ÀÌ Search¿¡¼­´Â 3°¡Áö È­¸éÀüÈ¯ÀÌ ÇÊ¿äÇÕ´Ï´Ù.<br>
 
@@ -151,7 +151,7 @@ SearchScreen ¿¡¼­ topbar´Â °è¼Ó ¶°ÀÖ¾î¼­ µû·Î composableÀ» ¸¸µé¾îÁİ´Ï´Ù. <br>
 [Âü°íÀÚ·á](https://blog.naver.com/comye1/222555753843)
 
 ## 2) CreateScreen
-__![CreateScreen](CreateScreen.png)__
+![CreateScreen](https://user-images.githubusercontent.com/71068767/140611545-2ae99d5d-4bbd-4429-b393-a5d085d4b17b.png)
 
 ´ÙÀ½Àº CraeteScreenÀÔ´Ï´Ù. <br>
 
@@ -262,7 +262,7 @@ Android¿¡¼­ Activity´Â **configuration change**ÀÌ ¹ß»ıÇÒ ¶§¸¶´Ù onCreate¸¦ È£ÃâÇ
 **configuration change**´Â È­¸é È¸Àü, ¸ÖÆ¼ È­¸é µî È­¸éÀÌ ´Ş¶óÁö´Â º¯È­¸¦ ¸»ÇÕ´Ï´Ù.<br>
 <br>
 
-__![View1](View1.png)__
+![View1](https://user-images.githubusercontent.com/71068767/140611566-a7163daa-44e0-4f1b-a6c9-60c7d990d03f.png)
 
 ÀÌ·± »óÈ²À» ¹æÁöÇÏ·Á¸é µ¥ÀÌÅÍ¸¦ ÀÏ½ÃÀûÀ¸·Î ÀúÀåÇØ¾ßÇÕ´Ï´Ù. ±×·¡¼­ **View Model**À» µµÀÔÇÕ´Ï´Ù. View ModelÀº Activity°¡ ¿ÏÀüÈ÷ ³¡³¯ ¶§±îÁö(finished) º¸Á¸µË´Ï´Ù.<br>
 <br>
@@ -271,7 +271,7 @@ __![View1](View1.png)__
 [https://blog.naver.com/comye1/222280060131](https://blog.naver.com/comye1/222280060131)<br>
 <br>
 
-__![View2](View2.png)__
+![View2](https://user-images.githubusercontent.com/71068767/140611568-d0576852-665b-4f32-a3bd-dbbe3c57393a.png)
 
 ±×¸²À» º¸¸é composable°ú View ModelÀÇ ¿ªÇÒÀÌ ³ª´µ¾î ÀÖ½À´Ï´Ù<br>
 <br>
@@ -280,7 +280,7 @@ __![View2](View2.png)__
 ÀÌ·¸°Ô ¸»ÇÏ¸é ÀÌÇØÇÏ±â ¾î·Á¿îµ¥¿ä, ´ÙÀ½ ±×¸²À» ÇÑ¹ø º¾½Ã´Ù.<br>
 <br>
 
-__![View3](View3.png)__
+![View3](https://user-images.githubusercontent.com/71068767/140611571-5f690fb8-6b9a-4619-b5f3-4079d6f69042.png)
 
 À§ ±×¸²¿¡¼­ º¼ ¼ö ÀÖµíÀÌ ViewModel°ú Activity´Â °¢°¢ state¿Í event¸¦ ÁÖ°í ¹Ş½À´Ï´Ù.<br>
 <br>
@@ -289,7 +289,7 @@ View Model¿¡¼­ UI¸¦ ÅëÇØ state°¡ ¾÷µ¥ÀÌÆ®µÇ¸é, flow downÀ¸·Î Activity¿¡ Àü´ŞµË´Ï
 ÀÌ µ¿ÀÛÀÌ ¹İº¹µÇ¸é¼­ android È­¸éÀÌ º¯È­ÇÕ´Ï´Ù.<br>
 <br>
 
-__![View4](View4.png)__
+![View4](https://user-images.githubusercontent.com/71068767/140611572-b9ffd892-f619-4404-a0bb-0efc77ae2d02.png)
 
 state hoistingÀÌ ÀÏ¾î³¯ ¶§´Â 3°¡Áö Á¶°ÇÀÌ ÀÖ½À´Ï´Ù.<br>
 <br>
@@ -301,7 +301,7 @@ state hoistingÀÌ ÀÏ¾î³¯ ¶§´Â 3°¡Áö Á¶°ÇÀÌ ÀÖ½À´Ï´Ù.<br>
 [State Hoisting](https://developer.android.com/jetpack/compose/state#state-hoisting)ÀÇ ³»¿ëÀ» ¾Ë¸é View ModelÀÇ °³³äÀ» ´õ Àß ÀÌÇØÇÒ ¼ö ÀÖ½À´Ï´Ù!<br>
 <br>
 
-__![View5](View5.png)__
+![View5](https://user-images.githubusercontent.com/71068767/140611573-87a311ed-e64d-4e29-973f-f1bdb0ca01ae.png)
 
 ComposableÀº State Å¸ÀÔÀ» observeÇÏ±â ¶§¹®¿¡ viewmodel¿¡´Â state·Î ÀúÀåµÇ´Â °ÍÀÌ ÁÁ½À´Ï´Ù. ¹Ù·Î Á¢±ÙÀÌ °¡´ÉÇÏ±â ¶§¹®ÀÌÁÒ.<br>
 <br>
@@ -315,7 +315,7 @@ Livedata´Â ´ÙÀ½ ¸µÅ©¿¡¼­ ¾Ë¾Æº¼ ¼ö ÀÖ½À´Ï´Ù.
 
 # ¸¶¹«¸®
 
-±ä 5ÁÖÂ÷ º¹½ÀÀÌ ³¡³µ½À´Ï´Ù. Á¡Á¡ È¸Â÷°¡ ´Ã¾î³¯ ¼ö·Ï ½Ç½À¿¡ »ç¿ëµÇ´Â Áö½ÄÀÌ ¾î·Æ°í º¹ÀâÇÏ³×¿ä.. ViewModelÀÇ °³³äÀÌ ¾î·Á¿ö¼­ ±ÛÀ» ¾²¸é¼­µµ °ø½Ä¹®¼­³ª ¼¼¼Ç ½½¶óÀÌµåÀÇ ³»¿ëÀ» ±×´ë·Î °¡Á®¿À´Â Ç¥ÇöÀÌ ¸¹Àº °ÍÀ» ´À³§´Ï´Ù. ´Ù¸¥ ºĞµéÃ³·³ ÀÌÇØ°¡ Àß µÇ´Â Á¤¸®±ÛÀ» ÀÛ¼ºÇÏ°í ½Í¾ú´Âµ¥, ¾Æ½¬¿î ¸¶À½ÀÌ Å®´Ï´Ù.? <br>
+±ä 5ÁÖÂ÷ º¹½ÀÀÌ ³¡³µ½À´Ï´Ù. Á¡Á¡ È¸Â÷°¡ ´Ã¾î³¯ ¼ö·Ï ½Ç½À¿¡ »ç¿ëµÇ´Â Áö½ÄÀÌ ¾î·Æ°í º¹ÀâÇÏ³×¿ä.. ViewModelÀÇ °³³äÀÌ ¾î·Á¿ö¼­ ±ÛÀ» ¾²¸é¼­µµ °ø½Ä¹®¼­³ª ¼¼¼Ç ½½¶óÀÌµåÀÇ ³»¿ëÀ» ±×´ë·Î °¡Á®¿À´Â Ç¥ÇöÀÌ ¸¹Àº °ÍÀ» ´À³§´Ï´Ù. ´Ù¸¥ ºĞµéÃ³·³ ÀÌÇØ°¡ Àß µÇ´Â Á¤¸®±ÛÀ» ÀÛ¼ºÇÏ°í ½Í¾ú´Âµ¥, ¾Æ½¬¿î ¸¶À½ÀÌ Å®´Ï´Ù. :disappointed_relieved:<br>
 <br>
 
 ÇÏÁö¸¸ ÀÌ°Íµµ ½ÃÇàÂø¿À°ÚÁö¿ä! ¼ö¸¹Àº °æÇèÀÌ ½×¿© ½Ç·ÂÀÌ µÇ´Â °Å´Ï±î¿ä ¤¾¤¾ ¾Èµå·ÎÀÌµå È­ÀÌÆÃ!! :tada: :tada:
