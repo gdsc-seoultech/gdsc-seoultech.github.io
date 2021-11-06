@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Android 5주차 세션 복습
-date: 2021-11-06
+date: 2021-11-05
 description: 
 author: Hanyoonjae
 categories: ["android"]
