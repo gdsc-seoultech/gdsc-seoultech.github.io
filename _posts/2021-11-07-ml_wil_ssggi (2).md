@@ -1,12 +1,12 @@
 ---
 layout: post
-title: WIL ml 7주차
+title: 7주차 ML 데이터 표현과 특성공학 WIL
 date: 2021-11-07
 author: ssggi
 categories: ["ml"]
 ---
 
-```python
+
 * 연속형 특성 : 데이터가 2차원 실수형 배열로 각 열이 데이터 포인트를 설명 예) 픽셀 밝기, 붓꽃 측정값
 
 * 범주형 특성 또는 이산형 특성 : 특성의 전형적인 형태. 어떤 범위가 아닌 고정된 목록 중 하나를 값으로 가지며, 정량적이 아니고 정성적 속성 예) 제품의 브랜드, 색상
@@ -23,35 +23,42 @@ get_dummies : 객체 타입이나 범주형을 가진 열을 자동으로 변환
 숫자 특성도 가변수로 만들고 싶다면 columns 매개변수에 인코딩하고 싶은 열을 명시해야 함
 
 원-핫 인코딩은 OneHotEncoder 클래스에 구현되어 있다. 모든 특성을 범주형으로 가정.
+
+```python
 from sklearn.preprocessing import OneHotEncoder
 ohe = OneHotEncoder(sparse=False)
+```
 
 <br>
 그러나 대부분의 애플리케이션에서 일부는 범주형, 일부는 연속형 특성임
 
-#### ColumnTransformer : 입력 데이터에 있는 열마다 다른 변환을 적용할 수 있음.
+### ColumnTransformer : 입력 데이터에 있는 열마다 다른 변환을 적용할 수 있음.
 
->from sklearn.compose import ColumnTransformer
+```python
+from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import StandardScaler
 ct = ColumnTransformer(
 [(“scaling”, StandardScaler(), [‘age’, ‘hours-per-week’]),
 (“onehot”, OneHotEncoder(sparse=False),
 [‘workclass’, ‘education’, ‘gender’, ‘occupation’])])
+```
 
-#### make_column_transformer로 간편하게 ColumnTransformer 만들기
->from sklearn.compose import make_column_transformer
+### make_column_transformer로 간편하게 ColumnTransformer 만들기
+```python
+from sklearn.compose import make_column_transformer
 ct = make_column_transformer(
 (StandardScaler(), [‘age’, ‘hours-per-weeks’]),
 (OneHotEncoder(sparse=False), [‘workclass’, ‘education’, ‘gender’, ‘occupation’]))
+```
 
 # 구간 분할, 이산화 그리고 선형 모델, 트리 모델
 연속형 데이터에 아주 강력한 선형 모델을 만드는 법
-#### 구간 분할(이산화) : 한 특성을 여러 특성으로 나눔
+### 구간 분할(이산화) : 한 특성을 여러 특성으로 나눔
 구간의 경계를 정의하는 법은 다양하다
 균일한 너비나 데이터의 분위로 나눌 수 있음
 from sklearn.preprocessing import KbinsDiscretizer
 
-#### 구간을 지정하는 방법
+### 구간을 지정하는 방법
 1. 선형 모델 : 출력이 사용하기 전보다 더 유연해짐. 구간 분할이 모델 성능을 높이는 데 좋은 방법.
 2. 결정 트리 : 사용하기 전보다 덜 유연해짐. 특성의 값을 구간으로 나누는 것이 아무런 득이 되지 않음.
 
@@ -63,7 +70,7 @@ from sklearn.preprocessing import KbinsDiscretizer
 
 결과: 기울기가 모든 구간에서 같다.
 
-#### 각 구간에서 다른 기울기를 갖도록 하기 위해서는
+### 각 구간에서 다른 기울기를 갖도록 하기 위해서는
 
 1. 데이터 포인트가 있는 구간과 x축 사이의 상호작용 특성을 추가할 수 있다.
 이 특성이 구간 특성과 원본 특성의 곱(10차원)
@@ -103,4 +110,3 @@ from sklearn.feature_selection import SelectFromModel
 모든 특성으로 시작해서 모델을 만들고 특성 중요도가 가장 낮은 특성을 제거
 제거한 특성을 빼고 나머지 특성으로 새로운 모델을 만듦
 미리 정의한 특성 개수가 남을 때까지 반복
-```
