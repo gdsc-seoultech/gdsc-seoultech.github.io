@@ -1,12 +1,11 @@
 ---
 layout: post
-title: WIL ml 6주차
-date: 2021-11-07
+title: 6주차 ML 비지도학습 WIL 
+date: 2021-11-01
 author: ssggi
 categories: ["ml"]
 ---
 
-```python
 - 군집 :
 데이터를 클러스터라는 그룹으로 나눔
 그룹 안의 데이터 포인트는 매우 비슷, 다른 클러스터의 데이터 포인트와는 구분되도록 나누는 것이 목표
@@ -15,7 +14,9 @@ categories: ["ml"]
 데이터 포인트가 어느 클러스터에 속하는지 할당 또는 예측
 
 # k-평균 군집
+```python
 from sklearn.cluster import KMeans
+```
 
 가장 널리 사용하는 군집 알고리즘
 클러스터 중심을 찾는다.
@@ -23,9 +24,14 @@ from sklearn.cluster import KMeans
 2단계. 클러스터에 할당된 데이터 포인트의 평균으로 클러스터 중심을 다시 지정
 클러스터에 할당되는 데이터 포인트에 변화가 없을 때 알고리즘 종료
 
-- 사이킷런에서 k-평균 알고리즘 사용 -> from sklearn.datasets import KMeans
+- 사이킷런에서 k-평균 알고리즘 사용 ->
+```python
+from sklearn.datasets import KMeans
+```
 - 인위적인 2차원 데이터 생성 -> 
+```python
 from sklearn.datasets import make_blobs
+```
 - X, y = make_blobs(random_state=???) 
 - 클러스터 수 지정 -> KMeans(n_clusters = ) (지정하지 않으면 기본값 8)
 - fit 메서드 사용 -> kmeans.fit(X)
@@ -40,9 +46,13 @@ k-평균 알고리즘이 실패하는 경우
 클러스터가 둥근 형태로 나타나므로 복잡한 모양의 클러스터를 구분하지 못함
 
 - PCA : 데이터에서 분산이 가장 큰 방향을 찾으려고 함
+```python
 from sklearn.decomposition import PCA
+```
 - NMF : 데이터의 극단 또는 일부분에 상응되는 중첩할 수 있는 성분을 찾음
+```python
 from sklearn.decomposition import NMF
+```
 - 벡터 양자화 : k-평균을 각 포인터가 하나의 성분(클러스터 중심)으로 분해되는 관점으로 보는 것
 
 
@@ -64,11 +74,12 @@ scikitlearn에서 종료 조건 : 클러스터 개수. 지정된 클러스터 �
 특성이 셋 이상인 데이터셋에 불가
 
 덴드로그램은 다차원 데이터셋 처리 가능
+```python
 from scipy.cluster.hierarchy import dendrogram, ward
 X, y = make_blobs(random_state=0, n_samples=12)
 linkage_array = ward(X)
 dendrogram(linkage_array)
-
+```
 덴드로그램 가지의 길이 : 합쳐진 클러스터가 얼마나 떨어져 있는지를 보여줌
 
 # DBSCAN
@@ -124,11 +135,14 @@ DBSCAN은 클러스터의 개수를 지정할 필요x, eps값이 간접적으로
 (ARI는 음수가 될 수도 있다)
 
 ARI 사용
+```python
 from sklearn.metrics.cluster import adjusted_rand_score(cluster1, cluster2)
+```
 
 NMI 사용
+```python
 from sklearn.metrics,cluster import normalized_mutual_info_score(cluster1, cluster2)
-
+```
 만약 ARI나 NMI가 아니라 import accuracy_score를 했다면 -> 할당된 클러스터 레이블과 실제 클러스터 레이블 이름을 비교 -> 의미없음
 
 > ### 타깃 값 없이 군집 평가
@@ -142,7 +156,10 @@ from sklearn.metrics,cluster import normalized_mutual_info_score(cluster1, clust
 밀집된 클러스터가 좋긴 하나 모양이 복잡할 때는 밀집도를 활용한 평가가 잘 들어맞지 않음
 
 실루엣 점수 사용
+
+```python
 from sklearn.metrics.cluster import silhouette_score
+```
 
 실루엣 점수는 견고성 기반 지표라 실루엣 점수가 높다고 하더라도 신뢰할만하지 않다
 클러스터를 직접 확인하는 방법뿐!
@@ -162,8 +179,9 @@ k-평균의 클러스터 중심을 원본 공간으로 돌리려면
 (클러스터 수를 늘리는 방법이 있음)
 
 3. 병합 군집
+```python
 agglomerative = AgglomerativeClustering(n_clusters=수)
-
+```
 # 군집 알고리즘 요약
 k-평균과 병합 군집은 클러스터 개수 지정
 DBSCAN은 eps 매개변수를 이용하여 클러스터 크기를 간접 조정 가능
@@ -179,4 +197,4 @@ k-평균, 병합, DBSCAN 모두 대량의 데이터셋에 사용 가능, 여러�
 크기가 많이 다른 클러스터를 만들어 냄(장점이 될 수도, 단점이 될 수도)
 3. 병합
 전제 데이터읩 분할 계층도를 만들어주며 덴드로그램을 사용해 손쉽게 확인 가능
-```
+
