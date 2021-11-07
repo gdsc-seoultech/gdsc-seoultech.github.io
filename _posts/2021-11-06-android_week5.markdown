@@ -1,59 +1,59 @@
 ---
 layout: post
-title: Android 5ÁÖÂ÷ ¼¼¼Ç º¹½À
+title: Android 5ì£¼ì°¨ ì„¸ì…˜ ë³µìŠµ
 date: 2021-11-05
 description: 
-author: Hanyoonjae
+author: yoon-H
 categories: ["android"]
 ---
 
-¾È³çÇÏ¼¼¿ä! GDSC Android ¸â¹ö ÇÑÀ±ÀçÀÔ´Ï´Ù.<br>
-5ÁÖÂ÷ ¼¼¼Ç º¹½À Æ÷½ºÆÃ ½ÃÀÛÇÏ°Ú½À´Ï´Ù!
+ì•ˆë…•í•˜ì„¸ìš”! GDSC Android ë©¤ë²„ í•œìœ¤ì¬ì…ë‹ˆë‹¤.<br>
+5ì£¼ì°¨ ì„¸ì…˜ ë³µìŠµ í¬ìŠ¤íŒ… ì‹œì‘í•˜ê² ìŠµë‹ˆë‹¤!
 <br>
 
-# 1. Navigation destination¿¡¼­ È­¸é ÀüÈ¯
+# 1. Navigation destinationì—ì„œ í™”ë©´ ì „í™˜
 
 ## 1) SearchScreen
 
 ![SearchScreen](https://user-images.githubusercontent.com/71068767/140611561-146edde7-3034-4c96-9278-c0955d80ebae.png)
 
-À§ ±×¸²°ú °°ÀÌ Search¿¡¼­´Â 3°¡Áö È­¸éÀüÈ¯ÀÌ ÇÊ¿äÇÕ´Ï´Ù.<br>
+ìœ„ ê·¸ë¦¼ê³¼ ê°™ì´ Searchì—ì„œëŠ” 3ê°€ì§€ í™”ë©´ì „í™˜ì´ í•„ìš”í•©ë‹ˆë‹¤.<br>
 
-Àüº¸´Ù È­¸éÀÌ ´Ã¾î³ª navigation destination¿¡ ÀÏÀÏÀÌ Ãß°¡ÇÏ±â´Â ¾î·Á¿öÁ³½À´Ï´Ù. <br>
+ì „ë³´ë‹¤ í™”ë©´ì´ ëŠ˜ì–´ë‚˜ navigation destinationì— ì¼ì¼ì´ ì¶”ê°€í•˜ê¸°ëŠ” ì–´ë ¤ì›Œì¡ŒìŠµë‹ˆë‹¤. <br>
 
-µû¶ó¼­ °¢ È­¸éÀ» »óÀ§, ÇÏÀ§ composable·Î ±¸ºĞÇØ SearchScreen ¾È¿¡¼­ È£ÃâÇØÁİ´Ï´Ù. <br>
+ë”°ë¼ì„œ ê° í™”ë©´ì„ ìƒìœ„, í•˜ìœ„ composableë¡œ êµ¬ë¶„í•´ SearchScreen ì•ˆì—ì„œ í˜¸ì¶œí•´ì¤ë‹ˆë‹¤. <br>
 
-ÀÌ¸¦ À§ÇØ¼­´Â SearchScreen ¾È¿¡ µ¥ÀÌÅÍ¸¦ º¸°üÇØ¾ß ÇÕ´Ï´Ù. °¢ È­¸éº° composable¿¡ µ¥ÀÌÅÍ °ª°ú setter¸¦ Àü´ŞÇÏ¿© Á¶ÀÛÇÒ ¼ö ÀÖµµ·Ï ÇÏ´Â °ÍÀÌÁÒ. State hoisting¶ó°í º¼ ¼ö ÀÖ½À´Ï´Ù. <br>
+ì´ë¥¼ ìœ„í•´ì„œëŠ” SearchScreen ì•ˆì— ë°ì´í„°ë¥¼ ë³´ê´€í•´ì•¼ í•©ë‹ˆë‹¤. ê° í™”ë©´ë³„ composableì— ë°ì´í„° ê°’ê³¼ setterë¥¼ ì „ë‹¬í•˜ì—¬ ì¡°ì‘í•  ìˆ˜ ìˆë„ë¡ í•˜ëŠ” ê²ƒì´ì£ . State hoistingë¼ê³  ë³¼ ìˆ˜ ìˆìŠµë‹ˆë‹¤. <br>
 
 ```kotlin
-enum class SearchState { //SearchscreenÀÇ ÇÏÀ§ composable ¿­°Å
+enum class SearchState { //Searchscreenì˜ í•˜ìœ„ composable ì—´ê±°
     ButtonScreen,
     QueryScreen,
     ResultScreen
 }
 ```
 
-¸ÕÀú enum class·Î È­¸é »óÅÂ¸¦ ³ªÅ¸³»´Â SearchState¸¦ ¼±¾ğÇÕ´Ï´Ù.<br>
+ë¨¼ì € enum classë¡œ í™”ë©´ ìƒíƒœë¥¼ ë‚˜íƒ€ë‚´ëŠ” SearchStateë¥¼ ì„ ì–¸í•©ë‹ˆë‹¤.<br>
 
-enum class´Â ¿­°ÅÇü Å¬·¡½º·Î °¢ »ó¼ö´Â °´Ã¼ÀÔ´Ï´Ù. Á¤¼ö °ª ´ë½Å ÀÌ¸§À¸·Î È­¸é »óÅÂ¸¦ ³ª¿­ÇÕ´Ï´Ù. (ÀÚ¼¼ÇÑ [enum class](https://kotlinlang.org/docs/enum-classes.html#working-with-enum-constants)ÀÇ Á¤º¸´Â ¹ØÀÇ »çÀÌÆ®¸¦ ¸µÅ©¸¦ Å¸°í °¡ÁÖ¼¼¿ä!)
+enum classëŠ” ì—´ê±°í˜• í´ë˜ìŠ¤ë¡œ ê° ìƒìˆ˜ëŠ” ê°ì²´ì…ë‹ˆë‹¤. ì •ìˆ˜ ê°’ ëŒ€ì‹  ì´ë¦„ìœ¼ë¡œ í™”ë©´ ìƒíƒœë¥¼ ë‚˜ì—´í•©ë‹ˆë‹¤. (ìì„¸í•œ [enum class](https://kotlinlang.org/docs/enum-classes.html#working-with-enum-constants)ì˜ ì •ë³´ëŠ” ë°‘ì˜ ì‚¬ì´íŠ¸ë¥¼ ë§í¬ë¥¼ íƒ€ê³  ê°€ì£¼ì„¸ìš”!)
 
 ```kotlin
-val (screenState, setScreenState) = remember { // setScreenState·Î È­¸é ÀüÈ¯
+val (screenState, setScreenState) = remember { // setScreenStateë¡œ í™”ë©´ ì „í™˜
         mutableStateOf(SearchState.ButtonScreen)
     }
 
-val (queryString, setQueryString) = remember { // °Ë»ö ´Ü¾î·Î QueryScreen¿¡¼­ ÀúÀå, ResultScreen¿¡¼­ »ç¿ë
+val (queryString, setQueryString) = remember { // ê²€ìƒ‰ ë‹¨ì–´ë¡œ QueryScreenì—ì„œ ì €ì¥, ResultScreenì—ì„œ ì‚¬ìš©
         mutableStateOf("")
     }
 ```
 
-À§¿Í °°ÀÌ SearchScreen ¾È¿¡ »óÅÂ¸¦ ¼±¾ğÇÕ´Ï´Ù. 
+ìœ„ì™€ ê°™ì´ SearchScreen ì•ˆì— ìƒíƒœë¥¼ ì„ ì–¸í•©ë‹ˆë‹¤. 
 
 ```kotlin
-when (screenState) { // °¢°¢ÀÇ È­¸é¿¡¼­ ÀÛµ¿ÇÒ ÀÏÀ» Àû¾îÁØ´Ù.
+when (screenState) { // ê°ê°ì˜ í™”ë©´ì—ì„œ ì‘ë™í•  ì¼ì„ ì ì–´ì¤€ë‹¤.
         SearchState.ButtonScreen -> {
             SearchButtonScreen {
-                if(queryString.isNotBlank()){ //ÇÑ ¹ø °Ë»ö ÈÄ ´Ù½Ã QueryScreenÀÌ ³ª¿À°Ô ÇØÁÖ´Â Á¶°Ç¹®
+                if(queryString.isNotBlank()){ //í•œ ë²ˆ ê²€ìƒ‰ í›„ ë‹¤ì‹œ QueryScreenì´ ë‚˜ì˜¤ê²Œ í•´ì£¼ëŠ” ì¡°ê±´ë¬¸
                     setScreenState(SearchState.ResultScreen)
                 }else{
                     setScreenState(SearchState.QueryScreen)
@@ -74,19 +74,19 @@ when (screenState) { // °¢°¢ÀÇ È­¸é¿¡¼­ ÀÛµ¿ÇÒ ÀÏÀ» Àû¾îÁØ´Ù.
                 queryString = queryString,
                 setQueryString = setQueryString,
                 toButtonScreen = { setScreenState(SearchState.ButtonScreen) },
-                onSearchKey = { /*°Ë»ö °á°ú ¾÷µ¥ÀÌÆ®*/ }
+                onSearchKey = { /*ê²€ìƒ‰ ê²°ê³¼ ì—…ë°ì´íŠ¸*/ }
             )
         }
     }
 ```
 
-when À¸·Î screenState¿¡ µû¶ó ´Ù¸¥ composable ·ÎµåÇÕ´Ï´Ù. <br>
+when ìœ¼ë¡œ screenStateì— ë”°ë¼ ë‹¤ë¥¸ composable ë¡œë“œí•©ë‹ˆë‹¤. <br>
 
-À§¿¡¼­ ¼±¾ğÇÑ screenState¿Í queryStringÀ» ÇÏÀ§¿¡¼­ È°¿ëÇÏ°í º¯°æÇØ È­¸éÀ» ÀüÈ¯ÇÒ ¼ö ÀÖ½À´Ï´Ù.
+ìœ„ì—ì„œ ì„ ì–¸í•œ screenStateì™€ queryStringì„ í•˜ìœ„ì—ì„œ í™œìš©í•˜ê³  ë³€ê²½í•´ í™”ë©´ì„ ì „í™˜í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.
 
 ```kotlin
 @Composable
-fun SearchResultScreen( //ÆÄ¶ó¹ÌÅÍ·Î µ¥ÀÌÅÍ °ªÀ» ¹Ş¾Æ ÀÛµ¿!
+fun SearchResultScreen( //íŒŒë¼ë¯¸í„°ë¡œ ë°ì´í„° ê°’ì„ ë°›ì•„ ì‘ë™!
     queryString: String,
     setQueryString: (String) -> Unit,
     toButtonScreen: () -> Unit,
@@ -98,13 +98,13 @@ fun SearchResultScreen( //ÆÄ¶ó¹ÌÅÍ·Î µ¥ÀÌÅÍ °ªÀ» ¹Ş¾Æ ÀÛµ¿!
                 queryString = queryString,
                 setQueryString = setQueryString,
                 onBackButtonClick = toButtonScreen,
-                onSearchKey = onSearchKey/*Todo °Ë»ö °á°ú ¾÷µ¥ÀÌÆ®*/
+                onSearchKey = onSearchKey/*Todo ê²€ìƒ‰ ê²°ê³¼ ì—…ë°ì´íŠ¸*/
             )
         }
-                        "...(»ı·«)..."
+                        "...(ìƒëµ)..."
 ```
 
-ÆÄ¶ó¹ÌÅÍ ÀÛ¼ºÀ¸·Î navigationÀ» ÀÛµ¿ÇÕ´Ï´Ù. SearchQueryScreenµµ À§¿Í °°½À´Ï´Ù.
+íŒŒë¼ë¯¸í„° ì‘ì„±ìœ¼ë¡œ navigationì„ ì‘ë™í•©ë‹ˆë‹¤. SearchQueryScreenë„ ìœ„ì™€ ê°™ìŠµë‹ˆë‹¤.
     
 ```kotlin
 @Composable
@@ -119,9 +119,9 @@ fun SearchTopBar(
         backgroundColor = Color.White,
         navigationIcon = {
             IconButton(onClick = onBackButtonClick) {
-                        "...(Áß·«)..."
+                        "...(ì¤‘ëµ)..."
 
-                keyboardOptions = KeyboardOptions( //µ¸º¸±â ¹öÆ°
+                keyboardOptions = KeyboardOptions( //ë‹ë³´ê¸° ë²„íŠ¼
                     imeAction = ImeAction.Search
                 ),
                 keyboardActions = KeyboardActions(
@@ -142,30 +142,30 @@ fun SearchTopBar(
 }
 ```
 
-SearchScreen ¿¡¼­ topbar´Â °è¼Ó ¶°ÀÖ¾î¼­ µû·Î composableÀ» ¸¸µé¾îÁİ´Ï´Ù. <br>
+SearchScreen ì—ì„œ topbarëŠ” ê³„ì† ë– ìˆì–´ì„œ ë”°ë¡œ composableì„ ë§Œë“¤ì–´ì¤ë‹ˆë‹¤. <br>
 
-ÀÌ bar¿¡¼­´Â °Ë»öÀ» ÇÒ ¼ö ÀÖµµ·Ï ÇÏ´Âµ¥ keyboardOptions¿Í keyboardActions´Â ÇÚµåÆùÀ¸·Î ÅØ½ºÆ®¸¦ ÀÔ·ÂÇÒ ¶§ ³ªÅ¸³ª´Â Å°º¸µåÀÇ °Ë»ö ¹öÆ°À» °ü¸®ÇÕ´Ï´Ù. ¹öÆ°À» ´©¸£¸é °Ë»ö °á°ú¸¦ º¸¿©ÁÖ´Â onSearchKey()¸¦ ³Ö¾î¼­ ¸»ÀÌÁÒ. ([KeyboardOptions](https://developer.android.com/reference/kotlin/androidx/compose/foundation/text/KeyboardOptions)¿¡ °üÇÑ ÀÚ¼¼ÇÑ Á¤º¸´Â Å¬¸¯!)
+ì´ barì—ì„œëŠ” ê²€ìƒ‰ì„ í•  ìˆ˜ ìˆë„ë¡ í•˜ëŠ”ë° keyboardOptionsì™€ keyboardActionsëŠ” í•¸ë“œí°ìœ¼ë¡œ í…ìŠ¤íŠ¸ë¥¼ ì…ë ¥í•  ë•Œ ë‚˜íƒ€ë‚˜ëŠ” í‚¤ë³´ë“œì˜ ê²€ìƒ‰ ë²„íŠ¼ì„ ê´€ë¦¬í•©ë‹ˆë‹¤. ë²„íŠ¼ì„ ëˆ„ë¥´ë©´ ê²€ìƒ‰ ê²°ê³¼ë¥¼ ë³´ì—¬ì£¼ëŠ” onSearchKey()ë¥¼ ë„£ì–´ì„œ ë§ì´ì£ . ([KeyboardOptions](https://developer.android.com/reference/kotlin/androidx/compose/foundation/text/KeyboardOptions)ì— ê´€í•œ ìì„¸í•œ ì •ë³´ëŠ” í´ë¦­!)
 
-¡æ ¹öÆ° ±¸Çö µîÀº ÀÌÀü ½Ã°£¿¡ ´Ù·ğÀ¸¹Ç·Î ½ºÅµ!
+â†’ ë²„íŠ¼ êµ¬í˜„ ë“±ì€ ì´ì „ ì‹œê°„ì— ë‹¤ë¤˜ìœ¼ë¯€ë¡œ ìŠ¤í‚µ!
 
-[Âü°íÀÚ·á](https://blog.naver.com/comye1/222555753843)
+[ì°¸ê³ ìë£Œ](https://blog.naver.com/comye1/222555753843)
 
 ## 2) CreateScreen
 ![CreateScreen](https://user-images.githubusercontent.com/71068767/140611545-2ae99d5d-4bbd-4429-b393-a5d085d4b17b.png)
 
-´ÙÀ½Àº CraeteScreenÀÔ´Ï´Ù. <br>
+ë‹¤ìŒì€ CraeteScreenì…ë‹ˆë‹¤. <br>
 
 
-¾Õ¼­ SearchScreen¿¡¼­ ´Ù·é navagation ³»¿ë°ú °ÅÀÇ ºñ½ÁÇÕ´Ï´Ù. È­¸é »óÅÂ´Â 2°¡ÁöÀÔ´Ï´Ù.
+ì•ì„œ SearchScreenì—ì„œ ë‹¤ë£¬ navagation ë‚´ìš©ê³¼ ê±°ì˜ ë¹„ìŠ·í•©ë‹ˆë‹¤. í™”ë©´ ìƒíƒœëŠ” 2ê°€ì§€ì…ë‹ˆë‹¤.
 
 ```kotlin
-enum class CreateState { //CreateScreenÀÇ ÇÏÀ§ composable ¿­°Å
+enum class CreateState { //CreateScreenì˜ í•˜ìœ„ composable ì—´ê±°
     TitleScreen,
     CardScreen
 }
 ```
 
-enum class·Î »óÅÂ¸¦ ³ª¿­ÇÏ°í,
+enum classë¡œ ìƒíƒœë¥¼ ë‚˜ì—´í•˜ê³ ,
 
 ```kotlin
 val (deckTitle, setDeckTitle) = remember {
@@ -181,7 +181,7 @@ val (deckTitle, setDeckTitle) = remember {
     }
 ```
 
-»óÅÂ¸¦ screenState·Î ¼±¾ğÇÕ´Ï´Ù.
+ìƒíƒœë¥¼ screenStateë¡œ ì„ ì–¸í•©ë‹ˆë‹¤.
 
 ```kotlin
 when (screenState) {
@@ -204,7 +204,7 @@ when (screenState) {
     }
 ```
 
-whenÀ¸·Î È­¸éÀ» ³ª´² TitleScreen¿¡¼­´Â  decktitle, visibility, navigateBack, ScreenStateÀÇ °ªÀ» ¹Ş°í, CardScreenÀ¸·Î ³Ñ¾î°¡¼­´Â navigateBack°ú onDoneÀ» ½ÇÇàÇÒ ¼ö ÀÖµµ·Ï ÇÕ´Ï´Ù.
+whenìœ¼ë¡œ í™”ë©´ì„ ë‚˜ëˆ  TitleScreenì—ì„œëŠ”  decktitle, visibility, navigateBack, ScreenStateì˜ ê°’ì„ ë°›ê³ , CardScreenìœ¼ë¡œ ë„˜ì–´ê°€ì„œëŠ” navigateBackê³¼ onDoneì„ ì‹¤í–‰í•  ìˆ˜ ìˆë„ë¡ í•©ë‹ˆë‹¤.
 
 ```kotlin
 fun CreateCardScreen(
@@ -214,7 +214,7 @@ fun CreateCardScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                        "...(Áß·«)..."
+                        "...(ì¤‘ëµ)..."
 
                 navigationIcon = {
                     IconButton(onClick = navigateBack) { // close navi
@@ -235,7 +235,7 @@ fun CreateCardScreen(
                 }
             )
         },
-        floatingActionButton = { //½ºÅ©·ÑÀ» ³»·Áµµ °°ÀÌ ³»·Á°¡´Â ¹öÆ°
+        floatingActionButton = { //ìŠ¤í¬ë¡¤ì„ ë‚´ë ¤ë„ ê°™ì´ ë‚´ë ¤ê°€ëŠ” ë²„íŠ¼
             FloatingActionButton(
                 onClick = { /*TODO*/ },
                 backgroundColor = Color.White,
@@ -249,73 +249,73 @@ fun CreateCardScreen(
             ) {
 ```
 
-À§ÀÇ ÄÚµå¸¦ º¸¸é composable CreateCardScreen ¾È¿¡ ÆÄ¶ó¹ÌÅÍ·Î navigateBack°ú onDoneÀÌ ÁöÁ¤µÇ¾î ÀÖ½À´Ï´Ù.<br>
+ìœ„ì˜ ì½”ë“œë¥¼ ë³´ë©´ composable CreateCardScreen ì•ˆì— íŒŒë¼ë¯¸í„°ë¡œ navigateBackê³¼ onDoneì´ ì§€ì •ë˜ì–´ ìˆìŠµë‹ˆë‹¤.<br>
 
-´õ ¹ØÀ» º¸¸é onClick¿¡ ÇØ´ç ÆÄ¶ó¹ÌÅÍÀÇ ÀÌ¸§ÀÌ ºÙ¿©Áø °ÍÀ» È®ÀÎÇÒ ¼ö ÀÖ½À´Ï´Ù. ±âÁ¸¿¡ navController·Î ÀÛµ¿ÇÏ´ø °ÍÀ» ¹ÛÀ¸·Î ²¨³» ÀÌ¸§À¸·Î µ¥ÀÌÅÍ¸¦ composable³¢¸® ÁÖ°í ¹ŞÀ» ¼ö ÀÖ°Ô ÇÕ´Ï´Ù. ´õ ±ò²ûÇÏ°Ô Á¤¸®µÈ °ÍÀÔ´Ï´Ù.
+ë” ë°‘ì„ ë³´ë©´ onClickì— í•´ë‹¹ íŒŒë¼ë¯¸í„°ì˜ ì´ë¦„ì´ ë¶™ì—¬ì§„ ê²ƒì„ í™•ì¸í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤. ê¸°ì¡´ì— navControllerë¡œ ì‘ë™í•˜ë˜ ê²ƒì„ ë°–ìœ¼ë¡œ êº¼ë‚´ ì´ë¦„ìœ¼ë¡œ ë°ì´í„°ë¥¼ composableë¼ë¦¬ ì£¼ê³  ë°›ì„ ìˆ˜ ìˆê²Œ í•©ë‹ˆë‹¤. ë” ê¹”ë”í•˜ê²Œ ì •ë¦¬ëœ ê²ƒì…ë‹ˆë‹¤.
                 
 # 2. View Model
 
-´ÙÀ½ ÁÖ¿¡ ÁøÇàÇÒ **View Model**¿¡ ´ëÇØ ¾Ë¾Æº¾½Ã´Ù.<br>
+ë‹¤ìŒ ì£¼ì— ì§„í–‰í•  **View Model**ì— ëŒ€í•´ ì•Œì•„ë´…ì‹œë‹¤.<br>
 <br>
-Android¿¡¼­ Activity´Â **configuration change**ÀÌ ¹ß»ıÇÒ ¶§¸¶´Ù onCreate¸¦ È£ÃâÇØ¼­ View¸¦ ´Ù½Ã ·ÎµåÇÕ´Ï´Ù. Activity°¡ ³¡³ª±â Àü¿¡ ¸®·ÎµåµÇ´Â °ÍÀÌÁÒ. ÀÌ¶§ ºä°¡ °¡Áö°í ÀÖ´ø µ¥ÀÌÅÍ´Â ¸ğµÎ ³¯¾Æ°©´Ï´Ù.<br>
+Androidì—ì„œ ActivityëŠ” **configuration change**ì´ ë°œìƒí•  ë•Œë§ˆë‹¤ onCreateë¥¼ í˜¸ì¶œí•´ì„œ Viewë¥¼ ë‹¤ì‹œ ë¡œë“œí•©ë‹ˆë‹¤. Activityê°€ ëë‚˜ê¸° ì „ì— ë¦¬ë¡œë“œë˜ëŠ” ê²ƒì´ì£ . ì´ë•Œ ë·°ê°€ ê°€ì§€ê³  ìˆë˜ ë°ì´í„°ëŠ” ëª¨ë‘ ë‚ ì•„ê°‘ë‹ˆë‹¤.<br>
 <br>
-**configuration change**´Â È­¸é È¸Àü, ¸ÖÆ¼ È­¸é µî È­¸éÀÌ ´Ş¶óÁö´Â º¯È­¸¦ ¸»ÇÕ´Ï´Ù.<br>
+**configuration change**ëŠ” í™”ë©´ íšŒì „, ë©€í‹° í™”ë©´ ë“± í™”ë©´ì´ ë‹¬ë¼ì§€ëŠ” ë³€í™”ë¥¼ ë§í•©ë‹ˆë‹¤.<br>
 <br>
 
 ![View1](https://user-images.githubusercontent.com/71068767/140611566-a7163daa-44e0-4f1b-a6c9-60c7d990d03f.png)
 
-ÀÌ·± »óÈ²À» ¹æÁöÇÏ·Á¸é µ¥ÀÌÅÍ¸¦ ÀÏ½ÃÀûÀ¸·Î ÀúÀåÇØ¾ßÇÕ´Ï´Ù. ±×·¡¼­ **View Model**À» µµÀÔÇÕ´Ï´Ù. View ModelÀº Activity°¡ ¿ÏÀüÈ÷ ³¡³¯ ¶§±îÁö(finished) º¸Á¸µË´Ï´Ù.<br>
+ì´ëŸ° ìƒí™©ì„ ë°©ì§€í•˜ë ¤ë©´ ë°ì´í„°ë¥¼ ì¼ì‹œì ìœ¼ë¡œ ì €ì¥í•´ì•¼í•©ë‹ˆë‹¤. ê·¸ë˜ì„œ **View Model**ì„ ë„ì…í•©ë‹ˆë‹¤. View Modelì€ Activityê°€ ì™„ì „íˆ ëë‚  ë•Œê¹Œì§€(finished) ë³´ì¡´ë©ë‹ˆë‹¤.<br>
 <br>
 
-ÀÚ¼¼ÇÑ Activity »ı¸íÁÖ±â´Â ´ÙÀ½ ¸µÅ©¿¡¼­ ¾Ë¾Æº¼ ¼ö ÀÖ½À´Ï´Ù.<br>
+ìì„¸í•œ Activity ìƒëª…ì£¼ê¸°ëŠ” ë‹¤ìŒ ë§í¬ì—ì„œ ì•Œì•„ë³¼ ìˆ˜ ìˆìŠµë‹ˆë‹¤.<br>
 [https://blog.naver.com/comye1/222280060131](https://blog.naver.com/comye1/222280060131)<br>
 <br>
 
 ![View2](https://user-images.githubusercontent.com/71068767/140611568-d0576852-665b-4f32-a3bd-dbbe3c57393a.png)
 
-±×¸²À» º¸¸é composable°ú View ModelÀÇ ¿ªÇÒÀÌ ³ª´µ¾î ÀÖ½À´Ï´Ù<br>
+ê·¸ë¦¼ì„ ë³´ë©´ composableê³¼ View Modelì˜ ì—­í• ì´ ë‚˜ë‰˜ì–´ ìˆìŠµë‹ˆë‹¤<br>
 <br>
-µ¥ÀÌÅÍ°¡ º¯¼ö·Î view model¿¡ º¸°üµÇ¾î ÀÖ°í, ÀÌ µ¥ÀÌÅÍ¸¦ activity ³»ÀÇ composableÀÌ ¹Ş¾Æ È­¸éÀ» º¸¿©Áİ´Ï´Ù. »ç¿ëÀÚ¿ÍÀÇ »óÈ£ÀÛ¿ë, ºä¿Í °ü·ÃµÈ µ¿ÀÛÀ» ´ã´çÇÏ°í ÀÖ½À´Ï´Ù.<br>
+ë°ì´í„°ê°€ ë³€ìˆ˜ë¡œ view modelì— ë³´ê´€ë˜ì–´ ìˆê³ , ì´ ë°ì´í„°ë¥¼ activity ë‚´ì˜ composableì´ ë°›ì•„ í™”ë©´ì„ ë³´ì—¬ì¤ë‹ˆë‹¤. ì‚¬ìš©ìì™€ì˜ ìƒí˜¸ì‘ìš©, ë·°ì™€ ê´€ë ¨ëœ ë™ì‘ì„ ë‹´ë‹¹í•˜ê³  ìˆìŠµë‹ˆë‹¤.<br>
 <br>
-ÀÌ·¸°Ô ¸»ÇÏ¸é ÀÌÇØÇÏ±â ¾î·Á¿îµ¥¿ä, ´ÙÀ½ ±×¸²À» ÇÑ¹ø º¾½Ã´Ù.<br>
+ì´ë ‡ê²Œ ë§í•˜ë©´ ì´í•´í•˜ê¸° ì–´ë ¤ìš´ë°ìš”, ë‹¤ìŒ ê·¸ë¦¼ì„ í•œë²ˆ ë´…ì‹œë‹¤.<br>
 <br>
 
 ![View3](https://user-images.githubusercontent.com/71068767/140611571-5f690fb8-6b9a-4619-b5f3-4079d6f69042.png)
 
-À§ ±×¸²¿¡¼­ º¼ ¼ö ÀÖµíÀÌ ViewModel°ú Activity´Â °¢°¢ state¿Í event¸¦ ÁÖ°í ¹Ş½À´Ï´Ù.<br>
+ìœ„ ê·¸ë¦¼ì—ì„œ ë³¼ ìˆ˜ ìˆë“¯ì´ ViewModelê³¼ ActivityëŠ” ê°ê° stateì™€ eventë¥¼ ì£¼ê³  ë°›ìŠµë‹ˆë‹¤.<br>
 <br>
-View Model¿¡¼­ UI¸¦ ÅëÇØ state°¡ ¾÷µ¥ÀÌÆ®µÇ¸é, flow downÀ¸·Î Activity¿¡ Àü´ŞµË´Ï´Ù. Àü´Ş¹ŞÀº state·Î event°¡ ¹ß»ıÇÏ°í, ÀÌ´Â ´Ù½Ã View Model·Î flow upµË´Ï´Ù.<br>
+View Modelì—ì„œ UIë¥¼ í†µí•´ stateê°€ ì—…ë°ì´íŠ¸ë˜ë©´, flow downìœ¼ë¡œ Activityì— ì „ë‹¬ë©ë‹ˆë‹¤. ì „ë‹¬ë°›ì€ stateë¡œ eventê°€ ë°œìƒí•˜ê³ , ì´ëŠ” ë‹¤ì‹œ View Modelë¡œ flow upë©ë‹ˆë‹¤.<br>
 <br>
-ÀÌ µ¿ÀÛÀÌ ¹İº¹µÇ¸é¼­ android È­¸éÀÌ º¯È­ÇÕ´Ï´Ù.<br>
+ì´ ë™ì‘ì´ ë°˜ë³µë˜ë©´ì„œ android í™”ë©´ì´ ë³€í™”í•©ë‹ˆë‹¤.<br>
 <br>
 
 ![View4](https://user-images.githubusercontent.com/71068767/140611572-b9ffd892-f619-4404-a0bb-0efc77ae2d02.png)
 
-state hoistingÀÌ ÀÏ¾î³¯ ¶§´Â 3°¡Áö Á¶°ÇÀÌ ÀÖ½À´Ï´Ù.<br>
+state hoistingì´ ì¼ì–´ë‚  ë•ŒëŠ” 3ê°€ì§€ ì¡°ê±´ì´ ìˆìŠµë‹ˆë‹¤.<br>
 <br>
-1. State´Â Àû¾îµµ state¸¦ »ç¿ëÇÏ´Â ¸ğµç ÄÄÆ÷ÀúºíÀÇ **°¡Àå ³·Àº °øÅë ºÎ¸ğ**(°¡Àå °¡±î¿î »óÀ§ composable)·Î È£ÀÌ½ºÆÃµÇ¾î¾ß ÇÑ´Ù.
-2. State°¡ º¯°æ ¶Ç´Â ¼öÁ¤µÉ ¼ö ÀÖ´Â Àû¾îµµ ÃÖ°íÀÇ ¼öÁØÀ¸·Î È£ÀÌ½ºÆÃµÇ¾î¾ß ÇÑ´Ù.
-3. ¸¸¾à µÎ °³ÀÇ state°¡ °°Àº ÀÌº¥Æ®¿¡ ´ëÇØ ¹İÀÀÇÏ¸é ±×µéÀº ÇÔ²² È£ÀÌ½ºÆÃµÈ´Ù.<br>
--> ÇØ´ç ±ÔÄ¢º¸´Ù ´õ ³ôÀº state·Î È£ÀÌ½ºÆ®ÇÒ ¼ö´Â ÀÖÁö¸¸, ÇÏÀ§·Î È£ÀÌ½ºÆÃÀ» ÇÏ´Â °ÍÀº ºÒ°¡´ÉÇÏ´Ù.
+1. StateëŠ” ì ì–´ë„ stateë¥¼ ì‚¬ìš©í•˜ëŠ” ëª¨ë“  ì»´í¬ì €ë¸”ì˜ **ê°€ì¥ ë‚®ì€ ê³µí†µ ë¶€ëª¨**(ê°€ì¥ ê°€ê¹Œìš´ ìƒìœ„ composable)ë¡œ í˜¸ì´ìŠ¤íŒ…ë˜ì–´ì•¼ í•œë‹¤.
+2. Stateê°€ ë³€ê²½ ë˜ëŠ” ìˆ˜ì •ë  ìˆ˜ ìˆëŠ” ì ì–´ë„ ìµœê³ ì˜ ìˆ˜ì¤€ìœ¼ë¡œ í˜¸ì´ìŠ¤íŒ…ë˜ì–´ì•¼ í•œë‹¤.
+3. ë§Œì•½ ë‘ ê°œì˜ stateê°€ ê°™ì€ ì´ë²¤íŠ¸ì— ëŒ€í•´ ë°˜ì‘í•˜ë©´ ê·¸ë“¤ì€ í•¨ê»˜ í˜¸ì´ìŠ¤íŒ…ëœë‹¤.<br>
+-> í•´ë‹¹ ê·œì¹™ë³´ë‹¤ ë” ë†’ì€ stateë¡œ í˜¸ì´ìŠ¤íŠ¸í•  ìˆ˜ëŠ” ìˆì§€ë§Œ, í•˜ìœ„ë¡œ í˜¸ì´ìŠ¤íŒ…ì„ í•˜ëŠ” ê²ƒì€ ë¶ˆê°€ëŠ¥í•˜ë‹¤.
 
-[State Hoisting](https://developer.android.com/jetpack/compose/state#state-hoisting)ÀÇ ³»¿ëÀ» ¾Ë¸é View ModelÀÇ °³³äÀ» ´õ Àß ÀÌÇØÇÒ ¼ö ÀÖ½À´Ï´Ù!<br>
+[State Hoisting](https://developer.android.com/jetpack/compose/state#state-hoisting)ì˜ ë‚´ìš©ì„ ì•Œë©´ View Modelì˜ ê°œë…ì„ ë” ì˜ ì´í•´í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤!<br>
 <br>
 
 ![View5](https://user-images.githubusercontent.com/71068767/140611573-87a311ed-e64d-4e29-973f-f1bdb0ca01ae.png)
 
-ComposableÀº State Å¸ÀÔÀ» observeÇÏ±â ¶§¹®¿¡ viewmodel¿¡´Â state·Î ÀúÀåµÇ´Â °ÍÀÌ ÁÁ½À´Ï´Ù. ¹Ù·Î Á¢±ÙÀÌ °¡´ÉÇÏ±â ¶§¹®ÀÌÁÒ.<br>
+Composableì€ State íƒ€ì…ì„ observeí•˜ê¸° ë•Œë¬¸ì— viewmodelì—ëŠ” stateë¡œ ì €ì¥ë˜ëŠ” ê²ƒì´ ì¢‹ìŠµë‹ˆë‹¤. ë°”ë¡œ ì ‘ê·¼ì´ ê°€ëŠ¥í•˜ê¸° ë•Œë¬¸ì´ì£ .<br>
 <br>
-À§¿¡¼­ LiveData·Î ÀúÀåµÇ¾úÀ» ¶§´Â °üÂûÇÏ´Â composableÀÎ observeAsState°¡ overheadµÇ´Â °ÍÀ» º¼ ¼ö ÀÖ½À´Ï´Ù.<br>
+ìœ„ì—ì„œ LiveDataë¡œ ì €ì¥ë˜ì—ˆì„ ë•ŒëŠ” ê´€ì°°í•˜ëŠ” composableì¸ observeAsStateê°€ overheadë˜ëŠ” ê²ƒì„ ë³¼ ìˆ˜ ìˆìŠµë‹ˆë‹¤.<br>
 <br>
-Livedata´Â mutableStateListOf·Î ´ëÃ¼°¡ °¡´ÉÇÕ´Ï´Ù.<br>
+LivedataëŠ” mutableStateListOfë¡œ ëŒ€ì²´ê°€ ê°€ëŠ¥í•©ë‹ˆë‹¤.<br>
 <br>
 
-Livedata´Â ´ÙÀ½ ¸µÅ©¿¡¼­ ¾Ë¾Æº¼ ¼ö ÀÖ½À´Ï´Ù.
+LivedataëŠ” ë‹¤ìŒ ë§í¬ì—ì„œ ì•Œì•„ë³¼ ìˆ˜ ìˆìŠµë‹ˆë‹¤.
 [https://developer.android.com/topic/libraries/architecture/livedata?hl=ko](https://developer.android.com/topic/libraries/architecture/livedata?hl=ko)
 
-# ¸¶¹«¸®
+# ë§ˆë¬´ë¦¬
 
-±ä 5ÁÖÂ÷ º¹½ÀÀÌ ³¡³µ½À´Ï´Ù. Á¡Á¡ È¸Â÷°¡ ´Ã¾î³¯ ¼ö·Ï ½Ç½À¿¡ »ç¿ëµÇ´Â Áö½ÄÀÌ ¾î·Æ°í º¹ÀâÇÏ³×¿ä.. ViewModelÀÇ °³³äÀÌ ¾î·Á¿ö¼­ ±ÛÀ» ¾²¸é¼­µµ °ø½Ä¹®¼­³ª ¼¼¼Ç ½½¶óÀÌµåÀÇ ³»¿ëÀ» ±×´ë·Î °¡Á®¿À´Â Ç¥ÇöÀÌ ¸¹Àº °ÍÀ» ´À³§´Ï´Ù. ´Ù¸¥ ºĞµéÃ³·³ ÀÌÇØ°¡ Àß µÇ´Â Á¤¸®±ÛÀ» ÀÛ¼ºÇÏ°í ½Í¾ú´Âµ¥, ¾Æ½¬¿î ¸¶À½ÀÌ Å®´Ï´Ù. :disappointed_relieved:<br>
+ê¸´ 5ì£¼ì°¨ ë³µìŠµì´ ëë‚¬ìŠµë‹ˆë‹¤. ì ì  íšŒì°¨ê°€ ëŠ˜ì–´ë‚  ìˆ˜ë¡ ì‹¤ìŠµì— ì‚¬ìš©ë˜ëŠ” ì§€ì‹ì´ ì–´ë µê³  ë³µì¡í•˜ë„¤ìš”.. ViewModelì˜ ê°œë…ì´ ì–´ë ¤ì›Œì„œ ê¸€ì„ ì“°ë©´ì„œë„ ê³µì‹ë¬¸ì„œë‚˜ ì„¸ì…˜ ìŠ¬ë¼ì´ë“œì˜ ë‚´ìš©ì„ ê·¸ëŒ€ë¡œ ê°€ì ¸ì˜¤ëŠ” í‘œí˜„ì´ ë§ì€ ê²ƒì„ ëŠë‚ë‹ˆë‹¤. ë‹¤ë¥¸ ë¶„ë“¤ì²˜ëŸ¼ ì´í•´ê°€ ì˜ ë˜ëŠ” ì •ë¦¬ê¸€ì„ ì‘ì„±í•˜ê³  ì‹¶ì—ˆëŠ”ë°, ì•„ì‰¬ìš´ ë§ˆìŒì´ í½ë‹ˆë‹¤. :disappointed_relieved:<br>
 <br>
 
-ÇÏÁö¸¸ ÀÌ°Íµµ ½ÃÇàÂø¿À°ÚÁö¿ä! ¼ö¸¹Àº °æÇèÀÌ ½×¿© ½Ç·ÂÀÌ µÇ´Â °Å´Ï±î¿ä ¤¾¤¾ ¾Èµå·ÎÀÌµå È­ÀÌÆÃ!! :tada: :tada:
+í•˜ì§€ë§Œ ì´ê²ƒë„ ì‹œí–‰ì°©ì˜¤ê² ì§€ìš”! ìˆ˜ë§ì€ ê²½í—˜ì´ ìŒ“ì—¬ ì‹¤ë ¥ì´ ë˜ëŠ” ê±°ë‹ˆê¹Œìš” ã…ã… ì•ˆë“œë¡œì´ë“œ í™”ì´íŒ…!! :tada: :tada:
