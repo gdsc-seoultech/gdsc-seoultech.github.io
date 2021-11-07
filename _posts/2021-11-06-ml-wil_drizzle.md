@@ -1,10 +1,10 @@
 ---
 layout: post
-title: ML 지도학습 WIL
+title: 7주차 ML 데이터 표현과 특성공학 WIL
 date: 2021-11-06
 author: drizzle0171
 categories: ["ml"]
-----
+---
 
 드디어 Chapter 4!!!
 사실 앞의 지도 학습, 비지도 학습은 들어봤는데, 이 데이터 표현과 특성 공학은 처음 들어봐서 무엇을 배울지 기대된다~!
