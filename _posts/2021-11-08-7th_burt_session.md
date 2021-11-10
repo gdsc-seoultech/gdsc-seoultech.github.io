@@ -182,7 +182,7 @@ transformer는 2017년 구글에서 공개한 인코더, 디코더 구조를 지
 <br>            
 
 **cf) 임베딩이란??**    
- 자연어 처리에서 단어들을 기계가 이해할 수 있는 숫자형태인 vector로 바꾸는 과정을 말합니다. vector에는 단어의 의미 혹은 위치와 같이 단어를 잘 알 수 있는 데이터로 압축해놓습니다!]**  
+ 자연어 처리에서 단어들을 기계가 이해할 수 있는 숫자형태인 vector로 바꾸는 과정을 말합니다. vector에는 단어의 의미 혹은 위치와 같이 단어를 잘 알 수 있는 데이터로 압축해놓습니다!                          
 
  <br>
 
@@ -261,15 +261,13 @@ transformer는 2017년 구글에서 공개한 인코더, 디코더 구조를 지
 <br>
 
 ## 3️⃣ BERT를 직접 사용해보도록 하자^^        
-1. 다양한 언어로 사전 학습된 BERT
-> BERT는 오픈 소스에요 그래서 아래 링크로 들어가시면 다양한 언어도 사전 학습된 BERT를 만날 수 있는데요! 마크다운 문서를 보면 한국어로 사전학습된 BERT가 있다는 것을 알 수 있습니다.
+1. 다양한 언어로 사전 학습된 BERT   [링크](https://github.com/google-research/bert/blob/master/multilingual.md)
+> BERT는 오픈 소스에요 그래서 링크로 들어가시면 다양한 언어도 사전 학습된 BERT를 만날 수 있는데요! 마크다운 문서를 보면 한국어로 사전학습된 BERT가 있다는 것을 알 수 있습니다.
             
-[링크](https://github.com/google-research/bert/blob/master/multilingual.md)
 
-2. 파인튜닝 하는 방법
+2. 파인튜닝 하는 방법 [링크](https://github.com/google-research/bert)  
 > bERT를 만드신 분들이 파인 튜닝 하는 방법을 알려주신 링크입니다.   
-        
-[링크](https://github.com/google-research/bert)     
+           
 
 <br>
 
