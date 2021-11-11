@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 8주차 ML 데이터 표현과 특성 공학
+title: 8주차 ML 데이터 표현과 특성 공학 강의자료
 data: 2021-11-10 23:00:00 +0900
 author: keonju2
 categories: ["ml"]
