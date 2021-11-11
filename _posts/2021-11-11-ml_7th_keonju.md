@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 5주차 ML WIL
+title: 8주차 ML 데이터 표현과 특성 공학
 data: 2021-11-10 23:00:00 +0900
 author: keonju2
 categories: ["ml"]
@@ -22,13 +22,13 @@ log, exp 함수는 데이터 스케일을 변경하는 것에 사용되며, sin�
 또한 대부분의 모델은 특성의 분포가 정규분포와 비슷할 때 데이터 간 편차를 줄여 성능이 상승합니다.  
 
 
-<변환 전>
+- 변환 전
 
-![그림1](https://user-images.githubusercontent.com/54880474/141170385-38f2a372-e76e-44f8-8f05-5ffcd01b743c.png)
+![그림](https://user-images.githubusercontent.com/54880474/141170385-38f2a372-e76e-44f8-8f05-5ffcd01b743c.png)
 
-<로그 변환 후>
+- 로그 변환 후
 
-![그림2](https://user-images.githubusercontent.com/54880474/141170390-e416f90a-e5d0-433a-9c24-09f89bcad250.png)
+![그림](https://user-images.githubusercontent.com/54880474/141170390-e416f90a-e5d0-433a-9c24-09f89bcad250.png)
 
 
 
