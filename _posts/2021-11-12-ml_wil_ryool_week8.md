@@ -1,3 +1,12 @@
+---
+layout: post
+title: 8주차 ML 모델 평가와 성능 향상 WIL
+date: 2021-11-12
+author: seongryool
+description:
+categories: ["ml"]
+---
+
 # 모델 평가와 성능 향상
 
 이번에는 모델 평가와 매개변수 선택에 대해서 배운다.  
