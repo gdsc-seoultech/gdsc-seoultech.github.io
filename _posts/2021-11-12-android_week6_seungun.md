@@ -2,7 +2,7 @@
 layout: post
 title: 안드로이드 6주차 세션 복습/정리
 date: 2021-11-12
-author: suee97
+author: Seung Un Oh
 description:
 categories: ["android"]
 ---
