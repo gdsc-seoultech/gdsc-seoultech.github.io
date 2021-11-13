@@ -336,14 +336,14 @@ title: MEMBER
             </div>
             <div class="member-card">
                 {% assign member = site.data.members | map: "Seung Un Oh" %}
-                <div class="folder" id="seungun">
+                <div class="folder" id="suee97">
                 </div>
                 <span class="member-name">{{ member | map: "name" }}</span>
             </div>
-            <div class="black_bg" id="seungun">
-                <div class="modal_close" id="seungun"><a href="#;">close</a></div>
+            <div class="black_bg" id="suee97">
+                <div class="modal_close" id="suee97"><a href="#;">close</a></div>
             </div>
-            <div class="modal_wrap" id="seungun">
+            <div class="modal_wrap" id="suee97">
                 <div class="the_member">
                     <img class="member_image" src="https://github.com/{{ member | map: 'github' }}.png">
                     <div class="member_description">
