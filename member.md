@@ -491,7 +491,7 @@ title: MEMBER
                 </div>
             </div>
             <div class="member-card">
-                {% assign member = site.data.members | map: "Hanyoonjae" %}
+                {% assign member = site.data.members | map: "yoon-H" %}
                 <div class="folder" id="yoonjae">
                 </div>
                 <span class="member-name">{{ member | map: "name" }}</span>
