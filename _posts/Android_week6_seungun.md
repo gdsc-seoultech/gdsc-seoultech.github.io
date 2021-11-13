@@ -1,3 +1,12 @@
+---
+layout: post
+title: 안드로이드 6주차 세션 복습/정리
+date: 2021-11-13
+author: suee97
+description:
+categories: ["android"]
+---
+
 안드로이드 6주차 세션 정리를 맡은 오승언입니다.  
 지난 세션 : https://gdsc-seoultech.github.io/posts/2021-11-06-android_week5/ <br>
 이번 주 세션은 지난 세션에서 배운 ViewModel의 개념을 활용해서 적용하는 것을 위주로 진행되었습니다.<br>
