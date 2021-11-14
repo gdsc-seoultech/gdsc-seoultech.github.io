@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 5주차 ML WIL
+title: 7주차 ML WIL
 data: 2021-11-10 23:00:00 +0900
 author: keonju2
 categories: ["ml"]
