@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 8주차 ML WIL
+title: 8주차 ML 모델 평가와 성능 향상 WIL
 data: 2021-11-13 23:00:00 +0900
 author: keonju2
 categories: ["ml"]
