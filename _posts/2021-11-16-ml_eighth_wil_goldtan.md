@@ -3,7 +3,7 @@ layout: post
 title: 8주차 ML 모델 평가와 성능 향상 WIL
 data: 2021-11-16 00:00:00 +0900
 author: goldtan
-categories: ["ml"]---
+categories: ["ml"]
 ---
 
 # 5 모델 평가와 성능 향상
