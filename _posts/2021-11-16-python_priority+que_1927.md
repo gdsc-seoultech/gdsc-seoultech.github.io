@@ -2,7 +2,7 @@
 layout: post
 title: 알고리즘 스터디 우선순위 큐-1927번
 date: 2021-11-15 12:00:00 +0900
-author: Hanyoonjae
+author: yoon-H
 description: 우선순위 큐 알고리즘 1927번 풀이
 categories: ["study"]
 ---
