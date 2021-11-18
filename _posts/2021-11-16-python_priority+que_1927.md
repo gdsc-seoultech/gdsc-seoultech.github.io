@@ -1,24 +1,24 @@
 ---
 layout: post
-title: ¾Ë°í¸®Áò ½ºÅÍµð ¿ì¼±¼øÀ§ Å¥-1927¹ø
+title: ì•Œê³ ë¦¬ì¦˜ ìŠ¤í„°ë”” ìš°ì„ ìˆœìœ„ í-1927ë²ˆ
 date: 2021-11-15 12:00:00 +0900
 author: yoon-H
-description: ¿ì¼±¼øÀ§ Å¥ ¾Ë°í¸®Áò 1927¹ø Ç®ÀÌ
+description: ìš°ì„ ìˆœìœ„ í ì•Œê³ ë¦¬ì¦˜ 1927ë²ˆ í’€ì´
 categories: ["study"]
 ---
 
-# ¿ì¼±¼øÀ§ Å¥ 1927¹ø - ÃÖ¼Ò Èü
+# ìš°ì„ ìˆœìœ„ í 1927ë²ˆ - ìµœì†Œ íž™
 
-¾È³çÇÏ¼¼¿ä. GDSC ¾Èµå·ÎÀÌµå ¸â¹ö ÇÑÀ±ÀçÀÔ´Ï´Ù.<br>
-¿ì¼±¼øÀ§ Å¥ 1927¹ø ¹®Á¦ Ç®ÀÌÇÕ´Ï´Ù! <br>
+ì•ˆë…•í•˜ì„¸ìš”. GDSC ì•ˆë“œë¡œì´ë“œ ë©¤ë²„ í•œìœ¤ìž¬ìž…ë‹ˆë‹¤.<br>
+ìš°ì„ ìˆœìœ„ í 1927ë²ˆ ë¬¸ì œ í’€ì´í•©ë‹ˆë‹¤! <br>
 
 [https://www.acmicpc.net/problem/1927](https://www.acmicpc.net/problem/1927)
 
-# Ç®ÀÌ
+# í’€ì´
 
-ÈüÀº ¿ÏÀüÀÌÁøÆ®¸®·Î ±¸¼ºµÈ ÀÚ·á±¸Á¶·Î, **ÃÖ´ñ°ª°ú ÃÖ¼Ú°ªÀ» Ã£´Â ¿¬»ê**À» ºü¸£°Ô ÇÏ±â À§ÇØ °í¾ÈµÇ¾ú½À´Ï´Ù.<br>
+íž™ì€ ì™„ì „ì´ì§„íŠ¸ë¦¬ë¡œ êµ¬ì„±ëœ ìžë£Œêµ¬ì¡°ë¡œ, **ìµœëŒ“ê°’ê³¼ ìµœì†Ÿê°’ì„ ì°¾ëŠ” ì—°ì‚°**ì„ ë¹ ë¥´ê²Œ í•˜ê¸° ìœ„í•´ ê³ ì•ˆë˜ì—ˆìŠµë‹ˆë‹¤.<br>
 <br>
-ÆÄÀÌ½ã¿¡´Â ³»Àå ¸ðµâ·Î heapq ¸ðµâÀÌ ÀÖ¾î heapÀ» ½±°Ô »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù. ÀÌ¶§ ÃÖ¼Ò Èü ÇüÅÂ·Î Á¤·ÄµË´Ï´Ù.
+íŒŒì´ì¬ì—ëŠ” ë‚´ìž¥ ëª¨ë“ˆë¡œ heapq ëª¨ë“ˆì´ ìžˆì–´ heapì„ ì‰½ê²Œ ì‚¬ìš©í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤. ì´ë•Œ ìµœì†Œ íž™ í˜•íƒœë¡œ ì •ë ¬ë©ë‹ˆë‹¤.
 
 ```python
 import sys
@@ -45,9 +45,9 @@ for i in command :
         heapq.heappush(heap, i)
 ```
 
-## ¸¶¹«¸®
+## ë§ˆë¬´ë¦¬
 
-È®½ÇÈ÷ ÆÄÀÌ½ã¿¡´Â ³»Àå ¸ðµâÀÌ ¸¹¾Æ ÀÚ·á±¸Á¶¸¦ ±¸ÇöÇÏ±â Æí¸®ÇÕ´Ï´Ù.
+í™•ì‹¤ížˆ íŒŒì´ì¬ì—ëŠ” ë‚´ìž¥ ëª¨ë“ˆì´ ë§Žì•„ ìžë£Œêµ¬ì¡°ë¥¼ êµ¬í˜„í•˜ê¸° íŽ¸ë¦¬í•©ë‹ˆë‹¤.
 
-[Âü°í ÀÚ·á](https://littlefoxdiary.tistory.com/3)
+[ì°¸ê³  ìžë£Œ](https://littlefoxdiary.tistory.com/3)
 
