@@ -120,7 +120,10 @@
 .post-list {
   margin: 0px 0;
   list-style: none;
+
   li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 32px;
     margin-bottom: $vertical-spacing-unit;
   }
 }
@@ -228,6 +231,12 @@
 .post-meta {
   font-size: $small-font-size;
   color: $grey-color;
+  margin-bottom: 0px;
+}
+
+.post-author {
+  font-size: 14px;
+  font-weight: 500;
   margin-bottom: 0px;
 }
 .post-link {
