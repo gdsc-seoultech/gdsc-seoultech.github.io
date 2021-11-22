@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 9주차 ML WIL
-data: 2021-11-21 23:00:00 +0900
+title: 9주차 ML 알고리즘 체인과 파이프라인 WIL
+data: 2021-11-21
 author: keonju2
 categories: ["ml"]
 ---
