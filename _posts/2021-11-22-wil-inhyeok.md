@@ -1,7 +1,7 @@
 ---
 layout: post
 title: WIL 7주차 (인혁)
-date: 2021-11-23 00:00:00
+date: 2021-11-22 00:00:00
 author: InHyeok-J
 description:
 categories: ["web"]
