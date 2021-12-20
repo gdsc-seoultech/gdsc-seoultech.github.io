@@ -7,7 +7,7 @@ description: 수고했습니다.
 categories: ["study"]
 ---
 
-# 🌵다육이를 열심히 키웠습니다🌵?
+# 🌵다육이를 열심히 키웠습니다!🌵
 
 ![image](https://user-images.githubusercontent.com/66999675/146788464-ec4b7f48-fe2e-4a02-a063-936346f0a6ed.png)
 
