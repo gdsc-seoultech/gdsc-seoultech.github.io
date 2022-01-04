@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 열세 번째 세션 - 오늘뭐해...? 개발!!! 내일은...? 개발!!!
-date: 2022-01-04 21:00:00 +0900
+date: 2022-01-04 12:00:00 +0900
 author: Songminseon
 categories: ["seminar"]
 ---
