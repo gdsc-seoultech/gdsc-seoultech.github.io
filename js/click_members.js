@@ -8,7 +8,6 @@ window.onload = function () {
     "ui",
     "goldtan",
     "yh",
-    "hc",
     "keonju2",
     "jisoo",
     "shinyubin989",
@@ -19,7 +18,6 @@ window.onload = function () {
     "drizzle",
     "leeeha",
     "jih",
-    "ssggi",
     "yoonjae"
   ];
 
