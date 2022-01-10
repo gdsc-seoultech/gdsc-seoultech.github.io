@@ -4,7 +4,7 @@ title: CandiFormation 1,2주차 보고서
 date: 2022-01-10
 author: seongryool
 description: 솔챌 가즈아!!!
-categories: ["CandiFormation"]
+categories: ["candiformation"]
 ---
 
 # 👨‍💼 CandiFormation 👩‍💼
