@@ -2,7 +2,7 @@
 layout: post
 title: <new_law_bot> 1,2주차 이야기!
 date: 2022-01-12
-author: InHyoek-J
+author: InHyeok-J
 categories: ["new_law_bot"]
 ---
 
