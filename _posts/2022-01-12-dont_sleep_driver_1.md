@@ -1,9 +1,9 @@
 ---
 layout: post
-title: <new_law_bot> 1,2주차 이야기!
+title: <dont_sleep_driver> 1,2주차 이야기!
 date: 2022-01-12
 author: InHyeok-J
-categories: ["new_law_bot"]
+categories: ["dont_sleep_driver"]
 ---
 
 # NewLaw Bot 🤖
@@ -108,3 +108,5 @@ categories: ["new_law_bot"]
 
 -   부럽죠?
 -   가 아니라 토요일까지 간단 와이어프레임과 법안 데이터를 검증해서 회의하고 아키텍처를 구축해봅시다!
+
+... 하지만 아이디어를 변경하게 되는데..
