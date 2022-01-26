@@ -2,7 +2,7 @@
 layout: post
 title: CandiFormation 4주차 보고서
 date: 2022-01-22 23:59:59
-author: suee97
+author: Seung Un Oh
 categories: ["candiformation"]
 ---
 
