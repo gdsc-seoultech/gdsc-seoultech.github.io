@@ -2,7 +2,7 @@
 layout: post
 title: Candiformation 5주차 보고서
 date: 2022-01-26
-author: yongsu
+author: Yangyongsu
 description: "candiformation"
 categories: ["candiformation"]
 ---
