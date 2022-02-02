@@ -40,9 +40,9 @@ categories: ['touch_my_coding']
 <br>
 
 ### 2. 기능 논의        
-1. **아이콘 (이미지 대신) 제공**                      
+**▶ 아이콘 (이미지 대신) 제공**                      
 
-2. **색깔 정보**            
+**▶ 색깔 정보**            
 
 - 특정 위치를 클릭했을 때 색깔이 존재한다면 어떤 색인지 설명 가능           
 -> 손가락 혹은 마우스가 위치한 곳에 색깔이 존재한다면 어떤 색인지 키워드로 전달
@@ -56,20 +56,20 @@ categories: ['touch_my_coding']
 - 특정 위치에 원하는 색깔 코드 넣어주는 기능                      
 -> ‘color’를 말하고 구체적인 색 혹은 키워드를 말하면 해당 색에 대한 헥스코드 자동 작성           
 
-3. **버튼에 대한 정보**              
+**▶ 버튼에 대한 정보**              
 - 버튼 - 텍스트 : 진동 + 텍스트 읽기            
-- 버튼 - 아이콘  : 진동 + 아이콘 읽기            
+- 버튼 - 아이콘  : 진동 + 아이콘 읽기                           
 
-4. **이미지** 
+**▶ 이미지** 
 - 플랫폼 환경에서 다 마련
 - alt 속성 기본 제공            
 - 이미지를 웹크롤링해서 가져오고 이미지 클릭시 해당 이미지에 대한 간단한 설명 기능 제공  
 - 이미지를 클릭하면 이미지에 대한 간단한 설명 기능 제공         
 [구글, 인공지능(AI)은 시각장애인에게 이미지 설명해주는 기능 추가](https://itreport.tistory.com/561)  
-[Building an Automated Image Captioning Application](https://daniel.lasiman.com/post/image-captioning/)
+[Building an Automated Image Captioning Application](https://daniel.lasiman.com/post/image-captioning/)             
 
-5. **파일 이동 시 소리**               
-6. **디버깅이 필요한 코드 위치를 자동으로 잡아주기**                    
+**▶ 파일 이동 시 소리**                          
+**▶ 디버깅이 필요한 코드 위치를 자동으로 잡아주기**                                
       
 
 <br>
