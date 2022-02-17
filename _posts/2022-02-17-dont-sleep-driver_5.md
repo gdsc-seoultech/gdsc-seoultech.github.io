@@ -6,10 +6,10 @@ author: comye1
 categories: ["dont_sleep_driver"]
 ---
 
-# Don't_sleep_driver 5주차 이야기
+# Don't_sleep_driver 6주차 이야기
 
 안녕하세요! Don't_sleep_driver 안드로이드 멤버 김예원입니다.  
-이번 주는 설날이 있어서 2주의 시간이 있었지만 순식간에 지나갔습니다.  
+매주가 쏜살같이 지나가네요 벌써 6주차입니다!
 
 # 지난 주에 한 일
 
