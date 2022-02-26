@@ -20,8 +20,8 @@ categories: ["candiformation"]
 - 로그인 기능
 - 구글 로그인  
   
-<img src="https://images.velog.io/images/suee97/post/1f159dfe-5ffe-4cfa-8002-3e7e2126974f/image.png" width=200></img>
-<img src="https://images.velog.io/images/suee97/post/a19a6b31-0edf-4d33-b886-066048fd7905/image.png" width=150></img>
+<img src="https://images.velog.io/images/suee97/post/1f159dfe-5ffe-4cfa-8002-3e7e2126974f/image.png" width=200>
+<img src="https://images.velog.io/images/suee97/post/a19a6b31-0edf-4d33-b886-066048fd7905/image.png" width=150>
   
   
 ### 백엔드
