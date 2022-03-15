@@ -1,3 +1,12 @@
+---
+layout: post
+title: Candiformation 10주차 보고서
+date: 2022-03-15
+author: Yangyongsu
+description: "candiformation 10주차 보고서!!"
+categories: ["candiformation"]
+---
+
 # Candiformation 대선이 끝난 뒤...우리는?
 
 ## 제20대 대통령 선거날: 3월 9일
