@@ -17,15 +17,15 @@ https://github.com/gdsc-seoultech/CandiFormation_Backend
 시간을 내서 너무 깔끔하게 잘 만들어주셨습니다.
 
 # 구글폼
-구글폼은 각자 맡은 질문을 작성하기로 했었습니다.🥕🥕🥕
+- 구글폼은 각자 맡은 질문을 작성하기로 했었습니다.🥕🥕🥕
   
-양용수  
+- 양용수  
 ![image](https://user-images.githubusercontent.com/55964078/160386229-8411fd62-642a-4012-9e0b-7395ecfca73e.png)    
-오승언 🥕🥕🥕
+- 오승언 🥕🥕🥕
 ![image](https://user-images.githubusercontent.com/55964078/160386361-6aaedae0-5b2c-4c94-b85b-95d9eaf704dd.png)    
-신유빈  
+- 신유빈  
 ![image](https://user-images.githubusercontent.com/55964078/160386477-0011e8d2-109b-44f9-936d-d8568c2dbab9.png)    
-위성률  
+- 위성률  
 ![image](https://user-images.githubusercontent.com/55964078/160386582-565a371f-16de-4212-9184-50ef8afac0bb.png)    
   
 # PPT / 동영상
