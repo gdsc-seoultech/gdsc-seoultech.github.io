@@ -7,7 +7,7 @@ description: "와우 솔챌 마무리!"
 categories: ["candiformation"]
 ---
 
-# Candiformation 솔챌 마무리
+# 🎇 Candiformation 솔챌 마무리 🎇
 
 안녕하십니까!  
 CandiFormation의 위성률입니다.  
