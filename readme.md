@@ -14,3 +14,7 @@
 - GDSC Seoultech Core Member [Inyeong Kang](https://github.com/KangInyeong): Category Function
 - GDSC Seoultech Core Member [Minseon Song](https://github.com/Songminseon): Refactoring & TOC
 - GDSC Seoultech Member [InHyeok Jo](https://github.com/InHyeok-J): TOC
+
+## 22-23 Contributors
+
+- GDSC Seoultech Core Member [YooSeok Lee](https://github.com/yuseogi0218)
