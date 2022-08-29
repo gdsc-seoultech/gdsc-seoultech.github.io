@@ -1,22 +1,50 @@
-<header class="site-header">
+<header id="tab">
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <div class="site-header">
+    <div class="wrapper">
+      <div>
+        <img src="/img/square_logo.png" align="left" width="57px">
+      </div>
 
-  <div class="wrapper">
+      <nav class="site-nav">
 
-    <div>
-      <img src="/img/square_logo.png" align="left" width="57px">
+        <div id="tab" class="trigger">
+          <!-- {{ site.title }} instead of blog -->
+          <a class="page-link" href="{{ site.baseurl }}/">GDSC</a>
+          <a class="page-link" href="{{ site.baseurl }}/members/2">MEMBER</a>
+          <a class="page-link" href="{{ site.baseurl }}/category/2nd_term">POST</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div id="hovering" class="tab-header">
+    <div class="wrapper">
+      <div class="detail-tab">
+          <div class="tab-item">
+            <span><a class="page-link-detail" href="{{ site.baseurl }}/members/1">1st</a></span>
+            <span><a class="page-link-detail" href="{{ site.baseurl }}/category/1st_term">1st</a></span>
+          </div>
+          <div class="tab-item">
+            <a class="page-link-detail" href="{{ site.baseurl }}/members/2">2nd</a>
+            <a class="page-link-detail" href="{{ site.baseurl }}/category/2nd_term">2nd</a>
+          </div>
+      </div>
     </div>
 
-    <nav class="site-nav">
-
-      <div class="trigger">
-        <!-- {{ site.title }} instead of blog -->
-        <a class="page-link" href="{{ site.baseurl }}/">GDSC</a>
-        <a class="page-link" href="{{ site.baseurl }}/members/2">MEMBER</a>
-        <a class="page-link" href="{{ site.baseurl }}/category/2nd_term">POST</a>
-
-      </div>
-    </nav>
-
   </div>
+
+  <script type="text/javascript">
+    var tabMenu = $("#tab");
+    var tabSubMenu = $("#hovering");
+
+    tabSubMenu.hide()
+
+    tabMenu.hover(function() {
+      tabSubMenu.show();
+    }, function() {
+      tabSubMenu.hide();
+    })
+  </script>
 
 </header>

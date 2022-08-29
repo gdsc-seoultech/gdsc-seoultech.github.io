@@ -14,6 +14,21 @@
   overflow: hidden;
 }
 
+.tab-header {
+  // display: none;
+  background-color: #aaa;
+  position: fixed;
+  top: 56px;
+  height: 56px;
+  width: 100%;
+  z-index: 100;
+}
+
+
+#tab:hover + #hovering {
+  display: none;
+}
+
 .site-title {
   font-size: 20px;
   line-height: $nav-height;
@@ -43,11 +58,56 @@
       display: block;
       padding-bottom: 5px;
     }
-    .page-link {
-      display: line;
-    }
+    // .tab-menu {
+    //   display: inline;
+    // }
+    // .tab-item {
+    //   display: inline-block;
+    // }
+    // .page-link {
+    //   display: line;
+    // }
+    // .page-link-detail {
+
+    // }
   }
 }
+
+.detail-tab {  
+  float: right;
+  width: 160px;
+  .page-link {
+    line-height: $base-line-height;
+    // Gaps between nav items, but not on the first one
+    &:not(:first-child) {
+      margin-left: 10px;
+    }
+  }
+  @include media-query($on-palm) {
+    position: fixed;
+    top: 0px;
+    right: 10px;
+    text-align: right;
+    &:hover .trigger {
+      display: block;
+      padding-bottom: 5px;
+    }
+    .tab-menu{
+      display: inline-block;
+    }
+    .tab-item {
+      float: right;
+      width: 56px;
+      height: 56px;
+      z-index: 100;
+    }
+    .page-link-detail {
+      width: 20px;
+    }
+    
+  }
+}
+
 
 .header-bar {
   left: 0px;
