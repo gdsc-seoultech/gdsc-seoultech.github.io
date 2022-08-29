@@ -1,6 +1,8 @@
 ---
 layout: default
 ---
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/category.js"></script>
 <div class="post">
 
   <header class="post-header">
@@ -9,11 +11,13 @@ layout: default
   </header>
 
 
-  <div class="category-list">
+  <div class="tag-list">
     <ul>
-      <li><a href="/posts">all</a></li>
-      {% for category in site.categories %}
-      <li><a href="/category/{{ category | first }}">{{ category | first }}({{ category | last | size }}) </a></li>
+        <a class="tag-all" href="/category/{{page.title}}">all</a>
+      {% for tag in site.data.tags %}
+          <a href="/category/{{page.title}}/?tag={{ tag }}">
+            <span class="tag" data-tag="{{tag}}">{{tag}}</span>
+          </a>
       {% endfor %}
     </ul>
       
@@ -32,10 +36,15 @@ layout: default
 
     {% assign category = page.title %}
     {% for post in site.categories[category] %}
-    <li>
-      <h3><a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
-      <p class="post-author">작성자: {{ post.author }}</p>
-      <p class="post-meta">{{ post.date | date: '%Y년 %m월 %-d일 %H:%M' }}</p>
+    <li class="post-wrapper"
+        {% if post.tags %}
+        {% for tag in post.tags %}
+        data-{{ tag }}
+        {% endfor %}
+        {% endif %}>
+        <h3><a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+        <p class="post-author">작성자: {{ post.author }}</p>
+        <p class="post-meta">{{ post.date | date: '%Y년 %m월 %-d일 %H:%M' }}</p>
     </li>
     {% endfor %}
   </ul>

@@ -14,7 +14,7 @@ layout: default
 </div>
 
 <span class="contacticon center">
-    <a href="mailto:twinklesu914@gmail.com"><i class="fa fa-envelope-square" style="color: #4285f4"></i></a>
+    <a href="mailto:yongsandew@gmail.com"><i class="fa fa-envelope-square" style="color: #4285f4"></i></a>
     <a href="https://github.com/gdsc-seoultech" target="_blank"><i class="fa fa-github-square" style="color: #EA4335"></i></a>
     <a href="http://facebook.com/gdsc.seoultech" target="_blank"><i class="fa fa-facebook-square" style="color: #FBBC04"></i></a>
     <a href="https://instagram.com/gdsc_seoultech" target="_blank"><i class="fa fa-instagram" style="color: #34A853"></i></a>
@@ -27,13 +27,15 @@ layout: default
     <h1><b>GDSC Seoultech 세미나&이벤트</b></h1>
   <ul class="post-list">
 
-    {% assign category = "seminar" %}
+    {% assign category = "2nd_term" %}
     {% for post in site.categories[category] %}
-    <li>
-      <h3><a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
-      <p class="post-author">작성자: {{ post.author }}</p>
-      <p class="post-meta">{{ post.date | date: '%Y년 %m월 %-d일 %H:%M' }}</p>
-    </li>
+      {% if post.tags contains "seminar" %}
+        <li>
+          <h3><a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+          <p class="post-author">작성자: {{ post.author }}</p>
+          <p class="post-meta">{{ post.date | date: '%Y년 %m월 %-d일 %H:%M' }}</p>
+        </li>
+      {% endif %}
     {% endfor %}
   </ul>
 </div>
