@@ -16,17 +16,13 @@
 
 .tab-header {
   // display: none;
-  background-color: #aaa;
+  background-color: rgb(212, 212, 212);
   position: fixed;
+  opacity: 80%;
   top: 56px;
-  height: 56px;
+  height: 47px;
   width: 100%;
   z-index: 100;
-}
-
-
-#tab:hover + #hovering {
-  display: none;
 }
 
 .site-title {
@@ -58,53 +54,35 @@
       display: block;
       padding-bottom: 5px;
     }
-    // .tab-menu {
-    //   display: inline;
-    // }
-    // .tab-item {
-    //   display: inline-block;
-    // }
-    // .page-link {
-    //   display: line;
-    // }
-    // .page-link-detail {
-
-    // }
   }
 }
 
-.detail-tab {  
+.detail-member {  
+  text-align: center;
   float: right;
-  width: 160px;
-  .page-link {
-    line-height: $base-line-height;
-    // Gaps between nav items, but not on the first one
-    &:not(:first-child) {
-      margin-left: 10px;
-    }
-  }
+  width: 85px;
   @include media-query($on-palm) {
-    position: fixed;
-    top: 0px;
-    right: 10px;
-    text-align: right;
-    &:hover .trigger {
-      display: block;
-      padding-bottom: 5px;
-    }
-    .tab-menu{
-      display: inline-block;
-    }
+    display: inline-block;
     .tab-item {
-      float: right;
-      width: 56px;
+      display: inline;
+      width: 160px;
       height: 56px;
       z-index: 100;
     }
-    .page-link-detail {
-      width: 20px;
+  }
+}
+.detail-post {  
+  text-align: center;
+  float: right;
+  width: 35px;
+  @include media-query($on-palm) {
+    display: inline-block;
+    .tab-item {
+      display: inline;
+      width: 160px;
+      height: 56px;
+      z-index: 100;
     }
-    
   }
 }
 
