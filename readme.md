@@ -18,3 +18,4 @@
 ## 22-23 Contributors
 
 - GDSC Seoultech Core Member [YooSeok Lee](https://github.com/yuseogi0218)
+- GDSC Seoultech Core Member [Yejin O](https://github.com/yexjin)
