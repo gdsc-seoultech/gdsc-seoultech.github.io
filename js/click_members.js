@@ -1,29 +1,44 @@
 window.onload = function () {
+  const url = window.location.href;
+  let term = url.substring(url.lastIndexOf('/') + 1);
+  term = Number(term.replace(/[^0-9]/g, "")) - 1; // 숫자가 아닌 문자열을 매칭하는 정규식
   const idList = [
-    "su",
-    "min",
-    "seong",
-    "ye",
-    "in",
-    "ui",
-    "goldtan",
-    "yh",
-    "keonju2",
-    "jisoo",
-    "shinyubin989",
-    "yongsu",
-    "pathpioneer",
-    "jungin",
-    "ehrwk",
-    "drizzle",
-    "leeeha",
-    "jih",
-    "yoonjae"
+      ["su",
+        "min",
+        "seong",
+        "ye",
+        "in",
+        "ui",
+        "goldtan",
+        "yh",
+        "keonju2",
+        "jisoo",
+        "shinyubin989",
+        "yongsu",
+        "pathpioneer",
+        "jungin",
+        "ehrwk",
+        "drizzle",
+        "leeeha",
+        "jih",
+        "yoonjae"],
+      [
+        "drizzle",
+        "min",
+        "seong",
+        "ye",
+        "in",
+        "ui",
+        "goldtan"
+      ]
+
   ];
 
-  idList.map((item, index) => {
+
+
+  idList[term].map((item, index) => {
     function onClick() {
-      idList.map((item, index) => {
+      idList[term].map((item, index) => {
         document.querySelectorAll(".modal_wrap")[index].style.display = "none";
         document.querySelectorAll(".black_bg")[index].style.display = "none";
       });
@@ -37,13 +52,11 @@ window.onload = function () {
     }
 
     document.getElementById(item).addEventListener("click", onClick);
-    document
-      .querySelectorAll(".modal_close")
-      [index].addEventListener("click", offClick);
+    document.querySelectorAll(".modal_close")[index].addEventListener("click", offClick);
   });
 
   function offAll() {
-    idList.map((item, index) => {
+    idList[term].map((item, index) => {
       document.querySelectorAll(".modal_wrap")[index].style.display = "none";
       document.querySelectorAll(".black_bg")[index].style.display = "none";
     });
