@@ -1,7 +1,7 @@
 ---
 layout: mem_page
 permalink: /members/1
-title: MEMBER - 1st term
+title: MEMBER - 1st_term
 ---
 
 <head>
@@ -22,7 +22,7 @@ title: MEMBER - 1st term
         <div class="member-card-container">
             <div class="member-card">
                 <div class="folder" id="su">
-                    {% assign member = site.data.members | map: "twinklesu" %}
+                    {% assign member = site.data.members_1 | map: "twinklesu" %}
                 </div>
                 <span class="member-name">{{ member | map: "name" }}</span>
             </div>
@@ -55,7 +55,7 @@ title: MEMBER - 1st term
         <div class="member-card-container">
             <div class="member-card">
                 <div class="folder" id="min">
-                    {% assign member = site.data.members | map: "Songminseon" %}
+                    {% assign member = site.data.members_1 | map: "Songminseon" %}
                 </div>
                 <span class="member-name">{{ member | map: "name" }}</span>
             </div>
@@ -76,7 +76,7 @@ title: MEMBER - 1st term
                 </div>
             </div>
             <div class="member-card">
-                {% assign member = site.data.members | map: "seongryool" %}
+                {% assign member = site.data.members_1 | map: "seongryool" %}
                 <div class="folder" id="seong">
                 </div>
                 <span class="member-name">{{ member | map: "name" }}</span>
@@ -100,7 +100,7 @@ title: MEMBER - 1st term
                 </div>
             </div>
             <div class="member-card">
-                {% assign member = site.data.members | map: "comye1" %}
+                {% assign member = site.data.members_1 | map: "comye1" %}
                 <div class="folder" id="ye">
                 </div>
                 <span class="member-name">{{ member | map: "name" }}</span>
@@ -124,7 +124,7 @@ title: MEMBER - 1st term
                 </div>
             </div>
             <div class="member-card">
-                {% assign member = site.data.members | map: "KangInyeong" %}
+                {% assign member = site.data.members_1 | map: "KangInyeong" %}
                 <div class="folder" id="in">
                 </div>
                 <span class="member-name">{{ member | map: "name" }}</span>
@@ -148,7 +148,7 @@ title: MEMBER - 1st term
                 </div>
             </div>
             <div class="member-card">
-                {% assign member = site.data.members | map: "juijeong8324" %}
+                {% assign member = site.data.members_1 | map: "juijeong8324" %}
                 <div class="folder" id="ui">
                 </div>
                 <span class="member-name">{{ member | map: "name" }}</span>
@@ -177,7 +177,7 @@ title: MEMBER - 1st term
         <p class="who" style="font-family: 'Google Sans';">MEMBER</p>
         <div class="member-card-container">
             <div class="member-card">
-                {% assign member = site.data.members | map: "goldtan" %}
+                {% assign member = site.data.members_1 | map: "goldtan" %}
                 <div class="folder" id="goldtan">
                 </div>
                 <span class="member-name">{{ member | map: "name" }}</span>
@@ -199,7 +199,7 @@ title: MEMBER - 1st term
                 </div>
             </div>
             <div class="member-card">
-                {% assign member = site.data.members | map: "YeongHyeon-Kim" %}
+                {% assign member = site.data.members_1 | map: "YeongHyeon-Kim" %}
                 <div class="folder" id="yh">
                 </div>
                 <span class="member-name">{{ member | map: "name" }}</span>
@@ -221,7 +221,7 @@ title: MEMBER - 1st term
                 </div>
             </div>
             <div class="member-card">
-                {% assign member = site.data.members | map: "keonju2" %}
+                {% assign member = site.data.members_1 | map: "keonju2" %}
                 <div class="folder" id="keonju2">
                 </div>
                 <span class="member-name">{{ member | map: "name" }}</span>
@@ -245,7 +245,7 @@ title: MEMBER - 1st term
                 </div>
             </div>
             <div class="member-card">
-                {% assign member = site.data.members | map: "ritty27" %}
+                {% assign member = site.data.members_1 | map: "ritty27" %}
                 <div class="folder" id="jisoo">
                 </div>
                 <span class="member-name">{{ member | map: "name" }}</span>
@@ -269,7 +269,7 @@ title: MEMBER - 1st term
                 </div>
             </div>
             <div class="member-card">
-                {% assign member = site.data.members | map: "shinyubin989" %}
+                {% assign member = site.data.members_1 | map: "shinyubin989" %}
                 <div class="folder" id="shinyubin989">
                 </div>
                 <span class="member-name">{{ member | map: "name" }}</span>
@@ -291,7 +291,7 @@ title: MEMBER - 1st term
                 </div>
             </div>
             <div class="member-card">
-                {% assign member = site.data.members | map: "Yangyongsu" %}
+                {% assign member = site.data.members_1 | map: "Yangyongsu" %}
                 <div class="folder" id="yongsu">
                 </div>
                 <span class="member-name">{{ member | map: "name" }}</span>
@@ -315,7 +315,7 @@ title: MEMBER - 1st term
                 </div>
             </div>
             <div class="member-card">
-                {% assign member = site.data.members | map: "Seung Un Oh" %}
+                {% assign member = site.data.members_1 | map: "Seung Un Oh" %}
                 <div class="folder" id="pathpioneer">
                 </div>
                 <span class="member-name">{{ member | map: "name" }}</span>
@@ -337,7 +337,7 @@ title: MEMBER - 1st term
                 </div>
             </div>
             <div class="member-card">
-                {% assign member = site.data.members | map: "JunginO" %}
+                {% assign member = site.data.members_1 | map: "JunginO" %}
                 <div class="folder" id="jungin">
                 </div>
                 <span class="member-name">{{ member | map: "name" }}</span>
@@ -359,7 +359,7 @@ title: MEMBER - 1st term
                 </div>
             </div>
             <div class="member-card">
-                {% assign member = site.data.members | map: "ehrwk" %}
+                {% assign member = site.data.members_1 | map: "ehrwk" %}
                 <div class="folder" id="ehrwk">
                 </div>
                 <span class="member-name">{{ member | map: "name" }}</span>
@@ -381,7 +381,7 @@ title: MEMBER - 1st term
                 </div>
             </div>
             <div class="member-card">
-                {% assign member = site.data.members | map: "drizzle0171" %}
+                {% assign member = site.data.members_1 | map: "drizzle0171" %}
                 <div class="folder" id="drizzle">
                 </div>
                 <span class="member-name">{{ member | map: "name" }}</span>
@@ -405,7 +405,7 @@ title: MEMBER - 1st term
                 </div>
             </div>
             <div class="member-card">
-                {% assign member = site.data.members | map: "leeeha" %}
+                {% assign member = site.data.members_1 | map: "leeeha" %}
                 <div class="folder" id="leeeha">
                 </div>
                 <span class="member-name">{{ member | map: "name" }}</span>
@@ -427,7 +427,7 @@ title: MEMBER - 1st term
                 </div>
             </div>
             <div class="member-card">
-                {% assign member = site.data.members | map: "InHyeok-J" %}
+                {% assign member = site.data.members_1 | map: "InHyeok-J" %}
                 <div class="folder" id="jih">
                 </div>
                 <span class="member-name">{{ member | map: "name" }}</span>
@@ -449,7 +449,7 @@ title: MEMBER - 1st term
                 </div>
             </div>
             <div class="member-card">
-                {% assign member = site.data.members | map: "yoon-H" %}
+                {% assign member = site.data.members_1 | map: "yoon-H" %}
                 <div class="folder" id="yoonjae">
                 </div>
                 <span class="member-name">{{ member | map: "name" }}</span>

@@ -187,6 +187,16 @@
     margin-bottom: $vertical-spacing-unit;
   }
 }
+.solution_challenge-list {
+  margin: 0px 0;
+  list-style: none;
+
+  li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 32px;
+    margin-bottom: $vertical-spacing-unit;
+  }
+}
 .contacticon {
   font-size: 60px;
   display: block;
@@ -302,6 +312,15 @@
 .post-link {
   display: block;
   font-size: 42px;
+}
+
+.solution_challenge-team {
+  font-size: 28px;
+  letter-spacing: -1px;
+  line-height: 45px;
+  @include media-query($on-laptop) {
+    font-size: 20px;
+  }
 }
 
 /** Poem formatting ********************************************/
