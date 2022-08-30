@@ -54,37 +54,15 @@ title: MEMBER - 2nd_term
         <p class="who" style="font-family: 'Google Sans';">CORE</p>
         <div class="member-card-container">
             <div class="member-card">
-                <div class="folder" id="min">
-                    {% assign member = site.data.members_2 | map: "Songminseon" %}
+                <div class="folder" id="keonju">
+                    {% assign member = site.data.members_2 | map: "keonju" %}
                 </div>
                 <span class="member-name">{{ member | map: "name" }}</span>
             </div>
-            <div class="black_bg" id="min">
-                <div class="modal_close" id="min"><a href="#;">close</a></div>
+            <div class="black_bg" id="keonju">
+                <div class="modal_close" id="keonju"><a href="#;">close</a></div>
             </div>
-            <div class="modal_wrap" id="min">
-                <div class="the_member">
-                    <img class="member_image" src="https://github.com/{{ member | map: 'github' }}.png">
-                    <div class="member_description">
-                        <p class="text" id="title"> {{ member | map: "description" }} </p>
-                        <p class="text" id="name"> {{ member | map: "name" }} </p>
-                        <P class="text" id="d"> {{ member | map: "introduce" }}</p>
-                        <span class="member-icon"><a class="link-dark"
-                                href="https://github.com/{{ member | map: 'github' }}" target="_blank"><i
-                                    class="fa fa-github fa-2x"></i></a></span>
-                    </div>
-                </div>
-            </div>
-            <div class="member-card">
-                {% assign member = site.data.members_2 | map: "seongryool" %}
-                <div class="folder" id="seong">
-                </div>
-                <span class="member-name">{{ member | map: "name" }}</span>
-            </div>
-            <div class="black_bg" id="seong">
-                <div class="modal_close" id="seong"><a href="#;">close</a></div>
-            </div>
-            <div class="modal_wrap" id="seong">
+            <div class="modal_wrap" id="keonju">
                 <div class="the_member">
                     <img class="member_image" src="https://github.com/{{ member | map: 'github' }}.png">
                     <div class="member_description">
@@ -100,15 +78,15 @@ title: MEMBER - 2nd_term
                 </div>
             </div>
             <div class="member-card">
-                {% assign member = site.data.members_2 | map: "comye1" %}
-                <div class="folder" id="ye">
+                {% assign member = site.data.members_2 | map: "yejin" %}
+                <div class="folder" id="yejin">
                 </div>
                 <span class="member-name">{{ member | map: "name" }}</span>
             </div>
-            <div class="black_bg" id="ye">
-                <div class="modal_close" id="ye"><a href="#;">close</a></div>
+            <div class="black_bg" id="yejin">
+                <div class="modal_close" id="yejin"><a href="#;">close</a></div>
             </div>
-            <div class="modal_wrap" id="ye">
+            <div class="modal_wrap" id="yejin">
                 <div class="the_member">
                     <img class="member_image" src="https://github.com/{{ member | map: 'github' }}.png">
                     <div class="member_description">
@@ -124,15 +102,15 @@ title: MEMBER - 2nd_term
                 </div>
             </div>
             <div class="member-card">
-                {% assign member = site.data.members_2 | map: "KangInyeong" %}
-                <div class="folder" id="in">
+                {% assign member = site.data.members_2 | map: "yuseogi" %}
+                <div class="folder" id="yuseogi">
                 </div>
                 <span class="member-name">{{ member | map: "name" }}</span>
             </div>
-            <div class="black_bg" id="in">
-                <div class="modal_close" id="in"><a href="#;">close</a></div>
+            <div class="black_bg" id="yuseogi">
+                <div class="modal_close" id="yuseogi"><a href="#;">close</a></div>
             </div>
-            <div class="modal_wrap" id="in">
+            <div class="modal_wrap" id="yuseogi">
                 <div class="the_member">
                     <img class="member_image" src="https://github.com/{{ member | map: 'github' }}.png">
                     <div class="member_description">
@@ -148,15 +126,15 @@ title: MEMBER - 2nd_term
                 </div>
             </div>
             <div class="member-card">
-                {% assign member = site.data.members_2 | map: "juijeong8324" %}
-                <div class="folder" id="ui">
+                {% assign member = site.data.members_2 | map: "kangmin" %}
+                <div class="folder" id="kangmin">
                 </div>
                 <span class="member-name">{{ member | map: "name" }}</span>
             </div>
-            <div class="black_bg" id="ui">
-                <div class="modal_close" id="ui"><a href="#;">close</a></div>
+            <div class="black_bg" id="kangmin">
+                <div class="modal_close" id="kangmin"><a href="#;">close</a></div>
             </div>
-            <div class="modal_wrap" id="ui">
+            <div class="modal_wrap" id="kangmin">
                 <div class="the_member">
                     <img class="member_image" src="https://github.com/{{ member | map: 'github' }}.png">
                     <div class="member_description">
@@ -166,6 +144,32 @@ title: MEMBER - 2nd_term
                         <span class="member-icon"><a class="link-dark"
                                 href="https://github.com/{{ member | map: 'github' }}" target="_blank"><i
                                     class="fa fa-github fa-2x"></i></a></span>
+                        <a rel="author" href="{{ member | map: 'blog' }}" target="_blank"><img
+                                src="/img/blog_icon/{{ member | map: 'blog_platform' }}.jpg" width="26px"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="member-card">
+                {% assign member = site.data.members_2 | map: "leeeha" %}
+                <div class="folder" id="leeeha">
+                </div>
+                <span class="member-name">{{ member | map: "name" }}</span>
+            </div>
+            <div class="black_bg" id="leeeha">
+                <div class="modal_close" id="leeeha"><a href="#;">close</a></div>
+            </div>
+            <div class="modal_wrap" id="leeeha">
+                <div class="the_member">
+                    <img class="member_image" src="https://github.com/{{ member | map: 'github' }}.png">
+                    <div class="member_description">
+                        <p class="text" id="title"> {{ member | map: "description" }} </p>
+                        <p class="text" id="name"> {{ member | map: "name" }} </p>
+                        <P class="text" id="d"> {{ member | map: "introduce" }}</p>
+                        <span class="member-icon"><a class="link-dark"
+                                href="https://github.com/{{ member | map: 'github' }}" target="_blank"><i
+                                    class="fa fa-github fa-2x"></i></a></span>
+                        <a rel="author" href="{{ member | map: 'blog' }}" target="_blank"><img
+                                src="/img/blog_icon/{{ member | map: 'blog_platform' }}.jpg" width="26px"></a>
                     </div>
                 </div>
             </div>
@@ -173,33 +177,6 @@ title: MEMBER - 2nd_term
     </div>
     <!-- Core part end -->
     <!-- member part start -->
-    <div class="introduction not-lead-part">
-        <p class="who" style="font-family: 'Google Sans';">MEMBER</p>
-        <div class="member-card-container">
-            <div class="member-card">
-                {% assign member = site.data.members_2 | map: "goldtan" %}
-                <div class="folder" id="goldtan">
-                </div>
-                <span class="member-name">{{ member | map: "name" }}</span>
-            </div>
-            <div class="black_bg" id="goldtan">
-                <div class="modal_close" id="goldtan"><a href="#;">close</a></div>
-            </div>
-            <div class="modal_wrap" id="goldtan">
-                <div class="the_member">
-                    <img class="member_image" src="https://github.com/{{ member | map: 'github' }}.png">
-                    <div class="member_description">
-                        <p class="text" id="title"> {{ member | map: "description" }} </p>
-                        <p class="text" id="name"> {{ member | map: "name" }} </p>
-                        <P class="text" id="d"> {{ member | map: "introduce" }}</p>
-                        <span class="member-icon"><a class="link-dark"
-                                href="https://github.com/{{ member | map: 'github' }}" target="_blank"><i
-                                    class="fa fa-github fa-2x"></i></a></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- member part end -->
     <div class="introduction not-lead-part">
         <!-- 밑에 공간을 만들어주기 위해서-->

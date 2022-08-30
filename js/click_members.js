@@ -24,12 +24,11 @@ window.onload = function () {
         "yoonjae"],
       [
         "drizzle",
-        "min",
-        "seong",
-        "ye",
-        "in",
-        "ui",
-        "goldtan"
+        "keonju",
+        "yejin",
+        "yuseogi",
+        "kangmin",
+        "leeeha"
       ]
 
   ];
