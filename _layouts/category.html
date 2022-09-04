@@ -28,10 +28,9 @@ layout: default
   <hr style="width: 270px; size: 5px;">
 </p>
 
-
   <!-- 해당 부분도 수정 필요. 해당 카테고리 이름 출력. -->
   <!-- <h1">{{ site.categories | first | first }}</h1>> -->
-
+  
   <ul class="post-list">
     {% assign category = page.title %}
     {% for post in site.categories[category] %}
@@ -48,6 +47,11 @@ layout: default
     {% endfor %}
   </ul>
 
-    <ul class="solution_challenge-list hidden">
-    </ul>
+  <ul class="solution_challenge-list hidden">
+  </ul>
+
 </div>
+
+<div class="pagination" />
+
+<script src="/js/pagination.js"></script>
