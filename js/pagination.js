@@ -23,7 +23,7 @@ function getPageList(totalPages, page, maxLength){
   }
 
 $(function(){
-    var limitPerPage = 10; // 한 페이지에 들어갈 포스팅 개수.
+    var limitPerPage = 5; // 한 페이지에 들어갈 포스팅 개수.
     var numberOfItems = $(".post-list .post-wrapper").length;
     var totalPages = Math.ceil(numberOfItems / limitPerPage);
     var paginationSize = 8; // 나타낼 페이지 버튼 개수
