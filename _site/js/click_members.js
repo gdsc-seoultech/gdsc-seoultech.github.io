@@ -28,7 +28,10 @@ window.onload = function () {
         "yejin",
         "yuseogi",
         "kangmin",
-        "leeeha"
+        "leeeha",
+        "juwhan",
+        'dann',
+        'hongmu',
       ]
 
   ];
