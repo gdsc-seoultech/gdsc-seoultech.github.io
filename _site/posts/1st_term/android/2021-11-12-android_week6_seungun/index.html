@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="tYMwPoxNrWfLx2sDrDYzqI4-dq3M3FfI56NBL9JNtH8" />
+
+    <title>안드로이드 6주차 세션 복습/정리</title>
+    <meta name="description" content="A simple, whitespace, helvetica based portfolio theme.
+">
+
+    <link rel = "shortcut icon" type="image/x-icon" href="/img/square_logo.png">
+    <link rel="stylesheet" href="/css/main.css">
+<!--    <link rel="canonical" href="http://localhost:4000/posts/1st_term/android/2021-11-12-android_week6_seungun/">-->
+    <link rel="canonical" href="/posts/1st_term/android/2021-11-12-android_week6_seungun/">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- 카테고리 css -->
+    <link rel="stylesheet" href="/css/pagination.css">
+    <link href="/css/category.css" type="text/css" rel="stylesheet">
+</head>
+
+   
+  <body>
+    <script src="/js/default.js"></script>
+    <header id="tab" >
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <div class="site-header">
+    <div class="wrapper">
+      <div>
+        <a href="/">
+          <img src="/img/square_logo.png" align="left" width="57px">
+        </a>
+      </div>
+
+      <nav class="site-nav">
+
+        <div id="tab" class="trigger">
+          <!-- GDSC Seoultech instead of blog -->
+          <a class="page-link" href="/">GDSC</a>
+          <a class="page-link" href="/members/2">MEMBER</a>
+          <a class="page-link" href="/category/2nd_term">POST</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div id="hovering" class="tab-header">
+    <div class="wrapper">
+      <div class="detail-post">
+          <div class="tab-item">
+            <div><a class="page-link-detail" href="/category/1st_term">1기</a></div>
+            <div><a class="page-link-detail" href="/category/2nd_term">2기</a></div>
+          </div>
+      </div>
+      <div class="detail-member">
+        <div class="tab-item">
+          <div><a class="page-link-detail" href="/members/1">1기</a></div>
+          <div><a class="page-link-detail" href="/members/2">2기</a></div>
+        </div>
+    </div>
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+    var tabMenu = $("#tab");
+    var tabSubMenu = $("#hovering");
+
+    tabSubMenu.hide()
+
+    tabMenu.hover(function() {
+      tabSubMenu.show();
+    }, function() {
+      tabSubMenu.hide();
+    })
+  </script>
+
+</header>
+
+
+    <div class="page-content" id="page-content">
+      <div class="wrapper" id="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">안드로이드 6주차 세션 복습/정리</h1>
+    <h1 class="post-description"></h1>
+    <p class="post-meta">November 12, 2021 — 00:00 • Seung Un Oh</p>
+    
+      
+        <span class="tag">android</span>
+      
+    
+  </header>
+  <article class="post-content">
+    <p>안드로이드 6주차 세션 정리를 맡은 오승언입니다.<br />
+지난 세션 : https://gdsc-seoultech.github.io/posts/2021-11-06-android_week5/ <br />
+이번 주 세션은 지난 세션에서 배운 ViewModel의 개념을 활용해서 적용하는 것을 위주로 진행되었습니다.<br />
+ViewModel이 없다면 지금까지 진행한 방식처럼 직접적으로 데이터를 가지고 와야 합니다. <br /></p>
+
+<h1 id="1-viewmodel-class-만들기">1. ViewModel Class 만들기</h1>
+
+<p>ViewModel을 사용하기 위해서는 우선 ViewModel 클래스를 만들어야 합니다. <br /></p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">CheggViewModel</span> <span class="p">:</span> <span class="nc">ViewModel</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">//생략</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<details>
+<summary>전체 코드 보기</summary>
+<div>
+
+    <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">CheggViewModel</span> <span class="p">:</span> <span class="nc">ViewModel</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="py">myDeckList</span> <span class="p">=</span> <span class="n">mutableStateListOf</span><span class="p">&lt;</span><span class="nc">Deck</span><span class="p">&gt;()</span>
+        <span class="k">private</span> <span class="k">set</span>
+
+    <span class="kd">var</span> <span class="py">totalDeckList</span> <span class="p">=</span> <span class="n">mutableStateListOf</span><span class="p">&lt;</span><span class="nc">Deck</span><span class="p">&gt;()</span>
+        <span class="k">private</span> <span class="k">set</span>
+
+    <span class="kd">var</span> <span class="py">searchScreenState</span> <span class="p">=</span> <span class="nf">mutableStateOf</span><span class="p">(</span><span class="nc">SearchState</span><span class="p">.</span><span class="nc">ButtonScreen</span><span class="p">)</span>
+        <span class="k">private</span> <span class="k">set</span>
+
+    <span class="kd">var</span> <span class="py">queryString</span> <span class="p">=</span> <span class="nf">mutableStateOf</span><span class="p">(</span><span class="s">""</span><span class="p">)</span>
+        <span class="k">private</span> <span class="k">set</span>
+
+    <span class="k">fun</span> <span class="nf">setQueryString</span><span class="p">(</span><span class="n">query</span><span class="p">:</span> <span class="nc">String</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">queryString</span><span class="p">.</span><span class="n">value</span> <span class="p">=</span> <span class="n">query</span>
+    <span class="p">}</span>
+
+    <span class="k">fun</span> <span class="nf">toButtonScreen</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">searchScreenState</span><span class="p">.</span><span class="n">value</span> <span class="p">=</span> <span class="nc">SearchState</span><span class="p">.</span><span class="nc">ButtonScreen</span>
+    <span class="p">}</span>
+
+    <span class="k">fun</span> <span class="nf">toQueryScreen</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">searchScreenState</span><span class="p">.</span><span class="n">value</span> <span class="p">=</span> <span class="nc">SearchState</span><span class="p">.</span><span class="nc">QueryScreen</span>
+    <span class="p">}</span>
+
+    <span class="k">fun</span> <span class="nf">toResultScreen</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">searchScreenState</span><span class="p">.</span><span class="n">value</span> <span class="p">=</span> <span class="nc">SearchState</span><span class="p">.</span><span class="nc">ResultScreen</span>
+    <span class="p">}</span>
+
+    <span class="k">fun</span> <span class="nf">getQueryResult</span><span class="p">()</span> <span class="p">=</span>
+        <span class="n">totalDeckList</span><span class="p">.</span><span class="nf">filter</span> <span class="p">{</span> <span class="n">deck</span> <span class="p">-&gt;</span>
+            <span class="n">deck</span><span class="p">.</span><span class="n">deckTitle</span><span class="p">.</span><span class="nf">lowercase</span><span class="p">(</span><span class="nc">Locale</span><span class="p">.</span><span class="nf">getDefault</span><span class="p">()).</span><span class="nf">contains</span><span class="p">(</span><span class="n">queryString</span><span class="p">.</span><span class="n">value</span><span class="p">.</span><span class="nf">lowercase</span><span class="p">())</span>
+        <span class="p">}.</span><span class="nf">toMutableStateList</span><span class="p">()</span>
+
+    <span class="nf">init</span> <span class="p">{</span>
+        <span class="n">myDeckList</span> <span class="p">=</span> <span class="nc">SampleDataSet</span><span class="p">.</span><span class="n">myDeckSample</span><span class="p">.</span><span class="nf">toMutableStateList</span><span class="p">()</span>
+        <span class="n">totalDeckList</span> <span class="p">=</span> <span class="nc">SampleDataSet</span><span class="p">.</span><span class="n">totalDeckSample</span><span class="p">.</span><span class="nf">toMutableStateList</span><span class="p">()</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+
+  </div>
+</details>
+
+<p>변수선언 부분 먼저 보겠습니다.</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="py">myDeckList</span> <span class="p">=</span> <span class="n">mutableStateListOf</span><span class="p">&lt;</span><span class="nc">Deck</span><span class="p">&gt;()</span>
+    <span class="k">private</span> <span class="k">set</span>
+
+<span class="kd">var</span> <span class="py">totalDeckList</span> <span class="p">=</span> <span class="n">mutableStateListOf</span><span class="p">&lt;</span><span class="nc">Deck</span><span class="p">&gt;()</span>
+    <span class="k">private</span> <span class="k">set</span>
+
+<span class="kd">var</span> <span class="py">searchScreenState</span> <span class="p">=</span> <span class="nf">mutableStateOf</span><span class="p">(</span><span class="nc">SearchState</span><span class="p">.</span><span class="nc">ButtonScreen</span><span class="p">)</span>
+    <span class="k">private</span> <span class="k">set</span>
+
+<span class="kd">var</span> <span class="py">queryString</span> <span class="p">=</span> <span class="nf">mutableStateOf</span><span class="p">(</span><span class="s">""</span><span class="p">)</span>
+    <span class="k">private</span> <span class="k">set</span>
+</code></pre></div></div>
+
+<p>사용되는 데이터를 ViewModel에서 선언을 해줍니다.<br /></p>
+
+<details>
+<summary>remember는 왜 안쓰나요?</summary>
+<div>
+
+    <p><code class="language-plaintext highlighter-rouge">remember</code>의 역할은 recomposition이 발생했을 때, state가 변하지 않고 유지하게끔 하는 것입니다. 이 기능은 ViewModel에서 자동으로 처리하기 때문에 ViewModel에서는 <code class="language-plaintext highlighter-rouge">remember</code>를 사용하여 선언하지 않아도 됩니다.</p>
+
+  </div>
+</details>
+
+<details>
+<summary>private set이 뭔가요?</summary>
+<div>
+
+    <p>자바와 다르게, 코틀린에서는 getter/setter 메소드를 따로 만들지 않아도 직접 접근해서(실제로는 직접 접근은 아니지만, 사용자 입장에선) 사용할 수 있습니다. <code class="language-plaintext highlighter-rouge">private set</code>은 getter메소드는 자유롭게 두는 반면, setter메소드의 기능을 제한한다고 보시면 됩니다.</p>
+
+  </div>
+</details>
+
+<p>다음은 함수 부분입니다.</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// queryString값 변경</span>
+<span class="k">fun</span> <span class="nf">setQueryString</span><span class="p">(</span><span class="n">query</span><span class="p">:</span> <span class="nc">String</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">queryString</span><span class="p">.</span><span class="n">value</span> <span class="p">=</span> <span class="n">query</span>
+<span class="p">}</span>
+
+<span class="c1">// ButtonScreen으로 이동</span>
+<span class="k">fun</span> <span class="nf">toButtonScreen</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">searchScreenState</span><span class="p">.</span><span class="n">value</span> <span class="p">=</span> <span class="nc">SearchState</span><span class="p">.</span><span class="nc">ButtonScreen</span>
+<span class="p">}</span>
+
+<span class="c1">// QueryScreen으로 이동</span>
+<span class="k">fun</span> <span class="nf">toQueryScreen</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">searchScreenState</span><span class="p">.</span><span class="n">value</span> <span class="p">=</span> <span class="nc">SearchState</span><span class="p">.</span><span class="nc">QueryScreen</span>
+<span class="p">}</span>
+
+<span class="c1">// ResultScreen으로 이동</span>
+<span class="k">fun</span> <span class="nf">toResultScreen</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">searchScreenState</span><span class="p">.</span><span class="n">value</span> <span class="p">=</span> <span class="nc">SearchState</span><span class="p">.</span><span class="nc">ResultScreen</span>
+<span class="p">}</span>
+
+<span class="c1">// 쿼리 결과를 가져오는 함수</span>
+<span class="k">fun</span> <span class="nf">getQueryResult</span><span class="p">()</span> <span class="p">=</span>
+    <span class="n">totalDeckList</span><span class="p">.</span><span class="nf">filter</span> <span class="p">{</span> <span class="n">deck</span> <span class="p">-&gt;</span>
+        <span class="n">deck</span><span class="p">.</span><span class="n">deckTitle</span><span class="p">.</span><span class="nf">lowercase</span><span class="p">(</span><span class="nc">Locale</span><span class="p">.</span><span class="nf">getDefault</span><span class="p">())</span>
+        <span class="p">.</span><span class="nf">contains</span><span class="p">(</span><span class="n">queryString</span><span class="p">.</span><span class="n">value</span><span class="p">.</span><span class="nf">lowercase</span><span class="p">())</span>
+    <span class="p">}.</span><span class="nf">toMutableStateList</span><span class="p">()</span>
+</code></pre></div></div>
+
+<details>
+<summary>getQueryResult()의 문법이 이해가 가지 않습니다.</summary>
+<div>
+
+    <p>이 5줄짜리 코드는 편의를 위해 바뀐 부분이 있습니다.</p>
+
+    <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">fun</span> <span class="nf">getQueryResult</span><span class="p">()</span> <span class="p">=</span>
+</code></pre></div>    </div>
+
+    <p>기존에는 <code class="language-plaintext highlighter-rouge">fun getQueryResult() : Int { return 100 }</code>이런 식으로 사용했는데, 이렇게 리턴하는 것을 간략화 한 것입니다. Kotlin에서는 타입을 유추하기 때문에 타입을 생략하고 return도 <code class="language-plaintext highlighter-rouge">=</code>으로 대체할 수 있기 때문에 생략한 것입입니다. 다음은 리턴 생략 제거버전입니다.</p>
+
+    <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">fun</span> <span class="nf">getQueryResult</span><span class="p">()</span> <span class="p">:</span> <span class="nc">SnapshotStateList</span><span class="p">&lt;</span><span class="nc">Deck</span><span class="p">&gt;</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">totalDeckList</span><span class="p">.</span><span class="nf">filter</span><span class="p">{</span>
+            <span class="n">it</span><span class="p">.</span><span class="n">deckTitle</span><span class="p">.</span><span class="nf">lowercase</span><span class="p">(</span><span class="nc">Locale</span><span class="p">.</span><span class="nf">getDefault</span><span class="p">()).</span><span class="nf">contains</span><span class="p">(</span><span class="n">queryString</span><span class="p">.</span><span class="n">value</span><span class="p">.</span><span class="nf">lowercase</span><span class="p">())</span>
+        <span class="p">}.</span><span class="nf">toMutableStateList</span><span class="p">()</span>
+    <span class="p">}</span>
+</code></pre></div>    </div>
+
+    <p><code class="language-plaintext highlighter-rouge">it</code>제거 버전입니다.</p>
+
+    <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">fun</span> <span class="nf">getQueryResult</span><span class="p">()</span> <span class="p">:</span> <span class="nc">SnapshotStateList</span><span class="p">&lt;</span><span class="nc">Deck</span><span class="p">&gt;</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">totalDeckList</span><span class="p">.</span><span class="nf">filter</span><span class="p">{</span> <span class="n">deck</span> <span class="p">-&gt;</span>
+            <span class="n">deck</span><span class="p">.</span><span class="n">deckTitle</span><span class="p">.</span><span class="nf">lowercase</span><span class="p">(</span><span class="nc">Locale</span><span class="p">.</span><span class="nf">getDefault</span><span class="p">()).</span><span class="nf">contains</span><span class="p">(</span><span class="n">queryString</span><span class="p">.</span><span class="n">value</span><span class="p">.</span><span class="nf">lowercase</span><span class="p">())</span>
+        <span class="p">}.</span><span class="nf">toMutableStateList</span><span class="p">()</span>
+    <span class="p">}</span>
+</code></pre></div>    </div>
+
+    <p><code class="language-plaintext highlighter-rouge">totalDeckList</code>에서 <code class="language-plaintext highlighter-rouge">deck</code>의 <code class="language-plaintext highlighter-rouge">deckTitle</code>를 소문자로 바꾸고, 그 deckTitle이 <code class="language-plaintext highlighter-rouge">queryString</code>값을 포함하고 있으면 List로 반환합니다.</p>
+
+  </div>
+</details>
+
+<p>마지막으로 초기화하는 부분입니다.</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">init</span> <span class="p">{</span>
+    <span class="c1">// SampleDataSet의 myDeckSample 리스트에서 데이터를 가져옴</span>
+    <span class="c1">// myDeckSample : 내가 생성한 Deck</span>
+    <span class="n">myDeckList</span> <span class="p">=</span> <span class="nc">SampleDataSet</span><span class="p">.</span><span class="n">myDeckSample</span><span class="p">.</span><span class="nf">toMutableStateList</span><span class="p">()</span>
+
+    <span class="c1">// SampleDataSet의 totalDeckSample 리스트에서 데이터를 가져옴</span>
+    <span class="c1">// totalDeckSample : 모든 사용자가 생성한 Deck</span>
+    <span class="n">totalDeckList</span> <span class="p">=</span> <span class="nc">SampleDataSet</span><span class="p">.</span><span class="n">totalDeckSample</span><span class="p">.</span><span class="nf">toMutableStateList</span><span class="p">()</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<details>
+<summary>초기화를 그냥 하면 되지 init{}은 왜 쓰나요?</summary>
+<div>
+
+    <p>Kotlin에서는 초기화를 하는 방법은 두 가지입니다. 첫 번째는 자바와같이 constructor를 쓰는 것이고 두 번째는 init block(<code class="language-plaintext highlighter-rouge">init{}</code>)을 사용하는 것입니다.<br />
+두 방법 모두 객체 호출 시 실행됩니다.<br />
+constructor는 다시 Primary constructor, Secondary constructor로 나눌 수 있는데, 클래스를 생성할 때 클래스 이름 오른쪽 부분<code class="language-plaintext highlighter-rouge">class Person(val name : String, val age : Int){ }</code>이 바로 Primary constructor이며 Secondary constructor는 클래스 내부에 constuctor키워드로 선언할 수 있습니다.(init block도 내부에 선언)<br />
+특이한 부분은 <code class="language-plaintext highlighter-rouge">init</code>은 Primary constructor의 일부라는 점입니다.<br />
+또한 <code class="language-plaintext highlighter-rouge">init</code>은 Primary constructor가 초기화 한 후 바로 실행이 됩니다.
+즉, <code class="language-plaintext highlighter-rouge">Primary constructor</code> -&gt; <code class="language-plaintext highlighter-rouge">init block</code> -&gt; <code class="language-plaintext highlighter-rouge">Secondary constructor</code> 순서로 초기화가 됩니다.</p>
+
+    <p>그래서 왜 쓰나요?<br />
+Primary constructor(<code class="language-plaintext highlighter-rouge">(val name : String, val age : Int)</code>부분)는 <code class="language-plaintext highlighter-rouge">print</code>와 같은 코드를 넣을 수 없습니다. 하지만 <code class="language-plaintext highlighter-rouge">init{ }</code>은 넣을 수있으며 Primary constructor이후 바로 실행이 됩니다. 이런 이유로 사용한다고 보면 될 것 같습니다.</p>
+
+  </div>
+</details>
+
+<h1 id="2-viewmodel의-적용">2. ViewModel의 적용</h1>
+
+<p>ViewModel class를 만들었으니 적용할 차례입니다.</p>
+
+<p><strong>ViewModel을 사용하기 전에, 사용할 composable의 인자와 그 composable이 사용되는 곳의 인자를 꼭 넣어주도록 합시다.</strong><br />
+(예시)</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">HomeScreen</span><span class="p">(</span><span class="n">navController</span><span class="p">,</span> <span class="n">cheggViewModel</span><span class="p">)</span>
+
+<span class="nd">@Composable</span>
+<span class="k">fun</span> <span class="nf">HomeScreen</span><span class="p">(</span><span class="n">navController</span><span class="p">:</span> <span class="nc">NavHostController</span><span class="p">,</span> <span class="n">viewModel</span><span class="p">:</span> <span class="nc">CheggViewModel</span><span class="p">){</span>
+    <span class="o">..</span><span class="p">.</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="homescreenkt">HomeScreen.kt</h2>
+
+<p><code class="language-plaintext highlighter-rouge">HomeScreen.kt</code>로 이동해서 데이터를 직접가져오는게 아니라 만든 ViewModel을 활용해서 가져오도록 고칩니다.</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mi">0</span> <span class="p">-&gt;</span> <span class="nc">SampleDataSet</span><span class="p">.</span><span class="n">deckSample</span><span class="p">.</span><span class="nf">forEach</span><span class="p">{</span> <span class="o">..</span><span class="p">.</span> <span class="p">}</span>
+<span class="mi">1</span> <span class="p">-&gt;</span> <span class="nc">SampleDataSet</span><span class="p">.</span><span class="n">deckSample</span><span class="p">.</span><span class="nf">filter</span> <span class="p">{</span> <span class="n">it</span><span class="p">.</span><span class="n">bookmarked</span> <span class="p">}.</span><span class="nf">forEach</span><span class="p">{</span> <span class="o">..</span><span class="p">.</span> <span class="p">}</span>
+<span class="mi">2</span> <span class="p">-&gt;</span> <span class="nc">SampleDataSet</span><span class="p">.</span><span class="n">deckSample</span><span class="p">.</span><span class="nf">filter</span> <span class="p">{</span> <span class="n">it</span><span class="p">.</span><span class="n">deckType</span> <span class="p">==</span> <span class="nc">DECK_CREATED</span> <span class="p">}.</span><span class="nf">forEach</span><span class="p">{</span> <span class="o">..</span><span class="p">.</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<p>to</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mi">0</span> <span class="p">-&gt;</span> <span class="n">viewModel</span><span class="p">.</span><span class="n">myDeckList</span><span class="p">.</span><span class="nf">forEach</span><span class="p">{</span> <span class="o">..</span><span class="p">.</span> <span class="p">}</span>
+<span class="mi">1</span> <span class="p">-&gt;</span> <span class="n">viewModel</span><span class="p">.</span><span class="n">myDeckList</span><span class="p">.</span><span class="nf">filter</span> <span class="p">{</span> <span class="n">it</span><span class="p">.</span><span class="n">bookmarked</span> <span class="p">}.</span><span class="nf">forEach</span> <span class="p">{</span> <span class="o">..</span><span class="p">.</span> <span class="p">}</span>
+<span class="mi">2</span> <span class="p">-&gt;</span> <span class="n">viewModel</span><span class="p">.</span><span class="n">myDeckList</span><span class="p">.</span><span class="nf">filter</span> <span class="p">{</span> <span class="n">it</span><span class="p">.</span><span class="n">deckType</span> <span class="p">==</span> <span class="nc">DECK_CREATED</span> <span class="p">}.</span><span class="nf">forEach</span><span class="p">{</span> <span class="o">..</span><span class="p">.</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="searchscreenkt">SearchScreen.kt</h2>
+
+<p>다음은 <code class="language-plaintext highlighter-rouge">SearchScreen.kt</code>에서의 ViewModel 적용입니다.<br />
+기존의 screenState remember변수와 queryString remember 변수는 ViewModel로 이동했습니다.<br />
+코드를 보시면 아시겠지만, 대부분의 동작이 ViewModel로 넘어갔습니다.</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Composable</span>
+<span class="k">fun</span> <span class="nf">SearchScreen</span><span class="p">(</span><span class="n">navController</span><span class="p">:</span> <span class="nc">NavHostController</span><span class="p">,</span> <span class="n">viewModel</span><span class="p">:</span> <span class="nc">CheggViewModel</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">when</span> <span class="p">(</span><span class="n">viewModel</span><span class="p">.</span><span class="n">searchScreenState</span><span class="p">.</span><span class="n">value</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nc">SearchState</span><span class="p">.</span><span class="nc">ButtonScreen</span> <span class="p">-&gt;</span> <span class="p">{</span>
+            <span class="nc">SearchButtonScreen</span> <span class="p">{</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">viewModel</span><span class="p">.</span><span class="n">queryString</span><span class="p">.</span><span class="n">value</span><span class="p">.</span><span class="nf">isNotBlank</span><span class="p">())</span> <span class="p">{</span>
+                    <span class="n">viewModel</span><span class="p">.</span><span class="nf">toResultScreen</span><span class="p">()</span>
+                <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                    <span class="n">viewModel</span><span class="p">.</span><span class="nf">toQueryScreen</span><span class="p">()</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="nc">SearchState</span><span class="p">.</span><span class="nc">QueryScreen</span> <span class="p">-&gt;</span> <span class="p">{</span>
+            <span class="nc">SearchQueryScreen</span><span class="p">(</span>
+                <span class="n">queryString</span> <span class="p">=</span> <span class="n">viewModel</span><span class="p">.</span><span class="n">queryString</span><span class="p">.</span><span class="n">value</span><span class="p">,</span>
+                <span class="n">setQueryString</span> <span class="p">=</span> <span class="n">viewModel</span><span class="o">::</span><span class="n">setQueryString</span><span class="p">,</span>
+                <span class="n">toButtonScreen</span> <span class="p">=</span> <span class="n">viewModel</span><span class="o">::</span><span class="n">toButtonScreen</span><span class="p">,</span>
+                <span class="n">toResultScreen</span> <span class="p">=</span> <span class="n">viewModel</span><span class="o">::</span><span class="n">toResultScreen</span>
+            <span class="p">)</span>
+        <span class="p">}</span>
+        <span class="nc">SearchState</span><span class="p">.</span><span class="nc">ResultScreen</span> <span class="p">-&gt;</span> <span class="p">{</span>
+            <span class="nc">SearchResultScreen</span><span class="p">(</span>
+                <span class="n">queryString</span> <span class="p">=</span> <span class="n">viewModel</span><span class="p">.</span><span class="n">queryString</span><span class="p">.</span><span class="n">value</span><span class="p">,</span>
+                <span class="n">setQueryString</span> <span class="p">=</span> <span class="n">viewModel</span><span class="o">::</span><span class="n">setQueryString</span><span class="p">,</span>
+                <span class="n">getQueryResult</span> <span class="p">=</span> <span class="n">viewModel</span><span class="o">::</span><span class="n">getQueryResult</span><span class="p">,</span>
+                <span class="n">toButtonScreen</span> <span class="p">=</span> <span class="n">viewModel</span><span class="o">::</span><span class="n">toButtonScreen</span><span class="p">,</span>
+                <span class="n">toDeckScreen</span> <span class="p">=</span> <span class="p">{</span>
+                    <span class="n">navController</span><span class="p">.</span><span class="nf">navigate</span><span class="p">(</span><span class="nc">Screen</span><span class="p">.</span><span class="nc">Deck</span><span class="p">.</span><span class="n">route</span> <span class="p">+</span> <span class="s">"/${it.deckTitle}/${it.cardList.size}"</span><span class="p">)</span>
+                <span class="p">}</span>
+            <span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<details>
+<summary>[viewModel::] &lt;- 이거 뭔가요?</summary>
+<div>
+
+    <p>위 코드의 경우 <code class="language-plaintext highlighter-rouge">viewModel::</code>은 함수 참조를 위해 쓰인 것입니다.<br />
+또한, 함수를 참조함과 동시에 값으로서 사용할 수 있습니다.<br />
+이외에도 <code class="language-plaintext highlighter-rouge">::</code>(더블콜론)은 클래스참조, 프로퍼티참조, 생성자참조를 위해 쓰이기도 합니다.</p>
+
+  </div>
+</details>
+
+<h1 id="3-마무리">3. 마무리</h1>
+<p>이번 주차는 ViewModel class를 만들고 이를 <code class="language-plaintext highlighter-rouge">HomeScreen</code>과 <code class="language-plaintext highlighter-rouge">searchScreen</code>에 적용하는 것을 했습니다.<br />
+사실 진도를 별로 못나가서 복습 내용보다 저를 포함한 멤버분들이 궁금할만한 부분들을 알아와서 정리를 해봤습니다.<br />
+끝!</p>
+
+  </article>
+  <br>
+
+  <hr/><br>
+
+  <div class="author">
+    
+    <table>
+        <tr>
+          <td rowspan="3" style="padding-right: 10px"><img class="author-pic" src="https://github.com/.png" alt=""></td>
+          <td><b><h2 rel="author"></h2></b></td>
+        </tr>
+      <tr>
+        <td><p rel="author"></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a rel="author" href="https://github.com/" target="_blank"><i class="fa fa-github fa-2x"></i></a>&nbsp&nbsp
+          
+        </td>
+      </tr>
+    </table>
+
+  </div>
+
+
+  <br>
+  <hr/>
+  <div>
+    <script src="https://utteranc.es/client.js"
+        repo="gdsc-seoultech/blog-comments"
+        issue-term="pathname"
+        label="comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+  </div>
+
+</div>
+<script src="/js/toc.js"></script>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper" align="center">
+  	<h4>This site was built using <a href="http://jekyllrb.com" target="_blank">Jekyll</a> and is hosted on <a href="https://github.com" target="_blank">Github</a>. &#169; GDSC Seoultech</h4>
+  </div>
+
+</footer>
+
+
+  </body>
+</html>

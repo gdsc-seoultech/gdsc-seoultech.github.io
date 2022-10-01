@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="tYMwPoxNrWfLx2sDrDYzqI4-dq3M3FfI56NBL9JNtH8" />
+
+    <title>알고리즘 스터디 정렬 - 1874번</title>
+    <meta name="description" content="A simple, whitespace, helvetica based portfolio theme.
+">
+
+    <link rel = "shortcut icon" type="image/x-icon" href="/img/square_logo.png">
+    <link rel="stylesheet" href="/css/main.css">
+<!--    <link rel="canonical" href="http://localhost:4000/posts/1st_term/study/2021-10-09-python_1874/">-->
+    <link rel="canonical" href="/posts/1st_term/study/2021-10-09-python_1874/">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- 카테고리 css -->
+    <link rel="stylesheet" href="/css/pagination.css">
+    <link href="/css/category.css" type="text/css" rel="stylesheet">
+</head>
+
+   
+  <body>
+    <script src="/js/default.js"></script>
+    <header id="tab" >
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <div class="site-header">
+    <div class="wrapper">
+      <div>
+        <a href="/">
+          <img src="/img/square_logo.png" align="left" width="57px">
+        </a>
+      </div>
+
+      <nav class="site-nav">
+
+        <div id="tab" class="trigger">
+          <!-- GDSC Seoultech instead of blog -->
+          <a class="page-link" href="/">GDSC</a>
+          <a class="page-link" href="/members/2">MEMBER</a>
+          <a class="page-link" href="/category/2nd_term">POST</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div id="hovering" class="tab-header">
+    <div class="wrapper">
+      <div class="detail-post">
+          <div class="tab-item">
+            <div><a class="page-link-detail" href="/category/1st_term">1기</a></div>
+            <div><a class="page-link-detail" href="/category/2nd_term">2기</a></div>
+          </div>
+      </div>
+      <div class="detail-member">
+        <div class="tab-item">
+          <div><a class="page-link-detail" href="/members/1">1기</a></div>
+          <div><a class="page-link-detail" href="/members/2">2기</a></div>
+        </div>
+    </div>
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+    var tabMenu = $("#tab");
+    var tabSubMenu = $("#hovering");
+
+    tabSubMenu.hide()
+
+    tabMenu.hover(function() {
+      tabSubMenu.show();
+    }, function() {
+      tabSubMenu.hide();
+    })
+  </script>
+
+</header>
+
+
+    <div class="page-content" id="page-content">
+      <div class="wrapper" id="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">알고리즘 스터디 정렬 - 1874번</h1>
+    <h1 class="post-description">정렬 알고리즘 1874번 풀이</h1>
+    <p class="post-meta">October 9, 2021 — 12:00 • Songminseon</p>
+    
+      
+        <span class="tag">study</span>
+      
+    
+  </header>
+  <article class="post-content">
+    <h1 id="인사말">인사말</h1>
+
+<p>안녕하세요. 송민선입니다.</p>
+
+<p>어느덧 알고리즘 스터디를 시작한 지 3주 째가 됐네요.</p>
+
+<p>하다보니 점점 더 익숙해지는 것 같기도 하면서 어려운 문제가 나오면 현타가 씨게 오네요…</p>
+
+<p>다들 꾸준히 열심히 해봅시다!!</p>
+
+<p><br /></p>
+
+<hr />
+
+<p><br /></p>
+
+<h1 id="문제해석">문제해석</h1>
+
+<p>이번 문제는 꽤나 저한테 난이도가 있는 편이었습니다.</p>
+
+<p>간단히 문제를 보자면</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>입력
+
+첫 줄에 n (1 ≤ n ≤ 100,000)이 주어진다. 둘째 줄부터 n개의 줄에는 수열을 이루는 1이상 n이하의 정수가 하나씩 순서대로 주어진다. 물론 같은 정수가 두 번 나오는 일은 없다.
+
+
+출력
+
+입력된 수열을 만들기 위해 필요한 연산을 한 줄에 한 개씩 출력한다. push연산은 +로, pop 연산은 -로 표현하도록 한다. 불가능한 경우 NO를 출력한다.
+</code></pre></div></div>
+
+<p>간단하게 예시를 들자면</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>입력
+
+4
+
+2
+
+3
+
+4
+
+1
+
+</code></pre></div></div>
+
+<p>이면</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>step 1
+push
+스택 =&gt; [1]
+
+step2
+push
+스택 =&gt; [1,2]
+
+step3
+pop
+스택 =&gt; [1]
+수열 =&gt; 2
+
+step4
+push
+스택 =&gt; [1,3]
+수열 =&gt; 2
+
+step5
+pop
+스택 =&gt; [1]
+수열 =&gt; 2 3
+
+step6
+push
+스택 =&gt; [1,4]
+수열 =&gt; 2 3
+
+step7
+pop
+스택 =&gt; [1]
+수열 =&gt; 2 3 4
+
+step8
+pop
+스택 =&gt; []
+수열 =&gt; 2 3 4 1
+</code></pre></div></div>
+
+<p>와 같이 나오기 때문에 출력값으로</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+
++
+-
++
+-
++
+-
+-
+</code></pre></div></div>
+
+<p>가 나오게 됩니다.</p>
+
+<hr />
+
+<h1 id="풀이방법">풀이방법</h1>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sys</span><span class="p">.</span><span class="n">stdin</span><span class="p">.</span><span class="n">readline</span><span class="p">())</span>
+<span class="n">stack_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">answer_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">is_valid</span> <span class="o">=</span> <span class="bp">True</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+    <span class="n">value</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sys</span><span class="p">.</span><span class="n">stdin</span><span class="p">.</span><span class="n">readline</span><span class="p">())</span>
+
+    <span class="k">while</span> <span class="n">count</span> <span class="o">&lt;=</span> <span class="n">value</span><span class="p">:</span>
+        <span class="n">stack_list</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
+        <span class="n">answer_list</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="s">"+"</span><span class="p">)</span>
+        <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="k">if</span> <span class="n">stack_list</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">value</span><span class="p">:</span>
+        <span class="n">stack_list</span><span class="p">.</span><span class="n">pop</span><span class="p">()</span>
+        <span class="n">answer_list</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="s">"-"</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">is_valid</span> <span class="o">=</span> <span class="bp">False</span>
+
+<span class="k">if</span> <span class="n">is_valid</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">answer_list</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"NO"</span><span class="p">)</span>
+
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h1 id="마무리">마무리</h1>
+
+<p>처음엔 무작정 [1,2,3,4,5,6] 이런식으로 스택을 만들어주고 그 스택을 기반으로 반복문을 썼더니 잘 풀리지 않았습니다.</p>
+
+<p>이 문제에서 수열은 1부터 n까지 이루어진 정수가 하나씩 주어진다라는 점이 중요하였습니다.</p>
+
+<p>그래서 count라는 변수를 만들어주고 처음 pop이 나오기전까지 count를 계속 더해주었습니다.</p>
+
+<p>어차피 모든 수는 한번 씩 나오기 때문에 pop이 나온 후에 push과정이 필요하면 그 전 count값에서 마저 이어가도 문제가 발생하지 않습니다.</p>
+
+<p>처음엔 이러한 본질을 잘 파악하지 못하여 해결하지 못했습니다.ㅠㅠ 앞으로 더 열심히 해여겠어요 ㅜㅜㅜ</p>
+
+  </article>
+  <br>
+
+  <hr/><br>
+
+  <div class="author">
+    
+    <table>
+        <tr>
+          <td rowspan="3" style="padding-right: 10px"><img class="author-pic" src="https://github.com/.png" alt=""></td>
+          <td><b><h2 rel="author"></h2></b></td>
+        </tr>
+      <tr>
+        <td><p rel="author"></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a rel="author" href="https://github.com/" target="_blank"><i class="fa fa-github fa-2x"></i></a>&nbsp&nbsp
+          
+        </td>
+      </tr>
+    </table>
+
+  </div>
+
+
+  <br>
+  <hr/>
+  <div>
+    <script src="https://utteranc.es/client.js"
+        repo="gdsc-seoultech/blog-comments"
+        issue-term="pathname"
+        label="comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+  </div>
+
+</div>
+<script src="/js/toc.js"></script>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper" align="center">
+  	<h4>This site was built using <a href="http://jekyllrb.com" target="_blank">Jekyll</a> and is hosted on <a href="https://github.com" target="_blank">Github</a>. &#169; GDSC Seoultech</h4>
+  </div>
+
+</footer>
+
+
+  </body>
+</html>
