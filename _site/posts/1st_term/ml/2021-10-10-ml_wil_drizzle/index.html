@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="tYMwPoxNrWfLx2sDrDYzqI4-dq3M3FfI56NBL9JNtH8" />
+
+    <title>5주차 ML 지도학습 WIL</title>
+    <meta name="description" content="A simple, whitespace, helvetica based portfolio theme.
+">
+
+    <link rel = "shortcut icon" type="image/x-icon" href="/img/square_logo.png">
+    <link rel="stylesheet" href="/css/main.css">
+<!--    <link rel="canonical" href="http://localhost:4000/posts/1st_term/ml/2021-10-10-ml_wil_drizzle/">-->
+    <link rel="canonical" href="/posts/1st_term/ml/2021-10-10-ml_wil_drizzle/">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- 카테고리 css -->
+    <link rel="stylesheet" href="/css/pagination.css">
+    <link href="/css/category.css" type="text/css" rel="stylesheet">
+</head>
+
+   
+  <body>
+    <script src="/js/default.js"></script>
+    <header id="tab" >
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <div class="site-header">
+    <div class="wrapper">
+      <div>
+        <a href="/">
+          <img src="/img/square_logo.png" align="left" width="57px">
+        </a>
+      </div>
+
+      <nav class="site-nav">
+
+        <div id="tab" class="trigger">
+          <!-- GDSC Seoultech instead of blog -->
+          <a class="page-link" href="/">GDSC</a>
+          <a class="page-link" href="/members/2">MEMBER</a>
+          <a class="page-link" href="/category/2nd_term">POST</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div id="hovering" class="tab-header">
+    <div class="wrapper">
+      <div class="detail-post">
+          <div class="tab-item">
+            <div><a class="page-link-detail" href="/category/1st_term">1기</a></div>
+            <div><a class="page-link-detail" href="/category/2nd_term">2기</a></div>
+          </div>
+      </div>
+      <div class="detail-member">
+        <div class="tab-item">
+          <div><a class="page-link-detail" href="/members/1">1기</a></div>
+          <div><a class="page-link-detail" href="/members/2">2기</a></div>
+        </div>
+    </div>
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+    var tabMenu = $("#tab");
+    var tabSubMenu = $("#hovering");
+
+    tabSubMenu.hide()
+
+    tabMenu.hover(function() {
+      tabSubMenu.show();
+    }, function() {
+      tabSubMenu.hide();
+    })
+  </script>
+
+</header>
+
+
+    <div class="page-content" id="page-content">
+      <div class="wrapper" id="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">5주차 ML 지도학습 WIL</h1>
+    <h1 class="post-description"></h1>
+    <p class="post-meta">October 9, 2021 — 00:00 • drizzle0171</p>
+    
+      
+        <span class="tag">ml</span>
+      
+    
+  </header>
+  <article class="post-content">
+    <p>거의 일주일만에 찾아온 TIL…….
+시험기간은 너무 바쁘다.
+그럼 이번 주 내용인 비지도 학습 시작!</p>
+
+<h1 id="1-비지도-학습의-종류-31">1. 비지도 학습의 종류 (3.1)</h1>
+<p>비지도 학습: 알고 있는 출력값이나 정보 없이 학습 알고리즘을 가르쳐야 하는 모든 종류의 머신러닝
+-&gt; 비지도 학습에서 학습 알고리즘은 입력 데이터만으로 데이터에서 지식을 추출할 수 있어야 함.</p>
+
+<p><br />
+<br /></p>
+
+<h3 id="1-비지도-변환">1. 비지도 변환</h3>
+
+<p>: 데이터를 새롭게 표현하여 사람이나 다른 머신러닝 알고리즘이 원래 데이터보다 쉽게 해석할 수 있도록 만드는 알고리즘</p>
+
+<ul>
+  <li>널리 사용되는 분야: 차원 축소 (특성이 많은 고차원 데이터를 특성의 수를 줄이며 꼭 필요한 특징을 포함한 데이터로 표현하는 방법) 
+ex. 데이터셋을 2차원으로 변경하는 경우 for 시각화</li>
+  <li>데이터를 구성하는 단위나 성분을 찾기도 함 (텍스트 문서에서 주체를 추출하는 것)</li>
+</ul>
+
+<h3 id="2-군집-알고리즘">2. 군집 알고리즘</h3>
+<p>: 데이터를 비슷한 것끼리 그룹으로 묶는 것</p>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="2-비지도-학습의-도전-과제-32">2. 비지도 학습의 도전 과제 (3.2)</h1>
+
+<ul>
+  <li>비지도 학습에서 가장 어려운 일: 알고리즘이 뭔가 <strong>유용한 것</strong>을 학습했는지 평가하는 것
+-&gt; 데이터를 더 잘 이해하고 싶을 때 탐색적 분석 단계에서 많이 사용
+-&gt; 데이터 전처리 단계에서도 사용</li>
+</ul>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="3-데이터-전처리와-스케일-조정-33">3. 데이터 전처리와 스케일 조정 (3.3)</h1>
+<h2 id="31-여러-가지-전처리-방법-331">3.1 여러 가지 전처리 방법 (3.3.1)</h2>
+<p><img src="https://images.velog.io/images/drizzle0171/post/b2f7247d-876e-436a-84d6-aca40863ce64/image.png" alt="" /></p>
+
+<p>데이터를 기준이 되는 범위로 변환하는 네 가지 방법 - 오른쪽 그래프</p>
+
+<ol>
+  <li>StandardScaler
+    <ul>
+      <li>각 특성의 평균을 1, 분산을 0으로 변경하여 모든 특성의 크기를 같게 함</li>
+      <li>특성의 최솟값과 최댓값의 크기를 제한하지 않음</li>
+    </ul>
+  </li>
+  <li>RobustScaler
+    <ul>
+      <li>특성들이 같은 스케일을 같게 됨 (StandardScler와 유사)</li>
+      <li>평균과 분산 대신 중간값과 사분위값을 사용
+     -&gt; 전체 데이터와 아주 동떨어진 데이터 포인트(=이상치)에 영향을 받지 않음</li>
+    </ul>
+  </li>
+  <li>MinMaxScaler
+    <ul>
+      <li>모든 특성이 정확하게 0과 1 사이에 위치하도록 데이터 변경</li>
+    </ul>
+  </li>
+  <li>Normalizer
+    <ul>
+      <li>매우 다른 스케일 조정 기법</li>
+      <li>특성 벡터의 유클리디안 길이가 1이 되도록 데이터 포인트 조정</li>
+      <li>지름이 1인 원에 데이터 포인트 투영 = 각 데이터 포인트가 다른 비율로 스케일에 조정</li>
+      <li>특성 벡터의 길이는 상관없고 데이터의 방향만이 중요할 때 많이 사용</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="32-데이터-변환-적용하기-332">3.2. 데이터 변환 적용하기 (3.3.2)</h2>
+<ul>
+  <li>scikit-learn의 transform은 새로운 데이터 표현을 만들 때 사용하는 메서드
+ 	-&gt; 테스트 세트의 최솟값과 범위를 사용하지 않고, 항상 훈련 세트의 최소값을 빼고 훈련 세트의 범위로 나눔</li>
+</ul>
+
+<h2 id="33-quantiletransformer와-powertransformer">3.3. QuantileTransformer와 PowerTransformer</h2>
+<ul>
+  <li>scikit-learn 0.19.0 버전에 QuantileTransformer 변환기가 추가되었음</li>
+</ul>
+
+<ol>
+  <li>
+    <dl>
+      <dt>QuantileTransformer</dt>
+      <dd>기본적으로 1000개의 분위를 사용하여 데이터를 균등하게 분포시킴
+        <ul>
+          <li>RobustScaler와 비슷하게 이상치에 민감하지 않으며 전체 데이터를 0과 1사이로 압축</li>
+          <li>매개변수: n_quatiles(기본값 1000)</li>
+        </ul>
+      </dd>
+    </dl>
+  </li>
+</ol>
+
+<h2 id="35-지도-학습에서-데이터-전처리-효과">3.5. 지도 학습에서 데이터 전처리 효과</h2>
+<ul>
+  <li>스케일을 조정하여 지도 학습 시키면 정확도가 꽤 높아짐
+  (실수를 줄이기 위해서는 직접 구현보다는 scikit-learn에서 제공하는 도구를 사용!)</li>
+  <li>파이썬 클래스만 바꾸면 다른 전처리 알고리즘으로 손쉽게 교체 O(모든 전처리 모델이 동일한 fit, transfrom 메서드 제공!)</li>
+</ul>
+
+<p><br />
+<br />
+<br /></p>
+
+<h1 id="4-차원-축소-특성-추출-매니폴드-학습">4. 차원 축소, 특성 추출, 매니폴드 학습</h1>
+<ul>
+  <li>비지도 학습에서 데이터를 변환하는 이유는?
+    <ol>
+      <li>시각화
+  	2. 데이터 압축
+        <ol>
+          <li>추가적인 처리를 위해 정보가 더 잘 드러나는 표현을 찾기 위함</li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+</ul>
+
+<h2 id="41-주성분-분석-pca-341">4.1. 주성분 분석 PCA (3.4.1)</h2>
+<p>: 특성들이 통계적으로 상관관계가 없도록 데이터셋을 회전시키는 기술 -&gt; 회전 후 데이터를 설명하는 데 얼마나 중요하냐에 따라 종종 새로운 특성 중 일부만 선택
+<img src="https://images.velog.io/images/drizzle0171/post/f36f9086-b6ae-4ad3-afd3-f6460f984399/image.png" alt="" /></p>
+
+<p>첫 번째 그래프</p>
+<ul>
+  <li>component 1이라고 쓰여있는 분산이 가장 큰 방향을 찾음 = 이 데이터에서 가장 많은 정보를 담고 있는 방향 (특성들의 상관관계가 가장 큰 방향)</li>
+  <li>첫 번째 방향과 직각인 방향 중 가장 많은 정보를 담은 방향을 찾음 (고차원에서는 무한히 많음)</li>
+  <li>화살표의 머리와 꼬리는 아무 의미가 없음
+-&gt; 이런 과정을 거쳐 찾은 방향 = 데이터에 있는 주된 분산의 방향: 주성분 principal component = 원본 특성 개수만큼 주성분이 있음</li>
+</ul>
+
+<p>두 번째 그래프</p>
+<ul>
+  <li>같은 데이터</li>
+  <li>주성분 1과 2를 각각 x축과 y축에 나란하도록 회전한 것</li>
+  <li>PCA에 의해 회전된 두 축은 연관되어 있지 않으므로 변환된 데이터의 상관관계 행렬이 대각선 방향을 제외하고는 0이 됨</li>
+</ul>
+
+<p><img src="https://images.velog.io/images/drizzle0171/post/7ceca73b-83f0-4021-9e10-08f994f7864a/image.png" alt="" /></p>
+
+<ul>
+  <li>PCA는 주성분의 일부만 남기는 차원 축소 용도로 사용할 수 있음</li>
+  <li>첫 번째 주성분만 유지하려고 한 예 = 2차원 데이터셋 -&gt; 1차원 데이터셋</li>
+  <li>가장 유용한 방향을 찾아 그 방향 성분을 유지하는 것 (여기서는 오른쪽 하래로 향하는 성분)</li>
+  <li>데이터에 다시 평균을 더해 반대로 회전 (마지막 그림) -&gt; ONLY FEATURE 1</li>
+</ul>
+
+<h3 id="고유얼굴-특성-추출">고유얼굴 특성 추출</h3>
+<p>: PCA는 고유얼굴 특성 추출에도 사용됨</p>
+
+<p>특성추출: 원본 데이터 표현보다 분석하기에 더 적합한 표현을 찾을 수 있음!</p>
+
+<p>얼굴 인식
+새로운 얼굴 이미지가 데이터베이스에 있는 기존 얼굴 중 하나에 속하는가?
+-&gt; 각 사람을 서로 다른 클래스로 구분하는 분류기를 만드는 것 (하지만 각 사람에 대한 이미지, 즉 클래스별 훈련 데이터가 너무 적음) = 1NeighborsClassifier 사용</p>
+
+  </article>
+  <br>
+
+  <hr/><br>
+
+  <div class="author">
+    
+    <table>
+        <tr>
+          <td rowspan="3" style="padding-right: 10px"><img class="author-pic" src="https://github.com/.png" alt=""></td>
+          <td><b><h2 rel="author"></h2></b></td>
+        </tr>
+      <tr>
+        <td><p rel="author"></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a rel="author" href="https://github.com/" target="_blank"><i class="fa fa-github fa-2x"></i></a>&nbsp&nbsp
+          
+        </td>
+      </tr>
+    </table>
+
+  </div>
+
+
+  <br>
+  <hr/>
+  <div>
+    <script src="https://utteranc.es/client.js"
+        repo="gdsc-seoultech/blog-comments"
+        issue-term="pathname"
+        label="comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+  </div>
+
+</div>
+<script src="/js/toc.js"></script>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper" align="center">
+  	<h4>This site was built using <a href="http://jekyllrb.com" target="_blank">Jekyll</a> and is hosted on <a href="https://github.com" target="_blank">Github</a>. &#169; GDSC Seoultech</h4>
+  </div>
+
+</footer>
+
+
+  </body>
+</html>

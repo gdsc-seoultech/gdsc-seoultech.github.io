@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="tYMwPoxNrWfLx2sDrDYzqI4-dq3M3FfI56NBL9JNtH8" />
+
+    <title>🖍️ 와이어프레임 그리기</title>
+    <meta name="description" content="A simple, whitespace, helvetica based portfolio theme.
+">
+
+    <link rel = "shortcut icon" type="image/x-icon" href="/img/square_logo.png">
+    <link rel="stylesheet" href="/css/main.css">
+<!--    <link rel="canonical" href="http://localhost:4000/posts/1st_term/solution_challenge/medimedi/2022-01-25-medimedi5/">-->
+    <link rel="canonical" href="/posts/1st_term/solution_challenge/medimedi/2022-01-25-medimedi5/">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- 카테고리 css -->
+    <link rel="stylesheet" href="/css/pagination.css">
+    <link href="/css/category.css" type="text/css" rel="stylesheet">
+</head>
+
+   
+  <body>
+    <script src="/js/default.js"></script>
+    <header id="tab" >
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <div class="site-header">
+    <div class="wrapper">
+      <div>
+        <a href="/">
+          <img src="/img/square_logo.png" align="left" width="57px">
+        </a>
+      </div>
+
+      <nav class="site-nav">
+
+        <div id="tab" class="trigger">
+          <!-- GDSC Seoultech instead of blog -->
+          <a class="page-link" href="/">GDSC</a>
+          <a class="page-link" href="/members/2">MEMBER</a>
+          <a class="page-link" href="/category/2nd_term">POST</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div id="hovering" class="tab-header">
+    <div class="wrapper">
+      <div class="detail-post">
+          <div class="tab-item">
+            <div><a class="page-link-detail" href="/category/1st_term">1기</a></div>
+            <div><a class="page-link-detail" href="/category/2nd_term">2기</a></div>
+          </div>
+      </div>
+      <div class="detail-member">
+        <div class="tab-item">
+          <div><a class="page-link-detail" href="/members/1">1기</a></div>
+          <div><a class="page-link-detail" href="/members/2">2기</a></div>
+        </div>
+    </div>
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+    var tabMenu = $("#tab");
+    var tabSubMenu = $("#hovering");
+
+    tabSubMenu.hide()
+
+    tabMenu.hover(function() {
+      tabSubMenu.show();
+    }, function() {
+      tabSubMenu.hide();
+    })
+  </script>
+
+</header>
+
+
+    <div class="page-content" id="page-content">
+      <div class="wrapper" id="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">🖍️ 와이어프레임 그리기</h1>
+    <h1 class="post-description"></h1>
+    <p class="post-meta">January 25, 2022 — 00:00 • twinklesu</p>
+    
+      
+        <span class="tag">solution_challenge</span>
+      
+        <span class="tag">medimedi</span>
+      
+    
+  </header>
+  <article class="post-content">
+    <h1 id="보고-사항">보고 사항</h1>
+<p><strong>민찬</strong><br />
+✔️데이터를 학습하기 좋게 정리 함<br />
+✔️약 박스의 약 이름들은 정자로 써져있기 보다, 각양각색으로 써져있어서 -&gt; 휘어진 글자, 독특한 모양의 글자도 잘 인식하는 모델 연구 중<br />
+✔️모델을 돌려보는 중이고, 성능 확인 후에 더 좋은 모델 사용 예정!</p>
+
+<p><strong>윤재</strong><br />
+✔️알람, 검색 기록 기능 담당<br />
+✔️와이어프레임 기본 그려옴  (저시력자 위한 고대비, 전맹위한 넓은 버튼)
+<img src="https://images.velog.io/images/twinklesu914/post/2cb64e01-e380-4afc-8ade-388d400e8541/image.png" alt="" /><br />
+✔️로그인 찾아봤다!</p>
+
+<p><strong>하은</strong><br />
+✔️ml kit 사용하는 codelab 공부 중<br />
+<img src="https://images.velog.io/images/twinklesu914/post/2cbc15be-3017-4768-98b5-e77610411806/image.png" alt="" /><br />
+✔️카메라 기능 담당<br />
+✔️피그마 사용법을 익혀보려다 벽에 부딪힘,,</p>
+
+<p><strong>수빈</strong><br />
+✔️플로우 다이어그램 그림 <a href="https://www.diagrams.net/">diagram.net</a> <br />
+✔️DB 스키마 그림 <a href="https://www.erdcloud.com/">ERDcloud 사이트</a><br />
+    <img src="https://images.velog.io/images/twinklesu914/post/20e2be97-3b96-4a66-9a3f-2aa70126b39f/image.png" alt="" />
+✔️의약품 DB 조사 완료</p>
+
+<h1 id="논의-사항">논의 사항</h1>
+<p>✔️로그인은 구글 소셜만 (버튼 단순화)<br />
+✔️약db는 미리 api 요청 보내서 구축<br />
+✔️깃헙 오픈 - 각자의 담당에 admin 권한을 주었습니다
+<img src="https://images.velog.io/images/twinklesu914/post/4f05bf5b-8a37-4e7c-9fbb-d87e953520e5/image.png" alt="" /></p>
+
+<h2 id="ui">UI</h2>
+<p>✔️첫 실행 시, 튜토리얼 영상 (자동 음성 재생)<br />
+✔️첫 실행 시, 항상 음성 안내 / 텍스트 안내 선택 (저시력자, 전맹 선택지 제공)<br />
+✔️약 검색 기록은 한 화면에 5장 보이도록</p>
+
+<h1 id="다음-미팅까지-해올-것">다음 미팅까지 해올 것</h1>
+
+<p><strong>하은</strong><br />
+☑️ 카메라, tts 기능 익히기<br />
+☑️ Retrofit, MVVM 패턴 숙지</p>
+
+<p><strong>윤재</strong><br />
+☑️ 와이어프레임 완성하기<br />
+☑️ 안드로이드 프로젝트 시작하기</p>
+
+<p><strong>민찬</strong><br />
+☑️ 모델 완성 하기!</p>
+
+<p><strong>수빈</strong><br />
+☑️ DB 구축하기<br />
+☑️ API 문서 작성<br />
+☑️ AWS 오픈</p>
+
+<p>“이걸 한다고?” 했다가 10분 뒤에는 “생각보다 간단할지도?”를 반복하고 있지만…<br />
+넷이서 각자 열심히 하면 합친 결과물은 좀 멋질지도? ㅎㅎ</p>
+
+  </article>
+  <br>
+
+  <hr/><br>
+
+  <div class="author">
+    
+    <table>
+        <tr>
+          <td rowspan="3" style="padding-right: 10px"><img class="author-pic" src="https://github.com/.png" alt=""></td>
+          <td><b><h2 rel="author"></h2></b></td>
+        </tr>
+      <tr>
+        <td><p rel="author"></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a rel="author" href="https://github.com/" target="_blank"><i class="fa fa-github fa-2x"></i></a>&nbsp&nbsp
+          
+        </td>
+      </tr>
+    </table>
+
+  </div>
+
+
+  <br>
+  <hr/>
+  <div>
+    <script src="https://utteranc.es/client.js"
+        repo="gdsc-seoultech/blog-comments"
+        issue-term="pathname"
+        label="comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+  </div>
+
+</div>
+<script src="/js/toc.js"></script>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper" align="center">
+  	<h4>This site was built using <a href="http://jekyllrb.com" target="_blank">Jekyll</a> and is hosted on <a href="https://github.com" target="_blank">Github</a>. &#169; GDSC Seoultech</h4>
+  </div>
+
+</footer>
+
+
+  </body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="tYMwPoxNrWfLx2sDrDYzqI4-dq3M3FfI56NBL9JNtH8" />
+
+    <title>알고리즘 스터디 큐 - 11866번</title>
+    <meta name="description" content="A simple, whitespace, helvetica based portfolio theme.
+">
+
+    <link rel = "shortcut icon" type="image/x-icon" href="/img/square_logo.png">
+    <link rel="stylesheet" href="/css/main.css">
+<!--    <link rel="canonical" href="http://localhost:4000/posts/1st_term/study/2021-11-10-python_11866/">-->
+    <link rel="canonical" href="/posts/1st_term/study/2021-11-10-python_11866/">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- 카테고리 css -->
+    <link rel="stylesheet" href="/css/pagination.css">
+    <link href="/css/category.css" type="text/css" rel="stylesheet">
+</head>
+
+   
+  <body>
+    <script src="/js/default.js"></script>
+    <header id="tab" >
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <div class="site-header">
+    <div class="wrapper">
+      <div>
+        <a href="/">
+          <img src="/img/square_logo.png" align="left" width="57px">
+        </a>
+      </div>
+
+      <nav class="site-nav">
+
+        <div id="tab" class="trigger">
+          <!-- GDSC Seoultech instead of blog -->
+          <a class="page-link" href="/">GDSC</a>
+          <a class="page-link" href="/members/2">MEMBER</a>
+          <a class="page-link" href="/category/2nd_term">POST</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div id="hovering" class="tab-header">
+    <div class="wrapper">
+      <div class="detail-post">
+          <div class="tab-item">
+            <div><a class="page-link-detail" href="/category/1st_term">1기</a></div>
+            <div><a class="page-link-detail" href="/category/2nd_term">2기</a></div>
+          </div>
+      </div>
+      <div class="detail-member">
+        <div class="tab-item">
+          <div><a class="page-link-detail" href="/members/1">1기</a></div>
+          <div><a class="page-link-detail" href="/members/2">2기</a></div>
+        </div>
+    </div>
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+    var tabMenu = $("#tab");
+    var tabSubMenu = $("#hovering");
+
+    tabSubMenu.hide()
+
+    tabMenu.hover(function() {
+      tabSubMenu.show();
+    }, function() {
+      tabSubMenu.hide();
+    })
+  </script>
+
+</header>
+
+
+    <div class="page-content" id="page-content">
+      <div class="wrapper" id="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">알고리즘 스터디 큐 - 11866번</h1>
+    <h1 class="post-description">스택 알고리즘 11866번 풀이</h1>
+    <p class="post-meta">November 10, 2021 — 09:00 • JunginO</p>
+    
+      
+        <span class="tag">study</span>
+      
+    
+  </header>
+  <article class="post-content">
+    <h1 id="백준-큐-11866번">백준 큐 11866번</h1>
+
+<p>안녕하세요, GDSC 웹 멤버 오정인입니다.<br />
+큐의 다섯번째 문제를 풀어봤습니다~<br /></p>
+
+<h2 id="deque">deque</h2>
+
+<p>덱(deque)은 스택과 큐를 합친 자료구조로, 빠른 속도로 시작점의 값을 넣고 빼거나, 끝 점의 값을 넣고 뺄 수 있도록 해줍니다. 일반적인 리스트의 경우 O(n)이지만, 덱을 이용할 경우 O(1)이라고 합니다.</p>
+
+<h2 id="풀이">풀이</h2>
+
+<p>요세푸스 문제 그대로 풀었습니다!
+<br /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">deque</span>
+<span class="n">n</span><span class="p">,</span><span class="n">k</span><span class="o">=</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="nb">input</span><span class="p">().</span><span class="n">split</span><span class="p">())</span>
+<span class="n">lst</span><span class="o">=</span><span class="n">deque</span><span class="p">([</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)])</span>
+<span class="n">ans</span><span class="o">=</span><span class="p">[]</span>
+<span class="n">cnt</span><span class="o">=</span><span class="mi">1</span>
+<span class="k">while</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">cnt</span><span class="o">!=</span><span class="n">k</span><span class="p">:</span> <span class="o">//</span><span class="n">카운터가</span> <span class="n">k와</span> <span class="n">일치하지</span> <span class="n">않을경우</span>
+        <span class="n">lst</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">lst</span><span class="p">.</span><span class="n">popleft</span><span class="p">())</span> <span class="o">//</span><span class="n">맨</span> <span class="n">뒤로</span> <span class="n">보내줌</span>
+        <span class="n">cnt</span><span class="o">+=</span><span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span> <span class="o">//</span><span class="n">일치할경우</span>
+        <span class="n">ans</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">lst</span><span class="p">.</span><span class="n">popleft</span><span class="p">())</span> <span class="o">//</span><span class="n">ans</span> <span class="n">리스트로</span> <span class="n">보내줌</span>
+        <span class="n">cnt</span><span class="o">=</span><span class="mi">1</span> <span class="o">//</span><span class="n">카운터</span> <span class="n">초기화</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">"&lt;"</span><span class="o">+</span><span class="s">', '</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span><span class="n">ans</span><span class="p">))</span><span class="o">+</span><span class="s">"&gt;"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<p>파이썬의 deque를 이용하면 간단하게 풀 수 있는 문제인 것 같습니다.</p>
+
+  </article>
+  <br>
+
+  <hr/><br>
+
+  <div class="author">
+    
+    <table>
+        <tr>
+          <td rowspan="3" style="padding-right: 10px"><img class="author-pic" src="https://github.com/.png" alt=""></td>
+          <td><b><h2 rel="author"></h2></b></td>
+        </tr>
+      <tr>
+        <td><p rel="author"></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a rel="author" href="https://github.com/" target="_blank"><i class="fa fa-github fa-2x"></i></a>&nbsp&nbsp
+          
+        </td>
+      </tr>
+    </table>
+
+  </div>
+
+
+  <br>
+  <hr/>
+  <div>
+    <script src="https://utteranc.es/client.js"
+        repo="gdsc-seoultech/blog-comments"
+        issue-term="pathname"
+        label="comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+  </div>
+
+</div>
+<script src="/js/toc.js"></script>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper" align="center">
+  	<h4>This site was built using <a href="http://jekyllrb.com" target="_blank">Jekyll</a> and is hosted on <a href="https://github.com" target="_blank">Github</a>. &#169; GDSC Seoultech</h4>
+  </div>
+
+</footer>
+
+
+  </body>
+</html>

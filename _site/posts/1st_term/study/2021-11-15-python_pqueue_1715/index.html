@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="tYMwPoxNrWfLx2sDrDYzqI4-dq3M3FfI56NBL9JNtH8" />
+
+    <title>알고리즘 스터디 우선순위 큐-1715번</title>
+    <meta name="description" content="A simple, whitespace, helvetica based portfolio theme.
+">
+
+    <link rel = "shortcut icon" type="image/x-icon" href="/img/square_logo.png">
+    <link rel="stylesheet" href="/css/main.css">
+<!--    <link rel="canonical" href="http://localhost:4000/posts/1st_term/study/2021-11-15-python_pqueue_1715/">-->
+    <link rel="canonical" href="/posts/1st_term/study/2021-11-15-python_pqueue_1715/">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- 카테고리 css -->
+    <link rel="stylesheet" href="/css/pagination.css">
+    <link href="/css/category.css" type="text/css" rel="stylesheet">
+</head>
+
+   
+  <body>
+    <script src="/js/default.js"></script>
+    <header id="tab" >
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <div class="site-header">
+    <div class="wrapper">
+      <div>
+        <a href="/">
+          <img src="/img/square_logo.png" align="left" width="57px">
+        </a>
+      </div>
+
+      <nav class="site-nav">
+
+        <div id="tab" class="trigger">
+          <!-- GDSC Seoultech instead of blog -->
+          <a class="page-link" href="/">GDSC</a>
+          <a class="page-link" href="/members/2">MEMBER</a>
+          <a class="page-link" href="/category/2nd_term">POST</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div id="hovering" class="tab-header">
+    <div class="wrapper">
+      <div class="detail-post">
+          <div class="tab-item">
+            <div><a class="page-link-detail" href="/category/1st_term">1기</a></div>
+            <div><a class="page-link-detail" href="/category/2nd_term">2기</a></div>
+          </div>
+      </div>
+      <div class="detail-member">
+        <div class="tab-item">
+          <div><a class="page-link-detail" href="/members/1">1기</a></div>
+          <div><a class="page-link-detail" href="/members/2">2기</a></div>
+        </div>
+    </div>
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+    var tabMenu = $("#tab");
+    var tabSubMenu = $("#hovering");
+
+    tabSubMenu.hide()
+
+    tabMenu.hover(function() {
+      tabSubMenu.show();
+    }, function() {
+      tabSubMenu.hide();
+    })
+  </script>
+
+</header>
+
+
+    <div class="page-content" id="page-content">
+      <div class="wrapper" id="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">알고리즘 스터디 우선순위 큐-1715번</h1>
+    <h1 class="post-description">큐 알고리즘 1715번 풀이</h1>
+    <p class="post-meta">November 14, 2021 — 12:00 • Songminseon</p>
+    
+      
+        <span class="tag">study</span>
+      
+    
+  </header>
+  <article class="post-content">
+    <h1 id="백준-정렬-1715번">백준 정렬 1715번</h1>
+
+<p>안녕하세요. GDSC 웹 코어 멤버 송민선입니다. <br /></p>
+
+<p><br />
+<br /></p>
+
+<p>먼저 문제 분석부터 진행해보겠습니다.
+<br /><br /></p>
+
+<p>문제는</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>정렬된 두 묶음의 숫자 카드가 있다고 하자. 각 묶음의 카드의 수를 A, B라 하면 보통 두 묶음을 합쳐서 하나로 만드는 데에는 A+B 번의 비교를 해야 한다. 이를테면, 20장의 숫자 카드 묶음과 30장의 숫자 카드 묶음을 합치려면 50번의 비교가 필요하다.
+
+매우 많은 숫자 카드 묶음이 책상 위에 놓여 있다. 이들을 두 묶음씩 골라 서로 합쳐나간다면, 고르는 순서에 따라서 비교 횟수가 매우 달라진다. 예를 들어 10장, 20장, 40장의 묶음이 있다면 10장과 20장을 합친 뒤, 합친 30장 묶음과 40장을 합친다면 (10 + 20) + (30 + 40) = 100번의 비교가 필요하다. 그러나 10장과 40장을 합친 뒤, 합친 50장 묶음과 20장을 합친다면 (10 + 40) + (50 + 20) = 120 번의 비교가 필요하므로 덜 효율적인 방법이다.
+
+N개의 숫자 카드 묶음의 각각의 크기가 주어질 때, 최소한 몇 번의 비교가 필요한지를 구하는 프로그램을 작성하시오.
+</code></pre></div></div>
+
+<p>문제 해석엔 큰 어려움이 없는 것 같네요. 작은 수 끼리 합치고 그 합친수를 다시 하나의 덩어리로 생각한 상태에서 계속 작은값 2개끼리 덧셈을 진행하는 문제입니다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ex)
+heap =&gt; [10, 20, 50]
+total = 0
+
+
+Step 1
+10+20 = 30,
+total = 30
+heap =&gt; [30, 50]
+
+Step 2
+30+50 = 80
+total = 30 + 80 = 110
+heap =&gt; [80]
+
+end
+</code></pre></div></div>
+
+<p>의 형태로 진행이 됩니다.</p>
+
+<p><br /></p>
+
+<h1 id="heap이란">heap이란?</h1>
+
+<p>Heap은 최댓값 및 최솟값을 빠르게 찾아내기 위해 만들어진 자료구조라고 보면 됩니다.<br />
+자식노드가 2개인 이진 트리형식으로 되어있으며 최소힙 기준으로 부모노드가 자식노드보다 작거나 같아야 합니다.<br />
+힙의 시간복잡도는 O(log n)이 소요됩니다.<br />
+힙은 기본적으로 배열형태의 자료구조입니다. <br />
+배열내에서 힙 부모 자식관계를 파악할려면 <br /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>부모노드 =&gt; a[(i-1)//2]
+왼쪽노드 =&gt; a[i*2 + 1]
+오른쪽노드 =&gt; a[i*2 + 2]
+</code></pre></div></div>
+
+<p>와 같은 형태로 인덱싱을 접근할 수 있습니다.<br />
+다만 실전에서 heap을 사용해야 할 문제에서 적용할 수 있을지 ㅠㅠ 자신이 없네요.</p>
+
+<h1 id="heapq-활용">heapq 활용</h1>
+
+<p>다행히 저희는 heap을 구현할 때 배열에 array의 index를 이리저리 주는 그런 짓은 안해도 됩니다.<br />
+파이썬 모듈중에 heapq라는게 있어 쉽게 heap자료구조를 다룰 수 있습니다.<br /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># heapq 사용예시
+</span><span class="kn">import</span> <span class="nn">heapq</span>
+<span class="n">myheap</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="n">heapq</span><span class="p">.</span><span class="n">heappush</span><span class="p">(</span><span class="n">myheap</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">heapq</span><span class="p">.</span><span class="n">heappush</span><span class="p">(</span><span class="n">myheap</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">heapq</span><span class="p">.</span><span class="n">heappush</span><span class="p">(</span><span class="n">myheap</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">heapq</span><span class="p">.</span><span class="n">heappush</span><span class="p">(</span><span class="n">myheap</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">heapq</span><span class="p">.</span><span class="n">heappush</span><span class="p">(</span><span class="n">myheap</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">"heap =&gt; "</span><span class="p">,</span> <span class="n">myheap</span><span class="p">)</span> <span class="c1">#heap =&gt; [0, 1, 3, 5, 2]
+</span>
+<span class="k">print</span><span class="p">(</span><span class="n">heapq</span><span class="p">.</span><span class="n">heappop</span><span class="p">(</span><span class="n">myheap</span><span class="p">))</span> <span class="c1"># 0
+</span><span class="k">print</span><span class="p">(</span><span class="n">heapq</span><span class="p">.</span><span class="n">heappop</span><span class="p">(</span><span class="n">myheap</span><span class="p">))</span> <span class="c1"># 1
+</span><span class="k">print</span><span class="p">(</span><span class="n">heapq</span><span class="p">.</span><span class="n">heappop</span><span class="p">(</span><span class="n">myheap</span><span class="p">))</span> <span class="c1"># 2
+</span>
+</code></pre></div></div>
+
+<p>만약 heapq없이 array로 구현을 한다면 삽입, 삭제가 일어날때마다 array를 다시 정렬해줘야 합니다.<br />
+하지만 heapq를 사용함으로 인해 그러한 과정 없이 빠르게 heapq가 사용이 가능합니다.<br />
+heapq는 최소힙만 지원하기 때문에 최대힙을 사용하기 위해서는 값을 받을 때 마이너스를 곱해줘서 입력하는 방법이 있습니다.<br />
+이번 문제를 풀다보면 최대힙을 사용해야하는 경우가 있는데 모든값에 마이너스를 주고 다시 출력할 때 마이너스를 곱하면 최대값을 쉽게 구할 수 있습니다.</p>
+
+<h1 id="풀이방법">풀이방법</h1>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">heapq</span>
+
+<span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sys</span><span class="p">.</span><span class="n">stdin</span><span class="p">.</span><span class="n">readline</span><span class="p">())</span>
+<span class="n">myheap</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+    <span class="n">number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sys</span><span class="p">.</span><span class="n">stdin</span><span class="p">.</span><span class="n">readline</span><span class="p">())</span>
+    <span class="n">heapq</span><span class="p">.</span><span class="n">heappush</span><span class="p">(</span><span class="n">myheap</span><span class="p">,</span> <span class="n">number</span><span class="p">)</span>
+
+<span class="n">count</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">myheap</span><span class="p">)</span>
+<span class="nb">sum</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">count</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">count</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span> <span class="c1"># 카드가 한개이면 비교대상이 없으니 0을 출력한다.
+</span>        <span class="nb">sum</span> <span class="o">+=</span> <span class="mi">0</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">value_1</span> <span class="o">=</span> <span class="n">heapq</span><span class="p">.</span><span class="n">heappop</span><span class="p">(</span><span class="n">myheap</span><span class="p">)</span> <span class="c1"># 최솟값
+</span>        <span class="n">value_2</span> <span class="o">=</span> <span class="n">heapq</span><span class="p">.</span><span class="n">heappop</span><span class="p">(</span><span class="n">myheap</span><span class="p">)</span> <span class="c1"># 그 다음 최솟값
+</span>        <span class="n">total</span> <span class="o">=</span> <span class="n">value_1</span> <span class="o">+</span> <span class="n">value_2</span>
+        <span class="nb">sum</span> <span class="o">+=</span> <span class="n">total</span> <span class="c1"># 합치고
+</span>        <span class="n">myheap</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">total</span><span class="p">)</span> <span class="c1"># 다시 넣기
+</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h1 id="마무리">마무리</h1>
+
+<p>처음에 <br />
+10, 20, 30이 있으면 <br /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>step1 =&gt; 10+20
+step1 =&gt; 10+20+40
+</code></pre></div></div>
+
+<p>이렇게 진행하는줄 알고 접근했는데 생각해보니 앞에 합산한게 카드내에서 가장 큰값이면 이 경우가 만족하지 않기 때문에 적용이 안됩니다.<br /></p>
+
+<p>힙에 대해 이해하고 있으면 빠르게 풀 수 있는 문제였습니다. 물론 저는 오래걸렸습니다 ㅎㅎ</p>
+
+  </article>
+  <br>
+
+  <hr/><br>
+
+  <div class="author">
+    
+    <table>
+        <tr>
+          <td rowspan="3" style="padding-right: 10px"><img class="author-pic" src="https://github.com/.png" alt=""></td>
+          <td><b><h2 rel="author"></h2></b></td>
+        </tr>
+      <tr>
+        <td><p rel="author"></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a rel="author" href="https://github.com/" target="_blank"><i class="fa fa-github fa-2x"></i></a>&nbsp&nbsp
+          
+        </td>
+      </tr>
+    </table>
+
+  </div>
+
+
+  <br>
+  <hr/>
+  <div>
+    <script src="https://utteranc.es/client.js"
+        repo="gdsc-seoultech/blog-comments"
+        issue-term="pathname"
+        label="comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+  </div>
+
+</div>
+<script src="/js/toc.js"></script>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper" align="center">
+  	<h4>This site was built using <a href="http://jekyllrb.com" target="_blank">Jekyll</a> and is hosted on <a href="https://github.com" target="_blank">Github</a>. &#169; GDSC Seoultech</h4>
+  </div>
+
+</footer>
+
+
+  </body>
+</html>

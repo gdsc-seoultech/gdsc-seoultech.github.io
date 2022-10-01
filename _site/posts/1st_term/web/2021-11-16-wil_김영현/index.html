@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="tYMwPoxNrWfLx2sDrDYzqI4-dq3M3FfI56NBL9JNtH8" />
+
+    <title>WIL 6주차(김영현)</title>
+    <meta name="description" content="A simple, whitespace, helvetica based portfolio theme.
+">
+
+    <link rel = "shortcut icon" type="image/x-icon" href="/img/square_logo.png">
+    <link rel="stylesheet" href="/css/main.css">
+<!--    <link rel="canonical" href="http://localhost:4000/posts/1st_term/web/2021-11-16-wil_%EA%B9%80%EC%98%81%ED%98%84/">-->
+    <link rel="canonical" href="/posts/1st_term/web/2021-11-16-wil_%EA%B9%80%EC%98%81%ED%98%84/">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- 카테고리 css -->
+    <link rel="stylesheet" href="/css/pagination.css">
+    <link href="/css/category.css" type="text/css" rel="stylesheet">
+</head>
+
+   
+  <body>
+    <script src="/js/default.js"></script>
+    <header id="tab" >
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <div class="site-header">
+    <div class="wrapper">
+      <div>
+        <a href="/">
+          <img src="/img/square_logo.png" align="left" width="57px">
+        </a>
+      </div>
+
+      <nav class="site-nav">
+
+        <div id="tab" class="trigger">
+          <!-- GDSC Seoultech instead of blog -->
+          <a class="page-link" href="/">GDSC</a>
+          <a class="page-link" href="/members/2">MEMBER</a>
+          <a class="page-link" href="/category/2nd_term">POST</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div id="hovering" class="tab-header">
+    <div class="wrapper">
+      <div class="detail-post">
+          <div class="tab-item">
+            <div><a class="page-link-detail" href="/category/1st_term">1기</a></div>
+            <div><a class="page-link-detail" href="/category/2nd_term">2기</a></div>
+          </div>
+      </div>
+      <div class="detail-member">
+        <div class="tab-item">
+          <div><a class="page-link-detail" href="/members/1">1기</a></div>
+          <div><a class="page-link-detail" href="/members/2">2기</a></div>
+        </div>
+    </div>
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+    var tabMenu = $("#tab");
+    var tabSubMenu = $("#hovering");
+
+    tabSubMenu.hide()
+
+    tabMenu.hover(function() {
+      tabSubMenu.show();
+    }, function() {
+      tabSubMenu.hide();
+    })
+  </script>
+
+</header>
+
+
+    <div class="page-content" id="page-content">
+      <div class="wrapper" id="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">WIL 6주차(김영현)</h1>
+    <h1 class="post-description"></h1>
+    <p class="post-meta">November 16, 2021 — 03:30 • YeongHyeon-Kim</p>
+    
+      
+        <span class="tag">web</span>
+      
+    
+  </header>
+  <article class="post-content">
+    <h1 id="wil-6주차-스프링부트">WIL 6주차 스프링부트!</h1>
+
+<h2 id="jsessionid-생성-규칙-찾아보기-저번주-의문사항">JSESSIONID 생성 규칙? 찾아보기 (저번주 의문사항)</h2>
+<ul>
+  <li>https://semtax.tistory.com/92 읽고 쓰는 정리
+    <ol>
+      <li>16바이트 단위로 랜덤 값을 가져와서 문자열 형태의 16진수로 변환</li>
+      <li>라우트 값이 있는 경우 랜덤값 뒤에 . 문자와 같이 라우트값 할당</li>
+      <li>마지막으로 jvaRoute값을 “.”문자와 합쳐준다.</li>
+    </ol>
+  </li>
+  <li>뭔소리인지 모르겠음.. 다음주까지 좀더 찾아보겠습니다.</li>
+</ul>
+
+<h2 id="저번주-과제-마무리">저번주 과제 마무리</h2>
+<h2 id="게시물-댓글-관련-구현">게시물 댓글 관련 구현</h2>
+<ul>
+  <li>코드를 작성할때마다 느끼지만 package를 어떻게 정리해야 깔끔한지 모르겠다…</li>
+  <li>지금은 front를 생각하면서 나누었던 package대로 commnet 관련이기 때문에 새로운 comment package를 만들어 사용중인데 사실 이게 맞는지 확신은 없다.. 지수님이 알려준 거에 대해서 자세히 알아봐야겠다
+    <h3 id="게시물의-댓글-조회">게시물의 댓글 조회</h3>
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Comment</span><span class="o">&gt;</span> <span class="n">comments</span> <span class="o">=</span> <span class="n">commentRepository</span><span class="o">.</span><span class="na">findAllByBoardId_Id</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
+    <span class="nc">List</span><span class="o">&lt;</span><span class="nc">BoardDto</span><span class="o">.</span><span class="na">GetCommentRequest</span><span class="o">&gt;</span> <span class="n">getCommentRequest</span> <span class="o">=</span> <span class="n">comments</span><span class="o">.</span><span class="na">stream</span><span class="o">().</span><span class="na">map</span><span class="o">(</span><span class="n">comment</span> <span class="o">-&gt;</span> <span class="o">{</span>
+        <span class="nc">BoardDto</span><span class="o">.</span><span class="na">GetCommentRequest</span> <span class="n">getComment</span> <span class="o">=</span> <span class="n">modelMapper</span><span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="n">comment</span><span class="o">,</span> <span class="nc">BoardDto</span><span class="o">.</span><span class="na">GetCommentRequest</span><span class="o">.</span><span class="na">class</span><span class="o">);</span> <span class="c1">// 받아온 comment는 db에 저장된 그대로 가져오기 때문에 원하는 값만 가져올 수 있게 따로 정리를 해줘야 함. modelMapper.map를 이용하여 미리 지정된 형식 GetCommentRequest 에 맞추어 정리함.</span>
+        <span class="n">getComment</span><span class="o">.</span><span class="na">setCreatedAt</span><span class="o">(</span><span class="n">comment</span><span class="o">.</span><span class="na">getCreatedAt</span><span class="o">().</span><span class="na">format</span><span class="o">(</span><span class="nc">DateTimeFormatter</span><span class="o">.</span><span class="na">ofPattern</span><span class="o">(</span><span class="s">"yyMMddHHss"</span><span class="o">)));</span> <span class="c1">// db에는 초 단위까지 저장되지만 그렇게 자세한 정보는 필요없기 때문에 타입을 바꿔줌</span>
+			
+        <span class="c1">//익명 활성화 되었는지 확인하기</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">comment</span><span class="o">.</span><span class="na">getIsSecret</span><span class="o">()){</span>
+            <span class="n">getComment</span><span class="o">.</span><span class="na">setNickname</span><span class="o">(</span><span class="s">"익명"</span><span class="o">);</span>
+            <span class="n">getComment</span><span class="o">.</span><span class="na">setProfilePic</span><span class="o">(</span><span class="s">"익명 사진"</span><span class="o">);</span>
+        <span class="o">}</span><span class="k">else</span><span class="o">{</span>
+            <span class="n">getComment</span><span class="o">.</span><span class="na">setNickname</span><span class="o">(</span><span class="n">comment</span><span class="o">.</span><span class="na">getUser</span><span class="o">().</span><span class="na">getNickname</span><span class="o">());</span>
+            <span class="n">getComment</span><span class="o">.</span><span class="na">setProfilePic</span><span class="o">(</span><span class="n">comment</span><span class="o">.</span><span class="na">getUser</span><span class="o">().</span><span class="na">getProfilePic</span><span class="o">());</span>
+        <span class="o">}</span>
+        <span class="n">getComment</span><span class="o">.</span><span class="na">setUserId</span><span class="o">(</span><span class="n">comment</span><span class="o">.</span><span class="na">getUser</span><span class="o">().</span><span class="na">getId</span><span class="o">());</span>
+        <span class="k">return</span> <span class="n">getComment</span><span class="o">;</span> <span class="c1">//여기서 return은 stream중인 comments 각각을 return해주는 것</span>
+    <span class="o">}).</span><span class="na">collect</span><span class="o">(</span><span class="nc">Collectors</span><span class="o">.</span><span class="na">toList</span><span class="o">());</span>
+</code></pre></div>    </div>
+  </li>
+  <li>람다식의 return을 확실하게 생각해보고 작성해야 함을 느꼈다..</li>
+</ul>
+
+<h3 id="게시물-댓글-작성">게시물 댓글 작성</h3>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Board</span> <span class="n">board</span> <span class="o">=</span> <span class="n">boardRepository</span><span class="o">.</span><span class="na">getById</span><span class="o">(</span><span class="n">dto</span><span class="o">.</span><span class="na">getBoardId</span><span class="o">());</span>
+	<span class="nc">User</span> <span class="n">user</span> <span class="o">=</span> <span class="n">userRepository</span><span class="o">.</span><span class="na">getById</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
+
+	<span class="nc">Comment</span> <span class="n">newComment</span> <span class="o">=</span> <span class="nc">Comment</span><span class="o">.</span><span class="na">builder</span><span class="o">()</span>
+			<span class="o">.</span><span class="na">board</span><span class="o">(</span><span class="n">board</span><span class="o">)</span>
+			<span class="o">.</span><span class="na">user</span><span class="o">(</span><span class="n">user</span><span class="o">)</span>
+			<span class="o">.</span><span class="na">content</span><span class="o">(</span><span class="n">dto</span><span class="o">.</span><span class="na">getContent</span><span class="o">())</span>
+			<span class="o">.</span><span class="na">isSecret</span><span class="o">(</span><span class="n">dto</span><span class="o">.</span><span class="na">getIsSecret</span><span class="o">())</span>
+			<span class="o">.</span><span class="na">build</span><span class="o">();</span>
+	<span class="n">commentRepository</span><span class="o">.</span><span class="na">save</span><span class="o">(</span><span class="n">newComment</span><span class="o">);</span>
+</code></pre></div></div>
+<ul>
+  <li>필요한 input은 댓글을 작성하는 board의 id와 작성자 즉 로그인 되어있는 session id값이 필요했다.</li>
+  <li>또한 DB의 구성이 board column의 타입이 int인 board_id 가 아니라 Board 타입이기 때문에 해당하는 board 자체를
+가져와서 저장해주어야 했다.</li>
+</ul>
+
+<h2 id="jpql을-사용하여-api-구현하기">jpql을 사용하여 API 구현하기</h2>
+<h3 id="is_hot이-true인-값-중에서-가장-최신-2가지-가져오기">is_Hot이 True인 값 중에서 가장 최신 2가지 가져오기</h3>
+<ul>
+  <li>당연히 복잡하지는 않지만 where문과 order by 등 여러가지 구문이 들어가야 하기 때문에 jpql로 구현해야 한다고 생각했지만
+정말 간단하게 findTop2ByIsHotOrderByCreatedAtDesc(boolean isHot) 로 구현이 가능했다..</li>
+  <li>Top2 -&gt; limit 2, IsHot -&gt; input과 같은 값(service 부분에서 true로 넣어줄 예정)</li>
+  <li>OrderByCreatedAtDesc -&gt; order by created_at desc</li>
+  <li>jpa는 대단한거 같다..</li>
+</ul>
+
+<h3 id="main의-myboard-6개-보내주기">main의 myBoard 6개 보내주기</h3>
+<ul>
+  <li>@Query(“select board from Board board where board.categoryId &lt;=6 and board.createdAt IN (select max(board.createdAt) from board group by board.categoryId) order by board.categoryId”)</li>
+  <li>
+    <p>일단 categoryId가 6보다 작아야하고, 가장 최신의 글을 보여줘야하기 때문에 column IN()을 이용해서 ()내부의 조건에 맞는 값들만 가져오게 작성하였다.</p>
+  </li>
+  <li>@Query(“select board from Board board where board.categoryId &lt;=6 order by board.createdAt desc limit 1”) 원래 이런식으로 limit을 이용하여 작성하고 싶었는데 왜 limit에서 오류가 나오는지 모르겠다,,, 누가 안다면 help.. 검색해도 안나오고,., –&gt; 작성중에 해결했는데 jpql 에서는 limit이 사용불가 하다고 한다..</li>
+</ul>
+
+<h3 id="실시간-인기글-조회">실시간 인기글 조회</h3>
+<ul>
+  <li>@Query(value = “select * from board where created_at &gt; date_add(now(),interval-24 hour) and is_hot = true order by like_num+comment_num desc, created_at desc limit 2”, nativeQuery = true)</li>
+  <li>위에서 limit이 안된거 처럼 jpql 쓰니까 너무 답답해서 그냥 query문으로 작성했다..</li>
+  <li>24시간 이내의 글, 좋아요+댓글 수 합과 created_at desc로 order by 후 limit 2로 2개의 값만 가져왔다.</li>
+</ul>
+
+<h2 id="미흡한-부분">미흡한 부분</h2>
+<ul>
+  <li>이번에도 과제 완성 못했는데… 다음에는 무조건 밀린거 없이 완성해오겠습니다 ㅜㅜㅜ</li>
+</ul>
+
+<h2 id="다음-목표">다음 목표</h2>
+<ol>
+  <li>JSESSIONID 생성 규칙 추가 조사</li>
+  <li>남은 과제 완성</li>
+</ol>
+
+  </article>
+  <br>
+
+  <hr/><br>
+
+  <div class="author">
+    
+    <table>
+        <tr>
+          <td rowspan="3" style="padding-right: 10px"><img class="author-pic" src="https://github.com/.png" alt=""></td>
+          <td><b><h2 rel="author"></h2></b></td>
+        </tr>
+      <tr>
+        <td><p rel="author"></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a rel="author" href="https://github.com/" target="_blank"><i class="fa fa-github fa-2x"></i></a>&nbsp&nbsp
+          
+        </td>
+      </tr>
+    </table>
+
+  </div>
+
+
+  <br>
+  <hr/>
+  <div>
+    <script src="https://utteranc.es/client.js"
+        repo="gdsc-seoultech/blog-comments"
+        issue-term="pathname"
+        label="comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+  </div>
+
+</div>
+<script src="/js/toc.js"></script>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper" align="center">
+  	<h4>This site was built using <a href="http://jekyllrb.com" target="_blank">Jekyll</a> and is hosted on <a href="https://github.com" target="_blank">Github</a>. &#169; GDSC Seoultech</h4>
+  </div>
+
+</footer>
+
+
+  </body>
+</html>

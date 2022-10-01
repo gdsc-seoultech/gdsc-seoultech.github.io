@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="tYMwPoxNrWfLx2sDrDYzqI4-dq3M3FfI56NBL9JNtH8" />
+
+    <title>7주차 ML 데이터 표현과 특성 공학 강의자료</title>
+    <meta name="description" content="A simple, whitespace, helvetica based portfolio theme.
+">
+
+    <link rel = "shortcut icon" type="image/x-icon" href="/img/square_logo.png">
+    <link rel="stylesheet" href="/css/main.css">
+<!--    <link rel="canonical" href="http://localhost:4000/posts/1st_term/ml/2021-11-11-ml_7th_keonju/">-->
+    <link rel="canonical" href="/posts/1st_term/ml/2021-11-11-ml_7th_keonju/">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- 카테고리 css -->
+    <link rel="stylesheet" href="/css/pagination.css">
+    <link href="/css/category.css" type="text/css" rel="stylesheet">
+</head>
+
+   
+  <body>
+    <script src="/js/default.js"></script>
+    <header id="tab" >
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <div class="site-header">
+    <div class="wrapper">
+      <div>
+        <a href="/">
+          <img src="/img/square_logo.png" align="left" width="57px">
+        </a>
+      </div>
+
+      <nav class="site-nav">
+
+        <div id="tab" class="trigger">
+          <!-- GDSC Seoultech instead of blog -->
+          <a class="page-link" href="/">GDSC</a>
+          <a class="page-link" href="/members/2">MEMBER</a>
+          <a class="page-link" href="/category/2nd_term">POST</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div id="hovering" class="tab-header">
+    <div class="wrapper">
+      <div class="detail-post">
+          <div class="tab-item">
+            <div><a class="page-link-detail" href="/category/1st_term">1기</a></div>
+            <div><a class="page-link-detail" href="/category/2nd_term">2기</a></div>
+          </div>
+      </div>
+      <div class="detail-member">
+        <div class="tab-item">
+          <div><a class="page-link-detail" href="/members/1">1기</a></div>
+          <div><a class="page-link-detail" href="/members/2">2기</a></div>
+        </div>
+    </div>
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+    var tabMenu = $("#tab");
+    var tabSubMenu = $("#hovering");
+
+    tabSubMenu.hide()
+
+    tabMenu.hover(function() {
+      tabSubMenu.show();
+    }, function() {
+      tabSubMenu.hide();
+    })
+  </script>
+
+</header>
+
+
+    <div class="page-content" id="page-content">
+      <div class="wrapper" id="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">7주차 ML 데이터 표현과 특성 공학 강의자료</h1>
+    <h1 class="post-description"></h1>
+    <p class="post-meta">November 11, 2021 — 00:00 • keonju2</p>
+    
+      
+        <span class="tag">ml</span>
+      
+    
+  </header>
+  <article class="post-content">
+    <h1 id="지난주-과제">지난주 과제</h1>
+
+<p><a href="https://www.kaggle.com/ash316/eda-to-prediction-dietanic">https://www.kaggle.com/ash316/eda-to-prediction-dietanic</a></p>
+
+<p>지난주에는 타이타닉 데이터를 가지고 그래프를 그려보면서 EDA를 진행하였습니다.<br />
+또한 EDA를 마치고 특성 공학 및 데이터 정제화를 진행하고 예측 모델까지 만들어보는 필사 과제를 진행했습니다.</p>
+
+<h1 id="일변량-다항식">일변량 다항식</h1>
+
+<p>log, exp, sin과 같은 함수들도 특성 변환에 사용됩니다.<br />
+log, exp 함수는 데이터 스케일을 변경하는 것에 사용되며, sin과 cos은 주기적인 패턴이 들어간 데이터를 변경하는 것에 유용하게 사용됩니다.</p>
+
+<p>일변량 비선형 변환을 하는 이유는 특성과 타깃 값 사이에 비선형성이 있다면 모델을 만들기 어렵기 때문입니다.<br />
+또한 대부분의 모델은 특성의 분포가 정규분포와 비슷할 때 데이터 간 편차를 줄여 성능이 상승합니다.</p>
+
+<ul>
+  <li>변환 전</li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/54880474/141170385-38f2a372-e76e-44f8-8f05-5ffcd01b743c.png" alt="그림" /></p>
+
+<ul>
+  <li>로그 변환 후</li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/54880474/141170390-e416f90a-e5d0-433a-9c24-09f89bcad250.png" alt="그림" /></p>
+
+<p>다음 분포처럼 적은 값 쪽에 분포가 몰리지만 값의 범위가 매우 넓을 때 log함수를 사용하게 된다면 log함수는 x가 커질수록 증가율이 작아지기 때문에 멀리 떨어진 값을 중간값과 가깝게 이동시켜 정규분포와 유사한 형태를 띄게 만들 수 있습니다.</p>
+
+<p>트리 모델처럼 스스로 중요한 상호작용을 찾을 수 있는 모델은 괜찮지만 선형 모델과 같이 스케일과 분포에 민감한 모델은 비선형 변환을 통해 좋은 효과를 얻을 수 있습니다.</p>
+
+<h1 id="특성-자동-선택">특성 자동 선택</h1>
+
+<p>특성이 많으면 모델은 복잡해지고 과대적합 가능성이 상승하는 것을 앞에서 배웠습니다.<br />
+따라서 불필요한 특성을 줄이는 것이 모델 학습에 좋은 영향을 미칩니다.</p>
+
+<p>특성 선택을 사용할 때는 test 데이터셋에 영향이 가지않도록 train 데이터셋에만 적용해야하는 주의점이 있습니다.</p>
+
+<h2 id="일변량-통계-anova">일변량 통계 (ANOVA)</h2>
+
+<p>일변량 통계는 특성과 타깃 사이에 중요한 통계적 관계를 계산합니다.<br />
+각 특성을 독립적으로 평가하여 다른 특성과 깊게 연관된 특성은 선택하지 않습니다.</p>
+
+<p>SelectKBest는 K개의 특성을, SelectPercentile은 지정한 비율만큼의 특성을 선택해줍니다.<br />
+또한 분류 모델에서는 f_classif, 회귀에서는 f_regression을 사용합니다.</p>
+
+<p>일변량 통계는 Y값과 특성의 통계적 유의미를 분석합니다. <br />
+귀무가설을 기각하기 위해서는 p-value가 작아야합니다.<br />
+일변량 통계의 귀무가설은 ‘집단간 평균은 같다’입니다.</p>
+
+<p>집단간 분산을 집단 내 분산으로 나눈 것을 F-value라고 합니다.<br />
+F-value가 작으면 p-value가 커지므로 이는 집단간 분산이 분모에 있으므로 집단간 분산이 작다는 의미와 같습니다.<br />
+이것은 집단간 차이가 적다는 의미이므로 타깃에 미치는 영향이 적다고 할 수 있습니다.</p>
+
+<p><img src="https://user-images.githubusercontent.com/54880474/141170392-caac02a7-62e7-4091-a621-6705b3eb68c9.png" alt="그림3" /></p>
+
+<p>따라서 타깃에 미치는 영향이 적은 특성을 제외시킬 수 있게 됩니다.</p>
+
+<h2 id="모델-기반-특성-선택">모델 기반 특성 선택</h2>
+
+<p>특성의 중요도를 측정하여 순서를 매깁니다.<br />
+결정 트리에서 중요도는 feature_importances_, 선형 모델에서는 계수의 절대값을 통해 중요도를 결정합니다.</p>
+
+<p>임계치를 threshold를 통해 지정하는데 중앙값, 평균값, 1.2*평균값과 같이 지정해주면 됩니다.</p>
+
+<h2 id="반복적-특성-선택">반복적 특성 선택</h2>
+
+<p>특성 수가 다른 일련의 모델을 생성하여 최선의 특성을 선택합니다.<br />
+여러 개의 모델을 만들어야하기 때문에 계산비용이 증가하게 됩니다.</p>
+
+<ol>
+  <li>
+    <p>전진(후진) 선택법
+특성을 하나도 선택하지 않은 모델부터 회귀에서 결정계수(R^2)나 분류에서 정확도를 통해서 scoring 매개변수를 기준으로 종료조건을 충족시킬 때까지 하나씩 추가하는 방법입니다.</p>
+  </li>
+  <li>
+    <p>재귀적 특성 제거<br />
+모든 특성을 가지고 시작해서 어떤 종료 조건이 될 때까지 특성을 하나씩 제거하는 방법이니다.<br />
+마찬가지로 중요도가 낮은 특성을 먼저 제거합니다.<br />
+제거한 다음 새로운 모델을 만들어서 정의한 특성 개수가 남을 때까지 계속합니다.</p>
+  </li>
+</ol>
+
+<p>특성 자동 선택을 이용하면 특성 개수가 적어지기 때문에 모델의 예측 속도가 빨라지며 해석력이 좋아집니다.</p>
+
+<h2 id="전문가-지식-활용">전문가 지식 활용</h2>
+
+<p>모델에 따라 외삽 문제가 발생할 수도 있고 그렇게 된다면 결정계수가 전혀 상관없는 예측을 할 수도 있습니다.<br />
+따라서 모델을 예측할 때는 서로간의 연관관계를 확인하고 특성을 추가, 제거하여 더 좋은 모델을 만들 수 있습니다.</p>
+
+  </article>
+  <br>
+
+  <hr/><br>
+
+  <div class="author">
+    
+    <table>
+        <tr>
+          <td rowspan="3" style="padding-right: 10px"><img class="author-pic" src="https://github.com/.png" alt=""></td>
+          <td><b><h2 rel="author"></h2></b></td>
+        </tr>
+      <tr>
+        <td><p rel="author"></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a rel="author" href="https://github.com/" target="_blank"><i class="fa fa-github fa-2x"></i></a>&nbsp&nbsp
+          
+        </td>
+      </tr>
+    </table>
+
+  </div>
+
+
+  <br>
+  <hr/>
+  <div>
+    <script src="https://utteranc.es/client.js"
+        repo="gdsc-seoultech/blog-comments"
+        issue-term="pathname"
+        label="comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+  </div>
+
+</div>
+<script src="/js/toc.js"></script>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper" align="center">
+  	<h4>This site was built using <a href="http://jekyllrb.com" target="_blank">Jekyll</a> and is hosted on <a href="https://github.com" target="_blank">Github</a>. &#169; GDSC Seoultech</h4>
+  </div>
+
+</footer>
+
+
+  </body>
+</html>

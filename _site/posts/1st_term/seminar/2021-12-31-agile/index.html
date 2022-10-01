@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="tYMwPoxNrWfLx2sDrDYzqI4-dq3M3FfI56NBL9JNtH8" />
+
+    <title>열두 번째 세션 - 얘들아 자면 안돼 플젝하자 돌아보기</title>
+    <meta name="description" content="A simple, whitespace, helvetica based portfolio theme.
+">
+
+    <link rel = "shortcut icon" type="image/x-icon" href="/img/square_logo.png">
+    <link rel="stylesheet" href="/css/main.css">
+<!--    <link rel="canonical" href="http://localhost:4000/posts/1st_term/seminar/2021-12-31-agile/">-->
+    <link rel="canonical" href="/posts/1st_term/seminar/2021-12-31-agile/">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- 카테고리 css -->
+    <link rel="stylesheet" href="/css/pagination.css">
+    <link href="/css/category.css" type="text/css" rel="stylesheet">
+</head>
+
+   
+  <body>
+    <script src="/js/default.js"></script>
+    <header id="tab" >
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <div class="site-header">
+    <div class="wrapper">
+      <div>
+        <a href="/">
+          <img src="/img/square_logo.png" align="left" width="57px">
+        </a>
+      </div>
+
+      <nav class="site-nav">
+
+        <div id="tab" class="trigger">
+          <!-- GDSC Seoultech instead of blog -->
+          <a class="page-link" href="/">GDSC</a>
+          <a class="page-link" href="/members/2">MEMBER</a>
+          <a class="page-link" href="/category/2nd_term">POST</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div id="hovering" class="tab-header">
+    <div class="wrapper">
+      <div class="detail-post">
+          <div class="tab-item">
+            <div><a class="page-link-detail" href="/category/1st_term">1기</a></div>
+            <div><a class="page-link-detail" href="/category/2nd_term">2기</a></div>
+          </div>
+      </div>
+      <div class="detail-member">
+        <div class="tab-item">
+          <div><a class="page-link-detail" href="/members/1">1기</a></div>
+          <div><a class="page-link-detail" href="/members/2">2기</a></div>
+        </div>
+    </div>
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+    var tabMenu = $("#tab");
+    var tabSubMenu = $("#hovering");
+
+    tabSubMenu.hide()
+
+    tabMenu.hover(function() {
+      tabSubMenu.show();
+    }, function() {
+      tabSubMenu.hide();
+    })
+  </script>
+
+</header>
+
+
+    <div class="page-content" id="page-content">
+      <div class="wrapper" id="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">열두 번째 세션 - 얘들아 자면 안돼 플젝하자 돌아보기</h1>
+    <h1 class="post-description"></h1>
+    <p class="post-meta">January 1, 2022 — 02:36 • KangInyeong</p>
+    
+      
+        <span class="tag">seminar</span>
+      
+    
+  </header>
+  <article class="post-content">
+    <p>12월 28일, GDSC Seoultech의 열두 번째 정기 세션이 있었습니다. <br />
+열두 번째 세미나로는 <strong>“얘들아 자면 안돼 플젝하자”</strong>가 진행되었습니다😲<br />
+그 뜨거웠던 현장을 돌아보시죠!</p>
+
+<h1 id="agenda">Agenda</h1>
+
+<ol>
+  <li>SW 개발 프로세스가 무엇이오?</li>
+  <li>SW 개발 방법론</li>
+  <li>애자일(Agile) 모델</li>
+</ol>
+
+<p><br /></p>
+
+<h2 id="1-sw-개발-프로세스">1. SW 개발 프로세스</h2>
+
+<p>SW 개발 프로세스에 대해서 설명드리면, <strong>Software Development Process</strong> 라는 표현대로 “소프트웨어 제품을 개발하기 위해 필요한 과정 또는 도구”의 의미를 가지는데요. 비슷한 의미로 SDLC 라는 표현을 사용하기도 합니다. <strong>SDLC</strong> 는 <strong>Software Development Life Cycle</strong> 의 줄임말로 한국어로는 소프트웨어 생명주기로 불리기도 합니다. 한 <a href="https://www.synopsys.com/glossary/what-is-sdlc.html">사이트</a>의 정의에 따르면</p>
+<blockquote>
+  <p>The <strong>Software Development Life Cycle</strong> (SDLC) is a structured process that enables the production of high-quality, low-cost software, in the shortest possible production time.</p>
+</blockquote>
+
+<p><br />
+이라고 합니다. (영어 어렵지 않죠 여러분? 찡긋!) 한국말로 표현하면 소프트웨어를 체계적으로 개발 및 관리하기 위해 과정을 단계별로 구분한 것이라고 할 수 있습니다.  이러한 SDLD의 단계는 총 6단계로 정리할 수 있는데요.</p>
+
+<p><img src="https://images.velog.io/images/kiyoog02/post/5ad9984c-ad73-4617-ac9f-4d65f73897a8/image.png" alt="" /></p>
+
+<p><img src="https://images.velog.io/images/kiyoog02/post/7ab6e023-4240-4031-a686-aeaa61099960/image.png" alt="" /></p>
+
+<p>사진에서 보시는 것처럼 소프트웨어 개발에 대한 <strong>계획</strong>을 가장 먼저 세우고, 유즈케이스 다이어그램과 같이 다양한 방법을 통해 <strong>설계</strong>를 진행합니다. 이러한 설계를 바탕으로 코딩하여 제품을 <strong>구현</strong>해 낸 뒤에 테스트를 통해 제품이 잘 만들어졌는지 확인하는 것이죠. 최종적으로는 실제 사용자들에게 <strong>배포</strong>를 하고 지속적인 <strong>유지</strong> 보수를 해 나가게 될 것입니다.</p>
+
+<p><br /></p>
+
+<h2 id="2-sw-개발-방법론">2. SW 개발 방법론</h2>
+
+<p>SDLC는 프로젝트의 규모, 적용 방식에 따라 다양한 방법론들이 제시된다고 합니다.<br />
+<img src="https://images.velog.io/images/kiyoog02/post/8e1c178a-9bdc-4c4c-8f1f-e1b068eafc4e/image.png" alt="" /><br />
+대표적인 SDLS 모델 8가지 중에서도 <strong>폭포수 모델</strong>에 대해서 살펴보겠습니다.</p>
+
+<p><br /></p>
+
+<ul>
+  <li><strong>폭포수 모델</strong><br />
+폭포수 모델은 1970년대부터 널리 알려진 고전적인 모형입니다. 계획, 요구사항 분석, 설계, 구현, 테스트까지 선형 순차적으로 진행되는 형태의 모델을 말합니다.
+<img src="https://images.velog.io/images/kiyoog02/post/72c9b6d6-6955-42ee-b152-f4b7e3ef2239/image.png" alt="" /></li>
+</ul>
+
+<p><br />
+생김새는 이름처럼 폭포를 닮았고, 이렇게 순차적인 방식 덕분에 <strong>이해</strong>하기도 쉽고 <strong>관리</strong>하기도 쉽다는 장점이 있습니다. 또한 <strong>문서화 및 산출물 관리와 적용이 쉽다</strong>고 합니다! 그러나 잘못된 진행사항에 대해서 뒤로 되돌아가 <strong>피드백을 하기 어렵다</strong>는 단점도 있습니다.</p>
+
+<p><br /></p>
+
+<h2 id="3-애자일agile-모델">3. 애자일(Agile) 모델</h2>
+
+<p>애자일 모델에 대해서는 더 자세히 알아봅시다:) 
+<br />
+<strong>“Agile”</strong>이라는 단어를 사전에 검색하면 <strong>날렵한, 민첩한</strong>이라는 의미를 가지고 있다는 것을 알 수 있는데요. 단어의 뜻처럼 필요에 따라 민첩하게 대응하고, 상황에 맞추어 주어진 문제를 풀어나가는 방법론이라고 합니다.  <br /><br />
+처음 애자일 모델이 등장하게 된 배경에 대해 잠깐 이야기해 드리자면 90년대 후반까지는 기존 공학의 프로세스와 비슷한 방식으로 소프트웨어 개발이 이루어졌지만 정보시스템에 대한 <strong>사용자 요구가 다양</strong>해지고, <strong>유동성과 변동성 등이 높은 소프트웨어</strong>의 특성에 더 적합한 방법론이 요구되었습니다. 기존 방법론들은 <strong>신속한 대응과 적응이 어렵</strong>고, 중소규모의 시스템에 부적절하게 무거운 방법론을 적용하면 <strong>오버헤드가 커지는 문제</strong>가 생길 수 있었기 때문입니다.</p>
+
+<p><img src="https://images.velog.io/images/kiyoog02/post/0705bc30-9da8-41de-bde9-53e77ee2b00c/image.png" alt="" /></p>
+
+<p>결과적으로 애자일 방법론이 등장하였으며 <strong>더 작은 반복 주기로 개발을 촉진</strong>하고, 계획이나 문서화 작업보다는 <strong>프로그래밍 과정에 초점</strong>을 둘 수 있습니다. 그리고 <strong>변경 사항에 대해 더 유연하게 적응</strong>할 수 있고, <strong>새로운 기능을 추가</strong>한다든지 <strong>피드백과 제안을 모든 단계에서 수행</strong>할 수 있다는 장점이 있습니다. 덕분에 최종 목표가 확실하지 않은 프로젝트에 용이하며 사용자의 의견을 수용하기가 쉽습니다. 다만 애자일 적용을 지원하는 지침서가 부족하고 요구사항의 잦은 변경으로 인해 테스트를 수행해야 하는 노력이 증가하는 등의 문제점도 존재합니다. 이러한 애자일 모델은 활용에 따라 <strong>스크럼</strong>, <strong>XP</strong>, <strong>린</strong> 방식 등이 있습니다. 그중에서도 스크럼 방법에 대해서 자세히 알아봅시다.</p>
+
+<p><br /></p>
+
+<ul>
+  <li><strong>스크럼</strong> <br />
+<strong>스크럼(Scrum)</strong>은 <strong>사용자 요구사항을 만족시키기 위해 업무 주기를 반복하며 점진적으로 소프트웨어를 개발하는 방법</strong>입니다. 원래 스크럼이라는 단어는 럭비에서 양쪽 팀의 선수들이 럭비공을 중앙에 두고 밀착하여 대치하는 대형을 일컫는 말이라고 하는데요. 스크럼 방식을 개발한 사람이 왜 럭비 용어를 사용했는지에 대해 자세히 밝힌 적은 없지만 팀원들과의 프로세스 수행을 표현하기 위한 것으로 추측된다고 합니다. <br /> - <a href="https://www.scrum.org/resources/what-is-scrum">링크</a>에 영상을 보시면 전반적인 애자일에 대한 이해를 도울 수 있답니다. <img src="https://images.velog.io/images/kiyoog02/post/3f8265c3-a464-4fcf-9d10-639598b77a2e/image.png" alt="" /> 중요한 네 가지 단어를 꼽아보았으니 이 단어들의 의미는 꼭 알고 넘어가시면 좋을 것 같습니다. 
+<img src="https://images.velog.io/images/kiyoog02/post/ffa27d9b-e21c-4524-8dc2-785c775b0343/image.png" alt="" /></li>
+</ul>
+
+<p>스크럼은 5~9명으로 구성되는 소규모의 다기능 팀이 제품 개발을 완성하기 위해 스프린트(sprint)라고 불리는 업무 주기를 반복합니다. 이 팀은 제품 책임자(PO:Product Owner)가 관리하는 “해야 할 일들의 목록(product backlog)”에서 “스프린트 동안 해야 하는 일들(sprint backlog)”을 스스로 결정하고 완수하여 매 스프린트 마다 결과물(increment)을 산출해냅니다.</p>
+
+<p>또한, 팀이 성과를 낼 수 있도록 조력하는 역할을 스크럼 마스터(SM:Scrum Master)라고 하는 사람이 팀원들이 과제를 완수할 수 있도록 필요한 자원을 지원하거나 장애 요소를 제거하며 프로세스를 인도하는 역할을 담당합니다. - <a href="https://kood-dev.tistory.com/2">참고링크</a></p>
+
+<p><br /></p>
+
+<p>[<strong>과정</strong>] <a href="https://url.kr/vjd79u">- 참고링크</a></p>
+
+<ol>
+  <li>제품에서 요구하는 기능과 우선순위를 <strong>제품 백로그</strong>로 정한다.</li>
+  <li>PO가 정한 제품의 우선순위에서 어디까지 작업을 할지 팀과 조율한다. 조율하여 선정된 제품 백로그가 이번 <strong>스프린트</strong>의 목표가 된다.</li>
+  <li>스프린트 목표를 구현 가능하도록 팀에서 <strong>스프린트 백로그</strong>를 작성한 뒤 작업을 할당한다.</li>
+  <li>스프린트를 진행하는 동안, 매일 정해진 장소와 시간에 모든 개발 팀원이 참여하는 <strong>일일 스크럼 회의</strong>를 가진다.</li>
+  <li>매회의 스프린트가 종료할 때마다, <strong>스프린트 리뷰 미팅</strong>을 통해 만들어진 제품을 학습하고 이해 한다.</li>
+  <li>제품의 학습과 이해가 끝나면, <strong>스프린트 회고</strong>를 통해 팀의 개발 프로세스에 대한 개선의 시간을 갖는다.</li>
+  <li>스프린트 기간 중 <strong>다음 스프린트를 준비</strong>하기 위해 PO와 필요 인원이 모여 백로그를 준비하는 시간을 갖는다.</li>
+</ol>
+
+<p><br /></p>
+
+<p>[<strong>Agile 활용</strong>]</p>
+<ul>
+  <li>Trello 
+<img src="https://images.velog.io/images/kiyoog02/post/700f8288-7858-43b4-a2c5-4f35f312b624/image.png" alt="" /> <strong>보드</strong> 에는 관리하는 프로젝트이며, <strong>목록</strong> 은 보드 내에 생성되며 카테고리에 따라 나누어 활용할 수 있고, <strong>카드</strong> 는 목록 내에 생성하는 항목으로 세분화한 작업들을 카드에 작성하여 스크럼 방식에 활용할 수 있습니다.
+<img src="https://images.velog.io/images/kiyoog02/post/374fc0b6-746c-4e7b-9248-41d1a9f356ad/image.png" alt="" /> 추가로 This week, In Progress, Done과 같이 목록을 나누어 카드를 옮겨가며 스크럼을 경험할 수 있을 것 같네요!</li>
+</ul>
+
+<p><br /></p>
+
+<ul>
+  <li>Notion
+<img src="https://images.velog.io/images/kiyoog02/post/fb2085b4-221b-47c7-9244-4cabe04925d0/image.png" alt="" /> 노션의 다양한 템플릿을 사용하여 스크럼을 적용할 수 있는데요. 특히 노션에 <a href="https://www.notion.so/templates/agile-retrospective">Agile</a>, <a href="https://www.notion.so/templates/engineering-hiring-pipeline">Task List</a>을 검색했을 때 나오는 공개 템플릿들도 잘 디자인되어 있으니 활용해 보면 좋을 것 같습니다!</li>
+</ul>
+
+<p><br /></p>
+
+<h2 id="마무리">마무리</h2>
+
+<p>최근 여러 IT기업에서의 채용공고에서 찾아볼 수 있는 Agile! <br />
+실제 현업에서도 많이 사용된다고 하기에 솔루션챌린지 과정에서 팀원들과 함께 애자일에 대해 알아두면 도움이 될 것 같아 직접 경험해 볼 수 있도록 준비하게 된 세미나입니다. 현업과 100% 똑같은 애자일을 경험할 수는 없겠지만 이러한 경험들이 추후에 더 많은 발전을 위한 밑바탕이 될 것이라고 생각합니다. 솔루션챌린지의 길다면 길고, 짧다면 짧을 과정의 시작이 밝았으니 다 같이 힘내서 열심히 해보아요😀 또치, 아지, 나구리도 여러분을 응원한대요 ヽ(✿ﾟ▽ﾟ)ノ 
+<img src="https://images.velog.io/images/kiyoog02/post/2e4cdff1-5a4f-4123-9451-db425f2df53f/image.png" alt="" /> <br /> 우리 GDSC SEOULTECH 멤버들 파이팅💪💪</p>
+
+  </article>
+  <br>
+
+  <hr/><br>
+
+  <div class="author">
+    
+    <table>
+        <tr>
+          <td rowspan="3" style="padding-right: 10px"><img class="author-pic" src="https://github.com/.png" alt=""></td>
+          <td><b><h2 rel="author"></h2></b></td>
+        </tr>
+      <tr>
+        <td><p rel="author"></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a rel="author" href="https://github.com/" target="_blank"><i class="fa fa-github fa-2x"></i></a>&nbsp&nbsp
+          
+        </td>
+      </tr>
+    </table>
+
+  </div>
+
+
+  <br>
+  <hr/>
+  <div>
+    <script src="https://utteranc.es/client.js"
+        repo="gdsc-seoultech/blog-comments"
+        issue-term="pathname"
+        label="comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+  </div>
+
+</div>
+<script src="/js/toc.js"></script>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper" align="center">
+  	<h4>This site was built using <a href="http://jekyllrb.com" target="_blank">Jekyll</a> and is hosted on <a href="https://github.com" target="_blank">Github</a>. &#169; GDSC Seoultech</h4>
+  </div>
+
+</footer>
+
+
+  </body>
+</html>

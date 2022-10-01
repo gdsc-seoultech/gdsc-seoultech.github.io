@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="tYMwPoxNrWfLx2sDrDYzqI4-dq3M3FfI56NBL9JNtH8" />
+
+    <title>HOVI의 5주차 기록</title>
+    <meta name="description" content="A simple, whitespace, helvetica based portfolio theme.
+">
+
+    <link rel = "shortcut icon" type="image/x-icon" href="/img/square_logo.png">
+    <link rel="stylesheet" href="/css/main.css">
+<!--    <link rel="canonical" href="http://localhost:4000/posts/1st_term/solution_challenge/hovi/2022-02-03-HOVI_5week/">-->
+    <link rel="canonical" href="/posts/1st_term/solution_challenge/hovi/2022-02-03-HOVI_5week/">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- 카테고리 css -->
+    <link rel="stylesheet" href="/css/pagination.css">
+    <link href="/css/category.css" type="text/css" rel="stylesheet">
+</head>
+
+   
+  <body>
+    <script src="/js/default.js"></script>
+    <header id="tab" >
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <div class="site-header">
+    <div class="wrapper">
+      <div>
+        <a href="/">
+          <img src="/img/square_logo.png" align="left" width="57px">
+        </a>
+      </div>
+
+      <nav class="site-nav">
+
+        <div id="tab" class="trigger">
+          <!-- GDSC Seoultech instead of blog -->
+          <a class="page-link" href="/">GDSC</a>
+          <a class="page-link" href="/members/2">MEMBER</a>
+          <a class="page-link" href="/category/2nd_term">POST</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div id="hovering" class="tab-header">
+    <div class="wrapper">
+      <div class="detail-post">
+          <div class="tab-item">
+            <div><a class="page-link-detail" href="/category/1st_term">1기</a></div>
+            <div><a class="page-link-detail" href="/category/2nd_term">2기</a></div>
+          </div>
+      </div>
+      <div class="detail-member">
+        <div class="tab-item">
+          <div><a class="page-link-detail" href="/members/1">1기</a></div>
+          <div><a class="page-link-detail" href="/members/2">2기</a></div>
+        </div>
+    </div>
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+    var tabMenu = $("#tab");
+    var tabSubMenu = $("#hovering");
+
+    tabSubMenu.hide()
+
+    tabMenu.hover(function() {
+      tabSubMenu.show();
+    }, function() {
+      tabSubMenu.hide();
+    })
+  </script>
+
+</header>
+
+
+    <div class="page-content" id="page-content">
+      <div class="wrapper" id="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">HOVI의 5주차 기록</h1>
+    <h1 class="post-description"></h1>
+    <p class="post-meta">February 2, 2022 — 09:00 • drizzle0171</p>
+    
+      
+        <span class="tag">solution_challenge</span>
+      
+        <span class="tag">hovi</span>
+      
+    
+  </header>
+  <article class="post-content">
+    <h1 id="hovi의-5주차-기록">HOVI의 5주차 기록</h1>
+
+<p><br /></p>
+
+<h2 id="-harmony-of-virtual-instrument-">🥁 Harmony Of Virtual Instrument 🎹</h2>
+<p>스마트폰 카메라를 통한 이미지 인식으로 악기를 연주할 수 있는 어플리케이션</p>
+
+<h2 id="팀-멤버-">팀 멤버 🧑‍🤝‍🧑</h2>
+
+<ul>
+  <li>김영현(back-end)</li>
+  <li>박지수(back-end)</li>
+  <li>이슬비(ML)</li>
+  <li>강인영(android)</li>
+</ul>
+
+<p><br /></p>
+
+<h1 id="-1월-25일-정기-회의-">🌞 1월 25일 정기 회의 🌞</h1>
+
+<h2 id="-논의-사항">✔ 논의 사항</h2>
+
+<p>🌻 <strong>Android</strong> (Front)<br />
+우리의 핵!심! 요소 중 하나인 Android! Android에서는 북 소리를 external storage에 저장하는 것까지 성공하였습니다. 하지만 인영님의 자가격리로 인해 직접 소리를 들어볼 수 없었다는 아쉬움이 남아있었습니다! 😂</p>
+
+<p>🌼 <strong>Server</strong> (Back)<br />
+다재다능한 우리 지수님과 영현님! ml에 매우 큰 도움을 주셨는데요! tensorflow hub라는, tensorflow lite를 활용한 모델 모음집 사이트를 알려주셨습니다. 마침 object detection 관련 모델이 있기에 이를 조금 변형해서 사용하기로 하였습니다. 이를 활용한 프로세스를 간단히 설명하면, 먼저 북과 채를 동시에 detection하고 두 물체 사이의 거리를 측정해 거리가 가까울 때 북 소리를 내는 방식입니다. 이때 카메라의 구도가 매우 중요하기에 이와 관련하여 추후에 가이드를 작성해보기로 하였습니다! 🧐</p>
+
+<p>🌷 <strong>ML</strong><br />
+HOVI의 핵심 기능 중 하나인 ML!… 매일 매일 지옥을 맛보고 있습니다…^^ 😇 최근 읽은 영어가 대학교 들어와서 읽은 영어보다 많다는 사!실! 비교적 다루기 쉬운 openCV와 mediapipe를 이용해 구현을 하려고 하였으나, 자유롭게 랜드마크 설정이 불가하고 카메라 구도에 큰 영향을 받기 때문에 openCV는 과감히! 버리기로 결정하였습니다. 기존에 크게 ml kit/tensorflow lite, mediapipe/openCV의 2가지 부분으로 ml 구현을 생각하고 있었습니다. 이와 관련하여 찾아본 후, 가장 가능성 있다고 여겨진 tensorflow lite를 통해 object detection을 구현하는 것에 집중하기로 하였습니다!
+<br /></p>
+
+<h2 id="-to-do-">◻◼ TO DO ◼◻</h2>
+<ul>
+  <li>안드로이드
+    <ul>
+      <li>파일을 다운로드 하여 사용하는 방법 조사</li>
+      <li>스마트폰 카메라 사용 방법 조사</li>
+    </ul>
+  </li>
+  <li>백엔드
+    <ul>
+      <li>ML 지원사격 (tensorflow lite를 모델 빌드 후 테스트)</li>
+    </ul>
+  </li>
+  <li>ML
+    <ul>
+      <li>youtube의 tensorflow lite 구현 영상을 따라하며 코드 분석</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<p>주 2회 회의를 하였기로 했기 때문에 ml 모델을 1월 29일 토요일 아침까지 구현해보기로 하였습니다! 하지만 27일 금요일, ml 전문가 분의 자문을 구하였습니다. 하지만 턱없이 부족한 데이터와 매번 바뀔 수 있는 악기의 형태, 카메라의 구도에 매우 부정적인 조언을 해주셨습니다. 그리하여 우리 HOVI 팀은 🚨비상🚨을 외치며, 빠르게 <strong>주제 변경</strong>을 결정하였습니다. 설 연휴동안 주제에 대해서 생각을 해본 후, 연휴가 끝난 직후인 목요일 4시 30분에 <strong>대면</strong>으로 모여 이야기를 나눌 수 있도록 하였습니다. 😼</p>
+
+<hr />
+<p><br /></p>
+
+<h1 id="-2월-3일-추가-회의-">🌝 2월 3일 추가 회의 🌝</h1>
+
+<h2 id="-논의-사항-1">✔ 논의 사항</h2>
+
+<p>🗂 <strong>NEW IDEA</strong></p>
+<ol>
+  <li>놀이 및 교육용 게임
+    <ul>
+      <li>손가락을 이용한 음악 표현</li>
+      <li>마스크로 인해 표정을 학습하는 것이 어려워진 아이들을 위한 표정 학습</li>
+    </ul>
+  </li>
+  <li>코로나19/의료 및 복지
+    <ul>
+      <li>코로나 블루 해소</li>
+      <li>헌혈의 감소를 해결할 수 있는 어플 제작</li>
+      <li>몸이 불편하신 분들이 자신의 표정으로 원하는 행동을 표현하는 어플</li>
+      <li>맞춤 복지 요약 어플</li>
+    </ul>
+  </li>
+  <li>기타
+    <ul>
+      <li>github blog 포스팅 자동 변환</li>
+      <li>과거 핸드폰 모델에서 새로운 버전의 안드로이드 기능을 사용할 수 있도록 함</li>
+    </ul>
+  </li>
+</ol>
+
+<p>위와 같이 다양하고 재미있는 의견들이 속출! 하였습니다. 이 중에서도 가장 유력한 후보는 <strong>몸이 불편하신 분들이 자신의 표정으로 원하는 행동을 표현하는 어플</strong>입니다. 이를 조금 더 구체화 해보았는데요, 다음과 같습니다.</p>
+
+<ul>
+  <li>Target: 노인 👴 or 아이 👶 → 안면 근육을 사용할 수 있고 자신이 원하는 의사를 표현할 수 있는 사람</li>
+  <li>ml kit or openCV/mediapipe 사용</li>
+  <li>표정 인식 후 음성 재생: 음성 전환 유료</li>
+  <li>표정 인식 후 의사 전달(메세지): 50자 무료</li>
+  <li>앱 알림</li>
+</ul>
+
+<p><br /></p>
+
+<h2 id="-to-do--1">◻◼ TO DO ◼◻</h2>
+
+<ul>
+  <li>위 주제를 최우선으로 생각하되, 다음 주 세션까지는 다른 주제도 생각해보기!</li>
+  <li>ml 담당(따흑…….)은 구현 가능한지 조사해오기</li>
+</ul>
+
+<p><br /></p>
+
+<hr />
+<p><br /></p>
+
+<p>주제를 바꾸는 꿈을 꿨는데요… 실제로 일어나버렸네요 ~!… 하하 하지만 저는 든든한 우리 지수님, 영현님, 인영님이 있기 때문에 전혀!!! 두렵지 않습니다! 뭐 개발은 한 달이면 뚝딱하니까~(?) 그럼 앞으로도 저희 HOVI의 행보를 지켜봐주세요! :) 모두 파이팅! 🎶</p>
+
+<p><br /></p>
+
+  </article>
+  <br>
+
+  <hr/><br>
+
+  <div class="author">
+    
+    <table>
+        <tr>
+          <td rowspan="3" style="padding-right: 10px"><img class="author-pic" src="https://github.com/.png" alt=""></td>
+          <td><b><h2 rel="author"></h2></b></td>
+        </tr>
+      <tr>
+        <td><p rel="author"></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a rel="author" href="https://github.com/" target="_blank"><i class="fa fa-github fa-2x"></i></a>&nbsp&nbsp
+          
+        </td>
+      </tr>
+    </table>
+
+  </div>
+
+
+  <br>
+  <hr/>
+  <div>
+    <script src="https://utteranc.es/client.js"
+        repo="gdsc-seoultech/blog-comments"
+        issue-term="pathname"
+        label="comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+  </div>
+
+</div>
+<script src="/js/toc.js"></script>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper" align="center">
+  	<h4>This site was built using <a href="http://jekyllrb.com" target="_blank">Jekyll</a> and is hosted on <a href="https://github.com" target="_blank">Github</a>. &#169; GDSC Seoultech</h4>
+  </div>
+
+</footer>
+
+
+  </body>
+</html>

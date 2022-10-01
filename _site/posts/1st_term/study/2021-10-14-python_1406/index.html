@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="tYMwPoxNrWfLx2sDrDYzqI4-dq3M3FfI56NBL9JNtH8" />
+
+    <title>알고리즘 스터디 스택 1406번</title>
+    <meta name="description" content="A simple, whitespace, helvetica based portfolio theme.
+">
+
+    <link rel = "shortcut icon" type="image/x-icon" href="/img/square_logo.png">
+    <link rel="stylesheet" href="/css/main.css">
+<!--    <link rel="canonical" href="http://localhost:4000/posts/1st_term/study/2021-10-14-python_1406/">-->
+    <link rel="canonical" href="/posts/1st_term/study/2021-10-14-python_1406/">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- 카테고리 css -->
+    <link rel="stylesheet" href="/css/pagination.css">
+    <link href="/css/category.css" type="text/css" rel="stylesheet">
+</head>
+
+   
+  <body>
+    <script src="/js/default.js"></script>
+    <header id="tab" >
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <div class="site-header">
+    <div class="wrapper">
+      <div>
+        <a href="/">
+          <img src="/img/square_logo.png" align="left" width="57px">
+        </a>
+      </div>
+
+      <nav class="site-nav">
+
+        <div id="tab" class="trigger">
+          <!-- GDSC Seoultech instead of blog -->
+          <a class="page-link" href="/">GDSC</a>
+          <a class="page-link" href="/members/2">MEMBER</a>
+          <a class="page-link" href="/category/2nd_term">POST</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div id="hovering" class="tab-header">
+    <div class="wrapper">
+      <div class="detail-post">
+          <div class="tab-item">
+            <div><a class="page-link-detail" href="/category/1st_term">1기</a></div>
+            <div><a class="page-link-detail" href="/category/2nd_term">2기</a></div>
+          </div>
+      </div>
+      <div class="detail-member">
+        <div class="tab-item">
+          <div><a class="page-link-detail" href="/members/1">1기</a></div>
+          <div><a class="page-link-detail" href="/members/2">2기</a></div>
+        </div>
+    </div>
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+    var tabMenu = $("#tab");
+    var tabSubMenu = $("#hovering");
+
+    tabSubMenu.hide()
+
+    tabMenu.hover(function() {
+      tabSubMenu.show();
+    }, function() {
+      tabSubMenu.hide();
+    })
+  </script>
+
+</header>
+
+
+    <div class="page-content" id="page-content">
+      <div class="wrapper" id="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">알고리즘 스터디 스택 1406번</h1>
+    <h1 class="post-description">백준 1406번 문제풀이</h1>
+    <p class="post-meta">October 14, 2021 — 20:00 • leeeha</p>
+    
+      
+        <span class="tag">study</span>
+      
+    
+  </header>
+  <article class="post-content">
+    <p>안녕하세요. 저는 GDSC 안드로이드 파트 멤버 이하은입니다! 제가 이번 4주차에 맡은 문제는 1406번인데, 어떤 문제인지 같이 보시죠!</p>
+
+<p><br /></p>
+
+<p><a href="https://www.acmicpc.net/problem/1406">https://www.acmicpc.net/problem/1406</a></p>
+
+<p>문제에서 정의한 에디터 명령어 4가지는 다음과 같습니다. <br /></p>
+
+<p>L은 커서를 왼쪽으로 한칸 이동 <br />
+D는 커서를 오른쪽으로 한칸 이동 <br />
+B는 커서의 왼쪽 문자 삭제 <br />
+P는 커서의 왼쪽에 문자 추가 <br /></p>
+
+<p>입력으로 문자열과 에디터 명령어를 받고, 그 명령어를 수행한 결과를 출력하면 됩니다.</p>
+
+<hr />
+
+<p><br /></p>
+
+<h1 id="stdlist-컨테이너-사용하기">std::list 컨테이너 사용하기</h1>
+
+<p>먼저 C++ STL에서 제공하는 list 컨테이너의 기본 사용법은 아래 링크를 참고해주세요. <br />
+<a href="https://blockdmask.tistory.com/76">https://blockdmask.tistory.com/76</a></p>
+
+<p><br />
+end()와 insert()는 주의할 점이 있는데, end는 <u>마지막 원소 바로 다음 위치</u>를 가리키며, insert는 <u>지정한 위치 바로 앞부분에 원소를 삽입한다</u>는 것입니다.</p>
+
+<p><a href="https://www.cplusplus.com/reference/list/list/insert/">https://www.cplusplus.com/reference/list/list/insert/</a></p>
+
+<p>The container is extended by inserting new elements <strong>before the element at the specified position.</strong></p>
+
+<p><br /></p>
+
+<p>문제에 주어진 첫번째 예제 입력으로 연습해봅시다! <br /></p>
+
+<p><img src="https://images.velog.io/images/jxlhe46/post/88a994c9-e220-404b-a8d5-0c2c18292071/image.png" alt="" /></p>
+
+<p><br /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. 문자 a,b,c,d를 list에 push
+</code></pre></div></div>
+
+<p><img src="https://images.velog.io/images/jxlhe46/post/a5f5e52a-8752-40ee-814f-b6843f9a148e/image.png" alt="" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>2. P x (커서 왼쪽에 x를 insert)
+</code></pre></div></div>
+
+<p><img src="https://images.velog.io/images/jxlhe46/post/bb6fa0e3-04b5-4565-9c6f-de5f94019013/image.png" alt="" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>3. L (커서를 왼쪽으로 한칸 이동)
+</code></pre></div></div>
+
+<p><img src="https://images.velog.io/images/jxlhe46/post/61c2e695-af61-4f68-968a-3544d6d8bb61/image.png" alt="" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>4. P y (커서 왼쪽에 y를 insert)
+</code></pre></div></div>
+
+<p><img src="https://images.velog.io/images/jxlhe46/post/17950c61-e688-43f0-8095-0d76bceb6ba1/image.png" alt="" /></p>
+
+<p><br /></p>
+
+<h2 id="c-코드">C++ 코드</h2>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;list&gt;</span><span class="cp">
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">string</span> <span class="n">s</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">s</span><span class="p">;</span>
+    <span class="c1">// 문자 하나씩 연결리스트에 추가</span>
+    <span class="n">list</span><span class="o">&lt;</span><span class="kt">char</span><span class="o">&gt;</span> <span class="n">l</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">s</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+    <span class="c1">//list&lt;char&gt;::iterator now = l.end();</span>
+    <span class="k">auto</span> <span class="n">cur</span> <span class="o">=</span> <span class="n">l</span><span class="p">.</span><span class="n">end</span><span class="p">();</span>
+    <span class="c1">// end()는 마지막 원소 바로 다음 위치를 가리킴.</span>
+    <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">n</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">char</span> <span class="n">cmd</span><span class="p">;</span>
+        <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">cmd</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">cmd</span> <span class="o">==</span> <span class="sc">'L'</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">cur</span> <span class="o">!=</span> <span class="n">l</span><span class="p">.</span><span class="n">begin</span><span class="p">())</span> <span class="p">{</span>
+                <span class="n">cur</span><span class="o">--</span><span class="p">;</span> <span class="c1">// 왼쪽 이동</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">cmd</span> <span class="o">==</span> <span class="sc">'D'</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">cur</span> <span class="o">!=</span> <span class="n">l</span><span class="p">.</span><span class="n">end</span><span class="p">())</span> <span class="p">{</span>
+                <span class="n">cur</span><span class="o">++</span><span class="p">;</span> <span class="c1">// 오른쪽 이동</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">cmd</span> <span class="o">==</span> <span class="sc">'B'</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">cur</span> <span class="o">!=</span> <span class="n">l</span><span class="p">.</span><span class="n">begin</span><span class="p">())</span> <span class="p">{</span>
+                <span class="n">cur</span> <span class="o">=</span> <span class="n">l</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="o">--</span><span class="n">cur</span><span class="p">);</span>
+                <span class="c1">// 커서의 왼쪽 원소 삭제</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">cmd</span> <span class="o">==</span> <span class="sc">'P'</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kt">char</span> <span class="n">c</span><span class="p">;</span>
+            <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">c</span><span class="p">;</span>
+            <span class="n">l</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">cur</span><span class="p">,</span> <span class="n">c</span><span class="p">);</span>
+            <span class="c1">// 커서의 바로 앞부분에 삽입</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="cm">/*for (auto it = l.begin(); it != l.end(); it++) {
+        cout &lt;&lt; *it;
+    }*/</span>
+    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span> <span class="n">e</span> <span class="o">:</span> <span class="n">l</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// 범위 기반 for문</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">e</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<p><br /></p>
+
+<h1 id="stack을-이용한-풀이">stack을 이용한 풀이</h1>
+
+<p><a href="https://intaehwang.tistory.com/32">https://intaehwang.tistory.com/32</a></p>
+
+<ul>
+  <li>커서를 기준으로 왼쪽 stack, 오른쪽 stack을 선언한다.</li>
+  <li>L일 경우, 왼쪽 stack top을 오른쪽 stack으로 push</li>
+  <li>D일 경우, 오른쪽 stack top을 왼쪽 stack으로 push</li>
+  <li>B일 경우, 왼쪽 stack top을 pop</li>
+  <li>P일 경우 왼쪽 stack에 push</li>
+  <li>출력할 땐, 왼쪽 stack 전체를 오른쪽으로 push</li>
+  <li>오른쪽 stack 전체를 pop하면서 출력</li>
+</ul>
+
+<p>커서를 기준으로 왼쪽, 오른쪽 스택을 따로 만든다는 아이디어입니다! 커서는 언제나 두 스택의 사이를 가리키고 있으며, 커서의 이동은 왼쪽, 오른쪽 스택 원소들 간의 삽입, 삭제 연산으로 표현할 수 있습니다.</p>
+
+<p><br /></p>
+
+<p>아까와 마찬가지로, 문제에 주어진 첫번째 예제 입력으로 연습해봅시다! <br /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. 문자열 abcd 입력 (문자 하나씩 왼쪽 스택에 push)
+</code></pre></div></div>
+
+<p><img src="https://images.velog.io/images/jxlhe46/post/a31be367-b523-4f00-bf24-873f02055dd5/image.png" alt="" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>2. P x (왼쪽 스택에 x를 push)
+</code></pre></div></div>
+
+<p><img src="https://images.velog.io/images/jxlhe46/post/d79821df-e6b1-420a-bd99-0958e17eb492/image.png" alt="" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>3. L (커서를 왼쪽으로 이동, 왼쪽 스택의 top을 오른쪽 스택에 push)
+</code></pre></div></div>
+
+<p><img src="https://images.velog.io/images/jxlhe46/post/7c32ad5f-d547-45f9-8175-d64d7e1b86c7/image.png" alt="" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>4. P y (왼쪽 스택에 y를 push)
+</code></pre></div></div>
+
+<p><img src="https://images.velog.io/images/jxlhe46/post/a0eba270-4d4d-4dce-bb0c-d4858665aac3/image.png" alt="" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>최종 결과 (왼쪽 스택의 모든 원소를 오른쪽 스택으로 push 한 뒤에, 오른쪽 스택의 모든 원소를 pop 해주면 LIFO에 따라 다음과 같이 출력됩니다.)
+</code></pre></div></div>
+
+<p><img src="https://images.velog.io/images/jxlhe46/post/22ae210b-c005-4cbb-8c52-d9267f6818a5/image.png" alt="" /></p>
+
+<p><br /></p>
+
+<h2 id="c-코드-1">C++ 코드</h2>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;stack&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp">
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">string</span> <span class="n">s</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">s</span><span class="p">;</span>
+    <span class="n">stack</span><span class="o">&lt;</span><span class="kt">char</span><span class="o">&gt;</span> <span class="n">l</span><span class="p">;</span>
+    <span class="n">stack</span><span class="o">&lt;</span><span class="kt">char</span><span class="o">&gt;</span> <span class="n">r</span><span class="p">;</span>
+    <span class="c1">// 왼쪽 스택에 입력된 모든 문자를 push</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">l</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+    <span class="p">}</span>
+    <span class="kt">int</span> <span class="n">num</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">num</span><span class="p">;</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">num</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// num == 0이면 종료</span>
+        <span class="kt">char</span> <span class="n">cmd</span><span class="p">;</span>
+        <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">cmd</span><span class="p">;</span>
+        <span class="c1">// P: 왼쪽 스택의 top에 추가</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">cmd</span> <span class="o">==</span> <span class="sc">'P'</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kt">char</span> <span class="n">c</span><span class="p">;</span>
+            <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">c</span><span class="p">;</span>
+            <span class="n">l</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="c1">// B: 왼쪽 스택이 비어있지 않다면, 왼쪽의 top 삭제</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">cmd</span> <span class="o">==</span> <span class="sc">'B'</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">l</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span> <span class="k">continue</span><span class="p">;</span>
+            <span class="k">else</span> <span class="n">l</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+        <span class="p">}</span>
+        <span class="c1">// L: 왼쪽 스택이 비어있지 않다면, 왼쪽의 top을 오른쪽에 push</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">cmd</span> <span class="o">==</span> <span class="sc">'L'</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">l</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span> <span class="k">continue</span><span class="p">;</span>
+            <span class="k">else</span> <span class="p">{</span>
+                <span class="n">r</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">l</span><span class="p">.</span><span class="n">top</span><span class="p">());</span>
+                <span class="n">l</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="c1">// D: 오른쪽 스택에 비어있지 않다면, 오른쪽의 top을 왼쪽에 push</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">cmd</span> <span class="o">==</span> <span class="sc">'D'</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span> <span class="k">continue</span><span class="p">;</span>
+            <span class="k">else</span> <span class="p">{</span>
+                <span class="n">l</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">top</span><span class="p">());</span>
+                <span class="n">r</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="c1">// 왼쪽 스택 전체를 오른쪽 스택에 push</span>
+    <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">l</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span> <span class="p">{</span>
+        <span class="n">r</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">l</span><span class="p">.</span><span class="n">top</span><span class="p">());</span>
+        <span class="n">l</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span> <span class="c1">// LIFO</span>
+    <span class="p">}</span>
+    <span class="c1">// 오른쪽 스택 전체 출력 (LIFO)</span>
+    <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">r</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span> <span class="p">{</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">r</span><span class="p">.</span><span class="n">top</span><span class="p">();</span>
+        <span class="n">r</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span> <span class="c1">// LIFO</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<p>마지막으로 이 문제를 파이썬으로 풀면 어떻게 되는지 확인해보겠습니다. 파이썬에서는 stack을 리스트로 구현할 수 있습니다. 원소를 추가할 때는 append 함수를, 삭제할 때는 pop 함수를 사용해주면 됩니다.</p>
+
+<p><br /></p>
+
+<h1 id="python-풀이">Python 풀이</h1>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="n">stdin</span>
+<span class="n">left</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">stdin</span><span class="p">.</span><span class="n">readline</span><span class="p">().</span><span class="n">strip</span><span class="p">())</span>
+<span class="n">right</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="n">stdin</span><span class="p">.</span><span class="n">readline</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">temp</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s">'L'</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">left</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="n">right</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">left</span><span class="p">.</span><span class="n">pop</span><span class="p">())</span>
+    <span class="k">elif</span> <span class="n">temp</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s">'D'</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">right</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="n">left</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">right</span><span class="p">.</span><span class="n">pop</span><span class="p">())</span>
+    <span class="k">elif</span> <span class="n">temp</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s">'B'</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">left</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="n">left</span><span class="p">.</span><span class="n">pop</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">temp</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s">'P'</span><span class="p">:</span>
+        <span class="n">left</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">temp</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="c1"># 오른쪽 리스트 원소들의 순서를 뒤집어서 왼쪽 리스트에 붙이고 전체 출력
+#right.reverse()
+#left.extend(right)
+</span><span class="n">left</span><span class="p">.</span><span class="n">extend</span><span class="p">(</span><span class="n">right</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="s">""</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">left</span><span class="p">))</span>
+</code></pre></div></div>
+
+<hr />
+
+<p><br /></p>
+
+<h1 id="마무리">마무리</h1>
+
+<p>커서의 이동을 스택 두 개로 표현할 수 있다는 아이디어가 신박했던 거 같습니다. 문제 유형이 스택이라는 걸 몰랐다면, 그냥 list 컨테이너로 풀고 끝냈을 거 같기도 합니다.
+<br /></p>
+
+<p><img src="https://user-images.githubusercontent.com/68090939/137308898-1fc7a8b5-cf8d-458c-beba-94349cdfc28a.png" alt="image" /></p>
+
+<p>저번 1학기 자료구조 수업 시간에는 stack을 직접 구현했던 거 같은데, C++의 STL에서 제공하는 stack 컨테이너를 사용하면 편하게 문제를 풀 수 있습니다. 그래도 스택이 어떤 자료구조인지는 잘 알고 있어야겠죠! 아래 링크에서 니꼴라스가 설명해주는 스택과 큐 영상을 보면, 쉽게 이해할 수 있을 겁니다! <br /></p>
+
+<p><a href="https://youtu.be/Nk_dGScimz8">https://youtu.be/Nk_dGScimz8</a></p>
+
+<p><br /></p>
+
+<p>시험기간이라 다소 급하게 글을 작성한 거 같은데, 그래도 여러분들이 잘 이해하셨을 거라 믿습니다! 2주 뒤에 또 만나요~👋</p>
+
+  </article>
+  <br>
+
+  <hr/><br>
+
+  <div class="author">
+    
+    <table>
+        <tr>
+          <td rowspan="3" style="padding-right: 10px"><img class="author-pic" src="https://github.com/.png" alt=""></td>
+          <td><b><h2 rel="author"></h2></b></td>
+        </tr>
+      <tr>
+        <td><p rel="author"></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a rel="author" href="https://github.com/" target="_blank"><i class="fa fa-github fa-2x"></i></a>&nbsp&nbsp
+          
+        </td>
+      </tr>
+    </table>
+
+  </div>
+
+
+  <br>
+  <hr/>
+  <div>
+    <script src="https://utteranc.es/client.js"
+        repo="gdsc-seoultech/blog-comments"
+        issue-term="pathname"
+        label="comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+  </div>
+
+</div>
+<script src="/js/toc.js"></script>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper" align="center">
+  	<h4>This site was built using <a href="http://jekyllrb.com" target="_blank">Jekyll</a> and is hosted on <a href="https://github.com" target="_blank">Github</a>. &#169; GDSC Seoultech</h4>
+  </div>
+
+</footer>
+
+
+  </body>
+</html>
