@@ -95,3 +95,13 @@ hyunjun:
   introduce: 저는 서울과기대 산업정보시스템공학과 20학번 심현준입니다! 프론트엔드 개발자를 목표로 공부해오던 중 좋은 사람들과 함께 협업하고 싶어서 GDSC에 지원하였습니다. <br> 개발자는 혼자 모든 것을 만들어낼 수는 없죠, 그만큼 소통과 협업 능력이 중요한 직업이라고 생각합니다. <br> GDSC에서 다 같이 함께 소통하고 협업하고 성장하자구요! 잘 부탁드립니다.😆
   blog_platform: velog
   blog: https://velog.io/@jakescake
+jonghun:
+  name: 이종훈
+  author_name: 종훈
+  role: member
+  email: rivs@kakao.com
+  github: rivkode
+  description: 선택보단 노력
+  introduce: 안녕하세요, 서울과학기술대학교 컴퓨터공학과 이종훈입니다. <br>소프트웨어를 통해 지구(Earth)에 도움을 주는 개발자가 되고 싶습니다. Java, Spring에 관심이 많으며 그 외에도 창업, 경제 등 배우고싶은게 많은 사람 중 한명 입니다 ! 여기 GDSC에 계신분들과 자유롭게 소통하며 함께 성장하는 시간이 되도록 노력하겠습니다 😊
+  blog_platform: velog
+  blog: https://velog.io/@rivkode
