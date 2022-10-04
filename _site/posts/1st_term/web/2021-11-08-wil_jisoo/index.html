@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="tYMwPoxNrWfLx2sDrDYzqI4-dq3M3FfI56NBL9JNtH8" />
+
+    <title>WIL 5주차(지수) - 회원가입, 로그인</title>
+    <meta name="description" content="A simple, whitespace, helvetica based portfolio theme.
+">
+
+    <link rel = "shortcut icon" type="image/x-icon" href="/img/square_logo.png">
+    <link rel="stylesheet" href="/css/main.css">
+<!--    <link rel="canonical" href="http://localhost:4000/posts/1st_term/web/2021-11-08-wil_jisoo/">-->
+    <link rel="canonical" href="/posts/1st_term/web/2021-11-08-wil_jisoo/">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- 카테고리 css -->
+    <link rel="stylesheet" href="/css/pagination.css">
+    <link href="/css/category.css" type="text/css" rel="stylesheet">
+</head>
+
+   
+  <body>
+    <script src="/js/default.js"></script>
+    <header id="tab" >
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <div class="site-header">
+    <div class="wrapper">
+      <div>
+        <a href="/">
+          <img src="/img/square_logo.png" align="left" width="57px">
+        </a>
+      </div>
+
+      <nav class="site-nav">
+
+        <div id="tab" class="trigger">
+          <!-- GDSC Seoultech instead of blog -->
+          <a class="page-link" href="/">GDSC</a>
+          <a class="page-link" href="/members/2">MEMBER</a>
+          <a class="page-link" href="/category/2nd_term">POST</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div id="hovering" class="tab-header">
+    <div class="wrapper">
+      <div class="detail-post">
+          <div class="tab-item">
+            <div><a class="page-link-detail" href="/category/1st_term">1기</a></div>
+            <div><a class="page-link-detail" href="/category/2nd_term">2기</a></div>
+          </div>
+      </div>
+      <div class="detail-member">
+        <div class="tab-item">
+          <div><a class="page-link-detail" href="/members/1">1기</a></div>
+          <div><a class="page-link-detail" href="/members/2">2기</a></div>
+        </div>
+    </div>
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+    var tabMenu = $("#tab");
+    var tabSubMenu = $("#hovering");
+
+    tabSubMenu.hide()
+
+    tabMenu.hover(function() {
+      tabSubMenu.show();
+    }, function() {
+      tabSubMenu.hide();
+    })
+  </script>
+
+</header>
+
+
+    <div class="page-content" id="page-content">
+      <div class="wrapper" id="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">WIL 5주차(지수) - 회원가입, 로그인</h1>
+    <h1 class="post-description"></h1>
+    <p class="post-meta">November 2, 2021 — 10:00 • ritty27</p>
+    
+      
+        <span class="tag">web</span>
+      
+    
+  </header>
+  <article class="post-content">
+    <h1 id="진행사항">진행사항</h1>
+<ul>
+  <li>회원가입</li>
+  <li>로그인 (세션, 쿠키 사용하기)</li>
+</ul>
+
+<p>소스코드는 <a href="https://github.com/ritty27/GDSC_Back" target="_blank" rel="noopener">깃 허브</a> 에서 보실 수 있습니다.</p>
+
+<hr />
+
+<h1 id="느낀-점">느낀 점</h1>
+
+<h2 id="고민했던-부분">고민했던 부분</h2>
+
+<ul>
+  <li>login, signup 과정에서 id, password Policy를 어떻게 정할지 고민하였다.
+    <ul>
+      <li>패스워드를 정규식 검증을 이용해 검증하려고 만들었다가, 팩토리 패턴으로 검증하여 넘겨주는 방식으로 수정하기 위해 코드를 밀었다.</li>
+      <li>팩토리 패턴을 공부하며 로직을 만들어봤는데 너무 문제가 많아 다시 코드를 들어내고 푸쉬해놓은 상태</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="팩토리-패턴">팩토리 패턴</h2>
+<p><img width="350" alt="팩토리 패턴 이미지" src="https://woovictory.github.io/img/FactoryMethodPattern.png" /> 출처 : https://woovictory.github.io/</p>
+
+<ul>
+  <li>장점
+    <ul>
+      <li>추상화 의존 가능하다 (DIP)</li>
+      <li>정규식을 통하여 작성하면 test 코드를 만들기 힘든데, password policy라는 인터페이스를 구현하여 팩토리로 묶어주게 되면, 수정에 용이하고, 검증 가능한 테스트 생성이 가능하다.</li>
+      <li>loginId를 팩토리를 통해 생성하기 때문에 LoginId의 접근 제어를 패키지 프라이빗으로 생성가능하다</li>
+    </ul>
+  </li>
+  <li>단점
+    <ul>
+      <li>정규식을 사용하면 간단하게 해결할 수 있는 검증 단계를 이렇게 까지 클래스를 많이 만들어가며 사용해야 할까?</li>
+      <li>클래스가 많아져 싱글톤을 사용하지 않는다면, 검증 할 때 마다 많은 클래스 객체를 생성해야 한다.
+        <ul>
+          <li>해결 방법
+  static 메소드를 만들어 검증하는 방법 생각해 적용 해볼 계획이다.</li>
+        </ul>
+      </li>
+      <li>현재 loginId, password를 raw한 String 값으로 사용하기 때문에 팩토리를 적용하기 위해선 모두 클래스로 분리가 필요해진다.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="결론">결론</h2>
+<ul>
+  <li>현재 진행하는 클론 코딩을 2주 안에 완성해야 하기 때문에, 의존성과 응집도 등을 고려하여 코딩을 하다보면 너무 진도가 못나가는 것 같아서, 패키지 구조를 기존 Layer를 기준으로 나눴던 방식으로 돌려놓고 다시 진행할 계획입니다.</li>
+</ul>
+
+  </article>
+  <br>
+
+  <hr/><br>
+
+  <div class="author">
+    
+    <table>
+        <tr>
+          <td rowspan="3" style="padding-right: 10px"><img class="author-pic" src="https://github.com/.png" alt=""></td>
+          <td><b><h2 rel="author"></h2></b></td>
+        </tr>
+      <tr>
+        <td><p rel="author"></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a rel="author" href="https://github.com/" target="_blank"><i class="fa fa-github fa-2x"></i></a>&nbsp&nbsp
+          
+        </td>
+      </tr>
+    </table>
+
+  </div>
+
+
+  <br>
+  <hr/>
+  <div>
+    <script src="https://utteranc.es/client.js"
+        repo="gdsc-seoultech/blog-comments"
+        issue-term="pathname"
+        label="comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+  </div>
+
+</div>
+<script src="/js/toc.js"></script>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper" align="center">
+  	<h4>This site was built using <a href="http://jekyllrb.com" target="_blank">Jekyll</a> and is hosted on <a href="https://github.com" target="_blank">Github</a>. &#169; GDSC Seoultech</h4>
+  </div>
+
+</footer>
+
+
+  </body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="tYMwPoxNrWfLx2sDrDYzqI4-dq3M3FfI56NBL9JNtH8" />
+
+    <title>알고리즘 스터디 정렬 - 1427번</title>
+    <meta name="description" content="A simple, whitespace, helvetica based portfolio theme.
+">
+
+    <link rel = "shortcut icon" type="image/x-icon" href="/img/square_logo.png">
+    <link rel="stylesheet" href="/css/main.css">
+<!--    <link rel="canonical" href="http://localhost:4000/posts/1st_term/study/2021-10-07-python-sort_1427/">-->
+    <link rel="canonical" href="/posts/1st_term/study/2021-10-07-python-sort_1427/">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- 카테고리 css -->
+    <link rel="stylesheet" href="/css/pagination.css">
+    <link href="/css/category.css" type="text/css" rel="stylesheet">
+</head>
+
+   
+  <body>
+    <script src="/js/default.js"></script>
+    <header id="tab" >
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <div class="site-header">
+    <div class="wrapper">
+      <div>
+        <a href="/">
+          <img src="/img/square_logo.png" align="left" width="57px">
+        </a>
+      </div>
+
+      <nav class="site-nav">
+
+        <div id="tab" class="trigger">
+          <!-- GDSC Seoultech instead of blog -->
+          <a class="page-link" href="/">GDSC</a>
+          <a class="page-link" href="/members/2">MEMBER</a>
+          <a class="page-link" href="/category/2nd_term">POST</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div id="hovering" class="tab-header">
+    <div class="wrapper">
+      <div class="detail-post">
+          <div class="tab-item">
+            <div><a class="page-link-detail" href="/category/1st_term">1기</a></div>
+            <div><a class="page-link-detail" href="/category/2nd_term">2기</a></div>
+          </div>
+      </div>
+      <div class="detail-member">
+        <div class="tab-item">
+          <div><a class="page-link-detail" href="/members/1">1기</a></div>
+          <div><a class="page-link-detail" href="/members/2">2기</a></div>
+        </div>
+    </div>
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+    var tabMenu = $("#tab");
+    var tabSubMenu = $("#hovering");
+
+    tabSubMenu.hide()
+
+    tabMenu.hover(function() {
+      tabSubMenu.show();
+    }, function() {
+      tabSubMenu.hide();
+    })
+  </script>
+
+</header>
+
+
+    <div class="page-content" id="page-content">
+      <div class="wrapper" id="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">알고리즘 스터디 정렬 - 1427번</h1>
+    <h1 class="post-description">정렬 알고리즘 1427번 풀이</h1>
+    <p class="post-meta">October 1, 2021 — 12:00 • yongsu</p>
+    
+      
+        <span class="tag">study</span>
+      
+    
+  </header>
+  <article class="post-content">
+    <h1 id="백준-정렬-1427번">백준 정렬 1427번</h1>
+
+<p>안녕하세요. 안드로이드 맴버 양용수입니다. <br /></p>
+
+<p>요즘은 증말 열정있게 사는 것 같습니다. 나쁘지 않습니다.</p>
+
+<h1 id="서론">서론</h1>
+
+<p>알고리즘 스터디를 시작하고 뭔가 이제야 공부를 시작한다고 생각이 들었습니다. 그 전에는 쉐도우 복싱을 하고있다고 생각했다면 gdsc에 들어오고 나서는 잘 짜여진 체계에 맞춰 뭔가 배우고 있다는 생각이 들고 있는 중입니다.
+무엇보다 다들 열심히 하고 있어서 ‘열정 나누기’ 마인드로 따라가고 있습니다.
+무엇보다 체계적입니다. <em>지금이 1기인 동아리라니…</em></p>
+
+<p>저는 그냥 열심히 따라가고 있습니다. 어떤 방식으로 문제를 푸는게 좋을 것 같다는 식으로 글을 쓰지 않고 저는 이런식으로 풀었다고 글을 작성해보겠습니다.</p>
+
+<p>서론이 길었네요. 첫 글이다보니까 신나서 그랬나봅니다.</p>
+
+<p>이제 문제를 분석해보겠습니다. 제가 이번에 맡게 된 문제는 이번 스터디 과제 중 가장 쉬운 문제가 아니었나 싶습니다.
+기본적인 배열 정렬문제입니다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>배열을 정렬하는 것은 쉽다. 수가 주어지면, 그 수의 각 자리수를 내림차순으로 정렬해보자.
+</code></pre></div></div>
+
+<p>입니다.</p>
+
+<p>바로 문제풀이 들어가보겠습니다.</p>
+
+<hr />
+
+<h1 id="풀이방법">풀이방법</h1>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+
+<span class="nb">list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="nb">list</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+
+
+<span class="nb">list</span><span class="p">.</span><span class="n">sort</span><span class="p">(</span><span class="n">reverse</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>     <span class="c1"># 내림차순
+</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="s">''</span><span class="p">)</span>         <span class="c1">#end=''를 추가하여 한 줄에 출력이 되도록 한다.
+</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h1 id="해설">해설</h1>
+
+<p>오름차순으로 정렬했던 sort함수를 reverse=True를 추가해주어 내림차순으로 변경하였고,
+<em>end = ‘‘</em> 를 추가하여 한 줄에 출력하게 하였습니다.</p>
+
+<p>가장 기본적인 문제였습니다.</p>
+
+<hr />
+
+<h1 id="마무리">마무리</h1>
+
+<p>가장 기본적인 문제였습니다. 무엇보다 마크다운 활용해서 블로그에 포스팅하는 것도 처음이군요. 다음주에 또 뵙겠습니다.</p>
+
+<p><em>“걱정허지들 말어~ 코딩은 ~ 머리로만 허는게 아니야!”</em></p>
+
+  </article>
+  <br>
+
+  <hr/><br>
+
+  <div class="author">
+    
+    <table>
+        <tr>
+          <td rowspan="3" style="padding-right: 10px"><img class="author-pic" src="https://github.com/.png" alt=""></td>
+          <td><b><h2 rel="author"></h2></b></td>
+        </tr>
+      <tr>
+        <td><p rel="author"></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a rel="author" href="https://github.com/" target="_blank"><i class="fa fa-github fa-2x"></i></a>&nbsp&nbsp
+          
+        </td>
+      </tr>
+    </table>
+
+  </div>
+
+
+  <br>
+  <hr/>
+  <div>
+    <script src="https://utteranc.es/client.js"
+        repo="gdsc-seoultech/blog-comments"
+        issue-term="pathname"
+        label="comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+  </div>
+
+</div>
+<script src="/js/toc.js"></script>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper" align="center">
+  	<h4>This site was built using <a href="http://jekyllrb.com" target="_blank">Jekyll</a> and is hosted on <a href="https://github.com" target="_blank">Github</a>. &#169; GDSC Seoultech</h4>
+  </div>
+
+</footer>
+
+
+  </body>
+</html>
