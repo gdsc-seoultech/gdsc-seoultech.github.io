@@ -113,3 +113,14 @@ jonghun:
   introduce: 안녕하세요, 서울과학기술대학교 컴퓨터공학과 이종훈입니다. <br>소프트웨어를 통해 지구(Earth)에 도움을 주는 개발자가 되고 싶습니다. Java, Spring에 관심이 많으며 그 외에도 창업, 경제 등 배우고싶은게 많은 사람 중 한명 입니다 ! 여기 GDSC에 계신분들과 자유롭게 소통하며 함께 성장하는 시간이 되도록 노력하겠습니다 😊
   blog_platform: velog
   blog: https://velog.io/@rivkode
+
+hyeok:
+  name: 김혁
+  author_name: 혁
+  role: member
+  email: jg31109@naver.com
+  github: hyeok55
+  description: 노력안할거면 재입대
+  introduce: 안녕하세요, ITM 전공을 재학 중인 19학번 김혁 입니다. 저는 현재 데이터 분야에 관심이 많고 ML,DL에 관심이 많습니다. 저는 저 혼자 공부하는 것이 아닌 동료들과 공부하고 싶어 GDSC에 지원하게 되었습니다 .  GDSC를 통해 함께 성장해 나갔으면 좋겠습니다:)
+  blog_platform: velog
+  blog: https://velog.io/@jg31109
