@@ -1,0 +1,54 @@
+<header id="tab" >
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <div class="site-header">
+    <div class="wrapper">
+      <div>
+        <a href="{{ site.baseurl }}/">
+          <img src="/img/square_logo.png" align="left" width="57px">
+        </a>
+      </div>
+
+      <nav class="site-nav">
+
+        <div id="tab" class="trigger">
+          <!-- {{ site.title }} instead of blog -->
+          <a class="page-link" href="{{ site.baseurl }}/">GDSC</a>
+          <a class="page-link" href="{{ site.baseurl }}/members/2">MEMBER</a>
+          <a class="page-link" href="{{ site.baseurl }}/category/2nd_term">POST</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div id="hovering" class="tab-header">
+    <div class="wrapper">
+      <div class="detail-post">
+          <div class="tab-item">
+            <div><a class="page-link-detail" href="{{ site.baseurl }}/category/1st_term">1기</a></div>
+            <div><a class="page-link-detail" href="{{ site.baseurl }}/category/2nd_term">2기</a></div>
+          </div>
+      </div>
+      <div class="detail-member">
+        <div class="tab-item">
+          <div><a class="page-link-detail" href="{{ site.baseurl }}/members/1">1기</a></div>
+          <div><a class="page-link-detail" href="{{ site.baseurl }}/members/2">2기</a></div>
+        </div>
+    </div>
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+    var tabMenu = $("#tab");
+    var tabSubMenu = $("#hovering");
+
+    tabSubMenu.hide()
+
+    tabMenu.hover(function() {
+      tabSubMenu.show();
+    }, function() {
+      tabSubMenu.hide();
+    })
+  </script>
+
+</header>
