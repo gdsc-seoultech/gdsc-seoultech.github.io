@@ -28,7 +28,7 @@ yejin:
   description: 하고싶은건 많은데 삶이 너무 짧아요..
   introduce: 안녕하세요, 웹파트 코어를 맡은 컴퓨터공학과 오예진입니다! 저는 React, iOS, 영어, 알고리즘, 대외활동, 알바, 놀기 등.. 하고 싶은 것과 배우고 싶은게 너무 많아서 휴학을 하고 알찬 나날들을 보내고 있어요! <br> 그러던 중, 이번 하반기를 GDSC와 함께 할 수 있게 되어서 기대도 많이 되고 벌써 즐겁네용 😊 <br> 1년동안 다양한 분야의 GDSC 멤버들과 멋지게 성장하는 잊지 못할 추억을 만들고 싶어요. 잘부탁드립니다!
   blog_platform: tistory
-  blog : https://yexjinitlog.tistory.com
+  blog: https://yexjinitlog.tistory.com
 yuseogi:
   name: 이유석
   author_name: 유석
@@ -65,6 +65,16 @@ dann:
   role: member
   email: qkrdlswo98@gmail.com
   github: CWCTBOY
+  description: 열정 빼면 시체
+  introduce: 저는 서울과기대 건축공학과 19학번 박인재입니다! 프론트엔드로 프로젝트를 진행해오다가 서버에 관심이 생겨 이 열정 불태워보고자 GDSC에 지원하게 되었습니다. <br> 저는 개발을 하면서도 항상 사람들과 소통하고 협업하는 것을 즐기며, 이를 통해 서로의 지식을 공유하고 성장하는 것을 좋아합니다. <br> 저는 이번 GDSC에서 함께 성장하고 싶은 개발자들과 함께 하고 싶습니다. 앞으로 잘 부탁드립니다!
+  blog_platform: null
+  blog: null
+chunngye:
+  name: 박민영
+  author_name: 민영
+  role: member
+  email: 1030pmy@gmail.com
+  github: chunngye
   description: 열정 빼면 시체
   introduce: 저는 서울과기대 건축공학과 19학번 박인재입니다! 프론트엔드로 프로젝트를 진행해오다가 서버에 관심이 생겨 이 열정 불태워보고자 GDSC에 지원하게 되었습니다. <br> 저는 개발을 하면서도 항상 사람들과 소통하고 협업하는 것을 즐기며, 이를 통해 서로의 지식을 공유하고 성장하는 것을 좋아합니다. <br> 저는 이번 GDSC에서 함께 성장하고 싶은 개발자들과 함께 하고 싶습니다. 앞으로 잘 부탁드립니다!
   blog_platform: null
