@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="tYMwPoxNrWfLx2sDrDYzqI4-dq3M3FfI56NBL9JNtH8" />
+
+    <title>Android 8주차의 추억</title>
+    <meta name="description" content="A simple, whitespace, helvetica based portfolio theme.
+">
+
+    <link rel = "shortcut icon" type="image/x-icon" href="/img/square_logo.png">
+    <link rel="stylesheet" href="/css/main.css">
+<!--    <link rel="canonical" href="http://localhost:4000/posts/1st_term/android/2021-11-28-android_eighthpost/">-->
+    <link rel="canonical" href="/posts/1st_term/android/2021-11-28-android_eighthpost/">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- 카테고리 css -->
+    <link rel="stylesheet" href="/css/pagination.css">
+    <link href="/css/category.css" type="text/css" rel="stylesheet">
+</head>
+
+   
+  <body>
+    <script src="/js/default.js"></script>
+    <header id="tab" >
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <div class="site-header">
+    <div class="wrapper">
+      <div>
+        <a href="/">
+          <img src="/img/square_logo.png" align="left" width="57px">
+        </a>
+      </div>
+
+      <nav class="site-nav">
+
+        <div id="tab" class="trigger">
+          <!-- GDSC Seoultech instead of blog -->
+          <a class="page-link" href="/">GDSC</a>
+          <a class="page-link" href="/members/2">MEMBER</a>
+          <a class="page-link" href="/category/2nd_term">POST</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div id="hovering" class="tab-header">
+    <div class="wrapper">
+      <div class="detail-post">
+          <div class="tab-item">
+            <div><a class="page-link-detail" href="/category/1st_term">1기</a></div>
+            <div><a class="page-link-detail" href="/category/2nd_term">2기</a></div>
+          </div>
+      </div>
+      <div class="detail-member">
+        <div class="tab-item">
+          <div><a class="page-link-detail" href="/members/1">1기</a></div>
+          <div><a class="page-link-detail" href="/members/2">2기</a></div>
+        </div>
+    </div>
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+    var tabMenu = $("#tab");
+    var tabSubMenu = $("#hovering");
+
+    tabSubMenu.hide()
+
+    tabMenu.hover(function() {
+      tabSubMenu.show();
+    }, function() {
+      tabSubMenu.hide();
+    })
+  </script>
+
+</header>
+
+
+    <div class="page-content" id="page-content">
+      <div class="wrapper" id="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Android 8주차의 추억</h1>
+    <h1 class="post-description"></h1>
+    <p class="post-meta">November 24, 2021 — 21:58 • KangInyeong</p>
+    
+      
+        <span class="tag">android</span>
+      
+    
+  </header>
+  <article class="post-content">
+    <h1 id="11월-23일-android-커리큘럼-8주차">11월 23일 Android 커리큘럼 8주차</h1>
+
+<p>지난주 Pager Layout을 배워서 활용해 보았고, 뒷부분에서는 조금 어려운 Reposity와 Hilt 맛보기를 했는데요. Repository와 Hilt를 배운 이유는 바로..! 앱에서 데이터를 활용하기 위함이겠죠?! 그리하여 이러한 데이터를 저장하고 불러올 수 있는 만능 도구인 “Firebase”와 “Chegg Prep” 앱을 연동하고 로그인 기능을 구현하기 위한 커리큘럼 시간이 진행되었습니다. 그럼 같이 한 번 따라가 보시죠!!</p>
+
+<p><br /></p>
+
+<h2 id="firebase는-무엇인가요">Firebase는 무엇인가요?</h2>
+<p><img src="https://images.velog.io/images/kiyoog02/post/e9b0a589-46c5-43cc-910a-23bcb986717f/image.png" alt="" />
+일단 가장 먼저 Firebase가 무엇인지 간단하게 알고 넘어가 보도록 할게요! 
+Firebase는 2011년 Firebase사가 개발하고 2014년 Google에 인수된 모바일 및 웹 애플리케이션 개발 플랫폼입니다. 즉, 현재는 구글에서 운영 중인 플랫폼이라고 할 수 있겠죠.  <br />
+<img src="https://images.velog.io/images/kiyoog02/post/476190f5-ed21-4cea-9ffb-89d02c81a406/image.png" alt="" />
+이러한 파이어베이스는 Android, iOS, 웹, Unity 등과 연결하여 사용할 수 있으며 데이터를 저장하고 앱을 지원하는 백엔드 서버, 사용자 인증, 수익 창출과 같은 앱 구축 시 필요한 다양한 기능을 제공하기 때문에 제가 만능 도구라고 표현했던 것입니다~!<br />
+사실 다른 데이터 및 서버보다도 간단한 UI와 사용방법 그리고 여러 참고 자료들로 인해 많은 사람들이 앱을 만들 때에는 파이어베이스를 우선순위로 사용하고자 마음을 먹는 것이라고 생각합니다.<br />
+웹/머신러닝 멤버분들도 기회가 된다면 Firebase 꼭 한 번 사용해 보시기 바랍니다!! <br /><br /></p>
+
+<h2 id="firebase의-authentication-기능">Firebase의 Authentication 기능</h2>
+
+<p>그리하여 우리는 이 Firebase로 무엇을 할 것이냐! 가장 먼저 이번 시간에 해볼 것은 앱에 구글 SignIn 기능을 구현하는 것입니다. 
+<img src="https://images.velog.io/images/kiyoog02/post/b571a47a-9433-4651-8775-7a7c5d3caec1/image.png" alt="" />
+Firebase는 앱에서 사용자 인증 및 로그인을 쉽게 할 수 있도록 Google, Facebook, Twitter, email, phone 등의 다양한 인증 방식을 지원합니다. 우리는 그중에서도 Google을 사용해 볼 것이구요!
+<img src="https://images.velog.io/images/kiyoog02/post/53cf3bcb-c6f3-488b-abd7-6fa3d6baa960/image.png" alt="" /> Android Studio에서 작업 중인 Chegg Prepp 프로젝트에서 상단 탭의 <strong>Tools</strong> 를 클릭하면 <strong>Firebase</strong> 를 찾을 수 있는데요. 클릭하면 화면 오른쪽에 Firebase를 활용할 수 있는 다양한 기능들을 보여줍니다. 그중에서도 <strong>Authentication</strong> 을 사용하여 <strong>Google Sin-in</strong> 을 구현할 수 있습니다.</p>
+
+<ul>
+  <li>Firebase 연동 방법
+1) <strong>“Connect to Firebase”</strong> 버튼을 클릭하면 Firebase에서 프로젝트를 추가할 수 있고, 해당 프로젝트와 Android Studio를 연결할 수 있습니다. <br />
+2) <strong>“Add the Firebase Authentication SDK to your app”</strong> 버튼을 클릭해서 손쉽게 자동으로 Gradle을 수정해 줄 수 있습니다. <br />
+3) Firebase로 이동하여 프로젝트의 <strong>google-service.json</strong> 을 다운로드한 후에 Android Studio에 추가합니다.<br />
+4) Android Studio 화면 오른쪽에 있는 Gradle 버튼을 클릭하면 있는 <strong>signingReport</strong> 를 클릭하여 <strong>SHA-1 키</strong> 를 찾고, 이를 복사하여 Firebase의 프로젝트 설정 안에 SHA 인증서 추가 부분에 붙여 넣습니다.<br />
+해당 과정은 간단하게 정리한 것이므로 <a href="https://youtu.be/eKGPsErT0bU">참고 영상</a>을 통해 따라하시면 쉽게 하실 수 있으실거라고 생각합니다.</li>
+</ul>
+
+<p><br /></p>
+
+<h2 id="signin-코드-작성">SignIn 코드 작성</h2>
+<p>사용자가 앱을 통해 구글 로그인 기능을 사용하려면 버튼이 필요하겠죠? 해당 버튼을 먼저 만들어주겠습니다!</p>
+
+<ul>
+  <li><strong>버튼UI 구현</strong> <br />
+<br />
+<img src="https://images.velog.io/images/kiyoog02/post/d427fd74-2318-4837-bdac-bebf0c265e7a/image.png" alt="" />
+    <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@ExperimentalMaterialApi</span>
+<span class="nd">@Composable</span>
+<span class="k">fun</span> <span class="nf">GoogleSignInButtonUi</span><span class="p">(</span>
+  <span class="n">text</span><span class="p">:</span> <span class="nc">String</span> <span class="p">=</span> <span class="s">""</span><span class="p">,</span>
+  <span class="n">loadingText</span><span class="p">:</span> <span class="nc">String</span> <span class="p">=</span> <span class="s">""</span><span class="p">,</span>
+  <span class="n">onClick</span><span class="p">:</span> <span class="p">()</span> <span class="p">-&gt;</span> <span class="nc">Unit</span>
+<span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="py">clicked</span> <span class="k">by</span> <span class="nf">remember</span> <span class="p">{</span>
+      <span class="nf">mutableStateOf</span><span class="p">(</span><span class="k">false</span><span class="p">)</span>
+  <span class="p">}</span>
+
+  <span class="nc">Surface</span><span class="p">(</span>
+      <span class="n">onClick</span> <span class="p">=</span> <span class="p">{</span> <span class="n">clicked</span> <span class="p">=</span> <span class="p">!</span><span class="n">clicked</span> <span class="p">},</span>
+      <span class="n">shape</span> <span class="p">=</span> <span class="nc">MaterialTheme</span><span class="p">.</span><span class="n">shapes</span><span class="p">.</span><span class="n">medium</span><span class="p">,</span>
+      <span class="n">border</span> <span class="p">=</span> <span class="nc">BorderStroke</span><span class="p">(</span><span class="n">width</span> <span class="p">=</span> <span class="mi">1</span><span class="p">.</span><span class="n">dp</span><span class="p">,</span> <span class="n">color</span> <span class="p">=</span> <span class="nc">Color</span><span class="p">.</span><span class="nc">LightGray</span><span class="p">),</span>
+      <span class="n">color</span> <span class="p">=</span> <span class="nc">MaterialTheme</span><span class="p">.</span><span class="n">colors</span><span class="p">.</span><span class="n">surface</span>
+  <span class="p">)</span> <span class="p">{</span>
+      <span class="nc">Row</span><span class="p">(</span>
+          <span class="nc">Modifier</span>
+              <span class="p">.</span><span class="nf">padding</span><span class="p">(</span>
+                  <span class="n">start</span> <span class="p">=</span> <span class="mi">12</span><span class="p">.</span><span class="n">dp</span><span class="p">,</span>
+                  <span class="n">end</span> <span class="p">=</span> <span class="mi">16</span><span class="p">.</span><span class="n">dp</span><span class="p">,</span>
+                  <span class="n">top</span> <span class="p">=</span> <span class="mi">12</span><span class="p">.</span><span class="n">dp</span><span class="p">,</span>
+                  <span class="n">bottom</span> <span class="p">=</span> <span class="mi">12</span><span class="p">.</span><span class="n">dp</span>
+              <span class="p">)</span>
+              <span class="p">.</span><span class="nf">animateContentSize</span><span class="p">(</span>
+                  <span class="n">animationSpec</span> <span class="p">=</span> <span class="nf">tween</span><span class="p">(</span>
+                      <span class="n">durationMillis</span> <span class="p">=</span> <span class="mi">300</span><span class="p">,</span>
+                      <span class="n">easing</span> <span class="p">=</span> <span class="nc">LinearOutSlowInEasing</span>
+                  <span class="p">)</span>
+              <span class="p">),</span>
+          <span class="n">verticalAlignment</span> <span class="p">=</span> <span class="nc">Alignment</span><span class="p">.</span><span class="nc">CenterVertically</span><span class="p">,</span>
+          <span class="n">horizontalArrangement</span> <span class="p">=</span> <span class="nc">Arrangement</span><span class="p">.</span><span class="nc">Center</span>
+      <span class="p">)</span> <span class="p">{</span>
+          <span class="nc">Icon</span><span class="p">(</span>
+              <span class="n">painter</span> <span class="p">=</span> <span class="nf">painterResource</span><span class="p">(</span><span class="n">id</span> <span class="p">=</span> <span class="nc">R</span><span class="p">.</span><span class="n">drawable</span><span class="p">.</span><span class="n">ic_google_icon</span><span class="p">),</span>
+              <span class="n">contentDescription</span> <span class="p">=</span> <span class="s">"Google SignIn Button"</span><span class="p">,</span>
+              <span class="n">tint</span> <span class="p">=</span> <span class="nc">Color</span><span class="p">.</span><span class="nc">Unspecified</span>
+          <span class="p">)</span>
+          <span class="nc">Spacer</span><span class="p">(</span><span class="n">modifier</span> <span class="p">=</span> <span class="nc">Modifier</span><span class="p">.</span><span class="nf">width</span><span class="p">(</span><span class="mi">8</span><span class="p">.</span><span class="n">dp</span><span class="p">))</span>
+          <span class="nc">Text</span><span class="p">(</span><span class="n">text</span> <span class="p">=</span> <span class="k">if</span> <span class="p">(</span><span class="n">clicked</span><span class="p">)</span> <span class="n">loadingText</span> <span class="k">else</span> <span class="n">text</span><span class="p">)</span>
+
+          <span class="k">if</span> <span class="p">(</span><span class="n">clicked</span><span class="p">)</span> <span class="p">{</span>
+              <span class="nc">Spacer</span><span class="p">(</span><span class="n">modifier</span> <span class="p">=</span> <span class="nc">Modifier</span><span class="p">.</span><span class="nf">width</span><span class="p">(</span><span class="mi">16</span><span class="p">.</span><span class="n">dp</span><span class="p">))</span>
+              <span class="nc">CircularProgressIndicator</span><span class="p">(</span>
+                  <span class="n">modifier</span> <span class="p">=</span> <span class="nc">Modifier</span>
+                      <span class="p">.</span><span class="nf">height</span><span class="p">(</span><span class="mi">16</span><span class="p">.</span><span class="n">dp</span><span class="p">)</span>
+                      <span class="p">.</span><span class="nf">width</span><span class="p">(</span><span class="mi">16</span><span class="p">.</span><span class="n">dp</span><span class="p">),</span>
+                  <span class="n">strokeWidth</span> <span class="p">=</span> <span class="mi">2</span><span class="p">.</span><span class="n">dp</span><span class="p">,</span>
+                  <span class="n">color</span> <span class="p">=</span> <span class="nc">MaterialTheme</span><span class="p">.</span><span class="n">colors</span><span class="p">.</span><span class="n">primary</span>
+              <span class="p">)</span>
+              <span class="nf">onClick</span><span class="p">()</span>
+          <span class="p">}</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>이렇—게에ㅔㅔ 긴 코드를 작성하면, 위의 사진에서 보시는 것처럼 버튼을 구현하실 수 있답니다. 우리의 Jetpack Compose 덕분에 코드가 좀 길어질 수는 있지만 클릭 이벤트에 대한 처리도 한 번에 가능하다는 점은 아주 큰 장점이죠!!</p>
+
+<p><br /></p>
+
+<ul>
+  <li><strong>API를 통해 Google SignIn과 상호작용</strong>
+    <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">fun</span> <span class="nf">getGoogleSignInClient</span><span class="p">(</span><span class="n">context</span><span class="p">:</span> <span class="nc">Context</span><span class="p">):</span> <span class="nc">GoogleSignInClient</span> <span class="p">{</span>
+ <span class="kd">val</span> <span class="py">signInOptions</span> <span class="p">=</span> <span class="nc">GoogleSignInOptions</span><span class="p">.</span><span class="nc">Builder</span><span class="p">(</span><span class="nc">GoogleSignInOptions</span><span class="p">.</span><span class="nc">DEFAULT_SIGN_IN</span><span class="p">)</span>
+     <span class="p">.</span><span class="nf">requestEmail</span><span class="p">()</span>
+     <span class="p">.</span><span class="nf">requestIdToken</span><span class="p">(</span><span class="n">context</span><span class="p">.</span><span class="nf">getString</span><span class="p">(</span><span class="nc">R</span><span class="p">.</span><span class="n">string</span><span class="p">.</span><span class="n">web_client_id</span><span class="p">))</span>
+     <span class="p">.</span><span class="nf">build</span><span class="p">()</span>
+
+
+ <span class="nc">Log</span><span class="p">.</span><span class="nf">d</span><span class="p">(</span><span class="s">"client"</span><span class="p">,</span> <span class="nc">R</span><span class="p">.</span><span class="n">string</span><span class="p">.</span><span class="n">web_client_id</span><span class="p">.</span><span class="nf">toString</span><span class="p">())</span>
+ <span class="k">return</span> <span class="nc">GoogleSignIn</span><span class="p">.</span><span class="nf">getClient</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">signInOptions</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>Google SignIn과의 소통을 위해서는 Firebase 연동 시에 프로젝트에 추가해 줬던 <strong>google-service.json</strong> 파일이 필요합니다. 그 파일 안에 있는 <strong>“oauth_client”</strong>_ 의 <strong>“client_id”</strong> 를 사용해야 하기 때문이죠. 해당 client_id를 복사한 뒤에 res 폴더 -&gt; values 폴더 안에 <strong>“strings.xml”</strong> 를 열어 그 안에 선언해 줍니다. 우리는 web_client_id라는 이름으로 선언을 해주었기 때문에 사용할 때는 R.string.web_client_id로 사용할 수 있습니다. 해당 id는 Google SignIn을 위한 요청 토큰으로 사용됩니다.</p>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<ul>
+  <li><strong>로그인 후 사용자 인증</strong> <br />
+로그인이 이루어지면 getCredential을 통해 ID 토큰을 받아서 해당 credential을 사용하여 인증함으로써 구글 계정 로그인을 진행할 수 있습니다. 또한 인증에 성공하면 getCurrentUser 메서드를 통해 사용자의 계정 정보(이메일, 이름 등)를 가져와 활용할 수 있습니다.
+    <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">private</span> <span class="k">fun</span> <span class="nf">firebaseAuthWithGoogle</span><span class="p">(</span>
+      <span class="n">idToken</span><span class="p">:</span> <span class="nc">String</span><span class="p">,</span>
+      <span class="n">signIn</span><span class="p">:</span> <span class="p">(</span><span class="nc">String</span><span class="p">,</span> <span class="nc">String</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nc">Unit</span>
+  <span class="p">)</span> <span class="p">{</span> 
+      <span class="kd">val</span> <span class="py">credential</span> <span class="p">=</span> <span class="nc">GoogleAuthProvider</span><span class="p">.</span><span class="nf">getCredential</span><span class="p">(</span><span class="n">idToken</span><span class="p">,</span> <span class="k">null</span><span class="p">)</span>
+      <span class="n">auth</span><span class="p">.</span><span class="nf">signInWithCredential</span><span class="p">(</span><span class="n">credential</span><span class="p">)</span>
+          <span class="p">.</span><span class="nf">addOnCompleteListener</span><span class="p">(</span><span class="k">this</span><span class="p">)</span> <span class="p">{</span> <span class="n">task</span> <span class="p">-&gt;</span>
+              <span class="k">if</span> <span class="p">(</span><span class="n">task</span><span class="p">.</span><span class="n">isSuccessful</span><span class="p">)</span> <span class="p">{</span>
+                  <span class="c1">// Sign in success, update UI with the signed-in user's information</span>
+                  <span class="nc">Log</span><span class="p">.</span><span class="nf">d</span><span class="p">(</span><span class="s">"Firebase"</span><span class="p">,</span> <span class="s">"signInWithCredential:success"</span><span class="p">)</span>
+                  <span class="nf">signIn</span><span class="p">(</span><span class="n">auth</span><span class="o">!!</span><span class="p">.</span><span class="n">currentUser</span><span class="o">!!</span><span class="p">.</span><span class="n">email</span><span class="o">!!</span><span class="p">,</span> <span class="n">auth</span><span class="o">!!</span><span class="p">.</span><span class="n">currentUser</span><span class="o">!!</span><span class="p">.</span><span class="n">displayName</span><span class="o">!!</span><span class="p">)</span>
+              <span class="p">}</span>
+              <span class="k">else</span> <span class="p">{</span>
+                  <span class="c1">// If sign in fails, display a message to the user.</span>
+                  <span class="nc">Log</span><span class="p">.</span><span class="nf">d</span><span class="p">(</span><span class="s">"Firebase"</span><span class="p">,</span> <span class="s">"signInWithCredential:failure"</span><span class="p">,</span> <span class="n">task</span><span class="p">.</span><span class="n">exception</span><span class="p">)</span>
+              <span class="p">}</span>
+          <span class="p">}</span>
+  <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h2 id="stateflow에-대해-알아보자">StateFlow에 대해 알아보자.</h2>
+<p>Android에서 코틀린을 사용하면 <strong>“Flow”</strong> 에 대한 이야기를 자주 접하게 되실 텐데요. 코루틴에서 flow는 여러 값들을 순차적으로 내보낼 수 있는 유형을 말한다고 해요. 즉, flow를 사용하면 DB로부터 실시간 업데이트를 받을 수 있는 것이죠.<br />
+이러한 Flow는 flow builder API들을 통해서 만들 수 있는데요. StateFlow가 바로 이 flow를 통해 상태 업데이트를 UI 표현을 위해 최적으로 내보내주는 Flow API입니다. 그리하여 <strong>StateFlow</strong> 는 현재 상태에서 state가 업데이트되면 해당 상태의 변화를 관찰하고 있다가 변화 흐름을 전달해 주는 녀석입니다. 이러한 StateFlow도 코드에 잘 녹여 낸다면 사용자에게 UI를 통해 데이터를 빠르게 효율적으로 보여줄 수 있겠죠?!</p>
+
+<p><br /></p>
+
+<h2 id="마무리">마무리</h2>
+<p>이렇게 본격 8주 차에 달하는 Chegg Prepp 클론 코딩 커리큘럼이 마무리되었는데요…! 미처 다루지 못한 데이터 구조화 및 처리 등은 종강 이후의 추가 커리큘럼을 통해 진행될 예정입니다. 마지막 특별 커리큘럼까지 많은 기대와 관심 부탁드립니다~! 그럼 종강 후에 만나요~ 안녕~!😊</p>
+
+  </article>
+  <br>
+
+  <hr/><br>
+
+  <div class="author">
+    
+    <table>
+        <tr>
+          <td rowspan="3" style="padding-right: 10px"><img class="author-pic" src="https://github.com/.png" alt=""></td>
+          <td><b><h2 rel="author"></h2></b></td>
+        </tr>
+      <tr>
+        <td><p rel="author"></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a rel="author" href="https://github.com/" target="_blank"><i class="fa fa-github fa-2x"></i></a>&nbsp&nbsp
+          
+        </td>
+      </tr>
+    </table>
+
+  </div>
+
+
+  <br>
+  <hr/>
+  <div>
+    <script src="https://utteranc.es/client.js"
+        repo="gdsc-seoultech/blog-comments"
+        issue-term="pathname"
+        label="comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+  </div>
+
+</div>
+<script src="/js/toc.js"></script>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper" align="center">
+  	<h4>This site was built using <a href="http://jekyllrb.com" target="_blank">Jekyll</a> and is hosted on <a href="https://github.com" target="_blank">Github</a>. &#169; GDSC Seoultech</h4>
+  </div>
+
+</footer>
+
+
+  </body>
+</html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="tYMwPoxNrWfLx2sDrDYzqI4-dq3M3FfI56NBL9JNtH8" />
+
+    <title>8주차 ML 모델 평가와 성능 향상 WIL</title>
+    <meta name="description" content="A simple, whitespace, helvetica based portfolio theme.
+">
+
+    <link rel = "shortcut icon" type="image/x-icon" href="/img/square_logo.png">
+    <link rel="stylesheet" href="/css/main.css">
+<!--    <link rel="canonical" href="http://localhost:4000/posts/1st_term/ml/2021-11-16-ml_eighth_wil_goldtan/">-->
+    <link rel="canonical" href="/posts/1st_term/ml/2021-11-16-ml_eighth_wil_goldtan/">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- 카테고리 css -->
+    <link rel="stylesheet" href="/css/pagination.css">
+    <link href="/css/category.css" type="text/css" rel="stylesheet">
+</head>
+
+   
+  <body>
+    <script src="/js/default.js"></script>
+    <header id="tab" >
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <div class="site-header">
+    <div class="wrapper">
+      <div>
+        <a href="/">
+          <img src="/img/square_logo.png" align="left" width="57px">
+        </a>
+      </div>
+
+      <nav class="site-nav">
+
+        <div id="tab" class="trigger">
+          <!-- GDSC Seoultech instead of blog -->
+          <a class="page-link" href="/">GDSC</a>
+          <a class="page-link" href="/members/2">MEMBER</a>
+          <a class="page-link" href="/category/2nd_term">POST</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div id="hovering" class="tab-header">
+    <div class="wrapper">
+      <div class="detail-post">
+          <div class="tab-item">
+            <div><a class="page-link-detail" href="/category/1st_term">1기</a></div>
+            <div><a class="page-link-detail" href="/category/2nd_term">2기</a></div>
+          </div>
+      </div>
+      <div class="detail-member">
+        <div class="tab-item">
+          <div><a class="page-link-detail" href="/members/1">1기</a></div>
+          <div><a class="page-link-detail" href="/members/2">2기</a></div>
+        </div>
+    </div>
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+    var tabMenu = $("#tab");
+    var tabSubMenu = $("#hovering");
+
+    tabSubMenu.hide()
+
+    tabMenu.hover(function() {
+      tabSubMenu.show();
+    }, function() {
+      tabSubMenu.hide();
+    })
+  </script>
+
+</header>
+
+
+    <div class="page-content" id="page-content">
+      <div class="wrapper" id="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">8주차 ML 모델 평가와 성능 향상 WIL</h1>
+    <h1 class="post-description"></h1>
+    <p class="post-meta">November 16, 2021 — 00:00 • goldtan</p>
+    
+      
+        <span class="tag">ml</span>
+      
+    
+  </header>
+  <article class="post-content">
+    <h1 id="5-모델-평가와-성능-향상">5 모델 평가와 성능 향상</h1>
+<p><br /></p>
+
+<h2 id="51-교차-검증">5.1 교차 검증</h2>
+<p><br /></p>
+<p>
+교차 검증은 데이터를 훈련과 테스트로 한 번 나누는 것이 아닌, 여러 번 반복해서 나누고 학습합니다<br />
+가장 널리 사용되는 k-fold 교차 검증에서 k는 특정 숫자를 의미합니다.<br /> 이 숫자만큼 데이터를 폴드라는 부분 집합으로 나눈 후 첫번째 모델은 첫 번째 폴드를 테스트 데이터로 하는 모델을, 두번째 모델은 번째 폴드를 테스트 데이터로 하는 모델을 만듭니다.<br />
+아래의 사진을 보면 조금 더 쉽게 이해할 수 있습니다.
+</p>
+<p><br /></p>
+
+<p><img src="https://user-images.githubusercontent.com/83542989/141931437-22e73206-8fa6-4bc3-a2d7-963d6699ae26.png" alt="image" /></p>
+
+<p><br /></p>
+
+<h3 id="511-scikit-learn의-교차-검증">5.1.1 scikit-learn의 교차 검증</h3>
+<p><br /></p>
+<p>
+scikit-learn에서는 cross_val_score 함수를 통해 사용할 수 있습니다.<br />
+폴드의 수는 cv 매개변수를 사용해 바꿀 수 있고, 폴드의 수만큼 값이 출력되는데 보통 값들의 평균을 많이 사용합니다.<br />
+cross_validate 함수를 사용하면 fit_time, score_time, test_score를 전부 확인할 수 있습니다.
+</p>
+<p><br /></p>
+
+<h3 id="512-교차-검증의-장점-단점">5.1.2 교차 검증의 장점 (+단점)</h3>
+<p><br /></p>
+<p>
+교차 검증의 장점은 우연적인 요소가 결과에 개입하는 것을 줄여줍니다.<br />
+또 정확도의 범위를 통해 모델이 훈련 데이터에 얼마나 민감한 지 알 수 있습니다.<br />
+그리고 데이터를 더 효과적으로 사용할 수 있습니다.<br />
+단점으로는 당연하게도 연산에 소요되는 시간이 늘어납니다.
+</p>
+<p><br /></p>
+
+<h3 id="513-계층별-k-fold-교차-검증과-그-외-전략들">5.1.3 계층별 k-fold 교차 검증과 그 외 전략들</h3>
+<p><br /></p>
+<p>
+하지만 순서대로 k개의 폴드로 나누는 것은 데이터의 나열된 순서에 따라 적절하지 않을 수 있습니다.<br />
+따라서 scikit-learn은 분류일 경우 계층별 k-fold 교차 검증을 사용합니다.<br />
+둘의 차이는 아래와 같습니다.
+</p>
+<p><br /></p>
+
+<p><img src="https://user-images.githubusercontent.com/83542989/141932873-a941de34-b24b-4c2c-bb4a-35b0d9114e9f.png" alt="image" /></p>
+
+<p><br /></p>
+<p>
+교차 검증 상세 옵션<br />
+scikit-learn에서는 cv 매개변수에 KFold 객체를 전달함으로써 더 세밀하게 제어할 수 있습니다.<br />
+다만 기본 KFold를 사용할 경우, 위에서 이야기한 것처럼 나열된 순서에 따라 학습이 불가능할 수 있는데 이 문제는 데이터를 섞음으로써 해결할 수 있습니다.<br />
+shuffle 매개변수에 True를 주고, random_state를 고정하면 데이터가 섞인 상태로 똑같은 작업을 진행할 수 있습니다.
+</p>
+<p><br /></p>
+<p>
+LOOCV<br />
+LOOCV는 폴드 하나가 데이터 샘플 하나인 교차 검증 방법입니다.<br />
+데이터셋이 크면 시간이 매우 오래걸리지만, 작은 데이터셋에서는 유용할 수 있습니다.
+</p>
+<p><br /></p>
+<p>
+임의 분할 교차 검증<br />
+train_size와 test_size를 설정하여 n_splits 횟수만큼 임의로 훈련 세트와 테스트 세트를 만드는 방법입니다.<br />
+이전과 다르게 n_splits은 데이터 세트를 나눈 숫자가 아닌 반복 횟수를 의미합니다.
+</p>
+<p><br /></p>
+
+<p><img src="https://user-images.githubusercontent.com/83542989/141934593-568d0bad-aa49-4399-b015-9d0a1088cbed.png" alt="image" /></p>
+
+<p><br /></p>
+<p>
+그룹별 교차 검증<br />
+여러 데이터들이 하나로 묶여야 할 때 사용됩니다.<br />
+주의할 부분은 클래스 레이블과 혼동해서는 안됩니다.<br />
+아래의 사진과 같이 같은 그룹끼리는 하나의 폴드에 포함되어 있는 것을 확인할 수 있습니다.
+</p>
+<p><br /></p>
+
+<p><img src="https://user-images.githubusercontent.com/83542989/141935201-d0f2f966-5634-44d0-8c90-f86053f33424.png" alt="image" /></p>
+
+<p><br /></p>
+
+<h3 id="514-반복-교차-검증">5.1.4 반복 교차 검증</h3>
+<p><br /></p>
+<p>
+scikit-learn 0.19 버전에서 RepeatKFold를 통해 교차 검증을 반복할 수 있다고 합니다.<br />
+n_repeats 매개변수만큼 데이터를 섞어가며 KFold를 진행합니다
+</p>
+<p><br /></p>
+
+<hr />
+<hr />
+
+<p><br /></p>
+
+<h2 id="52-그리드-서치">5.2 그리드 서치</h2>
+<p><br /></p>
+<p>
+그리드 서치는 매개변수를 튜닝하여 일반화 성능을 개선시킬 때 사용되는 방법 중 하나로 모든 조합을 시도해보는 것입니다.<br />
+</p>
+<p><br /></p>
+
+<h3 id="522-매개변수-과대적합과-검증-세트">5.2.2 매개변수 과대적합과 검증 세트</h3>
+<p><br /></p>
+<p>
+매개변수를 튜닝할 때 테스트 데이터를 사용하게 되면 새로운 데이터에는 정확도가 좋지 않을 수 있습니다.<br />
+따라서 아래의 사진과 같이 데이터를 훈련, 검증, 테스트 세 개의 세트로 나눠서 진행해야 합니다.<br /> 
+테스트 데이터는 정말 마지막 성능 테스트를 위해 남겨두어야 합니다.
+</p>
+<p><br /></p>
+
+<p><img src="https://user-images.githubusercontent.com/83542989/141936649-e52e4630-5973-40ec-b23d-5f83a2ca5712.png" alt="image" /></p>
+
+<p><br /></p>
+
+<h3 id="523-교차-검증을-사용한-그리드-서치">5.2.3 교차 검증을 사용한 그리드 서치</h3>
+<p><br /></p>
+
+<p><img src="https://user-images.githubusercontent.com/83542989/141937425-2950ed32-2d06-4ce0-86c4-223fcb896640.png" alt="image" /></p>
+
+<p><br /></p>
+<p>
+위와 같은 과정을 통해 최적의 매개변수를 선택할 수 있습니다.<br />
+scikit-learn의 GridSearchCV에서 딕셔너리의 형태로 대상 매개변수를 지정하게 되면 필요한 모든 모델을 학습할 수 있습니다.<br />
+딕셔너리의 키에는 매개변수의 이름이 들어가고, 값에는 매개변수에 넣고 싶은 값을 넣어주면 됩니다.<br />
+이후 GridSearchCV 객체의 fit 함수를 통해 가장 좋은 매개변수로 새로운 모델을 만들고 테스트를 하면 됩니다.
+</p>
+<p><br /></p>
+<p>
+교차 검증 결과 분석<br />
+HeatMap이나 DataFrame을 통해서 매개변수의 중요도나 적정 범위를 확인할 수 있습니다.
+</p>
+<p><br /></p>
+<p>
+중첩 교차 검증<br />
+중첩 교차 검증은 훈련 세트와 테스트 세트를 교차 검증 분할 방식을 통해 나누는 것입니다.<br />
+이렇게 하면 조금 더 안정적인 결과와 함께 우연적인 요소의 개입을 줄일 수 있습니다.
+</p>
+<p><br /></p>
+
+<hr />
+<hr />
+
+<p><br /></p>
+
+<h2 id="53-평가-지표와-측정">5.3 평가 지표와 측정</h2>
+<p><br /></p>
+
+<h3 id="531-최종-목표를-기억하라">5.3.1 최종 목표를 기억하라</h3>
+<p><br /></p>
+<p>
+평가 지표는 실전에 투입할 수 없기 때문에 계산하기 쉽게 사용하는 것입니다.<br />
+따라서 항상 애플리케이션의 최종 목표를 기억해야 합니다.
+</p>
+<p><br /></p>
+
+<h3 id="532-이진-분류의-평가-지표">5.3.2 이진 분류의 평가 지표</h3>
+<p><br /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>False Positive : 실제로는 음성이지만 양성으로 판단
+False Negative : 실제로는 양성이지만 음성으로 판단
+</code></pre></div></div>
+
+<p><br /></p>
+<p>
+한 클래스가 다른 것보다 훨씬 많은 데이터 셋을 불균형 데이터셋이라고 합니다.<br />
+불균형 데이터셋에서는 정확도는 좋은 지표가 되지 못합니다.<br />
+오차 행렬은 이진 분류 평가 결과를 나타낼 때 자주 사용하는 방법입니다.
+오차 행렬에서 대각 행렬은 바르게 분류된 경우이고, 다른 두 항목은 잘못 분류된 경우를 의미합니다.<br />
+오차행렬의 결과를 요약하는 여러 방법 중 가장 일반적인 것이 precision과 recall입니다.<br />
+precision과 recall은 서로 상충관계에 있기 때문에 둘을 함께 보기 위해 f1 score를 사용하기도 합니다.<br />
+classification_report 함수를 사용하면 precision, recall, f1 score를 한번에 볼 수 있습니다.<br />
+그리고 이전 지도 학습 마지막 부분에서 설명했던 것과 같이 decision_function과 predict_proba 함수의 임계치를 조절함에 따라 precision이나 recall을 조절할 수 있습니다. 
+</p>
+<p><br /></p>
+<p>
+하지만 특정 운영 포인트가 명확하지 않을 경우에는 모든 정밀도나 재현율의 장단점을 살펴보는 것이 좋은데 precision-recall 곡선을 사용하면 됩니다.<br />
+아래의 사진과 같이 가능한 모든 임계값에 해당하는 recall과 precision을 통해 나타낼 수 있습니다.<br />
+그리고 우측 상단으로 갈수록 성능이 우수하다고 할 수 있습니다.
+</p>
+<p><br /></p>
+
+<p><img src="https://user-images.githubusercontent.com/83542989/141960857-c4749b1d-ad31-4bae-aec3-0661cc212556.png" alt="image" /></p>
+
+<p><br /></p>
+<p>
+이와 비슷한 ROC 곡선은 진짜 양성 비율에 대한 거짓 양성 비율을 의미합니다.<br />
+ROC 곡선에서는 좌측 상단에 가까울수록 성능이 우수합니다.<br />
+그리고 곡선 아래의 면적을 AUC(Area Under the Curve)라고 합니다.
+</p>
+<p><br /></p>
+
+<p><img src="https://user-images.githubusercontent.com/83542989/141961579-6e74ca33-0172-4a89-af74-f61ab62c99ca.png" alt="image" /></p>
+
+<p><br /></p>
+
+<h3 id="533-다중-분류의-평가-지표">5.3.3 다중 분류의 평가 지표</h3>
+<p><br /></p>
+<p>
+다중 분류의 평가에서는 정확도를 사용하는 것이 어렵기 때문에, 앞에서 사용한 오차 행렬 혹은 분류 리포트 등을 일반적으로 사용합니다.
+</p>
+<p><br /></p>
+
+<h3 id="534-회귀의-평가-지표">5.3.4 회귀의 평가 지표</h3>
+<p><br /></p>
+<p>
+회귀 평가에서는 R^2만으로도 충분하기 때문에 일반적으로 R^2를 사용합니다.
+</p>
+<p><br /></p>
+
+<h3 id="535-모델-선택에서-평가-지표-사용하기">5.3.5 모델 선택에서 평가 지표 사용하기</h3>
+<p><br /></p>
+<p>
+scikit-learn에서 GridSearchCV와 cross_val_score의 scoring 매개변수를 사용하면 쉽게 이를 구현할 수 있습니다.<br />
+scoring 매개변수에 accuracy, roc_auc, average_precision 등 다양한 옵션을 통해 사용할 수 있습니다.
+</p>
+<p><br /></p>
+
+<hr />
+<hr />
+<hr />
+
+<p><br /></p>
+
+<h3 id="gdsc-화이팅--ml-화이팅-">GDSC 화이팅 ! ML 화이팅 !</h3>
+
+  </article>
+  <br>
+
+  <hr/><br>
+
+  <div class="author">
+    
+    <table>
+        <tr>
+          <td rowspan="3" style="padding-right: 10px"><img class="author-pic" src="https://github.com/.png" alt=""></td>
+          <td><b><h2 rel="author"></h2></b></td>
+        </tr>
+      <tr>
+        <td><p rel="author"></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a rel="author" href="https://github.com/" target="_blank"><i class="fa fa-github fa-2x"></i></a>&nbsp&nbsp
+          
+        </td>
+      </tr>
+    </table>
+
+  </div>
+
+
+  <br>
+  <hr/>
+  <div>
+    <script src="https://utteranc.es/client.js"
+        repo="gdsc-seoultech/blog-comments"
+        issue-term="pathname"
+        label="comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+  </div>
+
+</div>
+<script src="/js/toc.js"></script>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper" align="center">
+  	<h4>This site was built using <a href="http://jekyllrb.com" target="_blank">Jekyll</a> and is hosted on <a href="https://github.com" target="_blank">Github</a>. &#169; GDSC Seoultech</h4>
+  </div>
+
+</footer>
+
+
+  </body>
+</html>

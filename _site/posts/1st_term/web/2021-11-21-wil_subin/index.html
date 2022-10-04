@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="tYMwPoxNrWfLx2sDrDYzqI4-dq3M3FfI56NBL9JNtH8" />
+
+    <title>WEB WIL - 프론트 연결하기</title>
+    <meta name="description" content="A simple, whitespace, helvetica based portfolio theme.
+">
+
+    <link rel = "shortcut icon" type="image/x-icon" href="/img/square_logo.png">
+    <link rel="stylesheet" href="/css/main.css">
+<!--    <link rel="canonical" href="http://localhost:4000/posts/1st_term/web/2021-11-21-wil_subin/">-->
+    <link rel="canonical" href="/posts/1st_term/web/2021-11-21-wil_subin/">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- 카테고리 css -->
+    <link rel="stylesheet" href="/css/pagination.css">
+    <link href="/css/category.css" type="text/css" rel="stylesheet">
+</head>
+
+   
+  <body>
+    <script src="/js/default.js"></script>
+    <header id="tab" >
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <div class="site-header">
+    <div class="wrapper">
+      <div>
+        <a href="/">
+          <img src="/img/square_logo.png" align="left" width="57px">
+        </a>
+      </div>
+
+      <nav class="site-nav">
+
+        <div id="tab" class="trigger">
+          <!-- GDSC Seoultech instead of blog -->
+          <a class="page-link" href="/">GDSC</a>
+          <a class="page-link" href="/members/2">MEMBER</a>
+          <a class="page-link" href="/category/2nd_term">POST</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div id="hovering" class="tab-header">
+    <div class="wrapper">
+      <div class="detail-post">
+          <div class="tab-item">
+            <div><a class="page-link-detail" href="/category/1st_term">1기</a></div>
+            <div><a class="page-link-detail" href="/category/2nd_term">2기</a></div>
+          </div>
+      </div>
+      <div class="detail-member">
+        <div class="tab-item">
+          <div><a class="page-link-detail" href="/members/1">1기</a></div>
+          <div><a class="page-link-detail" href="/members/2">2기</a></div>
+        </div>
+    </div>
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+    var tabMenu = $("#tab");
+    var tabSubMenu = $("#hovering");
+
+    tabSubMenu.hide()
+
+    tabMenu.hover(function() {
+      tabSubMenu.show();
+    }, function() {
+      tabSubMenu.hide();
+    })
+  </script>
+
+</header>
+
+
+    <div class="page-content" id="page-content">
+      <div class="wrapper" id="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">WEB WIL - 프론트 연결하기</h1>
+    <h1 class="post-description"></h1>
+    <p class="post-meta">November 21, 2021 — 00:00 • twinklesu</p>
+    
+      
+        <span class="tag">web</span>
+      
+    
+  </header>
+  <article class="post-content">
+    <p>오랜만에 쓰는 WIL,,</p>
+
+<h1 id="커리큘럼-복습">커리큘럼 복습</h1>
+<h2 id="cors-정책">cors 정책</h2>
+
+<ul>
+  <li>cors: Cross-Origin Resource Sharing</li>
+  <li>한 출처(origin)에서 다른 출처(cross-origin)의 원하는 리소스에 접근할 수 이쓴 권한이 있는지 없는지를 알려주는 매커니즘</li>
+  <li>origin: scheme(프로토콜), host(도메인), 포트</li>
+  <li>셋 중 하나만 달라도 cross-origin이라, 나의 경우 톰캣(8080), 리액트(3000)이라서 cross 였당</li>
+</ul>
+
+<p><strong>회피 방법</strong></p>
+
+<ul>
+  <li>브라우저 실행 시 외부 요청 허용하는 옵션 사용</li>
+  <li>웹 브라우저에 외부 요청을 허용하도록 하는 플러그인 설치</li>
+  <li>JSONP로 요청</li>
+  <li>CORS로 요청 (W3C에서 내놓은 표준)</li>
+</ul>
+
+<p>사실 나는 <strong>proxy 미들웨어</strong>를 사용해 우회?회피? 했는데, 어… 어떤 방식인거지? 알려주세요 아시는 분들… 너무 무지하네요</p>
+
+<h2 id="동기비동기">동기/비동기</h2>
+
+<ul>
+  <li>JavaScript는 <strong>동기식 언어</strong></li>
+  <li>한 작업이 실행되는 동안 다른 작업은 멈춤 상태! 자신의 차례 기다림</li>
+  <li>단일 스레드(싱글 스레드)</li>
+  <li>자바스크립트가 stack 구조로 함수를 쌓기 때문에 LIFO (<strong>call stack</strong>)</li>
+  <li>좀 복잡한 것 같은데 web의 경우 <strong>webapis</strong>라는게 <strong>task queue</strong>에 넣는 것 같다….</li>
+  <li>그리고 event loop라는 녀석이 있어서 어떻게 <strong>비동기적으로 웹</strong>이 돌아가게 한다!</li>
+</ul>
+
+<p><del>카드뉴스에 자바스크립트 비동기라고 썼는데ㅋㅋㅋㅋㅋㅋㅋㅋ</del></p>
+
+<p>아무튼 자바스크립트는 웹을 비동기로 돌리기 때문에, <code class="language-plaintext highlighter-rouge">async</code>, <code class="language-plaintext highlighter-rouge">await</code> 등을 이용해서 <strong>정보가 받아 진 후, 웹 보여주기</strong>로 처리합니다!</p>
+
+<h1 id="얼만큼-했냐면">얼만큼 했냐면,,</h1>
+
+<ul>
+  <li>로그인</li>
+  <li>회원가입</li>
+  <li>게시글 리스트</li>
+  <li>게시글 상세 페이지</li>
+  <li>게시글 작성</li>
+  <li>댓글 작성</li>
+  <li>글/댓글 공감하기</li>
+</ul>
+
+<h2 id="onclick에-parameter-넘기기">onClick에 parameter 넘기기</h2>
+
+<p>댓글 공감을 구현할 때, 어느 댓글의 공감을 눌렀는지 알기 위해 공감 버튼의 <strong>onClick</strong>에 parameter를 넘겨주고 싶었는데요..</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">button</span>
+<span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">comment-agree-btn</span><span class="dl">"</span>
+<span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">onClickAgree</span><span class="p">(</span><span class="mi">1</span><span class="p">)}</span><span class="o">&gt;</span>
+<span class="nx">공감</span>
+<span class="o">&lt;</span><span class="sr">/button</span><span class="err">&gt;
+</span></code></pre></div></div>
+
+<p>이렇게 작성하자, <strong>버튼을 누르지 않아도 <code class="language-plaintext highlighter-rouge">onClickAgree</code>가 실행</strong>되는 멋진일이 발생했습니다^^<br />
+테스트를 위해 alert가 뜨게끔 했는데 진짜 미친듯이 alert가 뜨더라구요;;<br />
+아마도 제가 javascript의 함수를,,, 잘 이해하지 못해서 그런게 아닐까 싶습니다.<br />
+<del>자바는 함수는 무조건 ()인디</del></p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">button</span>
+<span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">comment-agree-btn</span><span class="dl">"</span>
+<span class="nx">onClick</span><span class="o">=</span><span class="p">{()</span> <span class="o">=&gt;</span> <span class="nx">onClickCommentAgreeBtn</span><span class="p">({</span> <span class="na">id</span><span class="p">:</span> <span class="nx">comment</span><span class="p">.</span><span class="nx">id</span> <span class="p">})}</span><span class="o">&gt;</span>
+<span class="nx">공감</span>
+<span class="o">&lt;</span><span class="sr">/button</span><span class="err">&gt;
+</span></code></pre></div></div>
+
+<p>이렇게 <code class="language-plaintext highlighter-rouge">() =&gt; onClick()</code> 형식으로 바꿔주었습니다!<br />
+아무래도 이게 ()가 있으면 바로 실행되는 것 같은데,, <em>최종 코드는 (), 즉 눌리면 =&gt; 그때 호출해줘</em>가 아닐까 싶어요 ㅎ 아님말구</p>
+
+<h2 id="페이지-전환-새로고침">페이지 전환, 새로고침</h2>
+
+<p>페이지 전환은 history를 사용했습니다!</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">useHistory</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react-router</span><span class="dl">"</span><span class="p">;</span>
+<span class="c1">//생략</span>
+    <span class="kd">let</span> <span class="nx">history</span> <span class="o">=</span> <span class="nx">useHistory</span><span class="p">();</span>
+    <span class="nx">history</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s2">`/board/detail/</span><span class="p">${</span><span class="nx">writeResult</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">id</span><span class="p">}</span><span class="s2">`</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>여기서 포인트는 주소를 ‘/board’ 로 주지 않고 ‘board’ 로 주면 현재 주소에 주소가 누적되더라구요!?<br />
+가끔 그런 이슈를 겪었지만, 멋지게 성장했습니다😊</p>
+
+<p>새로고침은</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">reload</span><span class="p">();</span>
+</code></pre></div></div>
+
+<p>을 이용해 댓글을 작성하거나, 공감을 했을 때 값이 바뀌도록 했습니다.<br />
+근데 부분적으로 reder가 가능할 것 같네요 ajax처럼 굳이 전체를 새로고침 안해도?<br />
+방법을 아신다면 알려주세요 인혁님 민선님,, 저는 리액트응애니까요,,,</p>
+
+<p>이거말고 특별한 트러블슈팅은 없었습니다<br />
+다만 제가 success를 succuess로 오타쳐서 고생한게 하나 있었죠..^^…</p>
+
+<h1 id="다음주-목표">다음주 목표</h1>
+
+<p>메인 화면과 진로, 홍보 화면을 연결하고 쪽지를 조금 깨작거릴 생각입니다.<br />
+왜냐면 쪽지보내기 버튼을 과거의 제가 만들지 않았더라구요 ㅎㅎ<br />
+모두 화이팅!</p>
+
+  </article>
+  <br>
+
+  <hr/><br>
+
+  <div class="author">
+    
+    <table>
+        <tr>
+          <td rowspan="3" style="padding-right: 10px"><img class="author-pic" src="https://github.com/.png" alt=""></td>
+          <td><b><h2 rel="author"></h2></b></td>
+        </tr>
+      <tr>
+        <td><p rel="author"></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a rel="author" href="https://github.com/" target="_blank"><i class="fa fa-github fa-2x"></i></a>&nbsp&nbsp
+          
+        </td>
+      </tr>
+    </table>
+
+  </div>
+
+
+  <br>
+  <hr/>
+  <div>
+    <script src="https://utteranc.es/client.js"
+        repo="gdsc-seoultech/blog-comments"
+        issue-term="pathname"
+        label="comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+  </div>
+
+</div>
+<script src="/js/toc.js"></script>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper" align="center">
+  	<h4>This site was built using <a href="http://jekyllrb.com" target="_blank">Jekyll</a> and is hosted on <a href="https://github.com" target="_blank">Github</a>. &#169; GDSC Seoultech</h4>
+  </div>
+
+</footer>
+
+
+  </body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="tYMwPoxNrWfLx2sDrDYzqI4-dq3M3FfI56NBL9JNtH8" />
+
+    <title>알고리즘 스터디 정렬 - 2309번</title>
+    <meta name="description" content="A simple, whitespace, helvetica based portfolio theme.
+">
+
+    <link rel = "shortcut icon" type="image/x-icon" href="/img/square_logo.png">
+    <link rel="stylesheet" href="/css/main.css">
+<!--    <link rel="canonical" href="http://localhost:4000/posts/1st_term/study/2021-10-07-python_2309/">-->
+    <link rel="canonical" href="/posts/1st_term/study/2021-10-07-python_2309/">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- 카테고리 css -->
+    <link rel="stylesheet" href="/css/pagination.css">
+    <link href="/css/category.css" type="text/css" rel="stylesheet">
+</head>
+
+   
+  <body>
+    <script src="/js/default.js"></script>
+    <header id="tab" >
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <div class="site-header">
+    <div class="wrapper">
+      <div>
+        <a href="/">
+          <img src="/img/square_logo.png" align="left" width="57px">
+        </a>
+      </div>
+
+      <nav class="site-nav">
+
+        <div id="tab" class="trigger">
+          <!-- GDSC Seoultech instead of blog -->
+          <a class="page-link" href="/">GDSC</a>
+          <a class="page-link" href="/members/2">MEMBER</a>
+          <a class="page-link" href="/category/2nd_term">POST</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div id="hovering" class="tab-header">
+    <div class="wrapper">
+      <div class="detail-post">
+          <div class="tab-item">
+            <div><a class="page-link-detail" href="/category/1st_term">1기</a></div>
+            <div><a class="page-link-detail" href="/category/2nd_term">2기</a></div>
+          </div>
+      </div>
+      <div class="detail-member">
+        <div class="tab-item">
+          <div><a class="page-link-detail" href="/members/1">1기</a></div>
+          <div><a class="page-link-detail" href="/members/2">2기</a></div>
+        </div>
+    </div>
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+    var tabMenu = $("#tab");
+    var tabSubMenu = $("#hovering");
+
+    tabSubMenu.hide()
+
+    tabMenu.hover(function() {
+      tabSubMenu.show();
+    }, function() {
+      tabSubMenu.hide();
+    })
+  </script>
+
+</header>
+
+
+    <div class="page-content" id="page-content">
+      <div class="wrapper" id="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">알고리즘 스터디 정렬 - 2309번</h1>
+    <h1 class="post-description">정렬 알고리즘 2309번 문제풀이</h1>
+    <p class="post-meta">October 7, 2021 — 19:12 • leeeha</p>
+    
+      
+        <span class="tag">study</span>
+      
+    
+  </header>
+  <article class="post-content">
+    <p>안녕하세요. GDSC 안드로이드 파트 멤버 이하은입니다! 제가 이번 3주차에 맡은 문제는 2309번 입니다. 이름부터 호기심이 드는 문제인데, 어떤 문제인지 같이 보시죠!<br /><br /></p>
+
+<h1 id="백준-정렬-2309번-일곱-난쟁이">백준 정렬 2309번. 일곱 난쟁이</h1>
+
+<p><a href="https://www.acmicpc.net/problem/2309">https://www.acmicpc.net/problem/2309 </a><br /></p>
+
+<p><img src="https://user-images.githubusercontent.com/68090939/136366170-cc42222e-77d9-4625-b85e-fa2311a4d085.png" alt="image" /><br /></p>
+
+<p>가짜 난쟁이 2명을 어떻게 찾을 수 있을까요? 중요한 단서는 진짜 난쟁이 7명의 키의 합이 100이라는 것입니다. 따라서 9명의 키를 모두 더한 값에서 100을 뺀 다음에, 그 차이를 만들어낸 가짜 난쟁이 2명을 찾으면 됩니다! 이것을 코드로 구현하려면 어떻게 해야 할까요?<br /><br /></p>
+
+<p>문제에 주어진 입력 예시는 다음과 같습니다.<br /></p>
+
+<blockquote>
+  <p>20<br />
+7<br />
+23<br />
+19<br />
+10<br />
+15    i=5<br />
+25    j=6<br />
+8<br />
+13
+<br /></p>
+</blockquote>
+
+<p>위의 숫자들을 다 더하면 140이 나오는데요, 여기서 100을 뺐을 때 40이라는 차이를 만들어낸 가짜 난쟁이 두 명을 찾아서 이들을 제외하고 나머지 7명의 키를 오름차순으로 출력해주면 됩니다.<br />
+그 두 명을 찾기 위해 아래 코드처럼 이중 반복문을 사용할 수 있습니다. 이때 외부 루프는 합이 gap과 같아지는 두 원소를 찾을 때까지 반복되며, 내부 루프는 외부 루프의 현재 인덱스 바로 다음부터 배열 끝까지 탐색을 진행합니다.<br /></p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">bool</span> <span class="n">found</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">found</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// not found라면 반복</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="mi">9</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+			<span class="k">if</span> <span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="n">gap</span><span class="p">)</span> <span class="p">{</span>
+				<span class="c1">// 가짜 난쟁이의 키는 0으로 만들기</span>
+				<span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+				<span class="n">found</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+				<span class="k">break</span><span class="p">;</span>
+			<span class="p">}</span>
+		<span class="p">}</span>
+		<span class="n">i</span><span class="o">++</span><span class="p">;</span>
+	<span class="p">}</span>
+</code></pre></div></div>
+
+<p>C++의 기본 배열은 원소 자체를 제거할 수 있는 방법이 없어서, 값을 0으로 만들고 출력에서는 이를 제외하는 방식으로 풀었습니다. 하지만, vector 컨테이너의 erase 함수를 사용하면 원소를 제거할 수 있습니다. 다만 주의할 점은 erase로 원소를 삭제하면 자동으로 한칸씩 원소들이 앞으로 당겨지기 때문에 i번째, j-1번째 원소를 삭제해줘야 합니다. 아래 C++ 코드들을 보시죠! <br /><br /></p>
+
+<h1 id="c-풀이">C++ 풀이</h1>
+
+<h2 id="1-기본-배열">1. 기본 배열</h2>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;algorithm&gt;</span><span class="c1"> // std::sort</span><span class="cp">
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="kt">int</span> <span class="n">arr</span><span class="p">[</span><span class="mi">9</span><span class="p">]{};</span> <span class="c1">// 0으로 초기화</span>
+	<span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="c1">// 난쟁이 9명의 키를 입력 받는다.</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">9</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+		<span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+		<span class="n">sum</span> <span class="o">+=</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+	<span class="p">}</span>
+	<span class="kt">int</span> <span class="n">gap</span> <span class="o">=</span> <span class="n">sum</span> <span class="o">-</span> <span class="mi">100</span><span class="p">;</span>
+	<span class="kt">bool</span> <span class="n">found</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">found</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// not found라면 반복</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="mi">9</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+			<span class="k">if</span> <span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="n">gap</span><span class="p">)</span> <span class="p">{</span>
+				<span class="c1">// 가짜 난쟁이의 키는 0으로 만들기</span>
+				<span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+				<span class="n">found</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+				<span class="k">break</span><span class="p">;</span>
+			<span class="p">}</span>
+		<span class="p">}</span>
+		<span class="n">i</span><span class="o">++</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="c1">// 오름차순 정렬</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">sort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">arr</span> <span class="o">+</span> <span class="mi">9</span><span class="p">);</span>
+	<span class="c1">// 0을 제외하고 7명의 난쟁이 키 출력</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">9</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="2-vector-컨테이너-사용">2. vector 컨테이너 사용</h2>
+
+<p>std::vector::erase 함수 레퍼런스 <br />
+<a href="http://www.cplusplus.com/reference/vector/vector/erase/">http://www.cplusplus.com/reference/vector/vector/erase/</a></p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;algorithm&gt;</span><span class="c1"> // std::sort</span><span class="cp">
+#include</span> <span class="cpf">&lt;vector&gt;</span><span class="cp">
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">v</span><span class="p">;</span> <span class="c1">// 벡터는 크기 지정을 안 해줘도 된다!</span>
+	<span class="kt">int</span> <span class="n">val</span><span class="p">,</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">9</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+		<span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">val</span><span class="p">;</span>
+		<span class="n">v</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">val</span><span class="p">);</span>
+		<span class="n">sum</span> <span class="o">+=</span> <span class="n">val</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="kt">int</span> <span class="n">gap</span> <span class="o">=</span> <span class="n">sum</span> <span class="o">-</span> <span class="mi">100</span><span class="p">;</span>
+	<span class="kt">bool</span> <span class="n">found</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">found</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// not found라면 반복</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="mi">9</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+			<span class="k">if</span> <span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">v</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="n">gap</span><span class="p">)</span> <span class="p">{</span>
+				<span class="n">v</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">begin</span><span class="p">()</span> <span class="o">+</span> <span class="n">i</span><span class="p">);</span> <span class="c1">// 삭제 후 한칸씩 앞으로 당겨지므로</span>
+				<span class="n">v</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">begin</span><span class="p">()</span> <span class="o">+</span> <span class="p">(</span><span class="n">j</span> <span class="o">-</span> <span class="mi">1</span><span class="p">));</span> <span class="c1">// j-1번째 원소 삭제</span>
+				<span class="n">found</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+				<span class="k">break</span><span class="p">;</span>
+			<span class="p">}</span>
+		<span class="p">}</span>
+		<span class="n">i</span><span class="o">++</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="c1">// 오름차순 정렬</span>
+	<span class="n">sort</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">v</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+	<span class="k">for</span> <span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span> <span class="n">ele</span> <span class="o">:</span> <span class="n">v</span><span class="p">)</span> <span class="c1">// 범위 기반 for문</span>
+		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">ele</span> <span class="o">&lt;&lt;</span> <span class="s">" "</span><span class="p">;</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>이 문제를 파이썬으로 풀려면 어떻게 코드를 짜야 될까요? <br /><br /></p>
+
+<h1 id="python-풀이">Python 풀이</h1>
+
+<p><a href="https://kyoung-jnn.tistory.com/entry/%EB%B0%B1%EC%A4%802309%EB%B2%88%ED%8C%8C%EC%9D%B4%EC%8D%ACPython-%EC%9D%BC%EA%B3%B1-%EB%82%9C%EC%9F%81%EC%9D%B4-Brute-force">참고한 블로그 링크</a></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">9</span><span class="p">)]</span>
+<span class="n">total</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">9</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span><span class="mi">9</span><span class="p">):</span>
+        <span class="k">if</span> <span class="mi">100</span> <span class="o">==</span> <span class="n">total</span> <span class="o">-</span> <span class="p">(</span><span class="nb">list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="nb">list</span><span class="p">[</span><span class="n">j</span><span class="p">]):</span>
+            <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="nb">list</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="nb">list</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+            <span class="nb">list</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+            <span class="nb">list</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+            <span class="nb">list</span><span class="p">.</span><span class="n">sort</span><span class="p">()</span> <span class="c1"># 오름차순 정렬
+</span>            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">)):</span>
+               <span class="k">print</span><span class="p">(</span><span class="nb">list</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+            <span class="k">break</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">9</span><span class="p">:</span>
+        <span class="k">break</span>
+</code></pre></div></div>
+
+<p>파이썬의 remove 함수는 인덱스가 아니라 ‘값을 기준으로’ 원소를 삭제합니다. 그런데 문제 조건에서 아홉 난쟁이의 키는 모두 다르다고 했기 때문에, 중복에 대한 고민 없이 ‘값을 기준으로’ 원소를 삭제할 수 있습니다.<br /><br /></p>
+
+<hr />
+
+<h1 id="sort-함수의-시간-복잡도">sort 함수의 시간 복잡도</h1>
+
+<p>C++ STL algorithm의 std::sort 함수는 Introsort의 변형된 버전이라고 합니다. Introsort는 퀵정렬과 힙 정렬의 하이브리드이며, 마지막에 삽입 정렬까지 수행된다고 하네요. 그래서 이 std::sort 함수는 퀵정렬의 단점을 보완하여 최악의 경우에도 O(NlogN)의 시간 복잡도를 보장합니다.<br /></p>
+
+<p>파이썬의 내장 함수 sort는 Timsort로 구현되어 있습니다. Introsort가 이론적인 최악의 경우를 대비해 변형시킨 알고리즘이라면, Timsort는 현실에서 있을 법한 다양한 데이터들에 대해 최적화를 시킨 알고리즘입니다. 기본적으로는 병합 정렬과 삽입 정렬의 하이브리드이며, 최악의 경우 O(NlogN)을 보장할 뿐 아니라 최선의 경우 O(N)에 수행도 가능한 알고리즘입니다. 이러한 Timsort는 Python 2.3부터 기본 정렬 알고리즘으로 사용되고 있으며, 이후 Java 등 많은 라이브러리에서 표준 정렬로 채택되었다고 하네요.<br /></p>
+
+<p><a href="https://novlog.tistory.com/21">https://novlog.tistory.com/21</a><br />
+<a href="http://www.secmem.org/blog/2019/04/10/special-sorts/">http://www.secmem.org/blog/2019/04/10/special-sorts/</a><br />
+<a href="https://realpython.com/sorting-algorithms-python/#the-timsort-algorithm-in-python">https://realpython.com/sorting-algorithms-python/#the-timsort-algorithm-in-python</a><br /><br /></p>
+
+<p><img src="https://user-images.githubusercontent.com/68090939/136488241-c8109b40-6267-485d-9dd5-c2fd4a2492ef.png" alt="image" />
+이미지 출처: <a href="https://gmlwjd9405.github.io/2018/05/10/algorithm-quick-sort.html">https://gmlwjd9405.github.io/2018/05/10/algorithm-quick-sort.html</a><br /></p>
+
+<p>내장 함수 sort의 실체를 얕게나마 알고나니 우리가 일반적으로 배우는 위와 같은 정렬 알고리즘들은 새발의 피에 불과하다는 걸 깨달았습니다. 퀵정렬과 같이 익히 알려진 알고리즘도 피벗을 어떻게 선택하느냐에 따라서 수십 가지 변형이 있고 각각의 특징이 다르며, 배열과 연결 리스트 등 어떤 자료구조를 사용하느냐에 따라서도 알고리즘의 동작이 달라질 수 있습니다.<br />
+정렬 알고리즘의 종류는 셀 수 없이 많고, 목적도 가지각색입니다. 심지어는 실용성은 전혀 없이 그저 재미로만 만들어진 알고리즘, 일부러 느리게 만든 알고리즘 등도 존재한다고 합니다. 하지만, 일반적으로 정렬은 <strong>효율적으로 자료를 검색하기 위해서</strong> 하는 것이라고 생각합니다. 대표적으로 선형 탐색보다 효율적인 이진 탐색도 정렬된 배열에서만 사용할 수 있는 알고리즘이죠.<br />
+이번 포스트를 통해 여러분도 정렬 알고리즘에 대해 새롭게 얻어가는 지식이 있었으면 좋겠네요!<br /><br /></p>
+
+<hr />
+
+<h1 id="마무리">마무리</h1>
+
+<p>2309번 풀이를 보니 확실히 파이썬이 C++보다 코드가 직관적이고 짧은 거 같은데, 아래 스크린샷에서 확인할 수 있듯이 사용한 메모리나 실행 시간 측면에서는 C++이 훨씬 우세하네요! 아직 파이썬 문법에는 익숙하지 않아서 거의 구글링에 의존하고 있지만, 이 스터디를 통해 파이썬에 더 익숙해졌으면 좋겠습니다! <br /></p>
+
+<p><img src="https://user-images.githubusercontent.com/68090939/136382676-03a07877-bd49-4d7f-8fe9-9eb6d7e33277.png" alt="image" /></p>
+
+<p>그럼 이만 포스트를 마치겠습니다. 읽어주셔서 감사합니다.<br /></p>
+
+  </article>
+  <br>
+
+  <hr/><br>
+
+  <div class="author">
+    
+    <table>
+        <tr>
+          <td rowspan="3" style="padding-right: 10px"><img class="author-pic" src="https://github.com/.png" alt=""></td>
+          <td><b><h2 rel="author"></h2></b></td>
+        </tr>
+      <tr>
+        <td><p rel="author"></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a rel="author" href="https://github.com/" target="_blank"><i class="fa fa-github fa-2x"></i></a>&nbsp&nbsp
+          
+        </td>
+      </tr>
+    </table>
+
+  </div>
+
+
+  <br>
+  <hr/>
+  <div>
+    <script src="https://utteranc.es/client.js"
+        repo="gdsc-seoultech/blog-comments"
+        issue-term="pathname"
+        label="comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+  </div>
+
+</div>
+<script src="/js/toc.js"></script>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper" align="center">
+  	<h4>This site was built using <a href="http://jekyllrb.com" target="_blank">Jekyll</a> and is hosted on <a href="https://github.com" target="_blank">Github</a>. &#169; GDSC Seoultech</h4>
+  </div>
+
+</footer>
+
+
+  </body>
+</html>
