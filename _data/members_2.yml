@@ -28,7 +28,7 @@ yejin:
   description: 하고싶은건 많은데 삶이 너무 짧아요..
   introduce: 안녕하세요, 웹파트 코어를 맡은 컴퓨터공학과 오예진입니다! 저는 React, iOS, 영어, 알고리즘, 대외활동, 알바, 놀기 등.. 하고 싶은 것과 배우고 싶은게 너무 많아서 휴학을 하고 알찬 나날들을 보내고 있어요! <br> 그러던 중, 이번 하반기를 GDSC와 함께 할 수 있게 되어서 기대도 많이 되고 벌써 즐겁네용 😊 <br> 1년동안 다양한 분야의 GDSC 멤버들과 멋지게 성장하는 잊지 못할 추억을 만들고 싶어요. 잘부탁드립니다!
   blog_platform: tistory
-  blog : https://yexjinitlog.tistory.com
+  blog: https://yexjinitlog.tistory.com
 yuseogi:
   name: 이유석
   author_name: 유석
@@ -56,9 +56,39 @@ leeeha:
   email: jxlhe46@gmail.com
   github: leeeha
   description: 하루하루는 성실하게, 인생 전체는 되는대로
-  introduce: 안녕하세요! 저는 서울과기대 컴퓨터공학과 20학번 이하은입니다! 작년 1기부터 시작된 안드로이드와의 인연을 지속해나가고 싶어서, 이렇게 2기 코어 멤버로도 활동하게 됐습니다! <br> 저는 서로의 지식과 경험을 공유하며 함께 성장하는 개발 문화를 좋아합니다. 그리고 우리 주변에서 발견할 수 있는 작고 사소한 문제부터 중요한 사회적 문제까지, 기술을 도구로 활용하여 그런 문제를 해결하는 데 도움을 줄 수 있는 개발자가 되는 게 제 목표입니다! 앞으로 1년간 GDSC에서 함께 공부하고 성장하며 멋진 커뮤니티를 만들어봅시다 🤗
+  introduce: 안녕하세요! 저는 서울과기대 컴퓨터공학과 20학번 이하은입니다. 작년 1기부터 시작된 안드로이드와의 인연을 지속해나가고 싶어서, 이렇게 2기 코어 멤버로도 활동하게 됐습니다! <br> 저는 서로의 지식과 경험을 공유하며 함께 성장하는 개발 문화를 좋아합니다. 그리고 우리 주변에서 발견할 수 있는 작고 사소한 문제부터 중요한 사회적 문제까지, 기술을 도구로 활용하여 그런 문제를 해결하는 데 도움을 줄 수 있는 개발자가 되는 게 제 목표입니다! 앞으로 1년간 GDSC에서 함께 공부하고 성장하며 멋진 커뮤니티를 만들어봅시다 🤗
   blog_platform: velog
   blog: https://velog.io/@jxlhe46
+jwyeeh-dev:
+  name: 황재영
+  author_name: 재영
+  role: member
+  email: jwyeeh@gmail.com
+  github: jwyeeh-dev
+  description: 매번 새롭고, 도전적으로.
+  introduce: 안녕하세요! 저는 서울과학기술대학교 전기정보공학과 17학번 황재영입니다! GDSC로써 활동할 수 있다는 것에 벌써부터 많이 설레네요😆 <br> 요즘의 저는 ML, DL, 시각화, 분석 등 하고싶은게 정말 많아요! 그래서 사람들과 다양한 걸 경험해보고, 무언가 의미있는 결과를 만들어내고, 더 나아가서 많은 사람들에게 도움이 되는 데이터 사이언티스트가 되고 싶다는 큰 포부를 가지고 있습니다! <br> 그러니까 여러 프로젝트 같이 하실 분 있으시면 같이 해요!😄 <br> 앞으로 1년간 열심히 공부하고 한층 더 성장했으면 좋겠습니다! 잘 부탁드려요! 👋🏻
+  blog_platform: tistory
+  blog: https://jwyeeh.tistory.com/
+yoouung:
+  name: 박재영
+  author_name: 재영
+  role: member
+  email: jyp101400@gmail.com
+  github: yoouung
+  description: LUCETE, 밝게 빛나라
+  introduce: 안녕하세요! ITM전공 19학번 박재영입니다. 휴학하고 이것저것 해보다보니 웹 개발에 관심이 생겨 GDSC 웹 멤버로 활동하게 됐습니다! 백엔드보다는 결과가 바로 보이는 프론트가 주 관심사입니다👀 <br/> 일 벌리기를 좋아해서 꽤 알찬 휴학생활을 보내고 있어요. 아직은 해보고 싶은 것이 많이 남아있지만 하나씩 이루어가보려고 합니다. 그 중 첫 번째로 GDSC 2기로 활동하면서 많이 성장하고 발전하고 싶어요!  
+  blog_platform: velog
+  blog: https://velog.io/@yoouung
+Higeuni:
+  name: 김효근
+  author_name: 효근
+  role: member
+  email: khyogeun_@naver.com
+  github: higeuni
+  description: 오늘보다 내일 더 나은 사람
+  introduce: 안녕하세요! 저는 컴퓨터공학과 18학번 김효근입니다! 원래 컴퓨터비전을 공부하다가 최근에 백엔드에 관심을 갖게 되어서 한이음이랑 친구들과 프로젝트를 진행하면서 공부하고 있어요! 많이 부족한만큼 더 열심히 배우겠습니다. 다양한 분야에 관심이 많아서 다른 것들도 함께하면 좋을 거 같아요. 1년동안 잘 부탁드립니다!!
+  blog_platform: tistory
+  blog: https://khyogeun.tistory.com/
 juwhan:
   name: 김주환
   author_name: 주환
@@ -85,6 +115,18 @@ dann:
   github: CWCTBOY
   description: 열정 빼면 시체
   introduce: 저는 서울과기대 건축공학과 19학번 박인재입니다! 프론트엔드로 프로젝트를 진행해오다가 서버에 관심이 생겨 이 열정 불태워보고자 GDSC에 지원하게 되었습니다. <br> 저는 개발을 하면서도 항상 사람들과 소통하고 협업하는 것을 즐기며, 이를 통해 서로의 지식을 공유하고 성장하는 것을 좋아합니다. <br> 저는 이번 GDSC에서 함께 성장하고 싶은 개발자들과 함께 하고 싶습니다. 앞으로 잘 부탁드립니다!
+  blog_platform: null
+  blog: null
+chunngye:
+  name: 박민영
+  author_name: 민영
+  role: member
+  email: 1030pmy@gmail.com
+  github: chunngye
+  description: 열정 빼면 시체
+  introduce: 저는 서울과기대 건축공학과 19학번 박인재입니다! 프론트엔드로 프로젝트를 진행해오다가 서버에 관심이 생겨 이 열정 불태워보고자 GDSC에 지원하게 되었습니다. <br> 저는 개발을 하면서도 항상 사람들과 소통하고 협업하는 것을 즐기며, 이를 통해 서로의 지식을 공유하고 성장하는 것을 좋아합니다. <br> 저는 이번 GDSC에서 함께 성장하고 싶은 개발자들과 함께 하고 싶습니다. 앞으로 잘 부탁드립니다!
+  blog_platform: null
+  blog: null
 gagyeong:
   name: 김가경
   another_name: 가경
@@ -122,3 +164,29 @@ dongyoung:
   description: 극한의 효율을 추구하는 삶
   introduce: 안녕하세요! 웹파트 멤버 컴퓨터공학과 19학번 조동영입니다.<br>
   아직 2학년인 저는 시스템 프로그래밍, 웹페이지 제작, Open stack등 다양한 분야에 발을 담구기 위해 시도 중 입니다!! <br> 성능을 추구하는 우리의 개발처럼 저의 삶도 효율적이고 완벽하게 꾸며나가고 싶습니다!<br> GDSC사람들과 1년동안 열심히하며! 팀 활동을 통해 최고의 성장을 하는 관계로 발전했으면 좋겠습니다!! 
+hyeok:
+  name: 김혁
+  author_name: 혁
+  role: member
+  email: jg31109@naver.com
+  github: hyeok55
+  description: 노력안할거면 재입대
+  introduce: 안녕하세요, ITM 전공을 재학 중인 19학번 김혁 입니다. 저는 현재 데이터 분야에 관심이 많고 ML,DL에 관심이 많습니다. 저는 저 혼자 공부하는 것이 아닌 동료들과 공부하고 싶어 GDSC에 지원하게 되었습니다 .  GDSC를 통해 함께 성장해 나갔으면 좋겠습니다:)
+  blog_platform: velog
+  blog: https://velog.io/@jg31109
+yeonsu:
+  name: 김연수
+  author_name: 연수
+  role: member
+  email: dustnrkfnfn@gmail.com
+  github: dustnehowl
+  description: 미루지 말자, 어짜피 다 내가 할 일이다.
+  introduce: 안녕하세요 서울과학기술대학교 컴퓨터공학과 재학중인 김연수입니다. 데이터 분석, 딥러닝, 머신러닝 등 데이터를 다루는 일에 흥미가 있어 데이터 엔지니어를 목표로 공부를 하고 있습니다. 공통 관심사를 가진 사람과 함께 성장하고 싶어 gdsc 2기 멤버로 활동하게 되었습니다. 잘 부탁드립니다!
+songhee:
+  name: 백송희
+  author_name: 송희
+  role: member
+  email: bsh32222@gmail.com
+  github: 100SongH
+  description: 하고 싶은 일은 재밌게, 최선을 다해서
+  introduce: 안녕하세요! 전자IT미디어공학과 19학번 백송희입니다. 현재 컴퓨터공학과 복수전공을 하며 안드로이드 개발자를 꿈꾸고 있습니다. <br>학교 다닐 때 많은 일을 해보며 가보지 않은 길에 대한 후회를 남기지 않으려고 노력하고 있습니다. 같이 열심히 노력하며 성장하고 싶습니다. 감사합니다!
