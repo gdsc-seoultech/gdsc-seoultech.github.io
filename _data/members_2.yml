@@ -59,6 +59,16 @@ leeeha:
   introduce: 안녕하세요! 저는 서울과기대 컴퓨터공학과 20학번 이하은입니다. 작년 1기부터 시작된 안드로이드와의 인연을 지속해나가고 싶어서, 이렇게 2기 코어 멤버로도 활동하게 됐습니다! <br> 저는 서로의 지식과 경험을 공유하며 함께 성장하는 개발 문화를 좋아합니다. 그리고 우리 주변에서 발견할 수 있는 작고 사소한 문제부터 중요한 사회적 문제까지, 기술을 도구로 활용하여 그런 문제를 해결하는 데 도움을 줄 수 있는 개발자가 되는 게 제 목표입니다! 앞으로 1년간 GDSC에서 함께 공부하고 성장하며 멋진 커뮤니티를 만들어봅시다 🤗
   blog_platform: velog
   blog: https://velog.io/@jxlhe46
+yoouung:
+  name: 박재영
+  author_name: 재영
+  role: member
+  email: jyp101400@gmail.com
+  github: yoouung
+  description: LUCETE, 밝게 빛나라
+  introduce: 안녕하세요! ITM전공 19학번 박재영입니다. 휴학하고 이것저것 해보다보니 웹 개발에 관심이 생겨 GDSC 웹 멤버로 활동하게 됐습니다! 백엔드보다는 결과가 바로 보이는 프론트가 주 관심사입니다👀 <br/> 일 벌리기를 좋아해서 꽤 알찬 휴학생활을 보내고 있어요. 아직은 해보고 싶은 것이 많이 남아있지만 하나씩 이루어가보려고 합니다. 그 중 첫 번째로 GDSC 2기로 활동하면서 많이 성장하고 발전하고 싶어요!  
+  blog_platform: velog
+  blog: https://velog.io/@yoouung
 Higeuni:
   name: 김효근
   author_name: 효근
