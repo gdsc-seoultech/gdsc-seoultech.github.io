@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="tYMwPoxNrWfLx2sDrDYzqI4-dq3M3FfI56NBL9JNtH8" />
+
+    <title>6주차 ML 비지도학습 WIL</title>
+    <meta name="description" content="A simple, whitespace, helvetica based portfolio theme.
+">
+
+    <link rel = "shortcut icon" type="image/x-icon" href="/img/square_logo.png">
+    <link rel="stylesheet" href="/css/main.css">
+<!--    <link rel="canonical" href="http://localhost:4000/posts/1st_term/ml/2021-10-31-ml-wil_drizzle/">-->
+    <link rel="canonical" href="/posts/1st_term/ml/2021-10-31-ml-wil_drizzle/">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- 카테고리 css -->
+    <link rel="stylesheet" href="/css/pagination.css">
+    <link href="/css/category.css" type="text/css" rel="stylesheet">
+</head>
+
+   
+  <body>
+    <script src="/js/default.js"></script>
+    <header id="tab" >
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <div class="site-header">
+    <div class="wrapper">
+      <div>
+        <a href="/">
+          <img src="/img/square_logo.png" align="left" width="57px">
+        </a>
+      </div>
+
+      <nav class="site-nav">
+
+        <div id="tab" class="trigger">
+          <!-- GDSC Seoultech instead of blog -->
+          <a class="page-link" href="/">GDSC</a>
+          <a class="page-link" href="/members/2">MEMBER</a>
+          <a class="page-link" href="/category/2nd_term">POST</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div id="hovering" class="tab-header">
+    <div class="wrapper">
+      <div class="detail-post">
+          <div class="tab-item">
+            <div><a class="page-link-detail" href="/category/1st_term">1기</a></div>
+            <div><a class="page-link-detail" href="/category/2nd_term">2기</a></div>
+          </div>
+      </div>
+      <div class="detail-member">
+        <div class="tab-item">
+          <div><a class="page-link-detail" href="/members/1">1기</a></div>
+          <div><a class="page-link-detail" href="/members/2">2기</a></div>
+        </div>
+    </div>
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+    var tabMenu = $("#tab");
+    var tabSubMenu = $("#hovering");
+
+    tabSubMenu.hide()
+
+    tabMenu.hover(function() {
+      tabSubMenu.show();
+    }, function() {
+      tabSubMenu.hide();
+    })
+  </script>
+
+</header>
+
+
+    <div class="page-content" id="page-content">
+      <div class="wrapper" id="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">6주차 ML 비지도학습 WIL</h1>
+    <h1 class="post-description"></h1>
+    <p class="post-meta">October 31, 2021 — 00:00 • drizzle0171</p>
+    
+      
+        <span class="tag">ml</span>
+      
+    
+  </header>
+  <article class="post-content">
+    <p>뭐? TIL은 ML 팀블로그 쓸 때만 쓰는 거 아니냐고?
+네… 맞는 거 같습니다… 매일 프로그래머스 5~10문제 풀다보니까 오답노트 쓰기가 귀찮아짐 &lt;- 공부 안하는 사람들 특징
+앞으로는 매일은 아니더라도 일주일만에 돌아오는 일은 없도록…</p>
+
+<p>그리고 생각한 것은 TIL은 뭔가 나한테 설명하는 느낌(?)으로 진행하기로 했다. 왜냐면 이유는 없음.</p>
+
+<p>오늘 할 내용은 바로 비지도 학습의 <strong>군집</strong>!
+군집은 데이터셋을 cluster라는 그룹으로 나누는 작업. -&gt; 한 cluster 안의 데이터 포인트끼리는 매우 비슷! 다른 cluster의 데이터 포인트와는 구분!
+이 설명을 들으니 군집표본추출이 생각남… 근데 의미상 층화표본추출과 비슷하다. (군집표본추출은 군집끼리는 비슷하고 내부는 이질적이니까. 층화표본추출은 반대임.)</p>
+
+<h1 id="1-k-평균-군집-351">1. k-평균 군집 (3.5.1)</h1>
+
+<h2 id="1-특징">1. 특징</h2>
+
+<ul>
+  <li>가장 간단하고 널리 사용하는 군집 알고리즘</li>
+  <li>데이터의 어떤 영역을 대표하는 cluster center를 찾음</li>
+  <li>
+    <p>두 단계 반복</p>
+
+    <ol>
+      <li>데이터 포인트를 가장 가까운 cluster center에 할당</li>
+      <li>cluster에 할당된 데이터 포인트의 평균으로 cluster center을 다시 지정</li>
+      <li>cluster에 할당되는 데이터 포인트에 변화가 없을 때 알고리즘 종료</li>
+    </ol>
+
+    <p><img src="https://images.velog.io/images/drizzle0171/post/f87bf3b4-6935-4a9d-ae7f-cc267b200dc3/image.png" alt="" />Input data: 데이터 포인트 입력
+Initialization: 3개의 cluster를 찾도록 지정 -&gt; cluster center로 삼을 데이터 포인트 3개를 무작위로 지정
+Assign Points(1): 알고리즘 반복. 각 데이터 포인트를 가장 가까운 cluster center에 할당
+Recompute Centers(1): 할당된 포인트의 평균값으로 cluster center 갱신
+Reassgn Points ~ Recompute Center 반복
+Recompute Center (3): cluter center에 할당되는 포인트에 변화가 없으므로 알고리즘 STOP!</p>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
+<span class="n">Kmeans</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_cluster</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li>3개의 cluster를 지정했기 때문에 레이블은 0~2</li>
+  <li>predict 메소드를 사용하면 새로운 데이터의 cluster lable을 예측 (훈련 세트에 대한 predict 메소드는 labels_와 같은 결과)</li>
+  <li>분류와 비슷해보이지만 lable 자체에 의미가 없음</li>
+</ul>
+
+<h2 id="2-실패하는-경우">2. 실패하는 경우</h2>
+
+<ul>
+  <li>cluter 개수를 정확히 알고 있더라도 k-평균 알고리즘이 항상 리를 구분해낼 수 있는 것은 아님</li>
+  <li>cluster를 정의하는 것 = 중심 <strong>하나</strong> -&gt; cluster는 둥근 형태로 나타날 수 밖에 없음</li>
+  <li>cluster의 반경이 모두 똑같다고 가정 = 이상치(극단치)까지 포함하는 사태 발생</li>
+  <li>cluster에서 모든 방향이 똑같이 중요하다고 가정 -&gt; 원형이 아닌 cluster는 구분하지 못함
+(아래처럼 + two moons와 같은 형태면 …. 말잇못)
+<img src="https://images.velog.io/images/drizzle0171/post/90656064-a54f-4e91-86ed-68f8cd3d7cb0/image.png" alt="" />
+<img src="https://images.velog.io/images/drizzle0171/post/b29c0138-7862-49b6-9e46-6b966653e8e0/image.png" alt="" /></li>
+  <li>PCA, NMF (데이터 포인트를 어떤 성분의 합으로 표현) 와는 다르게 하나의 값(중심)으로 각 데이터 포인트들을 표현 -&gt; <strong>벡터 양자화</strong>
+그래서 two_moons와 같은 데이터를 흥미롭게 표현할 수 있음</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">make_moons</span><span class="p">(</span><span class="n">n_samples</span> <span class="o">=</span> <span class="mi">200</span><span class="p">,</span> <span class="n">noise</span> <span class="o">=</span> <span class="mf">0.05</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">Kmeans</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_cluster</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">random_State</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">Kmeans</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">kmeans</span><span class="p">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="https://images.velog.io/images/drizzle0171/post/fb71873b-2f67-4bf5-a74e-309e0ae4165a/image.png" alt="" /></p>
+
+<ul>
+  <li>원래 특성 2개로는 불가능 했지만 10차원 데이터로 만들어 선형 분석이 가능해짐</li>
+</ul>
+
+<h2 id="3-단점">3. 단점</h2>
+
+<ul>
+  <li>무작위 초기화를 사용해서 알고리즘의 출력이 난수 초깃값에 따라 달라짐</li>
+  <li>cluster 모양을 가정하고 있어 활용 범위가 비교적 제한적</li>
+  <li>찾으려는 cluter의 개수를 지정 (실제로는 알 수가 없지….)</li>
+</ul>
+
+<p><br /></p>
+
+<h1 id="2-병합-군집-352">2. 병합 군집 (3.5.2)</h1>
+
+<h2 id="1-특징-1">1. 특징</h2>
+
+<ul>
+  <li>각 포인트를 하나의 cluster로 지정</li>
+  <li>어떤 종료 조건을 만족할 때까지 가장 비슷한 cluster를 합쳐 나감 1. <strong>ward</strong>: 기본값, 모든 cluster 내의 분산을 가장 작게 증가시키는 두 cluster를 합침 2. average: cluster 포인트들 사이의 평균 거리가 가장 짧은 두 cluster를 합침 3. complete: cluster 포인트 사이의 최대 거리가 가장 짧은 두 cluster를 합침
+<img src="https://images.velog.io/images/drizzle0171/post/36cca1d3-c957-4989-a007-8616d1570d32/image.png" alt="" /></li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">AgglomerativeClustering</span>
+</code></pre></div></div>
+
+<ul>
+  <li>scikit-learn의 병합 군집 모델을 사용하려면 찾을 cluster의 개수 지정</li>
+  <li>병합 군집이 적절한 개수를 선택하는 데 도움을 주기도 함!</li>
+</ul>
+
+<h2 id="2-계층적-군집과-덴드로그램">2. 계층적 군집과 덴드로그램</h2>
+
+<ol>
+  <li>
+    <dl>
+      <dt>계층적 군집</dt>
+      <dd>병합 군집이 만드는 것 (군집이 반복하여 진행되면 모든 포인트는 하나의 포인트를 가진 clsuter에서 시작하여 마지막 cluster까지 이동)</dd>
+    </dl>
+  </li>
+</ol>
+
+<ul>
+  <li>2차원 데이터일 때만 계층 군집의 모습을 자세히 나타낼 수 있음</li>
+  <li>특성이 셋 이상인 데이터셋에는 사용할 수 없음</li>
+</ul>
+
+<ol>
+  <li>
+    <dl>
+      <dt>덴드로그램</dt>
+      <dd>다차원 데이터를 처리할 수 있음</dd>
+    </dl>
+  </li>
+</ol>
+
+<ul>
+  <li>scikit-learn은 덴드로그램을 그리는 기능을 제공하지 않음 -&gt; <strong>SciPy 군집 알고리즘</strong>을 통해 그릴 수 있음
+<img src="https://images.velog.io/images/drizzle0171/post/739ae768-b3dc-48e3-926f-44eecb488767/image.png" alt="" /></li>
+</ul>
+
+<h1 id="3-dbscan-353">3. DBSCAN (3.5.3)</h1>
+
+<p>: 아~~주 유용한 군집 알고리즘
+<strong>cluster의 개수를 미리 지정할 필요가 없음!!!!!!</strong></p>
+
+<ul>
+  <li>다만…. 병합군집이나 k-평균보다 느림…..</li>
+  <li>큰 데이터셋에도 적용 가능</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">DBSCAN</span>
+
+
+</code></pre></div></div>
+
+<p><img src="https://images.velog.io/images/drizzle0171/post/6d6a9f1b-f365-44be-8800-3138d52169e0/image.png" alt="" /></p>
+
+<h1 id="4-군집-알고리즘의-비교와-평가-354">4. 군집 알고리즘의 비교와 평가 (3.5.4)</h1>
+
+<ul>
+  <li>어려운 점: 알고리즘이 잘 작동하는지 평가하거나 여러 알고리즘의 출력을 비교하기…</li>
+</ul>
+
+<h2 id="1-타깃-값으로-군집-평가하기">1. 타깃 값으로 군집 평가하기</h2>
+
+<p>: 군집 알고리즘의 결과를 실제 정답 cluster와 비교하여 평가할 수 있는 지표들이 있음
+바로바로 1(최적)과 0(무작위 분류) 사이의 값을 제공하는 <strong>ARI</strong>와 <strong>NMI</strong></p>
+
+<h2 id="2-타깃-값-없이-군집-평가-하기">2. 타깃 값 없이 군집 평가 하기</h2>
+
+<p>: 군집 알고리즘을 적용할 때 보통 그 결과와 비교할 타깃 값이 없음…</p>
+
+  </article>
+  <br>
+
+  <hr/><br>
+
+  <div class="author">
+    
+    <table>
+        <tr>
+          <td rowspan="3" style="padding-right: 10px"><img class="author-pic" src="https://github.com/.png" alt=""></td>
+          <td><b><h2 rel="author"></h2></b></td>
+        </tr>
+      <tr>
+        <td><p rel="author"></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a rel="author" href="https://github.com/" target="_blank"><i class="fa fa-github fa-2x"></i></a>&nbsp&nbsp
+          
+        </td>
+      </tr>
+    </table>
+
+  </div>
+
+
+  <br>
+  <hr/>
+  <div>
+    <script src="https://utteranc.es/client.js"
+        repo="gdsc-seoultech/blog-comments"
+        issue-term="pathname"
+        label="comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+  </div>
+
+</div>
+<script src="/js/toc.js"></script>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper" align="center">
+  	<h4>This site was built using <a href="http://jekyllrb.com" target="_blank">Jekyll</a> and is hosted on <a href="https://github.com" target="_blank">Github</a>. &#169; GDSC Seoultech</h4>
+  </div>
+
+</footer>
+
+
+  </body>
+</html>

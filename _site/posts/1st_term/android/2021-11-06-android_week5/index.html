@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="tYMwPoxNrWfLx2sDrDYzqI4-dq3M3FfI56NBL9JNtH8" />
+
+    <title>Android 5주차 세션 복습</title>
+    <meta name="description" content="A simple, whitespace, helvetica based portfolio theme.
+">
+
+    <link rel = "shortcut icon" type="image/x-icon" href="/img/square_logo.png">
+    <link rel="stylesheet" href="/css/main.css">
+<!--    <link rel="canonical" href="http://localhost:4000/posts/1st_term/android/2021-11-06-android_week5/">-->
+    <link rel="canonical" href="/posts/1st_term/android/2021-11-06-android_week5/">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- 카테고리 css -->
+    <link rel="stylesheet" href="/css/pagination.css">
+    <link href="/css/category.css" type="text/css" rel="stylesheet">
+</head>
+
+   
+  <body>
+    <script src="/js/default.js"></script>
+    <header id="tab" >
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <div class="site-header">
+    <div class="wrapper">
+      <div>
+        <a href="/">
+          <img src="/img/square_logo.png" align="left" width="57px">
+        </a>
+      </div>
+
+      <nav class="site-nav">
+
+        <div id="tab" class="trigger">
+          <!-- GDSC Seoultech instead of blog -->
+          <a class="page-link" href="/">GDSC</a>
+          <a class="page-link" href="/members/2">MEMBER</a>
+          <a class="page-link" href="/category/2nd_term">POST</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div id="hovering" class="tab-header">
+    <div class="wrapper">
+      <div class="detail-post">
+          <div class="tab-item">
+            <div><a class="page-link-detail" href="/category/1st_term">1기</a></div>
+            <div><a class="page-link-detail" href="/category/2nd_term">2기</a></div>
+          </div>
+      </div>
+      <div class="detail-member">
+        <div class="tab-item">
+          <div><a class="page-link-detail" href="/members/1">1기</a></div>
+          <div><a class="page-link-detail" href="/members/2">2기</a></div>
+        </div>
+    </div>
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+    var tabMenu = $("#tab");
+    var tabSubMenu = $("#hovering");
+
+    tabSubMenu.hide()
+
+    tabMenu.hover(function() {
+      tabSubMenu.show();
+    }, function() {
+      tabSubMenu.hide();
+    })
+  </script>
+
+</header>
+
+
+    <div class="page-content" id="page-content">
+      <div class="wrapper" id="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Android 5주차 세션 복습</h1>
+    <h1 class="post-description"></h1>
+    <p class="post-meta">November 5, 2021 — 00:00 • yoon-H</p>
+    
+      
+        <span class="tag">android</span>
+      
+    
+  </header>
+  <article class="post-content">
+    <p>안녕하세요! GDSC Android 멤버 한윤재입니다.<br />
+5주차 세션 복습 포스팅 시작하겠습니다!
+<br /></p>
+
+<h1 id="1-navigation-destination에서-화면-전환">1. Navigation destination에서 화면 전환</h1>
+
+<h2 id="1-searchscreen">1) SearchScreen</h2>
+
+<p><img src="https://user-images.githubusercontent.com/71068767/140611561-146edde7-3034-4c96-9278-c0955d80ebae.png" alt="SearchScreen" /></p>
+
+<p>위 그림과 같이 Search에서는 3가지 화면전환이 필요합니다.<br /></p>
+
+<p>전보다 화면이 늘어나 navigation destination에 일일이 추가하기는 어려워졌습니다. <br /></p>
+
+<p>따라서 각 화면을 상위, 하위 composable로 구분해 SearchScreen 안에서 호출해줍니다. <br /></p>
+
+<p>이를 위해서는 SearchScreen 안에 데이터를 보관해야 합니다. 각 화면별 composable에 데이터 값과 setter를 전달하여 조작할 수 있도록 하는 것이죠. State hoisting라고 볼 수 있습니다. <br /></p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">enum</span> <span class="kd">class</span> <span class="nc">SearchState</span> <span class="p">{</span> <span class="c1">//Searchscreen의 하위 composable 열거</span>
+    <span class="nc">ButtonScreen</span><span class="p">,</span>
+    <span class="nc">QueryScreen</span><span class="p">,</span>
+    <span class="nc">ResultScreen</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>먼저 enum class로 화면 상태를 나타내는 SearchState를 선언합니다.<br /></p>
+
+<p>enum class는 열거형 클래스로 각 상수는 객체입니다. 정수 값 대신 이름으로 화면 상태를 나열합니다. (자세한 <a href="https://kotlinlang.org/docs/enum-classes.html#working-with-enum-constants">enum class</a>의 정보는 밑의 사이트를 링크를 타고 가주세요!)</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">val</span> <span class="p">(</span><span class="py">screenState</span><span class="p">,</span> <span class="py">setScreenState</span><span class="p">)</span> <span class="p">=</span> <span class="nf">remember</span> <span class="p">{</span> <span class="c1">// setScreenState로 화면 전환</span>
+        <span class="nf">mutableStateOf</span><span class="p">(</span><span class="nc">SearchState</span><span class="p">.</span><span class="nc">ButtonScreen</span><span class="p">)</span>
+    <span class="p">}</span>
+
+<span class="kd">val</span> <span class="p">(</span><span class="py">queryString</span><span class="p">,</span> <span class="py">setQueryString</span><span class="p">)</span> <span class="p">=</span> <span class="nf">remember</span> <span class="p">{</span> <span class="c1">// 검색 단어로 QueryScreen에서 저장, ResultScreen에서 사용</span>
+        <span class="nf">mutableStateOf</span><span class="p">(</span><span class="s">""</span><span class="p">)</span>
+    <span class="p">}</span>
+</code></pre></div></div>
+
+<p>위와 같이 SearchScreen 안에 상태를 선언합니다.</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">when</span> <span class="p">(</span><span class="n">screenState</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// 각각의 화면에서 작동할 일을 적어준다.</span>
+        <span class="nc">SearchState</span><span class="p">.</span><span class="nc">ButtonScreen</span> <span class="p">-&gt;</span> <span class="p">{</span>
+            <span class="nc">SearchButtonScreen</span> <span class="p">{</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">queryString</span><span class="p">.</span><span class="nf">isNotBlank</span><span class="p">()){</span> <span class="c1">//한 번 검색 후 다시 QueryScreen이 나오게 해주는 조건문</span>
+                    <span class="nf">setScreenState</span><span class="p">(</span><span class="nc">SearchState</span><span class="p">.</span><span class="nc">ResultScreen</span><span class="p">)</span>
+                <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+                    <span class="nf">setScreenState</span><span class="p">(</span><span class="nc">SearchState</span><span class="p">.</span><span class="nc">QueryScreen</span><span class="p">)</span>
+                <span class="p">}</span>
+                <span class="nf">setScreenState</span><span class="p">(</span><span class="nc">SearchState</span><span class="p">.</span><span class="nc">QueryScreen</span><span class="p">)</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="nc">SearchState</span><span class="p">.</span><span class="nc">QueryScreen</span> <span class="p">-&gt;</span> <span class="p">{</span>
+            <span class="nc">SearchQueryScreen</span><span class="p">(</span>
+                <span class="n">queryString</span> <span class="p">=</span> <span class="n">queryString</span><span class="p">,</span>
+                <span class="n">setQueryString</span> <span class="p">=</span> <span class="n">setQueryString</span><span class="p">,</span>
+                <span class="n">toButtonScreen</span> <span class="p">=</span> <span class="p">{</span> <span class="nf">setScreenState</span><span class="p">(</span><span class="nc">SearchState</span><span class="p">.</span><span class="nc">ButtonScreen</span><span class="p">)</span> <span class="p">},</span>
+                <span class="n">toResultScreen</span> <span class="p">=</span> <span class="p">{</span> <span class="nf">setScreenState</span><span class="p">(</span><span class="nc">SearchState</span><span class="p">.</span><span class="nc">ResultScreen</span><span class="p">)</span> <span class="p">}</span>
+            <span class="p">)</span>
+        <span class="p">}</span>
+        <span class="nc">SearchState</span><span class="p">.</span><span class="nc">ResultScreen</span> <span class="p">-&gt;</span> <span class="p">{</span>
+            <span class="nc">SearchResultScreen</span><span class="p">(</span>
+                <span class="n">queryString</span> <span class="p">=</span> <span class="n">queryString</span><span class="p">,</span>
+                <span class="n">setQueryString</span> <span class="p">=</span> <span class="n">setQueryString</span><span class="p">,</span>
+                <span class="n">toButtonScreen</span> <span class="p">=</span> <span class="p">{</span> <span class="nf">setScreenState</span><span class="p">(</span><span class="nc">SearchState</span><span class="p">.</span><span class="nc">ButtonScreen</span><span class="p">)</span> <span class="p">},</span>
+                <span class="n">onSearchKey</span> <span class="p">=</span> <span class="p">{</span> <span class="cm">/*검색 결과 업데이트*/</span> <span class="p">}</span>
+            <span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></div></div>
+
+<p>when 으로 screenState에 따라 다른 composable 로드합니다. <br /></p>
+
+<p>위에서 선언한 screenState와 queryString을 하위에서 활용하고 변경해 화면을 전환할 수 있습니다.</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Composable</span>
+<span class="k">fun</span> <span class="nf">SearchResultScreen</span><span class="p">(</span> <span class="c1">//파라미터로 데이터 값을 받아 작동!</span>
+    <span class="n">queryString</span><span class="p">:</span> <span class="nc">String</span><span class="p">,</span>
+    <span class="n">setQueryString</span><span class="p">:</span> <span class="p">(</span><span class="nc">String</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nc">Unit</span><span class="p">,</span>
+    <span class="n">toButtonScreen</span><span class="p">:</span> <span class="p">()</span> <span class="p">-&gt;</span> <span class="nc">Unit</span><span class="p">,</span>
+    <span class="n">onSearchKey</span><span class="p">:</span> <span class="p">()</span> <span class="p">-&gt;</span> <span class="nc">Unit</span>
+<span class="p">)</span> <span class="p">{</span>
+    <span class="nc">Scaffold</span><span class="p">(</span>
+        <span class="n">topBar</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="nc">SearchTopBar</span><span class="p">(</span>
+                <span class="n">queryString</span> <span class="p">=</span> <span class="n">queryString</span><span class="p">,</span>
+                <span class="n">setQueryString</span> <span class="p">=</span> <span class="n">setQueryString</span><span class="p">,</span>
+                <span class="n">onBackButtonClick</span> <span class="p">=</span> <span class="n">toButtonScreen</span><span class="p">,</span>
+                <span class="n">onSearchKey</span> <span class="p">=</span> <span class="n">onSearchKey</span><span class="cm">/*Todo 검색 결과 업데이트*/</span>
+            <span class="p">)</span>
+        <span class="p">}</span>
+                        <span class="s">"...(생략)..."</span>
+</code></pre></div></div>
+
+<p>파라미터 작성으로 navigation을 작동합니다. SearchQueryScreen도 위와 같습니다.</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Composable</span>
+<span class="k">fun</span> <span class="nf">SearchTopBar</span><span class="p">(</span>
+    <span class="n">queryString</span><span class="p">:</span> <span class="nc">String</span><span class="p">,</span>
+    <span class="n">setQueryString</span><span class="p">:</span> <span class="p">(</span><span class="nc">String</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nc">Unit</span><span class="p">,</span>
+    <span class="n">onBackButtonClick</span><span class="p">:</span> <span class="p">()</span> <span class="p">-&gt;</span> <span class="nc">Unit</span><span class="p">,</span>
+    <span class="n">onSearchKey</span><span class="p">:</span> <span class="p">()</span> <span class="p">-&gt;</span> <span class="nc">Unit</span>
+<span class="p">)</span> <span class="p">{</span>
+    <span class="nc">TopAppBar</span><span class="p">(</span>
+        <span class="n">elevation</span> <span class="p">=</span> <span class="mi">0</span><span class="p">.</span><span class="n">dp</span><span class="p">,</span>
+        <span class="n">backgroundColor</span> <span class="p">=</span> <span class="nc">Color</span><span class="p">.</span><span class="nc">White</span><span class="p">,</span>
+        <span class="n">navigationIcon</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="nc">IconButton</span><span class="p">(</span><span class="n">onClick</span> <span class="p">=</span> <span class="n">onBackButtonClick</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="s">"...(중략)..."</span>
+
+                <span class="n">keyboardOptions</span> <span class="p">=</span> <span class="nc">KeyboardOptions</span><span class="p">(</span> <span class="c1">//돋보기 버튼</span>
+                    <span class="n">imeAction</span> <span class="p">=</span> <span class="nc">ImeAction</span><span class="p">.</span><span class="nc">Search</span>
+                <span class="p">),</span>
+                <span class="n">keyboardActions</span> <span class="p">=</span> <span class="nc">KeyboardActions</span><span class="p">(</span>
+                    <span class="n">onSearch</span> <span class="p">=</span> <span class="p">{</span>
+                        <span class="nf">onSearchKey</span><span class="p">()</span>
+                    <span class="p">}</span>
+                <span class="p">),</span>
+            <span class="p">)</span>
+        <span class="p">},</span>
+        <span class="n">actions</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">queryString</span><span class="p">.</span><span class="nf">isNotBlank</span><span class="p">())</span> <span class="p">{</span>
+                <span class="nc">IconButton</span><span class="p">(</span><span class="n">onClick</span> <span class="p">=</span> <span class="p">{</span> <span class="nf">setQueryString</span><span class="p">(</span><span class="s">""</span><span class="p">)</span> <span class="p">})</span> <span class="p">{</span>
+                    <span class="nc">Icon</span><span class="p">(</span><span class="n">imageVector</span> <span class="p">=</span> <span class="nc">Icons</span><span class="p">.</span><span class="nc">Default</span><span class="p">.</span><span class="nc">Close</span><span class="p">,</span> <span class="n">contentDescription</span> <span class="p">=</span> <span class="s">"delete"</span><span class="p">)</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>SearchScreen 에서 topbar는 계속 떠있어서 따로 composable을 만들어줍니다. <br /></p>
+
+<p>이 bar에서는 검색을 할 수 있도록 하는데 keyboardOptions와 keyboardActions는 핸드폰으로 텍스트를 입력할 때 나타나는 키보드의 검색 버튼을 관리합니다. 버튼을 누르면 검색 결과를 보여주는 onSearchKey()를 넣어서 말이죠. (<a href="https://developer.android.com/reference/kotlin/androidx/compose/foundation/text/KeyboardOptions">KeyboardOptions</a>에 관한 자세한 정보는 클릭!)</p>
+
+<p>→ 버튼 구현 등은 이전 시간에 다뤘으므로 스킵!</p>
+
+<p><a href="https://blog.naver.com/comye1/222555753843">참고자료</a></p>
+
+<h2 id="2-createscreen">2) CreateScreen</h2>
+<p><img src="https://user-images.githubusercontent.com/71068767/140611545-2ae99d5d-4bbd-4429-b393-a5d085d4b17b.png" alt="CreateScreen" /></p>
+
+<p>다음은 CraeteScreen입니다. <br /></p>
+
+<p>앞서 SearchScreen에서 다룬 navagation 내용과 거의 비슷합니다. 화면 상태는 2가지입니다.</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">enum</span> <span class="kd">class</span> <span class="nc">CreateState</span> <span class="p">{</span> <span class="c1">//CreateScreen의 하위 composable 열거</span>
+    <span class="nc">TitleScreen</span><span class="p">,</span>
+    <span class="nc">CardScreen</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>enum class로 상태를 나열하고,</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">val</span> <span class="p">(</span><span class="py">deckTitle</span><span class="p">,</span> <span class="py">setDeckTitle</span><span class="p">)</span> <span class="p">=</span> <span class="nf">remember</span> <span class="p">{</span>
+        <span class="nf">mutableStateOf</span><span class="p">(</span><span class="s">""</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="kd">val</span> <span class="p">(</span><span class="py">visibility</span><span class="p">,</span> <span class="py">setVisibility</span><span class="p">)</span> <span class="p">=</span> <span class="nf">remember</span> <span class="p">{</span>
+        <span class="nf">mutableStateOf</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="kd">val</span> <span class="p">(</span><span class="py">screenState</span><span class="p">,</span> <span class="py">setScreenState</span><span class="p">)</span> <span class="p">=</span> <span class="nf">remember</span> <span class="p">{</span>
+        <span class="nf">mutableStateOf</span><span class="p">(</span><span class="nc">CreateState</span><span class="p">.</span><span class="nc">TitleScreen</span><span class="p">)</span>
+    <span class="p">}</span>
+</code></pre></div></div>
+
+<p>상태를 screenState로 선언합니다.</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">when</span> <span class="p">(</span><span class="n">screenState</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nc">CreateState</span><span class="p">.</span><span class="nc">TitleScreen</span> <span class="p">-&gt;</span> <span class="p">{</span>
+            <span class="nc">CreateTitleScreen</span><span class="p">(</span>
+                <span class="n">deckTitle</span> <span class="p">=</span> <span class="n">deckTitle</span><span class="p">,</span>
+                <span class="n">setDeckTitle</span> <span class="p">=</span> <span class="n">setDeckTitle</span><span class="p">,</span>
+                <span class="n">visibility</span> <span class="p">=</span> <span class="n">visibility</span><span class="p">,</span>
+                <span class="n">setVisibility</span> <span class="p">=</span> <span class="n">setVisibility</span><span class="p">,</span>
+                <span class="n">navigateBack</span> <span class="p">=</span> <span class="p">{</span> <span class="n">navController</span><span class="p">.</span><span class="nf">popBackStack</span><span class="p">()</span> <span class="p">},</span>
+                <span class="n">toCardScreen</span> <span class="p">=</span> <span class="p">{</span> <span class="nf">setScreenState</span><span class="p">(</span><span class="nc">CreateState</span><span class="p">.</span><span class="nc">CardScreen</span><span class="p">)</span> <span class="p">}</span>
+            <span class="p">)</span>
+        <span class="p">}</span>
+        <span class="nc">CreateState</span><span class="p">.</span><span class="nc">CardScreen</span> <span class="p">-&gt;</span> <span class="p">{</span>
+            <span class="nc">CreateCardScreen</span><span class="p">(</span>
+                <span class="n">navigateBack</span> <span class="p">=</span> <span class="p">{</span> <span class="n">navController</span><span class="p">.</span><span class="nf">popBackStack</span><span class="p">()</span> <span class="p">},</span>
+                <span class="n">onDone</span> <span class="p">=</span> <span class="p">{}</span>
+            <span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></div></div>
+
+<p>when으로 화면을 나눠 TitleScreen에서는  decktitle, visibility, navigateBack, ScreenState의 값을 받고, CardScreen으로 넘어가서는 navigateBack과 onDone을 실행할 수 있도록 합니다.</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">fun</span> <span class="nf">CreateCardScreen</span><span class="p">(</span>
+    <span class="n">navigateBack</span><span class="p">:</span> <span class="p">()</span> <span class="p">-&gt;</span> <span class="nc">Unit</span><span class="p">,</span>
+    <span class="n">onDone</span><span class="p">:</span> <span class="p">()</span> <span class="p">-&gt;</span> <span class="nc">Unit</span>
+<span class="p">)</span> <span class="p">{</span>
+    <span class="nc">Scaffold</span><span class="p">(</span>
+        <span class="n">topBar</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="nc">TopAppBar</span><span class="p">(</span>
+                        <span class="s">"...(중략)..."</span>
+
+                <span class="n">navigationIcon</span> <span class="p">=</span> <span class="p">{</span>
+                    <span class="nc">IconButton</span><span class="p">(</span><span class="n">onClick</span> <span class="p">=</span> <span class="n">navigateBack</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// close navi</span>
+                        <span class="nc">Icon</span><span class="p">(</span>
+                            <span class="n">imageVector</span> <span class="p">=</span> <span class="nc">Icons</span><span class="p">.</span><span class="nc">Outlined</span><span class="p">.</span><span class="nc">Close</span><span class="p">,</span>
+                            <span class="n">contentDescription</span> <span class="p">=</span> <span class="s">"close create screen"</span>
+                        <span class="p">)</span>
+
+                    <span class="p">}</span>
+                <span class="p">},</span>
+                <span class="n">actions</span> <span class="p">=</span> <span class="p">{</span>
+                    <span class="nc">TextButton</span><span class="p">(</span><span class="n">onClick</span> <span class="p">=</span> <span class="n">onDone</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="nc">Text</span><span class="p">(</span>
+                            <span class="s">"Done"</span><span class="p">,</span> <span class="n">style</span> <span class="p">=</span> <span class="nc">MaterialTheme</span><span class="p">.</span><span class="n">typography</span><span class="p">.</span><span class="n">h6</span><span class="p">,</span>
+                            <span class="n">fontWeight</span> <span class="p">=</span> <span class="nc">FontWeight</span><span class="p">.</span><span class="nc">Bold</span>
+                        <span class="p">)</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">)</span>
+        <span class="p">},</span>
+        <span class="n">floatingActionButton</span> <span class="p">=</span> <span class="p">{</span> <span class="c1">//스크롤을 내려도 같이 내려가는 버튼</span>
+            <span class="nc">FloatingActionButton</span><span class="p">(</span>
+                <span class="n">onClick</span> <span class="p">=</span> <span class="p">{</span> <span class="cm">/*TODO*/</span> <span class="p">},</span>
+                <span class="n">backgroundColor</span> <span class="p">=</span> <span class="nc">Color</span><span class="p">.</span><span class="nc">White</span><span class="p">,</span>
+                <span class="n">modifier</span> <span class="p">=</span> <span class="nc">Modifier</span>
+                    <span class="p">.</span><span class="nf">size</span><span class="p">(</span><span class="mi">48</span><span class="p">.</span><span class="n">dp</span><span class="p">)</span>
+                    <span class="p">.</span><span class="nf">border</span><span class="p">(</span>
+                        <span class="n">width</span> <span class="p">=</span> <span class="mi">2</span><span class="p">.</span><span class="n">dp</span><span class="p">,</span>
+                        <span class="n">color</span> <span class="p">=</span> <span class="nc">DeepOrange</span><span class="p">,</span>
+                        <span class="n">shape</span> <span class="p">=</span> <span class="nc">CircleShape</span>
+                    <span class="p">)</span>
+            <span class="p">)</span> <span class="p">{</span>
+</code></pre></div></div>
+
+<p>위의 코드를 보면 composable CreateCardScreen 안에 파라미터로 navigateBack과 onDone이 지정되어 있습니다.<br /></p>
+
+<p>더 밑을 보면 onClick에 해당 파라미터의 이름이 붙여진 것을 확인할 수 있습니다. 기존에 navController로 작동하던 것을 밖으로 꺼내 이름으로 데이터를 composable끼리 주고 받을 수 있게 합니다. 더 깔끔하게 정리된 것입니다.</p>
+
+<h1 id="2-view-model">2. View Model</h1>
+
+<p>다음 주에 진행할 <strong>View Model</strong>에 대해 알아봅시다.<br />
+<br />
+Android에서 Activity는 <strong>configuration change</strong>이 발생할 때마다 onCreate를 호출해서 View를 다시 로드합니다. Activity가 끝나기 전에 리로드되는 것이죠. 이때 뷰가 가지고 있던 데이터는 모두 날아갑니다.<br />
+<br />
+<strong>configuration change</strong>는 화면 회전, 멀티 화면 등 화면이 달라지는 변화를 말합니다.<br />
+<br /></p>
+
+<p><img src="https://user-images.githubusercontent.com/71068767/140611566-a7163daa-44e0-4f1b-a6c9-60c7d990d03f.png" alt="View1" /></p>
+
+<p>이런 상황을 방지하려면 데이터를 일시적으로 저장해야합니다. 그래서 <strong>View Model</strong>을 도입합니다. View Model은 Activity가 완전히 끝날 때까지(finished) 보존됩니다.<br />
+<br /></p>
+
+<p>자세한 Activity 생명주기는 다음 링크에서 알아볼 수 있습니다.<br />
+<a href="https://blog.naver.com/comye1/222280060131">https://blog.naver.com/comye1/222280060131</a><br />
+<br /></p>
+
+<p><img src="https://user-images.githubusercontent.com/71068767/140611568-d0576852-665b-4f32-a3bd-dbbe3c57393a.png" alt="View2" /></p>
+
+<p>그림을 보면 composable과 View Model의 역할이 나뉘어 있습니다<br />
+<br />
+데이터가 변수로 view model에 보관되어 있고, 이 데이터를 activity 내의 composable이 받아 화면을 보여줍니다. 사용자와의 상호작용, 뷰와 관련된 동작을 담당하고 있습니다.<br />
+<br />
+이렇게 말하면 이해하기 어려운데요, 다음 그림을 한번 봅시다.<br />
+<br /></p>
+
+<p><img src="https://user-images.githubusercontent.com/71068767/140611571-5f690fb8-6b9a-4619-b5f3-4079d6f69042.png" alt="View3" /></p>
+
+<p>위 그림에서 볼 수 있듯이 ViewModel과 Activity는 각각 state와 event를 주고 받습니다.<br />
+<br />
+View Model에서 UI를 통해 state가 업데이트되면, flow down으로 Activity에 전달됩니다. 전달받은 state로 event가 발생하고, 이는 다시 View Model로 flow up됩니다.<br />
+<br />
+이 동작이 반복되면서 android 화면이 변화합니다.<br />
+<br /></p>
+
+<p><img src="https://user-images.githubusercontent.com/71068767/140611572-b9ffd892-f619-4404-a0bb-0efc77ae2d02.png" alt="View4" /></p>
+
+<p>state hoisting이 일어날 때는 3가지 조건이 있습니다.<br />
+<br /></p>
+<ol>
+  <li>State는 적어도 state를 사용하는 모든 컴포저블의 <strong>가장 낮은 공통 부모</strong>(가장 가까운 상위 composable)로 호이스팅되어야 한다.</li>
+  <li>State가 변경 또는 수정될 수 있는 적어도 최고의 수준으로 호이스팅되어야 한다.</li>
+  <li>만약 두 개의 state가 같은 이벤트에 대해 반응하면 그들은 함께 호이스팅된다.<br />
+-&gt; 해당 규칙보다 더 높은 state로 호이스트할 수는 있지만, 하위로 호이스팅을 하는 것은 불가능하다.</li>
+</ol>
+
+<p><a href="https://developer.android.com/jetpack/compose/state#state-hoisting">State Hoisting</a>의 내용을 알면 View Model의 개념을 더 잘 이해할 수 있습니다!<br />
+<br /></p>
+
+<p><img src="https://user-images.githubusercontent.com/71068767/140611573-87a311ed-e64d-4e29-973f-f1bdb0ca01ae.png" alt="View5" /></p>
+
+<p>Composable은 State 타입을 observe하기 때문에 viewmodel에는 state로 저장되는 것이 좋습니다. 바로 접근이 가능하기 때문이죠.<br />
+<br />
+위에서 LiveData로 저장되었을 때는 관찰하는 composable인 observeAsState가 overhead되는 것을 볼 수 있습니다.<br />
+<br />
+Livedata는 mutableStateListOf로 대체가 가능합니다.<br />
+<br /></p>
+
+<p>Livedata는 다음 링크에서 알아볼 수 있습니다.
+<a href="https://developer.android.com/topic/libraries/architecture/livedata?hl=ko">https://developer.android.com/topic/libraries/architecture/livedata?hl=ko</a></p>
+
+<h1 id="마무리">마무리</h1>
+
+<p>긴 5주차 복습이 끝났습니다. 점점 회차가 늘어날 수록 실습에 사용되는 지식이 어렵고 복잡하네요.. ViewModel의 개념이 어려워서 글을 쓰면서도 공식문서나 세션 슬라이드의 내용을 그대로 가져오는 표현이 많은 것을 느낍니다. 다른 분들처럼 이해가 잘 되는 정리글을 작성하고 싶었는데, 아쉬운 마음이 큽니다. 😥<br />
+<br /></p>
+
+<p>하지만 이것도 시행착오겠지요! 수많은 경험이 쌓여 실력이 되는 거니까요 ㅎㅎ 안드로이드 화이팅!! 🎉🎉</p>
+
+  </article>
+  <br>
+
+  <hr/><br>
+
+  <div class="author">
+    
+    <table>
+        <tr>
+          <td rowspan="3" style="padding-right: 10px"><img class="author-pic" src="https://github.com/.png" alt=""></td>
+          <td><b><h2 rel="author"></h2></b></td>
+        </tr>
+      <tr>
+        <td><p rel="author"></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a rel="author" href="https://github.com/" target="_blank"><i class="fa fa-github fa-2x"></i></a>&nbsp&nbsp
+          
+        </td>
+      </tr>
+    </table>
+
+  </div>
+
+
+  <br>
+  <hr/>
+  <div>
+    <script src="https://utteranc.es/client.js"
+        repo="gdsc-seoultech/blog-comments"
+        issue-term="pathname"
+        label="comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+  </div>
+
+</div>
+<script src="/js/toc.js"></script>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper" align="center">
+  	<h4>This site was built using <a href="http://jekyllrb.com" target="_blank">Jekyll</a> and is hosted on <a href="https://github.com" target="_blank">Github</a>. &#169; GDSC Seoultech</h4>
+  </div>
+
+</footer>
+
+
+  </body>
+</html>

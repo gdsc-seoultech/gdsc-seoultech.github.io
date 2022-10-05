@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="tYMwPoxNrWfLx2sDrDYzqI4-dq3M3FfI56NBL9JNtH8" />
+
+    <title><dont_sleep_driver> 5주차 이야기!</title>
+    <meta name="description" content="A simple, whitespace, helvetica based portfolio theme.
+">
+
+    <link rel = "shortcut icon" type="image/x-icon" href="/img/square_logo.png">
+    <link rel="stylesheet" href="/css/main.css">
+<!--    <link rel="canonical" href="http://localhost:4000/posts/1st_term/solution_challenge/dont_sleep_driver/2022-02-09-dont_sleep_driver_4/">-->
+    <link rel="canonical" href="/posts/1st_term/solution_challenge/dont_sleep_driver/2022-02-09-dont_sleep_driver_4/">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- 카테고리 css -->
+    <link rel="stylesheet" href="/css/pagination.css">
+    <link href="/css/category.css" type="text/css" rel="stylesheet">
+</head>
+
+   
+  <body>
+    <script src="/js/default.js"></script>
+    <header id="tab" >
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <div class="site-header">
+    <div class="wrapper">
+      <div>
+        <a href="/">
+          <img src="/img/square_logo.png" align="left" width="57px">
+        </a>
+      </div>
+
+      <nav class="site-nav">
+
+        <div id="tab" class="trigger">
+          <!-- GDSC Seoultech instead of blog -->
+          <a class="page-link" href="/">GDSC</a>
+          <a class="page-link" href="/members/2">MEMBER</a>
+          <a class="page-link" href="/category/2nd_term">POST</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div id="hovering" class="tab-header">
+    <div class="wrapper">
+      <div class="detail-post">
+          <div class="tab-item">
+            <div><a class="page-link-detail" href="/category/1st_term">1기</a></div>
+            <div><a class="page-link-detail" href="/category/2nd_term">2기</a></div>
+          </div>
+      </div>
+      <div class="detail-member">
+        <div class="tab-item">
+          <div><a class="page-link-detail" href="/members/1">1기</a></div>
+          <div><a class="page-link-detail" href="/members/2">2기</a></div>
+        </div>
+    </div>
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+    var tabMenu = $("#tab");
+    var tabSubMenu = $("#hovering");
+
+    tabSubMenu.hide()
+
+    tabMenu.hover(function() {
+      tabSubMenu.show();
+    }, function() {
+      tabSubMenu.hide();
+    })
+  </script>
+
+</header>
+
+
+    <div class="page-content" id="page-content">
+      <div class="wrapper" id="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title"><dont_sleep_driver> 5주차 이야기!</h1>
+    <h1 class="post-description"></h1>
+    <p class="post-meta">February 8, 2022 — 00:00 • keonju2</p>
+    
+      
+        <span class="tag">solution_challenge</span>
+      
+        <span class="tag">dont_sleep_driver</span>
+      
+    
+  </header>
+  <article class="post-content">
+    <h1 id="dont_sleep_driver-5주차-이야기">Don’t_sleep_driver 5주차 이야기</h1>
+
+<p>안녕하세요! Don’t_sleep_driver ML 멤버 나건주입니다.<br />
+이번 주는 설날이 있어서 2주의 시간이 있었지만 순식간에 지나갔습니다.</p>
+
+<h1 id="지난-주에-한-일">지난 주에 한 일</h1>
+
+<h2 id="안드로이드">안드로이드</h2>
+
+<p>안드로이드에서는 카메라 화면 띄우기, ML KIT 사용, JWT 로그인을 진행하였습니다.<br />
+ML KIT의 경우 OCR로 글자 인식하는 것까지 했지만..<br />
+공식 문서 상 눈 인식은 좌우 각도가 제한적이라 사용하지 않을 것 같습니다..</p>
+
+<h2 id="ml">ML</h2>
+
+<p>ML에서는 텐서플로 라이트를 활용한 안드로이드 딥러닝 책을 실습만 모두 진행하였습니다.<br />
+빠르게 모델을 만들려고 내용은 빨리 읽고 실습만 따라 했더니 머리에 남아있는 것은 없네요..(딥러닝 MNIST 실습은 국룰이네요)<br />
+안드로이드에 텐서플로 라이트를 어떻게 로드하는지 정리된 책이라 인식모델 구현할 ML분들이나 안드로이드에 ML 적용해보고 싶은 안드로이드 공부하시는 분들도 읽어보면 좋을 것 같습니다!<br />
+참고로 ML, 안드로이드 모두 기초부터 나오진 않습니다..</p>
+
+<p>그리고 인식 모델을 고민하다가 YOLOv5 모델이 많이 활용되길래 관련 자료들을 찾아보고 저번 학기에 교양수업으로 들었던 인공지능학과 교수님께 혹시나 구현 가능성과 조언을 얻고자 연락드렸더니 흔쾌히 도와주셨습니다..</p>
+
+<h2 id="백엔드">백엔드</h2>
+
+<p>로컬 로그인 구현에서 휴대폰 인증을 하려했지만 비용 문제로 이메일 인증을 진행할 것 같습니다.<br />
+OAuth 구현을 어떤 식으로 할지 알아보았습니다.<br />
+도커 기반 배포 환겨 구현을 진행하였습니다. (안드가 원한다면 배포 해줄 수 있다는 멋진 백엔드..)</p>
+
+<h1 id="다음주-목표">다음주 목표</h1>
+
+<h2 id="안드로이드-1">안드로이드</h2>
+
+<ul>
+  <li>소리 재생 (간단할듯)</li>
+  <li>GPS (클론 완료하기)</li>
+  <li>로그인, 회원가입 화면</li>
+  <li>Notification 더 조사하고 구현해보기</li>
+  <li>Background Service 알아보기</li>
+  <li>텐서플로우 라이트 알아보기..</li>
+</ul>
+
+<h2 id="ml-1">ML</h2>
+
+<ul>
+  <li>학습량 적게 해서 정확도 상관 안쓰고 모델 만들어보기 (tflite 변환까지)</li>
+  <li>대용량 데이터 학습 모델 관련해서 찾아보기
+    <ul>
+      <li>코랩 프로(답답하면 결제..) or 에포크별 체크포인트로 모델 학습</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="백엔드-1">백엔드</h2>
+
+<ul>
+  <li>OAuth(희서)</li>
+  <li>배포환경 공부(ECS) + Nginx + RDS(인혁)</li>
+</ul>
+
+<p>개강이 얼마 남지 않아서 열심히 달려야 할 것 같습니다!!<br />
+이상으로 4주차 포스팅을 마치겠습니다.</p>
+
+  </article>
+  <br>
+
+  <hr/><br>
+
+  <div class="author">
+    
+    <table>
+        <tr>
+          <td rowspan="3" style="padding-right: 10px"><img class="author-pic" src="https://github.com/.png" alt=""></td>
+          <td><b><h2 rel="author"></h2></b></td>
+        </tr>
+      <tr>
+        <td><p rel="author"></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a rel="author" href="https://github.com/" target="_blank"><i class="fa fa-github fa-2x"></i></a>&nbsp&nbsp
+          
+        </td>
+      </tr>
+    </table>
+
+  </div>
+
+
+  <br>
+  <hr/>
+  <div>
+    <script src="https://utteranc.es/client.js"
+        repo="gdsc-seoultech/blog-comments"
+        issue-term="pathname"
+        label="comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+  </div>
+
+</div>
+<script src="/js/toc.js"></script>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper" align="center">
+  	<h4>This site was built using <a href="http://jekyllrb.com" target="_blank">Jekyll</a> and is hosted on <a href="https://github.com" target="_blank">Github</a>. &#169; GDSC Seoultech</h4>
+  </div>
+
+</footer>
+
+
+  </body>
+</html>

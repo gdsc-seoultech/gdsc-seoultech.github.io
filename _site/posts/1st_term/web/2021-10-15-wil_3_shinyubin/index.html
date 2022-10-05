@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="tYMwPoxNrWfLx2sDrDYzqI4-dq3M3FfI56NBL9JNtH8" />
+
+    <title>WIL 3주차</title>
+    <meta name="description" content="A simple, whitespace, helvetica based portfolio theme.
+">
+
+    <link rel = "shortcut icon" type="image/x-icon" href="/img/square_logo.png">
+    <link rel="stylesheet" href="/css/main.css">
+<!--    <link rel="canonical" href="http://localhost:4000/posts/1st_term/web/2021-10-15-wil_3_shinyubin/">-->
+    <link rel="canonical" href="/posts/1st_term/web/2021-10-15-wil_3_shinyubin/">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- 카테고리 css -->
+    <link rel="stylesheet" href="/css/pagination.css">
+    <link href="/css/category.css" type="text/css" rel="stylesheet">
+</head>
+
+   
+  <body>
+    <script src="/js/default.js"></script>
+    <header id="tab" >
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <div class="site-header">
+    <div class="wrapper">
+      <div>
+        <a href="/">
+          <img src="/img/square_logo.png" align="left" width="57px">
+        </a>
+      </div>
+
+      <nav class="site-nav">
+
+        <div id="tab" class="trigger">
+          <!-- GDSC Seoultech instead of blog -->
+          <a class="page-link" href="/">GDSC</a>
+          <a class="page-link" href="/members/2">MEMBER</a>
+          <a class="page-link" href="/category/2nd_term">POST</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div id="hovering" class="tab-header">
+    <div class="wrapper">
+      <div class="detail-post">
+          <div class="tab-item">
+            <div><a class="page-link-detail" href="/category/1st_term">1기</a></div>
+            <div><a class="page-link-detail" href="/category/2nd_term">2기</a></div>
+          </div>
+      </div>
+      <div class="detail-member">
+        <div class="tab-item">
+          <div><a class="page-link-detail" href="/members/1">1기</a></div>
+          <div><a class="page-link-detail" href="/members/2">2기</a></div>
+        </div>
+    </div>
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+    var tabMenu = $("#tab");
+    var tabSubMenu = $("#hovering");
+
+    tabSubMenu.hide()
+
+    tabMenu.hover(function() {
+      tabSubMenu.show();
+    }, function() {
+      tabSubMenu.hide();
+    })
+  </script>
+
+</header>
+
+
+    <div class="page-content" id="page-content">
+      <div class="wrapper" id="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">WIL 3주차</h1>
+    <h1 class="post-description">3주차 web WIL입니다.</h1>
+    <p class="post-meta">October 15, 2021 — 08:00 • shinyubin989</p>
+    
+      
+        <span class="tag">web</span>
+      
+    
+  </header>
+  <article class="post-content">
+    <p>3주차 클론코딩을 하면서 애먹었던 부분을 위주로 작성해보겠습니다!</p>
+
+<h1 id="typeerror">TypeError</h1>
+
+<h3 id="typeerror-cannot-read-property-map-of-undefined">TypeError: Cannot read property ‘map’ of undefined</h3>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+  <span class="nx">dummyComments</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">item</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">(</span>
+    <span class="p">&lt;</span><span class="nc">CommentItem</span>
+      <span class="na">key</span><span class="p">=</span><span class="si">{</span><span class="nx">item</span><span class="p">.</span><span class="nx">id</span><span class="si">}</span>
+      <span class="na">nickname</span><span class="p">=</span><span class="si">{</span><span class="nx">item</span><span class="p">.</span><span class="nx">nickname</span><span class="si">}</span>
+      <span class="na">comment</span><span class="p">=</span><span class="si">{</span><span class="nx">item</span><span class="p">.</span><span class="nx">comment</span><span class="si">}</span>
+      <span class="na">date</span><span class="p">=</span><span class="si">{</span><span class="nx">item</span><span class="p">.</span><span class="nx">date</span><span class="si">}</span>
+      <span class="na">like</span><span class="p">=</span><span class="si">{</span><span class="nx">item</span><span class="p">.</span><span class="nx">like</span><span class="si">}</span>
+    <span class="p">/&gt;</span>
+  <span class="p">));</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>이 부분은 2주차 과제를 하면서도 막혔던 부분인데, 오류 해결만 하고 바로 넘어갔더니 3주차 과제를 하면서 또 같은 오류를 만나게 됐습니다.</p>
+
+<p>처음엔 코드를 위와같이 작성하였는데, React는 return에서 XXX.map(…)을 반복실행할 때, 첫 턴에 데이터가 아직 안들어와도 렌더링이 실행되며 그 데이터는 undefined로 정의되어 오류가 나게 되었습니다.</p>
+
+<p>따라서 조건이 참이면 실행되게끔, 다음과 같이 &amp;&amp;를 사용하여 에러를 해결해주었습니다.</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+  <span class="nx">dummyComments</span> <span class="o">&amp;&amp;</span>
+    <span class="nx">dummyComments</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">item</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">(</span>
+      <span class="p">&lt;</span><span class="nc">CommentItem</span>
+        <span class="na">key</span><span class="p">=</span><span class="si">{</span><span class="nx">item</span><span class="p">.</span><span class="nx">id</span><span class="si">}</span>
+        <span class="na">nickname</span><span class="p">=</span><span class="si">{</span><span class="nx">item</span><span class="p">.</span><span class="nx">nickname</span><span class="si">}</span>
+        <span class="na">comment</span><span class="p">=</span><span class="si">{</span><span class="nx">item</span><span class="p">.</span><span class="nx">comment</span><span class="si">}</span>
+        <span class="na">date</span><span class="p">=</span><span class="si">{</span><span class="nx">item</span><span class="p">.</span><span class="nx">date</span><span class="si">}</span>
+        <span class="na">like</span><span class="p">=</span><span class="si">{</span><span class="nx">item</span><span class="p">.</span><span class="nx">like</span><span class="si">}</span>
+      <span class="p">/&gt;</span>
+    <span class="p">));</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="syntaxerror">SyntaxError</h1>
+
+<h3 id="syntaxerror-identifier-dummypost-has-already-been-declared-108">SyntaxError: Identifier ‘dummyPost’ has already been declared. (10:8)</h3>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// let</span>
+<span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">gdsc</span><span class="dl">"</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">gdsc1</span><span class="dl">"</span><span class="p">;</span> <span class="c1">// -&gt; SyntaxError: Identifier 'a' has already been declared</span>
+<span class="nx">a</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">gdsc2</span><span class="dl">"</span><span class="p">;</span> <span class="c1">// -&gt; 가능</span>
+
+<span class="c1">// const</span>
+<span class="kd">const</span> <span class="nx">b</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">gdsc</span><span class="dl">"</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">b</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">gdsc1</span><span class="dl">"</span><span class="p">;</span> <span class="c1">// SyntaxError: Identifier 'a' has already been declared</span>
+<span class="nx">b</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">gdsc2</span><span class="dl">"</span><span class="p">;</span> <span class="c1">// -&gt; 불가능 (TypeError:Assignment to constant variable)</span>
+</code></pre></div></div>
+
+<p>변수의 immutable여부에 의해 typeError의 여부가 결정됩니다.</p>
+
+<p>let은 변수에 재할당이 가능하지만, const는 변수 재선언, 재할당 모두 불가능해서 위와같은 syntax에러가 발생했습니다.</p>
+
+<h1 id="tag-error">Tag Error</h1>
+
+<h3 id="3-error-img-is-a-void-element-tag-and-must-neither-have-children-nor-use-dangerouslysetinnerhtml">3. Error: img is a void element tag and must neither have <code class="language-plaintext highlighter-rouge">children</code> nor use <code class="language-plaintext highlighter-rouge">dangerouslySetInnerHTML</code>.</h3>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="p">=</span><span class="s">"like-img"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="p">=</span><span class="si">{</span><span class="nx">likeImg</span><span class="si">}</span> <span class="na">alt</span><span class="p">=</span><span class="s">"like image"</span><span class="p">&gt;</span><span class="si">{</span><span class="nx">like</span><span class="si">}</span><span class="p">&lt;/</span><span class="nt">img</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="p">=</span><span class="s">"comment-img"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="p">=</span><span class="si">{</span><span class="nx">commentImg</span><span class="si">}</span> <span class="na">alt</span><span class="p">=</span><span class="s">"comment image"</span><span class="p">&gt;</span><span class="si">{</span><span class="nx">comment</span><span class="si">}</span><span class="p">&lt;/</span><span class="nt">img</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div></div>
+
+<p>좋아요 수를 like라는 인자로 받아와 likeImg옆에 {like}와 같이 넣어주려는 계획이었는데, img태그는 children을 가질 수 없었습니다.</p>
+
+<p>다음과 같이 수정해주니 정상적으로 작동하는 모습을 볼 수 있었습니다.</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="p">=</span><span class="s">"like-wrapper"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">className</span><span class="p">=</span><span class="s">"like-img"</span> <span class="na">src</span><span class="p">=</span><span class="si">{</span><span class="nx">likeImg</span><span class="si">}</span> <span class="na">alt</span><span class="p">=</span><span class="s">"like image"</span><span class="p">&gt;&lt;/</span><span class="nt">img</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">className</span><span class="p">=</span><span class="s">"like-text"</span><span class="p">&gt;</span><span class="si">{</span><span class="nx">like</span><span class="si">}</span><span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="p">=</span><span class="s">"comment-wrapper"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">className</span><span class="p">=</span><span class="s">"comment-img"</span> <span class="na">src</span><span class="p">=</span><span class="si">{</span><span class="nx">commentImg</span><span class="si">}</span> <span class="na">alt</span><span class="p">=</span><span class="s">"comment image"</span><span class="p">&gt;&lt;/</span><span class="nt">img</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">className</span><span class="p">=</span><span class="s">"comment-text"</span><span class="p">&gt;</span><span class="si">{</span><span class="nx">comment</span><span class="si">}</span><span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div></div>
+
+  </article>
+  <br>
+
+  <hr/><br>
+
+  <div class="author">
+    
+    <table>
+        <tr>
+          <td rowspan="3" style="padding-right: 10px"><img class="author-pic" src="https://github.com/.png" alt=""></td>
+          <td><b><h2 rel="author"></h2></b></td>
+        </tr>
+      <tr>
+        <td><p rel="author"></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a rel="author" href="https://github.com/" target="_blank"><i class="fa fa-github fa-2x"></i></a>&nbsp&nbsp
+          
+        </td>
+      </tr>
+    </table>
+
+  </div>
+
+
+  <br>
+  <hr/>
+  <div>
+    <script src="https://utteranc.es/client.js"
+        repo="gdsc-seoultech/blog-comments"
+        issue-term="pathname"
+        label="comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+  </div>
+
+</div>
+<script src="/js/toc.js"></script>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper" align="center">
+  	<h4>This site was built using <a href="http://jekyllrb.com" target="_blank">Jekyll</a> and is hosted on <a href="https://github.com" target="_blank">Github</a>. &#169; GDSC Seoultech</h4>
+  </div>
+
+</footer>
+
+
+  </body>
+</html>

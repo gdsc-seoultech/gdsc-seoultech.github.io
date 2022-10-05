@@ -179,6 +179,83 @@ title: MEMBER - 2nd_term
     </div>
     <!-- Core part end -->
     <!-- member part start -->
+    <div class="introduction not-lead-part">
+        <p class="who" style="font-family: 'Google Sans';">MEMBER</p>
+        <div class="member-card-container">
+            <div class="member-card">
+                <div class="folder" id="juwhan">
+                    {% assign member = site.data.members_2 | map: "juwhan" %}
+                </div>
+                <span class="member-name">{{ member | map: "name" }}</span>
+            </div>
+            <div class="black_bg" id="juwhan">
+                <div class="modal_close" id="juwhan"><a href="#;">close</a></div>
+            </div>
+            <div class="modal_wrap" id="juwhan">
+                <div class="the_member">
+                    <img class="member_image" src="https://github.com/{{ member | map: 'github' }}.png">
+                    <div class="member_description">
+                        <p class="text" id="title"> {{ member | map: "description" }} </p>
+                        <p class="text" id="name"> {{ member | map: "name" }} </p>
+                        <P class="text" id="d"> {{ member | map: "introduce" }}</p>
+                        <span class="member-icon"><a class="link-dark"
+                                href="https://github.com/{{ member | map: 'github' }}" target="_blank"><i
+                                    class="fa fa-github fa-2x"></i></a></span>
+                        <a rel="author" href="{{ member | map: 'blog' }}" target="_blank"><img
+                                src="/img/blog_icon/{{ member | map: 'blog_platform' }}.jpg" width="26px"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="member-card">
+                <div class="folder" id="dann">
+                    {% assign member = site.data.members_2 | map: "dann" %}
+                </div>
+                <span class="member-name">{{ member | map: "name" }}</span>
+            </div>
+            <div class="black_bg" id="dann">
+                <div class="modal_close" id="dann"><a href="#;">close</a></div>
+            </div>
+            <div class="modal_wrap" id="dann">
+                <div class="the_member">
+                    <img class="member_image" src="https://github.com/{{ member | map: 'github' }}.png">
+                    <div class="member_description">
+                        <p class="text" id="title"> {{ member | map: "description" }} </p>
+                        <p class="text" id="name"> {{ member | map: "name" }} </p>
+                        <P class="text" id="d"> {{ member | map: "introduce" }}</p>
+                        <span class="member-icon"><a class="link-dark"
+                                href="https://github.com/{{ member | map: 'github' }}" target="_blank"><i
+                                    class="fa fa-github fa-2x"></i></a></span>
+                        <a rel="author" href="{{ member | map: 'blog' }}" target="_blank"><img
+                                src="/img/blog_icon/{{ member | map: 'blog_platform' }}.jpg" width="26px"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="member-card">
+                <div class="folder" id="hongmu">
+                    {% assign member = site.data.members_2 | map: "hongmu" %}
+                </div>
+                <span class="member-name">{{ member | map: "name" }}</span>
+            </div>
+            <div class="black_bg" id="hongmu">
+                <div class="modal_close" id="hongmu"><a href="#;">close</a></div>
+            </div>
+            <div class="modal_wrap" id="hongmu">
+                <div class="the_member">
+                    <img class="member_image" src="https://github.com/{{ member | map: 'github' }}.png">
+                    <div class="member_description">
+                        <p class="text" id="title"> {{ member | map: "description" }} </p>
+                        <p class="text" id="name"> {{ member | map: "name" }} </p>
+                        <P class="text" id="d"> {{ member | map: "introduce" }}</p>
+                        <span class="member-icon"><a class="link-dark"
+                                href="https://github.com/{{ member | map: 'github' }}" target="_blank"><i
+                                    class="fa fa-github fa-2x"></i></a></span>
+                        <a rel="author" href="{{ member | map: 'blog' }}" target="_blank"><img
+                                src="/img/blog_icon/{{ member | map: 'blog_platform' }}.jpg" width="26px"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- member part end -->
     <div class="introduction not-lead-part">
         <!-- 밑에 공간을 만들어주기 위해서-->

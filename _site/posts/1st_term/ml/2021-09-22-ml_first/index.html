@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="tYMwPoxNrWfLx2sDrDYzqI4-dq3M3FfI56NBL9JNtH8" />
+
+    <title>1주차 Numpy와 Pandas 타파!</title>
+    <meta name="description" content="A simple, whitespace, helvetica based portfolio theme.
+">
+
+    <link rel = "shortcut icon" type="image/x-icon" href="/img/square_logo.png">
+    <link rel="stylesheet" href="/css/main.css">
+<!--    <link rel="canonical" href="http://localhost:4000/posts/1st_term/ml/2021-09-22-ml_first/">-->
+    <link rel="canonical" href="/posts/1st_term/ml/2021-09-22-ml_first/">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- 카테고리 css -->
+    <link rel="stylesheet" href="/css/pagination.css">
+    <link href="/css/category.css" type="text/css" rel="stylesheet">
+</head>
+
+   
+  <body>
+    <script src="/js/default.js"></script>
+    <header id="tab" >
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <div class="site-header">
+    <div class="wrapper">
+      <div>
+        <a href="/">
+          <img src="/img/square_logo.png" align="left" width="57px">
+        </a>
+      </div>
+
+      <nav class="site-nav">
+
+        <div id="tab" class="trigger">
+          <!-- GDSC Seoultech instead of blog -->
+          <a class="page-link" href="/">GDSC</a>
+          <a class="page-link" href="/members/2">MEMBER</a>
+          <a class="page-link" href="/category/2nd_term">POST</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div id="hovering" class="tab-header">
+    <div class="wrapper">
+      <div class="detail-post">
+          <div class="tab-item">
+            <div><a class="page-link-detail" href="/category/1st_term">1기</a></div>
+            <div><a class="page-link-detail" href="/category/2nd_term">2기</a></div>
+          </div>
+      </div>
+      <div class="detail-member">
+        <div class="tab-item">
+          <div><a class="page-link-detail" href="/members/1">1기</a></div>
+          <div><a class="page-link-detail" href="/members/2">2기</a></div>
+        </div>
+    </div>
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+    var tabMenu = $("#tab");
+    var tabSubMenu = $("#hovering");
+
+    tabSubMenu.hide()
+
+    tabMenu.hover(function() {
+      tabSubMenu.show();
+    }, function() {
+      tabSubMenu.hide();
+    })
+  </script>
+
+</header>
+
+
+    <div class="page-content" id="page-content">
+      <div class="wrapper" id="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">1주차 Numpy와 Pandas 타파!</h1>
+    <h1 class="post-description"></h1>
+    <p class="post-meta">September 23, 2021 — 01:40 • juijeong8324</p>
+    
+      
+        <span class="tag">ml</span>
+      
+    
+  </header>
+  <article class="post-content">
+    <h3 id="-지난주-과제">🤔 지난주 과제</h3>
+<ul>
+  <li>파이썬 라이브러리를 활용한 머신러닝 구매</li>
+  <li>Kaggle 승급하기</li>
+  <li>Jupyter, colab 노트북 생성</li>
+  <li>파이썬 라이브러리를 활용한 머신러닝 github clone</li>
+  <li>백준, 프로그래머스 가입
+<br />
+<br />
+<br />
+<br /></li>
+</ul>
+
+<h1 id="1주차-우리가-한-것은">1주차 우리가 한 것은..</h1>
+<p>9월 14일 ML은 1주차로 “Numpy와 Pandas”에 대해 알아보는 시간을 가졌습니다! <br />
+3시간.. 동안 ppt와 코드를 보면서 발표를 듣고 마지막에 복습 겸 퀴즈를 풀며 스터디를 마무리했습니다! 
+<br />
+<br /></p>
+
+<h2 id="-서론--"><span style="color:red"> 서론  </span></h2>
+<blockquote>
+  <p>Numpy와 Pandas에 대해 알아보기 전에 파이썬 머신러닝 생태계를 구성하는 주요 패키지에 대해서 알아보았습니다!</p>
+</blockquote>
+
+<p><img width="900" src="https://user-images.githubusercontent.com/63052097/134831844-565fe313-9a27-4941-b22c-8dae8d984c2d.png" style="margin-top: 10px;" /></p>
+
+<ul>
+  <li>
+    <p><strong>머신러닝 패키지</strong> : <strong>scikit-learn</strong>  <br />
+▫ 오픈소스 머신러닝 라이브러리 <br />
+▫ Numpy, Scipy, Matplotlib 기반으로 생성     <br />
+▫ <strong>머신러닝의 주요 알고리즘/모듈(분류/회귀/클러스터링 등)이 구현되어 있는 라이브러리  (단, 딥러닝 모듈 없음! )</strong></p>
+
+    <p>cf) 딥러닝 패키지 : TensorFlow,  Keras, PyTorch<br />
+  <a href="https://deepflowest.tistory.com/64">00. 사이킷런(scikit-learn)이란</a> <br />
+  <a href="https://engineer-mole.tistory.com/16">[python] scikit-learn이란</a></p>
+  </li>
+  <li>
+    <p><strong>배열/선형대수/통계 패키지</strong>  <br />
+ ▫  <strong>numpy</strong> : 제일 중요! / 배열과 선형대수를 위한 패키지 / Numpy를 기반으로 해서 많은 머신러닝 패키지들이 만들어져 있음!  <br />
+ ▫  <strong>SciPy :</strong> 파이썬의 대표적인 통계 패키지 / 희소행렬과 같은 자연과학에서 많이 사용되는 유틸리티가 담겨있음!</p>
+  </li>
+  <li>
+    <p><strong>데이터 핸들링</strong> : <strong>pandas</strong>  <br />
+▫  2차원 데이터를 핸들링 == 행과 열로 이루어진 정형 데이터를 가공, 변환 <br />
+<em>cf) Numpy도 데이터 핸들링 가능 → but 저차원 API라 pandas에 비해 개발 생산성이 떨어짐</em></p>
+  </li>
+  <li>
+    <p><strong>데이터 시각화</strong> : <strong>matplotlib</strong><br />
+▫ 데이터의 직관적 이해, 시각적인 표현을 위한 라이브러리 / 많은 다른 시각화 솔루션들이 matplotlib을 기반으로 만들어짐!(seaborn도 마찬가지)</p>
+  </li>
+  <li>
+    <p><strong>대화형 파이썬 툴</strong>   <br />
+▫  노트필기 하듯이 코드 + 필기할 수 있는 툴 / 코드를 분할해서 실행이 가능!!</p>
+  </li>
+</ul>
+
+<p><br /></p>
+<hr />
+
+<p><br /></p>
+
+<h2 id="-본론-"><span style="color:orange"> 본론 </span></h2>
+<blockquote>
+  <p>저희는 다음과 같은 내용을 배웠는데요(3시간인 이유가 있습니다^^ 엉엉) 간단하게 요약해보도록 할게요!</p>
+  <ol>
+    <li>Numpy와 Pandas는 왜 중요한가?</li>
+    <li>Numpy 넘파이
+      <ul>
+        <li>넘파이 배열</li>
+        <li>넘파이 배열 - ndarray와 관련된 함수들</li>
+      </ul>
+    </li>
+    <li>Pandas 판다스
+      <ul>
+        <li>판다스의 주요 구성요소 - DataFrame, Series, Index</li>
+        <li>기본 API들</li>
+        <li>DataFrame ←→ 리스트, 딕셔너리, 넘파이 ndarray</li>
+        <li>DataFrame 데이터 삭제</li>
+        <li>데이터 셀렉션 및 필터링</li>
+        <li>판다스 Aggregation 함수와 group by</li>
+        <li>결손 데이터 처리</li>
+        <li>판다스 apply, map</li>
+      </ul>
+    </li>
+  </ol>
+</blockquote>
+
+<p><br /></p>
+
+<h2 id="1️⃣-numpy와--pandas-왜-중요한가">1️⃣ Numpy와  Pandas 왜 중요한가?!</h2>
+<p><br />
+<img width="800" src="https://user-images.githubusercontent.com/63052097/134837501-b17fca92-af87-41ff-ba34-8a420fc8eea9.png" /> <br />
+제일 먼저 넘파이와 판다스가 많고 많은 라이브러리 중에 왜 중요한지 자세하게 알아보는 시간을 가졌습니다!
+<br /> <br />
+  <strong>첫째</strong> 우리는 이미 기존에 있는 알고리즘을 이용해서 주어진 알고리즘이 결과를 잘 도출해낼 수 있도록 주어진 데이터를 적절하게 추출/가공/변환을 하는 것을 해야 합니다! <br />
+ 이때 데이터 처리를 할 때 대부분 넘파이와 판다스 라이브러리를 사용하기 때문에 중요한 것이겠지요?!
+<br />  <br />
+  <strong>둘째</strong>  머신러닝 알고리즘의 모듈들이 모인 사이킷런이 넘파이 기반에서 작성됐기 때문에 넘파이를 잘 이해해야 합니다! <br />
+ 특히 뒤에서 알아보겠지만 넘파이 배열 꼭 중요한 부분이니까 기억해두는 것이 좋아요!</p>
+
+<p><br /></p>
+
+<h2 id="2️⃣-numpy">2️⃣ Numpy</h2>
+<p><br /></p>
+<ul>
+  <li>넘파이란?
+<img src="https://user-images.githubusercontent.com/63052097/134839420-81625dd7-4a2c-4fca-8156-589d1c5eca53.png" alt="" />
+넘파이는 파이썬으로 과학 계산을 할 때 필요한 패키지이자 라이브러리 이구요!! <strong>다차원 배열을 위한 다양한 기능 선형대수 연산</strong>을 하는데 다양한 함수가 제공됩니다!</li>
+</ul>
+
+<p><br /></p>
+
+<ul>
+  <li>
+    <p><span style="color:red;font-weight:bold"> 넘파이 배열 </span>   <br />
+ <span style="background:#FFEBCD;font-weight:bold"> 1) scikit-learn의 기본 데이터 구조! </span>   <br />
+   ▫ 사실 넘파이 라이브러리는 이 넘파이 배열을 사용하기 위해 가져왔다!! 라고 해도 과언이 아닐정도로 넘파이 배열은 정말 중요한 자료구조입니다!<br />
+   ▫ <strong>scikit-learn에서 알고리즘들이 넘파이 배열 형태의 데이터를 입력으로 받기 때문에 우리가 사용할 데이터들은 모두 넘파이 배열로 변환해줘야 합니다!</strong></p>
+
+    <p>cf) 파이썬은 자체적으로 배열 자료형을 제공하지 않기 때문에 배열을 사용하기 위해서는 넘파이를 사용</p>
+
+    <p><br />
+<span style="background:#FFEBCD;font-weight:bold"> 2) ndarray </span> 
+<img src="https://user-images.githubusercontent.com/63052097/134845546-21cdc4f7-7640-42a3-85e9-18ad6fa3523b.png" alt="" /></p>
+
+    <p>✏️ <strong>개념</strong> : 다차원(n-차원)의 배열(array) 자료구조 클래스 (단 배열의 원소 타입은 모두 같아야 한다)</p>
+
+    <p>✏️ <strong>생성</strong> : <strong>array(파이썬 list or ndarray)</strong></p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="n">array1</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span> <span class="c1">#1차원 리스트 
+</span><span class="n">array2</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]])</span> <span class="c1"># 2차원 리스트 
+</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"array1: </span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">array1</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"array2: </span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">array2</span><span class="p">)</span>
+</code></pre></div>    </div>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">array1</span><span class="p">:</span>
+<span class="p">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">array2</span><span class="p">:</span>
+<span class="p">[[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span><span class="p">]]</span>
+</code></pre></div>    </div>
+    <p><br /></p>
+
+    <p><img src="https://user-images.githubusercontent.com/63052097/134846038-b1c8387b-45bf-457b-91ce-734bdc545c05.png" alt="" /></p>
+
+    <p>✏️ <strong>형태(shpae)</strong> 
+      : ndarray.shape 속성</p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">array1</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span> <span class="c1"># 1차원 ndarray
+</span><span class="k">print</span><span class="p">(</span><span class="s">'array1 type:'</span><span class="p">,</span><span class="nb">type</span><span class="p">(</span><span class="n">array1</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'array1 array 형태:'</span><span class="p">,</span><span class="n">array1</span><span class="p">.</span><span class="n">shape</span><span class="p">)</span> <span class="c1"># 형태 알아보기 
+</span>
+<span class="n">array2</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span>
+                <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]])</span> <span class="c1"># 2차원 
+</span><span class="k">print</span><span class="p">(</span><span class="s">'array2 type:'</span><span class="p">,</span><span class="nb">type</span><span class="p">(</span><span class="n">array2</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'array2 array 형태:'</span><span class="p">,</span><span class="n">array2</span><span class="p">.</span><span class="n">shape</span><span class="p">)</span> <span class="c1"># 형태알아보기 
+</span>
+<span class="n">array3</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]])</span> <span class="c1">#2차원 
+</span><span class="k">print</span><span class="p">(</span><span class="s">'array3 type:'</span><span class="p">,</span><span class="nb">type</span><span class="p">(</span><span class="n">array3</span><span class="p">))</span> 
+<span class="k">print</span><span class="p">(</span><span class="s">'array3 array 형태:'</span><span class="p">,</span><span class="n">array3</span><span class="p">.</span><span class="n">shape</span><span class="p">)</span> <span class="c1">#형태 알아보기 
+</span></code></pre></div>    </div>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>array1 type: &lt;class 'numpy.ndarray'&gt;
+array1 array 형태: (3,)
+array2 type: &lt;class 'numpy.ndarray'&gt;
+array2 array 형태: (2, 3)
+array3 type: &lt;class 'numpy.ndarray'&gt;
+array3 array 형태: (1, 3)
+</code></pre></div>    </div>
+    <p><br /></p>
+
+    <p>✏️ <strong>차원</strong>  <br />
+   :ndarray.ndim 속성</p>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">print</span><span class="p">(</span><span class="s">'array1: {:0}차원, array2: {:1}차원, array3: {:2}차원'</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">array1</span><span class="p">.</span><span class="n">ndim</span><span class="p">,</span><span class="n">array2</span><span class="p">.</span><span class="n">ndim</span><span class="p">,</span><span class="n">array3</span><span class="p">.</span><span class="n">ndim</span><span class="p">))</span>
+  <span class="c1">#차원 알아보기! 
+</span></code></pre></div>    </div>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  array1: 1차원, array2: 2차원, array3:  2차원
+</code></pre></div>    </div>
+    <p><br /></p>
+
+    <p>✏️ <strong>타입(type)</strong> <br />
+     : ndarray.dtype 속성 <br />
+     : ndarray 데이터 타입은 숫자, 문자열,  bool 등등 모두 가능 <br />
+     : 숫자형의 경우 int형(8bit, 16bit, 32bit) / unsigned int형(8bit, 16bit, 32bit) / float형(16bit, 32bit, 64bit, 128bit) / 이보다 더 큰 숫자도 가능 / 정밀도를 위해 complex 타입도 제공 <br />
+     : <strong>ndarray내의 데이터 타입은 그 연산의 특성상 같은 데이터 타입만 가능!</strong></p>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+    <span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">list1</span><span class="p">))</span> <span class="c1">#list 
+</span>    <span class="n">array1</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">(</span><span class="n">list1</span><span class="p">)</span> 
+
+    <span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">array1</span><span class="p">))</span><span class="c1"># ndarray
+</span>    <span class="k">print</span><span class="p">(</span><span class="n">array1</span><span class="p">,</span> <span class="n">array1</span><span class="p">.</span><span class="n">dtype</span><span class="p">)</span> <span class="c1"># 데이터 타입 알아보기 
+</span></code></pre></div>    </div>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;class 'list'&gt;
+    &lt;class 'numpy.ndarray'&gt;
+    [1 2 3] int32
+</code></pre></div>    </div>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     <span class="c1"># 데이터 값의 타입이 다르다?!!? 
+</span>    <span class="n">list2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s">'test'</span><span class="p">]</span> <span class="c1"># 리스트는 가능 
+</span>    <span class="n">array2</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">(</span><span class="n">list2</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">array2</span><span class="p">,</span> <span class="n">array2</span><span class="p">.</span><span class="n">dtype</span><span class="p">)</span> 
+    <span class="c1"># ndarray는 안 됨! 이렇게 되면 정수형 값들이 크기가 더 큰 문자열 타입으로 변한다 
+</span>
+    <span class="n">list3</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">]</span> <span class="c1"># 리스트는 가능
+</span>    <span class="n">array3</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">(</span><span class="n">list3</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">array3</span><span class="p">,</span> <span class="n">array3</span><span class="p">.</span><span class="n">dtype</span><span class="p">)</span> 
+    <span class="c1"># 정수형 값들이 모두 실수로 변함
+</span></code></pre></div>    </div>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ['1' '2' 'test'] &lt;U11
+    [1. 2. 3.] float64
+</code></pre></div>    </div>
+
+    <p><br /></p>
+
+    <p>✏️ <strong>타입(type) 변환</strong> <br />
+    : astype(변경을 원하는 타입)  <br />
+    : <strong>대용량 데이터를 다룰 때 메모리 절약을 위해 형변환을 특히 고려!</strong></p>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="n">array_int</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+    <span class="n">array_float</span> <span class="o">=</span> <span class="n">array_int</span><span class="p">.</span><span class="n">astype</span><span class="p">(</span><span class="s">'float64'</span><span class="p">)</span> <span class="c1"># 64bit 실수형으로 변환해주세요! 
+</span>    <span class="k">print</span><span class="p">(</span><span class="n">array_float</span><span class="p">,</span> <span class="n">array_float</span><span class="p">.</span><span class="n">dtype</span><span class="p">)</span>
+
+    <span class="n">array_int1</span><span class="o">=</span> <span class="n">array_float</span><span class="p">.</span><span class="n">astype</span><span class="p">(</span><span class="s">'int32'</span><span class="p">)</span> <span class="c1">#32bit 정수형으로 변환!
+</span>    <span class="k">print</span><span class="p">(</span><span class="n">array_int1</span><span class="p">,</span> <span class="n">array_int1</span><span class="p">.</span><span class="n">dtype</span><span class="p">)</span>
+
+    <span class="n">array_float1</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.1</span><span class="p">,</span> <span class="mf">2.1</span><span class="p">,</span> <span class="mf">3.1</span><span class="p">])</span>
+    <span class="n">array_int2</span><span class="o">=</span> <span class="n">array_float1</span><span class="p">.</span><span class="n">astype</span><span class="p">(</span><span class="s">'int32'</span><span class="p">)</span> 
+    <span class="k">print</span><span class="p">(</span><span class="n">array_int2</span><span class="p">,</span> <span class="n">array_int2</span><span class="p">.</span><span class="n">dtype</span><span class="p">)</span>
+</code></pre></div>    </div>
+    <p><br /></p>
+
+    <p>✏️ <strong>ndarray의 axis 축</strong></p>
+
+    <p><img src="https://user-images.githubusercontent.com/63052097/134846419-f0e612aa-c60b-4bb9-9283-5a5ac34ab0af.png" alt="image" /></p>
+
+    <p>ndarray의 shape는 행, 열, 높이 단위가 아닌 <strong>axis0, axis1, axis2와 같이 axis 단위로 부여!!</strong> (외우자 2차원 ndaary는 axis0 == 행 axis1 == 열 )</p>
+  </li>
+</ul>
+
+<p><br />
+<br /></p>
+
+<ul>
+  <li>
+    <p>넘파이 배열 - ndarray와 관련된 함수들</p>
+
+    <p><span style="background:#FFEBCD;font-weight:bold"> 1) ndarray 초기화 = arange, zeros, ones </span>  <br />
+<img src="https://user-images.githubusercontent.com/63052097/134909220-ab38f433-7d1b-43cc-acf9-632f4b9fb032.png" alt="image" /> <br />
+▫ zeros()와 ones()는 비슷합니다. 인자로 들어온 shape 형태로 0 또는 1.을 채워 ndarray를 반환해줍니다! <br />
+▫ 초기화 할 때 디폴트 데이터 타입은 <strong>float형</strong>으로 초기화 된 다는 것을 기억하세요!</p>
+
+    <p><br /> 
+ <span style="background:#FFEBCD;font-weight:bold"> 2) 차원과 크기를 변경 = reshape() </span></p>
+
+    <p><img src="https://user-images.githubusercontent.com/63052097/134909783-a26bb9bf-2b89-4453-b7ae-24843b0c8f0b.png" alt="image" /></p>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">array1</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">'array1:</span><span class="se">\n</span><span class="s">'</span><span class="p">,</span> <span class="n">array1</span><span class="p">)</span>
+
+  <span class="n">array2</span> <span class="o">=</span> <span class="n">array1</span><span class="p">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span> <span class="c1"># 이렇게 shpae() 변환! 
+</span>  <span class="k">print</span><span class="p">(</span><span class="s">'array2:</span><span class="se">\n</span><span class="s">'</span><span class="p">,</span><span class="n">array2</span><span class="p">)</span>
+
+  <span class="n">array3</span> <span class="o">=</span> <span class="n">array1</span><span class="p">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="c1">#이렇게 shape() 변환
+</span>  <span class="k">print</span><span class="p">(</span><span class="s">'array3:</span><span class="se">\n</span><span class="s">'</span><span class="p">,</span><span class="n">array3</span><span class="p">)</span>
+</code></pre></div>    </div>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    array1:
+    [0 1 2 3 4 5 6 7 8 9]
+    array2:
+    [[0 1 2 3 4]
+    [5 6 7 8 9]]
+    array3:
+    [[0 1]
+    [2 3]
+    [4 5]
+    [6 7]
+    [8 9]]
+</code></pre></div>    </div>
+
+    <p><br />
+  <span style="background:#FFA07A;font-weight:bold"> 2-1 reshape() 보충 </span> <br />
+  <img src="https://user-images.githubusercontent.com/63052097/134910062-e6b160b6-1c69-4fae-9413-cbd3db144871.png" alt="image" /> <br />
+  ▫ 종종 reshape에서 <strong>인자로 -1이 들어가는 경우</strong>가 있습니다. -1의 의미는 해당 위치의 axis의 크기가 가변적이라는 뜻이에요! <br />
+  ▫ 즉 -1이 아닌 숫자에 해당하는 axis의 크기는 고정되지만 -1에 해당하는 axis의 크기는 고정 값에 맞추어 어떤 값이든 상관 없다는 뜻입니다!</p>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c1"># 즉 열의 크기는 1로 고정하고 행의 크기는 자동으로 변환 해라! 
+</span>    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span> <span class="c1"># 넘파이 배열 만들어주자~
+</span>    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="p">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+    <span class="n">x</span><span class="p">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div>    </div>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    array([[ 0,  1],
+          [ 2,  3],
+          [ 4,  5],
+          [ 6,  7],
+          [ 8,  9],
+          [10, 11]])
+</code></pre></div>    </div>
+    <p><br />
+  <img src="https://user-images.githubusercontent.com/63052097/134912624-4d0f5e36-1ed7-493d-b3c2-f2b21859a855.png" alt="image" />  <br />
+  ▫ (-1,1), (-1,)와 같은 형식으로 요구되는 경우가 많습니다 특히 머신러닝 API에서 <em>넘파이 배열 인자를 1차원으로 반환해서 보내라! 혹은 2차원으로 반환해서 보내라!</em> 와 같은 요구가 있을 때 유용하게 사용할 수 있습니다!  <br />
+  ▫ 😈주의😈 (-1, -1) 쓰면 에러 발생합니다<br />
+  ▫ 😈주의😈 변환할 수 없는 shape구조를 입력하면 에러 발생합니다</p>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="n">x</span><span class="p">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># 1차원 배열을 반환! 
+</span></code></pre></div>    </div>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    array([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11])
+</code></pre></div>    </div>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="n">x</span><span class="p">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="c1">#1차원 배열처럼 보이지만 이는 (1,12)인 2차원 배열임!! 대괄호 수를 봐봐!
+</span></code></pre></div>    </div>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    array([[ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11]])
+</code></pre></div>    </div>
+
+    <p><br />
+<span style="background:#FFEBCD;font-weight:bold"> 3) ndarray의 데이터 세트 선택하기 - Indexing </span></p>
+
+    <p><img src="https://user-images.githubusercontent.com/63052097/134915646-02bf0e33-f035-4f38-8084-05f302515384.png" alt="image" /> <br />
+이번에는 ndarray에서 원하는 데이터 셋을 필터링 해서 선택하는 인덱싱 방법에 대해서 알아보겠습니다!</p>
+
+    <p><br />
+▫ <strong>단일 값 추출</strong> <br />
+그냥 배열에서 index로 값을 접근했던 것처럼 사용하시면 됩니다</p>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 1에서 부터 9 까지의 1차원 ndarray 생성 
+</span><span class="n">array1</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">arange</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'array1:'</span><span class="p">,</span><span class="n">array1</span><span class="p">)</span>
+
+<span class="c1"># index는 0 부터 시작하므로 array1[2]는 3번째 index 위치의 데이터 값을 의미
+</span><span class="n">value</span> <span class="o">=</span> <span class="n">array1</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="c1"># 특정 값 추출
+</span><span class="k">print</span><span class="p">(</span><span class="s">'value:'</span><span class="p">,</span><span class="n">value</span><span class="p">)</span> 
+<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+</code></pre></div>    </div>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>array1: [1 2 3 4 5 6 7 8 9]
+value: 3
+&lt;class 'numpy.int32'&gt;
+</code></pre></div>    </div>
+
+    <p><br />
+▫ <strong>슬라이싱</strong> <br />
+  :슬라이싱은 : 을 이용하여 연속된 값을 선택하는 방식입니다! <br />
+  :ndarray변수[시작인덱스:종료 인덱스]꼴  <br />
+  :종료 인덱스-1까지만 인덱싱을 해줍니다 <br />
+  :시작과 종료 인덱스에 아무것도 없으면 맨 처음, 맨 끝을 의미합니다</p>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="n">array1d</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">arange</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+    <span class="n">array2d</span> <span class="o">=</span> <span class="n">array1d</span><span class="p">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'array2d:</span><span class="se">\n</span><span class="s">'</span><span class="p">,</span><span class="n">array2d</span><span class="p">)</span>
+
+    <span class="k">print</span><span class="p">(</span><span class="s">'array2d[0:2, 0:2] </span><span class="se">\n</span><span class="s">'</span><span class="p">,</span> <span class="n">array2d</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'array2d[1:3, 0:3] </span><span class="se">\n</span><span class="s">'</span><span class="p">,</span> <span class="n">array2d</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'array2d[1:3, :] </span><span class="se">\n</span><span class="s">'</span><span class="p">,</span> <span class="n">array2d</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="p">:])</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'array2d[:, :] </span><span class="se">\n</span><span class="s">'</span><span class="p">,</span> <span class="n">array2d</span><span class="p">[:,</span> <span class="p">:])</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'array2d[:2, 1:] </span><span class="se">\n</span><span class="s">'</span><span class="p">,</span> <span class="n">array2d</span><span class="p">[:</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">:])</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'array2d[:2, 0] </span><span class="se">\n</span><span class="s">'</span><span class="p">,</span> <span class="n">array2d</span><span class="p">[:</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+</code></pre></div>    </div>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    array2d:
+      [[1 2 3]
+      [4 5 6]
+      [7 8 9]]
+    array2d[0:2, 0:2] 
+      [[1 2]
+      [4 5]]
+    array2d[1:3, 0:3] 
+      [[4 5 6]
+      [7 8 9]]
+    array2d[1:3, :] 
+      [[4 5 6]
+      [7 8 9]]
+    array2d[:, :] 
+      [[1 2 3]
+      [4 5 6]
+      [7 8 9]]
+    array2d[:2, 1:] 
+      [[2 3]
+      [5 6]]
+    array2d[:2, 0] 
+    [1 4]
+</code></pre></div>    </div>
+
+    <p><br />
+▫ <strong>팬시 인덱싱</strong>
+<img src="https://user-images.githubusercontent.com/63052097/134917151-ac3a0402-f625-4242-8d1c-4718c5e26a51.png" alt="image" /> <br />
+  :이 친구는 연속적이지 않습니다  <br />
+  :리스트나 ndarray로 인덱스 집합을 지정해주면 해당 위치의 <strong>인덱스에 해당하는 값</strong>이 포함된 새로운 ndarray로 반환하게 됩니다</p>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="n">array1d</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">arange</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+    <span class="n">array2d</span> <span class="o">=</span> <span class="n">array1d</span><span class="p">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">array2d</span><span class="p">)</span>
+
+    <span class="n">array3</span> <span class="o">=</span> <span class="n">array2d</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="mi">2</span><span class="p">]</span> <span class="c1"># 행축의 0과1 인덱스 열축의 2 인덱스 가져와라
+</span>    <span class="k">print</span><span class="p">(</span><span class="s">'array2d[[0,1], 2] =&gt; '</span><span class="p">,</span><span class="n">array3</span><span class="p">.</span><span class="n">tolist</span><span class="p">())</span>
+
+    <span class="n">array4</span> <span class="o">=</span> <span class="n">array2d</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span> <span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span> <span class="c1">#행으로 팬시 인덱싱 열축으로 슬라이싱 했음! 
+</span>    <span class="k">print</span><span class="p">(</span><span class="s">'array2d[[0,2], 0:2] =&gt; '</span><span class="p">,</span><span class="n">array4</span><span class="p">.</span><span class="n">tolist</span><span class="p">())</span>
+
+    <span class="n">array5</span> <span class="o">=</span> <span class="n">array2d</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]]</span> <span class="c1"># 열축으로 아무것도 없으니까 모두 해당!  
+</span>    <span class="k">print</span><span class="p">(</span><span class="s">'array2d[[0,1]] =&gt; '</span><span class="p">,</span><span class="n">array5</span><span class="p">.</span><span class="n">tolist</span><span class="p">())</span>
+</code></pre></div>    </div>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    [[1 2 3]
+    [4 5 6]
+    [7 8 9]]
+    array2d[[0,1], 2] =&gt;  [3, 6]
+    array2d[[0,2], 0:2] =&gt;  [[1, 2], [7, 8]]
+    array2d[[0,1]] =&gt;  [[1, 2, 3], [4, 5, 6]]
+</code></pre></div>    </div>
+
+    <dl>
+      <dt><br /></dt>
+      <dt>▫ <span style="color:red;font-weight:bold"><strong>불린 인덱싱</strong></span>   </dt>
+      <dt><img src="https://user-images.githubusercontent.com/63052097/134917293-f4223dd1-559e-4f09-94c3-c3ec6f58afee.png" alt="image" /></dt>
+      <dd>불린 인덱싱은 가장 많이 쓰이는 인덱싱 방식입니다! 꼭 기억하세요!
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 1차원 배열을 만들고
+</span><span class="n">array1d</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">arange</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="c1"># [ ] 안에 array1d &gt; 5 Boolean indexing을 적용 
+</span><span class="k">print</span><span class="p">(</span><span class="n">array1d</span><span class="p">)</span>
+<span class="n">array3</span> <span class="o">=</span> <span class="n">array1d</span><span class="p">[</span><span class="n">array1d</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'array1d &gt; 5 불린 인덱싱 결과 값 :'</span><span class="p">,</span> <span class="n">array3</span><span class="p">)</span>
+</code></pre></div>        </div>
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1 2 3 4 5 6 7 8 9]
+array1d &gt; 5 불린 인덱싱 결과 값 : [6 7 8 9]
+</code></pre></div>        </div>
+      </dd>
+    </dl>
+
+    <p><br />
+<span style="background:#FFEBCD;font-weight:bold"> 4) ndarray의 정렬과 선형대수 연산 </span></p>
+
+    <p>▫ <strong>sort()</strong> 
+<img src="https://user-images.githubusercontent.com/63052097/134920023-c7f957f4-afb1-4c60-923a-6fdf76c55d56.png" alt="image" />    <br />
+ :<strong>np.sort()</strong>는 원본 행렬은 그대로 유지 되는데 원본 행렬의 정렬된 행렬을 새롭게 생성이 되어 반환됩니다!     <br />
+ :<strong>ndarray.sort()</strong>를 하면 원본 행렬 자체가 정렬된 형태로 반환이 되는데 반환 값은 필요가 없습니다!   <br />
+ :디폴트로 오름차순으로 정렬되고 내림차순으로 하고 싶은 분들은 [::-1]을 해주면 됩니다!</p>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">org_array</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span> 
+  <span class="k">print</span><span class="p">(</span><span class="s">'원본 배열:'</span><span class="p">,</span> <span class="n">org_array</span><span class="p">)</span>
+
+  <span class="c1"># np.sort( )로 정렬 
+</span>  <span class="n">sort_array1</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">sort</span><span class="p">(</span><span class="n">org_array</span><span class="p">)</span>         
+  <span class="k">print</span> <span class="p">(</span><span class="s">'np.sort( ) 호출 후 반환된 정렬 배열:'</span><span class="p">,</span> <span class="n">sort_array1</span><span class="p">)</span> 
+  <span class="k">print</span><span class="p">(</span><span class="s">'np.sort( ) 호출 후 원본 배열:'</span><span class="p">,</span> <span class="n">org_array</span><span class="p">)</span> <span class="c1">#원본 행렬 확인! 
+</span>
+  <span class="c1"># ndarray.sort( )로 정렬
+</span>  <span class="n">sort_array2</span> <span class="o">=</span> <span class="n">org_array</span><span class="p">.</span><span class="n">sort</span><span class="p">()</span>
+  <span class="n">org_array</span><span class="p">.</span><span class="n">sort</span><span class="p">()</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">'org_array.sort( ) 호출 후 반환된 배열:'</span><span class="p">,</span> <span class="n">sort_array2</span><span class="p">)</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">'org_array.sort( ) 호출 후 원본 배열:'</span><span class="p">,</span> <span class="n">org_array</span><span class="p">)</span>
+</code></pre></div>    </div>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> 원본 배열: [3 1 9 5]
+ np.sort( ) 호출 후 반환된 정렬 배열: [1 3 5 9]
+ np.sort( ) 호출 후 원본 배열: [3 1 9 5]
+ org_array.sort( ) 호출 후 반환된 배열: None
+ org_array.sort( ) 호출 후 원본 배열: [1 3 5 9]
+</code></pre></div>    </div>
+
+    <p><br />
+ ▫ <strong>argsort()</strong> <br />
+ <img src="https://user-images.githubusercontent.com/63052097/134920735-79674e70-c8d3-4831-997a-b996f15cdf2e.png" alt="image" /> <br />
+ :<strong>argsort()</strong>는 sort를 하긴 하는데 sort 가 되었을 때 해당 값의 원본 행렬의 인덱스 값들의 배열로서 반환해줍니다!</p>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="n">org_array</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span> 
+    <span class="k">print</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">sort</span><span class="p">(</span><span class="n">org_array</span><span class="p">))</span> <span class="c1"># 정렬된 값이 출력되는 반면
+</span>
+    <span class="n">sort_indices</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">org_array</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">sort_indices</span><span class="p">))</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'배열 정렬 시 원본 배열의 인덱스:'</span><span class="p">,</span> <span class="n">sort_indices</span><span class="p">)</span> <span class="c1"># 정렬된 값의 원본 인덱스가 반환
+</span></code></pre></div>    </div>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> [1 3 5 9]
+&lt;class 'numpy.ndarray'&gt;
+배열 정렬 시 원본 배열의 인덱스: [1 0 3 2]
+</code></pre></div>    </div>
+
+    <p><br />
+ ▫ <strong>np.dot(A,B)</strong><br />
+ 두 ndarray를 내적해줍니다!</p>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+            <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]])</span>
+    <span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
+            <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span>
+            <span class="p">[</span><span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">]])</span>
+
+    <span class="n">dot_product</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">dot</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'행렬 내적 결과:</span><span class="se">\n</span><span class="s">'</span><span class="p">,</span> <span class="n">dot_product</span><span class="p">)</span>
+</code></pre></div>    </div>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  행렬 내적 결과:
+    [[ 58  64]
+    [139 154]]
+</code></pre></div>    </div>
+
+    <p><br />
+ ▫ <strong>np.transpose(A)</strong>  <br />
+ 전치행렬을 반환해줍니다!</p>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+            <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+    <span class="n">transpose_mat</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'A의 전치 행렬:</span><span class="se">\n</span><span class="s">'</span><span class="p">,</span> <span class="n">transpose_mat</span><span class="p">)</span>
+</code></pre></div>    </div>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> A의 전치 행렬:
+  [[1 3]
+  [2 4]]
+</code></pre></div>    </div>
+
+    <p><br />
+ 더 자세한 코드는 <a href="https://github.com/juijeong8324/AI/blob/ml/2%EC%A3%BC%EC%B0%A8/Numpy.ipynb">Numpy</a>를 참고하세요!</p>
+
+    <p><br /></p>
+
+    <p><img width="500" src="https://user-images.githubusercontent.com/63052097/134923060-74318583-4e61-4745-ab7d-9fe16cbc16a6.png" />   <br />
+    <span> <center>🥕힘🥕들🥕어🥕요🥕!🥕</center> </span></p>
+  </li>
+</ul>
+
+<p><br /> <br />
+<br /></p>
+<h2 id="3️⃣-pandas">3️⃣ Pandas</h2>
+
+<p><br /></p>
+<ul>
+  <li>판다스란? <br />
+<img src="https://user-images.githubusercontent.com/63052097/134924543-e215f2b7-1b20-4d88-9984-c51d5c397b2f.png" alt="image" />     <br />
+ :판다스는 <strong>데이터 처리와 분석</strong>을 위해 존재하는 파이썬 라이브러리입니다!  <br />
+ :판다스는 <strong>데이터프레임</strong>이라는 데이터 구조를 기반으로 만들어졌는데요 엑셀의 스프레드시트와 비슷한 테이블 형태라고 보시면 됩니다!  <br />
+ :<strong>데이터 프레임을 수정하고 조작하는 다양한 기능을 제공해줍니다!</strong> <br />
+ :데이터를 수집하고 가공하고 다루는데 되게 편리한 API가 많이 제공되고 또 편리한 기능을 많이 제공합니다!!</li>
+</ul>
+
+<p><br /></p>
+<ul>
+  <li>
+    <p><span style="color:red;font-weight:bold">판다스의 주요 구성요소 - DataFrame, Series, Index </span> 
+<img src="https://user-images.githubusercontent.com/63052097/134926331-2ec329d0-6d96-4536-856f-2ae9393e26b8.png" alt="image" />
+  ▫ <strong>DataFrame</strong> <br />
+    :DataFrame은 행과 열로 이루어진 2차원 데이터 셋입니다! 한마디로 테이블과 비슷하다고  보시면 됩니다!! <br />
+    :DataFrame은 기본적으로 numpy의 행은 ndarray로 이루어져있어요!! 심지어 컬럼명까지도요!!</p>
+
+    <p>▫ <strong>index</strong>  <br />
+    :인덱스는 각 행을 고유하게 구별할 수 있는 키 값입니다! 쉽게 이야기해서 데이터 베이스의 pk 기본키같은 거다 라고 이해하시면 됩니다!      <br />
+    :인덱스는 오직 식별용으로만 사용이 되고 연산에서 제외됩니다! 인덱스 값을 []로 접근해서 수정할 수 없습니다!!!    <br />
+    :참고로 index는 객체 혹은 1차원 데이터 배열로 보시면 됩니다!!</p>
+
+    <p>▫ <strong>Series</strong>  <br />
+    :1개의 컬럼값으로만 구성된 1차원 데이터 셋입니다!  <br />
+    :시리즈가 여러개면 DataFrame이다 라고 이해하시면 됩니다!</p>
+  </li>
+</ul>
+
+<p><br /></p>
+<ul>
+  <li>
+    <p>기본 API들 <br />
+코드가 너무 많은 관계로 <a href="https://github.com/juijeong8324/AI/blob/ml/2%EC%A3%BC%EC%B0%A8/Pandas.ipynb">판다스</a>의 1번을 참고하세요!</p>
+
+    <p><span style="background:#FFEBCD;font-weight:bold"> 1) read_csv()  </span><br />
+  :csv 파일을 편리하게 DataFrame으로 변환해줍니다! <br />
+  :read_csv() 의 sep 인자를 콤마(,)가 아닌 다른 분리자로 변경하여 다른 유형의 파일도 로드가 가능합니다. <br />
+   EX) sep 인자에 탭을 분리자로서 사용하겠다!!하면 pd.read_tsc(‘titanic_train.tsv’)로 바꾸면 됩니다!</p>
+
+    <p><span style="background:#FFEBCD;font-weight:bold"> 2) head() </span>  <br />
+  :DataFrame의 맨 앞 일부 데이터만 추출합니다    <br />
+  :디폴트는 5개</p>
+
+    <p><span style="background:#FFEBCD;font-weight:bold"> 3) shape </span>  <br />
+  :DataFrame의 행(Row)와 열(Column) 크기를 가지고 있는 속성입니다.  <br />
+  :걍 넘파이에서 나온 거랑 똑같다고 보면 됩니다!</p>
+
+    <p><span style="background:#FFEBCD;font-weight:bold"> 4) info() </span>  <br />
+  :DataFrame내의 컬럼명, 데이터 타입, Null건수, 데이터 건수 정보를 제공합니다.<br />
+  :데이터 타입도 있습니다! 참고로 object는 쉽게 말해서 문자열이라고 생각하면 됩니다.!  <br />
+  :메모리 사용량이 나오는데 판다스의 데이터 프레임은 메모리에 올라가기 때문입니다!! 대용량 데이터를 사용할 때 주의해야 겠지요?!</p>
+
+    <p><span style="background:#FFEBCD;font-weight:bold"> 5) describe() </span>  <br />
+  :데이터값들의 평균,표준편차,4분위 분포도를 제공합니다. 숫자형 컬럼들에 대해서 해당 정보를 제공합니다</p>
+
+    <p><span style="background:#FFEBCD;font-weight:bold"> 6) value_counts() </span>  <br />
+  :한 컬럼에(시리즈에) 동일한 개별 데이터 값이 몇건이 있는지 정보를 제공합니다. <br />
+  :즉 개별 데이터값의 분포도를 제공합니다.  <br />
+  :주의할 점은 value_counts()는 <em>Series객체</em>에서만 호출 될 수 있으므로 반드시 DataFrame을 단일 컬럼으로 입력하여 Series로 변환한 뒤 호출합니다.</p>
+
+    <p><span style="background:#FFEBCD;font-weight:bold"> 7) sort_values() </span>      <br />
+  :값을 정렬해줍니다!  <br />
+  :인자 (by=정렬컬럼, ascending=True 또는 False로 오름차순/내림차순으로 정렬)     <br />
+  :디폴트는 오름차순입니다!</p>
+  </li>
+</ul>
+
+<p><br /></p>
+<ul>
+  <li>
+    <p>DataFrame ←→ 리스트, 딕셔너리, 넘파이 ndarray</p>
+
+    <p><img src="https://user-images.githubusercontent.com/63052097/134928270-34cfc7f3-b35b-48fc-943f-7f104eea7fd6.png" alt="image" /> <br />
+ 코드를 보고 싶으시면 <a href="https://github.com/juijeong8324/AI/blob/ml/2%EC%A3%BC%EC%B0%A8/Pandas.ipynb">판다스</a>에서 2번을 보시면 됩니다!</p>
+  </li>
+</ul>
+
+<p><br /></p>
+<ul>
+  <li>
+    <p>DataFrame 데이터 삭제</p>
+
+    <p>코드를 보고 싶으시면 <a href="https://github.com/juijeong8324/AI/blob/ml/2%EC%A3%BC%EC%B0%A8/Pandas.ipynb">판다스</a>에서 3번을 보시면 됩니다!</p>
+
+    <p><img src="https://user-images.githubusercontent.com/63052097/134928402-f65febe7-8b37-4115-8af2-c8947c964556.png" alt="image" /> <br />
+▫  <strong>axis</strong>  <br />
+  :DataFrame의 로우를 삭제할 때는 axis=0, 컬럼을 삭제할 때는 axis=1로 설정합니다. (디폴트는 0임)  <br />
+  :원본 DataFrame은 유지하고 드롭된 DataFrame을 새롭게 객체 변수로 받고 싶다면 inplace =False로 설정해줍니다(디폴트 값이 False임) <br />
+  EX) titanic_drop_df = titanic_df.drop(‘Age_0’, axis = 1, inplace=False)</p>
+
+    <p>▫  <strong>inplace=True</strong>     <br />
+  :원본 DataFrame에 드롭된 결과를 적용할 경우에 적용합니다.  <br />
+  EX) titanic_df.drop(‘Age_0’, axis = 1, inplace=True)</p>
+
+    <p>▫  원본 DataFrame에서 드롭된 DataFrame을 다시 원본 DataFrame 객체 변수로 할당하면 원본 DataFrame에서 드롭된 결과를 적용할 경우와 같습니다.(단, 기존 원본 DataFrame 객체 변수는 메모리에서 추후 제거됨) <br />
+   EX) titanic_drop= titanic_df.drop(‘Age_0’, axis = 1, inplace=False)
+   -&gt; inplace=True와 같은 효과를 주는 것이죠!</p>
+  </li>
+</ul>
+
+<p><br /></p>
+<ul>
+  <li>
+    <p>데이터 셀렉션 및 필터링</p>
+
+    <p>코드를 보고 싶으시면 <a href="https://github.com/juijeong8324/AI/blob/ml/2%EC%A3%BC%EC%B0%A8/Pandas.ipynb">판다스</a>에서 4번을 보시면 됩니다!</p>
+
+    <p><img src="https://user-images.githubusercontent.com/63052097/134928503-90dc6e32-cbb6-473a-95a4-529e9f6e7697.png" alt="image" /> <br />
+ 1번은 쉬우니까 넘어갈게요!!</p>
+
+    <p><br /></p>
+
+    <p>▫ 명칭 및 위치 기반 인덱싱
+ <img src="https://user-images.githubusercontent.com/63052097/134936516-9fddc0a8-683e-4965-bf55-1b71f257f890.png" alt="image" /></p>
+
+    <p>열과 행이 모두 5개인 데이터 프레임을 가져왔습니다!! 이때 <span style="color:red">빨간색 박스 부분</span>은 명칭 기반 인덱스이고 <span style="color:#FFD700">노란색 숫자 부분</span>은 위치 기반 인덱스입니다! <br />
+ 위치 기반 인덱스는 절대 바뀌지 않습니다! 그래프 볼 때 원점이 바뀌지 않는 것처럼 항상 0부터 시작이 됩니다!    <br />
+ 그러나 Index는 명칭 기반 인덱스라서 데이터가 삭제되면 해당 값이 없어집니다!</p>
+
+    <dl>
+      <dt><br /></dt>
+      <dt> <span style="background:#FFEBCD;font-weight:bold"> 1) ✏️명칭 기반 인덱싱 - loc[] </span></dt>
+      <dd>컬럼의 명칭을 기반으로 위치를 지정하는 방식, ‘컬럼 명’ 같이 명칭으로 열 위치를 지정하는 방식입니다!
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s">'Name'</span><span class="p">:</span> <span class="p">[</span><span class="s">'Chulmin'</span><span class="p">,</span> <span class="s">'Eunkyung'</span><span class="p">,</span><span class="s">'Jinwoong'</span><span class="p">,</span><span class="s">'Soobeom'</span><span class="p">],</span>
+    <span class="s">'Year'</span><span class="p">:</span> <span class="p">[</span><span class="mi">2011</span><span class="p">,</span> <span class="mi">2016</span><span class="p">,</span> <span class="mi">2015</span><span class="p">,</span> <span class="mi">2015</span><span class="p">],</span>
+    <span class="s">'Gender'</span><span class="p">:</span> <span class="p">[</span><span class="s">'Male'</span><span class="p">,</span> <span class="s">'Female'</span><span class="p">,</span> <span class="s">'Male'</span><span class="p">,</span> <span class="s">'Male'</span><span class="p">]</span>
+   <span class="p">}</span>
+<span class="n">data_df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s">'one'</span><span class="p">,</span><span class="s">'two'</span><span class="p">,</span><span class="s">'three'</span><span class="p">,</span><span class="s">'four'</span><span class="p">])</span>
+    
+<span class="n">data_df</span>
+<span class="n">data_df</span><span class="p">.</span><span class="n">loc</span><span class="p">[</span><span class="s">'one'</span><span class="p">,</span> <span class="s">'Name'</span><span class="p">]</span>
+</code></pre></div>        </div>
+        <p><img src="https://user-images.githubusercontent.com/63052097/134935617-f1886120-0ec4-4736-adbc-9655be21e9b9.png" alt="image" /></p>
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'Chulmin'
+</code></pre></div>        </div>
+      </dd>
+      <dt><span style="background:#FFEBCD;font-weight:bold"> 2) ✏️위치 기반 인덱싱 - iloc[] </span></dt>
+      <dd>0을 출발점으로 하는 가로축, 세로축 좌표 기반의 행과 열 위치를 기반으로 데이터를 지정, 따라서 행, 열 위치값으로 정수를 입력해야 합니다!
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">data_df</span>
+<span class="n">data_df</span><span class="p">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="c1"># 무조건 숫자가 들어간다!! 0번째 행 0번째 열 출력
+</span>
+<span class="c1"># 아래 코드는 오류를 발생합니다. 심지어 인덱스 객체를 넣어도 오류가 나옴!!
+</span><span class="n">data_df</span><span class="p">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="s">'Name'</span><span class="p">]</span>
+</code></pre></div>        </div>
+        <p><img src="https://user-images.githubusercontent.com/63052097/134935617-f1886120-0ec4-4736-adbc-9655be21e9b9.png" alt="image" /></p>
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'Chulmin'
+</code></pre></div>        </div>
+      </dd>
+    </dl>
+
+    <p><br />
+▫ 불린 인덱싱 <br />
+헷갈리는 위치기반, 명칭기반 인덱싱을 사용할 필요없이 조건식을 [ ] 안에 기입하여 간편하게 필터링을 수행합니다.     <br />
+논리 연산자로 결합된 조건식도 불린 인덱싱 적용 됩니다!!</p>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">titanic_df</span><span class="p">[</span><span class="n">titanic_df</span><span class="p">[</span><span class="s">'Age'</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">60</span><span class="p">][[</span><span class="s">'Name'</span><span class="p">,</span><span class="s">'Age'</span><span class="p">]].</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1">#나이가 60세 이상
+</span></code></pre></div>    </div>
+    <p><img src="https://user-images.githubusercontent.com/63052097/134937781-2709d6c5-3b5d-4d05-b356-46ca525c0a3c.png" alt="image" /></p>
+  </li>
+  <li>
+    <p>판다스 Aggregation 함수와 group by</p>
+
+    <p>코드를 보고 싶으시면 <a href="https://github.com/juijeong8324/AI/blob/ml/2%EC%A3%BC%EC%B0%A8/Pandas.ipynb">판다스</a>에서 잘 찾아 보시면 됩니다!(Hint 5번)</p>
+
+    <p>▫ Aggregation      <br />
+  :<strong>sum(), max(), min(), count()</strong> 등의 함수는 DataFrame/Series에서 집합(aggregation) 연산을 수행합니다!    <br />
+  :DataFrame의 경우 DataFrame에서 바로 aggregation을 호출할 경우 모든 컬럼에 해당 aggregation을 적용합니다!!</p>
+
+    <p><br />
+▫ groupby() <br />
+  :groupby() 메소드는 by 인자로 group by 하려는 컬럼명을 입력 받으면 <strong>DataFrameGroupBy</strong> 객체를 반환합니다!     <br />
+  :이렇게 반환된 DataFrameGroupby 객체에 aggregation 함수를 수행하는데 편리합니다!</p>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">titanic_groupby</span> <span class="o">=</span> <span class="n">titanic_df</span><span class="p">.</span><span class="n">groupby</span><span class="p">(</span><span class="s">'Pclass'</span><span class="p">).</span><span class="n">count</span><span class="p">()</span> 
+  <span class="c1"># Pclass 부터 컬럼들이 나옴!! 
+</span>  <span class="c1"># 이때 Pclass가 인덱스가 된다!! 특이하게도 group by로 하면 인덱스명이 Pclass로 부여가 된다!
+</span>  <span class="n">titanic_groupby</span>
+</code></pre></div>    </div>
+    <p><img src="https://user-images.githubusercontent.com/63052097/134938902-04c871d6-46df-4ce4-88b1-91ce32a7f3aa.png" alt="image" /></p>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">titanic_df</span><span class="p">[[</span><span class="s">'Pclass'</span><span class="p">,</span><span class="s">'PassengerId'</span><span class="p">,</span> <span class="s">'Survived'</span><span class="p">]].</span><span class="n">groupby</span><span class="p">(</span><span class="s">'Pclass'</span><span class="p">).</span><span class="n">count</span><span class="p">()</span>
+  <span class="c1"># 혹은 특정 컬럼들로 groupby 하겠어!! 
+</span>  <span class="c1"># 이때 주의할 것은 Pclass가 반드시 존재해야 함!   
+</span></code></pre></div>    </div>
+    <p><img src="https://user-images.githubusercontent.com/63052097/134939193-f91680e6-863f-480c-baca-2656d28e7bce.png" alt="image" /></p>
+
+    <p><br /></p>
+  </li>
+  <li>
+    <p>결손 데이터 처리</p>
+
+    <p>코드를 보고 싶으시면 <a href="https://github.com/juijeong8324/AI/blob/ml/2%EC%A3%BC%EC%B0%A8/Pandas.ipynb">판다스</a>에서 6번을 보시면 됩니다!</p>
+
+    <p>▫ isna() <br />
+  DataFrame의 isna() 메소드는 주어진 컬럼값들이 NaN인지 True/False 값을 반환합니다!(NaN이면 True)</p>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">titanic_df</span><span class="p">.</span><span class="n">isna</span><span class="p">().</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># 즉 헤드의 3행인 애덜이 nan 값이니?!? -&gt; 모든 컬럼에 대해서 확인 
+</span></code></pre></div>    </div>
+    <p><img src="https://user-images.githubusercontent.com/63052097/134939679-4dd95a46-d664-4545-83d2-38bd8a1dce5a.png" alt="image" /></p>
+
+    <p><br />
+ ▫ fillna() <br />
+  미싱 데이터 값을 메소드에 주어진 인자값 즉, 변환할 인자값을 넣어주면 nan을 만날 때 이 값을 넣어줍니다!!   <br />
+  머신러닝은 특히 입력값으로 null 즉, nan 값을 허용하지 않으니까!! 데이터 없는 것은 꼭!! 채워주시길 바랍니다!!</p>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">titanic_df</span><span class="p">[</span><span class="s">'Cabin'</span><span class="p">]</span> <span class="o">=</span> <span class="n">titanic_df</span><span class="p">[</span><span class="s">'Cabin'</span><span class="p">].</span><span class="n">fillna</span><span class="p">(</span><span class="s">'C000'</span><span class="p">)</span> 
+  <span class="c1"># 특정 컬럼에 대해서 null이 있으면 이 걸루 채워라!
+</span>  <span class="n">titanic_df</span><span class="p">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div>    </div>
+    <p><img src="https://user-images.githubusercontent.com/63052097/134940255-5cbcb2d2-b0e9-4576-8e35-7cf14ee8a6ca.png" alt="image" /></p>
+
+    <p><br /></p>
+  </li>
+  <li>
+    <p>판다스 apply, map</p>
+
+    <p>코드를 보고 싶으시면 <a href="https://github.com/juijeong8324/AI/blob/ml/2%EC%A3%BC%EC%B0%A8/Pandas.ipynb">판다스</a>에서 잘 찾아 보시면 됩니다!(Hint 마지막)</p>
+
+    <p>▫ apply    <br />
+  <img src="https://user-images.githubusercontent.com/63052097/134940870-8a3b73d9-243e-473f-833b-7a7744bb46d3.png" alt="image" /> <br />
+  판다스는 applly 함수에 lamba 식을 결합해서 데이터 프레임이나 시리즈 별로 데이터를 가공할 수 있게 합니다!!     <br />
+  apply 인자로 lamda 함수나 사용자 정의 함수를 넣어주셔도 됩니다!</p>
+
+    <p><br />
+ ▫ map <br />
+  <img src="https://user-images.githubusercontent.com/63052097/134941208-3fcdb225-4272-4532-9e0b-4cb5a99a38b4.png" alt="image" />       <br />
+  map도 apply처럼 함수 인자를 받아서 데이터를 처리할 수 있습니다!    <br />
+  apply는 시리즈랑 데이터프레임 모두 다 가능하지만 map은 시리즈만 가능합니다!</p>
+  </li>
+</ul>
+
+<p><br /></p>
+<h2 id="-결론--"><span style="color:blue"> 결론  </span></h2>
+<p><img src="https://user-images.githubusercontent.com/63052097/134941746-e0d902d3-a095-4ac8-a6b1-4990d9b322fe.png" alt="image" />
+3시간을 버티고 잘 이해했나 퀴즈를 푸는 시간을 가졌습니다! 처음엔 모두 미소를 지으며 커리큘럼에 참여했지만 발표가 끝났을 때는
+모두 지친 상태였답니다.. 허허허허 그럼에도 열심히 퀴즈를 풀었습니다!!</p>
+
+<p><img width="500" src="https://user-images.githubusercontent.com/63052097/134942760-34789cad-81c3-428a-9b43-6f9a34146cd1.png" /> <br />
+파이썬 과제를 풀어오는 것이 다음주 과제였습니다!! 다음주는 추석이지만 ML은 matplotlib와 seaborn을 공부해야 했습니다!!! 
+2주차 팀블로그도.. 곧 찾아옵니다 To be continued …</p>
+
+<p><br />
+<br /></p>
+
+<h1 id="후기">후기</h1>
+<p><img src="https://user-images.githubusercontent.com/63052097/134945321-fb6cacc5-0749-4ea4-a46d-8db5c4594f04.png" alt="image" /></p>
+<ul>
+  <li>중요한 라이브러리들이라 배울 내용이 많아서 줄여도 줄여도 3시간 분량이 나오더랍니다… 첫 주차에 미친 분량임에도 
+끝까지 버텨준 ML 팀원에 박수!!👏👏 열심히 만들고 발표한 제 자신한테도 수고했다고 박수(와~~ 감사합니다!!!)👏👏</li>
+  <li>머신러닝 알고리즘을 위해 데이터를 잘 다뤄야 한다고 많이 들었지만 어떻게 처리해줘야 할지 막막했었는데 이번 1주차 내용인 
+넘파이와 판다스 라이브러리를 알아가면서 자신감이 생겼습니다!! 넘파이와 판다스 라이브러리 내용은 정말 정말 중요하니까 잊어버리지 않기로 약속.. ^_~
+(저는 더더욱 잊으면 안 됩니다. 몇 시간 동안 ppt 만들고 팀블로그 작성했는데 잊으면… NAVER(?)… R.E.M.E.M.B.E.R)</li>
+</ul>
+
+<p><br />
+<br /></p>
+<h1 id="끝">끝</h1>
+
+  </article>
+  <br>
+
+  <hr/><br>
+
+  <div class="author">
+    
+    <table>
+        <tr>
+          <td rowspan="3" style="padding-right: 10px"><img class="author-pic" src="https://github.com/.png" alt=""></td>
+          <td><b><h2 rel="author"></h2></b></td>
+        </tr>
+      <tr>
+        <td><p rel="author"></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a rel="author" href="https://github.com/" target="_blank"><i class="fa fa-github fa-2x"></i></a>&nbsp&nbsp
+          
+        </td>
+      </tr>
+    </table>
+
+  </div>
+
+
+  <br>
+  <hr/>
+  <div>
+    <script src="https://utteranc.es/client.js"
+        repo="gdsc-seoultech/blog-comments"
+        issue-term="pathname"
+        label="comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+  </div>
+
+</div>
+<script src="/js/toc.js"></script>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper" align="center">
+  	<h4>This site was built using <a href="http://jekyllrb.com" target="_blank">Jekyll</a> and is hosted on <a href="https://github.com" target="_blank">Github</a>. &#169; GDSC Seoultech</h4>
+  </div>
+
+</footer>
+
+
+  </body>
+</html>

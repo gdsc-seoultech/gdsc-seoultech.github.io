@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="tYMwPoxNrWfLx2sDrDYzqI4-dq3M3FfI56NBL9JNtH8" />
+
+    <title>WIL 3주차</title>
+    <meta name="description" content="A simple, whitespace, helvetica based portfolio theme.
+">
+
+    <link rel = "shortcut icon" type="image/x-icon" href="/img/square_logo.png">
+    <link rel="stylesheet" href="/css/main.css">
+<!--    <link rel="canonical" href="http://localhost:4000/posts/1st_term/web/2021-10-15-wil_jungjn/">-->
+    <link rel="canonical" href="/posts/1st_term/web/2021-10-15-wil_jungjn/">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- 카테고리 css -->
+    <link rel="stylesheet" href="/css/pagination.css">
+    <link href="/css/category.css" type="text/css" rel="stylesheet">
+</head>
+
+   
+  <body>
+    <script src="/js/default.js"></script>
+    <header id="tab" >
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <div class="site-header">
+    <div class="wrapper">
+      <div>
+        <a href="/">
+          <img src="/img/square_logo.png" align="left" width="57px">
+        </a>
+      </div>
+
+      <nav class="site-nav">
+
+        <div id="tab" class="trigger">
+          <!-- GDSC Seoultech instead of blog -->
+          <a class="page-link" href="/">GDSC</a>
+          <a class="page-link" href="/members/2">MEMBER</a>
+          <a class="page-link" href="/category/2nd_term">POST</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div id="hovering" class="tab-header">
+    <div class="wrapper">
+      <div class="detail-post">
+          <div class="tab-item">
+            <div><a class="page-link-detail" href="/category/1st_term">1기</a></div>
+            <div><a class="page-link-detail" href="/category/2nd_term">2기</a></div>
+          </div>
+      </div>
+      <div class="detail-member">
+        <div class="tab-item">
+          <div><a class="page-link-detail" href="/members/1">1기</a></div>
+          <div><a class="page-link-detail" href="/members/2">2기</a></div>
+        </div>
+    </div>
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+    var tabMenu = $("#tab");
+    var tabSubMenu = $("#hovering");
+
+    tabSubMenu.hide()
+
+    tabMenu.hover(function() {
+      tabSubMenu.show();
+    }, function() {
+      tabSubMenu.hide();
+    })
+  </script>
+
+</header>
+
+
+    <div class="page-content" id="page-content">
+      <div class="wrapper" id="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">WIL 3주차</h1>
+    <h1 class="post-description"></h1>
+    <p class="post-meta">October 16, 2021 — 03:00 • JunginO</p>
+    
+      
+        <span class="tag">web</span>
+      
+    
+  </header>
+  <article class="post-content">
+    <h1 id="gdsc-web-3주차">GDSC Web 3주차</h1>
+
+<p>React를 이용한 에브리타임 3주차!<br /></p>
+
+<h2 id="local-storage-활용">Local Storage 활용</h2>
+
+<p>데이터를 추가/수정한 후에 페이지 새로고침 하거나 새로운 페이지를 열었을 때 기존의 데이터를 불러올 때에도 사용할 때에도 유용하게 사용할 수 있는 방법이다.<br />
+storage에 저장된 데이터는 모두 문자열만 사용 가능하기 때문에 다른 타입의 데이터를 사용할 때에는 JSON.stringify(),JSON.parse() 형태로 읽고 써야 한다고 한다.<br /></p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kd">const</span> <span class="nx">onChangeCheck</span> <span class="o">=</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">checked</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">const</span> <span class="nx">newObj</span> <span class="o">=</span> <span class="p">{</span> <span class="p">...</span><span class="nx">setting</span><span class="p">,</span> <span class="p">[</span><span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">name</span><span class="p">]:</span> <span class="kc">true</span> <span class="p">};</span>
+      <span class="nb">window</span><span class="p">.</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="dl">"</span><span class="s2">setting</span><span class="dl">"</span><span class="p">,</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">newObj</span><span class="p">));</span>
+      <span class="nx">setSetting</span><span class="p">(</span><span class="nx">newObj</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="kd">const</span> <span class="nx">newObj</span> <span class="o">=</span> <span class="p">{</span> <span class="p">...</span><span class="nx">setting</span><span class="p">,</span> <span class="p">[</span><span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">name</span><span class="p">]:</span> <span class="kc">false</span> <span class="p">};</span>
+      <span class="nb">window</span><span class="p">.</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="dl">"</span><span class="s2">setting</span><span class="dl">"</span><span class="p">,</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">newObj</span><span class="p">));</span>
+      <span class="nx">setSetting</span><span class="p">(</span><span class="nx">newObj</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">};</span>
+
+<span class="p">})</span>
+</code></pre></div></div>
+
+<h2 id="three-dots">…(Three dots)</h2>
+
+<ul>
+  <li>array 또는 object 의 전개연산자(spread operator)</li>
+  <li>rest 연산자(rest operator)<br />
+rest는 객체, 배열, 그리고 함수의 파라미터에서 사용이 가능<br />
+Rest문법은 Spread와 비슷하지만 여러 인자들을 하나의 배열로 반환<br />
+rest 파라미터는 항상 마지막에 사용해야 하지만 spread operator 연산자는 중간중간 사용해도 문제가 없다는 차이점이 있다.</li>
+</ul>
+
+<h2 id="useeffect">useEffect</h2>
+
+<p>useEffect 함수는 리액트 컴포넌트가 렌더링 될 때마다 특정 작업을 실행할수 있도록 하는 Hook이다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">useEffect</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{});</span>
+<span class="c1">//useEffect의 기본 형태</span>
+
+<span class="nx">useEffect</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{},</span> <span class="p">[]);</span>
+<span class="c1">//useEffect를 렌더링 후 단 한번만 실행하고 싶을때.</span>
+
+<span class="kd">const</span> <span class="p">[</span><span class="nx">name</span><span class="p">,</span> <span class="nx">setName</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">();</span>
+<span class="nx">useEffect</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{},</span> <span class="p">[</span><span class="nx">name</span><span class="p">]);</span>
+<span class="c1">//useEffect을 렌더링 후 한번, 그리고 배열 안 변수의 값이 바뀔때마다 실행</span>
+</code></pre></div></div>
+
+<h2 id="react-slick">React Slick</h2>
+
+<p>React Slick라는 라이브러리를 이용하여 Carousel을 만드는 법을 알게 되었다<br />
+설치후 css파일을 import</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="dl">"</span><span class="s2">slick-carousel/slick/slick.css</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="dl">"</span><span class="s2">slick-carousel/slick/slick-theme.css</span><span class="dl">"</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>setting 을 이용해 커스터마이징 한다</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">settings</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">dots</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">infinite</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">speed</span><span class="p">:</span> <span class="mi">500</span><span class="p">,</span>
+  <span class="na">slidesToShow</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="na">slidesToScroll</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="na">autoplay</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<h2 id="css">CSS</h2>
+
+<ul>
+  <li>오른쪽에 X 아이콘을 고정해 두고 싶어서 float:right 를 사용했더니 div 끼리 겹쳐서 보이는 문제가 있었다. margin-left: auto;를 써서 오른쪽으로 붙일수 있었다.<br /></li>
+  <li>text-aline:center를 쓰면 박스에는 영향이 없고 박스 내부 인라인 요소가 정렬 된다. 가로 사이즈가 지정되어있고, block요소라면 margin:auto도 많이 사용한다고 한다.이러한 상황들이 적응되지 않으면 position:absolute를 주고 left:50%로 가운데로 밀어내는 방법도 있다고 한다…</li>
+</ul>
+
+  </article>
+  <br>
+
+  <hr/><br>
+
+  <div class="author">
+    
+    <table>
+        <tr>
+          <td rowspan="3" style="padding-right: 10px"><img class="author-pic" src="https://github.com/.png" alt=""></td>
+          <td><b><h2 rel="author"></h2></b></td>
+        </tr>
+      <tr>
+        <td><p rel="author"></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a rel="author" href="https://github.com/" target="_blank"><i class="fa fa-github fa-2x"></i></a>&nbsp&nbsp
+          
+        </td>
+      </tr>
+    </table>
+
+  </div>
+
+
+  <br>
+  <hr/>
+  <div>
+    <script src="https://utteranc.es/client.js"
+        repo="gdsc-seoultech/blog-comments"
+        issue-term="pathname"
+        label="comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+  </div>
+
+</div>
+<script src="/js/toc.js"></script>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper" align="center">
+  	<h4>This site was built using <a href="http://jekyllrb.com" target="_blank">Jekyll</a> and is hosted on <a href="https://github.com" target="_blank">Github</a>. &#169; GDSC Seoultech</h4>
+  </div>
+
+</footer>
+
+
+  </body>
+</html>

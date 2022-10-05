@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="tYMwPoxNrWfLx2sDrDYzqI4-dq3M3FfI56NBL9JNtH8" />
+
+    <title>WIL 4주차 - 스프링...</title>
+    <meta name="description" content="A simple, whitespace, helvetica based portfolio theme.
+">
+
+    <link rel = "shortcut icon" type="image/x-icon" href="/img/square_logo.png">
+    <link rel="stylesheet" href="/css/main.css">
+<!--    <link rel="canonical" href="http://localhost:4000/posts/1st_term/web/2021-11-01-wil_inhyoek/">-->
+    <link rel="canonical" href="/posts/1st_term/web/2021-11-01-wil_inhyoek/">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- 카테고리 css -->
+    <link rel="stylesheet" href="/css/pagination.css">
+    <link href="/css/category.css" type="text/css" rel="stylesheet">
+</head>
+
+   
+  <body>
+    <script src="/js/default.js"></script>
+    <header id="tab" >
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <div class="site-header">
+    <div class="wrapper">
+      <div>
+        <a href="/">
+          <img src="/img/square_logo.png" align="left" width="57px">
+        </a>
+      </div>
+
+      <nav class="site-nav">
+
+        <div id="tab" class="trigger">
+          <!-- GDSC Seoultech instead of blog -->
+          <a class="page-link" href="/">GDSC</a>
+          <a class="page-link" href="/members/2">MEMBER</a>
+          <a class="page-link" href="/category/2nd_term">POST</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div id="hovering" class="tab-header">
+    <div class="wrapper">
+      <div class="detail-post">
+          <div class="tab-item">
+            <div><a class="page-link-detail" href="/category/1st_term">1기</a></div>
+            <div><a class="page-link-detail" href="/category/2nd_term">2기</a></div>
+          </div>
+      </div>
+      <div class="detail-member">
+        <div class="tab-item">
+          <div><a class="page-link-detail" href="/members/1">1기</a></div>
+          <div><a class="page-link-detail" href="/members/2">2기</a></div>
+        </div>
+    </div>
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+    var tabMenu = $("#tab");
+    var tabSubMenu = $("#hovering");
+
+    tabSubMenu.hide()
+
+    tabMenu.hover(function() {
+      tabSubMenu.show();
+    }, function() {
+      tabSubMenu.hide();
+    })
+  </script>
+
+</header>
+
+
+    <div class="page-content" id="page-content">
+      <div class="wrapper" id="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">WIL 4주차 - 스프링...</h1>
+    <h1 class="post-description"></h1>
+    <p class="post-meta">November 1, 2021 — 10:00 • InHyeok-J</p>
+    
+      
+        <span class="tag">web</span>
+      
+    
+  </header>
+  <article class="post-content">
+    <h1 id="gdsc-웹-4주차-기록">GDSC 웹 4주차 기록</h1>
+
+<blockquote>
+  <p>4주차 스터디와 과제를 진행하고 작성한 글입니다.</p>
+</blockquote>
+
+<blockquote>
+  <p>소스코드는 <a href="https://github.com/InHyeok-J/GDSCTimeBack" target="_blank" rel="noopener">링크</a> 에 가면 자세히 보실 수 있습니다.</p>
+</blockquote>
+
+<ul>
+  <li>리더님의 스프링 스터디를 듣고 특히 테스트 할때 자동 롤백을 지원해주는 기가막힌 기능에 스프링에 흥미를 느끼고
+시작했으나……</li>
+</ul>
+
+<h2 id="스프링-입문-강의-수강">스프링 입문 강의 수강</h2>
+
+<p>시험 끝나고 김영한님의 스프링 입문 강의 들었습니다.</p>
+
+<ul>
+  <li>Gradle : 라이브러리를 가져오고 빌드 라이프 사이클을 관리해 주는 툴, build.gradle에서 의존관계 관리, 마치 node의 package.json같은 친구.</li>
+  <li>자바에서는 톰켓 내장 웹서버 탑재돼서, 서버를 시작하면 톰켓이 알아서 웹서버 시작해줌.</li>
+  <li><code class="language-plaintext highlighter-rouge">@Controller</code> , <code class="language-plaintext highlighter-rouge">@Service</code> , <code class="language-plaintext highlighter-rouge">@Repository</code> 등 특정 어노테이션을 붙이면 스프링 컨테이너에 빈이 생성되고 관리됨. -&gt; 컴포넌트 스캔 방식</li>
+  <li>자바 코드로 직접 등록하는 방식도 있는데 <code class="language-plaintext highlighter-rouge">@Configuration</code>, <code class="language-plaintext highlighter-rouge">@Bean</code> 으로 직접 등록가능.</li>
+  <li>위의 스프링 컨테이너에게 객체 생성을 넘기는 방식이 IOC, 하나의 객체로 사용 -&gt; 싱글톤</li>
+</ul>
+
+<h3 id="기가막힌-스프링-데이터-jpa">기가막힌 스프링 데이터 JPA</h3>
+
+<p>강의에서 JDBC 부터 시작해서 스프링 데이터 JPA 까지 직접 알려주면서 코딩함.
+스프링 JPA는 다음과 같이 구현함.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">SpringDataJpa</span><span class="o">~~</span><span class="nc">Repository</span> <span class="kd">extends</span> <span class="nc">JpaRepository</span><span class="o">&lt;</span><span class="nc">Entity</span><span class="o">,</span><span class="n">indexType</span><span class="o">&gt;</span> <span class="o">{</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>놀랍게도 위의 구현이 기본적인 끝.</li>
+  <li>스프링JPA가 스프링 빈으로 자동으로 등록 해준다.</li>
+  <li>또한 공통 인터페이스는 자동으로 만들어주는데 기본 crud 기능이 내장되어 있음</li>
+  <li><code class="language-plaintext highlighter-rouge">findAll</code>, <code class="language-plaintext highlighter-rouge">findById</code>, <code class="language-plaintext highlighter-rouge">save</code> …etc</li>
+  <li>find 시 id만 공통 인터페이스이기 때문에 구현이 되어있고 그 외. ex) findByName 같은 것은 직접 등륵해줘야 하는데</li>
+  <li>만약 <code class="language-plaintext highlighter-rouge">findByName</code> 이라고 정의하면 그 외의 추가적인 코드 없이, Jpa가 내부적으로 <code class="language-plaintext highlighter-rouge">Select m from Table m where m.name =? </code> 라는 SQL로 처리해준다.</li>
+</ul>
+
+<h2 id="과제하면서-헷갈렸던-것">과제하면서 헷갈렸던 것</h2>
+
+<h2 id="객체의-관계-맵핑">객체의 관계 맵핑</h2>
+
+<ul>
+  <li>테이블간의 관계는 FK로 이루어진 양방향 관계, 하지만 객체는 필드를 추가해서 참조하기 때문에 테이블같은 자동 양방향이 아니게 된다.</li>
+  <li>객체에서도 양방향을 구현할 수있으나 사실 이건 각 객체마다 서로가 서로를 참조하는 단방향을 두번 쓴 방법임.</li>
+  <li>JPA에서 이런 양방향 참조를 가질지, 단방향 참조를 가질지 결정해야 한다</li>
+  <li>Nodejs 진영의 ORM을 사용할때는 기본적으로 양방향 참조로 진행하는데 JPA에서는 이렇지 않아서 좀 당황했음.</li>
+  <li>JPA에서는 단방향 참조를 권장하는데 성능 이슈가 줄어들고 양방향 참조시 고려해야 할 사항(관계 주인 지정, 추가적인 코드 작성)이 있기 때문 (?)</li>
+</ul>
+
+<h2 id="test-코드-작성">Test 코드 작성</h2>
+
+<ul>
+  <li>테스트 코드를 작성할때 이 테스트 코드가 DB에 의존적이지 않아야 한다고 생각했음. 예를들어 <code class="language-plaintext highlighter-rouge">findById(1)</code> 이라고 했을때, 실제 DB에 id가 1이 없는 경우 테스트코드는 성립되지 않기 때문에</li>
+  <li>그래서 UserRepository를 테스트할때 아래와 같이 <code class="language-plaintext highlighter-rouge">@BeforeEach()</code>로 유저를 생성해 준후 테스트 코드를 작성해줬음.</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nd">@BeforeEach</span><span class="o">()</span>
+    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">beforeSaveUser</span><span class="o">(){</span>
+        <span class="n">newUser</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">User</span><span class="o">();</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">newUser</span><span class="o">.</span><span class="na">setUserId</span><span class="o">(</span><span class="s">"test1"</span><span class="o">);</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">newUser</span><span class="o">.</span><span class="na">setPassword</span><span class="o">(</span><span class="s">"qwer1234"</span><span class="o">);</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">newUser</span><span class="o">.</span><span class="na">setEmail</span><span class="o">(</span><span class="s">"ss112d86@gmail.com"</span><span class="o">);</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">newUser</span><span class="o">.</span><span class="na">setHp</span><span class="o">(</span><span class="s">"010-2642-2713"</span><span class="o">);</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">newUser</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="s">"홍길동"</span><span class="o">);</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">newUser</span><span class="o">.</span><span class="na">setNickname</span><span class="o">(</span><span class="s">"cocoding"</span><span class="o">);</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">newUser</span><span class="o">.</span><span class="na">setMajor</span><span class="o">(</span><span class="s">"computerScience"</span><span class="o">);</span>
+
+        <span class="k">this</span><span class="o">.</span><span class="na">userRepository</span><span class="o">.</span><span class="na">save</span><span class="o">(</span><span class="n">newUser</span><span class="o">);</span>
+    <span class="o">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">@BeforeEach()</code>는 각 테스트가 실행 전에 동작시키는 어노테이션.</li>
+  <li>이후 find를 할때 코드</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Test</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">findTest</span><span class="o">(){</span>
+    <span class="nc">Optional</span><span class="o">&lt;</span><span class="nc">User</span><span class="o">&gt;</span> <span class="n">findUser</span> <span class="o">=</span> <span class="n">userRepository</span><span class="o">.</span><span class="na">findById</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">newUser</span><span class="o">.</span><span class="na">getId</span><span class="o">());</span>
+       <span class="n">findUser</span><span class="o">.</span><span class="na">ifPresent</span><span class="o">(</span><span class="n">user</span><span class="o">-&gt;{</span>
+             <span class="nc">Assertions</span><span class="o">.</span><span class="na">assertThat</span><span class="o">(</span> <span class="n">user</span><span class="o">.</span><span class="na">getName</span><span class="o">()).</span><span class="na">isEqualTo</span><span class="o">(</span><span class="s">"홍길동"</span><span class="o">);</span>
+            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"findUserName: "</span><span class="o">+</span> <span class="n">user</span><span class="o">.</span><span class="na">getName</span><span class="o">());</span>
+        <span class="o">});</span>
+ <span class="o">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">@Transactional</code> 어노테이션이 테스트 클래스 상단에 있기 떄문에 커밋이 안되고 롤백됨.</li>
+  <li>다만 위의 방식은 Board, BoardCategory로 가면 갈수록.. crud의 유닛 테스트 영역을 넘어선다고 생각이 들어서 User 이후에는 단순 CRUD가 잘 동작하는지만 검사함.</li>
+  <li>DB에 의존하지 않으려면 관계된 객체들을 미리 만들어줘야 하는데, 검사하는 대상이 이미 잘 구현된 Jpa의 crud기 떄문에 불필요한 작업이라고 생각이 들어서 위의 방식을 사용하지는 않았는데 추후 통합 테스트때는 적용해야할 것 같다는 생각이 듭니다.</li>
+</ul>
+
+<h3 id="추가적으로-공부하고싶은것공부해야할-것">추가적으로 공부하고싶은것,(공부해야할 것)</h3>
+
+<ul>
+  <li>스프링의 철학?개념? node와 코딩 패러다임이 너무 다른것 같다.</li>
+  <li>java 기본 문법</li>
+  <li>jpa 관련 설계 및 응용 기술들….</li>
+</ul>
+
+  </article>
+  <br>
+
+  <hr/><br>
+
+  <div class="author">
+    
+    <table>
+        <tr>
+          <td rowspan="3" style="padding-right: 10px"><img class="author-pic" src="https://github.com/.png" alt=""></td>
+          <td><b><h2 rel="author"></h2></b></td>
+        </tr>
+      <tr>
+        <td><p rel="author"></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a rel="author" href="https://github.com/" target="_blank"><i class="fa fa-github fa-2x"></i></a>&nbsp&nbsp
+          
+        </td>
+      </tr>
+    </table>
+
+  </div>
+
+
+  <br>
+  <hr/>
+  <div>
+    <script src="https://utteranc.es/client.js"
+        repo="gdsc-seoultech/blog-comments"
+        issue-term="pathname"
+        label="comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+  </div>
+
+</div>
+<script src="/js/toc.js"></script>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper" align="center">
+  	<h4>This site was built using <a href="http://jekyllrb.com" target="_blank">Jekyll</a> and is hosted on <a href="https://github.com" target="_blank">Github</a>. &#169; GDSC Seoultech</h4>
+  </div>
+
+</footer>
+
+
+  </body>
+</html>

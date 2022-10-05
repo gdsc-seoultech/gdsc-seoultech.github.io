@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="tYMwPoxNrWfLx2sDrDYzqI4-dq3M3FfI56NBL9JNtH8" />
+
+    <title>9주차 ML 알고리즘 체인과 파이프라인</title>
+    <meta name="description" content="A simple, whitespace, helvetica based portfolio theme.
+">
+
+    <link rel = "shortcut icon" type="image/x-icon" href="/img/square_logo.png">
+    <link rel="stylesheet" href="/css/main.css">
+<!--    <link rel="canonical" href="http://localhost:4000/posts/1st_term/ml/2021-11-23-ml_ninth_goldtan/">-->
+    <link rel="canonical" href="/posts/1st_term/ml/2021-11-23-ml_ninth_goldtan/">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- 카테고리 css -->
+    <link rel="stylesheet" href="/css/pagination.css">
+    <link href="/css/category.css" type="text/css" rel="stylesheet">
+</head>
+
+   
+  <body>
+    <script src="/js/default.js"></script>
+    <header id="tab" >
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <div class="site-header">
+    <div class="wrapper">
+      <div>
+        <a href="/">
+          <img src="/img/square_logo.png" align="left" width="57px">
+        </a>
+      </div>
+
+      <nav class="site-nav">
+
+        <div id="tab" class="trigger">
+          <!-- GDSC Seoultech instead of blog -->
+          <a class="page-link" href="/">GDSC</a>
+          <a class="page-link" href="/members/2">MEMBER</a>
+          <a class="page-link" href="/category/2nd_term">POST</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div id="hovering" class="tab-header">
+    <div class="wrapper">
+      <div class="detail-post">
+          <div class="tab-item">
+            <div><a class="page-link-detail" href="/category/1st_term">1기</a></div>
+            <div><a class="page-link-detail" href="/category/2nd_term">2기</a></div>
+          </div>
+      </div>
+      <div class="detail-member">
+        <div class="tab-item">
+          <div><a class="page-link-detail" href="/members/1">1기</a></div>
+          <div><a class="page-link-detail" href="/members/2">2기</a></div>
+        </div>
+    </div>
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+    var tabMenu = $("#tab");
+    var tabSubMenu = $("#hovering");
+
+    tabSubMenu.hide()
+
+    tabMenu.hover(function() {
+      tabSubMenu.show();
+    }, function() {
+      tabSubMenu.hide();
+    })
+  </script>
+
+</header>
+
+
+    <div class="page-content" id="page-content">
+      <div class="wrapper" id="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">9주차 ML 알고리즘 체인과 파이프라인</h1>
+    <h1 class="post-description"></h1>
+    <p class="post-meta">November 23, 2021 — 00:00 • goldtan</p>
+    
+      
+        <span class="tag">ml</span>
+      
+    
+  </header>
+  <article class="post-content">
+    <h1 id="6-알고리즘-체인과-파이프라인">6 알고리즘 체인과 파이프라인</h1>
+
+<p>
+Pipline 파이썬 클래스를 사용하면 데이터 변환 과정과 머신러닝 모델을 쉽게 연결할 수 있습니다.<br />
+특히 GridSearchCV를 함께 사용하면 매개변수 탐색 또한 동시에 수행할 수 있습니다.<br />
+</p>
+<p><br /></p>
+
+<hr />
+
+<hr />
+
+<h2 id="61-데이터-전처리와-매개변수-선택">6.1 데이터 전처리와 매개변수 선택</h2>
+
+<p><img src="https://user-images.githubusercontent.com/83542989/143002321-f2ac413e-de44-4a11-8be5-af0c92370564.png" alt="image" /></p>
+
+<p><br /></p>
+<p>
+위의 사진과 같이 훈련 데이터 전체에 대해서 scaler fit을 진행하고 검증 폴드 데이터로 예측을 하면 낙관적인 결과가 나올 수 있습니다.<br />
+따라서 아래의 사진과 같이 훈련 폴드 데이터와 검증 폴드 데이터를 나누고 훈련 폴드 데이터로만 scaler fit을 진행해야 합니다.<br />
+이를 Pipeline을 통해 보다 쉽게 할 수 있습니다.
+</p>
+<p><br /></p>
+
+<p><img src="https://user-images.githubusercontent.com/83542989/143002270-9584e959-1ec6-4639-adae-7cede3644b13.png" alt="image" /></p>
+
+<p><br /></p>
+
+<hr />
+
+<h2 id="62-파이프라인-구축하기">6.2 파이프라인 구축하기</h2>
+
+<p><br /></p>
+<p>
+각 단계를 합쳐 리스트 형태로 전달하여 파이프 라인의 객체를 만듭니다.<br />
+각 단계는 추정기 객체와 이름으로 구성된 튜플입니다.<br />
+파이프라인의 강점은 cross_val_score나 GridSearchCV에 하나의 추정기처럼 사용할 수 있다는 것입니다.
+</p>
+<p><br /></p>
+
+<hr />
+
+<h2 id="63-그리드-서치에-파이프라인-적용하기">6.3 그리드 서치에 파이프라인 적용하기</h2>
+
+<p><br /></p>
+<p>
+그리드 서치에 파이프라인을 사용하는 방식도 다른 것들과 동일하지만, 매개변수 그리드를 만들 때 조금 다릅니다.<br />
+각 매개변수가 어떤 단계에 속한 것인지 말해줘야 합니다.<br />
+만약 "svm"이라는 이름을 가진 단계의 "C" 매개변수를 탐색하고자 한다면, 딕셔너리의 키를 "svm__C"의 형태로 만들어야 합니다.<br />
+</p>
+<p><br /></p>
+
+<hr />
+
+<h2 id="64-파이프라인-인터페이스">6.4 파이프라인 인터페이스</h2>
+
+<p><br /></p>
+<p>
+파이프라인은 특성 추출, 특성 선택, 스케일 변경, 분류/회귀/군집 등 총 네 단계로 구성될 수 있습니다.<br />
+그리고 각 단계에서 이전 단계 transform의 출력을 입력으로 받아 fit과 transform 메서드를 차례로 호출하고 마지막 단계에서는 fit 메서드만 호출합니다.<br />
+</p>
+<p><br /></p>
+<p>
+위에서 각 파이프 라인의 단계에는 이름을 부여해야 했는데, make_pipeline 함수를 사용하면 각 단계의 이름이파이썬 클래스의 이름으로 부여됩니다.<br />
+일반적인 단계의 이름은 파이썬 클래스 이름의 소문자이고, 여러 단계에서 사용할 경우 뒤에 숫자가 추가로 붙습니다.<br />
+단계 이름을 키로 가진 딕셔너리인 named_steps 속성을 사용하면 각 단계에도 쉽게 접근할 수 있습니다.
+</p>
+<p><br /></p>
+
+<hr />
+
+<h2 id="66-모델-선택을-위한-그리드-서치">6.6 모델 선택을 위한 그리드 서치</h2>
+
+<p><br /></p>
+<p>
+파이프라인을 구성하는 단계도 탐색 대상으로 삼을 수 있습니다.(Ex. 어떤 Scaler를 사용할 것인지)<br />
+하지만 이럴 경우 탐색 범위가 더 커지기 때문에 주의하여 선택해야 합니다.<br />
+대규모 그리드 서칭을 할 때는 종종 동일한 단계가 여러 번 수행되기 때문에 파이프라인의 memory 매개변수를 사용하여 계산 결과를 캐싱하면 이를 해결할 수 있습니다.<br />
+대신 오랜 시간이 걸리는 변환이어야 속도를 높이는 효과를 낼 수 있고, n_jobs 매개변수가 캐싱을 방해할 수도 있습니다.<br />
+하지만 dask-ml 라이브러리에서 제공하는 GridSearchCV를 사용하면 이런 단점도 해결할 수 있다고 합니다.
+</p>
+<p><br /></p>
+
+<hr />
+
+<hr />
+
+<hr />
+
+<p><br /></p>
+
+<h3 id="gdsc-화이팅--ml-화이팅-">GDSC 화이팅 ! ML 화이팅 !</h3>
+
+  </article>
+  <br>
+
+  <hr/><br>
+
+  <div class="author">
+    
+    <table>
+        <tr>
+          <td rowspan="3" style="padding-right: 10px"><img class="author-pic" src="https://github.com/.png" alt=""></td>
+          <td><b><h2 rel="author"></h2></b></td>
+        </tr>
+      <tr>
+        <td><p rel="author"></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a rel="author" href="https://github.com/" target="_blank"><i class="fa fa-github fa-2x"></i></a>&nbsp&nbsp
+          
+        </td>
+      </tr>
+    </table>
+
+  </div>
+
+
+  <br>
+  <hr/>
+  <div>
+    <script src="https://utteranc.es/client.js"
+        repo="gdsc-seoultech/blog-comments"
+        issue-term="pathname"
+        label="comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+  </div>
+
+</div>
+<script src="/js/toc.js"></script>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper" align="center">
+  	<h4>This site was built using <a href="http://jekyllrb.com" target="_blank">Jekyll</a> and is hosted on <a href="https://github.com" target="_blank">Github</a>. &#169; GDSC Seoultech</h4>
+  </div>
+
+</footer>
+
+
+  </body>
+</html>
