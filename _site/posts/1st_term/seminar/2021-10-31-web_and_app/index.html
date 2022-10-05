@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="tYMwPoxNrWfLx2sDrDYzqI4-dq3M3FfI56NBL9JNtH8" />
+
+    <title>여섯 번째 세션 - 웹? 앱? 난 둘다~</title>
+    <meta name="description" content="A simple, whitespace, helvetica based portfolio theme.
+">
+
+    <link rel = "shortcut icon" type="image/x-icon" href="/img/square_logo.png">
+    <link rel="stylesheet" href="/css/main.css">
+<!--    <link rel="canonical" href="http://localhost:4000/posts/1st_term/seminar/2021-10-31-web_and_app/">-->
+    <link rel="canonical" href="/posts/1st_term/seminar/2021-10-31-web_and_app/">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- 카테고리 css -->
+    <link rel="stylesheet" href="/css/pagination.css">
+    <link href="/css/category.css" type="text/css" rel="stylesheet">
+</head>
+
+   
+  <body>
+    <script src="/js/default.js"></script>
+    <header id="tab" >
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <div class="site-header">
+    <div class="wrapper">
+      <div>
+        <a href="/">
+          <img src="/img/square_logo.png" align="left" width="57px">
+        </a>
+      </div>
+
+      <nav class="site-nav">
+
+        <div id="tab" class="trigger">
+          <!-- GDSC Seoultech instead of blog -->
+          <a class="page-link" href="/">GDSC</a>
+          <a class="page-link" href="/members/2">MEMBER</a>
+          <a class="page-link" href="/category/2nd_term">POST</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div id="hovering" class="tab-header">
+    <div class="wrapper">
+      <div class="detail-post">
+          <div class="tab-item">
+            <div><a class="page-link-detail" href="/category/1st_term">1기</a></div>
+            <div><a class="page-link-detail" href="/category/2nd_term">2기</a></div>
+          </div>
+      </div>
+      <div class="detail-member">
+        <div class="tab-item">
+          <div><a class="page-link-detail" href="/members/1">1기</a></div>
+          <div><a class="page-link-detail" href="/members/2">2기</a></div>
+        </div>
+    </div>
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+    var tabMenu = $("#tab");
+    var tabSubMenu = $("#hovering");
+
+    tabSubMenu.hide()
+
+    tabMenu.hover(function() {
+      tabSubMenu.show();
+    }, function() {
+      tabSubMenu.hide();
+    })
+  </script>
+
+</header>
+
+
+    <div class="page-content" id="page-content">
+      <div class="wrapper" id="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">여섯 번째 세션 - 웹? 앱? 난 둘다~</h1>
+    <h1 class="post-description"></h1>
+    <p class="post-meta">November 2, 2021 — 15:25 • Songminseon</p>
+    
+      
+        <span class="tag">seminar</span>
+      
+    
+  </header>
+  <article class="post-content">
+    <h1 id="여섯-번째-세션---웹-앱-난-둘다">여섯 번째 세션 - 웹? 앱? 난 둘다~</h1>
+
+<p>안녕하세요. 여러분들 저는 GDSC 웹 코어멤버를 담당하고 있는 송민선입니다.<br />
+세미나 주제로서 무엇을 할까… 참 고민이 많았는데<br /><br />
+굳이 웹개발자, 또는 앱개발자가 아니어도 개발자라면 누구나 재밌게 볼 수 있는 주제로 선정하였습니다.</p>
+
+<h1 id="web-application">Web Application</h1>
+
+<h2 id="정의">정의</h2>
+
+<p>Web? 인터넷에 연결된 사용자들이 서로의 정보를 공유하는 공간<br />
+Application? 응용프로그램 <br /><br /></p>
+
+<p>Web Applicaiton은 말 그대로 웹에서 실행되는 어플리케이션을 의미합니다.</p>
+
+<hr />
+
+<h2 id="pwa의-등장">PWA의 등장</h2>
+
+<ol>
+  <li>
+    <p>PWA란 Progressive Web Application로 우리가 흔히 아는 html, css, javascript를 이용해서 만든 웹앱을 웹브라우저 api와 결합하여 만든 웹어플리케이션을 의미합니다.</p>
+  </li>
+  <li>
+    <p>트위터 우버 인스타그램 핀터레스트 유튜브 틱톡 스포티파이등 많은 기업들은 pwa시장에 뛰어들고 있습니다.</p>
+  </li>
+  <li>
+    <p>2015년 크롬의 개발자 알렉스와 플렌시스라는 디자이너가 처음으로 새로운 클래스의 웹을 언급하면서 PWA라는 단어가 공식적으로 나오게 되었습니다.</p>
+  </li>
+  <li>
+    <p>PWA의 기본조건으로서 총 5가지의 조건을 나열하였습니다.</p>
+    <ul>
+      <li>Responsive Web Design</li>
+      <li>Service Worker</li>
+      <li>Push Notification</li>
+      <li>Manifest</li>
+      <li>Native app-like</li>
+    </ul>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="project-fugu">Project Fugu</h2>
+
+<ul>
+  <li>Google, Microsoft, Intel에서 진행하는 프로젝트입니다.</li>
+  <li>Web Capabilities Project로서 PWA에 네이티브와 같은 기능들을 구현하고자 합니다.</li>
+</ul>
+
+<hr />
+
+<h1 id="hybrid-app">Hybrid App</h1>
+
+<h2 id="정의-1">정의</h2>
+
+<p>웹기반으로 네이티브앱 처럼 보여주는 기술로 브라우저의 웹앱 형태의 디바이스에 담아 필요할때 해당 디바이스의 api기능을 호출하면서 동작
+<br /><br /></p>
+
+<blockquote>
+  <p>크로스플랫폼이랑 다른 개념임!!</p>
+</blockquote>
+
+<h2 id="하이브리드-프레임워크">하이브리드 프레임워크</h2>
+
+<p><img src="https://user-images.githubusercontent.com/52899141/139591376-11d941ba-1caa-46c8-91f4-655f0d8003a2.png" alt="image" /></p>
+
+<p>코도바</p>
+
+<p><img src="https://user-images.githubusercontent.com/52899141/139591455-36314941-665f-4758-9f66-e85c42aaa8d4.png" alt="image" /></p>
+
+<p>아이오닉</p>
+
+<h2 id="웹뷰를-이용한-앱개발">웹뷰를 이용한 앱개발</h2>
+
+<p>웹뷰란? 웹뷰(WebView)란 프레임워크에
+내장된 웹 브라우저 컴포넌트로 뷰(View)의 형태로 앱에 임베딩하는 것을 말함</p>
+
+<p><a href="https://github.com/Songminseon/gdsc-weminar-webview">웹뷰를 이용한 안드로이드 코딩</a></p>
+
+<h1 id="안드로이드-인앱결제-정책">안드로이드 인앱결제 정책</h1>
+
+<p>인앱결제(IAP·In-App Payment)는 구글·애플이 자체 개발한 내부 결제 시스템으로<br />
+자사 앱스토어에서 유료 앱·콘텐츠를 각국의 신용카드, 각종 간편결제, 이통사 소액결제 등을 통해<br /> 결제하도록 하는 방식을 일컫는다. <br /></p>
+
+<p>구글은 작년 6월 모든 어플에 인앱결제 시스템을 넣어야 하는것을 정책으로 의무화 시킨다 하였고, <br />
+이 과정에서 구글이 30%의 수수료를 가져가는 방식으로 진행하고자 하였음</p>
+
+<h3 id="2021년-7월">2021년 7월</h3>
+
+<p>기업의 반발로 인해 정책을 6개월 연기</p>
+
+<h3 id="2021년-8월">2021년 8월</h3>
+
+<p>한국에서는 세계 최초로 입법규제에 오름</p>
+
+<h3 id="2021년-10월">2021년 10월</h3>
+
+<p>기존의 정책을 유지하되 구독 서비스에 대한 결제에 수수료 인하 선언</p>
+
+<h1 id="애플-어플-정책">애플 어플 정책</h1>
+
+<p>앱스토어에 어플 배포를 위해선 https://developer.apple.com/kr/app-store/review/guidelines/에 따른 가이드라인을 준수해야함</p>
+
+<h1 id="마무리">마무리</h1>
+
+<p>이번 세미나에서는 웹같은 앱, 앱같은 웹을 알아보았습니다. <br />
+또한 개발자로서 알면 좋은 현재 어플시장에 대한 이슈를 알아보았습니다. <br /><br /></p>
+
+<p>사실 웹과 앱의 개발세계는 너무나 넓고 넓어 하루종일 떠들어도 할말이 매우 많은 주제입니다.<br />
+그 중 오늘은 아주 극히 일부의 주제를 이야기 해보았습니다. <br /><br /></p>
+
+<p>바야흐로 개발의 시대, 이렇듯 개발을 쉽게 도와주는 프레임워크 개발방법론들이 많이 생겨나고 있습니다. <br /></p>
+
+<p>오늘 알아간 새로운 개발을 모두 익히기 보단 무언가 하나에 집중해서 서비스개발을 진행한다면 좋지 않을까 싶습니다! <br /></p>
+
+  </article>
+  <br>
+
+  <hr/><br>
+
+  <div class="author">
+    
+    <table>
+        <tr>
+          <td rowspan="3" style="padding-right: 10px"><img class="author-pic" src="https://github.com/.png" alt=""></td>
+          <td><b><h2 rel="author"></h2></b></td>
+        </tr>
+      <tr>
+        <td><p rel="author"></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a rel="author" href="https://github.com/" target="_blank"><i class="fa fa-github fa-2x"></i></a>&nbsp&nbsp
+          
+        </td>
+      </tr>
+    </table>
+
+  </div>
+
+
+  <br>
+  <hr/>
+  <div>
+    <script src="https://utteranc.es/client.js"
+        repo="gdsc-seoultech/blog-comments"
+        issue-term="pathname"
+        label="comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+  </div>
+
+</div>
+<script src="/js/toc.js"></script>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper" align="center">
+  	<h4>This site was built using <a href="http://jekyllrb.com" target="_blank">Jekyll</a> and is hosted on <a href="https://github.com" target="_blank">Github</a>. &#169; GDSC Seoultech</h4>
+  </div>
+
+</footer>
+
+
+  </body>
+</html>

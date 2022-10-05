@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="tYMwPoxNrWfLx2sDrDYzqI4-dq3M3FfI56NBL9JNtH8" />
+
+    <title>WIL 1주차</title>
+    <meta name="description" content="A simple, whitespace, helvetica based portfolio theme.
+">
+
+    <link rel = "shortcut icon" type="image/x-icon" href="/img/square_logo.png">
+    <link rel="stylesheet" href="/css/main.css">
+<!--    <link rel="canonical" href="http://localhost:4000/posts/1st_term/web/2021-09-23-wil_inhyeok/">-->
+    <link rel="canonical" href="/posts/1st_term/web/2021-09-23-wil_inhyeok/">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- 카테고리 css -->
+    <link rel="stylesheet" href="/css/pagination.css">
+    <link href="/css/category.css" type="text/css" rel="stylesheet">
+</head>
+
+   
+  <body>
+    <script src="/js/default.js"></script>
+    <header id="tab" >
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <div class="site-header">
+    <div class="wrapper">
+      <div>
+        <a href="/">
+          <img src="/img/square_logo.png" align="left" width="57px">
+        </a>
+      </div>
+
+      <nav class="site-nav">
+
+        <div id="tab" class="trigger">
+          <!-- GDSC Seoultech instead of blog -->
+          <a class="page-link" href="/">GDSC</a>
+          <a class="page-link" href="/members/2">MEMBER</a>
+          <a class="page-link" href="/category/2nd_term">POST</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div id="hovering" class="tab-header">
+    <div class="wrapper">
+      <div class="detail-post">
+          <div class="tab-item">
+            <div><a class="page-link-detail" href="/category/1st_term">1기</a></div>
+            <div><a class="page-link-detail" href="/category/2nd_term">2기</a></div>
+          </div>
+      </div>
+      <div class="detail-member">
+        <div class="tab-item">
+          <div><a class="page-link-detail" href="/members/1">1기</a></div>
+          <div><a class="page-link-detail" href="/members/2">2기</a></div>
+        </div>
+    </div>
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+    var tabMenu = $("#tab");
+    var tabSubMenu = $("#hovering");
+
+    tabSubMenu.hide()
+
+    tabMenu.hover(function() {
+      tabSubMenu.show();
+    }, function() {
+      tabSubMenu.hide();
+    })
+  </script>
+
+</header>
+
+
+    <div class="page-content" id="page-content">
+      <div class="wrapper" id="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">WIL 1주차</h1>
+    <h1 class="post-description"></h1>
+    <p class="post-meta">September 23, 2021 — 06:00 • InHyeok-J</p>
+    
+      
+        <span class="tag">web</span>
+      
+    
+  </header>
+  <article class="post-content">
+    <h1 id="gdsc-웹-1주차-기록">GDSC 웹 1주차 기록</h1>
+
+<blockquote>
+  <p>1주차 스터디와 과제를 진행하고 작성한 글입니다.</p>
+</blockquote>
+
+<blockquote>
+  <p>소스코드는 <a href="https://github.com/InHyeok-J/GDSCTimeFront" target="_blank" rel="noopener">링크</a> 에 가면 자세히 보실 수 있습니다.</p>
+</blockquote>
+
+<h1 id="스터디-진행">스터디 진행</h1>
+
+<ul>
+  <li>1주차에는 클론할 서비스인 <strong><code class="language-plaintext highlighter-rouge">에브리타임</code></strong>의 기능 분석과 프로젝트 구조를 어떻게 짤지 배우고 <code class="language-plaintext highlighter-rouge">BottomNavigation</code> 컴포넌트를 직접 만들어봤습니다.</li>
+</ul>
+
+<h2 id="1-에브리타임-기능-분석">1. 에브리타임 기능 분석.</h2>
+
+<h3 id="사용자-인증">사용자 인증</h3>
+
+<ul>
+  <li>회원가입</li>
+  <li>로그인</li>
+  <li>로그아웃</li>
+  <li>비밀번호 변경</li>
+  <li>회원 탈퇴</li>
+</ul>
+
+<h3 id="게시글">게시글</h3>
+
+<ul>
+  <li>게시글 작성/수정/삭제</li>
+  <li>게시글 스크랩</li>
+  <li>좋아요(공감)</li>
+  <li>핫 게시글 구현</li>
+  <li>댓글/답글 작성</li>
+  <li>게시글 검색</li>
+  <li>게시판 판</li>
+</ul>
+
+<h3 id="쪽지뽀내기">쪽지뽀내기</h3>
+
+<ul>
+  <li>쪽지보내기</li>
+</ul>
+
+<h2 id="2-아토믹-디자인-구현">2. 아토믹 디자인 구현</h2>
+
+<blockquote>
+  <p><strong><code class="language-plaintext highlighter-rouge">아토믹 디자인</code></strong> ?<br />
+아토믹 디자인은 뷰를 Atoms(원자) -&gt; Molecules(분자) -&gt; Organisms(유기체) -&gt; Templates -&gt; Pages 순으로 작은 것들을 만들고, 결합해 좀 더 큰 단위의 뷰를 만들어 나가는 디자인 시스템입니다.</p>
+</blockquote>
+
+<p><img width="950" alt="스크린샷 2021-09-23 오후 8 46 32" src="https://user-images.githubusercontent.com/28949213/134501541-46b4e7de-398f-4c0a-970d-52e3968dc8ba.png" /></p>
+
+<ul>
+  <li>실제 이렇게 5단계로 구분해 버리면 복잡하기 때문에 components(atom), layout(Organisms), Pages로 분리해서 작업을 진행합니다. 프로젝트 구조는 다음과 같습니다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- src
+    - assets
+    - components    -&gt; 공통으로 쓰이는 작은 요소(또는 따로 분리해서 쓰고 싶은 것들 )
+    - hooks         -&gt; coustom hooks or uilts 폴더
+    - layout        -&gt; components가 모여서 이루어진 요소들 또는 큰 덩어리 (ex 네비게이션)
+    - pages         -&gt; 말 그대로 페이지
+        - Main
+            - components -&gt; Main 페이지에서만 사용되는 특정 컴포넌트들
+            - index.jsx   -&gt; 페이지의 index 파일
+        - Board
+            - components
+            - index.jsx
+    - App.jsx   -&gt; 클라이언트 라우팅
+    - index.css -&gt; 글로벌 스타일
+    - index.js  -&gt; App('root')선택, 프로젝트 시작지점
+</code></pre></div></div>
+
+<h2 id="3-프로젝트-시작전-약속-사항">3. 프로젝트 시작전 약속 사항</h2>
+
+<ul>
+  <li>화면 작업을 시작할때 공통의 약속을 하고 시작해야 한다.</li>
+  <li>css
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">styled-components</code>를 활용한 css작업</li>
+      <li><code class="language-plaintext highlighter-rouge">-</code>하이픈을 사용한 class네임을 케밥케이스로 사용.</li>
+    </ul>
+  </li>
+  <li>js
+    <ul>
+      <li>함수명 변수명은 카멜 케이스</li>
+      <li>폴더명은 파스칼 케이스</li>
+      <li>페이지 상단은 index.js</li>
+      <li>비슷한 이름은 접두사를 통한 분리.</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="1주차-과제">1주차 과제</h1>
+
+<ul>
+  <li>에브리타임의 메인 페이지와 메시지 목록 페이지 구현하기 (추석 다음주)</li>
+</ul>
+
+<h2 id="결과">결과</h2>
+
+<p><img src="https://user-images.githubusercontent.com/28949213/134502438-2b925f9f-ad09-4e17-9522-29ae5444ba59.gif" alt="숙제" /></p>
+
+<h2 id="상세-내용">상세 내용</h2>
+
+<ul>
+  <li>보더가 적용된 카드는 컴포넌트를 만들어서 재사용 했습니다(size를 props로 받으려고..)
+    <ul>
+      <li>globla class를 적용시키는것이 좋아보여서 리팩토링 예정입니다(index.css)</li>
+    </ul>
+  </li>
+  <li>배너 페이지는 모바일 페이지를 클론하기에 슬라이드 방식을 좌우 &lt; &gt; 버튼을 눌러서 움직이는 것이 아닌 마우스 클릭 후 좌우로 이동하는걸 감지해서 움직이게 구현했습니다(모바일 터치처럼 작동하길 기대..)</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">즐겨찾는 게시판 + 더보기&gt;</code></strong> 이렇게 한줄을 컴포넌트<code class="language-plaintext highlighter-rouge">components/ShowMore.jsx</code>로 만들어서 더보기가 필요한 친구는 props로 값을 <code class="language-plaintext highlighter-rouge">more={true}</code>로 전달해서 더보기를 렌더링해주고 더보기가 없는 칸은 false로 더보기 없이 렌더링해줍니다.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">즐겨찾는 게시판</code></strong>의 한줄을 <code class="language-plaintext highlighter-rouge">layout/BoardBody</code></li>
+  <li><strong><code class="language-plaintext highlighter-rouge">실시간 인기 글</code></strong>의 <strong><code class="language-plaintext highlighter-rouge">익명+날짜</code></strong>컴포넌트를 <code class="language-plaintext highlighter-rouge">layout/PreviewProfile</code></li>
+  <li>그 밑에 내용과 카테고리, 좋아요 댓글 갯수를 <code class="language-plaintext highlighter-rouge">layout/PreviewBoard</code></li>
+  <li><strong><code class="language-plaintext highlighter-rouge">HOT 게시글</code></strong> 의 내용을 <code class="language-plaintext highlighter-rouge">layout/PreviewOnly</code>로 만들었습니다.</li>
+</ul>
+
+<h2 id="추가-구현-내용">추가 구현 내용</h2>
+
+<ul>
+  <li>효율적인 개발을 위해 <code class="language-plaintext highlighter-rouge">eslint</code>랑 <code class="language-plaintext highlighter-rouge">prettier</code>를 적용시켰습니다.</li>
+  <li><code class="language-plaintext highlighter-rouge">prettier</code>가 추천해주는 형식으로 검사해줍니다.</li>
+  <li>자세한 내용은 github에서ㅎㅎ</li>
+</ul>
+
+<h2 id="스터디-후기">스터디 후기</h2>
+
+<ul>
+  <li>예전에 아토믹 디자인을 적용해본적이 있는데 5단계로 강제로 분리하느라 고생을 했었는데 이렇게 적절하게 타협해서 개발하는게 더욱 효율적인 것 같습니다.</li>
+  <li>코어님의 열정이 느껴집니다..</li>
+</ul>
+
+  </article>
+  <br>
+
+  <hr/><br>
+
+  <div class="author">
+    
+    <table>
+        <tr>
+          <td rowspan="3" style="padding-right: 10px"><img class="author-pic" src="https://github.com/.png" alt=""></td>
+          <td><b><h2 rel="author"></h2></b></td>
+        </tr>
+      <tr>
+        <td><p rel="author"></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a rel="author" href="https://github.com/" target="_blank"><i class="fa fa-github fa-2x"></i></a>&nbsp&nbsp
+          
+        </td>
+      </tr>
+    </table>
+
+  </div>
+
+
+  <br>
+  <hr/>
+  <div>
+    <script src="https://utteranc.es/client.js"
+        repo="gdsc-seoultech/blog-comments"
+        issue-term="pathname"
+        label="comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+  </div>
+
+</div>
+<script src="/js/toc.js"></script>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper" align="center">
+  	<h4>This site was built using <a href="http://jekyllrb.com" target="_blank">Jekyll</a> and is hosted on <a href="https://github.com" target="_blank">Github</a>. &#169; GDSC Seoultech</h4>
+  </div>
+
+</footer>
+
+
+  </body>
+</html>

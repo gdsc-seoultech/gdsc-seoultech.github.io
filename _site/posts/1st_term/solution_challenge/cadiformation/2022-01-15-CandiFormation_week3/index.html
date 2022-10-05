@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="tYMwPoxNrWfLx2sDrDYzqI4-dq3M3FfI56NBL9JNtH8" />
+
+    <title>CandiFormation 3주차 보고서</title>
+    <meta name="description" content="A simple, whitespace, helvetica based portfolio theme.
+">
+
+    <link rel = "shortcut icon" type="image/x-icon" href="/img/square_logo.png">
+    <link rel="stylesheet" href="/css/main.css">
+<!--    <link rel="canonical" href="http://localhost:4000/posts/1st_term/solution_challenge/cadiformation/2022-01-15-CandiFormation_week3/">-->
+    <link rel="canonical" href="/posts/1st_term/solution_challenge/cadiformation/2022-01-15-CandiFormation_week3/">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- 카테고리 css -->
+    <link rel="stylesheet" href="/css/pagination.css">
+    <link href="/css/category.css" type="text/css" rel="stylesheet">
+</head>
+
+   
+  <body>
+    <script src="/js/default.js"></script>
+    <header id="tab" >
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <div class="site-header">
+    <div class="wrapper">
+      <div>
+        <a href="/">
+          <img src="/img/square_logo.png" align="left" width="57px">
+        </a>
+      </div>
+
+      <nav class="site-nav">
+
+        <div id="tab" class="trigger">
+          <!-- GDSC Seoultech instead of blog -->
+          <a class="page-link" href="/">GDSC</a>
+          <a class="page-link" href="/members/2">MEMBER</a>
+          <a class="page-link" href="/category/2nd_term">POST</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div id="hovering" class="tab-header">
+    <div class="wrapper">
+      <div class="detail-post">
+          <div class="tab-item">
+            <div><a class="page-link-detail" href="/category/1st_term">1기</a></div>
+            <div><a class="page-link-detail" href="/category/2nd_term">2기</a></div>
+          </div>
+      </div>
+      <div class="detail-member">
+        <div class="tab-item">
+          <div><a class="page-link-detail" href="/members/1">1기</a></div>
+          <div><a class="page-link-detail" href="/members/2">2기</a></div>
+        </div>
+    </div>
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+    var tabMenu = $("#tab");
+    var tabSubMenu = $("#hovering");
+
+    tabSubMenu.hide()
+
+    tabMenu.hover(function() {
+      tabSubMenu.show();
+    }, function() {
+      tabSubMenu.hide();
+    })
+  </script>
+
+</header>
+
+
+    <div class="page-content" id="page-content">
+      <div class="wrapper" id="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">CandiFormation 3주차 보고서</h1>
+    <h1 class="post-description"></h1>
+    <p class="post-meta">January 15, 2022 — 08:59 • shinyubin989</p>
+    
+      
+        <span class="tag">solution_challenge</span>
+      
+        <span class="tag">candiformation</span>
+      
+    
+  </header>
+  <article class="post-content">
+    <h3 id="candiformation-3주차-보고서">CandiFormation 3주차 보고서</h3>
+
+<p>안녕하세요 3주차 CandiFormation 보고서 작성을 담당한 신유빈입니다! 
+저희 팀의 3주차를 요약해 보여드릴게요~~</p>
+
+<h2 id="0-팀원소개">0. 팀원소개</h2>
+<p><img src="https://user-images.githubusercontent.com/66999675/148633491-889a1d83-b9f5-499e-a114-acae8b829903.png" width="300" />
+<br /></p>
+
+<ul>
+  <li>위성률 (Backend)</li>
+  <li>신유빈 (Backend)</li>
+  <li>양용수 (Android)</li>
+  <li>오승언 (Android)</li>
+</ul>
+
+<h2 id="1-대망의-와이어프레임-설계">1. 대망의 와이어프레임 설계🌹</h2>
+
+<p>우선 용수님이 작성해주신 와이어 프레임 초안을 바탕으로~~🌻
+<img src="https://images.velog.io/images/dbqls2821/post/75a12c4f-37db-48fe-990b-2f832c4dc960/Untitled%20(10).png" width="300" />
+<br /></p>
+
+<p>피드백을 통해 조금 더 구체화시키는 과정을 진행해 보았습니다!💫
+<img src="https://images.velog.io/images/dbqls2821/post/fe398640-fe9c-4ae8-85b1-e1652e5c6dee/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202022-01-14%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%2011.51.55.png" width="300" />
+<br />
+<img src="https://images.velog.io/images/dbqls2821/post/748249ad-df9b-49c6-9e69-12d22c2af659/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202022-01-14%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%2011.52.55.png" width="300" />
+<br /></p>
+
+<p>저희는 팀원 4명이 아이디어를 확실히 정립하고, A라는 서비스를 만든다고 했을 때 4명이서 똑같이 생각하는 A라는 서비스를 만들도록 하기 위해 와이어 프레임을 설계했습니다! 확실히 설계 과정에서 놓치고 있던 부분을 캐치할 수 있었습니다.</p>
+
+<h2 id="2-기능-구체화">2. 기능 구체화</h2>
+
+<p>저희 팀 4명은 모두 제 1목표가 <strong>실력향상</strong>이기 때문에..!! 넣을까 말까 고민되는 것들은 모두 실력향상을 위해 넣는걸로 합의했고, 각 기능들을 구체화 시키는 회의를 진행했습니다! 구체화된 기능은 하단에 나열되어있습니다~!(<strong>밤까지 도움주신 민선님</strong> 정말 감사드립니다<em>^^</em>)</p>
+
+<ul>
+  <li>로딩화면 넣기(그림 + CandiFormation) / 스플래시(Splash Screen) / 선거 ‘ㅅ’ 마크</li>
+  <li>로그인, 구글로그인, 페이스북 로그인, 카톡 로그인, 네이버 로그인 등등</li>
+  <li>비회원이면 기능 제한</li>
+  <li>비회원을 넣자 vs 로그인만 넣자 ⇒ 둘 다 넣자</li>
+  <li>구글 로그인, 카카오톡 로그인만</li>
+  <li>로컬 로그인</li>
+  <li>로컬 로그인에 대한 회원가입
+    <ul>
+      <li>아이디 → 안 적으면 적으라고 알려주기, 중복체크, 유효성검사</li>
+      <li>비밀번호 → 유효성 검사, 비밀번호 확인</li>
+      <li>이메일 → 유효성 검사, 중복 체크</li>
+      <li>닉네임 → 중복 체크, 유효성검사</li>
+      <li>핸드폰 인증 → 중복체크, 유효성검사 → 잘 만들어진 PASS 같은 앱, 자체적으로 인증 구현 인증 코드를 보내주는 aligo 같은 걸 알아봅시다, → api를 찾아봅시다!! (twilio)</li>
+    </ul>
+  </li>
+  <li>아이디 (로컬 로그인 상에서)
+    <ul>
+      <li>이메일을 입력하면 바로 띄워주기</li>
+    </ul>
+  </li>
+  <li>비밀번호 찾기 (로컬 로그인 상에서)
+    <ul>
+      <li>아이디와 이메일을 씁니다.</li>
+      <li>다음 화면으로 넘어가면 이메일을 확인해주세요! → 여기서 확인을 누르면 로그인 화면으로</li>
+      <li>이메일로 가서 보면 임시 비밀번호가 있습니다.</li>
+      <li>임시 비밀번호로 로그인을 해 → 로그인을 하면 → 유저가 알아서 → 우리는 비밀번호 변경만 만들어줌</li>
+    </ul>
+  </li>
+  <li>댓글 기능(보류), 추천 기능(화나요, 좋아요 등등) , 문의하기
+    <ul>
+      <li>댓글 넣어, 좋아요 기능(로그인 한 사람만), 페이스북 처럼</li>
+      <li>공유하기 → 우리 앱을 공유할껀지 vs 원본 기사를 공유할껀지</li>
+    </ul>
+  </li>
+  <li>선거 독려할 수 있는 활동?(후순위) → 선거 인증을 하면 간단한 증명서</li>
+</ul>
+
+<h2 id="3-기능-우선순위-선정">3. 기능 우선순위 선정</h2>
+
+<ul>
+  <li>정당 정보 알려주기(정당의 역사도?)</li>
+  <li>대선 남은 날짜 알려주기</li>
+  <li>역대 대통령 알려주기, 이름, 얼굴 사진, 연도</li>
+  <li>후보 리스트 보여주고 후보들 공약 알려주기, 후보들의 사건(의혹 넣자),
+⇒ 정보를 가져올 때 레이블링을 해서 검색했을 때 그 사람에 대한 정보만?</li>
+  <li>후보들과 관련된 사이트(블로그, 인스타, 유튜브, 트위터, 페이스북, 개인 홈페이지(재명이 마을)</li>
+  <li>뉴스 기사 알려주기(정치와 관련된)</li>
+  <li>주변 투표소 알려주기 (자기 위치를 찍으면 주변에 어디있나? 가장 가까운 것, 전국지도로해서 축소하면</li>
+</ul>
+
+<h2 id="4-팀원-전체가-진행한-숙제">4. 팀원 전체가 진행한 숙제!</h2>
+<p>안드로이드 팀에게는 “구글 플레이 스토어 올리는 방법, retrofit 라이브러리 사용법, MVVM 패턴 숙지하기” 숙제가 주어졌고,
+백엔드 팀에게는 “안드랑 백 알아보기 (NestJS, Spring 각각) 백엔드 2개, MySQL 1개, 안드로이드 1개, AWS 사용법알아오기” 숙제가 주어졌습니다~~!
+그리고 팀원들은 공부한 내용을 바탕으로 개인 블로그에 글을 포스팅했습니다!!ㅎㅎ
+<img src="https://images.velog.io/images/dbqls2821/post/16100b30-7f3c-4813-b093-ec250726b098/Untitled.png" width="300" />
+<br />
+<img src="https://images.velog.io/images/dbqls2821/post/4825ba61-6f50-4bfa-bb18-c977b3c1c70a/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202022-01-15%20%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB%2012.23.32.png" width="300" />
+<br />
+<img src="https://images.velog.io/images/dbqls2821/post/9f7b0947-0c4a-41fe-95c9-1f7ea17a5aa4/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202022-01-15%20%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB%2012.24.33.png" width="300" />
+<br /></p>
+
+<p>과제를 진행하면서 유용했던 사이트들은 공유도 했습니다!
+<img src="https://images.velog.io/images/dbqls2821/post/5955a873-7c16-4e37-850a-d4dfb580b044/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202022-01-15%20%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB%2012.25.48.png" width="300" />
+<br />
+<img src="https://images.velog.io/images/dbqls2821/post/f8f46cac-2652-48bf-a6e3-42553cb584a1/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202022-01-15%20%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB%2012.26.52.png" width="300" />
+<br />
+<img src="https://images.velog.io/images/dbqls2821/post/8a4be17c-9879-425f-8729-61f2b0d866c0/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202022-01-15%20%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB%2012.27.25.png" width="300" />
+<br />
+<img src="https://images.velog.io/images/dbqls2821/post/73b232b7-cfaa-4e1d-8c18-140b17fd0312/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202022-01-15%20%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB%2012.28.09.png" width="300" />
+<br /></p>
+
+<p>저희팀 백엔드는 이제 API 설계를 하고, 안드로이드는 확정된 와이어프레임 구조를 가지고 구현을 시작할 예정입니다!</p>
+
+<p><img src="https://images.velog.io/images/dbqls2821/post/9e628f11-1e5e-4591-9a47-3a1ddb460d20/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202022-01-15%20%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB%2012.43.54.png" width="300" />
+<br />
+끝으로 저희팀의 방대한 회의기록을 자랑하며 이만 글을 줄이도록 하겠습니다 ㅎㅎ 읽어주셔서 감사합니다~!~!</p>
+
+
+  </article>
+  <br>
+
+  <hr/><br>
+
+  <div class="author">
+    
+    <table>
+        <tr>
+          <td rowspan="3" style="padding-right: 10px"><img class="author-pic" src="https://github.com/.png" alt=""></td>
+          <td><b><h2 rel="author"></h2></b></td>
+        </tr>
+      <tr>
+        <td><p rel="author"></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a rel="author" href="https://github.com/" target="_blank"><i class="fa fa-github fa-2x"></i></a>&nbsp&nbsp
+          
+        </td>
+      </tr>
+    </table>
+
+  </div>
+
+
+  <br>
+  <hr/>
+  <div>
+    <script src="https://utteranc.es/client.js"
+        repo="gdsc-seoultech/blog-comments"
+        issue-term="pathname"
+        label="comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+  </div>
+
+</div>
+<script src="/js/toc.js"></script>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper" align="center">
+  	<h4>This site was built using <a href="http://jekyllrb.com" target="_blank">Jekyll</a> and is hosted on <a href="https://github.com" target="_blank">Github</a>. &#169; GDSC Seoultech</h4>
+  </div>
+
+</footer>
+
+
+  </body>
+</html>

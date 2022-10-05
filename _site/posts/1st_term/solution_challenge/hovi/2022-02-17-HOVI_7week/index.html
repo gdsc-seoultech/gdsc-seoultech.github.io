@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="tYMwPoxNrWfLx2sDrDYzqI4-dq3M3FfI56NBL9JNtH8" />
+
+    <title>HOVI의 7주차 기록</title>
+    <meta name="description" content="A simple, whitespace, helvetica based portfolio theme.
+">
+
+    <link rel = "shortcut icon" type="image/x-icon" href="/img/square_logo.png">
+    <link rel="stylesheet" href="/css/main.css">
+<!--    <link rel="canonical" href="http://localhost:4000/posts/1st_term/solution_challenge/hovi/2022-02-17-HOVI_7week/">-->
+    <link rel="canonical" href="/posts/1st_term/solution_challenge/hovi/2022-02-17-HOVI_7week/">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- 카테고리 css -->
+    <link rel="stylesheet" href="/css/pagination.css">
+    <link href="/css/category.css" type="text/css" rel="stylesheet">
+</head>
+
+   
+  <body>
+    <script src="/js/default.js"></script>
+    <header id="tab" >
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <div class="site-header">
+    <div class="wrapper">
+      <div>
+        <a href="/">
+          <img src="/img/square_logo.png" align="left" width="57px">
+        </a>
+      </div>
+
+      <nav class="site-nav">
+
+        <div id="tab" class="trigger">
+          <!-- GDSC Seoultech instead of blog -->
+          <a class="page-link" href="/">GDSC</a>
+          <a class="page-link" href="/members/2">MEMBER</a>
+          <a class="page-link" href="/category/2nd_term">POST</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div id="hovering" class="tab-header">
+    <div class="wrapper">
+      <div class="detail-post">
+          <div class="tab-item">
+            <div><a class="page-link-detail" href="/category/1st_term">1기</a></div>
+            <div><a class="page-link-detail" href="/category/2nd_term">2기</a></div>
+          </div>
+      </div>
+      <div class="detail-member">
+        <div class="tab-item">
+          <div><a class="page-link-detail" href="/members/1">1기</a></div>
+          <div><a class="page-link-detail" href="/members/2">2기</a></div>
+        </div>
+    </div>
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+    var tabMenu = $("#tab");
+    var tabSubMenu = $("#hovering");
+
+    tabSubMenu.hide()
+
+    tabMenu.hover(function() {
+      tabSubMenu.show();
+    }, function() {
+      tabSubMenu.hide();
+    })
+  </script>
+
+</header>
+
+
+    <div class="page-content" id="page-content">
+      <div class="wrapper" id="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">HOVI의 7주차 기록</h1>
+    <h1 class="post-description"></h1>
+    <p class="post-meta">February 17, 2022 — 09:06 • KangInyeong</p>
+    
+      
+        <span class="tag">solution_challenge</span>
+      
+        <span class="tag">hovi</span>
+      
+    
+  </header>
+  <article class="post-content">
+    <h1 id="hovi의-7주차-기록">HOVI의 7주차 기록</h1>
+
+<p><br /></p>
+
+<h2 id="-솔루션-챌린지-주제-">&lt; 솔루션 챌린지 주제 &gt;</h2>
+<p>스마트폰 카메라의 표정 인식을 통한 의사 표현 앱</p>
+
+<h2 id="팀-멤버-">팀 멤버 🧑‍🤝‍🧑</h2>
+
+<ul>
+  <li>김영현(Back-end)</li>
+  <li>박지수(Back-end)</li>
+  <li>이슬비(ML)</li>
+  <li>강인영(Android)</li>
+</ul>
+
+<p><br /></p>
+
+<h1 id="-2월-15일-정기-회의-">🌰 2월 15일 정기 회의 🌰</h1>
+<p>오랜만에 대면 회의를 진행하였습니다. (지수님 다음에는 꼭 함께해요 ㅠㅠ) “스마트폰 카메라📷를 사용해 사람의 표정😉을 인식하여 의사를 표현할 수 있는 앱”을 만들기 위해서 열심히 회의를 진행했답니다!</p>
+
+<p><br /></p>
+
+<h2 id="-논의-사항">✔ 논의 사항</h2>
+<p>🚗 <strong>Android</strong><br />
+지난 일요일에 슬비님과의 사전 논의를 통해 OpenCV를 활용하기로 결정하였고, Andorid NDK를 사용해서 OpenCV SDK를 적용하는 방법에 대해 공부하였습니다! 또한 안드로이드 프로젝트 내 assets로 모델을 넣어 사용하는 방식에 대해서도 알아보았습니다. 🗺 회의에서는 안드로이드에서 실시간으로 표정인식이 가능할지, mp4📹형식으로 저장하여 서버로 보낸 뒤에 표정인식을 판단할지 등에 대해 논의하였습니다.</p>
+
+<p>🚓 <strong>Backend</strong><br />
+지수님께서 알아보신 네이버 CLOVA API의 TTS 서비스는🌬 유료 요금 제한이 있어서 사용하지 않기로 했구요. 우선은 의사 표현 유형을 정리해서 해당하는 음성 녹음 파일 mp3만 업로드하여 사용하기로 하였습니다.<br />
+영현님께서는 Spring Boot🧶를 사용해서 데이터 송수신을 위한 API를 만들고 계신데요. API로 안드로이드와 서버가 연결될 날이 벌써부터 기대(사실 걱정.. 안드가 잘 할 수 있을지..)가 되네요!!</p>
+
+<p>🚕 <strong>ML</strong><br />
+일단 박수부터 치고 시작할까요? 슬비님께서 OpenCV를 활용해 랜드마크 찍기를 완료했다고 합니다🎉 그리하여 입을 벌리면 “배고파”라던지, 웃는 표정을 지으면 “날씨가 좋으니 산책을 가자”라던지의 의사 표현이 가능한 코드가 완성되었습니다. 그런데 눈👀은 거리 측정이 어려워서 눈을 감거나 뜨는 것으로 의사 표현하는 것은 아쉽게도 불가능하다고 하네요😥 또한 의사 표현 행동을 고안하여 모델에 적용하는 방법과 영상을 resize 하는 방법에 대한 공부가 진행 중이라고 합니다🧚‍♀️
+<br /><br />
+<br /></p>
+
+<h2 id="-to-do-">◻◼ TO DO ◼◻</h2>
+<ul>
+  <li>
+    <p><strong>백엔드</strong><br />
+◽ 영현님 - API 2가지(초기 세팅, 행동 매칭) 완성하기<br />
+◽ 지수님 - mp3 저장 &amp; 카카오 무료 TTS 알아보기</p>
+  </li>
+  <li>
+    <p><strong>안드로이드</strong><br />
+◽ py 코드를 Android NDK + OpenCV SDK와 함께 사용할 수 있는 방법 찾기<br />
+◽ 서버로 보낼 안드로이드의 Device unique ID 생성하기</p>
+  </li>
+  <li>
+    <p><strong>ML</strong> <br />
+◽ OpenCV 이용한 모델 완성하기<br />
+◽ 안드로이드에서 모델 코드 실행할 수 있는 방법 찾아보기</p>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<hr />
+<p><br /></p>
+
+<p>개발 단계에 들어가서 조금씩 방향성을 잡아가고 있는 우리의 프로젝트..! 많은 것들이 낯설고 처음이라 어렵지만 든든한 팀원들과 함께 완성될 앱이 기대가 되네요🐥 벌써 다음 주가 개강이라서 다들 바빠지겠지만 3월 둘째 주까지 힘내어 개발을 마쳐보도록 합시다~! 🤸‍♀️🤸‍♂️</p>
+
+  </article>
+  <br>
+
+  <hr/><br>
+
+  <div class="author">
+    
+    <table>
+        <tr>
+          <td rowspan="3" style="padding-right: 10px"><img class="author-pic" src="https://github.com/.png" alt=""></td>
+          <td><b><h2 rel="author"></h2></b></td>
+        </tr>
+      <tr>
+        <td><p rel="author"></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a rel="author" href="https://github.com/" target="_blank"><i class="fa fa-github fa-2x"></i></a>&nbsp&nbsp
+          
+        </td>
+      </tr>
+    </table>
+
+  </div>
+
+
+  <br>
+  <hr/>
+  <div>
+    <script src="https://utteranc.es/client.js"
+        repo="gdsc-seoultech/blog-comments"
+        issue-term="pathname"
+        label="comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+  </div>
+
+</div>
+<script src="/js/toc.js"></script>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper" align="center">
+  	<h4>This site was built using <a href="http://jekyllrb.com" target="_blank">Jekyll</a> and is hosted on <a href="https://github.com" target="_blank">Github</a>. &#169; GDSC Seoultech</h4>
+  </div>
+
+</footer>
+
+
+  </body>
+</html>

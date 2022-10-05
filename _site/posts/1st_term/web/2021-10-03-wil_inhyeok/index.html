@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="tYMwPoxNrWfLx2sDrDYzqI4-dq3M3FfI56NBL9JNtH8" />
+
+    <title>WIL 2주차</title>
+    <meta name="description" content="A simple, whitespace, helvetica based portfolio theme.
+">
+
+    <link rel = "shortcut icon" type="image/x-icon" href="/img/square_logo.png">
+    <link rel="stylesheet" href="/css/main.css">
+<!--    <link rel="canonical" href="http://localhost:4000/posts/1st_term/web/2021-10-03-wil_inhyeok/">-->
+    <link rel="canonical" href="/posts/1st_term/web/2021-10-03-wil_inhyeok/">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- 카테고리 css -->
+    <link rel="stylesheet" href="/css/pagination.css">
+    <link href="/css/category.css" type="text/css" rel="stylesheet">
+</head>
+
+   
+  <body>
+    <script src="/js/default.js"></script>
+    <header id="tab" >
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <div class="site-header">
+    <div class="wrapper">
+      <div>
+        <a href="/">
+          <img src="/img/square_logo.png" align="left" width="57px">
+        </a>
+      </div>
+
+      <nav class="site-nav">
+
+        <div id="tab" class="trigger">
+          <!-- GDSC Seoultech instead of blog -->
+          <a class="page-link" href="/">GDSC</a>
+          <a class="page-link" href="/members/2">MEMBER</a>
+          <a class="page-link" href="/category/2nd_term">POST</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div id="hovering" class="tab-header">
+    <div class="wrapper">
+      <div class="detail-post">
+          <div class="tab-item">
+            <div><a class="page-link-detail" href="/category/1st_term">1기</a></div>
+            <div><a class="page-link-detail" href="/category/2nd_term">2기</a></div>
+          </div>
+      </div>
+      <div class="detail-member">
+        <div class="tab-item">
+          <div><a class="page-link-detail" href="/members/1">1기</a></div>
+          <div><a class="page-link-detail" href="/members/2">2기</a></div>
+        </div>
+    </div>
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+    var tabMenu = $("#tab");
+    var tabSubMenu = $("#hovering");
+
+    tabSubMenu.hide()
+
+    tabMenu.hover(function() {
+      tabSubMenu.show();
+    }, function() {
+      tabSubMenu.hide();
+    })
+  </script>
+
+</header>
+
+
+    <div class="page-content" id="page-content">
+      <div class="wrapper" id="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">WIL 2주차</h1>
+    <h1 class="post-description"></h1>
+    <p class="post-meta">October 3, 2021 — 21:00 • InHyeok-J</p>
+    
+      
+        <span class="tag">web</span>
+      
+    
+  </header>
+  <article class="post-content">
+    <h1 id="gdsc-웹-2주차-기록">GDSC 웹 2주차 기록</h1>
+
+<blockquote>
+  <p>2주차 스터디와 과제를 진행하고 작성한 글입니다.</p>
+</blockquote>
+
+<blockquote>
+  <p>소스코드는 <a href="https://github.com/InHyeok-J/GDSCTimeFront" target="_blank" rel="noopener">링크</a> 에 가면 자세히 보실 수 있습니다.</p>
+</blockquote>
+
+<blockquote>
+  <p>이번 스터디때는 수업시간에 배운 내용을 발전 및 리팩토링 하는 시간을 많이 가졌습니다.</p>
+</blockquote>
+
+<h1 id="공통-컴포넌트-만들기">공통 컴포넌트 만들기</h1>
+
+<h2 id="input-button-공통-컴포넌트">Input, Button 공통 컴포넌트</h2>
+
+<ul>
+  <li>스터디 시간에 공통 컴포넌트 <code class="language-plaintext highlighter-rouge">components/button/MainButton</code>,<code class="language-plaintext highlighter-rouge">components/input/MainInput</code> 으로 커스텀 컴포넌트를 만들어 재사용을 했습니다(회원가입 로그인 페이지)</li>
+</ul>
+
+<h2 id="추가-사항">추가 사항</h2>
+
+<ul>
+  <li>input태그에서 엔터 키를 눌렀을때, 회원가입 및 로그인 버튼이 눌리게 하기 위해서 <code class="language-plaintext highlighter-rouge">MainInput</code> 컴포넌트 안에 <code class="language-plaintext highlighter-rouge">onKeyPress</code> 이벤트를 추가 했습니다.</li>
+  <li>사용 방법은 input 태그 안에 <code class="language-plaintext highlighter-rouge">onKeyPress</code> 함수를 만들어 넘겨줍니다</li>
+</ul>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kd">const</span> <span class="nx">onSignUp</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+          <span class="c1">//회원가입 버튼.</span>
+    <span class="p">}</span>
+    <span class="kd">const</span> <span class="nx">onSignUpKeyPress</span> <span class="o">=</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">key</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">Enter</span><span class="dl">'</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">onSignUp</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">};</span>
+    <span class="p">...</span>
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="o">&lt;</span><span class="nx">MainInput</span>
+            <span class="p">...</span>
+            <span class="nx">onKeyPress</span><span class="o">=</span><span class="p">{</span><span class="nx">onSignUpKeyPress</span><span class="p">}</span>
+        <span class="sr">/</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">MainButton</span> <span class="nx">text</span><span class="o">=</span><span class="dl">"</span><span class="s2">회원가입</span><span class="dl">"</span><span class="o">/&gt;</span>
+    <span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li>이 onKeyPress 함수는 회원가입과 로그인의 마지막 Input 태그에 적용했습니다.</li>
+</ul>
+
+<h1 id="usestate로-상태관리하기">useState로 상태관리하기</h1>
+
+<ul>
+  <li>useState로 상태관리하는 방법을 스터디때 진행했습니다.</li>
+</ul>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="p">...</span>
+<span class="kd">const</span> <span class="nx">Page</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="p">[</span><span class="nx">value</span><span class="p">,</span> <span class="nx">setValue</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="nx">초기값</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>value는 상태 값, setValue는 이 값을 변화시키는 함수입니다.</li>
+</ul>
+
+<h2 id="커스텀hook으로-반복되는-값-최소화">커스텀hook으로 반복되는 값 최소화</h2>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">useInput</code></strong> 이라는 커스텀 hooks을 만들어서 재사용 했습니다. 한번 사용해보세요!</li>
+  <li>기존의 input의 value값을 관리하는 onChange함수는 직접 만들어주어야하며 코드 수를 늘리는 범인입니다.</li>
+  <li><code class="language-plaintext highlighter-rouge">hooks/useInput.js</code></li>
+</ul>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">useState</span><span class="p">,</span> <span class="nx">useCallback</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="p">(</span><span class="nx">initialValue</span> <span class="o">=</span> <span class="kc">null</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="p">[</span><span class="nx">value</span><span class="p">,</span> <span class="nx">setValue</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="nx">initialValue</span><span class="p">);</span>
+  <span class="kd">const</span> <span class="nx">handler</span> <span class="o">=</span> <span class="nx">useCallback</span><span class="p">((</span><span class="nx">e</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">setValue</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+  <span class="p">},</span> <span class="p">[]);</span>
+  <span class="k">return</span> <span class="p">[</span><span class="nx">value</span><span class="p">,</span> <span class="nx">handler</span><span class="p">,</span> <span class="nx">setValue</span><span class="p">];</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<ul>
+  <li>리턴의 첫 번째 인자로 <code class="language-plaintext highlighter-rouge">value</code> 값을 , 두번째는 <code class="language-plaintext highlighter-rouge">onChange</code> 함수를, 세번째 인자로 혹시 사용해야 하는 <code class="language-plaintext highlighter-rouge">setState</code>함수를 리턴해줍니다.</li>
+  <li>사용 방법</li>
+</ul>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">useInput</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">../../hooks/useInput</span><span class="dl">'</span><span class="p">;</span>
+<span class="p">...</span>
+<span class="kd">const</span> <span class="nx">SingUpPage</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="p">[</span><span class="nx">id</span><span class="p">,</span> <span class="nx">onChangeId</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useInput</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+    <span class="kd">const</span> <span class="p">[</span><span class="nx">password</span><span class="p">,</span> <span class="p">,</span> <span class="nx">setPassword</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useInput</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+    <span class="c1">// password의 onChange함수는 커스텀 해주기 위해서 빈 값으로 둡니다.</span>
+    <span class="p">...</span>
+    <span class="c1">//직접 onChange를 만들어야 할 필요가 있는 password onChange함수는 직접 만들기!</span>
+    <span class="kd">const</span> <span class="nx">onChangePassword</span> <span class="o">=</span> <span class="nx">useCallback</span><span class="p">(</span>
+        <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+            <span class="nx">setPassword</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+            <span class="nx">setLastPasswordCheck</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+            <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">checkPassword</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">))</span> <span class="p">{</span>
+                <span class="nx">setErrorPassword</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="nx">setErrorPassword</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+            <span class="p">}</span>
+
+            <span class="c1">// 이 부분은 패스워드 값을 입력해도 패스워드 확인 값이랑 같은지 검사.</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span> <span class="o">===</span> <span class="nx">passwordCheck</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">setErrorPasswordCheck</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="nx">setErrorPasswordCheck</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="p">[</span><span class="nx">password</span><span class="p">,</span> <span class="nx">passwordCheck</span><span class="p">],</span>
+    <span class="p">);</span>
+
+    <span class="k">return</span> <span class="p">(</span>
+
+        <span class="o">&lt;</span><span class="nx">MainInput</span>
+            <span class="nx">value</span><span class="o">=</span><span class="p">{</span><span class="nx">id</span> <span class="o">||</span> <span class="dl">''</span><span class="p">}</span>
+            <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">text</span><span class="dl">"</span>
+            <span class="nx">onChange</span><span class="o">=</span><span class="p">{</span><span class="nx">onChangeId</span><span class="p">}</span> <span class="c1">// 바로 사용</span>
+            <span class="nx">placeholder</span><span class="o">=</span><span class="dl">"</span><span class="s2">아이디를 입력해주세요</span><span class="dl">"</span>
+        <span class="o">/&gt;</span>
+        <span class="o">&lt;</span><span class="nx">MainInput</span>
+            <span class="nx">value</span><span class="o">=</span><span class="p">{</span><span class="nx">password</span> <span class="o">||</span> <span class="dl">''</span><span class="p">}</span>
+            <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">password</span><span class="dl">"</span>
+            <span class="nx">onChange</span><span class="o">=</span><span class="p">{</span><span class="nx">onChangePassword</span><span class="p">}</span> <span class="c1">//직접 커스텀 한 onChange 함수를 넘겨줌!</span>
+            <span class="nx">placeholder</span><span class="o">=</span><span class="dl">"</span><span class="s2">비밀번호를 입력해주세요</span><span class="dl">"</span>
+        <span class="o">/&gt;</span>
+
+</code></pre></div></div>
+
+<h1 id="정규식을-활용한-검사">정규식을 활용한 검사</h1>
+
+<ul>
+  <li>
+    <p><b>패스워드 검사 (정규식 활용)</b><br />
+정규식 검사를 위해 <code class="language-plaintext highlighter-rouge">utils</code> 함수를 만들어서 사용 했습니다.프로젝트 폴더를 보면 hooks랑 utils함수를 분리를 했는데 <code class="language-plaintext highlighter-rouge">hooks폴더</code>는 기존 <code class="language-plaintext highlighter-rouge">Hooks</code>를 사용하는 커스텀 파일들을 , 그 외의 유틸 함수들은 <code class="language-plaintext highlighter-rouge">utils폴더</code>에서 관리할 예정입니다.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">utils/RegExpCheck.js</code></p>
+  </li>
+</ul>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="kd">const</span> <span class="nx">checkPassword</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">str</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">regExp</span> <span class="o">=</span>
+    <span class="sr">/^</span><span class="se">(?=</span><span class="sr">.*</span><span class="se">[</span><span class="sr">!@#$%^&amp;*()_+|&lt;&gt;?:{}</span><span class="se">])(?=</span><span class="sr">.*</span><span class="se">[</span><span class="sr">a-zA-Z</span><span class="se">])(?=</span><span class="sr">.*</span><span class="se">[</span><span class="sr">0-9</span><span class="se">])</span><span class="sr">.</span><span class="se">{5,15}</span><span class="sr">/i</span><span class="p">;</span>
+  <span class="k">return</span> <span class="nx">regExp</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">str</span><span class="p">);</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<ul>
+  <li>5~15자의 문자를 3가지 조건에 의해서 검사합니다. / / 리터럴 표현으로 정규식 표현을 묶고, ^ -&gt; 입력 문자의 시작입니다.</li>
+  <li>. -&gt; 임의의 문자, * -&gt; 0번이상 반복<code class="language-plaintext highlighter-rouge">({0,}과 동일한 표현)</code> () 하나의 하위 패턴으로 묶음, ?= &gt; 전방 탐색 일치하는 패턴을 찾고 그값을 제외하지 않고 리턴</li>
+  <li><code class="language-plaintext highlighter-rouge">[!@#$%^&amp;*()_+|&lt;&gt;?:{}]</code> -&gt; 특수문자 검사, 특수문자는 영어나 숫자처럼 범위로 묶을 수 없고<code class="language-plaintext highlighter-rouge">(소문자:a-z, 대문자:A-Z, 숫자:0-9, 한글: 가-힣)</code>, 직접 입력해줘야 합니다.</li>
+  <li><code class="language-plaintext highlighter-rouge">.{5,15}</code>수량자, 문자가 5~15개 범위로 제한,</li>
+  <li><code class="language-plaintext highlighter-rouge">/i</code> 플래그,-&gt; 대소문자 구분하지 않고 검색</li>
+</ul>
+
+<h1 id="redux를-활용한-전역-상태관리">Redux를 활용한 전역 상태관리</h1>
+
+<ul>
+  <li>스터디 시간에 redux를 진행하지 않는다고 합니다. 아래 글은 아 그냥 이런 친구가 있구나 하는 심정으로 보세요~</li>
+</ul>
+
+<h2 id="redux란">Redux란?</h2>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">Redux</code>는 자바스크립트 앱을 위한 예측 가능한 상태 컨테이너입니다.<br />
+Redux는 여러분이 일관적으로 동작하고, 서로 다른 환경(서버, 클라이언트, 네이티브)에서 작동하고, 테스트하기 쉬운 앱을 작성하도록 도와줍니다. 여기에 더해서 시간여행형 디버거와 결합된 실시간 코드 수정과 같은 훌륭한 개발자 경험을 제공합니다.
+여러분은 Redux를 React나 다른 뷰 라이브러리와 함께 사용할 수 있습니다. Redux는 매우 작지만(의존 라이브러리 포함 2kB), 사용 가능한 애드온은 매우 많습니다.</p>
+</blockquote>
+
+<p>네 공식문서 글을 긁어 왔습니다.. 설명이 별로네요.
+<strong>핵심은 Redux는 상태를 관리하기 위한 좋은 라이브러리고, React 뿐만 아니라 다른 js기반 라이브러리에서도 사용하실 수 있습니다!</strong></p>
+
+<h2 id="redux를-사용해야-하는-이유">Redux를 사용해야 하는 이유</h2>
+
+<p><a href="https://www.youtube.com/watch?v=3MB8DBXzEos" target="_blank" rel="noopener">링크</a>를 가서 한번 보고오세요 ~ Redux를 사용하는 이유를 간단하게 설명하는 동영상입니다.</p>
+
+<p>혹시 영상을 보고 오셨는지 모르겠지만 재밌는 영상인데, 사실 그냥 보면서 웃을수는 없는 영상입니다 ㅠ<br />
+저희는 컴포넌트안에 <code class="language-plaintext highlighter-rouge">useState</code>로 상태를 관리하고, <code class="language-plaintext highlighter-rouge">props</code>를 통해 하위 컴포넌트로 값을 전달합니다.<br />
+근데 그 상태를 관리해야 하는 값이 하위 컴포넌트가 아닌 다른곳에 있으면 어떻게하실건가요..?<br />
+전달해야 하는 props가 여러 컴포넌트를 통해서 전달해야 한다면 ..?</p>
+
+<h3 id="usestate를-전달하기">useState를 전달하기</h3>
+
+<p>저희가 <code class="language-plaintext highlighter-rouge">useState</code>를 통해 상태를 만들면 그 컴포넌트는 <code class="language-plaintext highlighter-rouge">localState</code>를 갖게 됩니다. 그리고 이 상태를 다른 컴포넌트에 넘겨주기 위해서 <code class="language-plaintext highlighter-rouge">props</code>를 사용하죠. 간단한 예시를 들어 볼게요!</p>
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/28949213/135766568-aa2283e0-b2a2-42f1-bb76-baf0dd728ba8.png" />
+</p>
+
+<p>실제 저희가 개발했을때 이렇게 동작한다는 의미는 아닙니다.<br />
+이렇게 <code class="language-plaintext highlighter-rouge">App.js</code>에서 데이터를 가져와서 실제 보여주는 하위 컴포넌트까지.. props로 여러번 통해서 값을 전달해야 하죠. 이렇게 개발하다 보면 어떤 props로 데이터를 가져오는지 헷갈릴 수 있고, 중간 컴포넌트에서 불필요한 리렌더링이 일어나게 됩니다.</p>
+
+<ul>
+  <li>Redux를 사용한다면 이런 패턴입니다.</li>
+</ul>
+<p align="center">
+<img src="https://user-images.githubusercontent.com/28949213/135766583-26a46caf-c95c-44e6-aa59-0d874155bf4b.png" />
+</p>
+<p><del>너무 극단적인 예시인것 같지만…</del>  <br />
+위의 방식과 다르게 중간 Reducer이랑 Store를 거쳐서 데이터를 가져오죠? 이게 리덕스의 핵심입니다.</p>
+
+<h2 id="redux-기본-개념">Redux 기본 개념</h2>
+
+<p>리덕스에서 사용되는 몇가지 기본 개념이 있습니다, 한번 간단하게 알아볼게요.</p>
+
+<h3 id="action-액션">Action 액션</h3>
+
+<p>어떤 상태 변화가 필요할때 저희는 미리 정의되어 있는 action을 발생시킵니다. 이 action에는 액션타입action type, 미리 정의하고, action creators(액션 생성자) 를 통해 사용합니다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">GET_BOARD_DATA</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">GET_BOARD_DATA</span><span class="dl">'</span>
+<span class="c1">//action type 정의</span>
+<span class="p">...</span>
+<span class="kd">function</span> <span class="nx">getBoardData</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="na">type</span><span class="p">:</span><span class="nx">GET_BOARD_DATA</span>
+        <span class="na">payload</span><span class="p">:{...}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>action Type은 일반적으로 문자열 상수로 정의됩니다, 이 정의된 <code class="language-plaintext highlighter-rouge">GET_BOARD_DATA</code>라는 액션 타입은
+<code class="language-plaintext highlighter-rouge">getBoardData</code>라는 액션 생성자를 통해 사용됩니다.<br />
+저 payload 부분에는 payload 가 아닌 원하는 데이터를 넣어도 됩니다! 액션 생성자 함수에는 type만 필수입니다.</p>
+
+<h3 id="reducer-리듀서">Reducer 리듀서</h3>
+
+<p>action이 어떤 행동을 정의한다면 리듀서는 그 행동으로 인해 어떻게 상태가 바뀌는지 정의하는 함수입니다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">BoardReducer</span><span class="p">(</span><span class="nx">state</span> <span class="o">=</span> <span class="nx">initialState</span><span class="p">,</span> <span class="nx">action</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">switch</span> <span class="p">(</span><span class="nx">action</span><span class="p">.</span><span class="nx">type</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="nx">GET_BOARD_DATA</span><span class="p">:</span>
+      <span class="k">return</span> <span class="p">{</span> <span class="p">...</span><span class="nx">state</span><span class="p">,</span> <span class="na">boarddata</span><span class="p">:</span> <span class="nx">action</span><span class="p">.</span><span class="nx">payload</span> <span class="p">};</span>
+    <span class="nl">default</span><span class="p">:</span>
+      <span class="k">return</span> <span class="nx">state</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="store-스토어">Store 스토어</h3>
+
+<p>리덕스에서는 한 애플리케이션 당 하나의 스토어를 만들게 됩니다. 스토어 안에는 현재의 앱 상태와 리듀서, 내장 함수들이 들어가 있습니다.</p>
+
+<h3 id="dispatch-디스패치">dispatch 디스패치</h3>
+
+<p>스토어의 내장 함수 중 하나입니다. 액션을 발생시키며 <code class="language-plaintext highlighter-rouge">dispatch(action)</code>으로 구현합니다. <code class="language-plaintext highlighter-rouge">dispatch</code>를 호출 하면 스토어는 리듀서 함수를 실행시켜 해당 액션을 처리하는 로직이 있다면 액션을 참고하여 새 상태를 만든다.</p>
+
+<h3 id="subscribe-구독">subscribe 구독</h3>
+
+<p>스토어의 내장 함수 중 하나입니다. <code class="language-plaintext highlighter-rouge">subscribe</code> 함수는 함수 형태의 값을 파라미터로 받아오는데 이 함수에 특정 함수를 전달해주면 액션이 디스패치 되었을 때 마다 전달해준 함수가 호출됩니다.</p>
+
+<p>→ 보통 리액트에서 리덕스를 사용할때 이 함수를 직접 사용하는 경우는 거의 없고 <code class="language-plaintext highlighter-rouge">react-redux</code> 라는 라이브러리에서 제공하는 <code class="language-plaintext highlighter-rouge">connect</code> 함수 또는 <code class="language-plaintext highlighter-rouge">useSelector</code> Hook을 사용하여 리덕스 스토어의 상태에 구독합니다.</p>
+
+<h2 id="언제-리덕스를-쓸까">언제 리덕스를 쓸까?</h2>
+
+<p>언제 <code class="language-plaintext highlighter-rouge">useState</code>를 쓰고 언제 <code class="language-plaintext highlighter-rouge">redux</code>를 써야 하나에 대해서도 간단하게 말하자면<br />
+빠르게 변화하는 데이터, 예를 들면 input의 상태 값, UI의 텍스트 같은 문자, 전역적으로 관리할 필요 없는 toggle 값 등 등에서는 <code class="language-plaintext highlighter-rouge">useState</code>를 사용하고<br />
+앱 실행동안 유지 되는 유저 정보, 전역적으로 상태를 관리해야 하는 데이터 등에서는 <code class="language-plaintext highlighter-rouge">redux</code> 를 사용하면 됩니다.</p>
+
+<h2 id="리덕스-대체">리덕스 대체</h2>
+
+<p>위에서 리덕스에 관한 새로운 개념들이 많이 나왔습니다. 위에서 나온 action, action creator ,reducer, 등 다 직접 코드로 구현해야하는 작업이기에 실제 코드량도 많아지고 배워야하는 러닝커브도 있습니다.</p>
+
+<p>전역적으로 상태를 관리하기 위해서는 굳이 리덕스를 쓰지 않고 react에서 제공하는 <code class="language-plaintext highlighter-rouge">context API</code> 같은 <code class="language-plaintext highlighter-rouge">Hooks</code>도 있고, 리덕스 대신 <code class="language-plaintext highlighter-rouge">Mobx</code>, <code class="language-plaintext highlighter-rouge">SWR</code> 무조건 리덕스를 써야하는건 아닙니다.<br />
+하지만 프로젝트의 규모가 크고, 비동기 처리를 자주 해야하는 하며, 제일 중요한 리덕스를 사용해봤을때, 사용하는게 편리하다면 리덕스를 한번 해보는 것을 추천드립니다!</p>
+
+<p>감사합니다~ 웹 파트 파이팅</p>
+
+  </article>
+  <br>
+
+  <hr/><br>
+
+  <div class="author">
+    
+    <table>
+        <tr>
+          <td rowspan="3" style="padding-right: 10px"><img class="author-pic" src="https://github.com/.png" alt=""></td>
+          <td><b><h2 rel="author"></h2></b></td>
+        </tr>
+      <tr>
+        <td><p rel="author"></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a rel="author" href="https://github.com/" target="_blank"><i class="fa fa-github fa-2x"></i></a>&nbsp&nbsp
+          
+        </td>
+      </tr>
+    </table>
+
+  </div>
+
+
+  <br>
+  <hr/>
+  <div>
+    <script src="https://utteranc.es/client.js"
+        repo="gdsc-seoultech/blog-comments"
+        issue-term="pathname"
+        label="comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+  </div>
+
+</div>
+<script src="/js/toc.js"></script>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper" align="center">
+  	<h4>This site was built using <a href="http://jekyllrb.com" target="_blank">Jekyll</a> and is hosted on <a href="https://github.com" target="_blank">Github</a>. &#169; GDSC Seoultech</h4>
+  </div>
+
+</footer>
+
+
+  </body>
+</html>
