@@ -1,0 +1,37 @@
+---
+layout: default
+---
+<div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <h5 class="post-description">{{ page.description }}</h5>
+  </header>
+
+  <div class="category-list" >
+    <ul>
+      {% for category in site.categories %}
+        <li><a href="/category/{{ category | first }}">{{ category | first }}({{ category | last | size }}) </a></li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <p>
+    <br>
+    <hr style="width: 270px; size: 5px;">
+  </p>
+
+  <!-- post된 글들 전부 목록 -->
+    <ul class="post-list">
+
+    {% assign post_list = site.posts %}
+    {% for post in post_list %}
+        <li>
+            <h3><a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+            <p class="post-author">작성자: {{ post.author }}</p>
+            <p class="post-meta">{{ post.date | date: '%Y년 %m월 %-d일 %H:%M' }}</p>
+          </li>
+    {% endfor %}
+    </ul>
+
+</div>
