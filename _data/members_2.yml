@@ -8,7 +8,6 @@ drizzle0171:
   introduce: 안녕하세요, 서울과학기술대학교 산업공학과 산업정보시스템전공 20학번 이슬비입니다. 이제 6학기 째를 바라보고 있는 3학년입니다. 가장 관심 있는 분야는 ML-Ops와 딥러닝, 그 중에서도 Multi-modal에 큰 흥미를 느끼며 공부하고 있습니다. 1기 멤버를 하며 깨달았던 스스로에 대한 가능성, 여러분도 GDSC Seoultech에서 느꼈으면 좋겠습니다! 1년 동안 함께 열심히 해봅시다 ✨
   blog_platform: velog
   blog: https://velog.io/@drizzle0171
-
 keonju:
   name: 나건주
   author_name: 건주
@@ -143,6 +142,8 @@ gagyeong:
   github: gaguriee
   description: 일단 가보자고
   introduce: 저는 서울과학기술대학교 itm 전공 20학번 김가경입니다. 현재 안드로이드 앱 개발을 위해 코틀린을 공부하고 있으며, 간간이 웹 개발도 해보고 있습니다.  <br> 저는 GDSC에서 다양한 전공, 분야의 사람들과 개발에 관한 경험을 이야기해 보고 싶어서 들어오게 되었습니다. <br> 뭐든지 주저하지 않고 우선 해보는 자세를 추구합니다. 잘 부탁드려요~!
+  blog_platform: null
+  blog: null
 hyunjun:
   name: 심현준
   author_name: 현준
@@ -181,6 +182,8 @@ yeonsu:
   github: dustnehowl
   description: 미루지 말자, 어짜피 다 내가 할 일이다.
   introduce: 안녕하세요 서울과학기술대학교 컴퓨터공학과 재학중인 김연수입니다. 데이터 분석, 딥러닝, 머신러닝 등 데이터를 다루는 일에 흥미가 있어 데이터 엔지니어를 목표로 공부를 하고 있습니다. 공통 관심사를 가진 사람과 함께 성장하고 싶어 gdsc 2기 멤버로 활동하게 되었습니다. 잘 부탁드립니다!
+  blog_platform: null
+  blog: null
 songhee:
   name: 백송희
   author_name: 송희
@@ -189,7 +192,9 @@ songhee:
   github: 100SongH
   description: 하고 싶은 일은 재밌게, 최선을 다해서
   introduce: 안녕하세요! 전자IT미디어공학과 19학번 백송희입니다. 현재 컴퓨터공학과 복수전공을 하며 안드로이드 개발자를 꿈꾸고 있습니다. <br>학교 다닐 때 많은 일을 해보며 가보지 않은 길에 대한 후회를 남기지 않으려고 노력하고 있습니다. 같이 열심히 노력하며 성장하고 싶습니다. 감사합니다
- jeongjoon:
+  blog_platform: null
+  blog: null
+jeongjoon:
   name: 박정준
   author_name: 정준
   role: member
@@ -197,30 +202,35 @@ songhee:
   github: prislewarz
   description: GDSC 멤버가 되기 위한 노력과 GDSC에서의 경험은 제 인생의 전환점이 될 것입니다.
   introduce: 안녕하세요. 서울과학기술대학교 산업정보시스템전공 21학번 박정준입니다. 작년 1기 지원 당시 서류를 붙었음에도 면접을 보지 못해 안타깝게 떨어졌던 아쉬움으로 2기에는 기필코 합격하고자 많은 노력이 있었고, 그 과정에서 제게 큰 용기가 필요했습니다. 포기하지 않고 일단 부딪혀보자는 심정으로 지원했고 그 결과 이 자리에 있게 되었습니다. IT 분야 전반적으로 흥미가 있어, DL커리큘럼 이외에도 CS나 웹, 앱 등 다양하게 공부해보고 싶습니다! GDSC에 동기부여와 함께 실력 향상, 그리고 인적 네트워킹을 통한 낮가림 극복과 사교력(협업능력) 증진을 위해 GDSC에 들어왔습니다. 제 인생이 GDSC 활동 전과 후로 나뉠 수 있게끔, 최선을 다해 활동하며 제 자신을 조금씩 바꾸어 나가겠습니다!
+  blog_platform: null
+  blog: null
 dongyoung:
-   name: 조동영
-   author_name: 동영
-   role: member
-   email: ezcho886@gmail.com
-   github: ezcho
-   description: 극한의 효율을 추구하는 삶
-   introduce: 안녕하세요! 웹파트 멤버 컴퓨터공학과 19학번 조동영입니다.<br>
-   아직 2학년인 저는 시스템 프로그래밍, 웹페이지 제작, Open stack등 다양한 분야에 발을 담구기 위해 시도 중 입니다!! <br> 성능을 추구하는 우리의 개발처럼 저의 삶도 효율적이고 완벽하게 꾸며나가고 싶습니다!<br> GDSC사람들과 1년동안 열심히하며! 팀 활동을 통해 최고의 성장을 하는 관계로 발전했으면 좋겠습니다!!
+  name: 조동영
+  author_name: 동영
+  role: member
+  email: ezcho886@gmail.com
+  github: ezcho
+  description: 극한의 효율을 추구하는 삶
+  introduce: 안녕하세요! 웹파트 멤버 컴퓨터공학과 19학번 조동영입니다.<br>아직 2학년인 저는 시스템 프로그래밍, 웹페이지 제작, Open stack등 다양한 분야에 발을 담구기 위해 시도 중 입니다!! <br> 성능을 추구하는 우리의 개발처럼 저의 삶도 효율적이고 완벽하게 꾸며나가고 싶습니다!<br> GDSC사람들과 1년동안 열심히하며! 팀 활동을 통해 최고의 성장을 하는 관계로 발전했으면 좋겠습니다!!
+  blog_platform: null
+  blog: null
 junseok:
-   name: 전준석
-   author_name: 준석
-   role: member
-   email: hahaskyjun@gmail.com
-   github: gumchinjun
-   description: 재밌지만 후회없는 인생을 살자!
-   introduce: 안녕하세요 서울과학기술대학교 ITM전공에 재학중인 19학번 전준석입니다. 아직까지 많은 분야를 접해보지는 않았지만 데이터 공부에 관심을 갖고 공부하고 있습니다 다양하고 열정 많은 GDSC 사람들과 교류하며 배우고 나눌 수 있는 멤버로 성장하고 싶습니다. 1년동안 후회하지 않기 위해 열심히 노력하겠습니다.
+  name: 전준석
+  author_name: 준석
+  role: member
+  email: hahaskyjun@gmail.com
+  github: gumchinjun
+  description: 재밌지만 후회없는 인생을 살자!
+  introduce: 안녕하세요 서울과학기술대학교 ITM전공에 재학중인 19학번 전준석입니다. 아직까지 많은 분야를 접해보지는 않았지만 데이터 공부에 관심을 갖고 공부하고 있습니다 다양하고 열정 많은 GDSC 사람들과 교류하며 배우고 나눌 수 있는 멤버로 성장하고 싶습니다. 1년동안 후회하지 않기 위해 열심히 노력하겠습니다.
+  blog_platform: null
+  blog: null
 minseob:
-   name: 이민섭
-   author_name: 민섭
-   role: member
-   email: dlalstjq612@gmail.com
-   github: MinCOnMinCon
-   description: 경험하고 생각하기
-   introduce: 안녕하세요. 저는 서울과기대 컴퓨터공학과 22학번 이민섭입니다. 아직 1학년 1학기밖에 지내지 못해 모르는 게 많아 GDSC에 신청하게 되었습니다. <br> 목표는 이번 1년의 활동을 통해 앞으로의 개발자 생활의 기반을 쌓는 것 입니다! 성실히 해서 다른 분들께 누가 되지 않도록 노력하겠습니다!
-   blog_platform: null
-   blog: null
+  name: 이민섭
+  author_name: 민섭
+  role: member
+  email: dlalstjq612@gmail.com
+  github: MinCOnMinCon
+  description: 경험하고 생각하기
+  introduce: 안녕하세요. 저는 서울과기대 컴퓨터공학과 22학번 이민섭입니다. 아직 1학년 1학기밖에 지내지 못해 모르는 게 많아 GDSC에 신청하게 되었습니다. <br> 목표는 이번 1년의 활동을 통해 앞으로의 개발자 생활의 기반을 쌓는 것 입니다! 성실히 해서 다른 분들께 누가 되지 않도록 노력하겠습니다!
+  blog_platform: null
+  blog: null

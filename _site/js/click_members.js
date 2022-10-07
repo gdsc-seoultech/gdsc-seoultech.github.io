@@ -29,22 +29,9 @@ window.onload = function () {
         "yuseogi",
         "kangmin",
         "leeeha",
-        "jwyeeh-dev",
-        "yoouung",
-        "Higeuni",
-        "hongmu",
         "juwhan",
-        "dann",
-        "seunggu",
-        "chunngye",
-        "gagyeong",
-        "hyunjun",
-        "jonghun",
-        "hyeok",
-        "yeonsu",
-        "songhee",
-        "jeongjoon",
-        
+        'dann',
+        'hongmu',
       ]
 
   ];
