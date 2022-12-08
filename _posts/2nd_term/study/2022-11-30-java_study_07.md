@@ -1,0 +1,295 @@
+## 람다함수란?
+---
+- 프로그래밍 언어에서 사용되는 개념으로 __익명 함수__ 를 지칭하는 용어
+  - `익명 함수`란?
+    - 이름이 없는 함수
+    - 일반적으로 다른 객체들에 적용 가능한 연산을 모두 지원
+- 장점
+  - __코드의 간결성__: 불필요한 반복문의 삭제가 가능하며, 복잡한 식을 단순하게 표현할 수 있다.
+  - __지연연산 수행__: 불필요한 연산 최소화
+  - __병렬처리__: 멀티쓰레드를 활용하여 병렬처리를 사용할 수 있다.
+- 단점
+  - 람다식의 호출이 까다롭다.
+  - 불필요하게 많이 사용되면 오히려 __가독성을 떨어뜨릴 수 있다.__
+  
+
+<br/>
+  
+
+## 람다의 표현식
+---
+
+<p><img src="https://velog.velcdn.com/images/yoouung/post/15c97c50-f9b8-4b7b-9121-8fa0df5652c9/image.png" width="40%"></p>
+  
+
+- `매개변수 리스트`: 함수에 전달되는 매개변수들
+    - 매개변수를 생략하면 컴파일러가 추론 기능을 이용하여 알아서 처리한다.
+    - 매개변수가 하나인 경우 괄호를 생략할 수 있다.
+- `애로우 토큰`: 화살표(->)
+  - 매개변수들을 전달하여 함수 바디에 작성된 코드를 실행시킨다.
+- `함수 바디`: 함수의 코드
+  - 중괄호{}로 둘러싸는 것이 일반적이지만, 단일 실행문이면 괄호{}를 생랼할 수 있다.
+  - 단일 실행문이더라도 return문으로만 구성되어 있는 경우 괄호{}를 생략할 수 없다.
+  
+  <br/>
+  
+  
+__람다식 작성 예시__
+```java
+// 1. 기존 메서드
+int min(int x, int y) {
+    return x < y ? x : y;
+}
+
+// 2. 메서드명과 반환 타입 생략
+(int x, int y) -> {
+    return x < y ? x : y;
+}
+
+// 3. return문 대신 표현식 사용 그리고 중괄호의 생략
+// 이때는 문장이 아니므로 끝에 세미콜론은 생략한다.
+(int x, int y) -> x < y ? x : y
+
+// 4. 매개변수의 타입이 추론이 가능한 경우 생략
+(x, y) -> x < y ? x : y
+```
+
+<br/>
+
+__람다식으로 쓰레드 생성__
+
+
+```java
+public class LambdaExam1 {
+
+	public static void main(String[] args) {
+    	// Runnable 사용하여 쓰레드 생성
+		new Thread(new Runnable(){public void run(){
+			for(int i = 0; i < 10; i++){
+				System.out.println("hello");
+			}
+		}}).start();
+        
+        // 람다 사용하여 쓰레드 생성
+        public Thread(() -> {
+        	for(int i =0; i < 10; i++){
+            	System.out.println("hello2");
+            }
+        }}).start();
+	}   
+   
+}
+```
+
+<br/>
+
+
+## 람다식 만들고 호출하기
+---
+- 람다식은 `함수형 인터페이스`를 구현한 객체이다.
+- `함수형 인터페이스`란 추상 메소드 하나만 있는 인터페이스
+
+```java
+// 람다 표현식
+(x, y) -> x < y ? x : y
+
+// 익명 함수
+new Object() {
+    int min(int x, int y) {
+        return x < y ? x : y;
+    }
+}
+```
+
+> 1. 함수형 인터페이스 작성
+> 2. 함수형 인터페이스의 추상 메소드를 람다식으로 구현
+> 3. 람다식 호출
+
+<br/>
+
+### 예시
+Car 클래스
+```java
+public class Car{
+    //이름, 탑승인원, 가격, 사용년수를 필드로 가진다.
+    public String name;
+    public int capacity;  
+    public int price;
+    public int age;
+
+    //각각의 필드를 생성자에서 받아서 초기화한다.
+    public Car(String name, int capacity, int price, int age){
+        this.name = name;
+        this.capacity = capacity;
+        this.price = price;
+        this.age = age;
+    }
+    
+    //Car 객체를 문자열로 출력하면 이름을 출력한다.
+    public String toString(){
+        return name;
+    }
+} 
+```
+
+CarExam 클래스
+예제 1) 
+```java
+import java.util.*;
+public class CarExam{
+    public static void main(String[] args){
+        //Car객체를 만들어서 cars에 넣는다.
+        List<Car> cars = new ArrayList<>();
+        cars.add( new Car("작은차",2,800,3) );
+        cars.add( new Car("봉고차",12,1500,8) );
+        cars.add( new Car("중간차",5,2200,0) );
+        cars.add( new Car("비싼차",5,3500,1) );
+        
+        printCarCheaperThan(cars, 2000);
+    }
+    
+    public static void printCarCheaperThan(List<Car> cars, int price){
+        for(Car car : cars){
+            if(car.price < price){
+                System.out.println(car);
+            }
+        }
+    }
+}
+```
+
+<br/>
+
+예제 2) 내부 클래스 사용
+```java
+import java.util.*;
+public class CarExam{
+    public static void main(String[] args){
+        List<Car> cars = new ArrayList<>();
+        cars.add( new Car("작은차",2,800,3) );
+        cars.add( new Car("봉고차",12,1500,8) );
+        cars.add( new Car("중간차",5,2200,0) );
+        cars.add( new Car("비싼차",5,3500,1) );
+        
+        printCar(cars, new CheckCarForBigAndNotExpensive());
+    }
+    
+    public static void printCar(List<Car> cars, CheckCar tester){
+        for(Car car : cars){
+            if (tester.test(car)) {
+                System.out.println(car);
+            }
+        }
+    }
+    
+    // 함수형 인터페이스
+    interface CheckCar{
+        boolean test(Car car);
+    }
+    
+    // 내부클래스를 만들어 사용
+    static class CheckCarForBigAndNotExpensive implements CheckCar{
+        public boolean test(Car car){
+            return car.capacity >= 4 && car.price < 2500;
+        }
+    }
+}
+```
+
+<br/>
+
+예제 3) 익명 클래스 사용
+```java
+import java.util.*;
+public class CarExam{
+    public static void main(String[] args){
+        List<Car> cars = new ArrayList<>();
+        cars.add( new Car("작은차",2,800,3) );
+        cars.add( new Car("봉고차",12,1500,8) );
+        cars.add( new Car("중간차",5,2200,0) );
+        cars.add( new Car("비싼차",5,3500,1) );
+        
+        printCar(cars, 
+            //인터페이스 CheckCar를 구현하는 익명클래스를 만든다.
+            new CheckCar(){
+                public boolean test(Car car){
+                    return car.capacity >= 4 && car.price < 2500;
+                }
+            });
+    }
+    
+    public static void printCar(List<Car> cars, CheckCar tester){
+        for(Car car : cars){
+            if (tester.test(car)) {
+                System.out.println(car);
+            }
+        }
+    }
+    
+    interface CheckCar{
+        boolean test(Car car);
+    }  
+}
+```
+- 별도의 클래스를 생성할 필요가 없어 코드가 간결해졌다.
+
+<br/>
+ 
+
+예제 4) 람다 사용
+```java
+public class CarExam{
+    public static void main(String[] args){
+        List<Car> cars = new ArrayList<>();
+        cars.add( new Car("작은차",2,800,3) );
+        cars.add( new Car("봉고차",12,1500,8) );
+        cars.add( new Car("중간차",5,2200,0) );
+        cars.add( new Car("비싼차",5,3500,1) );
+        
+        // printCar이 static하지 않음 -> 생성자 호출
+        CarExam carExam = new CarExam();
+        carExam.printCar(cars, 
+            (Car car) -> { return car.capacity >= 4 && car.price < 2500; }
+        );
+    }
+    
+    public void printCar(List<Car> cars, CheckCar tester){
+        for(Car car : cars){
+            if (tester.test(car)) {
+                System.out.println(car);
+            }
+        }
+    }
+    
+    interface CheckCar{
+        boolean test(Car car);
+    }  
+}
+```
+- 람다를 이용하면 메소드 지정도 필요 없으므로 더 간결해진다.
+
+<br/>
+
+ 
+## @FunctionalInterFace
+---
+- 함수형 인터페이스 라는걸 명시해 주지 않으면 일반 인터페이스로 인식해 추후 코드가 꼬여 에러가 발생할 수 있어 이를 방지하기 위해 `@FunctionalInterface`를 선언한다.
+- 함수형 인터페이스 앞에 `@FunctionalInterface` 주석문(annotation)을 사용하여, 컴파일러에게 함수형 인터페이스의 작성을 알릴 수 있다. 
+- 컴파일러에게 인터페이스가 __추상 메소드가 1개만 있는 함수형 인터페이스인지 확인__ 하도록 하여, 처음부터 잘못된 인터페이스 작성을 막는 장점이 있다.
+
+```java
+@FunctionalInterface
+interface MyFunction {
+	int calc(int x, int y);
+}
+```
+
+
+```java
+// 오류 발생 코드 (2개의 추상 메소드를 가지고 있음)
+@FunctionalInterface
+interface MyFunction { // 이 라인에 컴파일 오류 발생
+int calc(int x, int y);
+void print();
+}
+```
