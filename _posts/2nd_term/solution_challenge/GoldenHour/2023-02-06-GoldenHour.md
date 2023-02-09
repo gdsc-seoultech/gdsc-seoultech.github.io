@@ -1,3 +1,13 @@
+---
+layout: post
+title: "골든 아워, 두번째 이야기"
+date: 2023-02-06 23:59:59 +0900
+author: jaeyeong
+description: GoldenHour의 두번째 이야기
+categories: ["2nd_term"]
+tags: ["solution_challenge", "GoldenHour"]
+---
+
 # 3차 정기 회의 (1/19)
 
 ## 1. 화면별 기능 명세서 작성
