@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  대면 모각코 스터디 2주차!
-date: 2023-03-16 23:59:59 +0900
+date: 2023-03-15 23:59:59 +0900
 author: nathn00
 categories: ["2nd_term"]
 tags: ["study"]
