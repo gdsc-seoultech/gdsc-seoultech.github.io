@@ -5,7 +5,7 @@ date: 2023-03-21 23:59:59 +0900
 author: higeuni
 description: Network Study
 categories: ["2nd_term"]
-tags: ["스터디"]
+tags: ["study"]
 ---
 
 # 네트워크 스터디 2주차 보고
