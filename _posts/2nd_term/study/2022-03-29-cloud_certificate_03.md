@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 모각클 2주차🔥
+title: 모각클 3주차🔥
 date: 2023-03-28 23:59:59 +0900
 author: yeonsu
 categories: ["2nd_term"]
