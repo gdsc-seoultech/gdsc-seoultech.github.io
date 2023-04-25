@@ -1,5 +1,3 @@
-GDSC Study Blog Form
-
 ---
 layout: post
 title:  대면 모각코 스터디 4주차!
