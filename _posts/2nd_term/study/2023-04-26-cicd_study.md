@@ -1,12 +1,12 @@
 ---
 layout: post
-title: CI/CD 스터디 10주차 보고
-date: 2023-04-26 23:59:59+0900
-author: dustnehowl
+title:  대면 모각코 스터디 7주차!
+date: 2023-04-26 23:59:59 +0900
+author: nathn00
 categories: ["2nd_term"]
-tags: [”study”]
+tags: ["study"]
+---
 
-----
 
 # CI/CD 스터디 10주차 보고
 
