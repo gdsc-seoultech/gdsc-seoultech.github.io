@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  대면 모각코 스터디 7주차!
+title:  대면 모각코 스터디 9주차!
 date: 2023-04-26 23:59:59 +0900
 author: nathn00
 categories: ["2nd_term"]
 tags: ["study"]
 ---
 
-## 대면 모각코 스터디 7회차
+## 대면 모각코 스터디 9회차
 
 ---
 
