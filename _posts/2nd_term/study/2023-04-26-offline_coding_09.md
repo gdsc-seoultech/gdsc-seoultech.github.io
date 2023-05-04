@@ -13,7 +13,7 @@ tags: ["study"]
 
 [description]
 
-## 3주차 진행상황
+## 9주차 진행상황
 
 ---
 
