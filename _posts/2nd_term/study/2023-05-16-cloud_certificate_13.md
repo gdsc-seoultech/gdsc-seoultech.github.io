@@ -2,7 +2,7 @@
 layout: post
 title: 모각클 13주차 ❤️
 date: 2023-05-16 23:59:59 +0900
-author: ezcho
+author: yexjin
 categories: ["2nd_term"]
 tags: ["study"]
 ---
