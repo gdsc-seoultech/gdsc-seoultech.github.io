@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  미라클모닝 스터디 10주차 
-date: 2023-05-07 23:59:59 +0900
+date: 2023-05-15 23:59:59 +0900
 author: leeeha
 categories: ["2nd_term"]
 tags: ["study"]
