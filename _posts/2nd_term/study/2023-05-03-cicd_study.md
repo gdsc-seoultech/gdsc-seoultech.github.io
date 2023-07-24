@@ -4,7 +4,7 @@ title: CI/CD 스터디 11주차 보고
 date: 2023-05-03 18:59:59 +0900
 author: dustnehowl
 categories: ["2nd_term"]
-tags: [”study”]
+tags: ["study"]
 ---
 
 # CI/CD 스터디 11주차 보고
