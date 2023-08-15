@@ -39,10 +39,10 @@ layout: default
       </tr>
       <tr>
         <td>
-          <a rel="author" href="https://github.com/{{ author.github }}" target="_blank"><i class="fa fa-github fa-2x"></i></a>&nbsp&nbsp
-          {% if author.blog %}
-            <a rel="author" href="{{ author.blog }}" target="_blank"><img src="/img/blog_icon/{{ author.blog_platform }}.jpg" width="26px"></a>
-          {% endif %}
+          <a rel="author" href="https://github.com/{{ author.github }}" target="_blank"><i class="fa fa-github fa-2x"></i></a>
+          {% for blog in author.blogs %}
+          <a rel="author" href="{{ blog[1] }}" target="_blank"><img src="/img/blog_icon/{{ blog[0] }}.jpg" width="26px"></a>
+          {% endfor %}
         </td>
       </tr>
     </table>

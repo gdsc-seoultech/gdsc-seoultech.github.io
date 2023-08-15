@@ -4,6 +4,7 @@ permalink: /members/1
 title: MEMBER - 1st_term
 ---
 
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/css/member.css">
@@ -22,9 +23,9 @@ title: MEMBER - 1st_term
         <div class="member-card-container">
             <div class="member-card">
                 <div class="folder">
-                    {% assign member = site.data.members | map: "members_1" | first | where: "role", "lead" %}
+                    {% assign member = site.data.members | map: "members_1" | first | where: "role", "lead" | first %}
                 </div>
-                <span class="member-name">{{ member | map: "name" }}</span>
+                <span class="member-name">{{ member.name }}</span>
             </div>
             <div class="black_bg">
                 <div class="modal_close"><a href="#;">close</a></div>
@@ -32,18 +33,19 @@ title: MEMBER - 1st_term
             <!-- modal start -->
             <div class="modal_wrap">
                 <div class="the_member">
-                    <img class="member_image" src="https://github.com/{{ member | map: 'github' }}.png">
+                    <img class="member_image" src="https://github.com/{{ member.github }}.png">
                     <div class="member_description">
-                        <p class="text" id="title"> {{ member | map: "description" }} </p>
-                        <p class="text" id="name"> {{ member | map: "name" }} </p>
-                        <P class="text" id="d"> {{ member | map: "introduce" }}</p>
+                        <p class="text" id="title"> {{ member.description }} </p>
+                        <p class="text" id="name"> {{ member.name }} </p>
+                        <P class="text" id="d"> {{ member.introduce }}</p>
                         <span class="member-icon"><a class="link-dark"
-                                href="https://github.com/{{ member | map: 'github' }}" target="_blank"><i
+                                href="https://github.com/{{ member.github }}" target="_blank"><i
                                     class="fa fa-github fa-2x"></i></a></span>
-                        <a rel="author" href="{{ member | map: 'blog' }}" target="_blank"><img
-                                src="/img/blog_icon/{{ member | map: 'blog_platform' }}.jpg" width="26px"></a>
-                        <a rel="author" href="https://blog.naver.com/yongsan0701" target="_blank"><img
-                                src="/img/blog_icon/naver.jpg" width="26px"></a>
+                        
+                        {% for blog in member.blogs %}
+                        <a rel="author" href="{{ blog[1] }}" target="_blank"><img
+                            src="/img/blog_icon/{{ blog[0] }}.jpg" width="26px"></a>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
@@ -77,8 +79,10 @@ title: MEMBER - 1st_term
                         <span class="member-icon"><a class="link-dark"
                                 href="https://github.com/{{ member.github }}" target="_blank"><i
                                     class="fa fa-github fa-2x"></i></a></span>
-                        <a rel="author" href="{{ member.blog }}" target="_blank"><img
-                                src="/img/blog_icon/{{ member.blog_platform }}.jpg" width="26px"></a>
+                        {% for blog in member.blogs %}
+                        <a rel="author" href="{{ blog[1] }}" target="_blank"><img
+                            src="/img/blog_icon/{{ blog[0] }}.jpg" width="26px"></a>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
@@ -110,8 +114,10 @@ title: MEMBER - 1st_term
                         <span class="member-icon"><a class="link-dark"
                                 href="https://github.com/{{ member.github }}" target="_blank"><i
                                     class="fa fa-github fa-2x"></i></a></span>
-                        <a rel="author" href="{{ member.blog }}" target="_blank"><img
-                                src="/img/blog_icon/{{ member.blog_platform }}.jpg" width="26px"></a>
+                        {% for blog in member.blogs %}
+                        <a rel="author" href="{{ blog[1] }}" target="_blank"><img
+                            src="/img/blog_icon/{{ blog[0] }}.jpg" width="26px"></a>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
