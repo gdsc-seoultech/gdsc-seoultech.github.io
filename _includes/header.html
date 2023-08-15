@@ -24,14 +24,24 @@
     <div class="wrapper">
       <div class="detail-post">
           <div class="tab-item">
-            <div><a class="page-link-detail" href="{{ site.baseurl }}/category/1st_term">1기</a></div>
-            <div><a class="page-link-detail" href="{{ site.baseurl }}/category/2nd_term">2기</a></div>
+            {% assign cnt = 0 %}
+            {% for page in site.pages %}
+            {% if page.layout == "category" %}
+            {% assign cnt = cnt | plus: 1 %}
+            <div><a class="page-link-detail" href="{{ site.baseurl }}/category/{{ page.title }}">{{ cnt }}기</a></div>
+            {% endif %}
+            {% endfor %}
           </div>
       </div>
       <div class="detail-member">
         <div class="tab-item">
-          <div><a class="page-link-detail" href="{{ site.baseurl }}/members/1">1기</a></div>
-          <div><a class="page-link-detail" href="{{ site.baseurl }}/members/2">2기</a></div>
+          {% assign cnt = 0 %}
+          {% for page in site.pages %}
+          {% if page.layout == "mem_page" %}
+          {% assign cnt = cnt | plus: 1 %}
+          <div><a class="page-link-detail" href="{{ site.baseurl }}{{page.permalink}}">{{ cnt }}기</a></div>
+          {% endif %}
+          {% endfor %}
         </div>
     </div>
     </div>
