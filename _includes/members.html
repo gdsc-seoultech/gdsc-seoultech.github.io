@@ -1,0 +1,50 @@
+{% assign filename = page.name | split: '.' | first %}
+<div class="container" style="font-family: 'Google Sans'">
+    <p>WE ARE <span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
+</div>
+{% assign types = "lead,core,member" | split: ',' %}
+{% for type in types%}
+<div class="introduction">
+    <p class="who" style="font-family: 'Google Sans';">{{ type | upcase }}</p>
+    <div class="member-card-container">
+
+        {% assign members = site.data.members | map: filename | first | where: "role", type %}
+        {% for member in members %}
+        <div class="member-card">
+            <div class="folder">
+            </div>
+            <span class="member-name">{{ member.name }}</span>
+        </div>
+        <div class="black_bg">
+            <div class="modal_close"><a href="#;">close</a></div>
+        </div>
+        <div class="modal_wrap">
+            <div class="the_member">
+                <img class="member_image" src="https://github.com/{{ member | map: 'github' }}.png">
+                <div class="member_description">
+                    <p class="text" id="title"> {{ member.description }} </p>
+                    <p class="text" id="name"> {{ member.name }} </p>
+                    <P class="text" id="d"> {{ member.introduce }}</p>
+                    <span class="member-icon"><a class="link-dark"
+                            href="https://github.com/{{ member.github }}" target="_blank"><i
+                                class="fa fa-github fa-2x"></i></a></span>
+                    {% for blog in member.blogs %}
+                    <a rel="author" href="{{ blog[1] }}" target="_blank"><img
+                        src="/img/blog_icon/{{ blog[0] }}.jpg" width="26px"></a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {% endfor%}
+    </div>
+</div>
+{% endfor %}
+<div class="introduction">
+    <!-- 밑에 공간을 만들어주기 위해서-->
+    <div class="member-card-container">
+        <div class="member-card"></div>
+    </div>
+</div>
+<!-- js는 마지막즈음에 두도록 하자! -->
+<script src="/js/member.js"></script> <!-- 이 js는 꼭 마지막에 두는 것을 추천! html 코드를 보고 움직이기 때문! -->
+<script src="/js/click_members.js"></script>
