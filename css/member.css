@@ -34,10 +34,12 @@ body {
   font-weight: bold;
   letter-spacing: 0.2rem;
   text-align: center;
+  line-height: 5rem;
   /*overflow: hidden;*/
 }
 .container p span.typed-text {
   font-weight: bold;
+  word-break: break-all;
 }
 .container p span.cursor {
   display: inline-block;
@@ -101,6 +103,7 @@ body {
   width: 100%;
   display:flex;
   flex-wrap: wrap; /* 넘쳤을 때 다음 줄로 나열 */
+  justify-content: space-between;
   /*position:absolute;
   left:18%;
   right:0;
@@ -108,18 +111,40 @@ body {
 
 }
 
+.member-card-container::after{
+  flex: auto;
+  content: "";
+}
+
 .member-card{
   /*폴더 한 줄에 대한 위치 조정이 아니라 그냥 폴더랑 이름을 같이 묶은 그룹*/
-  width: 200px;
-  height: 275px;
-  margin-right: 80px;
+  width: calc(20% - 40px);
+  margin: 0 20px;
+  height: 250px;
+}
 
+@media (max-width: 1200px) {
+  .member-card {
+    width: calc(25% - 40px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .member-card {
+    width: calc(33% - 40px);
+  }
+}
+
+@media (max-width: 768px) {
+  .member-card {
+    width: calc(100% - 80px);
+    margin: 40px;
+  }
 }
 
 
 .member-name { /*폴더랑 이름이 있다고 했을 때 이름만 해당*/
-  display: inline-block;
-  width: 200px;
+  display: block;
   font-family: 'Montserrat', sans-serif;
   font-size: 24px;
   font-weight: 500;
