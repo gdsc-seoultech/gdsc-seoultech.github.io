@@ -2,7 +2,7 @@
 layout: post
 title:  대면 모각코 스터디 12주차!
 date: 2023-05-09 23:59:59 +0900
-author: nathn00
+author: dann
 categories: ["2nd_term"]
 tags: ["study"]
 ---
