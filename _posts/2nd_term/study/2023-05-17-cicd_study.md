@@ -1,7 +1,7 @@
 ---
 layout: post
 title: CI/CD 스터디 12주차 보고
-date: 2023-05-017 18:59:59 +0900
+date: 2023-05-17 18:59:59 +0900
 author: yeonsu
 categories: ["2nd_term"]
 tags: [”study”]
@@ -23,7 +23,7 @@ pull request 시에 자동으로 빌드하고 테스트하는 과정을 자동�
 
 1. Docker login : 깃헙 액션에서 ci/cd 파이프라인을 구축하면 가상환경 내에서 일련의 과정들이 진행된다. 이때 docker hub에서 이미지들을 가져오고 혹은 올리는 데 docker hub 유저 이름(이메일 아님)과 비밀번호가 필요하다. 이때 유저 이름과 비밀번호가 workflow 파일에 올라가면 안되므로 github secret을 이용한다.
 
-```bash
+```bash{% raw %}
 # workflow 파일
 
 # DockerHub 로그인
@@ -31,10 +31,10 @@ pull request 시에 자동으로 빌드하고 테스트하는 과정을 자동�
       uses: docker/login-action@v2
       with:
         username: ${{ secrets.DOCKERHUB_USERNAME}}
-        password: ${{ secrets.DOCKERHUB_PASSWORD}}
+        password: ${{ secrets.DOCKERHUB_PASSWORD}}{% endraw %}
 ```
 
-${{}} 에 들어가는 것이 github secret인데 환경변수라고 생각하면 편하다. 
+${% raw %}{{}}{% endraw %} 에 들어가는 것이 github secret인데 환경변수라고 생각하면 편하다. 
 
 - secret key 설정하는 방법
     
@@ -48,14 +48,14 @@ ${{}} 에 들어가는 것이 github secret인데 환경변수라고 생각하�
     
 1. Docker 이미지 빌드 & push : `./gradlew build -x test`의 결과로 나온 .jar 을 docker image로 만들어주는 과정이다. 여담이지만 이 과정이 ci/cd를 적용해보고 싶었던 2번째 이유인데, EC2 인스턴스를 t2.micro를 사용하고 있는데 진짜 너무너무너무너무너무너무 쪼잔하다,,, 그래서 자꾸 위의 빌드를 실행하다가 인스턴스가 터져버렸다. 그래서 ‘아 그냥 jar 파일을 이미지로 만들어서 도커 허브에 올리고 싶다..’ 라는 생각을 했었는데 이 과정이 그 과정이다.
 
-```bash
+```bash{% raw %}
 	# Docker 이미지 빌드
   - name: Docker Image Build
     run: docker build -t ${{ secrets.DOCKERHUB_USERNAME}}/${{ secrets.PROJECT_NAME }} .
 
   # DockerHub Push
   - name: DockerHub Push
-    run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.PROJECT_NAME }}
+    run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.PROJECT_NAME }}{% endraw %}
 ```
 
 1. 인스턴스 접속 및 애플리케이션 실행 : 이제 docker image를 만들고 docker hub 에 push 했으니 인스턴스에 접속해서 pull 하고 run 만 하면 된다. docker를 사용하지 않을 때는 이 과정을 aws code deploy와 s3를 이용해서 s3에 올린 .jar을 가져와서 실행하는 과정을 공부했었는데, docker를 사용하는 방법이 내가 지금까지 배포 해왔던 방법과 유사하고 더 쉬워서 이 방법을 채택했다.
