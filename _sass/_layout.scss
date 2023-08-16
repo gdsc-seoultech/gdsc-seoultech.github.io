@@ -233,7 +233,7 @@
 }
 .post-content {
   img {
-    max-width: -webkit-calc(800px - (#{$horizontal-spacing-unit} * 2));
+    max-width: 100%;
   }
   p {
     margin-top: 10px;
@@ -424,7 +424,7 @@
   }
 }
 
-@media screen and (max-width: 1224px) {
+@media screen and (max-width: 1200px) {
   .toc-area {
     display: none;
   }
@@ -443,6 +443,11 @@
     margin-right: 20px;
   }
 }
+
+.post-content {
+  max-width: 1024px;
+}
+
 .post-content div[class*="language-"] {
   -webkit-overflow-scrolling: touch;
   position: relative;
