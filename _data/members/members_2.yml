@@ -6,8 +6,9 @@ drizzle0171:
   github: drizzle0171
   description: 생각함을 멈추지 말자
   introduce: 안녕하세요, 서울과학기술대학교 산업공학과 산업정보시스템전공 20학번 이슬비입니다. 이제 6학기 째를 바라보고 있는 3학년입니다. 가장 관심 있는 분야는 ML-Ops와 딥러닝, 그 중에서도 Multi-modal에 큰 흥미를 느끼며 공부하고 있습니다. 1기 멤버를 하며 깨달았던 스스로에 대한 가능성, 여러분도 GDSC Seoultech에서 느꼈으면 좋겠습니다! 1년 동안 함께 열심히 해봅시다 ✨
-  blog_platform: velog
-  blog: https://velog.io/@drizzle0171
+  blogs:
+    velog: https://velog.io/@drizzle0171
+    naver: https://blog.naver.com/yongsan0701
 keonju:
   name: 나건주
   author_name: 건주
@@ -16,8 +17,8 @@ keonju:
   github: keonju2
   description: 선택에 후회하지 않는 사람이고 싶습니다.
   introduce: 산업정보시스템, 빅데이터 경영공학을 전공으로 하고 있는 19학번 나건주입니다. ML, DL과 시각화에 관련한 공부를 하는 것에 관심이 많지만 그 외에 개발 관련해서는 매우 많이 부족합니다. 하고 싶은 것도 배우고 싶은 것도 배워야 할 것도 많아 GDSC를 통해 함께 성장해나갈 수 있었으면 좋겠습니다!
-  blog_platform: github
-  blog: https://keonju2.github.io/
+  blogs:
+    github: https://keonju2.github.io/
 yejin:
   name: 오예진
   author_name: 예진
@@ -26,8 +27,8 @@ yejin:
   github: yexjin
   description: 하고싶은건 많은데 삶이 너무 짧아요..
   introduce: 안녕하세요, 웹파트 코어를 맡은 컴퓨터공학과 오예진입니다! 저는 React, iOS, 영어, 알고리즘, 대외활동, 알바, 놀기 등.. 하고 싶은 것과 배우고 싶은게 너무 많아서 휴학을 하고 알찬 나날들을 보내고 있어요! <br> 그러던 중, 이번 하반기를 GDSC와 함께 할 수 있게 되어서 기대도 많이 되고 벌써 즐겁네용 😊 <br> 1년동안 다양한 분야의 GDSC 멤버들과 멋지게 성장하는 잊지 못할 추억을 만들고 싶어요. 잘부탁드립니다!
-  blog_platform: tistory
-  blog: https://yexjinitlog.tistory.com
+  blogs:
+    tistory: https://yexjinitlog.tistory.com
 yuseogi:
   name: 이유석
   author_name: 유석
@@ -36,8 +37,9 @@ yuseogi:
   github: yuseogi0218
   description: 다음 생은 없어요. 열심히 살거에요.
   introduce: 안녕하세요! 웹파트 코어를 맡은 ITM 전공 17학번 이유석입니다. 현재 4학년에 들어가기 전 마지막 휴학을 즐기며 다양한 활동들을 하고있는 중 입니다. 백엔드 개발자를 목표로 열심히 Spring, SQL, 알고리즘 등을 공부하고 있습니다ㅎ <br> 창업, 금융 시스템, 디자인 등 개발 이외에도 관심있는 분야가 많아 여러 프로젝트에 참여하고 있어요. GDSC 에서 1년동안 다 같이 멋있는 개발자로 성장해보아요!
-  blog_platform: velog
-  blog: https://velog.io/@yuseogi0218
+  blogs:
+    velog: https://velog.io/@yuseogi0218
+
 kangmin:
   name: 김강민
   author_name: 강민
@@ -46,8 +48,8 @@ kangmin:
   github: rkdals0203
   description: 한 줄에 담기엔 벅찬 사람(..이 되자)
   introduce: 안녕하세요, 안드로이드 코어를 맡게 된 ITM전공 19학번 김강민입니다. 다른 분들과 함께 개발에 대해 공부하고 프로젝트를 진행하는 경험은 처음이라 기대가 되네요! 서로에게 힘이 되며 많은 성장을 할 수 있는 1년이 되면 좋겠습니다. 저는 아이디어가 많은 사람입니다. 그리고 개발을 통해 이를 실현하는 멋진 일을 하면 좋겠다는 생각을 많이 했습니다. GDSC 활동을 하며 혼자보다는 여럿이 이런 멋진 일을 해낼 때 기쁨이 더 크다는 것을 몸소 느끼고 싶어요!
-  blog_platform: velog
-  blog: https://velog.io/@rkdals0203
+  blogs:
+    velog: https://velog.io/@rkdals0203
 leeeha:
   name: 이하은
   author_name: 하은
@@ -56,8 +58,8 @@ leeeha:
   github: leeeha
   description: 하루하루는 성실하게, 인생 전체는 되는대로
   introduce: 안녕하세요! 저는 서울과기대 컴퓨터공학과 20학번 이하은입니다. 작년 1기부터 시작된 안드로이드와의 인연을 지속해나가고 싶어서, 이렇게 2기 코어 멤버로도 활동하게 됐습니다! <br> 저는 서로의 지식과 경험을 공유하며 함께 성장하는 개발 문화를 좋아합니다. 그리고 우리 주변에서 발견할 수 있는 작고 사소한 문제부터 중요한 사회적 문제까지, 기술을 도구로 활용하여 그런 문제를 해결하는 데 도움을 줄 수 있는 개발자가 되는 게 제 목표입니다! 앞으로 1년간 GDSC에서 함께 공부하고 성장하며 멋진 커뮤니티를 만들어봅시다 🤗
-  blog_platform: velog
-  blog: https://velog.io/@jxlhe46
+  blogs:
+    velog: https://velog.io/@jxlhe46
 jwyeeh-dev:
   name: 황재영
   author_name: 재영
@@ -66,8 +68,8 @@ jwyeeh-dev:
   github: jwyeeh-dev
   description: 매번 새롭고, 도전적으로.
   introduce: 안녕하세요! 저는 서울과학기술대학교 전기정보공학과 17학번 황재영입니다! GDSC로써 활동할 수 있다는 것에 벌써부터 많이 설레네요😆 <br> 요즘의 저는 ML, DL, 시각화, 분석 등 하고싶은게 정말 많아요! 그래서 사람들과 다양한 걸 경험해보고, 무언가 의미있는 결과를 만들어내고, 더 나아가서 많은 사람들에게 도움이 되는 데이터 사이언티스트가 되고 싶다는 큰 포부를 가지고 있습니다! <br> 그러니까 여러 프로젝트 같이 하실 분 있으시면 같이 해요!😄 <br> 앞으로 1년간 열심히 공부하고 한층 더 성장했으면 좋겠습니다! 잘 부탁드려요! 👋🏻
-  blog_platform: tistory
-  blog: https://jwyeeh.tistory.com/
+  blogs:
+    tistory: https://jwyeeh.tistory.com/
 yoouung:
   name: 박재영
   author_name: 재영
@@ -76,8 +78,8 @@ yoouung:
   github: yoouung
   description: LUCETE, 밝게 빛나라
   introduce: 안녕하세요! ITM전공 19학번 박재영입니다. 휴학하고 이것저것 해보다보니 웹 개발에 관심이 생겨 GDSC 웹 멤버로 활동하게 됐습니다! 백엔드보다는 결과가 바로 보이는 프론트가 주 관심사입니다👀 <br/> 일 벌리기를 좋아해서 꽤 알찬 휴학생활을 보내고 있어요. 아직은 해보고 싶은 것이 많이 남아있지만 하나씩 이루어가보려고 합니다. 그 중 첫 번째로 GDSC 2기로 활동하면서 많이 성장하고 발전하고 싶어요!  
-  blog_platform: velog
-  blog: https://velog.io/@yoouung
+  blogs:
+    velog: https://velog.io/@yoouung
 Higeuni:
   name: 김효근
   author_name: 효근
@@ -86,8 +88,8 @@ Higeuni:
   github: higeuni
   description: 오늘보다 내일 더 나은 사람
   introduce: 안녕하세요! 저는 컴퓨터공학과 18학번 김효근입니다! 원래 컴퓨터비전을 공부하다가 최근에 백엔드에 관심을 갖게 되어서 한이음이랑 친구들과 프로젝트를 진행하면서 공부하고 있어요! 많이 부족한만큼 더 열심히 배우겠습니다. 다양한 분야에 관심이 많아서 다른 것들도 함께하면 좋을 거 같아요. 1년동안 잘 부탁드립니다!!
-  blog_platform: tistory
-  blog: https://khyogeun.tistory.com/
+  blogs:
+    tistory: https://khyogeun.tistory.com/
 juwhan:
   name: 김주환
   author_name: 주환
@@ -104,8 +106,8 @@ hongmu:
   github: Hong-Mu
   description: 계획부터 세우자
   introduce: 안녕하세요! 서울과학기술대학교 컴퓨터공학과 19학번 채홍무입니다. 현재 안드로이드 앱 개발에 가장 관심이 많지만 아직 백엔드, 웹 프론트 등 배우고 싶은게 너무나 많습니다. GDSC의 유능한 분들과 함께 활동하게 되어 매우 감사하고 열심히 활동하여 유능한 사람이 되어 좋은 영향력을 끼치도록 하겠습니다. 잘부탁드립니다. 😁
-  blog_platform: velog
-  blog: https://velog.io/@hong-mu
+  blogs:
+    velog: https://velog.io/@hong-mu
 dann:
   name: 박인재
   author_name: 인재
@@ -122,8 +124,6 @@ seunggu:
   github: kang9366
   description: 시작이 반이다
   introduce: 안녕하세요 안드로이드 멤버 컴퓨터공학과 22학번 강승구입니다! 안드로이드 개발에 관심이 많아서 안드로이드 개발자로 진로를 정하였고 일년동안 열심히 공부해보기 위해 GDSC에 들어오게 되었습니다. <br> 안드로이드 개발을 통해 많은 사람들에게 도움을 줄 수 있는 앱을 개발하는 것이 저의 목표입니다. 아직은 많이 부족하지만 GDSC활동을 통해 더욱 성장할 수 있도록 노력하겠습니다!
-  blog_platform: null
-  blog: null
 chunngye:
   name: 박민영
   author_name: 민영
@@ -132,8 +132,8 @@ chunngye:
   github: chunngye
   description: 기꺼이 도전하자
   introduce: 저는 서울과기대 컴퓨터공학과 21학번 박민영입니다! 백엔드 공부를 하다가 협업 웹 프로젝트에 참여해보고 싶어서 GDSC에 지원하게 되었습니다. GDSC에서 리액트와 스프링을 충분히 익혀서 멋진 웹 프로젝트를 해보고 싶습니다. 1년 동안 함께 성장해가면 좋을 것 같습니다. 잘 부탁 드립니다!
-  blog_platform: devdojo
-  blog: https://1030pmy.devdojo.com/
+  blogs: 
+    devdojo: https://1030pmy.devdojo.com/
 gagyeong:
   name: 김가경
   another_name: 가경
@@ -142,8 +142,6 @@ gagyeong:
   github: gaguriee
   description: 일단 가보자고
   introduce: 저는 서울과학기술대학교 itm 전공 20학번 김가경입니다. 현재 안드로이드 앱 개발을 위해 코틀린을 공부하고 있으며, 간간이 웹 개발도 해보고 있습니다.  <br> 저는 GDSC에서 다양한 전공, 분야의 사람들과 개발에 관한 경험을 이야기해 보고 싶어서 들어오게 되었습니다. <br> 뭐든지 주저하지 않고 우선 해보는 자세를 추구합니다. 잘 부탁드려요~!
-  blog_platform: null
-  blog: null
 hyunjun:
   name: 심현준
   author_name: 현준
@@ -152,8 +150,8 @@ hyunjun:
   github: jake0319
   description: 후회 없이,현명하게 살고자 항상 노력해요
   introduce: 저는 서울과기대 산업정보시스템공학과 20학번 심현준입니다! 프론트엔드 개발자를 목표로 공부해오던 중 좋은 사람들과 함께 협업하고 싶어서 GDSC에 지원하였습니다. <br> 개발자는 혼자 모든 것을 만들어낼 수는 없죠, 그만큼 소통과 협업 능력이 중요한 직업이라고 생각합니다. <br> GDSC에서 다 같이 함께 소통하고 협업하고 성장하자구요! 잘 부탁드립니다.😆
-  blog_platform: velog
-  blog: https://velog.io/@jakescake
+  blogs:
+    velog: https://velog.io/@jakescake
 jonghun:
   name: 이종훈
   author_name: 종훈
@@ -162,8 +160,8 @@ jonghun:
   github: rivkode
   description: 선택보단 노력
   introduce: 안녕하세요, 서울과학기술대학교 컴퓨터공학과 이종훈입니다. <br>소프트웨어를 통해 지구(Earth)에 도움을 주는 개발자가 되고 싶습니다. Java, Spring에 관심이 많으며 그 외에도 창업, 경제 등 배우고싶은게 많은 사람 중 한명 입니다 ! 여기 GDSC에 계신분들과 자유롭게 소통하며 함께 성장하는 시간이 되도록 노력하겠습니다 😊
-  blog_platform: velog
-  blog: https://velog.io/@rivkode
+  blogs:
+    velog: https://velog.io/@rivkode
 hyeok:
   name: 김혁
   author_name: 혁
@@ -172,8 +170,8 @@ hyeok:
   github: hyeok55
   description: 노력안할거면 재입대
   introduce: 안녕하세요, ITM 전공을 재학 중인 19학번 김혁 입니다. 저는 현재 데이터 분야에 관심이 많고 ML,DL에 관심이 많습니다. 저는 저 혼자 공부하는 것이 아닌 동료들과 공부하고 싶어 GDSC에 지원하게 되었습니다 .  GDSC를 통해 함께 성장해 나갔으면 좋겠습니다:)
-  blog_platform: velog
-  blog: https://velog.io/@jg31109
+  blogs:
+    velog: https://velog.io/@jg31109
 yeonsu:
   name: 김연수
   author_name: 연수
@@ -182,8 +180,6 @@ yeonsu:
   github: dustnehowl
   description: 미루지 말자, 어짜피 다 내가 할 일이다.
   introduce: 안녕하세요 서울과학기술대학교 컴퓨터공학과 재학중인 김연수입니다. 데이터 분석, 딥러닝, 머신러닝 등 데이터를 다루는 일에 흥미가 있어 데이터 엔지니어를 목표로 공부를 하고 있습니다. 공통 관심사를 가진 사람과 함께 성장하고 싶어 gdsc 2기 멤버로 활동하게 되었습니다. 잘 부탁드립니다!
-  blog_platform: null
-  blog: null
 songhee:
   name: 백송희
   author_name: 송희
@@ -192,8 +188,6 @@ songhee:
   github: 100SongH
   description: 하고 싶은 일은 재밌게, 최선을 다해서
   introduce: 안녕하세요! 전자IT미디어공학과 19학번 백송희입니다. 현재 컴퓨터공학과 복수전공을 하며 안드로이드 개발자를 꿈꾸고 있습니다. <br>학교 다닐 때 많은 일을 해보며 가보지 않은 길에 대한 후회를 남기지 않으려고 노력하고 있습니다. 같이 열심히 노력하며 성장하고 싶습니다. 감사합니다
-  blog_platform: null
-  blog: null
 jeongjoon:
   name: 박정준
   author_name: 정준
@@ -202,8 +196,6 @@ jeongjoon:
   github: prislewarz
   description: GDSC 멤버가 되기 위한 노력과 GDSC에서의 경험은 제 인생의 전환점이 될 것입니다.
   introduce: 안녕하세요. 서울과학기술대학교 산업정보시스템전공 21학번 박정준입니다. 작년 1기 지원 당시 서류를 붙었음에도 면접을 보지 못해 안타깝게 떨어졌던 아쉬움으로 2기에는 기필코 합격하고자 많은 노력이 있었고, 그 과정에서 제게 큰 용기가 필요했습니다. 포기하지 않고 일단 부딪혀보자는 심정으로 지원했고 그 결과 이 자리에 있게 되었습니다. IT 분야 전반적으로 흥미가 있어, DL커리큘럼 이외에도 CS나 웹, 앱 등 다양하게 공부해보고 싶습니다! GDSC에 동기부여와 함께 실력 향상, 그리고 인적 네트워킹을 통한 낮가림 극복과 사교력(협업능력) 증진을 위해 GDSC에 들어왔습니다. 제 인생이 GDSC 활동 전과 후로 나뉠 수 있게끔, 최선을 다해 활동하며 제 자신을 조금씩 바꾸어 나가겠습니다!
-  blog_platform: null
-  blog: null
 dongyoung:
   name: 조동영
   author_name: 동영
@@ -212,8 +204,6 @@ dongyoung:
   github: ezcho
   description: 극한의 효율을 추구하는 삶
   introduce: 안녕하세요! 웹파트 멤버 컴퓨터공학과 19학번 조동영입니다.<br>아직 2학년인 저는 시스템 프로그래밍, 웹페이지 제작, Open stack등 다양한 분야에 발을 담구기 위해 시도 중 입니다!! <br> 성능을 추구하는 우리의 개발처럼 저의 삶도 효율적이고 완벽하게 꾸며나가고 싶습니다!<br> GDSC사람들과 1년동안 열심히하며! 팀 활동을 통해 최고의 성장을 하는 관계로 발전했으면 좋겠습니다!!
-  blog_platform: null
-  blog: null
 junseok:
   name: 전준석
   author_name: 준석
@@ -222,8 +212,6 @@ junseok:
   github: gumchinjun
   description: 재밌지만 후회없는 인생을 살자!
   introduce: 안녕하세요 서울과학기술대학교 ITM전공에 재학중인 19학번 전준석입니다. 아직까지 많은 분야를 접해보지는 않았지만 데이터 공부에 관심을 갖고 공부하고 있습니다 다양하고 열정 많은 GDSC 사람들과 교류하며 배우고 나눌 수 있는 멤버로 성장하고 싶습니다. 1년동안 후회하지 않기 위해 열심히 노력하겠습니다.
-  blog_platform: null
-  blog: null
 minseob:
   name: 이민섭
   author_name: 민섭
@@ -232,5 +220,3 @@ minseob:
   github: MinCOnMinCon
   description: 경험하고 생각하기
   introduce: 안녕하세요. 저는 서울과기대 컴퓨터공학과 22학번 이민섭입니다. 아직 1학년 1학기밖에 지내지 못해 모르는 게 많아 GDSC에 신청하게 되었습니다. <br> 목표는 이번 1년의 활동을 통해 앞으로의 개발자 생활의 기반을 쌓는 것 입니다! 성실히 해서 다른 분들께 누가 되지 않도록 노력하겠습니다!
-  blog_platform: null
-  blog: null

@@ -22,7 +22,12 @@ layout: default
   <hr/><br>
 
   <div class="author">
-    {% assign author = site.data.members[page.author] %}
+    {% assign members = site.data.members %}
+    {% for _member in members %}
+    {% if _member[1] contains page.author %}
+    {% assign author = _member[1] | map: page.author | first %}
+    {% endif %}
+    {% endfor%}
     <table>
         <tr>
           <td rowspan="3" style="padding-right: 10px"><img class="author-pic" src="https://github.com/{{ author.github }}.png" alt="{{ author.author_name }}"></td>
@@ -34,10 +39,10 @@ layout: default
       </tr>
       <tr>
         <td>
-          <a rel="author" href="https://github.com/{{ author.github }}" target="_blank"><i class="fa fa-github fa-2x"></i></a>&nbsp&nbsp
-          {% if author.blog %}
-            <a rel="author" href="{{ author.blog }}" target="_blank"><img src="/img/blog_icon/{{ author.blog_platform }}.jpg" width="26px"></a>
-          {% endif %}
+          <a rel="author" href="https://github.com/{{ author.github }}" target="_blank"><i class="fa fa-github fa-2x"></i></a>
+          {% for blog in author.blogs %}
+          <a rel="author" href="{{ blog[1] }}" target="_blank"><img src="/img/blog_icon/{{ blog[0] }}.jpg" width="26px"></a>
+          {% endfor %}
         </td>
       </tr>
     </table>
