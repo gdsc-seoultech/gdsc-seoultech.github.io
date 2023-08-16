@@ -2,7 +2,7 @@
 layout: post
 title: CI/CD 스터디 12주차 보고
 date: 2023-05-017 18:59:59 +0900
-author: dustnehowl
+author: yeonsu
 categories: ["2nd_term"]
 tags: [”study”]
 ---
