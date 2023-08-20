@@ -1,0 +1,67 @@
+---
+layout: default
+---
+
+<div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <h1 class="post-description">{{ page.description }}</h1>
+    <p class="post-meta">{{ page.date | date: "%B %-d, %Y — %H:%M" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+    {% if page.tags %}
+      {% for tag in page.tags %}
+        <span class="tag">{{ tag }}</span>
+      {% endfor %}
+    {% endif %}
+  </header>
+  <article class="post-content">
+    {{ content }}
+  </article>
+  <br>
+
+  <hr/><br>
+
+  <div class="author">
+    {% assign members = site.data.members %}
+    {% for _member in members %}
+    {% if _member[1] contains page.author %}
+    {% assign author = _member[1] | map: page.author | first %}
+    {% endif %}
+    {% endfor%}
+    <table>
+        <tr>
+          <td rowspan="3" style="padding-right: 10px"><img class="author-pic" src="https://github.com/{{ author.github }}.png" alt="{{ author.author_name }}"></td>
+          <td><b><h2 rel="author">{{ author.name }}</h2></b></td>
+        </tr>
+      <tr>
+        <td><p rel="author">{{ author.description }}</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a rel="author" href="https://github.com/{{ author.github }}" target="_blank"><i class="fa fa-github fa-2x"></i></a>
+          {% for blog in author.blogs %}
+          <a rel="author" href="{{ blog[1] }}" target="_blank"><img src="/img/blog_icon/{{ blog[0] }}.jpg" width="26px"></a>
+          {% endfor %}
+        </td>
+      </tr>
+    </table>
+
+  </div>
+
+
+  <br>
+  <hr/>
+  <div>
+    <script src="https://utteranc.es/client.js"
+        repo="gdsc-seoultech/blog-comments"
+        issue-term="pathname"
+        label="comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+  </div>
+
+</div>
+<script src="/js/toc.js"></script>

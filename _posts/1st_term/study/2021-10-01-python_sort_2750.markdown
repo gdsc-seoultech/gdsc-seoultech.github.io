@@ -1,0 +1,103 @@
+---
+layout: post
+title: 알고리즘 스터디 정렬 - 2750번
+date: 2021-10-01 12:00:00 +0900
+author: Songminseon
+description: 정렬 알고리즘 2750번 풀이
+categories: ["1st_term"]
+tags: ["study"]
+---
+
+# 백준 정렬 2750번
+
+안녕하세요. GDSC 웹 코어 멤버 송민선입니다. <br>
+
+이번 주 부터 정렬 알고리즘 문제에 들어가게 되었는데 다들 열심히 해봅시다!!
+
+그리고 문제 풀기 앞서 정렬 방법에 대해 한번 공부해보고 시작하면 좋을 것 같습니다.
+
+정렬도 종류가 (Bubble sort, Selection Sort, Insertion Sort, Quick Sort, Binary Sort) 많은데 각 알고리즘 마다 시간 복잡도가 다르니 공부해보는 것이 좋을 것 같습니다.
+
+<br>
+<br>
+
+먼저 문제 분석부터 진행해보겠습니다.
+<br><br>
+
+문제는
+
+```
+"N개의 수가 주어졌을 때, 이를 오름차순으로 정렬하는 프로그램을 작성하시오."
+```
+
+인데
+
+가장 기초적인 정렬에 대한 문제였습니다.
+
+<br>
+
+비교적 쉬운 문제라 생각하여 두가지 방법을 사용하여 풀이를 진행해봤습니다.
+
+---
+
+<br>
+
+# 풀이방법 1 (내장함수 이용)
+
+```python
+def solution(num_list):
+    num_list.sort()
+
+    for i in num_list:
+        print(i)
+
+num = int(input())
+num_list = []
+
+for _ in range(num):
+    num_list.append(int(input()))
+
+solution(num_list)
+```
+
+python에서 list 타입에 list.sort()를 하면 오름차순으로 정렬됩니다.<br>
+여기서 정렬방식은 quick sort로 시간복잡도는 nlog(n)으로 계산하시면 됩니다.
+
+---
+
+<br>
+
+# 풀이방법 2 (Bubble Sort)
+
+```python
+def solution(num_list): # bubble sort
+
+    for i in range(0, len(num_list)):
+        for j in range(0, len(num_list)-1):
+            if num_list[j] > num_list[j+1]:
+                num_list[j], num_list[j+1] = num_list[j+1], num_list[j]
+
+    for i in num_list:
+        print(i)
+
+
+num = int(input())
+num_list = []
+
+for _ in range(num):
+    num_list.append(int(input()))
+
+solution(num_list)
+```
+
+<br>
+Bubble Sort에 간단히 설명드리자면 두 인접한 원소를 비교하여 오름차순에 맞지 않으면 순서를 바꿔주면서 정렬을 진행하는 방식입니다.<br>
+시간복잡도는 n^2로 느린편이지만 단순하다는 장점이 있습니다.
+
+---
+
+<br>
+
+# 마무리
+
+파이썬에 기본 내장함수인 sort를 알고 있으면 금방 해결 할 수 있는 문제였습니다.

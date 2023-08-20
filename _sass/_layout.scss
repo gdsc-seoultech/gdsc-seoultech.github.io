@@ -1,0 +1,495 @@
+/**
+ * Site header   **********************************************************
+ */
+.site-header {
+  border-bottom: 1px solid $grey-color-light;
+  background-color: #fff;
+  opacity: 0.75;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  height: 56px;
+  width: 100%;
+  z-index: 50;
+  overflow: hidden;
+}
+
+.tab-header {
+  // display: none;
+  background-color: rgb(212, 212, 212);
+  position: fixed;
+  opacity: 80%;
+  top: 56px;
+  height: auto;
+  width: 100%;
+  z-index: 100;
+}
+
+.site-title {
+  font-size: 20px;
+  line-height: $nav-height;
+  letter-spacing: -1px;
+  margin-bottom: 0;
+  &:hover {
+    text-decoration: none;
+    color: $theme-color;
+  }
+}
+.site-nav {
+  float: right;
+  line-height: $nav-height;
+  .page-link {
+    line-height: $base-line-height;
+    // Gaps between nav items, but not on the first one
+    &:not(:first-child) {
+      margin-left: 10px;
+    }
+  }
+  @include media-query($on-palm) {
+    position: fixed;
+    top: 0px;
+    right: 10px;
+    text-align: right;
+    &:hover .trigger {
+      display: block;
+      padding-bottom: 5px;
+    }
+  }
+}
+
+.detail-member {  
+  text-align: center;
+  float: right;
+  width: 85px;
+  @include media-query($on-palm) {
+    display: inline-block;
+    .tab-item {
+      display: inline;
+      width: 160px;
+      height: 56px;
+      z-index: 100;
+    }
+  }
+}
+.detail-post {  
+  text-align: center;
+  float: right;
+  width: 35px;
+  @include media-query($on-palm) {
+    display: inline-block;
+    .tab-item {
+      display: inline;
+      width: 160px;
+      height: 56px;
+      z-index: 100;
+    }
+  }
+}
+
+
+.header-bar {
+  left: 0px;
+  top: 0px;
+  position: relative;
+  font-size: 20px;
+  display: block;
+  opacity: 0.75;
+  width: 100%;
+  text-align: center;
+  padding-top: 25px;
+  line-height: 3em;
+  z-index: 25;
+  h1 {
+    color: $grey-color-dark;
+    font-size: 45px;
+  }
+  h2 {
+    font-size: 25px;
+  }
+}
+
+/**
+ * Site footer  **********************************************************
+ */
+.site-footer {
+  border-top: 5px solid $grey-color-dark;
+  font-size: 15px;
+  background-color: $grey-color-dark;
+  padding: 2px;
+  color: #aaa;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  a {
+    color: darkgrey;
+  }
+}
+
+.site-footer p {
+  margin-bottom: 0; // Remove margin set in _sass/_base.scss for vertical rythm
+}
+
+/**
+ * Pagination   **********************************************************
+ */
+.pagination {
+  max-width: -webkit-calc(800px - (#{$horizontal-spacing-unit} * 2));
+  text-align: center;
+  width: 100%;
+  bottom: 50px;
+}
+.paginationicon {
+  font-size: 50px;
+  a {
+    color: $theme-color;
+  }
+}
+/**
+ * Page content   **********************************************************
+ */
+.page-content {
+  padding: 100px 0; /* VERTICAL PADDING FOR TITLE ON EVERY PAGE */
+}
+.page-heading {
+  font-size: 20px;
+}
+.post-list {
+  margin: 0px 0;
+  list-style: none;
+
+  li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 32px;
+    margin-bottom: $vertical-spacing-unit;
+  }
+}
+.solution_challenge-list {
+  margin: 0px 0;
+  list-style: none;
+
+  li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 32px;
+    margin-bottom: $vertical-spacing-unit;
+  }
+}
+.contacticon {
+  font-size: 60px;
+  display: block;
+  margin: 10px;
+}
+.center {
+  text-align: center;
+}
+/**
+ * Posts  **********************************************************
+ */
+
+.toc-area {
+  position: fixed;
+  left: calc(50% + 450px);
+  width: auto;
+  height: 50%;
+  transform: translate(0, 50%);
+
+  z-index: 10;
+
+  button {
+    all: unset;
+    cursor: pointer;
+    display: block;
+    width: auto;
+    margin: 14px 0px 0px 0px;
+  }
+
+  .active-toc {
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  .second-layer {
+    padding-left: 15px;
+  }
+}
+
+.post-header {
+  margin-bottom: $vertical-spacing-unit;
+}
+.post-title {
+  font-size: 28px;
+  letter-spacing: -1px;
+  line-height: 45px;
+  @include media-query($on-laptop) {
+    font-size: 20px;
+  }
+}
+.post-description {
+  font-size: 20px;
+  line-height: 30px;
+  @include media-query($on-laptop) {
+    font-size: 24px;
+  }
+}
+.post-content {
+  img {
+    max-width: 100%;
+  }
+  p {
+    margin-top: 10px;
+  }
+  a {
+    color: $gdsc-green;
+    &:hover {
+      color: #B1C3FF;
+      font-weight: bolder;
+    }
+  }
+  h1 {
+    font-size: 42px;
+    line-height: 1.4;
+    font-weight: 700;
+    @include media-query($on-laptop) {
+      font-size: 28px;
+    }
+  }
+  h2 {
+    font-size: 30px;
+    line-height: 1.4;
+    font-weight: 700;
+    @include media-query($on-laptop) {
+      font-size: 25px;
+    }
+  }
+  h3 {
+    font-size: 25px;
+    line-height: 1.4;
+    font-weight: 700;
+    @include media-query($on-laptop) {
+      font-size: 22px;
+    }
+  }
+  h4 {
+    font-size: 20px;
+    @include media-query($on-laptop) {
+      font-size: 18px;
+    }
+  }
+}
+.post-meta {
+  font-size: $small-font-size;
+  color: $grey-color;
+  margin-bottom: 0px;
+}
+
+.post-author {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 0px;
+}
+.post-link {
+  display: block;
+  font-size: 42px;
+}
+
+.solution_challenge-team {
+  font-size: 28px;
+  letter-spacing: -1px;
+  line-height: 45px;
+  @include media-query($on-laptop) {
+    font-size: 20px;
+  }
+}
+
+/** Poem formatting ********************************************/
+.poem-title {
+  font-size: 24px;
+  letter-spacing: -1px;
+  line-height: 1;
+  @include media-query($on-laptop) {
+    font-size: 16px;
+  }
+}
+
+/**
+ * Portfolio grid **********************************************************
+*/
+// Nicolas Gallagher's micro clearfix hack
+// http://nicolasgallagher.com/micro-clearfix-hack/
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.project {
+  width: 33.33%;
+  height: 250px;
+  float: left;
+  vertical-align: middle;
+  box-sizing: border-box;
+  padding: 10px;
+}
+.thumbnail {
+  width: 100%;
+  height: 230px;
+  overflow: hidden;
+}
+.thumbnail img {
+  width: 500px;
+  height: auto;
+  position: relative;
+  left: -25%;
+  top: -5%;
+}
+.thumbnail a {
+  float: left;
+  position: relative;
+  width: 100%;
+  height: 230px;
+}
+.thumbnail a span {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.4);
+  color: $grey-color-light;
+  padding: 40px;
+  text-align: center;
+}
+.thumbnail a:hover span {
+  display: block;
+}
+/**
+ * Portfolio pages **********************************************************
+*/
+.blankbox {
+  background: $theme-color;
+}
+.img_row {
+  height: $img_height;
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: $img_spacing;
+}
+.col {
+  width: 100%;
+  height: 100%;
+  float: left;
+  object-fit: cover;
+  box-sizing: border-box;
+  padding: $img_spacing;
+}
+.right {
+  float: right;
+}
+.one {
+  width: 33.33%;
+}
+.two {
+  width: 66.66%;
+}
+.three {
+  width: 100%;
+}
+.caption {
+  height: 100%;
+  color: $caption_color;
+  text-align: center;
+  vertical-align: middle;
+  font-size: $caption_font_size;
+}
+.main-page {
+  line-height: 2;
+  text-align: center;
+  color: black;
+}
+.author-pic {
+  width: 100px;
+  border-radius: 6px;
+}
+.author {
+  font-size: 15px;
+}
+
+@media screen and (max-width: 510px) {
+  h1 b {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .toc-area {
+    display: none;
+  }
+}
+
+.category-list {
+  ul {
+    list-style-type: none;
+    float: left;
+    margin-right: 20px;
+    margin-left: 0px;
+  }
+  li {
+    list-style-type: none;
+    float: left;
+    margin-right: 20px;
+  }
+}
+
+.post-content {
+  max-width: 1024px;
+}
+
+.post-content div[class*="language-"] {
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  border-radius: 0.25rem;
+}
+.post-content div[class*="language-"]::before {
+  background: black;
+  border-radius: 0 0 0.25rem 0.25rem;
+  color: white;
+  font-size: 15px;
+  letter-spacing: 0.025rem;
+  padding: 0.1rem 0.5rem;
+  position: absolute;
+  right: 1rem;
+  text-align: right;
+  font-weight: 500;
+  right: 5px;
+  top: 0px;
+}
+.post-content div[class~="language-kotlin"]::before {
+  content: "kotlin";
+  background: rgb(133, 183, 101);
+  color: black;
+}
+.post-content div[class~="language-json"]::before {
+  content: "json";
+  background: rgb(133, 183, 101);
+  color: black;
+}
+.post-content div[class~="language-java"]::before {
+  content: "java";
+  background: #bbceff;
+
+  color: black;
+}
+.post-content div[class~="language-javascript"]::before {
+  content: "javascript";
+  background: #f7df1e;
+  color: black;
+}
+.post-content div[class~="language-js"]::before {
+  content: "javascript";
+  background: #f7df1e;
+  color: black;
+}
