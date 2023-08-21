@@ -15,6 +15,7 @@ $base-font-family:              Google sans, sans-serif;
 $base-line-height:              1.5em;
 $horizontal-spacing-unit:       50px;
 $vertical-spacing-unit:         40px;
+$
 $nav-height:                    56px;
 
 /* portfolio tinkering */
@@ -69,7 +70,7 @@ body {
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
-    margin-bottom: calc($vertical-spacing-unit / 2);
+    margin-bottom: calc(#{$vertical-spacing-unit} / 2);
 }
 
 .alignright {
@@ -163,7 +164,7 @@ article a {
 blockquote {
     color: $text-color;
     border-left: 10px solid $grey-color-light;
-    padding-left: calc($horizontal-spacing-unit / 2);
+    padding-left: calc(#{$horizontal-spacing-unit} / 2);
     font-size: 18px;
     font-style: italic;
 
@@ -214,8 +215,8 @@ pre {
     @extend %clearfix;
 
     @include media-query($on-laptop) {
-        padding-right: calc($spacing-unit / 2);
-        padding-left: calc($spacing-unit / 2);
+        padding-right: calc(#{$spacing-unit} / 2);
+        padding-left: calc(#{$spacing-unit} / 2);
     }
 }
 
