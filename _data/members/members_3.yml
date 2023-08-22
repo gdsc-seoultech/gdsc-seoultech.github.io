@@ -1,11 +1,45 @@
-changha:
-  name: 전창하
-  author_name: 창하
+jeonghyeon:
+  name: 이정현
+  author_name: 정현
   role: core
-  email: mentenseoul@gmail.com
-  github: Changha-dev
-  description: Just Do It! 
-  introduce: 안녕하세요, 웹파트 코어를 맡게 된 컴퓨터공학과 20학번 전창하입니다. 현재 스프링 부트를 활용한 백엔드 개발을 공부하고 있으며, 올해 안에는 최대한 높은 수준의 숙련도를 달성하는 것을 목표로 하고 있습니다. 공부할 수록 어렵지만 함께 스터디를 진행하고 다양한 행사에 참여함으로써 폭넓은 경험을 쌓으며 성장하고자 합니다. 1년동안 함께 멋진 GDSC 3기를 만들어봐요! 🌴  
-  blogs:  
-    tistory: https://changha-dev.tistory.com
-    
+  email: workhappyj@gmail.com
+  github: jeonghyeonee
+  description: POSITIVE WAVE
+  introduce: 안녕하세요! 서울과학기술대학교 ITM전공 20학번 이정현입니다 =D <br> 저는 Data Engineering, DevOps 분야에 관심을 가진 꿈많고 하고싶은 것이 많은 청년입니다😉 배우고 싶은 것도, 하고싶은 것도 많고, 여전히 부족함도 많습니다! 하지만 함께 배우고, 하나씩 채워가다보면 더 성장할 수 있을 거라고 생각합니다! <br> 이번 GDSC를 통해서 부족함도 채우고 함께 성장해서 즐거운 추억도 가득가득 만들어가요~!!
+  blogs:
+    github: https://jeonghyeonee.github.io/
+    naver: https://blog.naver.com/jlh1218
+hongmu2:
+  name: 채홍무
+  author_name: 홍무
+  role: core
+  email: hongmuchae@gmail.com
+  github: Hong-Mu
+  description: 내일부터 공부 시작
+  introduce: 저는 서울과학기술대학교 컴퓨터공학과 19학번 채홍무입니다. 안드로이드 및 백엔드에 관심이 많으며 야금야금 공부해나가는 중입니다. 🔥<br> GDSC 2기 활동을 하면서 세웠던 목표들을 완수하지 못해서 아쉬웠는데 이번에는 꼭 달성하여 더 나은 자신이 되도록 노력하고 1년동안 다양한 분야의 멤버들과 함께 성장해 나가도록 하겠습니다! <br> GDSC 3기 화이팅! ✨
+hyunseo:
+  name: 박현서
+  author_name: 현서
+  role: core
+  email: rainday0828@gmail.com
+  github: hyunwestpark
+  description: In the bleak midwinter
+  introduce: 서울과학기술대학교 ITM전공 19학번 박현서입니다. 백엔드 분야를 진로로 생각하며 열심히 살아가려 노력 중입니다. <br> 부족하지만 GDSC 3기 코어로 활동하게 되어 감사하고 이 경험을 통해 많은 것을 얻길 기대하고 있습니다. <br> 함께 성장하는 한 해가 되길 소망합니다🙏
+ljs7143:
+  name: 이준서  
+  author_name: 준서
+  role: core
+  email: junseo27643779@gmail.com
+  github: ljs7143
+  description: 잘할 수 있습니다
+  introduce: 안녕하세요 ITM전공 이준서라고 합니다. 백엔드, ML 분야에 관심이 있습니다. 잘 부탁드립니다.
+junnie082:
+  name: 전효정
+  author_name: Hyojeong Jun
+  role: core
+  email: junnie082@gmail.com
+  github: junnie082
+  description: 만능 열정 우먼
+  introduce: 안녕하세요, 서울과학기술대학교 컴퓨터공학과 21학번 전효정입니다! 평소에 기술 스택 자체에도 관심이 많지만, '프로젝트' 를 중심으로 필요한 기술들을 그때그때 배워 나가는 편입니다. 직전 학기에는 2명의 다른 팀원들과 Flutter 를 이용한 앱 개발 공모전을 준비해 보았고, 현재는 4명의 다른 팀원들과 Unity 를 사용하여 게임 프로젝트를 진행하고 있습니다. 이외에도 다른 여러 가지 아이디어들이 현재 구현 되기를 기다리고 있습니다!여러 가지 프로젝트들을 진행해 나갈수록, 팀 멤버들 간의 화합과 유대 관계의 중요성을 깊이 느끼게 됩니다. 따라서 멤버 여러분들과 즐겁게 소통하며 끈끈한 유대 관계를 만들어 나갔으면 좋겠습니다! 우리 모두 즐겁게, 열심히 나아가 봅시다!!
+  blogs:
+    github: https://junnie082.github.io/
