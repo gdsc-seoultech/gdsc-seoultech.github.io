@@ -1,4 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+.modal_bg {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1); /*일단 표시만*/
+  z-index: 1;
+}
 .modal_wrap {
   display: none;
   justify-content: center;
@@ -9,7 +19,7 @@
   top: 140px;
   left: calc(50% - 430px);
   background: rgba(255, 255, 255, 0.8); /*일단 표시만*/
-  z-index: 2; /*그 다음 앞에 */
+  z-index: 3; /*그 다음 앞에 */
 }
 .black_bg {
   display: none;
@@ -22,7 +32,7 @@
   height: 500px;
   background: rgba(51, 51, 51, 0.705);
   border-radius: 3px;
-  z-index: 1; /*얘가 백그라운드 */
+  z-index: 2; /*얘가 백그라운드 */
 }
 .modal_close {
   width: 26px;
