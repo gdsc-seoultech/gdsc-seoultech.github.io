@@ -8,9 +8,10 @@ layout: default
   <header class="member-header">
     {% assign members = site.data.members %}
     {% assign cnt = members.size %}
-    {% assign year_raw = page.permalink | split: "/" %}
+    {% assign year = page.permalink | split: "/" %}
+    {% assign year = year[2] %}
     <div class="dropdown-year">
-      <button class="dropdown-btn">{{ year_raw[2]}}기 ▼</button>
+      <button class="dropdown-btn">{{ year }}기 ▼</button>
       <div class="dropdown-content">
         {% for _member in members %}
         <a href="/category/{{ cnt }}">{{ cnt }}기</a>
@@ -24,9 +25,9 @@ layout: default
 
   <div class="tag-list">
     <ul>
-        <a class="tag-all" href="/category/{{page.title}}">all</a>
+        <a class="tag-all" href="/category/{{ year }}">all</a>
       {% for tag in site.data.tags %}
-          <a href="/category/{{page.title}}?tag={{ tag }}">
+          <a href="/category/{{ year }}?tag={{ tag }}">
             <span class="tag" data-tag="{{tag}}">{{tag}}</span>
           </a>
       {% endfor %}
