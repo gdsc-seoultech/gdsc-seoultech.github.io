@@ -39,7 +39,8 @@ $text-color: #363636;
 /* GDSC Color */
 $gdsc-red: #EA4335;
 $gdsc-blue: #4285F4;
-$gdsc-yellow: #FBBC04;
+$gdsc-yellow: #F9AB00;
+$gdsc-yellow_200: #FDE293;
 $gdsc-green: #34A853;
 
 /* Set theme color *************************/
@@ -210,7 +211,7 @@ pre {
  */
 
 .wrapper {
-    max-width: 1400px;
+    max-width: 1200px;
     margin-right: auto;
     margin-left: auto;
     padding-right: $horizontal-spacing-unit;

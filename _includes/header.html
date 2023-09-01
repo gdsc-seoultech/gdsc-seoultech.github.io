@@ -13,9 +13,11 @@
   
         <nav class="site-nav">
           <ul>
+            {% assign members = site.data.members %}
+            {% assign cnt = members.size %}
             <li><a class="page-link" href="{{ site.baseurl }}/about">ABOUT</a></li>
-            <li><a class="page-link" href="{{ site.baseurl }}/members/3">MEMBER</a></li>
-            <li><a class="page-link" href="{{ site.baseurl }}/category/3nd_term">POST</a></li>
+            <li><a class="page-link" href="{{ site.baseurl }}/members/{{ cnt }}">MEMBER</a></li>
+            <li><a class="page-link" href="{{ site.baseurl }}/category/{{ cnt }}">POST</a></li>
           </ul>
 
           <div class="menu-dropdown">
