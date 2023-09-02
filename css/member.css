@@ -117,24 +117,19 @@ body {
 
 .member-card{
   /*폴더 한 줄에 대한 위치 조정이 아니라 그냥 폴더랑 이름을 같이 묶은 그룹*/
-  width: calc(20% - 40px);
+  width: calc(100% / 3 - 40px);
   margin: 0 20px;
   height: 250px;
 }
 
-@media (max-width: 1200px) {
-  .member-card {
-    width: calc(25% - 40px);
-  }
-}
-
-@media (max-width: 1024px) {
-  .member-card {
-    width: calc(100% / 3 - 40px);
-  }
-}
-
 @media (max-width: 768px) {
+  .member-card {
+    width: calc(50% - 80px);
+    margin: 40px;
+  }
+}
+
+@media (max-width: 600px) {
   .member-card {
     width: calc(100% - 80px);
     margin: 40px;
