@@ -182,28 +182,47 @@ blockquote {
 /**
  * Code formatting
  */
-pre,
-code {
-    font-size: 15px;
-    border-radius: 3px;
-    background-color: $grey-color-light;
+
+code.highlighter-rouge {
+  font-size: 14px;
+  background-color: #F6F9FC;
+  color: blueviolet;
+  padding: 1px;
+  font-weight: bold;
 }
 
-code {
-    padding: 1px 5px;
+pre.highlight {
+  padding: 10px 0 0 10px;
+  font-size: 16px;
+  overflow-x: scroll;
+  margin: 10px;
 }
 
-pre {
-    padding: 8px 12px;
-    overflow-x: scroll;
-
-    > code {
-        border: 0;
-        padding-right: 0;
-        padding-left: 0;
-    }
+/* total width */
+pre.highlight::-webkit-scrollbar {
+  background-color: #fff;
+  height: 10px;
 }
 
+/* background of the scrollbar except button or resizer */
+pre.highlight::-webkit-scrollbar-track {
+  background-color: #272822;
+  /* border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px; */
+}
+
+/* scrollbar itself */
+pre.highlight::-webkit-scrollbar-thumb {
+  background-color: blueviolet;
+  border-radius: 10px;
+  border: 1px solid blueviolet;
+  background-clip: padding-box;
+}
+
+/* set button(top and bottom of the scrollbar) */
+pre.highlight::-webkit-scrollbar-button {
+  display:none;
+}
 
 
 /**
@@ -211,7 +230,7 @@ pre {
  */
 
 .wrapper {
-    max-width: 1200px;
+    max-width: 768px;
     margin-right: auto;
     margin-left: auto;
     padding-right: $horizontal-spacing-unit;
