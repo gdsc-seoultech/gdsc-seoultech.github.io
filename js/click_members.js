@@ -4,6 +4,8 @@ window.onload = function () {
     document.querySelectorAll(".modal_bg, .modal_wrap, .black_bg").forEach((element) => {
       element.style.display = "none";
     })
+
+    $("body").removeClass("scroll-lock");
   }
 
   document.querySelectorAll(".member-card-container").forEach( (part) => {
@@ -11,6 +13,7 @@ window.onload = function () {
     part.querySelectorAll(".member-card > .folder").forEach( (member, idx) => {
       member.addEventListener("click", () => {
         closeAll()
+        $("body").addClass("scroll-lock");
         part.querySelectorAll(".modal_bg")[idx].style.display = "block";
         part.querySelectorAll(".modal_wrap")[idx].style.display = "flex";
         part.querySelectorAll(".black_bg")[idx].style.display = "block";

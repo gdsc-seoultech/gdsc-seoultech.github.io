@@ -62,6 +62,9 @@ body {
     -webkit-text-size-adjust: 100%;
 }
 
+body.scroll-lock {
+    overflow: hidden;
+}
 
 
 /**
