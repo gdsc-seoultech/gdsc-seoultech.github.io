@@ -1,7 +1,7 @@
 window.onload = function () {
 
   function closeAll() {
-    document.querySelectorAll(".modal_wrap, .black_bg").forEach((element) => {
+    document.querySelectorAll(".modal_bg, .modal_wrap, .black_bg").forEach((element) => {
       element.style.display = "none";
     })
   }
@@ -12,24 +12,20 @@ window.onload = function () {
       member.addEventListener("click", () => {
         closeAll()
         part.querySelectorAll(".modal_bg")[idx].style.display = "block";
-        part.querySelectorAll(".modal_wrap")[idx].style.display = "block";
+        part.querySelectorAll(".modal_wrap")[idx].style.display = "flex";
         part.querySelectorAll(".black_bg")[idx].style.display = "block";
       });
     });
 
     part.querySelectorAll(".modal_close").forEach( (member, idx) => {
       member.addEventListener("click", () => {
-        part.querySelectorAll(".modal_bg")[idx].style.display = "none";
-        part.querySelectorAll(".modal_wrap")[idx].style.display = "none";
-        part.querySelectorAll(".black_bg")[idx].style.display = "none";
+        closeAll();
       });
     });
     
     part.querySelectorAll(".modal_bg").forEach( (member, idx) => {
       member.addEventListener("click", () => {
-        part.querySelectorAll(".modal_bg")[idx].style.display = "none";
-        part.querySelectorAll(".modal_wrap")[idx].style.display = "none";
-        part.querySelectorAll(".black_bg")[idx].style.display = "none";
+        closeAll();
       });
     });
   });
