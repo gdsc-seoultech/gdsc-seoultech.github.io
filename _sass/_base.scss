@@ -15,7 +15,7 @@ $base-font-family:              Google sans, sans-serif;
 $base-line-height:              1.5em;
 $horizontal-spacing-unit:       50px;
 $vertical-spacing-unit:         40px;
-$nav-height:                    56px;
+$nav-height:                    60px;
 
 /* portfolio tinkering */
 $img_spacing: 5px;
@@ -39,7 +39,8 @@ $text-color: #363636;
 /* GDSC Color */
 $gdsc-red: #EA4335;
 $gdsc-blue: #4285F4;
-$gdsc-yellow: #FBBC04;
+$gdsc-yellow: #F9AB00;
+$gdsc-yellow_200: #FDE293;
 $gdsc-green: #34A853;
 
 /* Set theme color *************************/
@@ -61,6 +62,9 @@ body {
     -webkit-text-size-adjust: 100%;
 }
 
+body.scroll-lock {
+    overflow: hidden;
+}
 
 
 /**
@@ -123,6 +127,10 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 100;
 }
 
+h1 {
+    padding: 40px 0 16px;
+}
+
 
 /**
  * Links
@@ -177,28 +185,47 @@ blockquote {
 /**
  * Code formatting
  */
-pre,
-code {
-    font-size: 15px;
-    border-radius: 3px;
-    background-color: $grey-color-light;
+
+code.highlighter-rouge {
+  font-size: 14px;
+  background-color: #F6F9FC;
+  color: blueviolet;
+  padding: 1px;
+  font-weight: bold;
 }
 
-code {
-    padding: 1px 5px;
+pre.highlight {
+  padding: 10px 0 0 10px;
+  font-size: 16px;
+  overflow-x: scroll;
+  margin: 10px;
 }
 
-pre {
-    padding: 8px 12px;
-    overflow-x: scroll;
-
-    > code {
-        border: 0;
-        padding-right: 0;
-        padding-left: 0;
-    }
+/* total width */
+pre.highlight::-webkit-scrollbar {
+  background-color: #fff;
+  height: 10px;
 }
 
+/* background of the scrollbar except button or resizer */
+pre.highlight::-webkit-scrollbar-track {
+  background-color: #272822;
+  /* border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px; */
+}
+
+/* scrollbar itself */
+pre.highlight::-webkit-scrollbar-thumb {
+  background-color: blueviolet;
+  border-radius: 10px;
+  border: 1px solid blueviolet;
+  background-clip: padding-box;
+}
+
+/* set button(top and bottom of the scrollbar) */
+pre.highlight::-webkit-scrollbar-button {
+  display:none;
+}
 
 
 /**
@@ -206,7 +233,7 @@ pre {
  */
 
 .wrapper {
-    max-width: 1400px;
+    max-width: 768px;
     margin-right: auto;
     margin-left: auto;
     padding-right: $horizontal-spacing-unit;

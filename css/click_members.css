@@ -18,9 +18,12 @@
   position: fixed;
   top: 140px;
   left: calc(50% - 430px);
-  background: rgba(255, 255, 255, 0.8); /*일단 표시만*/
+  background: rgba(255, 255, 255); /*일단 표시만*/
   z-index: 3; /*그 다음 앞에 */
 }
+
+
+
 .black_bg {
   display: none;
   position: fixed;
@@ -38,8 +41,8 @@
   width: 26px;
   height: 26px;
   position: absolute;
-  top: -30px;
-  right: 0;
+  top: 32px;
+  right: 32px;
 }
 .modal_close > a {
   display: block;
@@ -51,19 +54,20 @@
 
 .the_member {
   display: flex;
-  justify-content: flex-start;
-  margin-top: 90px;
-  margin-left: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .member_image {
   border-radius: 50%;
-  width: 300px;
+  width: 280px;
   height: 280px;
 }
 .member_description {
   margin-left: 60px;
   margin-right: 40px;
+  max-width: 430px;
 }
 .text {
   font-family: "Noto Sans KR";
@@ -86,4 +90,21 @@
 #d {
   color: darkslategray;
   font-size: 15px;
+}
+
+
+@media (max-width: 900px) {
+  .modal_wrap {
+      width: 100%;
+      height: calc(100% - 188px);
+      top: 60px;
+      left: 0;
+      padding: 64px 0;
+      overflow-y: auto;
+      flex-wrap: wrap;
+  }
+
+  .member_description {
+    margin-top: 64px;
+  }
 }

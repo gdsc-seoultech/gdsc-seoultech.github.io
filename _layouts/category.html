@@ -5,17 +5,31 @@ layout: default
 <script src="/js/category.js"></script>
 <div class="post">
 
-  <header class="post-header">
-    <h1 class="post-title">POST - {{ page.title }}</h1>
-    <h5 class="post-description">{{ page.description }}</h5>
+  <header class="member-header">
+    {% assign cnt = site.categories.size %}
+    {% assign year = page.url | split: "/" %}
+    {% assign year = year[2] %}
+    {% assign _year = year | split: '-' %}
+    {% assign end = _year[0].size | minus: 2 %}
+    <div class="dropdown-year">
+      <button class="dropdown-btn">{{ _year[0] | slice: 0, end }}기 ▼</button>
+      <div class="dropdown-content">
+        {% assign categories = site.categories%}
+        {% for category in categories reversed %}
+        <a href="/categories/{{ category[0] | replace: '_', '-' }}">{{ cnt }}기</a>
+        {% assign cnt = cnt | minus: 1 %}
+        {% endfor%}
+      </div>
+    </div>
+    <h1 class="member-title">Posts</h1>
   </header>
 
 
   <div class="tag-list">
     <ul>
-        <a class="tag-all" href="/category/{{page.title}}">all</a>
+        <a class="tag-all" href="/categories/{{ year }}">all</a>
       {% for tag in site.data.tags %}
-          <a href="/category/{{page.title}}?tag={{ tag }}">
+          <a href="/categories/{{ year }}?tag={{ tag }}">
             <span class="tag" data-tag="{{tag}}">{{tag}}</span>
           </a>
       {% endfor %}
@@ -28,8 +42,6 @@ layout: default
   <hr style="width: 270px; size: 5px;">
 </p>
 
-  <!-- 해당 부분도 수정 필요. 해당 카테고리 이름 출력. -->
-  <!-- <h1">{{ site.categories | first | first }}</h1>> -->
   
   <ul class="post-list">
     {% assign category = page.title %}
@@ -52,6 +64,6 @@ layout: default
 
 </div>
 
-<div class="pagination" />
+<div class="pagination"></div>
 
 <script src="/js/pagination.js"></script>

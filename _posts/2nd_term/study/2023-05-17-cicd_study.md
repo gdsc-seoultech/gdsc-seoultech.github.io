@@ -60,7 +60,7 @@ ${% raw %}{{}}{% endraw %} 에 들어가는 것이 github secret인데 환경변
 
 1. 인스턴스 접속 및 애플리케이션 실행 : 이제 docker image를 만들고 docker hub 에 push 했으니 인스턴스에 접속해서 pull 하고 run 만 하면 된다. docker를 사용하지 않을 때는 이 과정을 aws code deploy와 s3를 이용해서 s3에 올린 .jar을 가져와서 실행하는 과정을 공부했었는데, docker를 사용하는 방법이 내가 지금까지 배포 해왔던 방법과 유사하고 더 쉬워서 이 방법을 채택했다.
 
-```bash
+```bash{% raw %}
 	# EC2 인스턴스 접속 및 애플리케이션 실행
   - name: Application Run
     uses: appleboy/ssh-action@v0.1.6
@@ -77,14 +77,14 @@ ${% raw %}{{}}{% endraw %} 에 들어가는 것이 github secret인데 환경변
 
         sudo docker run -p ${{ secrets.PORT }}:${{ secrets.PORT }} \
         --name ${{ secrets.PROJECT_NAME }} \
-        -d ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.PROJECT_NAME }}
+        -d ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.PROJECT_NAME }}{% endraw %}
 ```
 
 사실 수동으로 배포할 때 또 귀찮았던 것은 docker 이미지가 몇백 MB씩 하기 때문에 만들때마다 전의 이미지를 삭제해 주었어야 했는데 이것 또한 자동화 할 수 있다니,,,,,세상엔 똑똑한 사람들이 정말 많다.. 알려주셔서 감사합니다..
 
 ### 전체 workflow 파일
 
-```bash
+```bash{% raw %}
 # This workflow will build a Java project with Gradle
 # For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-gradle
 
@@ -151,7 +151,7 @@ jobs:
 
           sudo docker run -p ${{ secrets.PORT }}:${{ secrets.PORT }} \
           --name ${{ secrets.PROJECT_NAME }} \
-          -d ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.PROJECT_NAME }}
+          -d ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.PROJECT_NAME }}{% endraw %}
 ```
 
 ## 회고

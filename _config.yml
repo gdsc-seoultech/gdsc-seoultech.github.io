@@ -11,6 +11,10 @@ timezone: Asia/Seoul
 # Build settings
 markdown: kramdown
 highlighter: rouge
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
 
 # Pagination
 paginate: 15
@@ -29,3 +33,12 @@ collections:
   seminars:
     output: true
     permalink: /seminars/:path/
+
+jekyll-archives:
+  enabled: [categories] #, tags]
+  layouts:
+    category: category
+    # tag: category
+  permalinks:
+    # tag: /tags/:name/
+    category: /categories/:name/
