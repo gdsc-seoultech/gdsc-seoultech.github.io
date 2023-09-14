@@ -15,12 +15,9 @@
           <ul>
             {% assign members = site.data.members %}
             {% assign cnt = members.size %}
-            {% for category in site.categories %}
-              {% assign last_category = category[0] | replace: "_", "-" %}
-            {% endfor%}
             <li><a class="page-link" href="{{ site.baseurl }}/about">ABOUT</a></li>
             <li><a class="page-link" href="{{ site.baseurl }}/members/{{ cnt }}">MEMBER</a></li>
-            <li><a class="page-link" href="{{ site.baseurl }}/categories/{{ last_category }}">POST</a></li>
+            <li><a class="page-link" href="{{ site.baseurl }}/category/{{ cnt }}">POST</a></li>
           </ul>
 
           <div class="menu-dropdown">

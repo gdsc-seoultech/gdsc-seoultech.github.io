@@ -48,7 +48,7 @@ function filterByTagName(tagName) {
 
                     const a = document.createElement('a');
                     a.className = "solution_challenge-team";
-                    a.href = "/categories/" + termName + "?tag=solution_challenge&tag=" + sc;
+                    a.href = "/category/" + termName + "?tag=solution_challenge&tag=" + sc;
                     a.innerText = sc;
 
                     const h3 = document.createElement('h3');
