@@ -108,3 +108,13 @@ gdsjw:
   github: leaf1191
   description: 게으르게 공부하자
   introduce: 컴공 23학번 심종우입니다. 이번에 안드로이드 파트에 참여하게 되었고 이쪽 분야에서 최대한 많은 것을 얻어가고 싶습니다.
+kyko:
+  name: 고경남
+  author_name: 경남
+  role: member
+  email: koc2827@gmail.com
+  github: rhrudska987
+  description: 파이팅 해야지!
+  introduce: 안녕하세요! 컴퓨터공학과 18학번 고경남입니다. 주 언어는 자바이며, 현재 서버 개발자를 목표로 공부하고 있습니다. <br>gdsc라는 좋은 기회를 통해 다른 분들과 프로젝트를 하며 같이 성장하고 싶습니다! 잘 부탁드려요!!
+  blogs:
+    tistory: https://kyko.tistory.com
