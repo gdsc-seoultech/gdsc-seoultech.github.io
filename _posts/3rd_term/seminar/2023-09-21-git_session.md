@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  02 창하가 알려주는 Git/GitHub 🔥
+title:  02 Git/GitHub 도대체 뭐야?🔥
 date:   2023-09-21 00:00:00
 author: changha
 categories: ["3rd_term"]
