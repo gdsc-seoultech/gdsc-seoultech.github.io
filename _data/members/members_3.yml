@@ -36,7 +36,7 @@ hyunseo:
   description: In the bleak midwinter
   introduce: 서울과학기술대학교 ITM전공 19학번 박현서입니다. 백엔드 분야를 진로로 생각하며 열심히 살아가려 노력 중입니다. <br> 부족하지만 GDSC 3기 코어로 활동하게 되어 감사하고 이 경험을 통해 많은 것을 얻길 기대하고 있습니다. <br> 함께 성장하는 한 해가 되길 소망합니다🙏
 ljs7143:
-  name: 이준서  
+  name: 이준서
   author_name: 준서
   role: core
   email: junseo27643779@gmail.com
@@ -59,12 +59,12 @@ changha:
   role: core
   email: mentenseoul@gmail.com
   github: Changha-dev
-  description: Just Do It! 
-  introduce: 안녕하세요, 웹파트 코어를 맡게 된 컴퓨터공학과 20학번 전창하입니다. 현재 스프링 부트를 활용한 백엔드 개발을 공부하고 있으며, 올해 안에는 최대한 높은 수준의 숙련도를 달성하는 것을 목표로 하고 있습니다. 공부할 수록 어렵지만 함께 스터디를 진행하고 다양한 행사에 참여함으로써 폭넓은 경험을 쌓으며 성장하고자 합니다. 1년동안 함께 멋진 GDSC 3기를 만들어봐요! 🌴  
-  blogs:  
+  description: Just Do It!
+  introduce: 안녕하세요, 웹파트 코어를 맡게 된 컴퓨터공학과 20학번 전창하입니다. 현재 스프링 부트를 활용한 백엔드 개발을 공부하고 있으며, 올해 안에는 최대한 높은 수준의 숙련도를 달성하는 것을 목표로 하고 있습니다. 공부할 수록 어렵지만 함께 스터디를 진행하고 다양한 행사에 참여함으로써 폭넓은 경험을 쌓으며 성장하고자 합니다. 1년동안 함께 멋진 GDSC 3기를 만들어봐요! 🌴
+  blogs:
     tistory: https://changha-dev.tistory.com
 Insun:
-  name: 이인선  
+  name: 이인선
   author_name: 인선
   role: core
   email: leeinsun5278@gmail.com
@@ -78,7 +78,7 @@ yunjoo:
   email: 0702sally@gmail.com
   github: sally7788
   description: 하면 된다
-  introduce: 안녕하세요 산업정보시스템전공 21학번 강연주입니다. 잘 부탁드립니다.  
+  introduce: 안녕하세요 산업정보시스템전공 21학번 강연주입니다. 잘 부탁드립니다.
 hoon:
   name: 최승훈
   author_name: 훈
@@ -137,10 +137,18 @@ YeongKyeong:
   description: 언제나 자유롭게
   introduce: 안녕하세요 컴퓨터공학과 19학번 정영경입니다. 올해 GDSC 3기 안드로이드 member로 함께하게 되었습니다. <br>앱개발에 관심이 많으며 특히나 Flutter를 주로 공부하고 있습니다. 이제 걸음마를 뗀 초보 개발자인 저에게 GDSC와 함께하는 한 걸음 한 걸음이 특별하고 큰 도약입니다. 부족한만큼 많이 배우고 열심히 하겠습니다. 다들 잘 부탁드립니다!
 yumin:
-    name: 이유민
-    author_name: 유민
-    role: member
-    email: yuminyyy@gmail.com
-    github: lym11020
-    description: 두려워하지 말자
-    introduce: 안녕하세요! 서울과학기술대학교 기계시스템디자인공학과 21학번 이유민입니다. 저는 ai, 딥러닝에 관심이 많습니다. 아직 부족한 점이 많지만 gdsc 활동을 통해 여러가지 경험을 하며 성장하고 싶습니다! 
+  name: 이유민
+  author_name: 유민
+  role: member
+  email: yuminyyy@gmail.com
+  github: lym11020
+  description: 두려워하지 말자
+  introduce: 안녕하세요! 서울과학기술대학교 기계시스템디자인공학과 21학번 이유민입니다. 저는 ai, 딥러닝에 관심이 많습니다. 아직 부족한 점이 많지만 gdsc 활동을 통해 여러가지 경험을 하며 성장하고 싶습니다!
+gunhong:
+  naem: 구건홍
+  author_name: 건홍
+  role: member
+  email: gunhong951@naver.com
+  github: koo995
+  description: 쫄았어? 어의가 없네... 직진이다
+  introduce: 안녕하세요:) 스마트ict융합공학과 17학번 구건홍입니다. 프론트엔드, 백엔드와 같이 풀스택에 관심이 있으며 ai 또한 관심이 많습니다. 취업과 gdsc활동은 백엔드로 할렵니다!
