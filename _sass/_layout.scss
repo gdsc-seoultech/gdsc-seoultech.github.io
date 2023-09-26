@@ -4,14 +4,33 @@
 .site-header {
   border-bottom: 1px solid $grey-color-light;
   background-color: #fff;
-  opacity: 0.75;
   position: fixed;
   left: 0px;
   top: 0px;
-  height: 56px;
+  height: $nav-height;
   width: 100%;
   z-index: 50;
   overflow: hidden;
+}
+
+.header-inner {
+  height: $nav-height;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#logo-wrapper {
+  height: 25px;
+  a {
+    display: flex;
+    align-items: center;
+    .title {
+      margin-left: 8px;
+      font-size: 18px;
+      color: #000000;
+    }
+  }
 }
 
 .tab-header {
@@ -36,25 +55,65 @@
   }
 }
 .site-nav {
-  float: right;
-  line-height: $nav-height;
+
+  ul {
+    display: flex;
+    margin: 0px;
+    li {
+      display: inline-block;
+      margin-left: 32px;
+    }
+  }
+
   .page-link {
     line-height: $base-line-height;
+    font-size: 15px;
     // Gaps between nav items, but not on the first one
     &:not(:first-child) {
       margin-left: 10px;
     }
   }
-  @include media-query($on-palm) {
-    position: fixed;
-    top: 0px;
-    right: 10px;
-    text-align: right;
-    &:hover .trigger {
+  @include media-query(768px) {
+    ul {
+      display: none;
+      width: 100%;
+      position: fixed;
+      top: $nav-height;
+      left: 0;
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+
+      li {
+        display: block;
+        margin: auto 0;
+        padding: 20px;
+      }
+    }
+
+    ul.show {
       display: block;
-      padding-bottom: 5px;
     }
   }
+}
+
+.menu-dropdown {
+  display: none;
+  cursor: pointer;
+  .icon {
+    width: 24px;
+    height: 24px;
+    background-size: 24px;
+    background-image: url("/img/ic_menu.png");
+  }
+
+  @include media-query(768px) {
+    display: flex;
+  }
+}
+
+#banner > img{
+  width: 100%;
+  margin-top: $nav-height;
 }
 
 .detail-member {  
@@ -115,11 +174,8 @@
   border-top: 5px solid $grey-color-dark;
   font-size: 15px;
   background-color: $grey-color-dark;
-  padding: 2px;
+  padding: 2px 0;
   color: #aaa;
-  position: fixed;
-  left: 0px;
-  bottom: 0px;
   width: 100%;
   a {
     color: darkgrey;
@@ -149,7 +205,7 @@
  * Page content   **********************************************************
  */
 .page-content {
-  padding: 100px 0; /* VERTICAL PADDING FOR TITLE ON EVERY PAGE */
+  padding: 64px 0; /* VERTICAL PADDING FOR TITLE ON EVERY PAGE */
 }
 .page-heading {
   font-size: 20px;
@@ -492,4 +548,8 @@
   content: "javascript";
   background: #f7df1e;
   color: black;
+}
+
+.giscus {
+  margin-top: 32px;
 }

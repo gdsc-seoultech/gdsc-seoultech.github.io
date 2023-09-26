@@ -11,6 +11,10 @@ timezone: Asia/Seoul
 # Build settings
 markdown: kramdown
 highlighter: rouge
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
 
 # Pagination
 paginate: 15

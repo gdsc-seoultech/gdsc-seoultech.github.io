@@ -5,17 +5,29 @@ layout: default
 <script src="/js/category.js"></script>
 <div class="post">
 
-  <header class="post-header">
-    <h1 class="post-title">POST - {{ page.title }}</h1>
-    <h5 class="post-description">{{ page.description }}</h5>
+  <header class="member-header">
+    {% assign members = site.data.members %}
+    {% assign cnt = members.size %}
+    {% assign year = page.permalink | split: "/" %}
+    {% assign year = year[2] %}
+    <div class="dropdown-year">
+      <button class="dropdown-btn">{{ year }}기 ▼</button>
+      <div class="dropdown-content">
+        {% for _member in members %}
+        <a href="/category/{{ cnt }}">{{ cnt }}기</a>
+        {% assign cnt = cnt | minus: 1 %}
+        {% endfor%}
+      </div>
+    </div>
+    <h1 class="member-title">Posts</h1>
   </header>
 
 
   <div class="tag-list">
     <ul>
-        <a class="tag-all" href="/category/{{page.title}}">all</a>
+        <a class="tag-all" href="/category/{{ year }}">all</a>
       {% for tag in site.data.tags %}
-          <a href="/category/{{page.title}}?tag={{ tag }}">
+          <a href="/category/{{ year }}?tag={{ tag }}">
             <span class="tag" data-tag="{{tag}}">{{tag}}</span>
           </a>
       {% endfor %}
@@ -52,6 +64,6 @@ layout: default
 
 </div>
 
-<div class="pagination" />
+<div class="pagination"></div>
 
 <script src="/js/pagination.js"></script>

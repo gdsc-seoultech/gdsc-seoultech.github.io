@@ -1,0 +1,55 @@
+.member-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.member-title {
+    display: inline-block;
+    padding: 0;
+    margin-left: 16px;
+}
+
+.dropdown-year {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    background-color: $gdsc-yellow;
+    color: white;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 0;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+.dropdown-year:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-year:hover .dropdown-btn {
+  background-color: $gdsc-yellow_200;
+}
