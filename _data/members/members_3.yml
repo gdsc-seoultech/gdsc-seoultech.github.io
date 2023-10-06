@@ -199,6 +199,21 @@ Eonseon:
   email: pocva6243@gmail.com
   blogs:
     tistory: eonpark.tistory.com
-    github: https://github.com/eonpark
   description: 영차!
   introduce: 안녕하세요! ML 파트 3기 Member ITM 19학번 박언선입니다. 1년동안 GDSC 활동 열심히 참여하고 좋은 결과 얻어가고 싶습니다!
+Jiwon:
+  name: 이지원
+  author_name: 지원
+  role: member
+  email: easy1nhard2@gmail.com
+  github: orieasy1
+  description: 꾸준히 열심히!
+  introduce: 안녕하세요! Web 파트 3기 Member ITM 22학년 이지원입니다. <br> 웹 개발 공부에 관심을 가지게 되어 열심히 공부하고자 gdsc에 들어오게 되었습니다.
+jeonghyeon:
+  name: 장석민
+  author_name: 석민
+  role: member
+  email: ssk07079@gmail.com
+  github: miinimanimo
+  description: 생각하지 않기 유연한 남탓
+  introduce: 안녕하세요! ml 파트 3기 Member ITM 20 학번 장석민입니다! 부족한 점이 많지만 열심히 하겠습니다!!
