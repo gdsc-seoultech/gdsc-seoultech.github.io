@@ -192,6 +192,56 @@ Kangmin:
   github: rkdals0203
   description: 사는대로 생각말고 생각하는대로 살자
   introduce: 안녕하세요! Web 파트 3기 Member ITM 19학번 김강민입니다. <br> 웹 개발과 웹 앱에 관심 있으며, IT서비스 창업이 목표입니다. 많은 분들과 가까워지고 성장할 수 있으면 좋겠습니다!
+Eonseon:
+  name: 박언선  
+  author_name: 언선
+  role: member
+  email: pocva6243@gmail.com
+  github: eonpark
+  blogs:
+    tistory: https://eonpark.tistory.com/
+  description: 영차!
+  introduce: 안녕하세요! ML 파트 3기 Member ITM 19학번 박언선입니다. 1년동안 GDSC 활동 열심히 참여하고 좋은 결과 얻어가고 싶습니다!
+Jiwon:
+  name: 이지원
+  author_name: 지원
+  role: member
+  email: easy1nhard2@gmail.com
+  github: orieasy1
+  description: 꾸준히 열심히!
+  introduce: 안녕하세요! Web 파트 3기 Member ITM 22학년 이지원입니다. <br> 웹 개발 공부에 관심을 가지게 되어 열심히 공부하고자 gdsc에 들어오게 되었습니다.
+Seokmin:
+  name: 장석민
+  author_name: 석민
+  role: member
+  email: ssk07079@gmail.com
+  github: miinimanimo
+  description: 생각하지 않기 유연한 남탓
+  introduce: 안녕하세요! ml 파트 3기 Member ITM 20 학번 장석민입니다! 부족한 점이 많지만 열심히 하겠습니다!!
+Nayeon:
+  name: 이나연
+  author_name: 나연
+  role: member
+  email: 06061215ny@gmail.com
+  github: Nayeon-2
+  description: 그냥 하자
+  introduce: 안녕하세요:) 전자IT미디어공학과 19학번 이나연입니다. GDSC 3기 ML 파트 멤버로 참여하게 되었습니다. 1년동안 AI뿐만 아니라 다양한 분야의 프로그래밍을 열심히 공부하고 함께 성장하고 싶습니다. 파이팅!
+eunji:
+  name: 이은지
+  author_name: 은지
+  role: member
+  email: eunji@gmail.com
+  github: ej070961
+  description: 하면 해~!!
+  introduce: 안녕하세요 ITM전공 20학번 이은지입니다. 휴학하고 웹개발에 관심이 생겨 GDSC 멤버로 참여하게 되었습니다! 1년동안 잘 부탁드립니다.😊  
+HyeonJeong:
+   name: 박현정
+   author_name: 현정
+   role: member
+   email: 2314hz@gmail.com
+   github: Hz2314
+   description: 인생은 직진
+   introduce: 안녕하세요! DL 파트 3기 Member 기자차 20학번 박현정입니다. 자동차와 딥러닝, 자율주행 인지 SW 부분에 관심이 많습니다.
 jegeun:
   name: 추제근
   author_name: 제근
