@@ -90,6 +90,8 @@
 #d {
   color: darkslategray;
   font-size: 15px;
+  max-height: 250px;
+  overflow-y: scroll;
 }
 
 
@@ -106,5 +108,9 @@
 
   .member_description {
     margin-top: 64px;
+  }
+
+  #d {
+    max-height: none;
   }
 }
