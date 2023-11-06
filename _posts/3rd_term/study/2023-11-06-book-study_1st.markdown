@@ -29,10 +29,13 @@ tags: ["study"]
 * 사다리타기로 해당 내용 발표자를 뽑고 발표한다.
 * 이후 스터디 시간에 업로드된 질문에 대해 서로 답변하며 생각을 나눈다.
 
-#### 📗 참여자 
-| [<img src="https://github.com/Changha-dev.png" width="200" height="200">](https://github.com/Changha-dev) | [<img src="https://github.com/Hong-Mu.png" width="200" height="200">](https://github.com/Hong-Mu) | [<img src="https://github.com/ej070961.png" width="200" height="200">](https://github.com/ej070961) | [<img src="https://github.com/UykM.png" width="200" height="200">](https://github.com/UykM) | [<img src="https://github.com/leeinsunny.png" width="200" height="200">](https://github.com/leeinsunny) |
-|:---:|:---:|:---:|:---:|:---:
-전창하|채홍무|이은지|신민규|이인선
+#### 참여자 
+
+* 전창하 WEB/CORE
+* 채홍무 WEB/CORE
+* 이은지 WEB/MEMBER
+* 신민규 WEB/MEMBER
+* 이인선 ANDROID/CORE 
 
 - - -
 <br>
