@@ -36,7 +36,7 @@ hyunseo:
   description: In the bleak midwinter
   introduce: 서울과학기술대학교 ITM전공 19학번 박현서입니다. 백엔드 분야를 진로로 생각하며 열심히 살아가려 노력 중입니다. <br> 부족하지만 GDSC 3기 코어로 활동하게 되어 감사하고 이 경험을 통해 많은 것을 얻길 기대하고 있습니다. <br> 함께 성장하는 한 해가 되길 소망합니다🙏
 ljs7143:
-  name: 이준서  
+  name: 이준서
   author_name: 준서
   role: core
   email: junseo27643779@gmail.com
@@ -59,15 +59,211 @@ changha:
   role: core
   email: mentenseoul@gmail.com
   github: Changha-dev
+<<<<<<< HEAD
   description: Just Do It! 
   introduce: 안녕하세요, 웹파트 코어를 맡게 된 컴퓨터공학과 20학번 전창하입니다! 현재 스프링 부트를 활용한 백엔드 개발을 공부하고 있으며, 올해 안에는 최대한 높은 수준의 숙련도를 달성하는 것을 목표로 하고 있습니다. 공부할 수록 어렵지만 함께 스터디를 진행하고 다양한 행사에 참여함으로써 폭넓은 경험을 쌓으며 성장하고자 합니다. 1년동안 함께 멋진 GDSC 3기를 만들어봐요! 🌴  
   blogs:  
+=======
+  description: Just Do It!
+  introduce: 안녕하세요, 웹파트 코어를 맡게 된 컴퓨터공학과 20학번 전창하입니다. 현재 스프링 부트를 활용한 백엔드 개발을 공부하고 있으며, 올해 안에는 최대한 높은 수준의 숙련도를 달성하는 것을 목표로 하고 있습니다. 공부할 수록 어렵지만 함께 스터디를 진행하고 다양한 행사에 참여함으로써 폭넓은 경험을 쌓으며 성장하고자 합니다. 1년동안 함께 멋진 GDSC 3기를 만들어봐요! 🌴
+  blogs:
+>>>>>>> 220e9f80e0d93ff11fc1b54267a4544977e3cfa3
     tistory: https://changha-dev.tistory.com
 Insun:
-  name: 이인선  
+  name: 이인선
   author_name: 인선
   role: core
   email: leeinsun5278@gmail.com
   github: leeinsunny
   description: 중꺾그마 빠샤^^
   introduce: 안녕하세요 ITM전공 21학번 이인선입니다. 현재 3학년 2학기에 재학 중이며, 관심 분야는 안드로이드입니다. 소수 과를 벗어나 다양한 사람들과 개발 프로젝트를 진행하고 싶은 찰나에 GDSC의 코어로 참여하게 되었습니다. 아직 많이 부족하고 구글링 없는 코딩을 힘들어하지만, “중요한 건 꺾였는데도 계속하는 마음”이라고 생각합니다^____^!!!! GDSC를 통해 후회 없는 나날이 되도록 열심히 노력하도록 하겠습니다! 같이 성장해요ㅎㅎ🔥
+<<<<<<< HEAD
+=======
+yunjoo:
+  name: 강연주
+  author_name: 연주
+  role: core
+  email: 0702sally@gmail.com
+  github: sally7788
+  description: 하면 된다
+  introduce: 안녕하세요 산업정보시스템전공 21학번 강연주입니다. 잘 부탁드립니다.
+hoon:
+  name: 최승훈
+  author_name: 훈
+  role: member
+  email: 0015chseang@gmail.com
+  github: cshooon
+  description: You Only Live Once
+  introduce: 안녕하세요. 서울과학기술대학교 컴퓨터공학과 20학번 최승훈입니다. <br> 관심분야는 컴퓨터 비전과 자연어처리입니다. 부족하지만 열심히 하겠습니다!! 잘 부탁드립니다!!!!!
+  blogs:
+    velog: https://velog.io/@blublue_02
+Jeongjoon:
+  name: 박정준
+  author_name: 정준
+  role: member
+  email: wjdwns586@gmail.com
+  github: prislewarz
+  description: 이대로는 아쉬워서 다시 한번 더... 도전합니다!
+  introduce: 안녕하세요. 산업정보시스템전공 21학번 박정준입니다. 2기 활동하며 경험한 것, 깨달은 것도 정말 많았지만, 한편으로는 아쉬웠던 점, 후회되는 점도 많이 있었습니다. 이제 저는 2기 때의 경험을 살려 그때의 부족했던 점, 아쉬웠던 점을 보완하고자, 그리고 작년에 비해 얼마나 더 성장했는지 확인해보고자, 더 새로운 지식과 경험을 쌓아보고자 망설임 끝에 3기는 DL(ML)파트 대신 웹(백엔드 위주)파트 멤버로서 활동하게 되었습니다! 다시한번 새로운 기회를 주신 리드님 감사합니다! <br> 지난 1년간, 아직 명확한 진로를 찾지 못해 다양한 분야에서 활동을 해 본 결과 백엔드, Ops, 데이터, 머신러닝(인공지능) 분야에서 제 진로를 찾아나가기로 결심했고, 지금 당장은 백엔드 개발자를 목표로 공부중입니다. 갓생을 지향해서, 해커톤을 위시한 각종 대회나 공모전에도 많이 참여하고 싶어요! 솔루션 챌린지도 다시한번 파이팅^^ <br> 이번 학기부터는 휴학을 결심했기에 GDSC 활동에 더욱 열중하여 후회없는 활동으로 3기를 마무리지으며, 2기 때 미처 다 끝내지 못한 여정을, 3기라는 소중한 기회를 연장선 삼아 꼭 완주하도록 하겠습니다!!
+  blogs:
+    tistory: https://warzstudying.tistory.com
+    velog: https://velog.io/@prislewarz
+gdsjw:
+  name: 심종우
+  author_name: 종우
+  role: member
+  email: jwlv111@naver.com
+  github: leaf1191
+  description: 게으르게 공부하자
+  introduce: 컴공 23학번 심종우입니다. 이번에 안드로이드 파트에 참여하게 되었고 이쪽 분야에서 최대한 많은 것을 얻어가고 싶습니다.
+kyko:
+  name: 고경남
+  author_name: 경남
+  role: member
+  email: koc2827@gmail.com
+  github: rhrudska987
+  description: 파이팅 해야지!
+  introduce: 안녕하세요! 컴퓨터공학과 18학번 고경남입니다. 주 언어는 자바이며, 현재 서버 개발자를 목표로 공부하고 있습니다. <br>gdsc라는 좋은 기회를 통해 다른 분들과 프로젝트를 하며 같이 성장하고 싶습니다! 잘 부탁드려요!!
+  blogs:
+    tistory: https://kyko.tistory.com
+minkyu:
+  name: 신민규
+  author_name: 민규
+  role: member
+  email: digi1k2001@gmail.com
+  github: UykM
+  description: 하기로 한 건 끝까지 하자 !
+  introduce: 안녕하세요! 컴퓨터공학과 20학번 신민규입니다. 현재 관심분야는 웹 개발이며, Java를 다룰 줄 알고, Spring과 같은 웹 개발에 필요한 공부를 하는 중입니다. <br>아직 많이 부족하기 때문에 이번 기회를 통해 많이 얻어갔으면 좋겠습니다!
+  blogs:
+    tistory: https://ukym-tistory.tistory.com
+YeongKyeong:
+  name: 정영경
+  author_name: 영경
+  role: member
+  email: jyk990619@gmail.com
+  github: jyk0619
+  description: 언제나 자유롭게
+  introduce: 안녕하세요 컴퓨터공학과 19학번 정영경입니다. 올해 GDSC 3기 안드로이드 member로 함께하게 되었습니다. <br>앱개발에 관심이 많으며 특히나 Flutter를 주로 공부하고 있습니다. 이제 걸음마를 뗀 초보 개발자인 저에게 GDSC와 함께하는 한 걸음 한 걸음이 특별하고 큰 도약입니다. 부족한만큼 많이 배우고 열심히 하겠습니다. 다들 잘 부탁드립니다!
+yumin:
+  name: 이유민
+  author_name: 유민
+  role: member
+  email: yuminyyy@gmail.com
+  github: lym11020
+  description: 두려워하지 말자
+  introduce: 안녕하세요! 서울과학기술대학교 기계시스템디자인공학과 21학번 이유민입니다. 저는 ai, 딥러닝에 관심이 많습니다. 아직 부족한 점이 많지만 gdsc 활동을 통해 여러가지 경험을 하며 성장하고 싶습니다! 
+jihyun:
+  name: 김지현
+  author_name: 지현
+  role: member
+  email: hyeon1371@gmail.com
+  github: zhyunn
+  description: Get used to new!
+  introduce: 안녕하세요~ 전자IT미디어공학과 20학번 김지현입니다! 백엔드에 대한 호기심이 생겨 web 파트에서 공부 중이고, gdsc를 통해 다같이 많이 성장했으면 좋겠습니다*^^* 
+gunhong:
+  name: 구건홍
+  author_name: 건홍
+  role: member
+  email: gunhong951@naver.com
+  github: koo995
+  description: 쫄았어? 어의가 없네... 직진이다
+  introduce: 안녕하세요:) 스마트ict융합공학과 17학번 구건홍입니다. 프론트엔드, 백엔드와 같이 풀스택에 관심이 있으며 ai 또한 관심이 많습니다. 취업과 gdsc활동은 백엔드로 할렵니다!
+youngjin:
+  name: 남영진
+  author_name: 영진
+  role: member
+  email: nam_ing@kakao.com
+  github: NamisMe
+  description: 좋았쒀!
+  introduce: 안녕하세요! 전자IT미디어공학과 18학번 남영진입니다. ML Engineer를 희망하고, 그 중 특히 생성형 AI와 음성 AI에 관심이 많습니다. 좋은 코워커들과 함께 프로젝트 진행해보고 싶습니다!
+Jisu:
+  name: 한지수
+  author_name: 지수
+  role: member
+  email: 0528jisu@gmail.com
+  github: Jisu0528
+  description: 안되면 될때까지
+  introduce: 안녕하세요! 컴퓨터공학과 20학번 한지수입니다. Web 3기 Member로 참여하게 됐습니다! <br> 1년동안 GDSC 활동 즐겁게 하며 같이 성장할 수 있으면 좋겠습니:D
+YunHo:
+  name: 장윤호
+  author_name: 윤호
+  role: member
+  email: hoo9268@gmail.com
+  github: githyj-jang
+  description: 하나씩 열심히
+  introduce: 안녕하세요! Web 파트 3기 Member로 참여하게 된 컴퓨터공학과 19학번 장윤호입니다. <br> 아직 부족하지만 gdsc 활동으로 많이 배우고 성장할 수 있도록 열심히 하겠습니다!!
+Kangmin:
+  name: 김강민
+  author_name: 강민
+  role: member
+  email: rkdals0203@gmail.com
+  github: rkdals0203
+  description: 사는대로 생각말고 생각하는대로 살자
+  introduce: 안녕하세요! Web 파트 3기 Member ITM 19학번 김강민입니다. <br> 웹 개발과 웹 앱에 관심 있으며, IT서비스 창업이 목표입니다. 많은 분들과 가까워지고 성장할 수 있으면 좋겠습니다!
+Eonseon:
+  name: 박언선  
+  author_name: 언선
+  role: member
+  email: pocva6243@gmail.com
+  github: eonpark
+  blogs:
+    tistory: https://eonpark.tistory.com/
+  description: 영차!
+  introduce: 안녕하세요! ML 파트 3기 Member ITM 19학번 박언선입니다. 1년동안 GDSC 활동 열심히 참여하고 좋은 결과 얻어가고 싶습니다!
+Jiwon:
+  name: 이지원
+  author_name: 지원
+  role: member
+  email: easy1nhard2@gmail.com
+  github: orieasy1
+  description: 꾸준히 열심히!
+  introduce: 안녕하세요! Web 파트 3기 Member ITM 22학년 이지원입니다. <br> 웹 개발 공부에 관심을 가지게 되어 열심히 공부하고자 gdsc에 들어오게 되었습니다.
+Seokmin:
+  name: 장석민
+  author_name: 석민
+  role: member
+  email: ssk07079@gmail.com
+  github: miinimanimo
+  description: 생각하지 않기 유연한 남탓
+  introduce: 안녕하세요! ml 파트 3기 Member ITM 20 학번 장석민입니다! 부족한 점이 많지만 열심히 하겠습니다!!
+Nayeon:
+  name: 이나연
+  author_name: 나연
+  role: member
+  email: 06061215ny@gmail.com
+  github: Nayeon-2
+  description: 그냥 하자
+  introduce: 안녕하세요:) 전자IT미디어공학과 19학번 이나연입니다. GDSC 3기 ML 파트 멤버로 참여하게 되었습니다. 1년동안 AI뿐만 아니라 다양한 분야의 프로그래밍을 열심히 공부하고 함께 성장하고 싶습니다. 파이팅!
+eunji:
+  name: 이은지
+  author_name: 은지
+  role: member
+  email: eunji@gmail.com
+  github: ej070961
+  description: 하면 해~!!
+  introduce: 안녕하세요 ITM전공 20학번 이은지입니다. 휴학하고 웹개발에 관심이 생겨 GDSC 멤버로 참여하게 되었습니다! 1년동안 잘 부탁드립니다.😊  
+HyeonJeong:
+   name: 박현정
+   author_name: 현정
+   role: member
+   email: 2314hz@gmail.com
+   github: Hz2314
+   description: 인생은 직진
+   introduce: 안녕하세요! DL 파트 3기 Member 기자차 20학번 박현정입니다. 자동차와 딥러닝, 자율주행 인지 SW 부분에 관심이 많습니다.
+JeGeun:
+   name: 추제근
+   author_name: 제근
+   role: member
+   email: cnwprms@naver.com
+   github: ChooJG
+   description: Do the Right Thing
+   introduce: 안녕하세요!! 인공지능응용학과 21학번 추제근 입니다. 머신러닝과 웹 개발 학습을 진행하고 있습니다.
+saeyeon:
+  name: 임새연
+  author_name: 새연
+  role: member
+  email: saeyeon0522@g.seoultech.ac.kr
+  github: saeyeonn
+  description: 출고를 꿈꾸는 아기 감자
+  introduce: 안녕하세요 ITM 전공 21학번 임새연입니다. 백엔드에 관심을 갖게 되어 Web으로 들어오게 되었습니다!  
+>>>>>>> 220e9f80e0d93ff11fc1b54267a4544977e3cfa3

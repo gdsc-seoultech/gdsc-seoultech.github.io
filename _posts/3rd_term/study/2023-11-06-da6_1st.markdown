@@ -1,0 +1,33 @@
+---
+layout: post
+title: 1️⃣1쿼터 다육이 스터디
+date: 2023-11-06 20:00:00 +0900
+author: hyeok
+description: 1️⃣1쿼터 다육이 스터디
+categories: ["3rd_term"]
+tags: ["study"]
+---
+
+# 깃헙 1일 1커밋은 무리이니, 일주일에 1커밋 부터 진행해 봅시다!!
+
+![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0hTqfzJ8F-Dh6hq5ymykyqyj9IFWSUlb7UJlhpHW4EQ&s)
+
+----   
+<br>
+
+# 💪🏻스터디 멤버
+
+1쿼터 다육이 스터디는 6명의 멤버가 함께 합니다!   
+강혜림, 김강민, 김혁, 이정현, 이지원, 현준혁
+
+
+----   
+<br>
+
+# 🚨스터디 규칙
+
+✔ 주 1회 깃헙 커밋 인증 하기!
+
+
+다들 커밋을 열심히 해서 꼭 좋은 개발자가 되어봅시다!!
+
