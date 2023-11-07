@@ -32,7 +32,7 @@ tags: ["study"]
 #### 참여자 
 
 * 전창하 WEB/CORE
-* 채홍무 WEB/CORE
+* 채홍무 ANDROID/CORE
 * 이은지 WEB/MEMBER
 * 신민규 WEB/MEMBER
 * 이인선 ANDROID/CORE 
