@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 북스터디 1,2 주차 
+title: 1️⃣, 2️⃣ 북스터디 1,2 주차 
 date: 2023-11-06 23:14:00 +0900
 author: changha
 description: 북스터디 1,2 주차 
