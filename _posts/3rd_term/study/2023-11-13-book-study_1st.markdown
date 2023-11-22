@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 북스터디 3 주차 
+title: 3️⃣ 북스터디 3 주차 
 date: 2023-11-20 16:59:00 +0900
 author: changha
 description: 북스터디 3 주차 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 북스터디 4 주차 
+title: 4️⃣ 북스터디 4 주차 
 date: 2023-11-22 15:10:00 +0900
 author: changha
 description: 북스터디 4 주차 
