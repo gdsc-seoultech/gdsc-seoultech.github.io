@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
+Disallow: /members/
 Sitemap: {{ '/sitemap.xml' | relative_url | prepend: site.url }}
