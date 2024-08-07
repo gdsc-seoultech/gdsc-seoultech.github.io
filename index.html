@@ -2,39 +2,54 @@
 layout: default
 ---
 
-
-<br/>
-<br>
+<br />
+<br />
 <div class="main-page">
     <h2><b>주요 페이지 바로 가기</b></h2>
-    <a href="https://gdsc.community.dev/seoul-national-university-of-science-and-technology/" target="_blank"><h2>👉🏻  GDSC Chapter Page  👈🏻</h2></a>
+    <a
+        href="https://gdsc.community.dev/seoul-national-university-of-science-and-technology/"
+        target="_blank"
+        ><h2>👉🏻 GDSC Chapter Page 👈🏻</h2></a
+    >
     <a href="/about"><h2>👉🏻GDSC Seoultech CoC & Rule👈🏻</h2></a>
 </div>
 
 <span class="contacticon center">
-    <a href="mailto:yongsandew@gmail.com"><i class="fa fa-envelope-square" style="color: #4285f4"></i></a>
-    <a href="https://github.com/gdsc-seoultech" target="_blank"><i class="fa fa-github-square" style="color: #EA4335"></i></a>
-    <a href="http://facebook.com/gdsc.seoultech" target="_blank"><i class="fa fa-facebook-square" style="color: #FBBC04"></i></a>
-    <a href="https://instagram.com/gdsc_seoultech" target="_blank"><i class="fa fa-instagram" style="color: #34A853"></i></a>
+    <a href="mailto:junnie082@gmail.com"
+        ><i class="fa fa-envelope-square" style="color: #4285f4"></i
+    ></a>
+    <a href="https://github.com/gdsc-seoultech" target="_blank"
+        ><i class="fa fa-github-square" style="color: #ea4335"></i
+    ></a>
+    <a href="http://facebook.com/gdsc.seoultech" target="_blank"
+        ><i class="fa fa-facebook-square" style="color: #fbbc04"></i
+    ></a>
+    <a href="https://instagram.com/gdsc_seoultech" target="_blank"
+        ><i class="fa fa-instagram" style="color: #34a853"></i
+    ></a>
 </span>
-<br><br>
-<hr>
-<br><br>
+<br /><br />
+<hr />
+<br /><br />
 
 <div class="main-page">
     <h1><b>GDSC Seoultech 세미나&이벤트</b></h1>
-  <ul class="post-list">
-
-    {% assign category = "3rd_term" %}
-    {% for post in site.categories[category] %}
-      {% if post.tags contains "seminar" %}
+    <ul class="post-list">
+        {% assign category = "3rd_term" %} {% for post in
+        site.categories[category] %} {% if post.tags contains "seminar" %}
         <li>
-          <h3><a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
-          <p class="post-author">작성자: {{ post.author }}</p>
-          <p class="post-meta">{{ post.date | date: '%Y년 %m월 %-d일 %H:%M' }}</p>
+            <h3>
+                <a
+                    class="post-title"
+                    href="{{ post.url | prepend: site.baseurl }}"
+                    >{{ post.title }}</a
+                >
+            </h3>
+            <p class="post-author">작성자: {{ post.author }}</p>
+            <p class="post-meta">
+                {{ post.date | date: '%Y년 %m월 %-d일 %H:%M' }}
+            </p>
         </li>
-      {% endif %}
-    {% endfor %}
-  </ul>
+        {% endif %} {% endfor %}
+    </ul>
 </div>
-
