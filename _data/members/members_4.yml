@@ -1,88 +1,88 @@
 hyojeong:
-    name: 전효정
-    author_name: 효정
-    role: lead
-    email: junnie082@gmail.com
-    github: junnie082
-    description: 더 큰 세상으로!
-    introduce: 안녕하세요, gdsc seoultech 4기 lead 전효정입니다. <br> gdsc seoultech 3기 web core 경험을 바탕으로, 멋진 gdsc 4기 만들어 나가고 싶습니다. 잘부탁드립니다. 감사합니다~!
-    blogs:
-        github: https://junnie082.github.io
+  name: 전효정
+  author_name: 효정
+  role: lead
+  email: junnie082@gmail.com
+  github: junnie082
+  description: 더 큰 세상으로!
+  introduce: 안녕하세요, gdsc seoultech 4기 lead 전효정입니다. <br> gdsc seoultech 3기 web core 경험을 바탕으로, 멋진 gdsc 4기 만들어 나가고 싶습니다. 잘부탁드립니다. 감사합니다~!
+  blogs:
+    github: https://junnie082.github.io
 hyukjun:
-    name: 김혁준
-    author_name: 혁준
-    role: core
-    email: nmkk1234@naver.com
-    github: hyukjunkim1116
-    description: 으쌰으쌰!
-    introduce: 저는 건축공학과 19학번 김혁준입니다. <br> 현재 IT융합소프트웨어 복수전공을 하고 있으며 스프링을 사용하는 백엔드 개발자가 되는 것을 목표로 공부하고 있습니다. <br> 많은 분들과 대화하는 것을 좋아합니다! 으쌰으쌰!
-    blogs:
-        velog: https://velog.io/@rlagurwns112/posts
+  name: 김혁준
+  author_name: 혁준
+  role: core
+  email: nmkk1234@naver.com
+  github: hyukjunkim1116
+  description: 으쌰으쌰!
+  introduce: 저는 건축공학과 19학번 김혁준입니다. <br> 현재 IT융합소프트웨어 복수전공을 하고 있으며 스프링을 사용하는 백엔드 개발자가 되는 것을 목표로 공부하고 있습니다. <br> 많은 분들과 대화하는 것을 좋아합니다! 으쌰으쌰!
+  blogs:
+    velog: https://velog.io/@rlagurwns112/posts
 saeyeon:
-    name: 임새연
-    author_name: 새연
-    role: core
-    email: dev.saeyeon@gmail.com
-    github: saerishable
-    description: 감자 성장기
-    introduce: 안녕하세요, 백엔드 파트 코어로 활동하게 된 ITM 전공 21학번 임새연입니다. <br> GDSC 4기 멤버들을 위한 다양한 행사를 준비하고 있으니 많은 관심 부탁드립니다!
-    blogs:
-        velog: https://velog.io/@saeyeonn
+  name: 임새연
+  author_name: 새연
+  role: core
+  email: dev.saeyeon@gmail.com
+  github: saerishable
+  description: 감자 성장기
+  introduce: 안녕하세요, 백엔드 파트 코어로 활동하게 된 ITM 전공 21학번 임새연입니다. <br> GDSC 4기 멤버들을 위한 다양한 행사를 준비하고 있으니 많은 관심 부탁드립니다!
+  blogs:
+    velog: https://velog.io/@saeyeonn
 ujin:
-    name: 이유진
-    author_name: 유진
-    role: core
-    email: suddenlydisappear200@gmail.com
-    github: 2ujin
-    description: Hello World
-    introduce: 안녕하세요! 서울과학기술대학교 융합기계공학과 23학번이자 프론트엔드 개발자 이유진입니다! <br> 누구나 사용하기 편리하고, 즐겁게 이용할 수 있는 서비스를 만드는 것을 좋아합니다 😎 함께 성장해보아요!
-    blogs:
-        github: https://github.com/2ujin
+  name: 이유진
+  author_name: 유진
+  role: core
+  email: suddenlydisappear200@gmail.com
+  github: 2ujin
+  description: Hello World
+  introduce: 안녕하세요! 서울과학기술대학교 융합기계공학과 23학번이자 프론트엔드 개발자 이유진입니다! <br> 누구나 사용하기 편리하고, 즐겁게 이용할 수 있는 서비스를 만드는 것을 좋아합니다 😎 함께 성장해보아요!
+  blogs:
+    github: https://github.com/2ujin
 yunseok:
-    name: 정윤석
-    author_name: 윤석
-    role: core
-    email: yunseok0304@gmail.com
-    github: seokkkkkk
-    description: 느리지만 빠르게 🐸
-    introduce: 안녕하세요! 서울과학기술대학교 컴퓨터공학과 20학번  정윤석입니다! 현재는 프론트엔드 개발자를 목표로 공부하고 있습니다! <br> 함께 성장하고 싶어요! 같이 가봅시다!
+  name: 정윤석
+  author_name: 윤석
+  role: core
+  email: yunseok0304@gmail.com
+  github: seokkkkkk
+  description: 느리지만 빠르게 🐸
+  introduce: 안녕하세요! 서울과학기술대학교 컴퓨터공학과 20학번  정윤석입니다! 현재는 프론트엔드 개발자를 목표로 공부하고 있습니다! <br> 함께 성장하고 싶어요! 같이 가봅시다!
 yoolim:
-    name: 한유림
-    author_name: 유림
-    role: core
-    email: ninetale22@gmail.com
-    github: hohosznta
-    description: 결과보다는 과정
-    introduce: 저는 인공지능을 활용한 서비스에 관심이 많습니다. <br> 같이 멋진 프로젝트 만들어 나갈 수 있으면 좋겠습니다!
-    blogs:
-        velog: https://velog.io/@yoli22/posts
+  name: 한유림
+  author_name: 유림
+  role: core
+  email: ninetale22@gmail.com
+  github: hohosznta
+  description: 결과보다는 과정
+  introduce: 저는 인공지능을 활용한 서비스에 관심이 많습니다. <br> 같이 멋진 프로젝트 만들어 나갈 수 있으면 좋겠습니다!
+  blogs:
+    velog: https://velog.io/@yoli22/posts
 yongho:
-    name: 송용호
-    author_name: 용호
-    role: core
-    email: thdfydgh@seoultech.ac.kr
-    github: thdfydgh
-    description: 열정광인
-    introduce: 안녕하세요 AI 코어를 맡은 산업정보시스템 20학번 송용호입니다. <br> DL이면 모두 관심있고, 최근엔 CV와 생성모델 공부중입니다. <br> 대학원을 갈지 안갈지 늘 고민하고 있습니다. GDSC 4기 멤버분들과 AI competition에서 수상을 꼭 할 예정 입니다. <br> 공모전에 관심있고, 온 힘을 다해 참여하고 싶으시면 언제든지 연락해주세요.
-    blogs:
-        velog: https://velog.io/@thdfydgh/posts
+  name: 송용호
+  author_name: 용호
+  role: core
+  email: thdfydgh@seoultech.ac.kr
+  github: thdfydgh
+  description: 열정광인
+  introduce: 안녕하세요 AI 코어를 맡은 산업정보시스템 20학번 송용호입니다. <br> DL이면 모두 관심있고, 최근엔 CV와 생성모델 공부중입니다. <br> 대학원을 갈지 안갈지 늘 고민하고 있습니다. GDSC 4기 멤버분들과 AI competition에서 수상을 꼭 할 예정 입니다. <br> 공모전에 관심있고, 온 힘을 다해 참여하고 싶으시면 언제든지 연락해주세요.
+  blogs:
+    velog: https://velog.io/@thdfydgh/posts
 eunjin:
-    name: 왕은진
-    author_name: 은진
-    role: core
-    email: wej0208@gmail.com
-    description: Just do it!
-    introduce: 안녕하세요 저는 GDSC 4기 디자인팀 코어 산업디자인전공 20학번 왕은진입니다 :) <br> 이번 활동을 통해 새로운 사람들과 다양한 경험을 하고 싶습니다. 잘 부탁드립니다!
+  name: 왕은진
+  author_name: 은진
+  role: core
+  email: wej0208@gmail.com
+  description: Just do it!
+  introduce: 안녕하세요 저는 GDSC 4기 디자인팀 코어 산업디자인전공 20학번 왕은진입니다 :) <br> 이번 활동을 통해 새로운 사람들과 다양한 경험을 하고 싶습니다. 잘 부탁드립니다!
 seonghee:
-    name: 최성희
-    author_name: 성희
-    role: core
-    email: choigonggi@gmail.com
-    github: asdf0212
-    description: 가보자고👊
-    introduce: 안녕하세요! GDSC Seoultech  4기 디자인코어 최성희입니다. <br> 함께 성장해나갈 수 있을 앞날이 기대됩니다! 잘 부탁드립니다 😌
-    blogs:
-        notefolio: https://notefolio.net/huoguo_choi03
+  name: 최성희
+  author_name: 성희
+  role: core
+  email: choigonggi@gmail.com
+  github: asdf0212
+  description: 가보자고👊
+  introduce: 안녕하세요! GDSC Seoultech  4기 디자인코어 최성희입니다. <br> 함께 성장해나갈 수 있을 앞날이 기대됩니다! 잘 부탁드립니다 😌
+  blogs:
+    notefolio: https://notefolio.net/huoguo_choi03
 test:
   name: 김맹구
   author_name: 맹구
@@ -91,4 +91,11 @@ test:
   github: maenggu
   description: 훌쩍
   introduce: 안녕하세요! GDSC Seoultech  4기 김맹구입니다.
-
+jiwoo:
+  name: 신지우
+  author_name: 지우
+  role: member
+  email: sjw884900@gmail.com
+  github: xxrainow
+  description: 아자아자
+  introduce: 안녕하세요 GDG 4기 백엔드 멤버 컴퓨터공학과 22학번 신지우라고 합니다! <br> 새롭고 다양한 분들과 함께 열심히 배우면서 성장해나가고 싶습니다! 파이팅!
