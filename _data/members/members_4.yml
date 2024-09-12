@@ -92,3 +92,16 @@ test:
   description: 훌쩍
   introduce: 안녕하세요! GDSC Seoultech  4기 김맹구입니다.
 
+kyeongin:
+  name: 노경인
+  author_name: 경인
+  role: member
+  email: shruddls1307@gmail.com
+  github: kyinn1307
+  description: 하나하나 천천히..!
+  introduce: 안녕하세요! GDSC Seoultech  4기 노경인입니다. <br> 많은 사람들과 다양한 경험하면서 성장할 수 있는 좋은 기회가 되면 좋겠습니다!!
+  blogs:
+    tistory: https://kyinn1307.tistory.com/
+
+
+
