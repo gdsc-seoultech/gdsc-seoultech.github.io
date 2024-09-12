@@ -84,11 +84,10 @@ seonghee:
     blogs:
         notefolio: https://notefolio.net/huoguo_choi03
 test:
-  name: 김맹구
-  author_name: 맹구
+  name: 김지환
+  author_name: 지환
   role: member
-  email: 123@gmail.com
-  github: maenggu
-  description: 훌쩍
-  introduce: 안녕하세요! GDSC Seoultech  4기 김맹구입니다.
-
+  email: kimjih1130@gmail.com
+  github: jihwannnn
+  description: 말하는 감자
+  introduce: 안녕하세요! GDSC Seoultech  4기 AI 멤버 김지환입니다 :)). <br> 아직 개발 관련된 경험이 많이 부족해요.. 이것 저것 가리지 않고 해보는 걸 좋아합니다! 잘 부탁드립니다 🙃!
