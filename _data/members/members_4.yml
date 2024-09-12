@@ -83,6 +83,28 @@ seonghee:
     introduce: 안녕하세요! GDSC Seoultech  4기 디자인코어 최성희입니다. <br> 함께 성장해나갈 수 있을 앞날이 기대됩니다! 잘 부탁드립니다 😌
     blogs:
         notefolio: https://notefolio.net/huoguo_choi03
+juseung:
+    name: 이주승
+    author_name: 주승
+    role: member
+    email: juseung0619@gmail.com
+    github: JuseungL
+    description: 항상 발전하기
+    introduce: 안녕하세요! 백엔드 메인으로 하고있는 4기 백엔드 멤버 이주승입니다. <br> 열심히하겠습니다. 잘부탁드립니다.
+    blogs:
+        tistory: https://ai-back-end.tistory.com/category
+        velog: https://velog.io/@judel/posts
+minkyung:
+    name: 전민경
+    author_name: 민경
+    role: member
+    email: 020412min@gmail.com
+    github: miiiiinkyung
+    description: 행복하게 하자
+    introduce: 안녕하세요 4기 디자인 멤버 전민경입니다! <br> 재밌게 프로젝트 진행해요~ 잘 부탁드립니다! 
+    blogs:
+        behance: https://www.behance.net/d0d77430
+        
 test:
   name: 김맹구
   author_name: 맹구
