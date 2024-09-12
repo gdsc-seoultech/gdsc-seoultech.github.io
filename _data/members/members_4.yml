@@ -91,4 +91,20 @@ test:
   github: maenggu
   description: 훌쩍
   introduce: 안녕하세요! GDSC Seoultech  4기 김맹구입니다.
+sumin:
+  name: 박수민
+  author_name: 수민
+  role: member
+  email: soomin031@gmail.com
+  github: spark00013
+  description: 화이팅~!
+  introduce: 안녕하세요! GDSC Seoultech  4기 DevRel 박수민입니다! 잘부탁드립니다.
+Jihwan:
+  name: 김지환
+  author_name: 지환
+  role: member
+  email: kimjh3110340@gmail.com
+  github: Bluisgray
+  description: 안녕하세요, 파이팅입니다!
+  introduce: 안녕하세요! GDSC Seoultech  4기 디자인 김지환입니다! 같이 성장할 수 있는 시간을 보내봐요!
 
