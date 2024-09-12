@@ -91,4 +91,25 @@ test:
   github: maenggu
   description: 훌쩍
   introduce: 안녕하세요! GDSC Seoultech  4기 김맹구입니다.
+hyukwon:
+    name: 권현욱
+    author_name: 현욱
+    role: member
+    email: kwonhu3973@gmail.com
+    github: woogie01
+    description: 폐 끼치지 말자!
+    introduce: 안녕하세요! 컴퓨터공학과 20학번 권현욱입니다. 현재 백엔드 및 데이터 분야에 관심이 있고, 졸업 전에 다양한 분들과 만나 많은 활동들을 경험하고 싶어서 참여하게 되었습니다. 잘 부탁드립니다 😌
+    blogs:
+        tistory: https://hyukwon-devlog.tistory.com/
+minkyu:
+    name: 신민규
+    author_name: 민규
+    role: member
+    email: digi1k2001@gmail.com
+    github: uykm
+    description: 하기로 한 건 끝까지 하자 !
+    introduce: 안녕하세요! 컴퓨터공학과 20학번 신민규입니다. 현재 관심분야는 백엔드와 프론트엔드이고, 프론트엔드 개발을 경험해보고자 이번에 GDG 4기 프론트 멤버로 참여하게 됐습니다. 잘 부탁드립니다 😌
+    blogs:
+        tistory: https://ukym-tistory.tistory.com
+
 
