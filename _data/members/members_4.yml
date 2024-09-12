@@ -83,3 +83,12 @@ seonghee:
     introduce: 안녕하세요! GDSC Seoultech  4기 디자인코어 최성희입니다. <br> 함께 성장해나갈 수 있을 앞날이 기대됩니다! 잘 부탁드립니다 😌
     blogs:
         notefolio: https://notefolio.net/huoguo_choi03
+test:
+  name: 김맹구
+  author_name: 맹구
+  role: member
+  email: 123@gmail.com
+  github: maenggu
+  description: 훌쩍
+  introduce: 안녕하세요! GDSC Seoultech  4기 김맹구입니다.
+
