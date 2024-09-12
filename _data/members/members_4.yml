@@ -83,12 +83,30 @@ seonghee:
     introduce: 안녕하세요! GDSC Seoultech  4기 디자인코어 최성희입니다. <br> 함께 성장해나갈 수 있을 앞날이 기대됩니다! 잘 부탁드립니다 😌
     blogs:
         notefolio: https://notefolio.net/huoguo_choi03
-test:
-  name: 김맹구
-  author_name: 맹구
+seohyun:
+  name: 박서현
+  author_name: 서현
   role: member
-  email: 123@gmail.com
-  github: maenggu
-  description: 훌쩍
-  introduce: 안녕하세요! GDSC Seoultech  4기 김맹구입니다.
+  email: psh030108@gmail.com
+  github: xeohyun
+  description: 자란다자란다자란다
+  introduce: 안녕하세요! GDG 4기 백엔드 멤버로 활동하게 된 서울과학기술대학교 컴퓨터공학과 23학번 박서현입니다. 1년간 무럭무럭 성장하겠습니다.
 
+daegyu:
+  name: 김대규
+  author_name: 대규
+  role: member
+  email: ddk3207@naver.com
+  github: KimDaegyu-Dev
+  description: 코딩 접습니다
+  introduce: 안녕하세요! GDG 4기 디자인 멤버 컴퓨터공학과/시각디자인 23학번 김대규입니다. 잘 부탁드립니다!
+
+  
+jiyoon:
+  name: 박지윤
+  author_name: 지윤
+  role: member
+  email: keskoe0613@gmail.com
+  github: Ji-yoon1030
+  description: 오늘부터 금주하겠습니다(오늘 찐막).
+  introduce: 안녕하세요! GDG 4기 프론트엔드 멤버로 활동하게된 컴공 23학번 박지윤입니다. 1년동안 잘 부탁드립니다!
