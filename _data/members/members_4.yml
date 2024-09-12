@@ -92,3 +92,11 @@ test:
   description: 훌쩍
   introduce: 안녕하세요! GDSC Seoultech  4기 김맹구입니다.
 
+jiwon:
+    name: 이지원
+    author_name: 지원
+    role: member
+    email: ljwon413@gmail.com
+    github: 4ch1o3
+    description: 아자
+    introduce: 안녕하세요, GDG on Campus 4기 Front-end member 이지원입니다.
