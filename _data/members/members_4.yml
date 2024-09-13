@@ -180,6 +180,17 @@ minjae:
   description: 어떻게든
   introduce: 안녕하세요! GDSC Seoultech  4기 김민재입니다. <br> 다양하게 배워보고 싶습니다아
 
+Lisa:
+  name: 김리사
+  author_name: 리사
+  role: member
+  email: kls1023kr@gmail.com
+  github: 
+  description: 화이팅^^
+  introduce: 안녕하세요, gdsc seoultech 4기 design 김리사입니다. 타 it동아리애서 기획을 하다가 구현이 더 중요하다고 느껴서 design으로 활동하게 됐습니다! 잘부탁드립니다. 감사합니다~!
+  blogs:
+    notion: https://laser-grape-705.notion.site/41452f7f5ff44289a7d7b52b43b7ea41
+
   
 Suyong:
   name: 심수용
@@ -279,6 +290,26 @@ haneul:
   description: 🐈‍⬛
   introduce: 안녕하세요! GDSC Seoultech  4기 김하늘입니다.
 
+yuchan:
+  name: 조유찬
+  author_name: 유찬
+  role: member
+  email: yuchancho174@gmail.com
+  github: letYuchan
+  description: 느리지만 꾸준히🐢
+  introduce: 안녕하세요! GDSC Seoultech 4기 컴퓨터공학과 조유찬입니다. <br> <strong>공부하고 있는 분야는 프론트엔드고, 목표는 풀스택</strong>입니다. 다양한 분들을 만나보고, 저의 실력을 한층 더 발전시키고자 여기에 참여하게 됐습니다. 잘 부탁드립니다.
+
+seoin:
+  name: 이서인
+  author_name: guapa
+  role: member
+  email: guapapamama@gmail.com
+  github: guapa0girl
+  description: yo soy de guapa~✨
+  introduce: 안녕하세요! GDSC Seoultech  4기 컴퓨터공학과 23학번 이서인 입니다. <br> 앞으로 1년간 잘 지냈으면 좋겠어요! 아직 많이 부족하지만 무섭게 성장하는 모습 보여드리겠습니다😎
+
+
+
 huijin:
   name: 오희진
   author_name: 희진
@@ -332,3 +363,31 @@ minhyuk:
   github: Minhyuk12
   description: 뭐든지 끝까지! 제대로!
   introduce: 안녕하세요! GDG 4기 프론트엔드 멤버로 활동하게된 ITM전공 21학번 이민혁입니다. 잘 부탁드립니다!!
+
+yuyoung:
+  name: 황유영
+  author_name: 유영
+  role: member
+  email: hyyy8810@gmail.com
+  github: yuyoung924
+  description: 오합지존
+  introduce: 안녕하세요! GDSC Seoultech 4기 Back Member 황유영입니다. <br> 이번 GDG 활동에서 좋은 사람들과 다양한 경험을 해보는 것이 목표입니다! <br> 잘 부탁드립니다 🙇‍♀️
+
+eunjae:
+  name: 이은재
+  author_name: 은재
+  role: member
+  email: eunjae8924@naver.com
+  github: lej8924
+  description: Done is better than perfect.
+  introduce: 안녕하세요!새싹개발자 이은재입니다. 무럭무럭 자라나게끔 열심히 하겠습니다. 감사합니다*^^*
+
+huijae:
+  name: 고희재
+  author_name: 희재
+  role: member
+  email: rhgmlwo11@gmail.com
+  github: HUIJAEKO
+  description: 화이팅👊
+  introduce: 안녕하세요! GDSC Seoultech 4기 백엔드팀 고희재입니다. 잘부탁드립니다!
+
