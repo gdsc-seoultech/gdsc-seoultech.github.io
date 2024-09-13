@@ -147,6 +147,15 @@ haneul:
   description: 🐈‍⬛
   introduce: 안녕하세요! GDSC Seoultech  4기 김하늘입니다.
 
+soyeon:
+  name: 안소연
+  author_name: 소연
+  role: member
+  email: an62852807@gmail.com
+  github: 
+  description: gogo!
+  introduce: 안녕하세요! GDSC Seoultech  4기 안소연 입니다. 잘 부탁드립니다!
+  
 test:
   name: 조건희
   author_name: 건희
