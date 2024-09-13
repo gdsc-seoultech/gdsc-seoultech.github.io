@@ -92,6 +92,35 @@ seonghee:
     introduce: 안녕하세요! GDSC Seoultech  4기 디자인코어 최성희입니다. <br> 함께 성장해나갈 수 있을 앞날이 기대됩니다! 잘 부탁드립니다 😌
     blogs:
         notefolio: https://notefolio.net/huoguo_choi03
+
+chaeyeon:
+  name: 조채연
+  author_name: 채연
+  role: member
+  email: gcy9293@naver.com
+  github: Chaeyeoncho
+  description: gdsc 열심히 해보겠습니다!
+  introduce: 안녕하세요! GDSC Seoultech  4기 조채연입니다! <br> 다양한 분야에 관심이 많아서 다양한 분야를 경험해보고 싶습니다! <br> 같이 열심히 활동해보아요!
+
+busung:
+  name: 박부성  
+  author_name: 부성
+  role: member
+  email: piaobu123@gmail.com
+  github: rlawndqo
+  description: gdsc 열심히 해보겠습니다!
+  introduce: 안녕하세요! GDSC Seoultech  4기 AI 신규부원 박부성입니다! <br> 열심히 공부해서 많은 프로젝트 경험을 하고싶습니다! <br> 열심히 하겠습니다! 잘부탁드립니다!
+
+
+yeonwoo:
+  name: 신연우  
+  author_name: 연우
+  role: member
+  email: mu10adhd@gmail.com
+  github: yo0oenu
+  description: gdsc 열심히 해보겠습니다!
+  introduce: 안녕하세요! GDSC Seoultech  4기 AI 신규부원 신연우입니다! <br> 열심히 공부해서 많은 프로젝트 경험을 하고싶습니다! <br> 열심히 하겠습니다! 잘부탁드립니다!
+
         
 taeho:
   name: 이태호
