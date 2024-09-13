@@ -91,6 +91,7 @@ test:
   github: maenggu
   description: 훌쩍
   introduce: 안녕하세요! GDSC Seoultech  4기 김맹구입니다.
+
 jiwoo:
   name: 신지우
   author_name: 지우
@@ -99,3 +100,87 @@ jiwoo:
   github: xxrainow
   description: 아자아자
   introduce: 안녕하세요 GDG 4기 백엔드 멤버 컴퓨터공학과 22학번 신지우라고 합니다! <br> 새롭고 다양한 분들과 함께 열심히 배우면서 성장해나가고 싶습니다! 파이팅!
+
+sumin:
+  name: 박수민
+  author_name: 수민
+  role: member
+  email: soomin031@gmail.com
+  github: spark00013
+  description: 화이팅~!
+  introduce: 안녕하세요! GDSC Seoultech  4기 DevRel 박수민입니다! 잘부탁드립니다.
+Jihwan:
+  name: 김지환
+  author_name: 지환
+  role: member
+  email: kimjh3110340@gmail.com
+  github: Bluisgray
+  description: 안녕하세요, 파이팅입니다!
+  introduce: 안녕하세요! GDSC Seoultech  4기 디자인 김지환입니다! 같이 성장할 수 있는 시간을 보내봐요!
+
+sohyun:
+  name: 장소현
+  author_name: 소현
+  role: member
+  email: calisse805@naver.com
+  github: Xinaroo
+  description: 고민중...
+  introduce: 안녕하세요 AI 멤버로 활동하게 된 산업정보시스템전공 장소현입니다. <br> 함께 성장할 수 있도록 열심히 활동하겠습니다!
+
+hyukwon:
+    name: 권현욱
+    author_name: 현욱
+    role: member
+    email: kwonhu3973@gmail.com
+    github: woogie01
+    description: 폐 끼치지 말자!
+    introduce: 안녕하세요! 컴퓨터공학과 20학번 권현욱입니다. 현재 백엔드 및 데이터 분야에 관심이 있고, 졸업 전에 다양한 분들과 만나 많은 활동들을 경험하고 싶어서 참여하게 되었습니다. 잘 부탁드립니다 😌
+    blogs:
+        tistory: https://hyukwon-devlog.tistory.com/
+minkyu:
+    name: 신민규
+    author_name: 민규
+    role: member
+    email: digi1k2001@gmail.com
+    github: uykm
+    description: 하기로 한 건 끝까지 하자 !
+    introduce: 안녕하세요! 컴퓨터공학과 20학번 신민규입니다. 현재 관심분야는 백엔드와 프론트엔드이고, 프론트엔드 개발을 경험해보고자 이번에 GDG 4기 프론트 멤버로 참여하게 됐습니다. 잘 부탁드립니다 😌
+    blogs:
+        tistory: https://ukym-tistory.tistory.com
+
+haneul:
+  name: 김하늘
+  author_name: 하늘
+  role: member
+  email: haneulkimhera@gmail.com
+  github: haneulkimhera
+  description: 🐈‍⬛
+  introduce: 안녕하세요! GDSC Seoultech  4기 김하늘입니다.
+
+huijin:
+  name: 오희진
+  author_name: 희진
+  role: member
+  email: huijin0904@naver.com
+  github: OhHuijin
+  description: 뭘하든 제대로 !🔥
+  introduce: 안녕하세요! GDSC 4기 프론트 엔드 멤버 오희진입니다. <br> GDSC 활동을 통해 멋진 개발자로 한 걸음 나아가고 싶습니다. 잘 부탁드립니다 !
+
+soyeon:
+  name: 안소연
+  author_name: 소연
+  role: member
+  email: an62852807@gmail.com
+  github: 
+  description: gogo!
+  introduce: 안녕하세요! GDSC Seoultech  4기 안소연 입니다. 잘 부탁드립니다!
+  
+test:
+  name: 조건희
+  author_name: 건희
+  role: member
+  email: geonhui0987@gmail.com
+  github: geonheu
+  description: Yes, I can do!
+  introduce: 안녕하세요~! GDSC Seoultech 4기 AI멤버로 참여하게된 조건희입니다!! <br> 같이 공부하고 함께 성장해나가고 싶습니다. 잘 부탁드립니다!!
+
