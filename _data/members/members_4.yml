@@ -122,3 +122,12 @@ haneul:
   description: 🐈‍⬛
   introduce: 안녕하세요! GDSC Seoultech  4기 김하늘입니다.
 
+test:
+  name: 조건희
+  author_name: 건희
+  role: member
+  email: geonhui0987@gmail.com
+  github: geonheu
+  description: Yes, I can do!
+  introduce: 안녕하세요~! GDSC Seoultech 4기 AI멤버로 참여하게된 조건희입니다!! <br> 같이 공부하고 함께 성장해나가고 싶습니다. 잘 부탁드립니다!!
+
