@@ -147,6 +147,15 @@ haneul:
   description: 🐈‍⬛
   introduce: 안녕하세요! GDSC Seoultech  4기 김하늘입니다.
 
+huijin:
+  name: 오희진
+  author_name: 희진
+  role: member
+  email: huijin0904@naver.com
+  github: OhHuijin
+  description: 뭘하든 제대로 !🔥
+  introduce: 안녕하세요! GDSC 4기 프론트 엔드 멤버 오희진입니다. <br> GDSC 활동을 통해 멋진 개발자로 한 걸음 나아가고 싶습니다. 잘 부탁드립니다 !
+
 soyeon:
   name: 안소연
   author_name: 소연
