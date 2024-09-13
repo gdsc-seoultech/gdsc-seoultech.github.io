@@ -61,7 +61,7 @@ yoolim:
   introduce: 저는 인공지능을 활용한 서비스에 관심이 많습니다. <br> 같이 멋진 프로젝트 만들어 나갈 수 있으면 좋겠습니다!
   blogs:
     velog: https://velog.io/@yoli22/posts
-    
+
 yongho:
   name: 송용호
   author_name: 용호
@@ -72,7 +72,7 @@ yongho:
   introduce: 안녕하세요 AI 코어를 맡은 산업정보시스템 20학번 송용호입니다. <br> DL이면 모두 관심있고, 최근엔 CV와 생성모델 공부중입니다. <br> 대학원을 갈지 안갈지 늘 고민하고 있습니다. GDSC 4기 멤버분들과 AI competition에서 수상을 꼭 할 예정 입니다. <br> 공모전에 관심있고, 온 힘을 다해 참여하고 싶으시면 언제든지 연락해주세요.
   blogs:
     velog: https://velog.io/@thdfydgh/posts
-    
+
 eunjin:
   name: 왕은진
   author_name: 은진
@@ -80,6 +80,7 @@ eunjin:
   email: wej0208@gmail.com
   description: Just do it!
   introduce: 안녕하세요 저는 GDSC 4기 디자인팀 코어 산업디자인전공 20학번 왕은진입니다 :) <br> 이번 활동을 통해 새로운 사람들과 다양한 경험을 하고 싶습니다. 잘 부탁드립니다!
+
 
 seonghee:
     name: 최성희
@@ -91,6 +92,16 @@ seonghee:
     introduce: 안녕하세요! GDSC Seoultech  4기 디자인코어 최성희입니다. <br> 함께 성장해나갈 수 있을 앞날이 기대됩니다! 잘 부탁드립니다 😌
     blogs:
         notefolio: https://notefolio.net/huoguo_choi03
+        
+taeho:
+  name: 이태호
+  author_name: 태호
+  role: member
+  email: otr0811@gmail.com
+  github: singsingsing3
+  description: 끝까지 가는 사람 🚀
+  introduce: 안녕하세요! GDSC Seoultech  AI 파트 4기 이태호입니다. <br> 이번 활동을 통해 많은 것을 배우고 싶습니다. <br> 잘 부탁드립니다 😌
+
 juseung:
     name: 이주승
     author_name: 주승
