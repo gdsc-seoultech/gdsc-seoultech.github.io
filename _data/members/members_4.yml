@@ -408,9 +408,18 @@ jiwhan:
   email: kimjh1130@seoultech.ac.kr
   github: jihwannnn
   description: 코딩이 하고싶어요..
-  introduce: 안녕하세요! AI 멤버 김지환입니다. 지원한 부분 뿐만 아니라 개발에 관한 다양한 경험을 해보고 싶습니다! 열심히 하겠습니다~🫠
+  introduce: 안녕하세요! AI 멤버 김지환입니다. 지원한 부분 뿐만 아니라 개발에 관한 다양한 경험을 해보고 싶습니다! 열심히 하겠습니다~
+  
+seungwoo:
+  name: 백승우
+  author_name: 승우 
+  role: member
+  email: swbaik01@gmail.com
+  github: Baikseungwoo
+  description: 멋지게 살자.
+  introduce: 안녕하세요! 백엔드 멤버 백승우입니다. ITM 전공 2학년 재학중입니다. 부족하지만 잘 부탁드립니다!!
 
-  hyeok:
+hyeok:
   name: 김혁
   author_name: 혁 
   role: member
@@ -418,3 +427,4 @@ jiwhan:
   github: hyeok55
   description: 잘부탁드립니다!
   introduce: 안녕하세요! AI 멤버 김혁입니다. 여러분과 함께 성장하는 기회가 됬으면 좋겠습니다!!
+
