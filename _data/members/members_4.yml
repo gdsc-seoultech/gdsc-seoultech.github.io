@@ -437,3 +437,20 @@ hyeok:
   description: 잘부탁드립니다!
   introduce: 안녕하세요! AI 멤버 김혁입니다. 여러분과 함께 성장하는 기회가 됬으면 좋겠습니다!!
 
+yueun:
+  name: 유가은
+  author_name: 가은
+  role: member
+  email: yueun1682@gmail.com
+  github: 
+  description: 🐶
+  introduce: 안녕하세요! GDSC Seoultech  4기 디자인 멤버로  참여하게 된 유가은입니다.
+
+jungmin:
+  name: 허정민
+  author_name: 정민
+  role: member
+  email: hjm0432@naver.com
+  github: jungmin0432
+  description: 파이팅!
+  introduce: 안녕하세요! GDSC Seoultech  4기 허정민입니다. 잘부탁드려요!
