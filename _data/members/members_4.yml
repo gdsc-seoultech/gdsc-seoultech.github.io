@@ -1,86 +1,85 @@
 hyojeong:
-  name: 전효정
-  author_name: 효정
-  role: lead
-  email: junnie082@gmail.com
-  github: junnie082
-  description: 더 큰 세상으로!
-  introduce: 안녕하세요, gdsc seoultech 4기 lead 전효정입니다. <br> gdsc seoultech 3기 web core 경험을 바탕으로, 멋진 gdsc 4기 만들어 나가고 싶습니다. 잘부탁드립니다. 감사합니다~!
-  blogs:
-    github: https://junnie082.github.io
+    name: 전효정
+    author_name: 효정
+    role: lead
+    email: junnie082@gmail.com
+    github: junnie082
+    description: 더 큰 세상으로!
+    introduce: 안녕하세요, gdsc seoultech 4기 lead 전효정입니다. <br> gdsc seoultech 3기 web core 경험을 바탕으로, 멋진 gdsc 4기 만들어 나가고 싶습니다. 잘부탁드립니다. 감사합니다~!
+    blogs:
+        github: https://junnie082.github.io
 
 hyukjun:
-  name: 김혁준
-  author_name: 혁준
-  role: core
-  email: nmkk1234@naver.com
-  github: hyukjunkim1116
-  description: 으쌰으쌰!
-  introduce: 저는 건축공학과 19학번 김혁준입니다. <br> 현재 IT융합소프트웨어 복수전공을 하고 있으며 스프링을 사용하는 백엔드 개발자가 되는 것을 목표로 공부하고 있습니다. <br> 많은 분들과 대화하는 것을 좋아합니다! 으쌰으쌰!
-  blogs:
-    velog: https://velog.io/@rlagurwns112/posts
+    name: 김혁준
+    author_name: 혁준
+    role: core
+    email: nmkk1234@naver.com
+    github: hyukjunkim1116
+    description: 으쌰으쌰!
+    introduce: 저는 건축공학과 19학번 김혁준입니다. <br> 현재 IT융합소프트웨어 복수전공을 하고 있으며 스프링을 사용하는 백엔드 개발자가 되는 것을 목표로 공부하고 있습니다. <br> 많은 분들과 대화하는 것을 좋아합니다! 으쌰으쌰!
+    blogs:
+        velog: https://velog.io/@rlagurwns112/posts
 
 saeyeon:
-  name: 임새연
-  author_name: 새연
-  role: core
-  email: dev.saeyeon@gmail.com
-  github: saerishable
-  description: 감자 성장기
-  introduce: 안녕하세요, 백엔드 파트 코어로 활동하게 된 ITM 전공 21학번 임새연입니다. <br> GDSC 4기 멤버들을 위한 다양한 행사를 준비하고 있으니 많은 관심 부탁드립니다!
-  blogs:
-    velog: https://velog.io/@saeyeonn
+    name: 임새연
+    author_name: 새연
+    role: core
+    email: dev.saeyeon@gmail.com
+    github: saerishable
+    description: 감자 성장기
+    introduce: 안녕하세요, 백엔드 파트 코어로 활동하게 된 ITM 전공 21학번 임새연입니다. <br> GDSC 4기 멤버들을 위한 다양한 행사를 준비하고 있으니 많은 관심 부탁드립니다!
+    blogs:
+        velog: https://velog.io/@saeyeonn
 
 ujin:
-  name: 이유진
-  author_name: 유진
-  role: core
-  email: suddenlydisappear200@gmail.com
-  github: 2ujin
-  description: Hello World
-  introduce: 안녕하세요! 서울과학기술대학교 융합기계공학과 23학번이자 프론트엔드 개발자 이유진입니다! <br> 누구나 사용하기 편리하고, 즐겁게 이용할 수 있는 서비스를 만드는 것을 좋아합니다 😎 함께 성장해보아요!
-  blogs:
-    github: https://github.com/2ujin
+    name: 이유진
+    author_name: 유진
+    role: core
+    email: suddenlydisappear200@gmail.com
+    github: 2ujin
+    description: Hello World
+    introduce: 안녕하세요! 서울과학기술대학교 융합기계공학과 23학번이자 프론트엔드 개발자 이유진입니다! <br> 누구나 사용하기 편리하고, 즐겁게 이용할 수 있는 서비스를 만드는 것을 좋아합니다 😎 함께 성장해보아요!
+    blogs:
+        github: https://github.com/2ujin
 
 yunseok:
-  name: 정윤석
-  author_name: 윤석
-  role: core
-  email: yunseok0304@gmail.com
-  github: seokkkkkk
-  description: 느리지만 빠르게 🐸
-  introduce: 안녕하세요! 서울과학기술대학교 컴퓨터공학과 20학번  정윤석입니다! 현재는 프론트엔드 개발자를 목표로 공부하고 있습니다! <br> 함께 성장하고 싶어요! 같이 가봅시다!
+    name: 정윤석
+    author_name: 윤석
+    role: core
+    email: yunseok0304@gmail.com
+    github: seokkkkkk
+    description: 느리지만 빠르게 🐸
+    introduce: 안녕하세요! 서울과학기술대학교 컴퓨터공학과 20학번  정윤석입니다! 현재는 프론트엔드 개발자를 목표로 공부하고 있습니다! <br> 함께 성장하고 싶어요! 같이 가봅시다!
 
 yoolim:
-  name: 한유림
-  author_name: 유림
-  role: core
-  email: ninetale22@gmail.com
-  github: hohosznta
-  description: 결과보다는 과정
-  introduce: 저는 인공지능을 활용한 서비스에 관심이 많습니다. <br> 같이 멋진 프로젝트 만들어 나갈 수 있으면 좋겠습니다!
-  blogs:
-    velog: https://velog.io/@yoli22/posts
+    name: 한유림
+    author_name: 유림
+    role: core
+    email: ninetale22@gmail.com
+    github: hohosznta
+    description: 결과보다는 과정
+    introduce: 저는 인공지능을 활용한 서비스에 관심이 많습니다. <br> 같이 멋진 프로젝트 만들어 나갈 수 있으면 좋겠습니다!
+    blogs:
+        velog: https://velog.io/@yoli22/posts
 
 yongho:
-  name: 송용호
-  author_name: 용호
-  role: core
-  email: thdfydgh@seoultech.ac.kr
-  github: thdfydgh
-  description: 열정광인
-  introduce: 안녕하세요 AI 코어를 맡은 산업정보시스템 20학번 송용호입니다. <br> DL이면 모두 관심있고, 최근엔 CV와 생성모델 공부중입니다. <br> 대학원을 갈지 안갈지 늘 고민하고 있습니다. GDSC 4기 멤버분들과 AI competition에서 수상을 꼭 할 예정 입니다. <br> 공모전에 관심있고, 온 힘을 다해 참여하고 싶으시면 언제든지 연락해주세요.
-  blogs:
-    velog: https://velog.io/@thdfydgh/posts
+    name: 송용호
+    author_name: 용호
+    role: core
+    email: thdfydgh@seoultech.ac.kr
+    github: thdfydgh
+    description: 열정광인
+    introduce: 안녕하세요 AI 코어를 맡은 산업정보시스템 20학번 송용호입니다. <br> DL이면 모두 관심있고, 최근엔 CV와 생성모델 공부중입니다. <br> 대학원을 갈지 안갈지 늘 고민하고 있습니다. GDSC 4기 멤버분들과 AI competition에서 수상을 꼭 할 예정 입니다. <br> 공모전에 관심있고, 온 힘을 다해 참여하고 싶으시면 언제든지 연락해주세요.
+    blogs:
+        velog: https://velog.io/@thdfydgh/posts
 
 eunjin:
-  name: 왕은진
-  author_name: 은진
-  role: core
-  email: wej0208@gmail.com
-  description: Just do it!
-  introduce: 안녕하세요 저는 GDSC 4기 디자인팀 코어 산업디자인전공 20학번 왕은진입니다 :) <br> 이번 활동을 통해 새로운 사람들과 다양한 경험을 하고 싶습니다. 잘 부탁드립니다!
-
+    name: 왕은진
+    author_name: 은진
+    role: core
+    email: wej0208@gmail.com
+    description: Just do it!
+    introduce: 안녕하세요 저는 GDSC 4기 디자인팀 코어 산업디자인전공 20학번 왕은진입니다 :) <br> 이번 활동을 통해 새로운 사람들과 다양한 경험을 하고 싶습니다. 잘 부탁드립니다!
 
 seonghee:
     name: 최성희
@@ -94,42 +93,40 @@ seonghee:
         notefolio: https://notefolio.net/huoguo_choi03
 
 chaeyeon:
-  name: 조채연
-  author_name: 채연
-  role: member
-  email: gcy9293@naver.com
-  github: Chaeyeoncho
-  description: gdsc 열심히 해보겠습니다!
-  introduce: 안녕하세요! GDSC Seoultech  4기 조채연입니다! <br> 다양한 분야에 관심이 많아서 다양한 분야를 경험해보고 싶습니다! <br> 같이 열심히 활동해보아요!
+    name: 조채연
+    author_name: 채연
+    role: member
+    email: gcy9293@naver.com
+    github: Chaeyeoncho
+    description: gdsc 열심히 해보겠습니다!
+    introduce: 안녕하세요! GDSC Seoultech  4기 조채연입니다! <br> 다양한 분야에 관심이 많아서 다양한 분야를 경험해보고 싶습니다! <br> 같이 열심히 활동해보아요!
 
 busung:
-  name: 박부성  
-  author_name: 부성
-  role: member
-  email: piaobu123@gmail.com
-  github: rlawndqo
-  description: gdsc 열심히 해보겠습니다!
-  introduce: 안녕하세요! GDSC Seoultech  4기 AI 신규부원 박부성입니다! <br> 열심히 공부해서 많은 프로젝트 경험을 하고싶습니다! <br> 열심히 하겠습니다! 잘부탁드립니다!
-
+    name: 박부성
+    author_name: 부성
+    role: member
+    email: piaobu123@gmail.com
+    github: rlawndqo
+    description: gdsc 열심히 해보겠습니다!
+    introduce: 안녕하세요! GDSC Seoultech  4기 AI 신규부원 박부성입니다! <br> 열심히 공부해서 많은 프로젝트 경험을 하고싶습니다! <br> 열심히 하겠습니다! 잘부탁드립니다!
 
 yeonwoo:
-  name: 신연우  
-  author_name: 연우
-  role: member
-  email: mu10adhd@gmail.com
-  github: yo0oenu
-  description: gdsc 열심히 해보겠습니다!
-  introduce: 안녕하세요! GDSC Seoultech  4기 AI 신규부원 신연우입니다! <br> 열심히 공부해서 많은 프로젝트 경험을 하고싶습니다! <br> 열심히 하겠습니다! 잘부탁드립니다!
+    name: 신연우
+    author_name: 연우
+    role: member
+    email: mu10adhd@gmail.com
+    github: yo0oenu
+    description: gdsc 열심히 해보겠습니다!
+    introduce: 안녕하세요! GDSC Seoultech  4기 AI 신규부원 신연우입니다! <br> 열심히 공부해서 많은 프로젝트 경험을 하고싶습니다! <br> 열심히 하겠습니다! 잘부탁드립니다!
 
-        
 taeho:
-  name: 이태호
-  author_name: 태호
-  role: member
-  email: otr0811@gmail.com
-  github: singsingsing3
-  description: 끝까지 가는 사람 🚀
-  introduce: 안녕하세요! GDSC Seoultech  AI 파트 4기 이태호입니다. <br> 이번 활동을 통해 많은 것을 배우고 싶습니다. <br> 잘 부탁드립니다 😌
+    name: 이태호
+    author_name: 태호
+    role: member
+    email: otr0811@gmail.com
+    github: singsingsing3
+    description: 끝까지 가는 사람 🚀
+    introduce: 안녕하세요! GDSC Seoultech  AI 파트 4기 이태호입니다. <br> 이번 활동을 통해 많은 것을 배우고 싶습니다. <br> 잘 부탁드립니다 😌
 
 juseung:
     name: 이주승
@@ -142,6 +139,7 @@ juseung:
     blogs:
         tistory: https://ai-back-end.tistory.com/category
         velog: https://velog.io/@judel/posts
+
 minkyung:
     name: 전민경
     author_name: 민경
@@ -149,69 +147,58 @@ minkyung:
     email: 020412min@gmail.com
     github: miiiiinkyung
     description: 행복하게 하자
-    introduce: 안녕하세요 4기 디자인 멤버 전민경입니다! <br> 재밌게 프로젝트 진행해요~ 잘 부탁드립니다! 
+    introduce: 안녕하세요 4기 디자인 멤버 전민경입니다! <br> 재밌게 프로젝트 진행해요~ 잘 부탁드립니다!
     blogs:
         behance: https://www.behance.net/d0d77430
-        
-test:
-  name: 김지환
-  author_name: 지환
-  role: member
-  email: kimjih1130@gmail.com
-  github: jihwannnn
-  description: 말하는 감자
-  introduce: 안녕하세요! GDSC Seoultech  4기 AI 멤버 김지환입니다 :)). <br> 아직 개발 관련된 경험이 많이 부족해요.. 이것 저것 가리지 않고 해보는 걸 좋아합니다! 잘 부탁드립니다 🙃!
-  
+
 seohyun:
-  name: 박서현
-  author_name: 서현
-  role: member
-  email: psh030108@gmail.com
-  github: xeohyun
-  description: 자란다자란다자란다
-  introduce: 안녕하세요! GDG 4기 백엔드 멤버로 활동하게 된 서울과학기술대학교 컴퓨터공학과 23학번 박서현입니다. 1년간 무럭무럭 성장하겠습니다.
+    name: 박서현
+    author_name: 서현
+    role: member
+    email: psh030108@gmail.com
+    github: xeohyun
+    description: 자란다자란다자란다
+    introduce: 안녕하세요! GDG 4기 백엔드 멤버로 활동하게 된 서울과학기술대학교 컴퓨터공학과 23학번 박서현입니다. 1년간 무럭무럭 성장하겠습니다.
 
 minjae:
-  name: 김민재
-  author_name: 민재
-  role: member
-  email: min2000jae@gmail.com
-  github: kim400im
-  description: 어떻게든
-  introduce: 안녕하세요! GDSC Seoultech  4기 김민재입니다. <br> 다양하게 배워보고 싶습니다아
+    name: 김민재
+    author_name: 민재
+    role: member
+    email: min2000jae@gmail.com
+    github: kim400im
+    description: 어떻게든
+    introduce: 안녕하세요! GDSC Seoultech  4기 김민재입니다. <br> 다양하게 배워보고 싶습니다아
 
 lisa:
-  name: 김리사
-  author_name: 리사
-  role: member
-  email: kls1023kr@gmail.com
-  github: rlafltk
-  description: ^.^
-  introduce: 안녕하세요, gdsc seoultech 4기 design 김리사입니다. <br> 타 it동아리에서 기획을 하다가 구현이 더 중요하다고 느껴서 <br> design으로 활동하게 됐습니다! 잘부탁드립니다. 감사합니다~!
-  blogs:
-      notion: https://laser-grape-705.notion.site/41452f7f5ff44289a7d7b52b43b7ea41
-
+    name: 김리사
+    author_name: 리사
+    role: member
+    email: kls1023kr@gmail.com
+    github: rlafltk
+    description: ^.^
+    introduce: 안녕하세요, gdsc seoultech 4기 design 김리사입니다. <br> 타 it동아리에서 기획을 하다가 구현이 더 중요하다고 느껴서 <br> design으로 활동하게 됐습니다! 잘부탁드립니다. 감사합니다~!
+    blogs:
+        notion: https://laser-grape-705.notion.site/41452f7f5ff44289a7d7b52b43b7ea41
 
 youngjin:
-  name: 주영진
-  author_name: 영진
-  role: member
-  email: dudwlsjoo0725@gmail.com
-  github: J0725
-  description: 열심히 하겠습니다!
-  introduce: 안녕하세요! GDG Seoultech  4기 Backend Member 주영진입니다. <br> 이번 GDG 활동을 통해 많이 성장하고 싶습니다. 잘 부탁드리겠습니다!
+    name: 주영진
+    author_name: 영진
+    role: member
+    email: dudwlsjoo0725@gmail.com
+    github: J0725
+    description: 열심히 하겠습니다!
+    introduce: 안녕하세요! GDG Seoultech  4기 Backend Member 주영진입니다. <br> 이번 GDG 활동을 통해 많이 성장하고 싶습니다. 잘 부탁드리겠습니다!
 
-  
 Suyong:
-  name: 심수용
-  author_name: 수용
-  role: member
-  email: marokk9768@gmail.com
-  github: protruser
-  description: 데이터 탈출기
-  introduce: 안녕하세요! GDG Seoultech 4기 Backend 멤버로 활동하게 된 심수용입니다. <br> 웹 해킹과 웹 개발에 관심이 많습니다 <br> 이번 4기 과정에서 많이 배우고 성장하겠습니다 감사합니다!
-  blogs:
-    tistory: https://protruser.tistory.com
+    name: 심수용
+    author_name: 수용
+    role: member
+    email: marokk9768@gmail.com
+    github: protruser
+    description: 데이터 탈출기
+    introduce: 안녕하세요! GDG Seoultech 4기 Backend 멤버로 활동하게 된 심수용입니다. <br> 웹 해킹과 웹 개발에 관심이 많습니다 <br> 이번 4기 과정에서 많이 배우고 성장하겠습니다 감사합니다!
+    blogs:
+        tistory: https://protruser.tistory.com
 
 jiwon:
     name: 이지원
@@ -223,52 +210,51 @@ jiwon:
     introduce: 안녕하세요, GDG on Campus 4기 Front-end member 이지원입니다.
 
 kyeongin:
-  name: 노경인
-  author_name: 경인
-  role: member
-  email: shruddls1307@gmail.com
-  github: kyinn1307
-  description: 하나하나 천천히..!
-  introduce: 안녕하세요! GDSC Seoultech  4기 노경인입니다. <br> 많은 사람들과 다양한 경험하면서 성장할 수 있는 좋은 기회가 되면 좋겠습니다!!
-  blogs:
-    tistory: https://kyinn1307.tistory.com/
-
+    name: 노경인
+    author_name: 경인
+    role: member
+    email: shruddls1307@gmail.com
+    github: kyinn1307
+    description: 하나하나 천천히..!
+    introduce: 안녕하세요! GDSC Seoultech  4기 노경인입니다. <br> 많은 사람들과 다양한 경험하면서 성장할 수 있는 좋은 기회가 되면 좋겠습니다!!
+    blogs:
+        tistory: https://kyinn1307.tistory.com/
 
 jiwoo:
-  name: 신지우
-  author_name: 지우
-  role: member
-  email: sjw884900@gmail.com
-  github: xxrainow
-  description: 아자아자
-  introduce: 안녕하세요 GDG 4기 백엔드 멤버 컴퓨터공학과 22학번 신지우라고 합니다! <br> 새롭고 다양한 분들과 함께 열심히 배우면서 성장해나가고 싶습니다! 파이팅!
+    name: 신지우
+    author_name: 지우
+    role: member
+    email: sjw884900@gmail.com
+    github: xxrainow
+    description: 아자아자
+    introduce: 안녕하세요 GDG 4기 백엔드 멤버 컴퓨터공학과 22학번 신지우라고 합니다! <br> 새롭고 다양한 분들과 함께 열심히 배우면서 성장해나가고 싶습니다! 파이팅!
 
 sumin:
-  name: 박수민
-  author_name: 수민
-  role: member
-  email: soomin031@gmail.com
-  github: spark00013
-  description: 화이팅~!
-  introduce: 안녕하세요! GDSC Seoultech  4기 DevRel 박수민입니다! 잘부탁드립니다.
-  
+    name: 박수민
+    author_name: 수민
+    role: devrel
+    email: soomin031@gmail.com
+    github: spark00013
+    description: 화이팅~!
+    introduce: 안녕하세요! GDSC Seoultech  4기 DevRel 박수민입니다! 잘부탁드립니다.
+
 Jihwan:
-  name: 김지환
-  author_name: 지환
-  role: member
-  email: kimjh3110340@gmail.com
-  github: Bluisgray
-  description: 안녕하세요, 파이팅입니다!
-  introduce: 안녕하세요! GDSC Seoultech  4기 디자인 김지환입니다! 같이 성장할 수 있는 시간을 보내봐요!
+    name: 김지환
+    author_name: 지환
+    role: devrel
+    email: kimjh3110340@gmail.com
+    github: Bluisgray
+    description: 안녕하세요, 파이팅입니다!
+    introduce: 안녕하세요! GDSC Seoultech  4기 디자인 김지환입니다! 같이 성장할 수 있는 시간을 보내봐요!
 
 sohyun:
-  name: 장소현
-  author_name: 소현
-  role: member
-  email: calisse805@naver.com
-  github: Xinaroo
-  description: 고민중...
-  introduce: 안녕하세요 AI 멤버로 활동하게 된 산업정보시스템전공 장소현입니다. <br> 함께 성장할 수 있도록 열심히 활동하겠습니다!
+    name: 장소현
+    author_name: 소현
+    role: member
+    email: calisse805@naver.com
+    github: Xinaroo
+    description: 고민중...
+    introduce: 안녕하세요 AI 멤버로 활동하게 된 산업정보시스템전공 장소현입니다. <br> 함께 성장할 수 있도록 열심히 활동하겠습니다!
 
 hyukwon:
     name: 권현욱
@@ -292,193 +278,190 @@ minkyu:
         tistory: https://ukym-tistory.tistory.com
 
 haneul:
-  name: 김하늘
-  author_name: 하늘
-  role: member
-  email: haneulkimhera@gmail.com
-  github: haneulkimhera
-  description: 🐈‍⬛
-  introduce: 안녕하세요! GDSC Seoultech  4기 김하늘입니다.
+    name: 김하늘
+    author_name: 하늘
+    role: member
+    email: haneulkimhera@gmail.com
+    github: haneulkimhera
+    description: 🐈‍⬛
+    introduce: 안녕하세요! GDSC Seoultech  4기 김하늘입니다.
 
 yuchan:
-  name: 조유찬
-  author_name: 유찬
-  role: member
-  email: yuchancho174@gmail.com
-  github: letYuchan
-  description: 느리지만 꾸준히🐢
-  introduce: 안녕하세요! GDSC Seoultech 4기 컴퓨터공학과 조유찬입니다. <br> <strong>공부하고 있는 분야는 프론트엔드고, 목표는 풀스택</strong>입니다. 다양한 분들을 만나보고, 저의 실력을 한층 더 발전시키고자 여기에 참여하게 됐습니다. 잘 부탁드립니다.
+    name: 조유찬
+    author_name: 유찬
+    role: member
+    email: yuchancho174@gmail.com
+    github: letYuchan
+    description: 느리지만 꾸준히🐢
+    introduce: 안녕하세요! GDSC Seoultech 4기 컴퓨터공학과 조유찬입니다. <br> <strong>공부하고 있는 분야는 프론트엔드고, 목표는 풀스택</strong>입니다. 다양한 분들을 만나보고, 저의 실력을 한층 더 발전시키고자 여기에 참여하게 됐습니다. 잘 부탁드립니다.
 
 seoin:
-  name: 이서인
-  author_name: guapa
-  role: member
-  email: guapapamama@gmail.com
-  github: guapa0girl
-  description: yo soy de guapa~✨
-  introduce: 안녕하세요! GDSC Seoultech  4기 컴퓨터공학과 23학번 이서인 입니다. <br> 앞으로 1년간 잘 지냈으면 좋겠어요! 아직 많이 부족하지만 무섭게 성장하는 모습 보여드리겠습니다😎
-
-
+    name: 이서인
+    author_name: guapa
+    role: member
+    email: guapapamama@gmail.com
+    github: guapa0girl
+    description: yo soy de guapa~✨
+    introduce: 안녕하세요! GDSC Seoultech  4기 컴퓨터공학과 23학번 이서인 입니다. <br> 앞으로 1년간 잘 지냈으면 좋겠어요! 아직 많이 부족하지만 무섭게 성장하는 모습 보여드리겠습니다😎
 
 huijin:
-  name: 오희진
-  author_name: 희진
-  role: member
-  email: huijin0904@naver.com
-  github: OhHuijin
-  description: 뭘하든 제대로 !🔥
-  introduce: 안녕하세요! GDSC 4기 프론트 엔드 멤버 오희진입니다. <br> GDSC 활동을 통해 멋진 개발자로 한 걸음 나아가고 싶습니다. 잘 부탁드립니다 !
+    name: 오희진
+    author_name: 희진
+    role: member
+    email: huijin0904@naver.com
+    github: OhHuijin
+    description: 뭘하든 제대로 !🔥
+    introduce: 안녕하세요! GDSC 4기 프론트 엔드 멤버 오희진입니다. <br> GDSC 활동을 통해 멋진 개발자로 한 걸음 나아가고 싶습니다. 잘 부탁드립니다 !
 
 soyeon:
-  name: 안소연
-  author_name: 소연
-  role: member
-  email: an62852807@gmail.com
-  github: 
-  description: gogo!
-  introduce: 안녕하세요! GDSC Seoultech  4기 안소연 입니다. 잘 부탁드립니다!
-  
-test:
-  name: 조건희
-  author_name: 건희
-  role: member
-  email: geonhui0987@gmail.com
-  github: geonheu
-  description: Yes, I can do!
-  introduce: 안녕하세요~! GDSC Seoultech 4기 AI멤버로 참여하게된 조건희입니다!! <br> 같이 공부하고 함께 성장해나가고 싶습니다. 잘 부탁드립니다!!
+    name: 안소연
+    author_name: 소연
+    role: member
+    email: an62852807@gmail.com
+    github:
+    description: gogo!
+    introduce: 안녕하세요! GDSC Seoultech  4기 안소연 입니다. 잘 부탁드립니다!
+
+geonhui:
+    name: 조건희
+    author_name: 건희
+    role: member
+    email: geonhui0987@gmail.com
+    github: geonheu
+    description: Yes, I can do!
+    introduce: 안녕하세요~! GDSC Seoultech 4기 AI멤버로 참여하게된 조건희입니다!! <br> 같이 공부하고 함께 성장해나가고 싶습니다. 잘 부탁드립니다!!
 
 daegyu:
-  name: 김대규
-  author_name: 대규
-  role: member
-  email: ddk3207@naver.com
-  github: KimDaegyu-Dev
-  description: 코딩 접습니다
-  introduce: 안녕하세요! GDG 4기 디자인 멤버 컴퓨터공학과/시각디자인 23학번 김대규입니다. 잘 부탁드립니다!
-  
+    name: 김대규
+    author_name: 대규
+    role: member
+    email: ddk3207@naver.com
+    github: KimDaegyu-Dev
+    description: 코딩 접습니다
+    introduce: 안녕하세요! GDG 4기 디자인 멤버 컴퓨터공학과/시각디자인 23학번 김대규입니다. 잘 부탁드립니다!
+
 jiyoon:
-  name: 박지윤
-  author_name: 지윤
-  role: member
-  email: keskoe0613@gmail.com
-  github: Ji-yoon1030
-  description: 오늘부터 금주하겠습니다(오늘 찐막).
-  introduce: 안녕하세요! GDG 4기 프론트엔드 멤버로 활동하게된 컴공 23학번 박지윤입니다. 1년동안 잘 부탁드립니다!
+    name: 박지윤
+    author_name: 지윤
+    role: member
+    email: keskoe0613@gmail.com
+    github: Ji-yoon1030
+    description: 오늘부터 금주하겠습니다(오늘 찐막).
+    introduce: 안녕하세요! GDG 4기 프론트엔드 멤버로 활동하게된 컴공 23학번 박지윤입니다. 1년동안 잘 부탁드립니다!
 
 minhyuk:
-  name: 이민혁
-  author_name: 민혁
-  role: member
-  email: sunyart12@gmail.com
-  github: Minhyuk12
-  description: 뭐든지 끝까지! 제대로!
-  introduce: 안녕하세요! GDG 4기 프론트엔드 멤버로 활동하게된 ITM전공 21학번 이민혁입니다. 잘 부탁드립니다!!
+    name: 이민혁
+    author_name: 민혁
+    role: member
+    email: sunyart12@gmail.com
+    github: Minhyuk12
+    description: 뭐든지 끝까지! 제대로!
+    introduce: 안녕하세요! GDG 4기 프론트엔드 멤버로 활동하게된 ITM전공 21학번 이민혁입니다. 잘 부탁드립니다!!
 
 yuyoung:
-  name: 황유영
-  author_name: 유영
-  role: member
-  email: hyyy8810@gmail.com
-  github: yuyoung924
-  description: 오합지존
-  introduce: 안녕하세요! GDSC Seoultech 4기 Back Member 황유영입니다. <br> 이번 GDG 활동에서 좋은 사람들과 다양한 경험을 해보는 것이 목표입니다! <br> 잘 부탁드립니다 🙇‍♀️
+    name: 황유영
+    author_name: 유영
+    role: member
+    email: hyyy8810@gmail.com
+    github: yuyoung924
+    description: 오합지존
+    introduce: 안녕하세요! GDSC Seoultech 4기 Back Member 황유영입니다. <br> 이번 GDG 활동에서 좋은 사람들과 다양한 경험을 해보는 것이 목표입니다! <br> 잘 부탁드립니다 🙇‍♀️
 
 eunjae:
-  name: 이은재
-  author_name: 은재
-  role: member
-  email: eunjae8924@naver.com
-  github: lej8924
-  description: Done is better than perfect.
-  introduce: 안녕하세요!새싹개발자 이은재입니다. 무럭무럭 자라나게끔 열심히 하겠습니다. 감사합니다*^^*
+    name: 이은재
+    author_name: 은재
+    role: member
+    email: eunjae8924@naver.com
+    github: lej8924
+    description: Done is better than perfect.
+    introduce: 안녕하세요!새싹개발자 이은재입니다. 무럭무럭 자라나게끔 열심히 하겠습니다. 감사합니다*^^*
 
 huijae:
-  name: 고희재
-  author_name: 희재
-  role: member
-  email: rhgmlwo11@gmail.com
-  github: HUIJAEKO
-  description: 화이팅👊
-  introduce: 안녕하세요! GDSC Seoultech 4기 백엔드팀 고희재입니다. 잘부탁드립니다!
+    name: 고희재
+    author_name: 희재
+    role: member
+    email: rhgmlwo11@gmail.com
+    github: HUIJAEKO
+    description: 화이팅👊
+    introduce: 안녕하세요! GDSC Seoultech 4기 백엔드팀 고희재입니다. 잘부탁드립니다!
 
 jiwhan:
-  name: 김지환
-  author_name: 지환 
-  role: member
-  email: kimjh1130@seoultech.ac.kr
-  github: jihwannnn
-  description: 코딩이 하고싶어요..
-  introduce: 안녕하세요! AI 멤버 김지환입니다. 지원한 부분 뿐만 아니라 개발에 관한 다양한 경험을 해보고 싶습니다! 열심히 하겠습니다~🫠
-  
+    name: 김지환
+    author_name: 지환
+    role: member
+    email: kimjh1130@seoultech.ac.kr
+    github: jihwannnn
+    description: 코딩이 하고싶어요..
+    introduce: 안녕하세요! AI 멤버 김지환입니다. 지원한 부분 뿐만 아니라 개발에 관한 다양한 경험을 해보고 싶습니다! 열심히 하겠습니다~🫠
+
 dongju:
-  name: 최동주
-  author_name: 동주
-  role: member
-  email: dove9441.seoultech@gmail.com
-  github: dove9441
-  description: 끊임없는 배움
-  introduce: 안녕하세요. GDG SeoulTech 4기 AI member 최동주입니다. <br> 멋진 분들께 배우며 알차고 즐거운 시간 되었으면 좋곘습니다.
-  
+    name: 최동주
+    author_name: 동주
+    role: member
+    email: dove9441.seoultech@gmail.com
+    github: dove9441
+    description: 끊임없는 배움
+    introduce: 안녕하세요. GDG SeoulTech 4기 AI member 최동주입니다. <br> 멋진 분들께 배우며 알차고 즐거운 시간 되었으면 좋곘습니다.
+
 seungwoo:
-  name: 백승우
-  author_name: 승우 
-  role: member
-  email: swbaik01@gmail.com
-  github: Baikseungwoo
-  description: 멋지게 살자.
-  introduce: 안녕하세요! 백엔드 멤버 백승우입니다. ITM 전공 2학년 재학중입니다. 부족하지만 잘 부탁드립니다!!
+    name: 백승우
+    author_name: 승우
+    role: member
+    email: swbaik01@gmail.com
+    github: Baikseungwoo
+    description: 멋지게 살자.
+    introduce: 안녕하세요! 백엔드 멤버 백승우입니다. ITM 전공 2학년 재학중입니다. 부족하지만 잘 부탁드립니다!!
 
 hyeok:
-  name: 김혁
-  author_name: 혁 
-  role: member
-  email: 19102084@g.seoultech.ac.kr
-  github: hyeok55
-  description: 잘부탁드립니다!
-  introduce: 안녕하세요! AI 멤버 김혁입니다. 여러분과 함께 성장하는 기회가 됬으면 좋겠습니다!!
+    name: 김혁
+    author_name: 혁
+    role: member
+    email: 19102084@g.seoultech.ac.kr
+    github: hyeok55
+    description: 잘부탁드립니다!
+    introduce: 안녕하세요! AI 멤버 김혁입니다. 여러분과 함께 성장하는 기회가 됬으면 좋겠습니다!!
 
 yueun:
-  name: 유가은
-  author_name: 가은
-  role: member
-  email: yueun1682@gmail.com
-  github: 
-  description: 🐶
-  introduce: 안녕하세요! GDSC Seoultech  4기 디자인 멤버로  참여하게 된 유가은입니다.
+    name: 유가은
+    author_name: 가은
+    role: member
+    email: yueun1682@gmail.com
+    github:
+    description: 🐶
+    introduce: 안녕하세요! GDSC Seoultech  4기 디자인 멤버로  참여하게 된 유가은입니다.
 
 jungmin:
-  name: 허정민
-  author_name: 정민
-  role: member
-  email: hjm0432@naver.com
-  github: jungmin0432
-  description: 파이팅!
-  introduce: 안녕하세요! GDSC Seoultech  4기 허정민입니다. 잘부탁드려요!
+    name: 허정민
+    author_name: 정민
+    role: devrel
+    email: hjm0432@naver.com
+    github: jungmin0432
+    description: 파이팅!
+    introduce: 안녕하세요! GDSC Seoultech  4기 허정민입니다. 잘부탁드려요!
 
 injae:
-  name: 박인재
-  author_name: 인재
-  role: member
-  email: qkrdlswo98@gmail.com
-  github: jaypaak
-  description: 열정 빼면 시체
-  introduce: 멋있는 분들과 다시함께 도전하겠습니다!
+    name: 박인재
+    author_name: 인재
+    role: member
+    email: qkrdlswo98@gmail.com
+    github: jaypaak
+    description: 열정 빼면 시체
+    introduce: 멋있는 분들과 다시함께 도전하겠습니다!
 
-test:
-  name: 정재현
-  author_name: 재현
-  role: member 
-  email: jasonjeong2002@gmail.com
-  github: 
-  description: 디자인 잘 못해요
-  introduce: 안녕하세요! 디자인팀 정재현입니다!
+jaehyeon:
+    name: 정재현
+    author_name: 재현
+    role: member
+    email: jasonjeong2002@gmail.com
+    github:
+    description: 디자인 잘 못해요
+    introduce: 안녕하세요! 디자인팀 정재현입니다!
 
 heejeong:
-  name: 윤희정
-  author_name: 희정
-  role: member
-  email: yoonheejeongs@naver.com
-  github:
-  description: 오늘에 충실하자!
-  introduce: 안녕하세요! gdsc seoultech 4기 design member 조형예술학과 22학번 윤희정입니다. 만나서 반가워요! 같이 열심히 성장해나가 봅시다~
-
+    name: 윤희정
+    author_name: 희정
+    role: member
+    email: yoonheejeongs@naver.com
+    github:
+    description: 오늘에 충실하자!
+    introduce: 안녕하세요! gdsc seoultech 4기 design member 조형예술학과 22학번 윤희정입니다. 만나서 반가워요! 같이 열심히 성장해나가 봅시다~
