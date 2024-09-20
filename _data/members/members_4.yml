@@ -472,3 +472,13 @@ test:
   github: 
   description: 디자인 잘 못해요
   introduce: 안녕하세요! 디자인팀 정재현입니다!
+
+heejeong:
+  name: 윤희정
+  author_name: 희정
+  role: member
+  email: yoonheejeongs@naver.com
+  github:
+  description: 오늘에 충실하자!
+  introduce: 안녕하세요! gdsc seoultech 4기 design member 조형예술학과 22학번 윤희정입니다. 만나서 반가워요! 같이 열심히 성장해나가 봅시다~
+
